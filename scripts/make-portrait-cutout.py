@@ -17,10 +17,12 @@ src = sys.argv[1]
 im = Image.open(src).convert("RGB")
 w, h = im.size
 grey = ImageOps.grayscale(im)
-px = grey.load()
+# Film grain makes the white background speckled, so decide what's background on a smoothed copy.
+smooth = grey.filter(ImageFilter.MedianFilter(5)).filter(ImageFilter.GaussianBlur(1.2))
+px = smooth.load()
 
 # 1. Flood fill the near-white background from every edge pixel.
-T = 232
+T = 226
 bg = Image.new("L", (w, h), 0)
 bp = bg.load()
 q = deque()
@@ -47,7 +49,7 @@ for y in range(h):
             ap[x, y] = max(0, min(255, int((255 - px[x, y]) * 255 / (255 - T))))
         else:
             ap[x, y] = 255
-alpha = alpha.filter(ImageFilter.MinFilter(5)).filter(ImageFilter.GaussianBlur(1.5))
+alpha = alpha.filter(ImageFilter.MinFilter(7)).filter(ImageFilter.GaussianBlur(1.8))
 
 # 3. Fade the bottom third so the figure melts into the card.
 ap = alpha.load()

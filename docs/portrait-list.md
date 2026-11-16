@@ -1,6 +1,6 @@
 # Portraits to generate
 
-The app shows one portrait per job. We have the family doctor already (`public/portraits/health.jpg`), so **19 portraits are needed**.
+The app shows one portrait per job. All 20 are now in `public/portraits/`, each with a background-free cut-out (`<sector>-cutout.png`) made by `scripts/make-portrait-cutout.py`.
 
 ## Match the doctor's style
 
