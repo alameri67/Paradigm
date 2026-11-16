@@ -2,7 +2,7 @@
 
 Simulated interviews with each persona in `data/population/synthetic-population-v1.3.md`, run with `docs/interview-protocol.md`. Every file is made by `scripts/export-transcripts.mjs` from the data files in `raw/`, so edit those, not these.
 
-32 of 115 interviews are done.
+46 of 115 interviews are done.
 
 | ID | Name | Role | Group | S0 | S1 | S2 | S3 | S4 |
 |---|---|---|---|---|---|---|---|---|
@@ -15,6 +15,13 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [N07](N07.md) | Liam O'Connor | Electrician apprentice at vocational college | Outside paid work | Calm | Calm | Calm | Calm | Anxious |
 | [N08](N08.md) | Wanjiru Mwangi | PhD student, machine learning | Outside paid work | Uneasy | Calm | Uneasy | Anxious | Anxious |
 | [N09](N09.md) | Harold Jenkins | Retiree, ex-utility engineer, pension plus investments | Outside paid work | Calm | Calm | Uneasy | Uneasy | Anxious |
+| [N10](N10.md) | Dorothy Evans | Retiree, ex-retail, state pension only | Outside paid work | Uneasy | Uneasy | Uneasy | Anxious | Anxious |
+| [N11](N11.md) | Kenji Watanabe | Early retiree, ex-tech executive | Outside paid work | Uneasy | Uneasy | Calm | Calm | Uneasy |
+| [P001](P001.md) | Tomas Varga | Logging crew foreman | Agriculture (logging and farm support) | Calm | Calm | Calm | Uneasy | Anxious |
+| [P002](P002.md) | Ana Ruiz | Seasonal crew member, farm labour contractor | Agriculture (logging and farm support) | Calm | Uneasy | Uneasy | Anxious | Panicked |
+| [P003](P003.md) | Dale Hoffman | Owner, custom harvesting and spraying service | Agriculture (logging and farm support) | Calm | Calm | Calm | Uneasy | Anxious |
+| [P004](P004.md) | Priya Nair | Precision-ag data technician | Agriculture (logging and farm support) | Calm | Calm | Uneasy | Alarmed | Anxious |
+| [P005](P005.md) | Kofi Mensah | Trainee timber equipment operator | Agriculture (logging and farm support) | Calm | Uneasy | Calm | Uneasy | Alarmed |
 | [P026](P026.md) | Paul Anderson | B2B sales rep, industrial supplies | Wholesale trade | Calm | Uneasy | Anxious | Alarmed | Alarmed |
 | [P027](P027.md) | Fatima Zahra Benali | Purchasing and inventory analyst | Wholesale trade | Calm | Calm | Anxious | Alarmed | Alarmed |
 | [P028](P028.md) | Greg Thompson | Owner, family food distributor | Wholesale trade | Calm | Calm | Uneasy | Uneasy | Anxious |
@@ -23,6 +30,7 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P031](P031.md) | Linda Foster | Supermarket cashier, long tenure | Retail trade | Uneasy | Uneasy | Uneasy | Uneasy | Panicked |
 | [P032](P032.md) | Marcus Lee | Sales associate, electronics store | Retail trade | Calm | Calm | Calm | Uneasy | Anxious |
 | [P033](P033.md) | Olivia Grant | Store manager, apparel chain | Retail trade | Uneasy | Uneasy | Anxious | Alarmed | Alarmed |
+| [P034](P034.md) | Raj Patel | Owner, two convenience stores | Retail trade | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P051](P051.md) | Kevin Murphy | Residential estate agent | Real estate | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
 | [P052](P052.md) | Sofia Rossi | Owner, property management firm | Real estate | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P053](P053.md) | Andre Baptiste | Building maintenance technician | Real estate | Calm | Calm | Calm | Uneasy | Alarmed |
@@ -32,9 +40,15 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P057](P057.md) | Michael Tan | Audit associate | Professional, scientific and technical services | Uneasy | Anxious | Alarmed | Panicked | Alarmed |
 | [P058](P058.md) | Elena Petrova | Senior research scientist, biotech | Professional, scientific and technical services | Calm | Calm | Uneasy | Anxious | Anxious |
 | [P059](P059.md) | Chris Walker | Management consultant | Professional, scientific and technical services | Calm | Calm | Uneasy | Alarmed | Alarmed |
+| [P060](P060.md) | Aisha Bello | Architect | Professional, scientific and technical services | Calm | Uneasy | Anxious | Alarmed | Anxious |
+| [P061](P061.md) | Richard Hayes | CFO, holding company | Management of companies | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P062](P062.md) | Laura Bennett | Corporate strategy manager | Management of companies | Calm | Calm | Uneasy | Anxious | Anxious |
 | [P076](P076.md) | Rajesh Kumar | Radiologist | Health care and social assistance | Calm | Calm | Uneasy | Uneasy | Uneasy |
 | [P077](P077.md) | Angela Moore | ICU registered nurse | Health care and social assistance | Uneasy | Calm | Uneasy | Uneasy | Anxious |
 | [P078](P078.md) | Juan Pérez | Home health aide | Health care and social assistance | Calm | Calm | Calm | Uneasy | Alarmed |
 | [P079](P079.md) | Brenda Collins | Medical billing and coding specialist | Health care and social assistance | Uneasy | Anxious | Alarmed | Panicked | Panicked |
 | [P080](P080.md) | Mei Wong | Family doctor | Health care and social assistance | Calm | Calm | Uneasy | Anxious | Anxious |
 | [P081](P081.md) | Leo Martins | Freelance illustrator and concept artist | Arts, entertainment and recreation | Anxious | Alarmed | Alarmed | Alarmed | Panicked |
+| [P082](P082.md) | Chloe Bernard | Theatre and live-event producer | Arts, entertainment and recreation | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P083](P083.md) | Malik Johnson | Gym personal trainer | Arts, entertainment and recreation | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P084](P084.md) | Isabelle Fontaine | Session musician and music teacher | Arts, entertainment and recreation | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
