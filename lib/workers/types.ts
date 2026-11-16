@@ -30,7 +30,12 @@ export interface Archetype {
   portraitUrl: string | null;
   /** Portrait with the background removed, drawn inside the worker card. */
   cutoutUrl: string | null;
+  /** Gender of the person in portraitUrl. The other gender's portrait is <name>-m.jpg or <name>-f.jpg. */
+  portraitGender: "F" | "M";
 }
+
+/** The portrait that matches one worker's gender, if it exists yet. */
+export interface WorkerPortrait { url: string; cutout: string }
 
 export interface GroupLevel { key: string; label: string; [detail: string]: string }
 export interface Group { key: string; label: string; levels: GroupLevel[] }

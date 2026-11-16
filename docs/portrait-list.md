@@ -47,3 +47,40 @@ The file names match the sector IDs the app already uses, so once a file is in `
 ## Optional: a portrait for every age
 
 Each job has 243 versions of the worker, at three ages: early career (27), mid career (43) and late career (58). If you want the picture to change with the age you pick, make three portraits per job: **60 in total**, or 57 more on top of the doctor. Name them by age, for example `agriculture-early.jpg`, `agriculture-mid.jpg` and `agriculture-late.jpg`, and keep the same person's look and clothing across the three ages.
+
+## Second set: the other gender for each job
+
+Each job's 243 versions are half men and half women, so every job needs a second portrait of the other gender. The app picks the one that matches the person on screen. Save each one in `public/portraits/` under the name in the table, then run `python3 scripts/make-portrait-cutout.py` on it.
+
+### Shared prompt
+
+Use this with two reference images: **image 1** is the job's current portrait (for the clothes, props, pose and framing) and **image 2** is the doctor (`health.jpg`, for the colour, contrast and grain).
+
+> Create a new vintage studio portrait photograph of a different person: [PERSON]. Match image 1 closely in everything except the person: the same work clothes and props, the same pose, the same head-and-shoulders framing, and the same soft feathered shoulder edges that fade into a pure white #FFFFFF background. Match image 2 exactly in photographic treatment: nearly black-and-white warm grayscale, charcoal-black shadows, gray midtones, muted ivory highlights, a very subtle warm tint, strong photographic contrast, clear facial detail and fine analog grain. 1950s style, soft warm studio light, facing the camera with a gentle natural smile. Empty canvas is opaque pure white. No text, logos, border or frame. One person only. Square, at least 1024 × 1024.
+
+Replace `[PERSON]` with the description for each job.
+
+| Job | Image 1 (reference) | [PERSON] | Save as |
+|---|---|---|---|
+| Farmer | `agriculture.jpg` | a man in his 40s with a weathered, sun-lined face and short dark hair | `agriculture-m.jpg` |
+| Miner | `mining.jpg` | a woman in her 30s with her hair tied back under the hard hat | `mining-f.jpg` |
+| Lineworker | `utilities.jpg` | a woman in her 20s with a short practical haircut | `utilities-f.jpg` |
+| Construction worker | `construction.jpg` | a woman in her 50s with greying hair tucked under the hard hat | `construction-f.jpg` |
+| Factory machine operator | `manufacturing.jpg` | a man in his 30s with a neat short haircut | `manufacturing-m.jpg` |
+| Wholesale buyer | `wholesale.jpg` | a woman in her 40s with shoulder-length hair | `wholesale-f.jpg` |
+| Cashier and shop assistant | `retail.jpg` | a man in his 50s with thinning grey hair and glasses | `retail-m.jpg` |
+| Truck driver | `transport.jpg` | a woman in her 40s with curly hair under a cap | `transport-f.jpg` |
+| Software developer | `information.jpg` | a man in his 20s with glasses and tousled hair | `information-m.jpg` |
+| Insurance clerk | `finance.jpg` | a man in his 30s wearing a cardigan over a shirt and tie | `finance-m.jpg` |
+| Estate agent | `realestate.jpg` | a woman in her 30s in a smart skirt suit | `realestate-f.jpg` |
+| Lawyer | `professional.jpg` | a man in his 40s in a dark three-piece suit | `professional-m.jpg` |
+| Middle manager | `management.jpg` | a woman in her 50s in a tailored jacket, reading glasses on a chain | `management-f.jpg` |
+| Office administrator | `admin.jpg` | a man in his 50s wearing the phone headset, sleeves neatly rolled | `admin-m.jpg` |
+| Teacher | `education.jpg` | a woman in her 30s in a blouse and knitted cardigan | `education-f.jpg` |
+| Family doctor | `health.jpg` | a woman in her 40s in a white coat with a stethoscope around her neck | `health-f.jpg` |
+| Musician | `arts.jpg` | a man in his 20s with wavy hair | `arts-m.jpg` |
+| Cook | `accommodation.jpg` | a woman in her 40s in chef's whites, her hair under the chef's hat | `accommodation-f.jpg` |
+| Mechanic | `other.jpg` | a man in his 30s with a grease mark on his forearm | `other-m.jpg` |
+| Civil servant caseworker | `government.jpg` | a woman in her 60s with short grey hair | `government-f.jpg` |
+
+For the family doctor, use `health.jpg` as both image 1 and image 2.

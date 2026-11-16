@@ -1,8 +1,8 @@
 import "server-only";
-import { readdir, readFile } from "node:fs/promises";
+import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import archetypesFile from "@/data/archetypes/archetypes-v1.json";
-import type { Archetype, Group, Interview, Worker } from "./types";
+import type { Archetype, Group, Interview, Worker, WorkerPortrait } from "./types";
 
 const root = process.cwd();
 const rawDir = path.join(root, "data/interviews/archetypes/raw");
@@ -33,7 +33,25 @@ export async function listInterviewed(): Promise<string[]> {
   }
 }
 
-export async function getWorker(id: string): Promise<{ worker: Worker; interview: Interview | null } | null> {
+const exists = (publicPath: string) =>
+  access(path.join(root, "public", publicPath)).then(
+    () => true,
+    () => false,
+  );
+
+/** The job's portrait if it shows the worker's gender, otherwise the other-gender portrait once it exists. */
+async function portraitFor(worker: Worker): Promise<WorkerPortrait | null> {
+  const a = archetypes.find((x) => x.code === worker.archetype);
+  if (!a?.portraitUrl || !a.cutoutUrl) return null;
+  if (a.portraitGender === worker.gender) return { url: a.portraitUrl, cutout: a.cutoutUrl };
+  const base = a.portraitUrl.replace(/\.jpg$/, `-${worker.gender.toLowerCase()}`);
+  const alt = { url: `${base}.jpg`, cutout: `${base}-cutout.png` };
+  return (await exists(alt.url)) && (await exists(alt.cutout)) ? alt : null;
+}
+
+export async function getWorker(
+  id: string,
+): Promise<{ worker: Worker; interview: Interview | null; portrait: WorkerPortrait | null } | null> {
   if (!/^A\d{2}-[1-3]{5}$/.test(id)) return null;
   const worker = (await grid()).byId.get(id);
   if (!worker) return null;
@@ -43,5 +61,5 @@ export async function getWorker(id: string): Promise<{ worker: Worker; interview
   } catch {
     interview = null;
   }
-  return { worker, interview };
+  return { worker, interview, portrait: await portraitFor(worker) };
 }

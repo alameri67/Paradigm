@@ -21,6 +21,7 @@ import {
   type MoodKey,
   type ScenarioCode,
   type Worker,
+  type WorkerPortrait,
 } from "@/lib/workers/types";
 
 const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
@@ -69,15 +70,15 @@ function Avatar({ a, size }: { a: Archetype; size: number }) {
 
 /** The worker card: a Peak Chart of worry across S0–S4, with the job's portrait blended inside it. */
 function WorkerCard({
-  a,
   w,
   iv,
   scenario,
   onScenario,
+  portrait,
 }: {
-  a: Archetype;
   w: Worker;
   iv: Interview;
+  portrait: WorkerPortrait | null;
   scenario: ScenarioCode;
   onScenario: (s: ScenarioCode) => void;
 }) {
@@ -92,7 +93,7 @@ function WorkerCard({
         valueSuffix="/5"
         title={w.name}
         headline={w.job}
-        image={a.cutoutUrl ?? undefined}
+        image={portrait?.cutout}
         caption={`${MOOD_LABEL[mood]} in ${scenario} · age ${w.profile.age}`}
         updatedText={SHORT_SECTOR[w.sector] ?? w.sector}
         trend="none"
@@ -178,7 +179,12 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     return (CODES as string[]).includes(s ?? "") ? (s as ScenarioCode) : "S2";
   });
   const [interviewed, setInterviewed] = useState<string[] | null>(null);
-  const [result, setResult] = useState<{ id: string; worker: Worker; interview: Interview | null } | null>(null);
+  const [result, setResult] = useState<{
+    id: string;
+    worker: Worker;
+    interview: Interview | null;
+    portrait: WorkerPortrait | null;
+  } | null>(null);
   const [showTranscript, setShowTranscript] = useState(false);
 
   const a = archetypes.find((x) => x.code === job)!;
@@ -213,7 +219,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     let live = true;
     fetch(`/api/workers/${id}`)
       .then((r) => r.json())
-      .then((d) => live && setResult({ id, worker: d.worker, interview: d.interview }));
+      .then((d) => live && setResult({ id, worker: d.worker, interview: d.interview, portrait: d.portrait }));
     return () => {
       live = false;
     };
@@ -308,7 +314,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
         ) : iv && sc && worker ? (
           <>
             <section className="ws-hero" aria-label="Worker">
-              <WorkerCard a={a} w={worker} iv={iv} scenario={scenario} onScenario={setScenario} />
+              <WorkerCard w={worker} iv={iv} portrait={result?.portrait ?? null} scenario={scenario} onScenario={setScenario} />
               <div className="ws-hero-text">
                 <div className="ws-moodline">
                   <span className="ws-dot" style={{ background: MOOD_ACCENT[sc.mood] }} aria-hidden="true" />
