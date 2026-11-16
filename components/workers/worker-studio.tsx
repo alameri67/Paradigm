@@ -283,8 +283,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
         <div className="ws-back">AI Transition Simulator</div>
         <div className="ws-jobs-head">
           <h2 className="label">Jobs</h2>
-          <Link href="/dashboard" className="ws-dash-link">
-            See the summary
+          <Link href="/" className="ws-dash-link">
+            Back to the summary
           </Link>
         </div>
         {archetypes.map((x) => (
@@ -322,8 +322,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
               <Icon name="down" />
             </span>
           </label>
-          <Link href="/dashboard" className="ws-dash-link">
-            See the summary of everyone interviewed
+          <Link href="/" className="ws-dash-link">
+            Back to the summary
           </Link>
         </div>
 

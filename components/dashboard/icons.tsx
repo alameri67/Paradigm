@@ -7,6 +7,7 @@ const PATHS = {
   quote: '<path d="M6 7h4v4c0 3-1.4 5-4 6"/><path d="M14 7h4v4c0 3-1.4 5-4 6"/>',
   chart: '<path d="M3 3v18h18"/><circle cx="8" cy="15" r="1.4"/><circle cx="12.5" cy="10" r="1.4"/><circle cx="17" cy="13" r="1.4"/><circle cx="18" cy="6" r="1.4"/>',
   back: '<path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>',
+  arrow: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
   // One per action tag
   "keep-going": '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
   "wait-and-see": '<path d="M6 2.5h12"/><path d="M6 21.5h12"/><path d="M17 21.5v-4a2 2 0 0 0-.6-1.4L12 12l-4.4 4.1a2 2 0 0 0-.6 1.4v4"/><path d="M7 2.5v4a2 2 0 0 0 .6 1.4L12 12l4.4-4.1a2 2 0 0 0 .6-1.4v-4"/>',

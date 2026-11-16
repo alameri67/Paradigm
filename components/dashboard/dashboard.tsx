@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Icon, type IconName } from "@/components/simulator/icons";
 import { AmountSlider } from "@/components/ui/amount-slider";
@@ -180,7 +181,7 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
   const points = useMemo(() => pointsFor(shown, scenario), [shown, scenario]);
   const selected = useMemo(() => points.filter((p) => inBrush(p, brush)).map((p) => p.person), [points, brush]);
   const summary = useMemo(() => summarize(selected, scenario), [selected, scenario]);
-  const chartPoints = useMemo(() => points.map(({ id, x, y, label }) => ({ id, x, y, label })), [points]);
+  const chartPoints = useMemo(() => points.map(({ id, x, y, label, person }) => ({ id, x, y, label, color: MOOD_ACCENT[person.scenarios[scenario].mood] })), [points, scenario]);
 
   const toggleJob = (code: string) => {
     setJobs((j) => (j.includes(code) ? j.filter((c) => c !== code) : [...j, code]));
@@ -288,6 +289,8 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
             bins={20}
             height={440}
             tone="dark"
+            readout={false}
+            radius={4.5}
             ariaLabel={`Worry and action taken in ${sc.name}`}
           />
         ) : (
@@ -296,9 +299,15 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
       </section>
 
       <section className="db-block" aria-labelledby="db-ins-h">
-        <h2 className="t-section" id="db-ins-h">
-          {brush ? `Your selection in ${sc.name}` : `Everyone in ${sc.name}`}
-        </h2>
+        <div className="db-ins-head">
+          <h2 className="t-section" id="db-ins-h">
+            {brush ? `Your selection in ${sc.name}` : `Everyone in ${sc.name}`}
+          </h2>
+          <Link href={`/details?${new URLSearchParams({ ...(jobs[0] ? { job: jobs[0] } : {}), s: scenario })}`} className="db-details">
+            See details
+            <DashIcon name="arrow" size={16} />
+          </Link>
+        </div>
         <Insights s={summary} archetypes={archetypes} />
         <p className="t-caption fg2">
           Everyone here is simulated: made-up versions of each job, interviewed by an AI interviewer. Shares are the part of

@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-/** The worker layout now lives on the home page. */
+/** The worker view now lives at /details. */
 export default function WorkersPage() {
-  redirect("/");
+  redirect("/details");
 }

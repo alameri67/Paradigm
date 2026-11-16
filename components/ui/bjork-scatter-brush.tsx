@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+// Paradigm: changed from the original only by the optional point colour, readout and radius props (marked "Paradigm:").
 "use client";
 import "./bjork-scatter-brush-utils/bjork-theme.css";
 
@@ -49,6 +50,8 @@ export interface ScatterPoint {
   x: number;
   y: number;
   label?: string;
+  /** Paradigm: optional colour for this point (e.g. by mood). */
+  color?: string;
 }
 
 export interface Brush {
@@ -82,6 +85,10 @@ export interface ScatterBrushProps {
   tone?: BjorkTone;
   attract?: boolean;
   className?: string;
+  /** Paradigm: show the n / mean / r readout above the plot. Default true. */
+  readout?: boolean;
+  /** Paradigm: dot radius in px. Default 2.4. */
+  radius?: number;
 }
 
 const LEFT = 44;
@@ -191,6 +198,8 @@ export function ScatterBrush({
   tone: toneProp,
   attract = false,
   className,
+  readout = true,
+  radius = RADIUS,
 }: ScatterBrushProps) {
   const { pal, reduce, vars } = useChartTheme(toneProp);
   const announcer = useRef<AnnouncerHandle>(null);
@@ -220,9 +229,9 @@ export function ScatterBrush({
   const selected = useMemo(() => (brush ? points.map((p, i) => (inBrush(p, brush) ? i : -1)).filter((i) => i >= 0) : null), [points, brush]);
   const stats = useMemo(() => statsOf(points, selected), [points, selected]);
 
-  const cfg = useRef({ points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats });
+  const cfg = useRef({ points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats, radius });
   useEffect(() => {
-    cfg.current = { points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats };
+    cfg.current = { points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats, radius };
   });
 
   const st = useRef<Run>({
@@ -401,11 +410,13 @@ export function ScatterBrush({
         const k = e >= 1 ? 1 : clamp((e - s.order[i] * 0.55) / 0.45, 0, 1);
         if (k <= 0) continue;
         // No brush: all ink. With a brush: selected points in the accent, the rest fade back.
-        if (!B) ctx.fillStyle = withAlpha(p.text, 0.38);
-        else ctx.fillStyle = a > 0.5 ? withAlpha(p.accent, 0.3 + 0.55 * a) : withAlpha(p.text, 0.1 + 0.2 * a);
+        // Paradigm: a point's own colour, when given, replaces the ink and the accent.
+        const own = P[i].color;
+        if (!B) ctx.fillStyle = own ? withAlpha(own, 0.9) : withAlpha(p.text, 0.38);
+        else ctx.fillStyle = a > 0.5 ? withAlpha(own ?? p.accent, own ? 0.95 : 0.3 + 0.55 * a) : withAlpha(p.text, 0.1 + 0.2 * a);
         ctx.globalAlpha = k;
         ctx.beginPath();
-        ctx.arc(xOf(P[i].x), yOf(P[i].y), RADIUS * (0.6 + 0.4 * k), 0, Math.PI * 2);
+        ctx.arc(xOf(P[i].x), yOf(P[i].y), c.radius * (0.6 + 0.4 * k), 0, Math.PI * 2);
         ctx.fill();
       }
     }
@@ -516,7 +527,7 @@ export function ScatterBrush({
 
   useEffect(() => {
     wake();
-  }, [points, dom, brush, marginals, bins, pal, reduce, attract, trend, stats, wake]);
+  }, [points, dom, brush, marginals, bins, pal, reduce, attract, trend, stats, radius, wake]);
 
   const tooltipFor = (i: number): TooltipContent | null => {
     const pt = points[i];
@@ -734,7 +745,7 @@ export function ScatterBrush({
           <canvas ref={canvasRef} role="img" aria-label={`${ariaLabel}: ${describeStats(stats)}`} className="pointer-events-none absolute left-0 top-0" />
         </div>
         {/* Readout: count, means and correlation of the selection (or everything). */}
-        <div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] leading-none tabular-nums text-[color:var(--bjork-text-soft)]">
+        {readout && (<div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] leading-none tabular-nums text-[color:var(--bjork-text-soft)]">
           <span>
             n <span className="text-[color:var(--bjork-text)]">{formatNumber(stats.n, 0)}</span>
             <span className="text-[color:var(--bjork-text-faint)]"> / {formatNumber(points.length, 0)}</span>
@@ -753,7 +764,7 @@ export function ScatterBrush({
               r&#178; <span className="text-[color:var(--bjork-text)]">{Number.isFinite(stats.r) ? formatFixed(stats.r * stats.r, 2) : "–"}</span>
             </span>
           )}
-        </div>
+        </div>)}
         <span aria-hidden="true" className="pointer-events-none absolute bottom-0 left-11 font-mono text-[10px] uppercase leading-none tracking-[0.1em] text-[color:var(--bjork-text-soft)] [text-box:trim-both_cap_alphabetic]">
           {xLabel} {"→"}
         </span>
