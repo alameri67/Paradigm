@@ -2,7 +2,7 @@
 
 Simulated interviews with each persona in `data/population/synthetic-population-v1.3.md`, run with `docs/interview-protocol.md`. Every file is made by `scripts/export-transcripts.mjs` from the data files in `raw/`, so edit those, not these.
 
-92 of 115 interviews are done.
+98 of 115 interviews are done.
 
 | ID | Name | Role | Group | S0 | S1 | S2 | S3 | S4 |
 |---|---|---|---|---|---|---|---|---|
@@ -54,6 +54,8 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P041](P041.md) | Jordan Kim | Software developer | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
 | [P042](P042.md) | Natalie Brennan | Reporter, regional newspaper | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
 | [P043](P043.md) | Victor Alvarez | Engineering director, software company | Information | Calm | Calm | Calm | Calm | Uneasy |
+| [P044](P044.md) | Mei Lin Zhao | Data centre technician | Information | Calm | Calm | Calm | Calm | Uneasy |
+| [P045](P045.md) | Ethan Cole | Freelance video editor and creator | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
 | [P051](P051.md) | Kevin Murphy | Residential estate agent | Real estate | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
 | [P052](P052.md) | Sofia Rossi | Owner, property management firm | Real estate | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P053](P053.md) | Andre Baptiste | Building maintenance technician | Real estate | Calm | Calm | Calm | Uneasy | Alarmed |
@@ -77,6 +79,8 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P071](P071.md) | Karen Mitchell | High school maths teacher | Educational services | Uneasy | Uneasy | Uneasy | Anxious | Anxious |
 | [P072](P072.md) | James Whitfield | Tenured history professor | Educational services | Uneasy | Uneasy | Uneasy | Anxious | Anxious |
 | [P073](P073.md) | Lucy Adams | Freelance online language tutor | Educational services | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
+| [P074](P074.md) | Daniel Reyes | School district edtech lead | Educational services | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P075](P075.md) | Fiona Walsh | Kindergarten teacher | Educational services | Calm | Calm | Uneasy | Uneasy | Anxious |
 | [P076](P076.md) | Rajesh Kumar | Radiologist | Health care and social assistance | Calm | Calm | Uneasy | Uneasy | Uneasy |
 | [P077](P077.md) | Angela Moore | ICU registered nurse | Health care and social assistance | Uneasy | Calm | Uneasy | Uneasy | Anxious |
 | [P078](P078.md) | Juan Pérez | Home health aide | Health care and social assistance | Calm | Calm | Calm | Uneasy | Alarmed |
@@ -98,3 +102,5 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P094](P094.md) | Kim Nguyen | Nail technician | Other services | Calm | Calm | Uneasy | Anxious | Alarmed |
 | [P095](P095.md) | Alex Turner | Programme manager, advocacy nonprofit | Other services | Uneasy | Uneasy | Anxious | Alarmed | Alarmed |
 | [P096](P096.md) | Susan Price | Benefits eligibility caseworker | Government | Calm | Uneasy | Anxious | Alarmed | Alarmed |
+| [P097](P097.md) | Mark Davies | Military logistics officer | Government | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P098](P098.md) | Lisa Romero | Police patrol officer | Government | Calm | Calm | Uneasy | Anxious | Anxious |
