@@ -274,7 +274,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
       <nav className="ws-jobs" aria-label="Jobs">
         <div className="ws-back">AI Transition Simulator</div>
         <h2 className="label" style={{ padding: "12px 10px 6px" }}>
-          One worker per industry
+          Jobs
         </h2>
         {archetypes.map((x) => (
           <button
