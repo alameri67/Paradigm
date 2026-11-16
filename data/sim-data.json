@@ -1,0 +1,1152 @@
+{
+  "sectors": [
+    {
+      "id": "agriculture",
+      "name": "Agriculture (logging and farm support only)",
+      "role": "Farm support worker",
+      "portraitUrl": null
+    },
+    {
+      "id": "mining",
+      "name": "Mining, oil and gas",
+      "role": "Rig technician",
+      "portraitUrl": null
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "role": "Line engineer",
+      "portraitUrl": null
+    },
+    {
+      "id": "construction",
+      "name": "Construction",
+      "role": "Site manager",
+      "portraitUrl": null
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "role": "Machine operator",
+      "portraitUrl": null
+    },
+    {
+      "id": "wholesale",
+      "name": "Wholesale trade",
+      "role": "Wholesale buyer",
+      "portraitUrl": null
+    },
+    {
+      "id": "retail",
+      "name": "Retail trade",
+      "role": "Store manager",
+      "portraitUrl": null
+    },
+    {
+      "id": "transport",
+      "name": "Transportation and warehousing",
+      "role": "Truck driver",
+      "portraitUrl": null
+    },
+    {
+      "id": "information",
+      "name": "Information",
+      "role": "Software engineer",
+      "portraitUrl": null
+    },
+    {
+      "id": "finance",
+      "name": "Finance and insurance",
+      "role": "Insurance underwriter",
+      "portraitUrl": null
+    },
+    {
+      "id": "realestate",
+      "name": "Real estate",
+      "role": "Estate agent",
+      "portraitUrl": null
+    },
+    {
+      "id": "professional",
+      "name": "Professional, scientific and technical services",
+      "role": "Lawyer",
+      "portraitUrl": null
+    },
+    {
+      "id": "management",
+      "name": "Management of companies",
+      "role": "Corporate executive",
+      "portraitUrl": null
+    },
+    {
+      "id": "admin",
+      "name": "Administrative and support services",
+      "role": "Office administrator",
+      "portraitUrl": null
+    },
+    {
+      "id": "education",
+      "name": "Educational services",
+      "role": "Teacher",
+      "portraitUrl": null
+    },
+    {
+      "id": "health",
+      "name": "Health care and social assistance",
+      "role": "Doctor",
+      "portraitUrl": "/portraits/health.jpg"
+    },
+    {
+      "id": "arts",
+      "name": "Arts, entertainment and recreation",
+      "role": "Musician",
+      "portraitUrl": null
+    },
+    {
+      "id": "accommodation",
+      "name": "Accommodation and food services",
+      "role": "Chef",
+      "portraitUrl": null
+    },
+    {
+      "id": "other",
+      "name": "Other services",
+      "role": "Mechanic",
+      "portraitUrl": null
+    },
+    {
+      "id": "government",
+      "name": "Government",
+      "role": "Policy officer",
+      "portraitUrl": null
+    }
+  ],
+  "traits": [
+    {
+      "key": "income",
+      "label": "Income",
+      "options": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    {
+      "key": "competence",
+      "label": "Competence",
+      "options": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    {
+      "key": "politics",
+      "label": "Politics",
+      "options": [
+        "Progressive",
+        "Centrist",
+        "Conservative"
+      ]
+    },
+    {
+      "key": "stage",
+      "label": "Career",
+      "options": [
+        "Early",
+        "Mid",
+        "Late"
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "code": "L0",
+      "name": "AI stalls",
+      "year": "never",
+      "description": "AI fails and nothing changes"
+    },
+    {
+      "code": "L1",
+      "name": "Partial",
+      "year": "ongoing",
+      "description": "AI takes over part of the job, but not all of it"
+    },
+    {
+      "code": "L2",
+      "name": "10 years",
+      "year": "2036",
+      "description": "Full takeover in 10 years"
+    },
+    {
+      "code": "L3",
+      "name": "5 years",
+      "year": "2031",
+      "description": "Full takeover in 5 years"
+    },
+    {
+      "code": "L4",
+      "name": "2 years",
+      "year": "2028",
+      "description": "Full takeover in 2 years"
+    }
+  ],
+  "moods": [
+    {
+      "key": "calm",
+      "label": "Calm",
+      "tone": "success"
+    },
+    {
+      "key": "uneasy",
+      "label": "Uneasy",
+      "tone": "warning"
+    },
+    {
+      "key": "anxious",
+      "label": "Anxious",
+      "tone": "warning"
+    },
+    {
+      "key": "alarmed",
+      "label": "Alarmed",
+      "tone": "destructive"
+    },
+    {
+      "key": "panicked",
+      "label": "Panicked",
+      "tone": "destructive"
+    }
+  ],
+  "personas": [
+    {
+      "id": "hc-consultant",
+      "sectorId": "health",
+      "title": "Consultant physician",
+      "traits": {
+        "income": 0,
+        "competence": 0,
+        "politics": 1,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "The AI note-taker trial came and went. Clinic runs the way it always did.",
+          "think": "Clinical judgement isn't going anywhere. My training still pays off.",
+          "do": "Keeps the same workload, skips the sales demos and trains junior doctors.",
+          "feel": "Settled. Tired from the rota, not from the future.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The AI note-taker writes my notes now. I get ten more minutes with each patient.",
+          "think": "Documentation was never the job. Diagnosis and the conversation are.",
+          "do": "Joins the hospital's AI group and checks the note-taker's mistakes.",
+          "feel": "Quietly hopeful, but a little worried about who's to blame if it goes wrong.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "If diagnosis is automated by 2036, I need to be the one who signs it off.",
+          "think": "Doctors who supervise the systems keep their standing. The rest won't.",
+          "do": "Takes a course in medical technology and asks to help oversee the AI.",
+          "feel": "Uneasy, but there is time to position myself.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "Five years. My junior doctors are asking whether to finish training.",
+          "think": "My income depends on procedures and sign-off, and both are shrinking.",
+          "do": "Moves savings into lower-risk assets and negotiates a fixed-term contract.",
+          "feel": "Anxious about the team more than about myself.",
+          "mood": "anxious"
+        },
+        "L4": {
+          "say": "When the AI gets it wrong in 2028, who takes the blame? Not the company that sold it.",
+          "think": "The profession needs a seat at the table before decisions are made for us.",
+          "do": "Organises colleagues through the medical association and delays a house move.",
+          "feel": "Alarmed and angry at how fast this is landing.",
+          "mood": "alarmed"
+        }
+      }
+    },
+    {
+      "id": "hc-junior",
+      "sectorId": "health",
+      "title": "Junior doctor",
+      "traits": {
+        "income": 1,
+        "competence": 1,
+        "politics": 0,
+        "stage": 0
+      },
+      "responses": {
+        "L0": {
+          "say": "No AI rescue, then. Back to the eighty-hour weeks.",
+          "think": "The bottleneck is staffing, not software.",
+          "do": "Picks up extra shifts and studies for specialist exams.",
+          "feel": "Exhausted, but sure of the path.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The AI triages faster than I do. My job is to check it.",
+          "think": "If the machine does the thinking, how do I learn to think?",
+          "do": "Asks seniors to keep teaching hands-on assessment.",
+          "feel": "Unsure whether the training still adds up.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "By the time I'm a consultant, the job could be gone.",
+          "think": "Ten years of training for a role that may not exist in 2036.",
+          "do": "Looks at a move into public health or clinical research.",
+          "feel": "Anxious about debt and timing.",
+          "mood": "anxious"
+        },
+        "L3": {
+          "say": "Why finish specialty training if it ends in 2031?",
+          "think": "Patients will still need care. They may not need me.",
+          "do": "Puts specialist training on hold and joins a union campaign for safe staffing.",
+          "feel": "Alarmed. My cohort talks about little else.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "I owe more than I'll ever earn as a doctor now.",
+          "think": "We were told to study medicine because it was safe.",
+          "do": "Applies for jobs abroad and in health tech, and pushes for loan relief.",
+          "feel": "Panicked and betrayed.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "hc-partner",
+      "sectorId": "health",
+      "title": "Senior partner, private practice",
+      "traits": {
+        "income": 0,
+        "competence": 0,
+        "politics": 2,
+        "stage": 2
+      },
+      "responses": {
+        "L0": {
+          "say": "I've seen four of these revolutions. Paper won every time.",
+          "think": "Experience matters more than any algorithm.",
+          "do": "Carries on as usual and plans to retire in 2032.",
+          "feel": "Content and unbothered.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "Fine, let it write the letters. I'll still see the patient.",
+          "think": "Useful for admin. Not to be trusted with judgement.",
+          "do": "Lets the juniors run the tools and signs off without using them.",
+          "feel": "Mildly irritated by the change.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "I'll be retired before it matters. The young ones should worry.",
+          "think": "My pension is secure. The profession's future is not.",
+          "do": "Brings retirement forward two years.",
+          "feel": "Calm for myself, uneasy for the profession.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "Selling my share of the practice before 2031 is the only sensible move.",
+          "think": "The practice loses value every year the machines get better.",
+          "do": "Looks for a buyer for his share and mentors a successor.",
+          "feel": "Uneasy about selling at the wrong moment.",
+          "mood": "uneasy"
+        },
+        "L4": {
+          "say": "My practice will be worth nothing in two years. Who buys it now?",
+          "think": "My retirement plan relied on the practice being worth something.",
+          "do": "Lobbies the medical regulator and covers shifts at other clinics to fill the gap.",
+          "feel": "Anxious and resentful.",
+          "mood": "anxious"
+        }
+      }
+    },
+    {
+      "id": "hc-rural",
+      "sectorId": "health",
+      "title": "Salaried rural GP",
+      "traits": {
+        "income": 2,
+        "competence": 1,
+        "politics": 1,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "We're still short of doctors. Nothing has changed out here.",
+          "think": "Rural care needs people who stay.",
+          "do": "Keeps covering two clinics.",
+          "feel": "Stretched but steady.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "Remote triage cut my waiting list in half.",
+          "think": "If the tools reach the villages, I can do more good.",
+          "do": "Pilots the triage tool and trains the nurses on it.",
+          "feel": "Relieved, for once.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "The health board will fund software before it funds another GP.",
+          "think": "Salaried doctors are the easiest line to cut.",
+          "do": "Takes on minor surgery to stay hard to replace.",
+          "feel": "Uneasy about the next budget round.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "Two clinics, one doctor and a chatbot. That's the plan for 2031.",
+          "think": "Patients out here will get the worst of the automated system.",
+          "do": "Writes to the local MP and joins the rural health network.",
+          "feel": "Alarmed for patients and for the job.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "My contract ends next year and nobody is renewing anything.",
+          "think": "A mortgage, and a salary that might not exist in 2028.",
+          "do": "Applies for any clinical role with a long contract.",
+          "feel": "Panicked about money.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "fi-senior",
+      "sectorId": "finance",
+      "title": "Senior commercial underwriter",
+      "traits": {
+        "income": 0,
+        "competence": 0,
+        "politics": 1,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "The pricing model never beat our judgement on complex risks.",
+          "think": "Unusual, complex risks still need a person to sign off.",
+          "do": "Writes business as usual and grows broker relationships.",
+          "feel": "Confident.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The model drafts the quote. I decide what we actually take on.",
+          "think": "Routine lines are gone. Complex risk is where I earn my keep.",
+          "do": "Moves fully into insuring complex and disaster risks.",
+          "feel": "Comfortable, slightly watchful.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "If pricing is automated by 2036, my value is the broker relationships.",
+          "think": "Relationships and judgement on unusual risks are all that protects my job.",
+          "do": "Takes a data science course and builds a book of complex accounts.",
+          "feel": "Uneasy, but with a plan.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "Our team went from twelve to five this year.",
+          "think": "Bonuses follow volume, and the volume is going to the model.",
+          "do": "Talks to recruiters at larger insurers and at teams that check AI models.",
+          "feel": "Anxious about the next restructure.",
+          "mood": "anxious"
+        },
+        "L4": {
+          "say": "The board wants software to handle every policy, start to finish, by 2028.",
+          "think": "My know-how is turning into data to train the AI.",
+          "do": "Negotiates a deal to stay on and starts advising other firms on the side.",
+          "feel": "Alarmed and calculating.",
+          "mood": "alarmed"
+        }
+      }
+    },
+    {
+      "id": "fi-junior",
+      "sectorId": "finance",
+      "title": "Junior underwriter",
+      "traits": {
+        "income": 1,
+        "competence": 1,
+        "politics": 1,
+        "stage": 0
+      },
+      "responses": {
+        "L0": {
+          "say": "I'm still learning the trade the old way.",
+          "think": "The seniors here will teach me for years.",
+          "do": "Studies for professional exams.",
+          "feel": "Optimistic.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The model does the files I'd normally learn on. I review its work.",
+          "think": "I'm not sure I'm building real skill.",
+          "do": "Asks for complex files and learns Python at weekends.",
+          "feel": "Uneasy about my development.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "Junior roles here won't last another ten years.",
+          "think": "I need to move toward the model, not away from it.",
+          "do": "Applies to move into the team that sets prices from data.",
+          "feel": "Anxious and impatient.",
+          "mood": "anxious"
+        },
+        "L3": {
+          "say": "They cancelled the graduate scheme. I was in the last intake.",
+          "think": "There's no ladder above me to climb.",
+          "do": "Retrains in risk data and works hard on building contacts.",
+          "feel": "Alarmed.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "I'll be replaced before I finish my exams.",
+          "think": "My degree was for a job that won't exist in 2028.",
+          "do": "Applies across sectors and moves back home to save.",
+          "feel": "Panicked.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "fi-assistant",
+      "sectorId": "finance",
+      "title": "Underwriting assistant",
+      "traits": {
+        "income": 2,
+        "competence": 2,
+        "politics": 2,
+        "stage": 2
+      },
+      "responses": {
+        "L0": {
+          "say": "Twenty-two years in this job. It's not changing now.",
+          "think": "They need people who know the old policies.",
+          "do": "Keeps her head down and counts down to her pension.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The system clears most of my files before I open them.",
+          "think": "The work I used to do is drying up.",
+          "do": "Volunteers for the unusual cases the system can't handle.",
+          "feel": "Uneasy.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "I just need to hold on until I can retire.",
+          "think": "Ten years is about how long I need.",
+          "do": "Avoids attention and turns down a retraining offer.",
+          "feel": "Anxious, counting the years.",
+          "mood": "anxious"
+        },
+        "L3": {
+          "say": "The offer is early retirement or redundancy. Neither covers the mortgage.",
+          "think": "Nobody will hire me at sixty for something new.",
+          "do": "Asks the union about severance terms.",
+          "feel": "Alarmed.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "They told us on a group call. Two years and the department is gone.",
+          "think": "My pension won't stretch, and I don't know where to start.",
+          "do": "Cuts all spending and signs up for a free retraining scheme.",
+          "feel": "Panicked and humiliated.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "fi-ailead",
+      "sectorId": "finance",
+      "title": "Underwriter and team AI lead",
+      "traits": {
+        "income": 1,
+        "competence": 0,
+        "politics": 0,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "Shame. The tools could have taken the drudge work.",
+          "think": "We'll keep spending expert time on admin.",
+          "do": "Builds small automations in spreadsheets.",
+          "feel": "Frustrated but secure.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "I run three models side by side and pick the best quote.",
+          "think": "This is the most interesting the job has ever been.",
+          "do": "Becomes the team's AI lead and trains colleagues.",
+          "feel": "Energised.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "Ten years is plenty of time to move into model oversight.",
+          "think": "Someone has to govern these models, and I know the risks.",
+          "do": "Takes a qualification in checking AI models for risk.",
+          "feel": "Steady and focused.",
+          "mood": "calm"
+        },
+        "L3": {
+          "say": "I'm safe. Half my friends in claims aren't.",
+          "think": "The gains should be shared, not just booked as savings.",
+          "do": "Pushes leaders for a fund that moves staff into new jobs.",
+          "feel": "Uneasy about the people left behind.",
+          "mood": "uneasy"
+        },
+        "L4": {
+          "say": "Even the people building the models are on short contracts now.",
+          "think": "At this speed, oversight roles get cut too.",
+          "do": "Builds a consulting practice and saves a year's salary.",
+          "feel": "Anxious.",
+          "mood": "anxious"
+        }
+      }
+    },
+    {
+      "id": "tw-longhaul",
+      "sectorId": "transport",
+      "title": "Long-haul driver",
+      "traits": {
+        "income": 1,
+        "competence": 0,
+        "politics": 2,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "They promised driverless trucks ten years ago. Still waiting.",
+          "think": "Roads, weather and docks are too messy for a computer.",
+          "do": "Keeps driving and adds a hazardous-goods licence.",
+          "feel": "Settled.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The truck handles the motorway. I handle the docks and the city.",
+          "think": "The long stretches get easier. The hard miles are still mine.",
+          "do": "Trains on the assisted-driving system.",
+          "feel": "Cautiously fine.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "By 2036 the long haul is automated. I'll take the local runs.",
+          "think": "Last-mile and specialist loads will last longest.",
+          "do": "Gets certified for oversize and hazardous loads.",
+          "feel": "Uneasy.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "Freight rates are falling and the depot is cutting drivers.",
+          "think": "Self-driving fleets will undercut every independent driver.",
+          "do": "Joins the drivers' association and sells his second truck.",
+          "feel": "Alarmed.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "I've still got four years left on the truck loan.",
+          "think": "Nobody will pay me to drive what a robot drives for free.",
+          "do": "Looks into warehouse supervisor and rail jobs.",
+          "feel": "Panicked and angry.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "tw-agency",
+      "sectorId": "transport",
+      "title": "Agency driver",
+      "traits": {
+        "income": 2,
+        "competence": 1,
+        "politics": 1,
+        "stage": 0
+      },
+      "responses": {
+        "L0": {
+          "say": "Got my licence last year. There's plenty of work.",
+          "think": "Driver shortages mean job security.",
+          "do": "Builds hours toward a better-paying route.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The scanner tells me every move. I'm the robot's hands.",
+          "think": "The skilled part of the job is going first.",
+          "do": "Asks for forklift and dispatch training.",
+          "feel": "Uneasy and bored.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "I'm twenty-four. This job ends before I'm thirty-five.",
+          "think": "I need a trade the machines can't reach.",
+          "do": "Starts an evening electrician apprenticeship.",
+          "feel": "Anxious but motivated.",
+          "mood": "anxious"
+        },
+        "L3": {
+          "say": "Agency shifts dropped by half this year.",
+          "think": "If I'm not out by 2031, I'm stuck.",
+          "do": "Moves to night shifts to pay for training.",
+          "feel": "Alarmed.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "My hours were cut to two days a week.",
+          "think": "There's no time left to retrain properly.",
+          "do": "Takes any gig work going and moves in with family.",
+          "feel": "Panicked.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "tw-veteran",
+      "sectorId": "transport",
+      "title": "Veteran regional driver",
+      "traits": {
+        "income": 1,
+        "competence": 1,
+        "politics": 2,
+        "stage": 2
+      },
+      "responses": {
+        "L0": {
+          "say": "Thirty years on the road. The road hasn't changed.",
+          "think": "I'll drive until I'm done.",
+          "do": "Keeps his regular routes.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "Too many screens in the cab now. I miss just driving.",
+          "think": "The young ones will adapt. I'm not sure I want to.",
+          "do": "Does the minimum training.",
+          "feel": "Uneasy and annoyed.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "I'll be retired by then. Probably.",
+          "think": "I just need the pension to hold.",
+          "do": "Plans to retire at sixty-two.",
+          "feel": "Uneasy for younger drivers.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "The company wants volunteers for early exit. I might take it.",
+          "think": "A buyout now beats being pushed out later.",
+          "do": "Has the union check the severance terms.",
+          "feel": "Anxious.",
+          "mood": "anxious"
+        },
+        "L4": {
+          "say": "I can't retire in two years, and nobody hires a sixty-year-old driver.",
+          "think": "There's no bridge to my pension.",
+          "do": "Joins a protest convoy and writes to his MP.",
+          "feel": "Alarmed and bitter.",
+          "mood": "alarmed"
+        }
+      }
+    },
+    {
+      "id": "tw-specialist",
+      "sectorId": "transport",
+      "title": "Specialist heavy-haul driver",
+      "traits": {
+        "income": 0,
+        "competence": 0,
+        "politics": 1,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "No change. Specialist loads always needed a human.",
+          "think": "Heavy-haul and hazardous skills are rare.",
+          "do": "Keeps growing his specialist contracts.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "I supervise three assisted trucks from my cab now.",
+          "think": "Supervising automation pays better than driving.",
+          "do": "Takes the fleet supervisor course.",
+          "feel": "Calm and curious.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "Somebody has to run the automated fleet. That's my next ten years.",
+          "think": "Fleet oversight is the safest seat.",
+          "do": "Moves into the remote control room.",
+          "feel": "Confident.",
+          "mood": "calm"
+        },
+        "L3": {
+          "say": "The remote control room has one person for twenty trucks.",
+          "think": "Even the oversight jobs are thinning.",
+          "do": "Studies for a logistics management diploma.",
+          "feel": "Uneasy.",
+          "mood": "uneasy"
+        },
+        "L4": {
+          "say": "My specialty buys me maybe a year longer than the rest.",
+          "think": "Hazardous loads are the last to go, but they go.",
+          "do": "Saves hard and plans a move into safety inspection.",
+          "feel": "Anxious.",
+          "mood": "anxious"
+        }
+      }
+    },
+    {
+      "id": "ed-secondary",
+      "sectorId": "education",
+      "title": "Secondary school teacher",
+      "traits": {
+        "income": 1,
+        "competence": 0,
+        "politics": 0,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "The AI tutors faded out after one term.",
+          "think": "Teaching is relationships. That hasn't changed.",
+          "do": "Keeps refining lessons the usual way.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "AI marks the quizzes. I spend the time on the students who are struggling.",
+          "think": "Less admin, more teaching.",
+          "do": "Builds AI feedback into her lessons.",
+          "feel": "Hopeful.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "If AI tutors take over by 2036, what is school for?",
+          "think": "Teachers become coaches and carers, or nothing.",
+          "do": "Trains to design courses and to lead student wellbeing.",
+          "feel": "Uneasy about the profession's purpose.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "My class sizes doubled while the tutor licences got renewed.",
+          "think": "The budget follows the software, not the children.",
+          "do": "Joins union negotiations on staffing ratios.",
+          "feel": "Anxious.",
+          "mood": "anxious"
+        },
+        "L4": {
+          "say": "Who looks after the children when screens do the teaching?",
+          "think": "Children will lose the adults in their lives.",
+          "do": "Campaigns with parents and looks at counselling training.",
+          "feel": "Alarmed and grieving.",
+          "mood": "alarmed"
+        }
+      }
+    },
+    {
+      "id": "ed-trainee",
+      "sectorId": "education",
+      "title": "Trainee teacher",
+      "traits": {
+        "income": 2,
+        "competence": 1,
+        "politics": 1,
+        "stage": 0
+      },
+      "responses": {
+        "L0": {
+          "say": "Still photocopying worksheets. Nothing changed.",
+          "think": "I'll get to a full teaching post in time.",
+          "do": "Finishes her teaching qualification.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The AI does the reading support I was hired for.",
+          "think": "My role is the first to shrink.",
+          "do": "Moves toward supporting children with special needs.",
+          "feel": "Uneasy.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "Why qualify for a job that changes completely by 2036?",
+          "think": "I'll need more than classroom skills.",
+          "do": "Studies child psychology part-time.",
+          "feel": "Anxious.",
+          "mood": "anxious"
+        },
+        "L3": {
+          "say": "Support staff contracts weren't renewed this summer.",
+          "think": "My income is the first thing the school cuts.",
+          "do": "Takes tutoring gigs and childcare shifts.",
+          "feel": "Alarmed.",
+          "mood": "alarmed"
+        },
+        "L4": {
+          "say": "I'm out of work by next year, and so is everyone I trained with.",
+          "think": "Nobody planned for people like us.",
+          "do": "Applies for care work and retail jobs.",
+          "feel": "Panicked.",
+          "mood": "panicked"
+        }
+      }
+    },
+    {
+      "id": "ed-hod",
+      "sectorId": "education",
+      "title": "Head of department",
+      "traits": {
+        "income": 1,
+        "competence": 0,
+        "politics": 2,
+        "stage": 2
+      },
+      "responses": {
+        "L0": {
+          "say": "Good. Children need books and a teacher at the front.",
+          "think": "Discipline and knowledge still matter most.",
+          "do": "Teaches as he always has.",
+          "feel": "Content.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "The software marks the homework. I still read every essay.",
+          "think": "Pupils are learning to ask machines, not to think.",
+          "do": "Bans AI tools in his department's exams.",
+          "feel": "Uneasy.",
+          "mood": "uneasy"
+        },
+        "L2": {
+          "say": "I'll be gone before the robots take my classroom.",
+          "think": "My pension will be fine. The next generation won't.",
+          "do": "Mentors new staff on classroom management.",
+          "feel": "Uneasy for the pupils.",
+          "mood": "uneasy"
+        },
+        "L3": {
+          "say": "They want me to supervise four AI classrooms at once.",
+          "think": "This isn't teaching. It's crowd control.",
+          "do": "Requests early retirement.",
+          "feel": "Anxious and disillusioned.",
+          "mood": "anxious"
+        },
+        "L4": {
+          "say": "Two years to dismantle a profession that took a century to build.",
+          "think": "Something irreplaceable will be lost.",
+          "do": "Writes to the school board and the parents' association.",
+          "feel": "Alarmed.",
+          "mood": "alarmed"
+        }
+      }
+    },
+    {
+      "id": "ed-independent",
+      "sectorId": "education",
+      "title": "Senior teacher, independent school",
+      "traits": {
+        "income": 0,
+        "competence": 0,
+        "politics": 1,
+        "stage": 1
+      },
+      "responses": {
+        "L0": {
+          "say": "Our parents pay for teachers, and that's what they get.",
+          "think": "Premium education stays human.",
+          "do": "Business as usual.",
+          "feel": "Calm.",
+          "mood": "calm"
+        },
+        "L1": {
+          "say": "AI does the marking and the teaching stays human. Parents love it.",
+          "think": "AI frees teachers for the valuable part.",
+          "do": "Leads the school's AI policy.",
+          "feel": "Confident.",
+          "mood": "calm"
+        },
+        "L2": {
+          "say": "Human teaching will become a premium product.",
+          "think": "The best schools will sell what AI can't.",
+          "do": "Builds mentoring and seminar programmes.",
+          "feel": "Calm, quietly strategic.",
+          "mood": "calm"
+        },
+        "L3": {
+          "say": "Even fee-paying parents ask why they're paying for teachers.",
+          "think": "Premium only lasts while outcomes stay ahead.",
+          "do": "Rebuilds the curriculum around projects and debate.",
+          "feel": "Uneasy.",
+          "mood": "uneasy"
+        },
+        "L4": {
+          "say": "Enrolments fell twenty percent after the tutor app launched.",
+          "think": "We have two years to prove what a teacher is for.",
+          "do": "Cuts costs and rebuilds the school around one-to-one mentoring.",
+          "feel": "Anxious.",
+          "mood": "anxious"
+        }
+      }
+    }
+  ],
+  "templates": {
+    "say": [
+      "We trialled the AI tools. They didn't stick.",
+      "It handles the {task}. The {core} is still mine.",
+      "By 2036 even the {core} is automated. I have ten years to plan.",
+      "Nobody is hiring junior {plural} anymore.",
+      "Two years until the {core} goes too. Tell me what to do now."
+    ],
+    "think": {
+      "early": [
+        "My skills will carry a whole career.",
+        "Better to learn the tools now, while it's cheap to.",
+        "I'll need a second skill before 2036.",
+        "Starting over at thirty beats starting over at forty.",
+        "There's no career left to start."
+      ],
+      "mid": [
+        "My skills stay valuable for the foreseeable future.",
+        "Parts of my job will shrink. The core stays.",
+        "I need a second skill before the decade is out.",
+        "My mortgage will outlast my job.",
+        "Everything I built my career on is going."
+      ],
+      "late": [
+        "I'll finish my career doing what I know.",
+        "I can ride this out until retirement.",
+        "Retirement might arrive just in time.",
+        "Nobody retrains people my age.",
+        "My pension plan assumed ten more years."
+      ]
+    },
+    "do": {
+      "high": [
+        "Keeps the current routine and skips optional AI training.",
+        "Pays for a specialist course and hands routine work to AI.",
+        "Spreads out savings and looks at related jobs.",
+        "Hires a career coach and negotiates a deal to stay on.",
+        "Moves savings into cash and starts freelance advising."
+      ],
+      "medium": [
+        "Keeps the current routine and skips optional AI training.",
+        "Takes a short course and offloads routine tasks.",
+        "Saves more and looks at related jobs.",
+        "Retrains at night and joins an industry group.",
+        "Cuts spending and applies outside the sector."
+      ],
+      "low": [
+        "Keeps the current routine and skips optional AI training.",
+        "Learns the tools on the job, unpaid.",
+        "Picks up extra hours to build a savings buffer.",
+        "Takes a second job and looks for funded retraining.",
+        "Signs up for job support and takes any work going."
+      ]
+    },
+    "feel": {
+      "calm": "Work feels the same as last year.",
+      "uneasy": "Curious, with a low hum of worry.",
+      "anxious": "Pressure building, but still in control.",
+      "alarmed": "Losing sleep over what comes next.",
+      "panicked": "Overwhelmed, angry and out of time."
+    },
+    "feelCalmLater": "Calm, with a plan in place.",
+    "sectors": {
+      "agriculture": {
+        "task": "yield records and scheduling",
+        "core": "field work",
+        "plural": "farm support workers",
+        "shift": -1
+      },
+      "mining": {
+        "task": "drilling logs and monitoring",
+        "core": "rig maintenance",
+        "plural": "rig technicians",
+        "shift": 0
+      },
+      "utilities": {
+        "task": "fault reports and load planning",
+        "core": "line work",
+        "plural": "line engineers",
+        "shift": -1
+      },
+      "construction": {
+        "task": "estimates and scheduling",
+        "core": "site management",
+        "plural": "site managers",
+        "shift": -1
+      },
+      "manufacturing": {
+        "task": "quality checks and scheduling",
+        "core": "machine setup",
+        "plural": "machine operators",
+        "shift": 0
+      },
+      "wholesale": {
+        "task": "reordering and price checks",
+        "core": "supplier negotiation",
+        "plural": "buyers",
+        "shift": 1
+      },
+      "retail": {
+        "task": "rotas and stock counts",
+        "core": "running of the floor",
+        "plural": "store managers",
+        "shift": 0
+      },
+      "information": {
+        "task": "routine code and tests",
+        "core": "system design",
+        "plural": "software engineers",
+        "shift": 1
+      },
+      "realestate": {
+        "task": "listings and valuations",
+        "core": "negotiation",
+        "plural": "estate agents",
+        "shift": 0
+      },
+      "professional": {
+        "task": "research and first drafts",
+        "core": "client advice",
+        "plural": "lawyers",
+        "shift": 1
+      },
+      "management": {
+        "task": "reporting and forecasts",
+        "core": "final call",
+        "plural": "executives",
+        "shift": 0
+      },
+      "admin": {
+        "task": "scheduling and filing",
+        "core": "front desk",
+        "plural": "office administrators",
+        "shift": 1
+      },
+      "arts": {
+        "task": "arranging and mixing",
+        "core": "live performance",
+        "plural": "musicians",
+        "shift": 0
+      },
+      "accommodation": {
+        "task": "ordering and menu costing",
+        "core": "cooking",
+        "plural": "chefs",
+        "shift": -1
+      },
+      "other": {
+        "task": "diagnostics and parts ordering",
+        "core": "hands-on repair",
+        "plural": "mechanics",
+        "shift": -1
+      },
+      "government": {
+        "task": "casework and first drafts",
+        "core": "policy advice",
+        "plural": "policy officers",
+        "shift": 0
+      }
+    }
+  }
+}
