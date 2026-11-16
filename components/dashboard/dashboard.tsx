@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { Icon, type IconName } from "@/components/simulator/icons";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { ScatterBrush, type Brush } from "@/components/ui/bjork-scatter-brush";
 import { Avatar, SHORT_SECTOR } from "@/components/workers/avatar";
@@ -19,7 +20,14 @@ import {
 } from "@/lib/workers/types";
 
 const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
-const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.name, year: s.when, description: s.description }));
+const SCENARIO_ICON: Record<ScenarioCode, IconName> = { S0: "plateau", S1: "trend", S4: "hourglass", S3: "clock", S2: "zap" };
+const STOPS = SCENARIOS.map((s) => ({
+  code: s.code,
+  name: s.name,
+  year: s.when,
+  description: s.description,
+  icon: <Icon name={SCENARIO_ICON[s.code]} size={18} />,
+}));
 const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
 const pct = (x: number) => `${Math.round(x * 100)}%`;
 const people = (n: number) => (n === 1 ? "1 person" : `${n} people`);

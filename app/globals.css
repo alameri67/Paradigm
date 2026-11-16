@@ -439,7 +439,8 @@ button{cursor:pointer}
 .db-back{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px;font-size:13px;line-height:18px;font-weight:500;color:var(--fg2);text-decoration:none}
 .db-back:hover{color:var(--fg)}
 .db-block{display:flex;flex-direction:column;gap:12px;min-width:0}
-.db .amount-labels{height:40px}
+.db .amount-labels{height:64px}
+.db .dialbar{max-width:none}
 .db .amount-label .mono{font-family:var(--font);font-size:12px}
 .db-chips{display:flex;flex-wrap:wrap;gap:8px}
 .db-chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;max-width:100%;padding:4px 12px 4px 6px;border:0;border-radius:999px;background:var(--muted);font-size:13px;line-height:18px;font-weight:500;text-align:left;transition:background 120ms var(--ease)}
@@ -494,5 +495,5 @@ button{cursor:pointer}
   /* Five stop labels do not fit side by side on a phone: show the chosen one, name and timing. */
   .db .amount-label:not(.on){visibility:hidden}
   .db .amount-label.on .nm{display:block}
-  .db .amount-labels{height:40px}
+  .db .amount-labels{height:64px}
 }
