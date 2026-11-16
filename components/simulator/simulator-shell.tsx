@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import type { View } from "@/lib/sim/url-state";
@@ -28,6 +29,10 @@ function SectorSidebar() {
   return (
     <nav className="side" aria-label="Sectors">
       <div className="brand">Simulator</div>
+      <Link href="/explore" className="srow" style={{ gridTemplateColumns: "20px minmax(0,1fr)" }}>
+        <Icon name="grid" />
+        <span className="srow-name">Persona cards (115 interviews)</span>
+      </Link>
       <label className="search">
         <Icon name="search" size={16} stroke={2} />
         <input

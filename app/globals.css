@@ -294,3 +294,24 @@ button{cursor:pointer}
   tr,.brief-cols{break-inside:avoid}
 }
 
+
+/* ---------- Persona cards (/explore) ---------- */
+.pc-page{display:flex;flex-direction:column;gap:24px;padding:24px 32px 48px;min-height:100%}
+.pc-head{display:flex;flex-direction:column;gap:20px;max-width:1100px}
+.pc-head>.lq-btn{align-self:flex-start;text-decoration:none}
+.pc-title{display:flex;flex-direction:column;gap:6px;max-width:68ch}
+.pc-controls{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 28px}
+.pc-scn-name{padding-bottom:10px}
+.pc-panel{border-radius:28px;background:#08101a;padding:56px 32px 64px;overflow:hidden}
+.pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));justify-items:center;gap:72px 56px}
+.pc-item{display:flex;flex-direction:column;gap:20px;width:300px}
+.pc-placeholder{border-radius:31px;background:#0b1a2e}
+.pc-text{display:flex;flex-direction:column;gap:8px;color:#c7d0de;font-size:14px;line-height:20px;position:relative;z-index:1}
+.pc-mood{display:flex;align-items:center;gap:8px;font-weight:500;color:#eef2f8}
+.pc-dot{width:8px;height:8px;border-radius:999px;flex:none}
+.pc-say{color:#dfe5ee}
+.pc-meta{font-size:12px;line-height:16px;color:#7f8a9c}
+@media (max-width:640px){
+  .pc-page{padding:16px 16px 32px}
+  .pc-panel{padding:40px 8px 48px;border-radius:20px}
+}
