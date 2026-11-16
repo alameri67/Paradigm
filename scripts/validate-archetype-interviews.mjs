@@ -58,6 +58,9 @@ for (const f of files) {
   for (const k of ["headlineQuote", "portrait", "biggestWorry", "whatWouldHelp"]) if (!d[k]?.trim()) errs.push(`missing ${k}`);
   if (d.headlineQuote && words(d.headlineQuote) > 30) errs.push("headlineQuote is over 30 words");
   if (d.headlineQuote && !norm(everything).includes(norm(d.headlineQuote))) errs.push("headlineQuote is not word for word from the transcript");
+  const qs = SCEN.map((s) => d.scenarios?.[s]?.quote).filter(Boolean).map(norm);
+  if (d.headlineQuote && qs.includes(norm(d.headlineQuote))) errs.push("headlineQuote repeats a scenario quote; pick a different line");
+  if (new Set(qs).size < qs.length) errs.push("two scenarios have the same quote; each needs its own");
   if (d.protocolVersion !== "3.0") errs.push(`protocolVersion should be "3.0"`);
   if (/\bS[0-4]\b/.test(personaText(d.opening) + JSON.stringify(Object.values(d.scenarios ?? {}).map((x) => x.transcript)))) errs.push("transcript says a scenario code (S0–S4); use the scenario's name");
   if (d.portrait && words(d.portrait) < 45) errs.push(`portrait is thin (${words(d.portrait)} words)`);
