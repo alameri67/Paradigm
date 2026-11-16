@@ -2,7 +2,7 @@
 
 Simulated interviews with each persona in `data/population/synthetic-population-v1.3.md`, run with `docs/interview-protocol.md`. Every file is made by `scripts/export-transcripts.mjs` from the data files in `raw/`, so edit those, not these.
 
-70 of 115 interviews are done.
+91 of 115 interviews are done.
 
 | ID | Name | Role | Group | S0 | S1 | S2 | S3 | S4 |
 |---|---|---|---|---|---|---|---|---|
@@ -31,6 +31,11 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P008](P008.md) | Jake Morrison | Rig floorhand | Mining, oil and gas | Calm | Calm | Calm | Uneasy | Alarmed |
 | [P009](P009.md) | Marta Kowalski | Site HR and safety compliance manager | Mining, oil and gas | Calm | Uneasy | Alarmed | Alarmed | Alarmed |
 | [P010](P010.md) | Samuel Adeyemi | CEO, mid-size oilfield services firm | Mining, oil and gas | Calm | Calm | Calm | Uneasy | Anxious |
+| [P011](P011.md) | Helen Brooks | Grid control room operator | Utilities | Calm | Uneasy | Uneasy | Anxious | Anxious |
+| [P012](P012.md) | Diego Santos | Electrical lineworker | Utilities | Calm | Calm | Calm | Calm | Uneasy |
+| [P013](P013.md) | Yuki Tanaka | Billing and customer service agent | Utilities | Uneasy | Anxious | Alarmed | Panicked | Panicked |
+| [P014](P014.md) | Robert Klein | Water treatment plant manager | Utilities | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P015](P015.md) | Amara Okafor | Data scientist, renewables integration | Utilities | Calm | Calm | Uneasy | Anxious | Anxious |
 | [P026](P026.md) | Paul Anderson | B2B sales rep, industrial supplies | Wholesale trade | Calm | Uneasy | Anxious | Alarmed | Alarmed |
 | [P027](P027.md) | Fatima Zahra Benali | Purchasing and inventory analyst | Wholesale trade | Calm | Calm | Anxious | Alarmed | Alarmed |
 | [P028](P028.md) | Greg Thompson | Owner, family food distributor | Wholesale trade | Calm | Calm | Uneasy | Uneasy | Anxious |
@@ -44,6 +49,10 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P036](P036.md) | Bill Jackson | Long-haul truck driver, owner-operator | Transportation and warehousing | Calm | Uneasy | Uneasy | Uneasy | Panicked |
 | [P037](P037.md) | Nadia Ivanova | Warehouse fulfilment associate | Transportation and warehousing | Uneasy | Uneasy | Uneasy | Anxious | Alarmed |
 | [P038](P038.md) | Carlos Mendes | Rideshare and delivery gig driver | Transportation and warehousing | Calm | Calm | Uneasy | Anxious | Alarmed |
+| [P039](P039.md) | Emily Watson | Operations director, logistics provider | Transportation and warehousing | Calm | Calm | Calm | Uneasy | Calm |
+| [P040](P040.md) | Ahmed Yusuf | City bus driver | Transportation and warehousing | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P041](P041.md) | Jordan Kim | Software developer | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
+| [P042](P042.md) | Natalie Brennan | Reporter, regional newspaper | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
 | [P051](P051.md) | Kevin Murphy | Residential estate agent | Real estate | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
 | [P052](P052.md) | Sofia Rossi | Owner, property management firm | Real estate | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P053](P053.md) | Andre Baptiste | Building maintenance technician | Real estate | Calm | Calm | Calm | Uneasy | Alarmed |
@@ -61,6 +70,12 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P065](P065.md) | Ben Nakamura | Shared-services finance team lead | Management of companies | Uneasy | Anxious | Alarmed | Panicked | Panicked |
 | [P066](P066.md) | Maria Lopez | Contract office cleaner | Administrative and support services | Calm | Calm | Uneasy | Uneasy | Panicked |
 | [P067](P067.md) | Jason Park | Outsourced call centre agent | Administrative and support services | Anxious | Anxious | Alarmed | Panicked | Panicked |
+| [P068](P068.md) | Denise Carter | Branch manager, temp staffing agency | Administrative and support services | Calm | Calm | Uneasy | Uneasy | Alarmed |
+| [P069](P069.md) | Tom Fischer | Security guard | Administrative and support services | Uneasy | Uneasy | Uneasy | Calm | Alarmed |
+| [P070](P070.md) | Ngozi Eze | Data entry and document clerk | Administrative and support services | Uneasy | Uneasy | Anxious | Alarmed | Alarmed |
+| [P071](P071.md) | Karen Mitchell | High school maths teacher | Educational services | Uneasy | Uneasy | Uneasy | Anxious | Anxious |
+| [P072](P072.md) | James Whitfield | Tenured history professor | Educational services | Uneasy | Uneasy | Uneasy | Anxious | Anxious |
+| [P073](P073.md) | Lucy Adams | Freelance online language tutor | Educational services | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
 | [P076](P076.md) | Rajesh Kumar | Radiologist | Health care and social assistance | Calm | Calm | Uneasy | Uneasy | Uneasy |
 | [P077](P077.md) | Angela Moore | ICU registered nurse | Health care and social assistance | Uneasy | Calm | Uneasy | Uneasy | Anxious |
 | [P078](P078.md) | Juan Pérez | Home health aide | Health care and social assistance | Calm | Calm | Calm | Uneasy | Alarmed |
@@ -76,3 +91,9 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P088](P088.md) | Irina Sokolova | Hotel front desk supervisor | Accommodation and food services | Calm | Uneasy | Anxious | Anxious | Alarmed |
 | [P089](P089.md) | Antonio Ricci | Owner and chef, family restaurant | Accommodation and food services | Calm | Calm | Uneasy | Anxious | Anxious |
 | [P090](P090.md) | Jasmine Taylor | Server and bartender | Accommodation and food services | Calm | Calm | Uneasy | Uneasy | Anxious |
+| [P091](P091.md) | Gloria Ramirez | Owner and stylist, hair salon | Other services | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P092](P092.md) | Mike Sullivan | Auto mechanic | Other services | Calm | Calm | Uneasy | Uneasy | Anxious |
+| [P093](P093.md) | Emmanuel Okeke | Church pastor | Other services | Calm | Calm | Uneasy | Anxious | Anxious |
+| [P094](P094.md) | Kim Nguyen | Nail technician | Other services | Calm | Calm | Uneasy | Anxious | Alarmed |
+| [P095](P095.md) | Alex Turner | Programme manager, advocacy nonprofit | Other services | Uneasy | Uneasy | Anxious | Alarmed | Alarmed |
+| [P096](P096.md) | Susan Price | Benefits eligibility caseworker | Government | Calm | Uneasy | Anxious | Alarmed | Alarmed |
