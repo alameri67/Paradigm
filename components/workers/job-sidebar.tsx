@@ -36,7 +36,6 @@ export function JobSidebar({
   const multi = page === "summary";
   return (
     <nav className="ws-jobs" aria-label="Jobs">
-      <div className="ws-back">AI Transition Simulator</div>
       <div className="js-tabs" role="tablist" aria-label="Pages">
         <Link href={summaryHref} role="tab" aria-selected={page === "summary"} className={"js-tab" + (page === "summary" ? " on" : "")}>
           Summary

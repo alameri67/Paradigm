@@ -10,7 +10,7 @@ export function briefText(sim: Sim, sectorId: string, traits: TraitValues, level
   if (!sec || !res || !r || !lv) return "";
 
   const lines = [
-    "Executive brief · AI Transition Simulator",
+    "Executive brief · Paradigm",
     `${sec.role} · ${sec.name}${res.persona.title ? ` · ${res.persona.title}` : ""}`,
     `Persona: ${sim.traitSummary(traits)}`,
     `Scenario: ${lv.code} · ${lv.name} (${lv.year}) · ${lv.description}`,

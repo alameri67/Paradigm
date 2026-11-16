@@ -26,7 +26,7 @@ export function BriefDocument() {
   return (
     <article className="brief" aria-label="Executive brief">
       <div className="brief-top">
-        <span className="label">Executive brief · AI Transition Simulator</span>
+        <span className="label">Executive brief · Paradigm</span>
         <span className="mono t-caption fg2">{date}</span>
       </div>
       <div className="brief-head">
