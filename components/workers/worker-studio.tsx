@@ -1,0 +1,440 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { AmountSlider } from "@/components/ui/amount-slider";
+import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
+import { PeakChart } from "@/components/ui/peak-chart";
+import { Icon } from "@/components/simulator/icons";
+import {
+  MOODS,
+  MOOD_ACCENT,
+  MOOD_LABEL,
+  MOOD_TONE,
+  SCENARIOS,
+  workerId,
+  type Archetype,
+  type Group,
+  type GroupLevel,
+  type Interview,
+  type MoodKey,
+  type ScenarioCode,
+  type Worker,
+} from "@/lib/workers/types";
+
+const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
+const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.short, year: "", description: s.description }));
+const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
+const SHORT_SECTOR: Record<string, string> = {
+  "Agriculture (logging and farm support)": "Agriculture",
+  "Transportation and warehousing": "Transport",
+  "Professional, scientific and technical services": "Professional services",
+  "Management of companies": "Management",
+  "Administrative and support services": "Admin and support",
+  "Health care and social assistance": "Health care",
+  "Arts, entertainment and recreation": "Arts and recreation",
+  "Accommodation and food services": "Food and hotels",
+};
+
+/** The details a level stands for, as one readable line (age, savings, views...). */
+function levelDetail(l: GroupLevel) {
+  return Object.entries(l)
+    .filter(([k]) => k !== "key" && k !== "label")
+    .map(([k, v]) => (k === "age" ? `Age ${v}` : String(v).replace(/\.$/, "")))
+    .join(". ");
+}
+
+function Mood({ mood }: { mood: MoodKey }) {
+  return (
+    <span className={`mood tone-${MOOD_TONE[mood]}`}>
+      <span className="dot" aria-hidden="true" />
+      <span className="mood-word">{MOOD_LABEL[mood]}</span>
+    </span>
+  );
+}
+
+function Avatar({ a, size }: { a: Archetype; size: number }) {
+  return (
+    <span className="ws-avatar" style={{ width: size, height: size }}>
+      {a.portraitUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={a.portraitUrl} alt="" />
+      ) : (
+        <Icon name="person" size={Math.round(size * 0.45)} stroke={1.6} />
+      )}
+    </span>
+  );
+}
+
+/** The new worker card: a Peak Chart of worry across S0–S4, with the job's portrait on top. */
+function WorkerCard({
+  a,
+  w,
+  iv,
+  scenario,
+  onScenario,
+}: {
+  a: Archetype;
+  w: Worker;
+  iv: Interview;
+  scenario: ScenarioCode;
+  onScenario: (s: ScenarioCode) => void;
+}) {
+  const mood = iv.scenarios[scenario].mood;
+  return (
+    <div className="ws-card">
+      <div className="ws-card-avatar">
+        <Avatar a={a} size={112} />
+      </div>
+      <PeakChart
+        width={300}
+        data={CODES.map((c) => level(iv.scenarios[c].mood))}
+        labels={SCENARIOS.map((s) => `${s.code} · ${s.name}`)}
+        value={level(mood)}
+        valueSuffix="/5"
+        title={w.name}
+        caption={`${w.job} · age ${w.profile.age}`}
+        updatedText={SHORT_SECTOR[w.sector] ?? w.sector}
+        trend="none"
+        periods={CODES}
+        period={scenario}
+        onPeriodChange={(v) => onScenario(v as ScenarioCode)}
+        accent={MOOD_ACCENT[mood]}
+        formatValue={(v) => MOOD_LABEL[MOODS[Math.max(0, Math.min(4, Math.round(v) - 1))]]}
+      />
+    </div>
+  );
+}
+
+function ControlPanel({
+  groups,
+  levels,
+  onLevel,
+  worker,
+}: {
+  groups: Group[];
+  levels: Record<string, string>;
+  onLevel: (group: string, level: string) => void;
+  worker: Worker | null;
+}) {
+  return (
+    <aside className="ws-panel" aria-label="Worker details">
+      <h2 className="t-section">Who is this worker?</h2>
+      {groups.map((g) => {
+        const idx = Math.max(0, g.levels.findIndex((l) => l.key === levels[g.key]));
+        return (
+          <div className="ws-group" key={g.key}>
+            <span className="label" id={`wg-${g.key}`}>
+              {g.label}
+            </span>
+            <LiquidGlassNavbar
+              mode="radio"
+              size="sm"
+              labelledBy={`wg-${g.key}`}
+              items={g.levels.map((l) => ({ label: l.label }))}
+              active={idx}
+              onChange={(i) => onLevel(g.key, g.levels[i].key)}
+            />
+            <p className="ws-group-detail">{levelDetail(g.levels[idx]).replace(/\.?$/, ".")}</p>
+          </div>
+        );
+      })}
+      {worker && (
+        <dl className="ws-facts">
+          <div>
+            <dt className="label">Education</dt>
+            <dd>{worker.profile.education}</dd>
+          </div>
+          <div>
+            <dt className="label">AI exposure (fixed by the job)</dt>
+            <dd>{worker.profile.aiExposure}</dd>
+          </div>
+          <div>
+            <dt className="label">Version</dt>
+            <dd className="mono">{worker.id}</dd>
+          </div>
+        </dl>
+      )}
+    </aside>
+  );
+}
+
+export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; groups: Group[] }) {
+  const params = useSearchParams();
+  const [job, setJob] = useState(() => {
+    const j = params.get("job");
+    return archetypes.some((a) => a.code === j) ? j! : "A16";
+  });
+  const [levels, setLevels] = useState<Record<string, string>>(() =>
+    Object.fromEntries(
+      groups.map((g) => {
+        const v = params.get(g.key);
+        return [g.key, g.levels.some((l) => l.key === v) ? v! : g.levels[1].key];
+      }),
+    ),
+  );
+  const [scenario, setScenario] = useState<ScenarioCode>(() => {
+    const s = params.get("s");
+    return (CODES as string[]).includes(s ?? "") ? (s as ScenarioCode) : "S2";
+  });
+  const [interviewed, setInterviewed] = useState<string[] | null>(null);
+  const [result, setResult] = useState<{ id: string; worker: Worker; interview: Interview | null } | null>(null);
+  const [showTranscript, setShowTranscript] = useState(false);
+
+  const a = archetypes.find((x) => x.code === job)!;
+  const id = workerId(job, groups, levels);
+  const loading = result?.id !== id;
+  const worker = result && !loading ? result.worker : null;
+  const iv = result && !loading ? result.interview : null;
+
+  // Shareable address bar.
+  useEffect(() => {
+    const q = new URLSearchParams({ job, ...levels, s: scenario }).toString();
+    if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
+  }, [job, levels, scenario]);
+
+  useEffect(() => {
+    let live = true;
+    const load = () =>
+      fetch("/api/workers")
+        .then((r) => r.json())
+        .then((d) => live && setInterviewed(d.interviewed))
+        .catch(() => live && setInterviewed([]));
+    load();
+    // Interviews are still being added while the study runs.
+    const t = setInterval(load, 30000);
+    return () => {
+      live = false;
+      clearInterval(t);
+    };
+  }, []);
+
+  useEffect(() => {
+    let live = true;
+    fetch(`/api/workers/${id}`)
+      .then((r) => r.json())
+      .then((d) => live && setResult({ id, worker: d.worker, interview: d.interview }));
+    return () => {
+      live = false;
+    };
+  }, [id]);
+
+  const counts = useMemo(() => {
+    const c: Record<string, number> = {};
+    for (const x of interviewed ?? []) c[x.slice(0, 3)] = (c[x.slice(0, 3)] ?? 0) + 1;
+    return c;
+  }, [interviewed]);
+
+  /** The interviewed version of this job that differs on the fewest groups. */
+  const closest = useMemo(() => {
+    const mine = id.slice(4);
+    let best: string | null = null;
+    let bd = 99;
+    for (const x of interviewed ?? []) {
+      if (!x.startsWith(job + "-")) continue;
+      const d = [...x.slice(4)].filter((ch, i) => ch !== mine[i]).length;
+      if (d < bd) {
+        bd = d;
+        best = x;
+      }
+    }
+    return best;
+  }, [interviewed, job, id]);
+
+  function jumpTo(target: string) {
+    setLevels(Object.fromEntries(groups.map((g, i) => [g.key, g.levels[Number(target[4 + i]) - 1].key])));
+  }
+  const diffGroups = (target: string) =>
+    groups.filter((g, i) => target[4 + i] !== id[4 + i]).map((g) => g.label.toLowerCase());
+
+  const sc = iv?.scenarios[scenario];
+
+  return (
+    <div className="ws">
+      <nav className="ws-jobs" aria-label="Jobs">
+        <Link href="/" className="ws-back">
+          <Icon name="back" />
+          Simulator
+        </Link>
+        <h2 className="label" style={{ padding: "12px 10px 6px" }}>
+          One worker per industry
+        </h2>
+        {archetypes.map((x) => (
+          <button
+            key={x.code}
+            type="button"
+            className={"ws-job" + (x.code === job ? " on" : "")}
+            aria-current={x.code === job ? "true" : undefined}
+            onClick={() => setJob(x.code)}
+          >
+            <Avatar a={x} size={32} />
+            <span className="ws-job-text">
+              <span className="ws-job-name">{x.job}</span>
+              <span className="ws-job-sector">{SHORT_SECTOR[x.sector] ?? x.sector}</span>
+            </span>
+            <span className="ws-job-count mono" title="Versions interviewed">
+              {counts[x.code] ? counts[x.code] : "–"}
+            </span>
+          </button>
+        ))}
+      </nav>
+
+      <main className="ws-main">
+        <label className="field ws-job-select">
+          <span className="label">Job</span>
+          <span className="select">
+            <select value={job} onChange={(e) => setJob(e.target.value)}>
+              {archetypes.map((x) => (
+                <option key={x.code} value={x.code}>
+                  {x.job} · {SHORT_SECTOR[x.sector] ?? x.sector}
+                </option>
+              ))}
+            </select>
+            <Icon name="down" />
+          </span>
+        </label>
+
+        <div className="dialbar">
+          <span className="label" id="ws-dial">
+            AI scenario
+          </span>
+          <AmountSlider stops={STOPS} value={CODES.indexOf(scenario)} onChange={(i) => setScenario(CODES[i])} labelledBy="ws-dial" />
+        </div>
+
+        {loading ? (
+          <div className="ws-hero">
+            <div className="sk" style={{ width: 300, height: 386, borderRadius: 31, background: "#0b1a2e" }} />
+          </div>
+        ) : iv && sc && worker ? (
+          <>
+            <section className="ws-hero" aria-label="Worker">
+              <WorkerCard a={a} w={worker} iv={iv} scenario={scenario} onScenario={setScenario} />
+              <div className="ws-hero-text">
+                <div className="ws-moodline">
+                  <span className="ws-dot" style={{ background: MOOD_ACCENT[sc.mood] }} aria-hidden="true" />
+                  {MOOD_LABEL[sc.mood]} in {scenario} · {SCENARIOS[CODES.indexOf(scenario)].name}
+                </div>
+                <p key={sc.quote} className="ws-quote swap">
+                  “{sc.quote}”
+                </p>
+                <div className="ws-voices">
+                  {(
+                    [
+                      ["say", "Says"],
+                      ["think", "Thinks"],
+                      ["do", "Does"],
+                      ["feel", "Feels"],
+                    ] as const
+                  ).map(([k, label]) => (
+                    <div key={k} className="ws-voice">
+                      <span className="ws-label">{label}</span>
+                      <p key={sc[k]} className="swap">
+                        {k === "say" ? `“${sc[k]}”` : sc[k]}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="ws-note">
+                  <span className="ws-label">Interviewer&apos;s note</span>
+                  <p>{sc.fieldNote}</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="section" aria-labelledby="ws-all">
+              <h2 className="t-section" id="ws-all">
+                All five scenarios
+              </h2>
+              <div className="strip">
+                {SCENARIOS.map((s) => {
+                  const r = iv.scenarios[s.code];
+                  const on = s.code === scenario;
+                  return (
+                    <button
+                      key={s.code}
+                      type="button"
+                      className={"lvl" + (on ? " on" : "")}
+                      aria-pressed={on}
+                      onClick={() => setScenario(s.code)}
+                    >
+                      <span className="lvl-top">
+                        <span className="mono">{s.code}</span>
+                        <span className="lvl-name">{s.short}</span>
+                      </span>
+                      <Mood mood={r.mood} />
+                      <span className="lvl-say">“{r.quote}”</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+
+            <section className="ws-about" aria-label="About this worker">
+              <div>
+                <span className="label">In a sentence</span>
+                <p className="ws-headline">“{iv.headlineQuote}”</p>
+              </div>
+              <div className="ws-about-grid">
+                <div>
+                  <span className="label">Who they are</span>
+                  <p>{iv.portrait}</p>
+                </div>
+                <div>
+                  <span className="label">Biggest worry</span>
+                  <p>{iv.biggestWorry}</p>
+                </div>
+                <div>
+                  <span className="label">What would help</span>
+                  <p>{iv.whatWouldHelp}</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="section">
+              <button type="button" className="lq-btn sm" style={{ alignSelf: "flex-start" }} onClick={() => setShowTranscript((v) => !v)}>
+                {showTranscript ? "Hide" : "Read"} the {scenario} interview
+              </button>
+              {showTranscript && (
+                <div className="ws-transcript">
+                  {sc.transcript.map((t, i) => (
+                    <p key={i} className={t.speaker === "interviewer" ? "ws-q" : "ws-a"}>
+                      <span className="ws-label">{t.speaker === "interviewer" ? "Interviewer" : worker.name.split(" ")[0]}</span>
+                      {t.text}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </section>
+          </>
+        ) : worker ? (
+          <section className="ws-empty">
+            <Avatar a={a} size={96} />
+            <h1 className="t-display">
+              {worker.name}, {worker.job.toLowerCase()}
+            </h1>
+            <p className="prose fg2">
+              This version hasn&apos;t been interviewed yet.{" "}
+              {counts[job]
+                ? `${counts[job]} of the 243 versions of this job have been interviewed so far.`
+                : "No versions of this job have been interviewed yet."}
+            </p>
+            {closest && (
+              <button type="button" className="lq-btn primary" onClick={() => jumpTo(closest)}>
+                Show the closest interviewed version
+                <span className="fg2 t-ui">(differs in {diffGroups(closest).join(", ")})</span>
+              </button>
+            )}
+          </section>
+        ) : null}
+      </main>
+
+      <ControlPanel
+        groups={groups}
+        levels={levels}
+        onLevel={(g, l) => setLevels((s) => ({ ...s, [g]: l }))}
+        worker={worker}
+      />
+    </div>
+  );
+}

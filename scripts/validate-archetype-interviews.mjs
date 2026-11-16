@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+// Checks archetype interview files (protocol v2) in data/interviews/archetypes/raw.
+// Usage: node scripts/validate-archetype-interviews.mjs [ID or prefix ...]
+//   e.g. node scripts/validate-archetype-interviews.mjs A01-11      (all files starting with A01-11)
+import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { join } from "node:path";
+
+const dir = new URL("../data/interviews/archetypes/raw/", import.meta.url).pathname;
+const grid = JSON.parse(readFileSync(new URL("../data/archetypes/grid.json", import.meta.url), "utf8"));
+const byId = new Map(grid.people.map((p) => [p.id, p]));
+const SCEN = ["S0", "S1", "S2", "S3", "S4"];
+const MOODS = ["calm", "uneasy", "anxious", "alarmed", "panicked"];
+const BANNED = ["delve", "leverage", "it is important to note", "double-edged sword", "only time will tell"];
+const norm = (s) => s.toLowerCase().replace(/[“”"‘’']/g, "").replace(/\s+/g, " ").trim();
+const words = (s) => (s ?? "").trim().split(/\s+/).filter(Boolean).length;
+
+const args = process.argv.slice(2);
+const all = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith(".json")).sort() : [];
+const files = args.length ? all.filter((f) => args.some((a) => f.startsWith(a))) : all;
+
+let bad = 0;
+for (const f of files) {
+  const errs = [];
+  let d;
+  try { d = JSON.parse(readFileSync(join(dir, f), "utf8")); } catch (e) { console.log(`✗ ${f}: ${e.message}`); bad++; continue; }
+  const p = byId.get(d.id);
+  if (d.id !== f.replace(".json", "")) errs.push("id does not match file name");
+  if (!p) errs.push("id not in grid.json");
+  else {
+    if (d.name !== p.name) errs.push(`name "${d.name}" should be "${p.name}"`);
+    if (JSON.stringify(d.levels) !== JSON.stringify(p.levels)) errs.push("levels do not match grid.json");
+  }
+  const personaText = (list) => (list ?? []).filter((t) => t.speaker === "persona").map((t) => t.text).join(" ");
+  if (!Array.isArray(d.opening) || d.opening.length < 2) errs.push("opening needs at least 2 turns");
+  if (!Array.isArray(d.closing) || d.closing.length < 2) errs.push("closing needs at least 2 turns");
+  let everything = personaText(d.opening) + " " + personaText(d.closing);
+  for (const s of SCEN) {
+    const x = d.scenarios?.[s];
+    if (!x) { errs.push(`missing ${s}`); continue; }
+    const t = x.transcript ?? [];
+    if (t.length < 12) errs.push(`${s}: transcript has ${t.length} turns, needs at least 12`);
+    if (t.some((u) => !["interviewer", "persona"].includes(u.speaker) || !u.text?.trim())) errs.push(`${s}: bad transcript turn`);
+    for (const k of ["say", "think", "do", "feel", "quote", "fieldNote"]) if (!x[k]?.trim()) errs.push(`${s}: empty ${k}`);
+    if (!MOODS.includes(x.mood)) errs.push(`${s}: bad mood "${x.mood}"`);
+    for (const k of ["say", "think", "do"]) if (x[k] && words(x[k]) < 18) errs.push(`${s}: ${k} is thin (${words(x[k])} words; aim for 2 or 3 sentences)`);
+    if (x.fieldNote && words(x.fieldNote) < 25) errs.push(`${s}: fieldNote is thin (${words(x.fieldNote)} words)`);
+    if (x.quote && words(x.quote) > 30) errs.push(`${s}: quote is over 30 words`);
+    const pt = personaText(t);
+    everything += " " + pt;
+    if (x.quote && !norm(pt).includes(norm(x.quote))) errs.push(`${s}: quote is not word for word from this scenario's answers`);
+    if (/^["“]/.test(x.say ?? "") || /^["“]/.test(x.quote ?? "")) errs.push(`${s}: say/quote should not start with a quote mark`);
+  }
+  for (const k of ["headlineQuote", "portrait", "biggestWorry", "whatWouldHelp"]) if (!d[k]?.trim()) errs.push(`missing ${k}`);
+  if (d.headlineQuote && words(d.headlineQuote) > 30) errs.push("headlineQuote is over 30 words");
+  if (d.headlineQuote && !norm(everything).includes(norm(d.headlineQuote))) errs.push("headlineQuote is not word for word from the transcript");
+  if (d.portrait && words(d.portrait) < 45) errs.push(`portrait is thin (${words(d.portrait)} words)`);
+  const lower = JSON.stringify(d).toLowerCase();
+  for (const w of BANNED) if (lower.includes(w)) errs.push(`uses "${w}"`);
+  if (errs.length) { bad++; console.log(`✗ ${f}\n  - ${errs.join("\n  - ")}`); }
+  else console.log(`✓ ${f}`);
+}
+console.log(`\n${files.length - bad}/${files.length} files valid`);
+process.exit(bad ? 1 : 0);

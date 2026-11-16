@@ -315,3 +315,66 @@ button{cursor:pointer}
   .pc-page{padding:16px 16px 32px}
   .pc-panel{padding:40px 8px 48px;border-radius:20px}
 }
+
+/* ---------- Workers (/workers): job list · content · control panel ---------- */
+.ws{display:grid;grid-template-columns:260px minmax(0,1fr) 340px;min-height:100%}
+.ws-jobs{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:20px 12px 24px 16px;display:flex;flex-direction:column;gap:2px}
+.ws-back{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 10px;font-size:14px;font-weight:600;color:var(--fg);text-decoration:none}
+.ws-job{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:10px;width:100%;padding:6px 10px;border:0;border-radius:14px;background:transparent;text-align:left;transition:background 120ms var(--ease);flex-shrink:0}
+.ws-job:hover{background:var(--muted)}
+.ws-job.on,.ws-job.on:hover{background:var(--water-hi),#fff;box-shadow:var(--water-shadow)}
+.ws-job-text{display:flex;flex-direction:column;min-width:0}
+.ws-job-name{font-size:13px;line-height:18px;font-weight:500}
+.ws-job-sector{font-size:12px;line-height:16px;color:var(--fg2)}
+.ws-job-count{font-size:12px;color:var(--fg2)}
+.ws-avatar{flex:none;display:grid;place-items:center;border-radius:999px;overflow:hidden;background:#f3f3f3;color:#9a9a9a;box-shadow:0 0 0 1px var(--hair)}
+.ws-avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;background:#fff}
+.ws-main{min-width:0;display:flex;flex-direction:column;gap:36px;padding:24px 32px 56px;container-type:inline-size;container-name:view}
+.ws-job-select{display:none}
+.ws-hero{display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:start;padding:72px 40px 48px;border-radius:28px;background:#08101a;color:#dfe5ee;overflow:hidden}
+.ws-card{position:relative;width:300px}
+.ws-card-avatar{position:absolute;left:50%;top:-56px;transform:translateX(-50%);z-index:4;border-radius:999px;padding:4px;background:#08101a}
+.ws-card-avatar .ws-avatar{box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+.ws-hero-text{display:flex;flex-direction:column;gap:24px;min-width:0}
+.ws-moodline{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#eef2f8}
+.ws-dot{width:8px;height:8px;border-radius:999px;flex:none}
+.ws-quote{font-size:28px;line-height:36px;font-weight:600;letter-spacing:-.01em;color:#fff;text-wrap:balance}
+.ws-voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px}
+.ws-voice{display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:23px}
+.ws-label{font-size:12px;line-height:16px;font-weight:500;letter-spacing:.025em;text-transform:uppercase;color:#8d98aa}
+.ws-note{display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:14px;line-height:21px;color:#b9c3d2}
+.ws-about{display:flex;flex-direction:column;gap:20px}
+.ws-headline{font-size:22px;line-height:30px;font-weight:600;text-wrap:balance;margin-top:6px}
+.ws-about-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
+.ws-about-grid p{font-size:15px;line-height:23px;margin-top:6px}
+.ws-transcript{display:flex;flex-direction:column;gap:14px;max-width:760px}
+.ws-transcript p{display:flex;flex-direction:column;gap:2px;font-size:15px;line-height:23px}
+.ws-transcript .ws-q{color:var(--fg2)}
+.ws-transcript .ws-label{color:var(--fg2)}
+.ws-empty{display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-width:640px;padding:24px 0}
+.ws-empty .lq-btn{height:auto;min-height:42px;padding:10px 18px;white-space:normal;text-align:left}
+.ws-panel{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;display:flex;flex-direction:column;gap:22px;padding:24px 24px 32px 16px}
+.ws-group{display:flex;flex-direction:column;gap:8px}
+.ws-group-detail{font-size:13px;line-height:18px;color:var(--fg2)}
+.ws-facts{display:flex;flex-direction:column;gap:12px;margin:0;padding-top:16px;border-top:1px solid var(--hair)}
+.ws-facts div{display:flex;flex-direction:column;gap:2px}
+.ws-facts dd{margin:0;font-size:13px;line-height:18px}
+@container view (max-width: 900px){
+  .ws-hero{grid-template-columns:1fr;justify-items:center;padding:72px 24px 40px}
+  .ws-hero-text{width:100%}
+  .ws-about-grid{grid-template-columns:1fr}
+}
+@container view (max-width: 560px){
+  .ws-voices{grid-template-columns:1fr}
+  .ws-quote{font-size:23px;line-height:30px}
+}
+@media (max-width: 1200px){
+  .ws{grid-template-columns:minmax(0,1fr) 320px}
+  .ws-jobs{display:none}
+  .ws-job-select{display:flex;max-width:420px}
+}
+@media (max-width: 860px){
+  .ws{grid-template-columns:1fr}
+  .ws-panel{position:static;max-height:none;order:-1;padding:16px 16px 0}
+  .ws-main{padding:16px 16px 40px}
+}

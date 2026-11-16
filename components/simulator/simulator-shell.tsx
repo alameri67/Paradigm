@@ -29,6 +29,10 @@ function SectorSidebar() {
   return (
     <nav className="side" aria-label="Sectors">
       <div className="brand">Simulator</div>
+      <Link href="/workers" className="srow" style={{ gridTemplateColumns: "20px minmax(0,1fr)" }}>
+        <Icon name="user" />
+        <span className="srow-name">Workers (new layout)</span>
+      </Link>
       <Link href="/explore" className="srow" style={{ gridTemplateColumns: "20px minmax(0,1fr)" }}>
         <Icon name="grid" />
         <span className="srow-name">Persona cards (115 interviews)</span>
