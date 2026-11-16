@@ -2,7 +2,7 @@
 
 Simulated interviews with each persona in `data/population/synthetic-population-v1.3.md`, run with `docs/interview-protocol.md`. Every file is made by `scripts/export-transcripts.mjs` from the data files in `raw/`, so edit those, not these.
 
-98 of 115 interviews are done.
+99 of 115 interviews are done.
 
 | ID | Name | Role | Group | S0 | S1 | S2 | S3 | S4 |
 |---|---|---|---|---|---|---|---|---|
@@ -104,3 +104,4 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P096](P096.md) | Susan Price | Benefits eligibility caseworker | Government | Calm | Uneasy | Anxious | Alarmed | Alarmed |
 | [P097](P097.md) | Mark Davies | Military logistics officer | Government | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P098](P098.md) | Lisa Romero | Police patrol officer | Government | Calm | Calm | Uneasy | Anxious | Anxious |
+| [P099](P099.md) | Anil Sharma | Senior policy adviser, ministry of economy | Government | Calm | Calm | Uneasy | Alarmed | Alarmed |
