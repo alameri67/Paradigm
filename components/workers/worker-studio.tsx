@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import { PeakChart } from "@/components/ui/peak-chart";
 import { Icon, type IconName } from "@/components/simulator/icons";
+import { Avatar, SHORT_SECTOR } from "./avatar";
+import { JobSidebar } from "./job-sidebar";
+import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
 import {
   MOODS,
@@ -36,16 +40,6 @@ const STOPS = SCENARIOS.map((s) => ({
 }));
 const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
 const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
-const SHORT_SECTOR: Record<string, string> = {
-  "Agriculture (logging and farm support)": "Agriculture",
-  "Transportation and warehousing": "Transport",
-  "Professional, scientific and technical services": "Professional services",
-  "Management of companies": "Management",
-  "Administrative and support services": "Admin and support",
-  "Health care and social assistance": "Health care",
-  "Arts, entertainment and recreation": "Arts and recreation",
-  "Accommodation and food services": "Food and hotels",
-};
 
 /** The details a level stands for, as one readable line (age, savings, views...). */
 function levelDetail(l: GroupLevel) {
@@ -60,19 +54,6 @@ function Mood({ mood }: { mood: MoodKey }) {
     <span className={`mood tone-${MOOD_TONE[mood]}`}>
       <span className="dot" aria-hidden="true" />
       <span className="mood-word">{MOOD_LABEL[mood]}</span>
-    </span>
-  );
-}
-
-function Avatar({ a, size }: { a: Archetype; size: number }) {
-  return (
-    <span className="ws-avatar" style={{ width: size, height: size }}>
-      {a.portraitUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={a.portraitUrl} alt="" />
-      ) : (
-        <Icon name="person" size={Math.round(size * 0.45)} stroke={1.6} />
-      )}
     </span>
   );
 }
@@ -138,8 +119,9 @@ function ControlPanel({
   return (
     <aside className="ws-panel" aria-label="Worker details">
       <div className="ws-panel-head">
-        <h2 className="t-section">Who is this worker?</h2>
-        <p className="ws-panel-sub">Pick one option in each group.</p>
+        <h2 className="t-section">
+          Who is this worker? <HelpTip>Pick one option in each group to meet a different version of this job.</HelpTip>
+        </h2>
       </div>
       {groups.map((g) => {
         const idx = Math.max(0, g.levels.findIndex((l) => l.key === levels[g.key]));
@@ -300,49 +282,42 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   return (
     <div className="ws">
-      <nav className="ws-jobs" aria-label="Jobs">
-        <div className="ws-back">AI Transition Simulator</div>
-        <h2 className="label" style={{ padding: "12px 10px 6px" }}>
-          Jobs
-        </h2>
-        {archetypes.map((x) => (
-          <button
-            key={x.code}
-            type="button"
-            className={"ws-job" + (x.code === job ? " on" : "")}
-            aria-current={x.code === job ? "true" : undefined}
-            onClick={() => setJob(x.code)}
-          >
-            <Avatar a={x} size={32} />
-            <span className="ws-job-text">
-              <span className="ws-job-name">{x.job}</span>
-              <span className="ws-job-sector">{SHORT_SECTOR[x.sector] ?? x.sector}</span>
-            </span>
-            <span className="ws-job-count mono" title="Versions interviewed">
-              {counts[x.code] ? counts[x.code] : "–"}
-            </span>
-          </button>
-        ))}
-      </nav>
+      <JobSidebar
+        archetypes={archetypes}
+        counts={counts}
+        page="details"
+        selected={[job]}
+        summaryHref={`/?s=${scenario}`}
+        detailsHref={`/details?job=${job}&s=${scenario}`}
+        onPick={setJob}
+      />
 
       <main className="ws-main">
-        <label className="field ws-job-select">
-          <span className="label">Job</span>
-          <span className="select">
-            <select value={job} onChange={(e) => setJob(e.target.value)}>
-              {archetypes.map((x) => (
-                <option key={x.code} value={x.code}>
-                  {x.job} · {SHORT_SECTOR[x.sector] ?? x.sector}
-                </option>
-              ))}
-            </select>
-            <Icon name="down" />
-          </span>
-        </label>
+        <div className="ws-job-row">
+          <label className="field ws-job-select">
+            <span className="label">Job</span>
+            <span className="select">
+              <select value={job} onChange={(e) => setJob(e.target.value)}>
+                {archetypes.map((x) => (
+                  <option key={x.code} value={x.code}>
+                    {x.job} · {SHORT_SECTOR[x.sector] ?? x.sector}
+                  </option>
+                ))}
+              </select>
+              <Icon name="down" />
+            </span>
+          </label>
+          <Link href={`/?s=${scenario}`} className="ws-dash-link">
+            See the summary
+          </Link>
+        </div>
 
         <div className="dialbar">
           <span className="label" id="ws-dial">
-            AI scenario
+            AI scenario{" "}
+            <HelpTip>
+              <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
+            </HelpTip>
           </span>
           <AmountSlider
             stops={STOPS}
@@ -351,9 +326,6 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
             labelledBy="ws-dial"
             showHeader={false}
           />
-          <p className="ws-dial-desc" key={scenario}>
-            <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
-          </p>
         </div>
 
         {loading ? (

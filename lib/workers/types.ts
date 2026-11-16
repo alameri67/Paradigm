@@ -115,3 +115,12 @@ export interface Interview {
 /** Version id from a job code and the 5 level positions (1–3), e.g. A16-22222. */
 export const workerId = (code: string, groups: Group[], levels: Record<string, string>) =>
   `${code}-${groups.map((g) => g.levels.findIndex((l) => l.key === levels[g.key]) + 1).join("")}`;
+
+/** The parts of one interview the summary dashboard needs, per scenario. */
+export interface InterviewSummary {
+  id: string;
+  archetype: string;
+  job: string;
+  name: string;
+  scenarios: Record<ScenarioCode, { mood: MoodKey; quote: string; actions: string[] }>;
+}
