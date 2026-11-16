@@ -2,7 +2,7 @@
 
 Simulated interviews with each persona in `data/population/synthetic-population-v1.3.md`, run with `docs/interview-protocol.md`. Every file is made by `scripts/export-transcripts.mjs` from the data files in `raw/`, so edit those, not these.
 
-91 of 115 interviews are done.
+92 of 115 interviews are done.
 
 | ID | Name | Role | Group | S0 | S1 | S2 | S3 | S4 |
 |---|---|---|---|---|---|---|---|---|
@@ -53,6 +53,7 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P040](P040.md) | Ahmed Yusuf | City bus driver | Transportation and warehousing | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P041](P041.md) | Jordan Kim | Software developer | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
 | [P042](P042.md) | Natalie Brennan | Reporter, regional newspaper | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
+| [P043](P043.md) | Victor Alvarez | Engineering director, software company | Information | Calm | Calm | Calm | Calm | Uneasy |
 | [P051](P051.md) | Kevin Murphy | Residential estate agent | Real estate | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
 | [P052](P052.md) | Sofia Rossi | Owner, property management firm | Real estate | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P053](P053.md) | Andre Baptiste | Building maintenance technician | Real estate | Calm | Calm | Calm | Uneasy | Alarmed |
