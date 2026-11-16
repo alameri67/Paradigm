@@ -8,6 +8,7 @@ import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import { PeakChart } from "@/components/ui/peak-chart";
 import { Icon, type IconName } from "@/components/simulator/icons";
 import { Avatar, SHORT_SECTOR } from "./avatar";
+import { JobSidebar } from "./job-sidebar";
 import { JobPatterns } from "./job-patterns";
 import {
   MOODS,
@@ -279,33 +280,15 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   return (
     <div className="ws">
-      <nav className="ws-jobs" aria-label="Jobs">
-        <div className="ws-back">AI Transition Simulator</div>
-        <div className="ws-jobs-head">
-          <h2 className="label">Jobs</h2>
-          <Link href="/" className="ws-dash-link">
-            Back to the summary
-          </Link>
-        </div>
-        {archetypes.map((x) => (
-          <button
-            key={x.code}
-            type="button"
-            className={"ws-job" + (x.code === job ? " on" : "")}
-            aria-current={x.code === job ? "true" : undefined}
-            onClick={() => setJob(x.code)}
-          >
-            <Avatar a={x} size={32} />
-            <span className="ws-job-text">
-              <span className="ws-job-name">{x.job}</span>
-              <span className="ws-job-sector">{SHORT_SECTOR[x.sector] ?? x.sector}</span>
-            </span>
-            <span className="ws-job-count mono" title="Versions interviewed">
-              {counts[x.code] ? counts[x.code] : "–"}
-            </span>
-          </button>
-        ))}
-      </nav>
+      <JobSidebar
+        archetypes={archetypes}
+        counts={counts}
+        page="details"
+        selected={[job]}
+        summaryHref={`/?s=${scenario}`}
+        detailsHref={`/details?job=${job}&s=${scenario}`}
+        onPick={setJob}
+      />
 
       <main className="ws-main">
         <div className="ws-job-row">
@@ -322,8 +305,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
               <Icon name="down" />
             </span>
           </label>
-          <Link href="/" className="ws-dash-link">
-            Back to the summary
+          <Link href={`/?s=${scenario}`} className="ws-dash-link">
+            See the summary
           </Link>
         </div>
 

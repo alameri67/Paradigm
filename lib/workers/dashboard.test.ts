@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ACTION_LABEL, SCENARIOS, type InterviewSummary, type MoodKey } from "./types";
-import { ACTION_WEIGHT, actionScore, JITTER_X, JITTER_Y, pointsFor, summarize, worryOf } from "./dashboard";
+import { ACTION_WEIGHT, actionLevel, JITTER_X, JITTER_Y, pointsFor, summarize, worryOf } from "./dashboard";
 
 function person(id: string, job: string, mood: MoodKey, actions: string[], quote = `Quote from ${id}`): InterviewSummary {
   const s = { mood, quote, actions };
@@ -13,15 +13,18 @@ function person(id: string, job: string, mood: MoodKey, actions: string[], quote
   };
 }
 
-describe("actionScore", () => {
+describe("actionLevel", () => {
   it("weights every known action tag", () => {
     expect(Object.keys(ACTION_WEIGHT).sort()).toEqual(Object.keys(ACTION_LABEL).sort());
   });
-  it("is 0 for no change and caps at 100", () => {
-    expect(actionScore(["wait-and-see", "keep-going"])).toBe(0);
-    expect(actionScore(["save-more"])).toBeCloseTo(100 / 9);
-    expect(actionScore(["retrain", "move", "change-job", "sell-or-exit"])).toBe(100);
-    expect(actionScore(["not-a-tag"])).toBe(0);
+  it("goes from no action (1) to drastic action (5) by the biggest steps", () => {
+    expect(actionLevel([])).toBe(1);
+    expect(actionLevel(["wait-and-see", "keep-going"])).toBe(1);
+    expect(actionLevel(["not-a-tag"])).toBe(1);
+    expect(actionLevel(["save-more", "cut-spending"])).toBe(2);
+    expect(actionLevel(["save-more", "learn-ai"])).toBe(3);
+    expect(actionLevel(["retrain", "invest"])).toBe(4);
+    expect(actionLevel(["retrain", "move", "change-job"])).toBe(5);
   });
 });
 
@@ -33,9 +36,8 @@ describe("pointsFor", () => {
     expect(a.map((p) => [p.x, p.y])).toEqual(b.map((p) => [p.x, p.y]));
     expect(Math.abs(a[0].x - worryOf("calm"))).toBeLessThanOrEqual(JITTER_X);
     expect(Math.abs(a[1].x - 5)).toBeLessThanOrEqual(JITTER_X);
-    expect(a[0].y).toBeGreaterThanOrEqual(0);
-    expect(a[0].y).toBeLessThanOrEqual(JITTER_Y);
-    expect(a[1].y).toBeLessThanOrEqual(100);
+    expect(Math.abs(a[0].y - 1)).toBeLessThanOrEqual(JITTER_Y);
+    expect(Math.abs(a[1].y - 5)).toBeLessThanOrEqual(JITTER_Y);
     expect(a[1].label).toBe("Name A16-22222, family doctor");
   });
 });

@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-// Paradigm: changed from the original only by the optional point colour, readout and radius props (marked "Paradigm:").
+// Paradigm: changed from the original only by the optional point colour, readout, radius and left props (marked "Paradigm:").
 "use client";
 import "./bjork-scatter-brush-utils/bjork-theme.css";
 
@@ -89,6 +89,8 @@ export interface ScatterBrushProps {
   readout?: boolean;
   /** Paradigm: dot radius in px. Default 2.4. */
   radius?: number;
+  /** Paradigm: room left of the plot for the y labels, in px. Default 44. */
+  left?: number;
 }
 
 const LEFT = 44;
@@ -200,6 +202,7 @@ export function ScatterBrush({
   className,
   readout = true,
   radius = RADIUS,
+  left = LEFT,
 }: ScatterBrushProps) {
   const { pal, reduce, vars } = useChartTheme(toneProp);
   const announcer = useRef<AnnouncerHandle>(null);
@@ -229,9 +232,9 @@ export function ScatterBrush({
   const selected = useMemo(() => (brush ? points.map((p, i) => (inBrush(p, brush) ? i : -1)).filter((i) => i >= 0) : null), [points, brush]);
   const stats = useMemo(() => statsOf(points, selected), [points, selected]);
 
-  const cfg = useRef({ points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats, radius });
+  const cfg = useRef({ points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats, radius, left });
   useEffect(() => {
-    cfg.current = { points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats, radius };
+    cfg.current = { points, dom, brush, marginals, bins, reduce, pal, attract, trend, stats, radius, left };
   });
 
   const st = useRef<Run>({
@@ -262,7 +265,7 @@ export function ScatterBrush({
     const P = c.points;
     const n = P.length;
     const mH = c.marginals ? MARGIN_H + MARGIN_GAP : 0;
-    const plot = { l: LEFT, r: w - mH - 6, t: TOP_TEXT + mH, b: h - BOTTOM };
+    const plot = { l: c.left, r: w - mH - 6, t: TOP_TEXT + mH, b: h - BOTTOM };
     s.plot = plot;
     const [x0, x1] = c.dom.x;
     const [y0, y1] = c.dom.y;
@@ -527,7 +530,7 @@ export function ScatterBrush({
 
   useEffect(() => {
     wake();
-  }, [points, dom, brush, marginals, bins, pal, reduce, attract, trend, stats, radius, wake]);
+  }, [points, dom, brush, marginals, bins, pal, reduce, attract, trend, stats, radius, left, wake]);
 
   const tooltipFor = (i: number): TooltipContent | null => {
     const pt = points[i];
@@ -765,7 +768,7 @@ export function ScatterBrush({
             </span>
           )}
         </div>)}
-        <span aria-hidden="true" className="pointer-events-none absolute bottom-0 left-11 font-mono text-[10px] uppercase leading-none tracking-[0.1em] text-[color:var(--bjork-text-soft)] [text-box:trim-both_cap_alphabetic]">
+        <span aria-hidden="true" style={{ left }} className="pointer-events-none absolute bottom-0 font-mono text-[10px] uppercase leading-none tracking-[0.1em] text-[color:var(--bjork-text-soft)] [text-box:trim-both_cap_alphabetic]">
           {xLabel} {"→"}
         </span>
         <span

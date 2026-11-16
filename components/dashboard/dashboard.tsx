@@ -8,7 +8,8 @@ import { AmountSlider } from "@/components/ui/amount-slider";
 import { ScatterBrush, type Brush } from "@/components/ui/bjork-scatter-brush";
 import { Avatar, SHORT_SECTOR } from "@/components/workers/avatar";
 import { DashIcon, hasDashIcon } from "./icons";
-import { pointsFor, summarize, type Summary } from "@/lib/workers/dashboard";
+import { JobSidebar } from "@/components/workers/job-sidebar";
+import { ACTION_LEVELS, pointsFor, summarize, type Summary } from "@/lib/workers/dashboard";
 import {
   ACTION_LABEL,
   MOODS,
@@ -39,7 +40,11 @@ function formatWorry(v: number) {
   if (Math.abs(v - r) > 0.499 || r < 1 || r > 5) return "";
   return MOOD_LABEL[MOODS[r - 1]];
 }
-const formatAction = (v: number) => String(Math.round(v));
+function formatAction(v: number) {
+  const r = Math.round(v);
+  if (Math.abs(v - r) > 0.499 || r < 1 || r > 5) return "";
+  return ACTION_LEVELS[r - 1];
+}
 
 function inBrush(p: { x: number; y: number }, b: Brush | null) {
   if (!b) return true;
@@ -149,7 +154,16 @@ function Insights({ s, archetypes }: { s: Summary; archetypes: Archetype[] }) {
   );
 }
 
-export function Dashboard({ archetypes, people: everyone }: { archetypes: Archetype[]; people: InterviewSummary[] }) {
+export function Dashboard({
+  archetypes,
+  people: everyone,
+  versionsPerJob,
+}: {
+  archetypes: Archetype[];
+  people: InterviewSummary[];
+  /** How many versions each job has (every mix of the five groups). */
+  versionsPerJob: number;
+}) {
   const params = useSearchParams();
   const counts = useMemo(() => {
     const c: Record<string, number> = {};
@@ -163,21 +177,26 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
     const s = params.get("s");
     return (CODES as string[]).includes(s ?? "") ? (s as ScenarioCode) : "S2";
   });
+  // No "jobs" in the address means every job with interviews; an empty "jobs" means none.
+  const allCodes = withInterviews.map((a) => a.code);
   const [jobs, setJobs] = useState<string[]>(() =>
-    (params.get("jobs") ?? "")
-      .split(",")
-      .filter((c) => counts[c]),
+    params.has("jobs")
+      ? (params.get("jobs") ?? "")
+          .split(",")
+          .filter((c) => counts[c])
+      : allCodes,
   );
+  const allOn = allCodes.length > 0 && allCodes.every((c) => jobs.includes(c));
   const [brush, setBrush] = useState<Brush | null>(null);
   const [showAll, setShowAll] = useState(false);
 
   // Shareable address bar.
   useEffect(() => {
-    const q = new URLSearchParams({ s: scenario, ...(jobs.length ? { jobs: jobs.join(",") } : {}) }).toString();
+    const q = new URLSearchParams({ s: scenario, ...(allOn ? {} : { jobs: jobs.join(",") }) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
-  }, [scenario, jobs]);
+  }, [scenario, jobs, allOn]);
 
-  const shown = useMemo(() => (jobs.length ? everyone.filter((p) => jobs.includes(p.archetype)) : everyone), [everyone, jobs]);
+  const shown = useMemo(() => everyone.filter((p) => jobs.includes(p.archetype)), [everyone, jobs]);
   const points = useMemo(() => pointsFor(shown, scenario), [shown, scenario]);
   const selected = useMemo(() => points.filter((p) => inBrush(p, brush)).map((p) => p.person), [points, brush]);
   const summary = useMemo(() => summarize(selected, scenario), [selected, scenario]);
@@ -187,26 +206,53 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
     setJobs((j) => (j.includes(code) ? j.filter((c) => c !== code) : [...j, code]));
     setBrush(null);
   };
+  const setAll = (codes: string[]) => {
+    setJobs(codes);
+    setBrush(null);
+  };
   const sc = scenarioOf(scenario);
+  const picked = archetypes.filter((a) => jobs.includes(a.code));
+  const detailsHref = `/details?${new URLSearchParams({ ...(jobs[0] ? { job: jobs[0] } : {}), s: scenario })}`;
+  const scope =
+    picked.length === 0
+      ? "No jobs picked"
+      : picked.length === 1
+        ? `Every version of ${picked[0].job.toLowerCase()}`
+        : allOn
+          ? `Every version of all ${picked.length} interviewed jobs`
+          : `Every version of ${picked.length} jobs`;
 
   return (
-    <>
-      <section className="db-block" aria-labelledby="db-jobs">
+    <div className="db-shell">
+      <JobSidebar
+        archetypes={archetypes}
+        counts={counts}
+        page="summary"
+        selected={jobs}
+        summaryHref={`/?s=${scenario}`}
+        detailsHref={detailsHref}
+        onToggle={toggleJob}
+        onSelectAll={() => setAll(allCodes)}
+        onUnselectAll={() => setAll([])}
+      />
+      <main className="db">
+      <header className="db-head">
+        <h1 className="t-display">Everyone interviewed, at a glance</h1>
+        <p className="prose fg2">
+          Each job has {versionsPerJob} versions, one for every mix of age, work, savings, outlook and how they handle change. The
+          summary takes in every version of the jobs you pick. Drag across the chart to look more closely at a group.
+        </p>
+      </header>
+      <section className="db-block db-chips-block" aria-labelledby="db-jobs">
         <h2 className="label" id="db-jobs">
           Jobs
         </h2>
         <div className="db-chips">
-          <button
-            type="button"
-            className={"db-chip db-chip-all" + (jobs.length === 0 ? " on" : "")}
-            aria-pressed={jobs.length === 0}
-            onClick={() => {
-              setJobs([]);
-              setBrush(null);
-            }}
-          >
-            <span className="db-chip-name">All jobs</span>
-            <span className="db-chip-count mono">{everyone.length}</span>
+          <button type="button" className="db-chip db-chip-all" onClick={() => setAll(allCodes)}>
+            <span className="db-chip-name">Select all</span>
+          </button>
+          <button type="button" className="db-chip db-chip-all" onClick={() => setAll([])}>
+            <span className="db-chip-name">Unselect all</span>
           </button>
           {withInterviews.map((a) => {
             const on = jobs.includes(a.code);
@@ -253,8 +299,8 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
               How worried people are, and how much they do about it
             </h2>
             <p className="db-panel-sub">
-              Each dot is one person in {sc.name}. Further right means more worried. Higher up means they take bigger steps,
-              like retraining or moving.
+              {scope}, in {sc.name}. Each dot is one person. Further right means more worried. Higher up means they take
+              stronger action, like retraining or moving.
             </p>
           </div>
           <div className="db-panel-status" role="status">
@@ -279,22 +325,34 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
             className="db-chart"
             points={chartPoints}
             xLabel="Worry"
-            yLabel="Action taken"
+            yLabel="How strongly they act"
             xDomain={[0.5, 5.5]}
-            yDomain={[0, 100]}
+            yDomain={[0.5, 5.5]}
             formatX={formatWorry}
             formatY={formatAction}
             brush={brush}
             onBrushChange={(b) => setBrush(b)}
             bins={20}
             height={440}
-            tone="dark"
+            tone="light"
             readout={false}
             radius={4.5}
+            left={104}
             ariaLabel={`Worry and action taken in ${sc.name}`}
           />
+        ) : null}
+        {points.length > 0 ? (
+          <div className="db-legend" aria-label="Legend">
+            <span className="db-legend-title">Dot colour shows how they feel</span>
+            {MOODS.map((m) => (
+              <span key={m} className="db-legend-item">
+                <span className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
+                {MOOD_LABEL[m]}
+              </span>
+            ))}
+          </div>
         ) : (
-          <p className="db-panel-sub">No one has been interviewed for these jobs yet.</p>
+          <p className="db-panel-sub">{jobs.length ? "No one has been interviewed for these jobs yet." : "Pick at least one job on the left to see the chart."}</p>
         )}
       </section>
 
@@ -303,7 +361,7 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
           <h2 className="t-section" id="db-ins-h">
             {brush ? `Your selection in ${sc.name}` : `Everyone in ${sc.name}`}
           </h2>
-          <Link href={`/details?${new URLSearchParams({ ...(jobs[0] ? { job: jobs[0] } : {}), s: scenario })}`} className="db-details">
+          <Link href={detailsHref} className="db-details">
             See details
             <DashIcon name="arrow" size={16} />
           </Link>
@@ -314,6 +372,7 @@ export function Dashboard({ archetypes, people: everyone }: { archetypes: Archet
           the group that mentioned each step.
         </p>
       </section>
-    </>
+      </main>
+    </div>
   );
 }

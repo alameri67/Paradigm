@@ -456,14 +456,39 @@ button{cursor:pointer}
 .db-chip-count{font-size:12px;font-weight:400;color:var(--fg2)}
 .db-chip-more{min-height:40px;padding:0 6px;border:0;background:none;font-size:13px;line-height:18px;color:var(--fg2);text-decoration:underline;text-decoration-color:var(--fg3);text-underline-offset:3px}
 .db-chip-more:hover{color:var(--fg)}
-.db-panel{display:flex;flex-direction:column;gap:20px;padding:32px 32px 28px;border-radius:28px;background:#08101a;color:#dfe5ee;overflow:hidden;min-width:0}
+.db-panel{display:flex;flex-direction:column;gap:20px;padding:32px 32px 28px;border-radius:28px;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair),0 8px 28px rgba(0,0,0,.05);overflow:hidden;min-width:0}
 .db-panel-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px}
 .db-panel-head>div:first-child{display:flex;flex-direction:column;gap:6px;max-width:62ch}
-.db-panel-title{font-size:20px;line-height:28px;font-weight:600;color:#fff;text-wrap:balance}
-.db-panel-sub{font-size:14px;line-height:21px;color:#b9c3d2}
-.db-panel-status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;line-height:18px;color:#eef2f8}
-.db-clear{height:30px;padding:0 12px;border:0;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-size:13px;font-weight:500}
-.db-clear:hover{background:rgba(255,255,255,.18)}
+.db-panel-title{font-size:20px;line-height:28px;font-weight:600;color:var(--fg);text-wrap:balance}
+.db-panel-sub{font-size:14px;line-height:21px;color:var(--fg2)}
+.db-panel-status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;line-height:18px;color:var(--fg)}
+.db-clear{height:30px;padding:0 12px;border:0;border-radius:999px;background:var(--muted);color:var(--fg);font-size:13px;font-weight:500}
+.db-clear:hover{background:var(--muted-2)}
+.db-legend{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:13px;line-height:18px;color:var(--fg2)}
+.db-legend-title{font-weight:500;color:var(--fg)}
+.db-legend-item{display:inline-flex;align-items:center;gap:6px}
+/* Summary layout: the same job list as the details page, then the summary. */
+.db-shell{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100%}
+.db-shell>.db{margin:0;width:100%}
+.db-chips-block{display:none}
+.js-tabs{display:flex;gap:4px;margin:6px 0 4px;padding:3px;border-radius:999px;background:var(--muted)}
+.js-tab{flex:1 1 0;display:grid;place-items:center;height:32px;border-radius:999px;font-size:13px;font-weight:500;color:var(--fg2);text-decoration:none}
+.js-tab:hover{color:var(--fg)}
+.js-tab.on{background:#fff;color:var(--fg);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.js-bulk{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--fg3)}
+.js-bulk button{border:0;background:none;padding:0;font-size:12px;font-weight:500;color:var(--fg2);text-decoration:underline;text-decoration-color:var(--fg3);text-underline-offset:3px}
+.js-bulk button:hover{color:var(--fg)}
+.ws-job.js-multi{grid-template-columns:16px 32px minmax(0,1fr) auto}
+.ws-job:disabled{opacity:.45;cursor:default}
+.ws-job:disabled:hover{background:transparent}
+.js-check{width:16px;height:16px;border-radius:5px;box-shadow:inset 0 0 0 1.5px var(--fg3);display:grid;place-items:center}
+.js-check.on{background:var(--fg);box-shadow:none}
+.js-check.on::after{content:"";width:8px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+@media (max-width: 1200px){
+  .db-shell{grid-template-columns:1fr}
+  .db-shell>.ws-jobs{display:none}
+  .db-chips-block{display:flex}
+}
 .db-chart{min-width:0}
 .db-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .db-card{display:flex;flex-direction:column;gap:14px;min-width:0;padding:20px 20px 22px;border-radius:24px;background:var(--muted)}

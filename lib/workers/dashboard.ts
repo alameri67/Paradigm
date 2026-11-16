@@ -25,13 +25,19 @@ export const ACTION_WEIGHT: Record<string, number> = {
   "sell-or-exit": 3,
 };
 
-/** The weighted sum that fills the scale: about three big moves. Anything above is capped at 100. */
-export const ACTION_FULL = 9;
+/** How strongly someone acts, in words, from 1 (no action) to 5 (drastic action). */
+export const ACTION_LEVELS = ["No action", "Small steps", "Some action", "Strong action", "Drastic action"] as const;
 
-/** How strongly someone acts, 0–100. */
-export function actionScore(tags: readonly string[]): number {
-  const sum = tags.reduce((s, t) => s + (ACTION_WEIGHT[t] ?? 0), 0);
-  return Math.min(100, (sum / ACTION_FULL) * 100);
+/**
+ * How strongly someone acts, 1–5, from their biggest step:
+ * 1 no change, 2 only small steps, 3 a real plan, 4 one big change, 5 two or more big changes.
+ */
+export function actionLevel(tags: readonly string[]): number {
+  const w = tags.map((t) => ACTION_WEIGHT[t] ?? 0);
+  const big = w.filter((x) => x >= 3).length;
+  if (big >= 2) return 5;
+  if (big === 1) return 4;
+  return Math.max(0, ...w) + 1;
 }
 
 /** Worry from mood: 1 calm … 5 panicked. */
@@ -59,9 +65,9 @@ export function seeded(seed: number) {
   };
 }
 
-/** Jitter sizes. X stays well inside ±0.5 so a point never drifts to the next mood. */
+/** Jitter sizes. Both stay well inside ±0.5 so a point never drifts to the next level. */
 export const JITTER_X = 0.22;
-export const JITTER_Y = 3;
+export const JITTER_Y = 0.22;
 
 export interface DashPoint {
   id: string;
@@ -77,7 +83,7 @@ export function pointsFor(people: readonly InterviewSummary[], code: ScenarioCod
     const r = seeded(seedOf(p.id));
     const s = p.scenarios[code];
     const x = worryOf(s.mood) + (r() * 2 - 1) * JITTER_X;
-    const y = Math.max(0, Math.min(100, actionScore(s.actions) + (r() * 2 - 1) * JITTER_Y));
+    const y = actionLevel(s.actions ?? []) + (r() * 2 - 1) * JITTER_Y;
     return { id: p.id, x, y, label: `${p.name}, ${p.job.toLowerCase()}`, person: p };
   });
 }
