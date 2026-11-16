@@ -123,11 +123,13 @@ Mood scale, from calmest to most distressed:
 - `alarmed`: losing sleep, a real threat to their job, income or way of life.
 - `panicked`: overwhelmed and out of options or time.
 
+**Let each person's own life decide their mood, one person at a time.** There is no right mix of moods and no target to hit. Don't read other interviews, and don't steer towards the middle of the scale or towards what seems typical for the job. Work it out from this person alone: how exposed their work is, how much money they have to fall back on, how many similar jobs are nearby, what's at stake at their life stage, and how they handle change. Someone with thin savings, few local jobs and little appetite for change may already be anxious or alarmed in a mild scenario. Someone secure and adaptable may stay calm even when AGI arrives in 2 years. Both are fine if they follow from the person. The same goes for what they do: let each person's choices come from their own situation.
+
 After the closing, the interviewer also writes:
 
 | Field | Length | What it captures |
 |---|---|---|
-| `headlineQuote` | Up to 30 words, word for word | The single best line from the whole interview. |
+| `headlineQuote` | Up to 30 words, word for word | The single best line from the whole interview. It must be a different line from every scenario's `quote`, and the five scenario quotes must all be different from each other. |
 | `portrait` | 3 to 5 sentences | Who this person is and how they move through the five scenarios, written so a reader who skips the transcript still knows them. |
 | `biggestWorry` | 1 or 2 sentences | Their answer to "which scenario worries you most". |
 | `whatWouldHelp` | 1 or 2 sentences | What they said would help. |
