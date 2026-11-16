@@ -407,3 +407,77 @@ button{cursor:pointer}
   .ws-pat-cols{grid-template-columns:1fr;gap:28px}
   .ws-pat-quotes>div{grid-template-columns:1fr}
 }
+
+/* Link to the summary from the worker page */
+.ws-jobs-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:12px 10px 6px}
+.ws-dash-link{font-size:13px;line-height:18px;font-weight:500;color:var(--fg);text-decoration:underline;text-decoration-color:var(--fg3);text-underline-offset:3px}
+.ws-dash-link:hover{text-decoration-color:currentColor}
+.ws-job-row{display:none}
+@media (max-width: 1200px){
+  .ws-job-row{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+  .ws-job-row .ws-job-select{width:100%}
+}
+
+/* ---------- Summary dashboard (/dashboard) ---------- */
+.db{display:flex;flex-direction:column;gap:36px;max-width:1240px;margin:0 auto;padding:24px 32px 56px;container-type:inline-size;container-name:view}
+.db-head{display:flex;flex-direction:column;gap:10px;max-width:72ch}
+.db-back{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px;font-size:13px;line-height:18px;font-weight:500;color:var(--fg2);text-decoration:none}
+.db-back:hover{color:var(--fg)}
+.db-block{display:flex;flex-direction:column;gap:12px;min-width:0}
+.db .amount-labels{height:40px}
+.db .amount-label .mono{font-family:var(--font);font-size:12px}
+.db-chips{display:flex;flex-wrap:wrap;gap:8px}
+.db-chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;max-width:100%;padding:4px 12px 4px 6px;border:0;border-radius:999px;background:var(--muted);font-size:13px;line-height:18px;font-weight:500;text-align:left;transition:background 120ms var(--ease)}
+.db-chip:hover:not(:disabled){background:var(--muted-2)}
+.db-chip.on,.db-chip.on:hover{background:var(--water-hi),#fff;box-shadow:var(--water-shadow);color:var(--water-fg)}
+.db-chip:disabled{opacity:.5;cursor:default}
+.db-chip-all{padding-left:14px}
+.db-chip-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.db-chip-count{font-size:12px;font-weight:400;color:var(--fg2)}
+.db-chip-more{min-height:40px;padding:0 6px;border:0;background:none;font-size:13px;line-height:18px;color:var(--fg2);text-decoration:underline;text-decoration-color:var(--fg3);text-underline-offset:3px}
+.db-chip-more:hover{color:var(--fg)}
+.db-panel{display:flex;flex-direction:column;gap:20px;padding:32px 32px 28px;border-radius:28px;background:#08101a;color:#dfe5ee;overflow:hidden;min-width:0}
+.db-panel-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px}
+.db-panel-head>div:first-child{display:flex;flex-direction:column;gap:6px;max-width:62ch}
+.db-panel-title{font-size:20px;line-height:28px;font-weight:600;color:#fff;text-wrap:balance}
+.db-panel-sub{font-size:14px;line-height:21px;color:#b9c3d2}
+.db-panel-status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;line-height:18px;color:#eef2f8}
+.db-clear{height:30px;padding:0 12px;border:0;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-size:13px;font-weight:500}
+.db-clear:hover{background:rgba(255,255,255,.18)}
+.db-chart{min-width:0}
+.db-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.db-card{display:flex;flex-direction:column;gap:14px;min-width:0;padding:20px 20px 22px;border-radius:24px;background:var(--muted)}
+.db-card-empty{grid-column:1/-1;font-size:15px;line-height:23px}
+.db-card-head{display:flex;align-items:center;gap:10px}
+.db-card-icon{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:999px;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair)}
+.db-card-title{font-size:16px;line-height:24px;font-weight:600}
+.db-card-note{margin-left:auto;font-size:12px;line-height:16px;color:var(--fg2)}
+.db-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.db-row{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:10px;min-height:40px;padding:4px 10px 4px 6px;border-radius:14px;background:#fff}
+.db-row-mood{grid-template-columns:8px minmax(0,1fr) auto;min-height:34px;padding-left:14px}
+.db-row-mood.none{background:transparent;color:var(--fg2)}
+.db-row-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:999px;background:var(--muted);color:var(--fg)}
+.db-row-text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.db-row-name{font-size:13px;line-height:18px;font-weight:500}
+.db-row-sub{font-size:12px;line-height:16px;color:var(--fg2)}
+.db-row-num{font-size:12px;line-height:16px;white-space:nowrap}
+.db-bar{display:block;height:4px;border-radius:999px;background:var(--muted)}
+.db-bar span{display:block;height:100%;border-radius:999px;background:var(--fg);transition:width 200ms var(--ease)}
+.db-moodbar{max-width:none}
+.db-quotes{display:flex;flex-direction:column;gap:12px}
+.db-quote{margin:0;display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:16px;background:#fff}
+.db-quote blockquote{margin:0;font-size:16px;line-height:24px;font-weight:600;text-wrap:pretty}
+.db-quote figcaption{font-size:13px;line-height:18px;color:var(--fg2)}
+@container view (max-width: 760px){
+  .db-cards{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .db{padding:16px 16px 40px;gap:28px}
+  .db-panel{padding:24px 14px 18px;border-radius:20px}
+}
+@media (max-width: 560px){
+  /* Five stop labels do not fit side by side on a phone: show the chosen one, name and timing. */
+  .db .amount-label:not(.on){visibility:hidden}
+  .db .amount-label.on .nm{display:block}
+  .db .amount-labels{height:40px}
+}

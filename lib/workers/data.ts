@@ -2,7 +2,7 @@ import "server-only";
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import archetypesFile from "@/data/archetypes/archetypes-v1.json";
-import type { Archetype, Group, Interview, JobInsights, Worker, WorkerPortrait } from "./types";
+import { MOODS, SCENARIOS, type Archetype, type Group, type Interview, type InterviewSummary, type JobInsights, type MoodKey, type Worker, type WorkerPortrait } from "./types";
 
 const root = process.cwd();
 const rawDir = path.join(root, "data/interviews/archetypes/raw");
@@ -82,4 +82,33 @@ export async function getJobInsights(code: string): Promise<JobInsights | null> 
   } catch {
     return null;
   }
+}
+
+/**
+ * A short summary of every protocol v3 interview, for the dashboard. Read fresh each time, like
+ * listInterviewed: files keep arriving while the study runs. Files from older protocols are skipped.
+ */
+export async function getInterviewSummaries(): Promise<InterviewSummary[]> {
+  const ids = (await listInterviewed()).filter((id) => /^A\d{2}-[1-3]{5}$/.test(id));
+  const read = async (id: string): Promise<InterviewSummary | null> => {
+    try {
+      const d = JSON.parse(await readFile(path.join(rawDir, `${id}.json`), "utf8"));
+      if (d.protocolVersion !== "3.0" || !d.scenarios) return null;
+      const scenarios = {} as InterviewSummary["scenarios"];
+      for (const s of SCENARIOS) {
+        const r = d.scenarios[s.code];
+        if (!r || !MOODS.includes(r.mood)) return null;
+        scenarios[s.code] = {
+          mood: r.mood as MoodKey,
+          quote: typeof r.quote === "string" ? r.quote : "",
+          actions: Array.isArray(r.actions) ? r.actions.filter((a: unknown) => typeof a === "string") : [],
+        };
+      }
+      return { id, archetype: id.slice(0, 3), job: String(d.job ?? ""), name: String(d.name ?? id), scenarios };
+    } catch {
+      // A file that is still being written, or isn't valid JSON yet.
+      return null;
+    }
+  };
+  return (await Promise.all(ids.map(read))).filter((x): x is InterviewSummary => x !== null);
 }

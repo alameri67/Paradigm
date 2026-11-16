@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import { PeakChart } from "@/components/ui/peak-chart";
 import { Icon } from "@/components/simulator/icons";
+import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobPatterns } from "./job-patterns";
 import {
   MOODS,
@@ -29,16 +31,6 @@ const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
 const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.name, year: s.when, description: s.description }));
 const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
 const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
-const SHORT_SECTOR: Record<string, string> = {
-  "Agriculture (logging and farm support)": "Agriculture",
-  "Transportation and warehousing": "Transport",
-  "Professional, scientific and technical services": "Professional services",
-  "Management of companies": "Management",
-  "Administrative and support services": "Admin and support",
-  "Health care and social assistance": "Health care",
-  "Arts, entertainment and recreation": "Arts and recreation",
-  "Accommodation and food services": "Food and hotels",
-};
 
 /** The details a level stands for, as one readable line (age, savings, views...). */
 function levelDetail(l: GroupLevel) {
@@ -53,19 +45,6 @@ function Mood({ mood }: { mood: MoodKey }) {
     <span className={`mood tone-${MOOD_TONE[mood]}`}>
       <span className="dot" aria-hidden="true" />
       <span className="mood-word">{MOOD_LABEL[mood]}</span>
-    </span>
-  );
-}
-
-function Avatar({ a, size }: { a: Archetype; size: number }) {
-  return (
-    <span className="ws-avatar" style={{ width: size, height: size }}>
-      {a.portraitUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={a.portraitUrl} alt="" />
-      ) : (
-        <Icon name="person" size={Math.round(size * 0.45)} stroke={1.6} />
-      )}
     </span>
   );
 }
@@ -273,9 +252,12 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     <div className="ws">
       <nav className="ws-jobs" aria-label="Jobs">
         <div className="ws-back">AI Transition Simulator</div>
-        <h2 className="label" style={{ padding: "12px 10px 6px" }}>
-          Jobs
-        </h2>
+        <div className="ws-jobs-head">
+          <h2 className="label">Jobs</h2>
+          <Link href="/dashboard" className="ws-dash-link">
+            See the summary
+          </Link>
+        </div>
         {archetypes.map((x) => (
           <button
             key={x.code}
@@ -297,19 +279,24 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
       </nav>
 
       <main className="ws-main">
-        <label className="field ws-job-select">
-          <span className="label">Job</span>
-          <span className="select">
-            <select value={job} onChange={(e) => setJob(e.target.value)}>
-              {archetypes.map((x) => (
-                <option key={x.code} value={x.code}>
-                  {x.job} · {SHORT_SECTOR[x.sector] ?? x.sector}
-                </option>
-              ))}
-            </select>
-            <Icon name="down" />
-          </span>
-        </label>
+        <div className="ws-job-row">
+          <label className="field ws-job-select">
+            <span className="label">Job</span>
+            <span className="select">
+              <select value={job} onChange={(e) => setJob(e.target.value)}>
+                {archetypes.map((x) => (
+                  <option key={x.code} value={x.code}>
+                    {x.job} · {SHORT_SECTOR[x.sector] ?? x.sector}
+                  </option>
+                ))}
+              </select>
+              <Icon name="down" />
+            </span>
+          </label>
+          <Link href="/dashboard" className="ws-dash-link">
+            See the summary of everyone interviewed
+          </Link>
+        </div>
 
         <div className="dialbar">
           <span className="label" id="ws-dial">
