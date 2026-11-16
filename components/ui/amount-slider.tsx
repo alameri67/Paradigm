@@ -21,6 +21,8 @@ export interface AmountSliderProps {
   value: number;
   onChange: (value: number) => void;
   labelledBy?: string;
+  /** Show the big rolling code and description above the track. Default true. */
+  showHeader?: boolean;
 }
 
 const CELL = 6;
@@ -35,7 +37,7 @@ function stopPos(i: number, n: number) {
   return `calc(${i / (n - 1)} * (100% - ${THUMB}px) + ${THUMB / 2}px)`;
 }
 
-export function AmountSlider({ stops, value, onChange, labelledBy }: AmountSliderProps) {
+export function AmountSlider({ stops, value, onChange, labelledBy, showHeader = true }: AmountSliderProps) {
   const n = stops.length;
   const cur = Math.max(0, Math.min(n - 1, value));
   const lv = stops[cur];
@@ -206,6 +208,7 @@ export function AmountSlider({ stops, value, onChange, labelledBy }: AmountSlide
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      {showHeader && (
       <div className="amount-head">
         <span className="readout" role="status" aria-label={lv.code}>
           <span aria-hidden="true">{prefix}</span>
@@ -222,6 +225,7 @@ export function AmountSlider({ stops, value, onChange, labelledBy }: AmountSlide
           <span className="mono">{/^\d{4}$/.test(lv.year) ? `By ${lv.year}` : ""}</span>
         </span>
       </div>
+      )}
 
       <div
         ref={rootRef}
@@ -246,7 +250,7 @@ export function AmountSlider({ stops, value, onChange, labelledBy }: AmountSlide
           aria-valuemin={0}
           aria-valuemax={n - 1}
           aria-valuenow={cur}
-          aria-valuetext={`${lv.code}, ${lv.description}, ${lv.year}`}
+          aria-valuetext={showHeader ? `${lv.code}, ${lv.description}, ${lv.year}` : `${lv.name}. ${lv.description}`}
           style={{ left: stopPos(cur, n) }}
           onKeyDown={onKeyDown}
         />

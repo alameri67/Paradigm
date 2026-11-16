@@ -84,3 +84,35 @@ Replace `[PERSON]` with the description for each job.
 | Civil servant caseworker | `government.jpg` | a woman in her 60s with short grey hair | `government-f.jpg` |
 
 For the family doctor, use `health.jpg` as both image 1 and image 2.
+
+## New jobs (added 16 Nov 2026)
+
+12 jobs were added: accountant, journalist, nurse, care worker, customer service agent, graphic designer, translator, warehouse worker, electrician, police officer, marketing specialist and delivery driver. Each needs **two portraits, a woman and a man**: 24 images.
+
+### Shared prompt for new jobs
+
+Use one reference image: the doctor (`health.jpg`), for the colour, contrast and grain only.
+
+> Create a new vintage studio portrait photograph of [PERSON]. Match the reference image exactly in photographic treatment: nearly black-and-white warm grayscale, charcoal-black shadows, gray midtones, muted ivory highlights, a very subtle warm tint, strong photographic contrast, clear facial detail and fine analog grain. Do not copy the reference person or their clothes. 1950s style, soft warm studio light. Head and shoulders, facing the camera with a gentle natural smile. The shoulders have soft feathered edges that fade into a pure white #FFFFFF background. Empty canvas is opaque pure white. No text, logos, border or frame. One person only. Square, at least 1024 × 1024.
+
+| Job | [PERSON] (woman) | Save as | [PERSON] (man) | Save as |
+|---|---|---|---|---|
+| Accountant | a woman in her 40s in a neat blouse and cardigan, reading glasses, holding a ledger book and a pencil | `accountant-f.jpg` | a man in his 50s in a shirt, tie and sleeve garters, reading glasses, holding a ledger book | `accountant.jpg` |
+| Journalist | a woman in her 30s in a trench coat, a reporter's notebook and pencil in hand | `journalist.jpg` | a man in his 40s in a rumpled jacket with his tie loosened, a notebook in his breast pocket | `journalist-m.jpg` |
+| Nurse | a woman in her 30s in a nurse's uniform with a fob watch pinned to it | `nurse.jpg` | a man in his 40s in a nurse's tunic with a fob watch pinned to it | `nurse-m.jpg` |
+| Care worker | a woman in her 50s in a tabard over a cardigan, a kind, tired smile | `care-worker.jpg` | a man in his 30s in a tabard over a shirt, a kind smile | `care-worker-m.jpg` |
+| Customer service agent | a woman in her 20s with a telephone headset, a blank name badge | `customer-service-f.jpg` | a man in his 20s with a telephone headset, a blank name badge | `customer-service.jpg` |
+| Graphic designer | a woman in her 20s in a turtleneck, a pencil behind her ear, holding a sketchbook | `graphic-designer.jpg` | a man in his 30s in a turtleneck and glasses, holding a sketchbook | `graphic-designer-m.jpg` |
+| Translator | a woman in her 40s in a blouse, holding a dictionary, glasses on | `translator-f.jpg` | a man in his 50s in a cardigan and glasses, holding a dictionary | `translator.jpg` |
+| Warehouse worker | a woman in her 30s in a work jacket and high-visibility vest, holding a handheld scanner | `warehouse-f.jpg` | a man in his 20s in a work jacket and high-visibility vest, holding a handheld scanner | `warehouse.jpg` |
+| Electrician | a woman in her 30s in overalls, a coil of cable over her shoulder, a screwdriver in her top pocket | `electrician.jpg` | a man in his 40s in overalls, a coil of cable over his shoulder | `electrician-m.jpg` |
+| Police officer | a woman in her 30s in a police uniform and peaked cap, no badges with text | `police-f.jpg` | a man in his 40s in a police uniform and peaked cap, no badges with text | `police.jpg` |
+| Marketing specialist | a woman in her 30s in a smart blouse, holding a layout board | `marketing.jpg` | a man in his 30s in a smart shirt, holding a layout board | `marketing-m.jpg` |
+| Delivery driver | a woman in her 20s in a cap and work jacket, carrying a parcel | `delivery-f.jpg` | a man in his 30s in a cap and work jacket, carrying a parcel | `delivery.jpg` |
+
+## Still missing, all together
+
+- **24 portraits for the new jobs** (table above).
+- **20 other-gender portraits for the first 20 jobs** (the "Second set" table).
+
+That's 44 images in total. Until a portrait exists, the app shows no picture for that person rather than the wrong face.

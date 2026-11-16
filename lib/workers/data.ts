@@ -2,12 +2,17 @@ import "server-only";
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import archetypesFile from "@/data/archetypes/archetypes-v1.json";
-import type { Archetype, Group, Interview, Worker, WorkerPortrait } from "./types";
+import type { Archetype, Group, Interview, JobInsights, Worker, WorkerPortrait } from "./types";
 
 const root = process.cwd();
 const rawDir = path.join(root, "data/interviews/archetypes/raw");
 
-export const archetypes = archetypesFile.archetypes as Archetype[];
+/** Jobs grouped by industry, in the order the industries were first listed. */
+export const archetypes = (() => {
+  const list = archetypesFile.archetypes as Archetype[];
+  const order = [...new Set(list.map((a) => a.sector))];
+  return [...list].sort((a, b) => order.indexOf(a.sector) - order.indexOf(b.sector) || a.code.localeCompare(b.code));
+})();
 
 let gridPromise: Promise<{ groups: Group[]; byId: Map<string, Worker> }> | null = null;
 /** grid.json is large (all 4,860 versions), so it's read once and kept in memory. */
@@ -62,4 +67,19 @@ export async function getWorker(
     interview = null;
   }
   return { worker, interview, portrait: await portraitFor(worker) };
+}
+
+/** Job-level patterns for one job, once the insights step has run for it. */
+export async function getJobInsights(code: string): Promise<JobInsights | null> {
+  if (!/^A\d{2}$/.test(code)) return null;
+  try {
+    const dir = path.join(root, "data/insights");
+    const [insights, stats] = await Promise.all([
+      readFile(path.join(dir, `${code}.json`), "utf8"),
+      readFile(path.join(dir, `${code}-stats.json`), "utf8"),
+    ]);
+    return { ...JSON.parse(insights), stats: JSON.parse(stats) };
+  } catch {
+    return null;
+  }
 }

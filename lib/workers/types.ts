@@ -1,11 +1,12 @@
 /** Shared types for the archetype ("worker") study. Safe to import on client and server. */
 
+/** The five scenarios, in dial order. The code is for data only; the screen always shows the name. */
 export const SCENARIOS = [
-  { code: "S0", name: "No major impact", short: "No change", description: "AI stays a handy tool. Hiring, pay and prices carry on as they would anyway." },
-  { code: "S1", name: "Capable but slow", short: "Slow", description: "Strong AI spreads over 10+ years. Some tasks vanish, few whole jobs do." },
-  { code: "S2", name: "Moderately fast", short: "5 years", description: "AI handles most routine office work within 5 years. Office layoffs begin." },
-  { code: "S3", name: "Fast", short: "2–3 years", description: "AI matches skilled professionals within 2 to 3 years. Physical jobs mostly untouched." },
-  { code: "S4", name: "Fast AI and fast robots", short: "+ robots", description: "Everything in S3, plus general-purpose robots in hands-on jobs within 3 to 5 years." },
+  { code: "S0", name: "AI Plateau", when: "No radical change", description: "AI turns out to be mostly hype. It automates some routine tasks, but jobs, pay and prices carry on much as before." },
+  { code: "S1", name: "Steady Disruption", when: "Strong, not radical", description: "AI takes over many tasks in many jobs. Some jobs shrink and new ones appear, but most people still have work and society has time to adjust." },
+  { code: "S2", name: "AGI by 2028", when: "In 2 years", description: "The singularity hits fast. Within 2 years, AI can do almost any work a person can, hands-on work included through robots." },
+  { code: "S3", name: "AGI by 2031", when: "In 5 years", description: "Full AGI arrives within 5 years: AI that can do almost any work a person can. A few years to see it coming." },
+  { code: "S4", name: "AGI by 2036", when: "In 10 years", description: "Full AGI arrives within 10 years. The same end point, with about a decade to prepare." },
 ] as const;
 export type ScenarioCode = (typeof SCENARIOS)[number]["code"];
 
@@ -32,6 +33,8 @@ export interface Archetype {
   cutoutUrl: string | null;
   /** Gender of the person in portraitUrl. The other gender's portrait is <name>-m.jpg or <name>-f.jpg. */
   portraitGender: "F" | "M";
+  /** Plural for headings, e.g. "family doctors". */
+  plural: string;
 }
 
 /** The portrait that matches one worker's gender, if it exists yet. */
@@ -53,6 +56,53 @@ export interface Worker {
 export interface Turn { speaker: "interviewer" | "persona"; text: string }
 export interface ScenarioResult {
   say: string; think: string; do: string; feel: string; mood: MoodKey; quote: string; fieldNote: string; transcript: Turn[];
+  actions?: string[];
+}
+
+/** Plain names for the action tags in protocol v3. */
+export const ACTION_LABEL: Record<string, string> = {
+  "keep-going": "Carry on as normal",
+  "cut-spending": "Cut back on spending",
+  "save-more": "Save more or pay down debt",
+  retrain: "Retrain or learn a new trade",
+  "learn-ai": "Learn to use AI tools at work",
+  "change-job": "Look for a different job",
+  "side-income": "Start a side income",
+  invest: "Invest money",
+  automate: "Bring in AI or robots themselves",
+  "sell-or-exit": "Sell up or leave the job",
+  "retire-early": "Retire early",
+  "collective-action": "Join a union or group action",
+  politics: "Lobby, vote or campaign",
+  "seek-support": "Lean on government, family or community",
+  move: "Move home or region",
+  "family-plans": "Change family plans",
+  "wait-and-see": "Wait and see",
+};
+
+/** Job-level patterns: counts from scripts/summarize-job.mjs plus the written insights. */
+export interface JobStatsScenario {
+  n: number;
+  avgWorry: number;
+  moodMix: Record<MoodKey, number>;
+  actions: { tag: string; count: number; share: number }[];
+}
+export interface JobInsightsScenario {
+  headline: string;
+  whatTheyDo: { tag: string; text: string }[];
+  whatTheySay: string;
+  whatTheyThink: string;
+  howTheyFeel: string;
+  differences: { group: string; text: string }[];
+  quotes: { id: string; name: string; text: string }[];
+}
+export interface JobInsights {
+  code: string;
+  job: string;
+  interviews: number;
+  overview: string;
+  scenarios: Record<ScenarioCode, JobInsightsScenario>;
+  stats: { interviews: number; scenarios: Record<ScenarioCode, JobStatsScenario> };
 }
 export interface Interview {
   id: string;

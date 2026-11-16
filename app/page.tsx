@@ -1,17 +1,15 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
-import { SimulatorProvider } from "@/components/simulator/simulator-context";
-import { SimulatorShell } from "@/components/simulator/simulator-shell";
-import { SimulatorSkeleton } from "@/components/simulator/skeleton";
-import { getSimData } from "@/lib/sim/data";
+import { WorkerStudio } from "@/components/workers/worker-studio";
+import { archetypes, getGroups } from "@/lib/workers/data";
+
+export const metadata: Metadata = { title: "AI Transition Simulator" };
 
 export default async function Home() {
-  const data = await getSimData();
+  const groups = await getGroups();
   return (
-    // The simulator reads its starting state from the URL, so it renders on the client.
-    <Suspense fallback={<SimulatorSkeleton />}>
-      <SimulatorProvider data={data}>
-        <SimulatorShell />
-      </SimulatorProvider>
+    <Suspense>
+      <WorkerStudio archetypes={archetypes} groups={groups} />
     </Suspense>
   );
 }

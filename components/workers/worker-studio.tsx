@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import { PeakChart } from "@/components/ui/peak-chart";
 import { Icon } from "@/components/simulator/icons";
+import { JobPatterns } from "./job-patterns";
 import {
   MOODS,
   MOOD_ACCENT,
@@ -18,6 +18,7 @@ import {
   type Group,
   type GroupLevel,
   type Interview,
+  type JobInsights,
   type MoodKey,
   type ScenarioCode,
   type Worker,
@@ -25,7 +26,8 @@ import {
 } from "@/lib/workers/types";
 
 const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
-const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.short, year: "", description: s.description }));
+const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.name, year: s.when, description: s.description }));
+const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
 const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
 const SHORT_SECTOR: Record<string, string> = {
   "Agriculture (logging and farm support)": "Agriculture",
@@ -88,18 +90,18 @@ function WorkerCard({
       <PeakChart
         width={300}
         data={CODES.map((c) => level(iv.scenarios[c].mood))}
-        labels={SCENARIOS.map((s) => `${s.code} · ${s.name}`)}
+        labels={SCENARIOS.map((s) => s.name)}
         value={level(mood)}
         valueSuffix="/5"
         title={w.name}
         headline={w.job}
         image={portrait?.cutout}
-        caption={`${MOOD_LABEL[mood]} in ${scenario} · age ${w.profile.age}`}
+        caption={`${MOOD_LABEL[mood]} · age ${w.profile.age}`}
         updatedText={SHORT_SECTOR[w.sector] ?? w.sector}
         trend="none"
-        periods={CODES}
-        period={scenario}
-        onPeriodChange={(v) => onScenario(v as ScenarioCode)}
+        periods={SCENARIOS.map((s) => s.name)}
+        period={scenarioOf(scenario).name}
+        onPeriodChange={(v) => onScenario(SCENARIOS.find((s) => s.name === v)!.code)}
         accent={MOOD_ACCENT[mood]}
         formatValue={(v) => MOOD_LABEL[MOODS[Math.max(0, Math.min(4, Math.round(v) - 1))]]}
       />
@@ -186,6 +188,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     portrait: WorkerPortrait | null;
   } | null>(null);
   const [showTranscript, setShowTranscript] = useState(false);
+  const [insights, setInsights] = useState<{ job: string; data: JobInsights | null } | null>(null);
 
   const a = archetypes.find((x) => x.code === job)!;
   const id = workerId(job, groups, levels);
@@ -225,6 +228,17 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     };
   }, [id]);
 
+  useEffect(() => {
+    let live = true;
+    fetch(`/api/workers/insights/${job}`)
+      .then((r) => r.json())
+      .then((d) => live && setInsights({ job, data: d.insights }));
+    return () => {
+      live = false;
+    };
+  }, [job]);
+  const jobInsights = insights?.job === job ? insights.data : null;
+
   const counts = useMemo(() => {
     const c: Record<string, number> = {};
     for (const x of interviewed ?? []) c[x.slice(0, 3)] = (c[x.slice(0, 3)] ?? 0) + 1;
@@ -258,10 +272,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
   return (
     <div className="ws">
       <nav className="ws-jobs" aria-label="Jobs">
-        <Link href="/" className="ws-back">
-          <Icon name="back" />
-          Simulator
-        </Link>
+        <div className="ws-back">AI Transition Simulator</div>
         <h2 className="label" style={{ padding: "12px 10px 6px" }}>
           One worker per industry
         </h2>
@@ -304,7 +315,16 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
           <span className="label" id="ws-dial">
             AI scenario
           </span>
-          <AmountSlider stops={STOPS} value={CODES.indexOf(scenario)} onChange={(i) => setScenario(CODES[i])} labelledBy="ws-dial" />
+          <AmountSlider
+            stops={STOPS}
+            value={CODES.indexOf(scenario)}
+            onChange={(i) => setScenario(CODES[i])}
+            labelledBy="ws-dial"
+            showHeader={false}
+          />
+          <p className="ws-dial-desc" key={scenario}>
+            <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
+          </p>
         </div>
 
         {loading ? (
@@ -318,7 +338,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
               <div className="ws-hero-text">
                 <div className="ws-moodline">
                   <span className="ws-dot" style={{ background: MOOD_ACCENT[sc.mood] }} aria-hidden="true" />
-                  {MOOD_LABEL[sc.mood]} in {scenario} · {SCENARIOS[CODES.indexOf(scenario)].name}
+                  {MOOD_LABEL[sc.mood]} in {scenarioOf(scenario).name}
                 </div>
                 <p key={sc.quote} className="ws-quote swap">
                   “{sc.quote}”
@@ -347,6 +367,10 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
               </div>
             </section>
 
+            {jobInsights && (
+              <JobPatterns insights={jobInsights} plural={a.plural} scenario={scenario} scenarioName={scenarioOf(scenario).name} />
+            )}
+
             <section className="section" aria-labelledby="ws-all">
               <h2 className="t-section" id="ws-all">
                 All five scenarios
@@ -364,8 +388,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                       onClick={() => setScenario(s.code)}
                     >
                       <span className="lvl-top">
-                        <span className="mono">{s.code}</span>
-                        <span className="lvl-name">{s.short}</span>
+                        <span className="lvl-name">{s.name}</span>
+                        <span className="lvl-year">{s.when}</span>
                       </span>
                       <Mood mood={r.mood} />
                       <span className="lvl-say">“{r.quote}”</span>
@@ -398,7 +422,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
             <section className="section">
               <button type="button" className="lq-btn sm" style={{ alignSelf: "flex-start" }} onClick={() => setShowTranscript((v) => !v)}>
-                {showTranscript ? "Hide" : "Read"} the {scenario} interview
+                {showTranscript ? "Hide" : "Read"} the full interview for {scenarioOf(scenario).name}
               </button>
               {showTranscript && (
                 <div className="ws-transcript">
