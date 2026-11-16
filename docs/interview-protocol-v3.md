@@ -1,0 +1,186 @@
+# Interview protocol v3: industry archetypes
+
+Version 3.0 · 16 November 2026
+
+This guide runs the archetype study. Each industry has one typical job (see `data/archetypes/archetypes-v1.json`), and each job has 243 versions of the same worker (see `data/archetypes/grid.json`). The versions differ on five things: life stage, work standing, money cushion, outlook and adaptability.
+
+Version 3 keeps everything from version 2 (longer interviews, two follow-ups, field notes and memorable quotes) and changes two things:
+
+1. **A new set of five scenarios** (section 3), each with a name. The interviewer always says the scenario's name, never its code.
+2. **Action tags.** Each scenario records what the person would do as tags from a fixed list (section 6), so their actions can be counted across all the versions of a job.
+
+Everything this produces is simulated. These are made-up people, and their answers are a model's guess at how someone like them would react. They aren't survey data and aren't real quotes.
+
+## 1. Who is asking the questions
+
+**The organisation.** The Work Futures Panel is an independent research group. It has no ties to AI companies, employers, unions, political parties or government, and it doesn't sell anything or campaign for any side.
+
+**The interviewer.** A senior field researcher from the Panel, with years of experience interviewing people about their work. They're:
+
+- **Neutral.** They never argue, reassure, warn or hint at a "right" answer, and they never say whether a scenario is likely.
+- **Warm and plain-spoken.** They talk like a good neighbour, not a form. They match the person's way of talking and never talk down to anyone.
+- **Curious about the gap between public and private.** They promise confidentiality at the start, so the person can say what they'd say in public and, separately, what they really think.
+- **Hungry for detail.** They ask for the specific moment, the specific number, the specific person: "What would you say to your daughter that night?" "Which bill goes unpaid first?"
+- **Patient with contradictions.** They name a contradiction once, gently, then accept the answer.
+
+## 2. Before the interview: become the person
+
+Read the person's entry in `grid.json` and their job in `archetypes-v1.json`. Build a full picture:
+
+- **Their life:** age, household, savings, pay, how many similar jobs there are nearby.
+- **Their work:** the job, the setting, how senior and how skilled they are, their education, and how exposed the job is to thinking AI and to robots.
+- **Their views:** their outlook (progressive, centre or traditional) and how adaptable they are.
+
+From this, invent small, ordinary details that fit: the name of their town's main road, the model of their tractor, what their partner does, a colleague they eat lunch with. Keep these details consistent all the way through the interview. Never contradict the profile.
+
+**Every version must sound like a different person.** Two farmers who differ only in savings should still differ in voice, worries and plans. Money shapes what they can do. Outlook shapes how they explain the world and who they blame. Adaptability shapes whether they move first or dig in. Life stage shapes what's at stake: a first job, a family, a pension.
+
+## 3. The five scenarios
+
+Today is November 2026. Read each card in everyday words, as written, and always call the scenario by its name. Don't add events that aren't on the card.
+
+| Code | Name | Card the interviewer reads out |
+|---|---|---|
+| S0 | AI Plateau | "Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway." |
+| S1 | Steady Disruption | "Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust." |
+| S2 | AGI by 2028 | "Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare." |
+| S3 | AGI by 2031 | "Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast." |
+| S4 | AGI by 2036 | "Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans." |
+
+The three AGI scenarios have the same end point and differ only in how much time there is. Explore what the extra time changes: what the person would do now, while they see it coming, and what they'd do once it arrives. Someone near retirement may feel safe with 10 years but not with 2. Someone at the start of their career may feel the opposite. No country context is applied in this run.
+
+## 4. How the interview runs
+
+**Opening (2 to 4 turns).** The interviewer introduces the Panel and promises confidentiality, then asks the person to describe a normal working day. The person answers with real texture: what they do, what they like, what wears them out.
+
+**Each scenario, in order S0 to S4:**
+
+1. **Read the card.**
+2. **Say:** "If this happened, what would you say about it at work, to friends, or online?"
+3. **Think:** "And just between us, off the record, what do you really think it means for you?"
+4. **Do:** "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+5. **Feel:** "How does it feel, picturing that?"
+6. **Two follow-ups.** Use them to dig for detail or to probe a gap. Good follow-ups ask about a concrete moment ("What would you tell your kids?"), money ("What gets cut first?"), people ("Who at work would you worry about?"), or a contradiction ("You said you'd be fine, but you're also cutting back. Which is it?").
+
+The person answers in their own voice, in 2 to 5 sentences per answer. Let them tell small stories, name people and places, use the words of their trade, and sometimes go off on a tangent and come back. Each scenario builds on the earlier ones ("Like I said with the slow one…").
+
+**Closing (2 to 4 turns).** The interviewer asks: "Of the five pictures, which one worries you most, and what would actually help you if it happened?" Then: "Is there anything I didn't ask that I should have?"
+
+## 5. Memorable quotes
+
+A memorable quote is the line a reader would repeat to a friend. For each scenario, pick one sentence or two short sentences, at most 30 words, from the person's answers. It must be **copied word for word from the transcript**.
+
+Good quotes are:
+
+- **Concrete.** Built from their own world: the tractor, the till, the lunch break, the mortgage letter. For example: "My dad drove this land with a horse. I'll be the one who watches a robot do it from the kitchen window."
+- **Surprising or honest.** They admit something, flip an expectation, or show a contradiction.
+- **In their own voice.** Their words, not a slogan or a news headline.
+
+Avoid clichés like "it's a double-edged sword" or "only time will tell". If no line in the transcript is good enough, improve the persona's answer so it contains one, before you pick it.
+
+## 6. What to record
+
+After each scenario, the interviewer writes:
+
+| Field | Voice | Length | What it captures |
+|---|---|---|---|
+| `say` | First person | 2 or 3 sentences | Their public line, as they'd actually put it out loud. |
+| `think` | First person | 2 or 3 sentences | Their private view, which may differ from `say`. |
+| `do` | Third person, starting with a verb | 2 or 3 sentences | Concrete actions in the first year, with timing or money where possible. |
+| `feel` | Plain words | 1 or 2 sentences | Their emotions, including mixed ones. |
+| `mood` | One key | — | `calm`, `uneasy`, `anxious`, `alarmed` or `panicked`. |
+| `quote` | Word for word from the transcript | Up to 30 words | The most memorable line in this scenario (section 5). |
+| `fieldNote` | The interviewer's own notes | 2 to 4 sentences | What stood out: what drives them, any gap between say and think, what surprised you. |
+| `actions` | Tags | 1 to 4 | What they'd do, as tags from the list below. Only tag actions they actually describe. |
+
+Action tags:
+
+| Tag | Meaning |
+|---|---|
+| `keep-going` | Carries on as normal |
+| `cut-spending` | Cuts back on spending |
+| `save-more` | Saves more or pays down debt to build a cushion |
+| `retrain` | Retrains, studies or learns a new trade |
+| `learn-ai` | Learns to use AI tools in their current work |
+| `change-job` | Looks for or moves to a different job or field |
+| `side-income` | Starts a side business or a second source of income |
+| `invest` | Invests money, for example in shares, property, the business or new machines |
+| `automate` | Brings in AI or robots in their own work or business |
+| `sell-or-exit` | Sells up, closes the business or leaves the job |
+| `retire-early` | Retires early or brings retirement plans forward |
+| `collective-action` | Joins a union, association, protest or other group action |
+| `politics` | Lobbies, votes or campaigns for a policy |
+| `seek-support` | Leans on government help, family or community |
+| `move` | Moves home or region |
+| `family-plans` | Changes family plans, such as children's studies, a house move or a wedding |
+| `wait-and-see` | Waits to see what happens before acting |
+
+Mood scale, from calmest to most distressed:
+
+- `calm`: life feels much the same, or the change looks good for them.
+- `uneasy`: some worry in the background, but no real threat yet.
+- `anxious`: clear pressure, still feeling in control.
+- `alarmed`: losing sleep, a real threat to their job, income or way of life.
+- `panicked`: overwhelmed and out of options or time.
+
+After the closing, the interviewer also writes:
+
+| Field | Length | What it captures |
+|---|---|---|
+| `headlineQuote` | Up to 30 words, word for word | The single best line from the whole interview. |
+| `portrait` | 3 to 5 sentences | Who this person is and how they move through the five scenarios, written so a reader who skips the transcript still knows them. |
+| `biggestWorry` | 1 or 2 sentences | Their answer to "which scenario worries you most". |
+| `whatWouldHelp` | 1 or 2 sentences | What they said would help. |
+
+The summaries must match the transcript. Don't add anything the person didn't say.
+
+## 7. Language rules
+
+Apply these to every word the interviewer writes, every answer and every note.
+
+- Write naturally, like a thoughtful person talking to another person. Clear, warm, direct and useful.
+- Use everyday words and short, clear sentences. A 10-year-old should be able to follow the main idea, but never use baby talk.
+- Explain an unfamiliar term the first time it comes up.
+- Use contractions where they'd sound natural, and vary sentence length.
+- No filler, buzzwords, exaggerated claims or canned openings and closings. Avoid stiff phrases such as "delve into", "leverage" and "it is important to note".
+- Use plain international English. Avoid strong regional slang, because the study isn't tied to one country.
+- Keep the person's facts straight. Never contradict their profile.
+- Keep uncertainty honest. If the person wouldn't know something, they say so.
+
+## 8. Output format
+
+Write one JSON file per person to `data/interviews/archetypes/raw/<ID>.json`, for example `data/interviews/archetypes/raw/A01-11111.json`:
+
+```json
+{
+  "id": "A01-11111",
+  "archetype": "A01",
+  "job": "Farmer",
+  "sector": "Agriculture (logging and farm support)",
+  "name": "Uma Petrov",
+  "levels": { "lifeStage": "early", "standing": "low", "cushion": "thin", "outlook": "progressive", "adaptability": "resistant" },
+  "protocolVersion": "3.0",
+  "countryContext": "none",
+  "opening": [ { "speaker": "interviewer", "text": "…" }, { "speaker": "persona", "text": "…" } ],
+  "scenarios": {
+    "S0": {
+      "transcript": [ { "speaker": "interviewer", "text": "…" }, { "speaker": "persona", "text": "…" } ],
+      "say": "…", "think": "…", "do": "…", "feel": "…", "mood": "calm",
+      "quote": "…", "fieldNote": "…", "actions": ["keep-going"]
+    },
+    "S1": { "…": "same shape" },
+    "S2": { "…": "same shape" },
+    "S3": { "…": "same shape" },
+    "S4": { "…": "same shape" }
+  },
+  "closing": [ { "speaker": "interviewer", "text": "…" }, { "speaker": "persona", "text": "…" } ],
+  "headlineQuote": "…",
+  "portrait": "…",
+  "biggestWorry": "…",
+  "whatWouldHelp": "…"
+}
+```
+
+- `say`, `quote` and `headlineQuote` have no quote marks around them; the app adds them.
+- The file must be valid JSON. Use straight double quotes for JSON strings; curly quotes and apostrophes inside the text are fine.
+- Each scenario's transcript has at least 12 turns: the card plus the 4 core questions, the 2 follow-ups, and an answer to each.

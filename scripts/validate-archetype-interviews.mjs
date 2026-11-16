@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Checks archetype interview files (protocol v2) in data/interviews/archetypes/raw.
+// Checks archetype interview files (protocol v3) in data/interviews/archetypes/raw.
 // Usage: node scripts/validate-archetype-interviews.mjs [ID or prefix ...]
 //   e.g. node scripts/validate-archetype-interviews.mjs A01-11      (all files starting with A01-11)
 import { readFileSync, readdirSync, existsSync } from "node:fs";
@@ -10,6 +10,8 @@ const grid = JSON.parse(readFileSync(new URL("../data/archetypes/grid.json", imp
 const byId = new Map(grid.people.map((p) => [p.id, p]));
 const SCEN = ["S0", "S1", "S2", "S3", "S4"];
 const MOODS = ["calm", "uneasy", "anxious", "alarmed", "panicked"];
+const ACTIONS = ["keep-going","cut-spending","save-more","retrain","learn-ai","change-job","side-income","invest","automate","sell-or-exit","retire-early","collective-action","politics","seek-support","move","family-plans","wait-and-see"];
+const OLD_CARD = /hands-on work is no longer a safe place|matches skilled professionals|handy tool, like a better search engine/i;
 const BANNED = ["delve", "leverage", "it is important to note", "double-edged sword", "only time will tell"];
 const norm = (s) => s.toLowerCase().replace(/[“”"‘’']/g, "").replace(/\s+/g, " ").trim();
 const words = (s) => (s ?? "").trim().split(/\s+/).filter(Boolean).length;
@@ -42,6 +44,9 @@ for (const f of files) {
     if (t.some((u) => !["interviewer", "persona"].includes(u.speaker) || !u.text?.trim())) errs.push(`${s}: bad transcript turn`);
     for (const k of ["say", "think", "do", "feel", "quote", "fieldNote"]) if (!x[k]?.trim()) errs.push(`${s}: empty ${k}`);
     if (!MOODS.includes(x.mood)) errs.push(`${s}: bad mood "${x.mood}"`);
+    if (!Array.isArray(x.actions) || x.actions.length < 1 || x.actions.length > 4) errs.push(`${s}: actions needs 1 to 4 tags`);
+    else for (const a of x.actions) if (!ACTIONS.includes(a)) errs.push(`${s}: unknown action tag "${a}"`);
+    if (OLD_CARD.test(JSON.stringify(t))) errs.push(`${s}: uses an old scenario card (see protocol v3)`);
     for (const k of ["say", "think", "do"]) if (x[k] && words(x[k]) < 18) errs.push(`${s}: ${k} is thin (${words(x[k])} words; aim for 2 or 3 sentences)`);
     if (x.fieldNote && words(x.fieldNote) < 25) errs.push(`${s}: fieldNote is thin (${words(x.fieldNote)} words)`);
     if (x.quote && words(x.quote) > 30) errs.push(`${s}: quote is over 30 words`);
@@ -53,6 +58,8 @@ for (const f of files) {
   for (const k of ["headlineQuote", "portrait", "biggestWorry", "whatWouldHelp"]) if (!d[k]?.trim()) errs.push(`missing ${k}`);
   if (d.headlineQuote && words(d.headlineQuote) > 30) errs.push("headlineQuote is over 30 words");
   if (d.headlineQuote && !norm(everything).includes(norm(d.headlineQuote))) errs.push("headlineQuote is not word for word from the transcript");
+  if (d.protocolVersion !== "3.0") errs.push(`protocolVersion should be "3.0"`);
+  if (/\bS[0-4]\b/.test(personaText(d.opening) + JSON.stringify(Object.values(d.scenarios ?? {}).map((x) => x.transcript)))) errs.push("transcript says a scenario code (S0–S4); use the scenario's name");
   if (d.portrait && words(d.portrait) < 45) errs.push(`portrait is thin (${words(d.portrait)} words)`);
   const lower = JSON.stringify(d).toLowerCase();
   for (const w of BANNED) if (lower.includes(w)) errs.push(`uses "${w}"`);
