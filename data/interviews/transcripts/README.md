@@ -2,7 +2,7 @@
 
 Simulated interviews with each persona in `data/population/synthetic-population-v1.3.md`, run with `docs/interview-protocol.md`. Every file is made by `scripts/export-transcripts.mjs` from the data files in `raw/`, so edit those, not these.
 
-99 of 115 interviews are done.
+115 of 115 interviews are done.
 
 | ID | Name | Role | Group | S0 | S1 | S2 | S3 | S4 |
 |---|---|---|---|---|---|---|---|---|
@@ -36,6 +36,16 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P013](P013.md) | Yuki Tanaka | Billing and customer service agent | Utilities | Uneasy | Anxious | Alarmed | Panicked | Panicked |
 | [P014](P014.md) | Robert Klein | Water treatment plant manager | Utilities | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P015](P015.md) | Amara Okafor | Data scientist, renewables integration | Utilities | Calm | Calm | Uneasy | Anxious | Anxious |
+| [P016](P016.md) | Mick O'Brien | Owner, residential builder with 8 staff | Construction | Calm | Calm | Calm | Calm | Anxious |
+| [P017](P017.md) | Luis Hernández | Carpenter / framer | Construction | Calm | Calm | Uneasy | Uneasy | Alarmed |
+| [P018](P018.md) | Sarah Chen | Project engineer and estimator | Construction | Calm | Uneasy | Anxious | Alarmed | Alarmed |
+| [P019](P019.md) | Darnell Washington | General labourer | Construction | Calm | Uneasy | Calm | Uneasy | Panicked |
+| [P020](P020.md) | Ingrid Larsen | Site safety manager, commercial projects | Construction | Calm | Calm | Calm | Uneasy | Uneasy |
+| [P021](P021.md) | Frank Müller | CNC machinist | Manufacturing | Calm | Calm | Calm | Uneasy | Anxious |
+| [P022](P022.md) | Rosa Martínez | Assembly line worker, electronics | Manufacturing | Anxious | Anxious | Anxious | Anxious | Panicked |
+| [P023](P023.md) | Arjun Mehta | Automation engineer | Manufacturing | Calm | Calm | Calm | Uneasy | Calm |
+| [P024](P024.md) | Claire Dubois | Plant manager, food processing | Manufacturing | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
+| [P025](P025.md) | Tyler Reed | Quality inspector | Manufacturing | Uneasy | Uneasy | Uneasy | Anxious | Alarmed |
 | [P026](P026.md) | Paul Anderson | B2B sales rep, industrial supplies | Wholesale trade | Calm | Uneasy | Anxious | Alarmed | Alarmed |
 | [P027](P027.md) | Fatima Zahra Benali | Purchasing and inventory analyst | Wholesale trade | Calm | Calm | Anxious | Alarmed | Alarmed |
 | [P028](P028.md) | Greg Thompson | Owner, family food distributor | Wholesale trade | Calm | Calm | Uneasy | Uneasy | Anxious |
@@ -56,6 +66,11 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P043](P043.md) | Victor Alvarez | Engineering director, software company | Information | Calm | Calm | Calm | Calm | Uneasy |
 | [P044](P044.md) | Mei Lin Zhao | Data centre technician | Information | Calm | Calm | Calm | Calm | Uneasy |
 | [P045](P045.md) | Ethan Cole | Freelance video editor and creator | Information | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
+| [P046](P046.md) | Catherine Hale | Insurance claims adjuster | Finance and insurance | Uneasy | Uneasy | Anxious | Alarmed | Alarmed |
+| [P047](P047.md) | David Okonkwo | Investment banking associate | Finance and insurance | Calm | Uneasy | Anxious | Alarmed | Anxious |
+| [P048](P048.md) | Grace Liu | Bank branch teller / personal banker | Finance and insurance | Uneasy | Anxious | Anxious | Alarmed | Alarmed |
+| [P049](P049.md) | Henrik Svensson | Chief Risk Officer, regional bank | Finance and insurance | Calm | Calm | Uneasy | Anxious | Anxious |
+| [P050](P050.md) | Tasha Brown | Independent financial adviser | Finance and insurance | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
 | [P051](P051.md) | Kevin Murphy | Residential estate agent | Real estate | Uneasy | Uneasy | Anxious | Anxious | Alarmed |
 | [P052](P052.md) | Sofia Rossi | Owner, property management firm | Real estate | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P053](P053.md) | Andre Baptiste | Building maintenance technician | Real estate | Calm | Calm | Calm | Uneasy | Alarmed |
@@ -105,3 +120,4 @@ Simulated interviews with each persona in `data/population/synthetic-population-
 | [P097](P097.md) | Mark Davies | Military logistics officer | Government | Calm | Calm | Calm | Uneasy | Uneasy |
 | [P098](P098.md) | Lisa Romero | Police patrol officer | Government | Calm | Calm | Uneasy | Anxious | Anxious |
 | [P099](P099.md) | Anil Sharma | Senior policy adviser, ministry of economy | Government | Calm | Calm | Uneasy | Alarmed | Alarmed |
+| [P100](P100.md) | Megan Clarke | Municipal administrative clerk | Government | Uneasy | Anxious | Alarmed | Alarmed | Panicked |
