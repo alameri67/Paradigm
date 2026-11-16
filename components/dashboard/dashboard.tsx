@@ -9,6 +9,7 @@ import { ScatterBrush, type Brush } from "@/components/ui/bjork-scatter-brush";
 import { Avatar, SHORT_SECTOR } from "@/components/workers/avatar";
 import { DashIcon, hasDashIcon } from "./icons";
 import { JobSidebar } from "@/components/workers/job-sidebar";
+import { HelpTip } from "@/components/ui/help-tip";
 import { ACTION_LEVELS, pointsFor, summarize, type Summary } from "@/lib/workers/dashboard";
 import {
   ACTION_LABEL,
@@ -219,7 +220,7 @@ export function Dashboard({
       : picked.length === 1
         ? `Every version of ${picked[0].job.toLowerCase()}`
         : allOn
-          ? `Every version of all ${picked.length} interviewed jobs`
+          ? `Every version of ${picked.length === 2 ? "both" : `all ${picked.length}`} jobs interviewed so far`
           : `Every version of ${picked.length} jobs`;
 
   return (
@@ -237,11 +238,13 @@ export function Dashboard({
       />
       <main className="db">
       <header className="db-head">
-        <h1 className="t-display">Everyone interviewed, at a glance</h1>
-        <p className="prose fg2">
-          Each job has {versionsPerJob} versions, one for every mix of age, work, savings, outlook and how they handle change. The
-          summary takes in every version of the jobs you pick. Drag across the chart to look more closely at a group.
-        </p>
+        <h1 className="t-display">
+          Everyone interviewed, at a glance{" "}
+          <HelpTip>
+            Each job has {versionsPerJob} versions, one for every mix of age, work, savings, outlook and how they handle change.
+            The summary takes in every version of the jobs you pick. Drag across the chart to look more closely at a group.
+          </HelpTip>
+        </h1>
       </header>
       <section className="db-block db-chips-block" aria-labelledby="db-jobs">
         <h2 className="label" id="db-jobs">
@@ -284,24 +287,24 @@ export function Dashboard({
 
       <section className="dialbar db-block">
         <span className="label" id="db-dial">
-          AI scenario
+          AI scenario{" "}
+          <HelpTip>
+            <strong>{sc.name}.</strong> {sc.description}
+          </HelpTip>
         </span>
         <AmountSlider stops={STOPS} value={CODES.indexOf(scenario)} onChange={(i) => setScenario(CODES[i])} labelledBy="db-dial" showHeader={false} />
-        <p className="ws-dial-desc" key={scenario}>
-          <strong>{sc.name}.</strong> {sc.description}
-        </p>
       </section>
 
       <section className="db-panel" aria-labelledby="db-chart-h">
         <div className="db-panel-head">
           <div>
             <h2 className="db-panel-title" id="db-chart-h">
-              How worried people are, and how much they do about it
+              How worried people are, and how much they do about it{" "}
+              <HelpTip>
+                {scope}, in {sc.name}. Each dot is one person. Further right means more worried. Higher up means they take
+                stronger action, like retraining or moving.
+              </HelpTip>
             </h2>
-            <p className="db-panel-sub">
-              {scope}, in {sc.name}. Each dot is one person. Further right means more worried. Higher up means they take
-              stronger action, like retraining or moving.
-            </p>
           </div>
           <div className="db-panel-status" role="status">
             {brush ? (

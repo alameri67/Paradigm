@@ -9,6 +9,7 @@ import { PeakChart } from "@/components/ui/peak-chart";
 import { Icon, type IconName } from "@/components/simulator/icons";
 import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
+import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
 import {
   MOODS,
@@ -118,8 +119,9 @@ function ControlPanel({
   return (
     <aside className="ws-panel" aria-label="Worker details">
       <div className="ws-panel-head">
-        <h2 className="t-section">Who is this worker?</h2>
-        <p className="ws-panel-sub">Pick one option in each group.</p>
+        <h2 className="t-section">
+          Who is this worker? <HelpTip>Pick one option in each group to meet a different version of this job.</HelpTip>
+        </h2>
       </div>
       {groups.map((g) => {
         const idx = Math.max(0, g.levels.findIndex((l) => l.key === levels[g.key]));
@@ -312,7 +314,10 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
         <div className="dialbar">
           <span className="label" id="ws-dial">
-            AI scenario
+            AI scenario{" "}
+            <HelpTip>
+              <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
+            </HelpTip>
           </span>
           <AmountSlider
             stops={STOPS}
@@ -321,9 +326,6 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
             labelledBy="ws-dial"
             showHeader={false}
           />
-          <p className="ws-dial-desc" key={scenario}>
-            <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
-          </p>
         </div>
 
         {loading ? (
