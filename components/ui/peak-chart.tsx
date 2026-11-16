@@ -1,5 +1,6 @@
 "use client"
-/* Third-party component, kept exactly as supplied. It drives a canvas from refs on purpose, so the
+/* Third-party component. Changed from the original only by the optional `image`, `imageBox`,
+   `imageOpacity` and `headline` props (marked "Paradigm:"); without them it behaves as supplied. It drives a canvas from refs on purpose, so the
    React Compiler lint rules below do not apply to it. */
 /* eslint-disable react-hooks/refs, react-hooks/set-state-in-effect */
 
@@ -129,6 +130,14 @@ export interface PeakChartProps {
   className?: string
   /** Extra inline styles on the outer element. */
   style?: React.CSSProperties
+  /** Paradigm: picture drawn inside the card, under the line (a transparent PNG blends best). */
+  image?: string
+  /** Paradigm: where the picture sits, in card units [x, y, width, height] (the card is 540 × 696). */
+  imageBox?: [number, number, number, number]
+  /** Paradigm: picture opacity, 0 to 1. */
+  imageOpacity?: number
+  /** Paradigm: big text shown instead of the animated number (for example a job title). */
+  headline?: string
 }
 
 /* ---------- maths ---------- */
@@ -464,6 +473,10 @@ export function PeakChart({
   font = 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   className,
   style,
+  image,
+  imageBox = [70, 40, 400, 400],
+  imageOpacity = 0.92,
+  headline,
 }: PeakChartProps) {
   const [innerPeriod, setInnerPeriod] = React.useState(defaultPeriod)
   const current = period ?? innerPeriod
@@ -503,12 +516,28 @@ export function PeakChart({
     decimals,
     loop,
     kick: () => {},
+    img: null as HTMLImageElement | null,
+    imgBox: imageBox,
+    imgA: imageOpacity,
   })
   live.current.labels = pointLabels
   live.current.fmt = formatValue
   live.current.suffix = valueSuffix
   live.current.decimals = decimals
   live.current.loop = loop
+  live.current.imgBox = imageBox
+  live.current.imgA = imageOpacity
+
+  // Paradigm: load the picture drawn inside the card
+  React.useEffect(() => {
+    const L = live.current
+    if (!image) { L.img = null; L.kick(); return }
+    const im = new Image()
+    im.decoding = "async"
+    im.onload = () => { L.img = im; L.kick() }
+    im.src = image
+    return () => { im.onload = null }
+  }, [image])
 
   // data changes morph the line
   const key = series.join(",")
@@ -654,6 +683,15 @@ export function PeakChart({
       if (F.grid > 0.001) {
         ctx.globalAlpha = F.grid
         ctx.drawImage(grid, 0, 0, CW, CH)
+      }
+      // Paradigm: the picture fades in with the grid and sits under the line
+      if (L.img) {
+        const a = L.imgA * (reduce ? 1 : smooth(t / T_GRID))
+        if (a > 0.001) {
+          const [ix, iy, iw, ih] = L.imgBox
+          ctx.globalAlpha = a
+          ctx.drawImage(L.img, ix, iy, iw, ih)
+        }
       }
       ctx.globalAlpha = 1
 
@@ -828,6 +866,11 @@ export function PeakChart({
   const px = (n: number) => `${(n * u).toFixed(3)}px`
   const textBase: React.CSSProperties = { position: "absolute", whiteSpace: "nowrap", fontFamily: font, fontStretch: "110%", fontWeight: 300, margin: 0, lineHeight: 1 }
   const trendColor = trend === "down" ? "#f08a8a" : "#93cfa2"
+  // Paradigm: fit the headline in one line, or two smaller lines when it's long
+  const fitOne = headline ? (CW - 80) / (headline.length * 0.56) : 0
+  const headlineLines = headline && fitOne < 50 ? 2 : 1
+  const headlineSize = headline ? (headlineLines > 1 ? 50 : Math.min(84, fitOne)) : 0
+  const captionTop = headline ? 469 + headlineLines * headlineSize * 1.04 + 16 : 560.9
   const finalDigits = value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
 
   const cardEl = (
@@ -921,6 +964,13 @@ export function PeakChart({
       </div>
 
       <p data-part="title" style={{ ...textBase, left: 0, right: 0, textAlign: "center", top: px(441.4), fontSize: px(20.2), fontStretch: "115%", fontWeight: 200, color: "#9298a5" }}>{title}</p>
+      {headline !== undefined ? (
+        <div ref={numRef} style={{ position: "absolute", left: px(30), right: px(30), top: px(469), display: "flex", justifyContent: "center", opacity: 0 }}>
+          <div data-part="headline" style={{ fontFamily: font, fontWeight: 500, fontSize: px(headlineSize), lineHeight: 1.04, letterSpacing: px(-0.5), fontStretch: "106%", textAlign: "center", textWrap: "balance", whiteSpace: headlineLines > 1 ? "normal" : "nowrap" }}>
+            {headline}
+          </div>
+        </div>
+      ) : (
       <div ref={numRef} style={{ position: "absolute", left: 0, right: 0, top: px(469), display: "flex", justifyContent: "center", opacity: 0 }}>
         <div data-part="value" style={{ position: "relative", fontFamily: font, fontWeight: 500, fontSize: px(89.2), lineHeight: 1, letterSpacing: px(-0.5), whiteSpace: "nowrap", marginLeft: px(-8.5) }}>
           <span style={{ position: "relative", display: "inline-block", fontVariantNumeric: "tabular-nums", fontStretch: "106%" }}>
@@ -940,7 +990,8 @@ export function PeakChart({
           )}
         </div>
       </div>
-      <p data-part="caption" style={{ ...textBase, left: 0, right: 0, textAlign: "center", top: px(560.9), fontSize: px(11.6), fontStretch: "108%", fontWeight: 250, color: "#9299a8" }}>{caption}</p>
+      )}
+      <p data-part="caption" style={{ ...textBase, left: 0, right: 0, textAlign: "center", top: px(captionTop), fontSize: px(11.6), fontStretch: "108%", fontWeight: 250, color: "#9299a8" }}>{caption}</p>
     </div>
   )
 

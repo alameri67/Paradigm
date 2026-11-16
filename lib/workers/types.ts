@@ -28,6 +28,8 @@ export interface Archetype {
   exposure: { ai: string; robots: string };
   education: string[];
   portraitUrl: string | null;
+  /** Portrait with the background removed, drawn inside the worker card. */
+  cutoutUrl: string | null;
 }
 
 export interface GroupLevel { key: string; label: string; [detail: string]: string }

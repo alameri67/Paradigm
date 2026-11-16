@@ -67,7 +67,7 @@ function Avatar({ a, size }: { a: Archetype; size: number }) {
   );
 }
 
-/** The new worker card: a Peak Chart of worry across S0–S4, with the job's portrait on top. */
+/** The worker card: a Peak Chart of worry across S0–S4, with the job's portrait blended inside it. */
 function WorkerCard({
   a,
   w,
@@ -84,9 +84,6 @@ function WorkerCard({
   const mood = iv.scenarios[scenario].mood;
   return (
     <div className="ws-card">
-      <div className="ws-card-avatar">
-        <Avatar a={a} size={112} />
-      </div>
       <PeakChart
         width={300}
         data={CODES.map((c) => level(iv.scenarios[c].mood))}
@@ -94,7 +91,9 @@ function WorkerCard({
         value={level(mood)}
         valueSuffix="/5"
         title={w.name}
-        caption={`${w.job} · age ${w.profile.age}`}
+        headline={w.job}
+        image={a.cutoutUrl ?? undefined}
+        caption={`${MOOD_LABEL[mood]} in ${scenario} · age ${w.profile.age}`}
         updatedText={SHORT_SECTOR[w.sector] ?? w.sector}
         trend="none"
         periods={CODES}
