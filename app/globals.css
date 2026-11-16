@@ -141,6 +141,7 @@ button{cursor:pointer}
 .amount-label.past{color:var(--fg)}
 .amount-label.on{color:var(--fg);font-weight:500}
 @media (max-width: 560px){
+  .ws-main .amount-labels{height:44px}
   .amount-label .nm{display:none}
   .amount-label .mono{font-size:12px;line-height:16px}
   .amount-labels{height:20px}
@@ -333,7 +334,10 @@ button{cursor:pointer}
 .ws-job-select{display:none}
 .ws-dial-desc{max-width:72ch;font-size:14px;line-height:21px;color:var(--fg2);animation:appear 180ms var(--ease) both}
 .ws-dial-desc strong{color:var(--fg);font-weight:600}
-.ws-main .amount-labels{height:40px}
+.ws-main .dialbar{max-width:none}
+.ws-main .amount-labels{height:64px}
+.amount-ico{display:inline-flex;margin-bottom:2px;color:var(--fg2)}
+.amount-label.on .amount-ico,.amount-label:hover .amount-ico{color:var(--fg)}
 .ws-main .amount-label .mono{font-family:var(--font);font-size:12px}
 .ws-hero{display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:start;padding:48px 40px;border-radius:28px;background:#08101a;color:#dfe5ee;overflow:hidden}
 .ws-card{position:relative;width:300px}

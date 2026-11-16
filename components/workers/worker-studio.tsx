@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import { PeakChart } from "@/components/ui/peak-chart";
-import { Icon } from "@/components/simulator/icons";
+import { Icon, type IconName } from "@/components/simulator/icons";
 import { JobPatterns } from "./job-patterns";
 import {
   MOODS,
@@ -26,7 +26,14 @@ import {
 } from "@/lib/workers/types";
 
 const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
-const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.name, year: s.when, description: s.description }));
+const SCENARIO_ICON: Record<ScenarioCode, IconName> = { S0: "plateau", S1: "trend", S4: "hourglass", S3: "clock", S2: "zap" };
+const STOPS = SCENARIOS.map((s) => ({
+  code: s.code,
+  name: s.name,
+  year: s.when,
+  description: s.description,
+  icon: <Icon name={SCENARIO_ICON[s.code]} size={18} />,
+}));
 const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
 const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
 const SHORT_SECTOR: Record<string, string> = {
@@ -388,6 +395,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                       onClick={() => setScenario(s.code)}
                     >
                       <span className="lvl-top">
+                        <Icon name={SCENARIO_ICON[s.code]} size={16} />
                         <span className="lvl-name">{s.name}</span>
                         <span className="lvl-year">{s.when}</span>
                       </span>

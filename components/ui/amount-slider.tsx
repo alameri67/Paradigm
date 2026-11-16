@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 
 /**
  * Snapping "amount" slider with a shimmering grid of squares in the track.
@@ -14,6 +14,8 @@ export interface AmountStop {
   name: string;
   year: string;
   description: string;
+  /** Optional icon shown above the stop's name. */
+  icon?: ReactNode;
 }
 
 export interface AmountSliderProps {
@@ -266,6 +268,7 @@ export function AmountSlider({ stops, value, onChange, labelledBy, showHeader = 
             style={{ left: i === 0 ? "0" : i === n - 1 ? "100%" : stopPos(i, n) }}
             onClick={() => onChange(i)}
           >
+            {s.icon && <span className="amount-ico">{s.icon}</span>}
             <span className="nm">{s.name}</span>
             <span className="mono">{s.year}</span>
           </button>
