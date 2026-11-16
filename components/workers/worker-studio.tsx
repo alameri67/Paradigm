@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
 import { PeakChart } from "@/components/ui/peak-chart";
-import { Icon } from "@/components/simulator/icons";
+import { Icon, type IconName } from "@/components/simulator/icons";
 import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobPatterns } from "./job-patterns";
 import {
@@ -28,7 +28,14 @@ import {
 } from "@/lib/workers/types";
 
 const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
-const STOPS = SCENARIOS.map((s) => ({ code: s.code, name: s.name, year: s.when, description: s.description }));
+const SCENARIO_ICON: Record<ScenarioCode, IconName> = { S0: "plateau", S1: "trend", S4: "hourglass", S3: "clock", S2: "zap" };
+const STOPS = SCENARIOS.map((s) => ({
+  code: s.code,
+  name: s.name,
+  year: s.when,
+  description: s.description,
+  icon: <Icon name={SCENARIO_ICON[s.code]} size={18} />,
+}));
 const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
 const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
 
@@ -88,6 +95,14 @@ function WorkerCard({
   );
 }
 
+const GROUP_ICON: Record<string, IconName> = {
+  lifeStage: "calendar",
+  standing: "briefcase",
+  cushion: "wallet",
+  outlook: "compass",
+  adaptability: "refresh",
+};
+
 function ControlPanel({
   groups,
   levels,
@@ -101,17 +116,26 @@ function ControlPanel({
 }) {
   return (
     <aside className="ws-panel" aria-label="Worker details">
-      <h2 className="t-section">Who is this worker?</h2>
+      <div className="ws-panel-head">
+        <h2 className="t-section">Who is this worker?</h2>
+        <p className="ws-panel-sub">Pick one option in each group.</p>
+      </div>
       {groups.map((g) => {
         const idx = Math.max(0, g.levels.findIndex((l) => l.key === levels[g.key]));
         return (
           <div className="ws-group" key={g.key}>
-            <span className="label" id={`wg-${g.key}`}>
-              {g.label}
-            </span>
+            <div className="ws-group-head">
+              <span className="ws-group-ico" aria-hidden="true">
+                <Icon name={GROUP_ICON[g.key] ?? "user"} size={18} />
+              </span>
+              <h3 className="ws-group-title" id={`wg-${g.key}`}>
+                {g.label}
+              </h3>
+            </div>
             <LiquidGlassNavbar
               mode="radio"
               size="sm"
+              className="ws-pill"
               labelledBy={`wg-${g.key}`}
               items={g.levels.map((l) => ({ label: l.label }))}
               active={idx}
@@ -123,18 +147,23 @@ function ControlPanel({
       })}
       {worker && (
         <dl className="ws-facts">
-          <div>
-            <dt className="label">Education</dt>
-            <dd>{worker.profile.education}</dd>
-          </div>
-          <div>
-            <dt className="label">AI exposure (fixed by the job)</dt>
-            <dd>{worker.profile.aiExposure}</dd>
-          </div>
-          <div>
-            <dt className="label">Version</dt>
-            <dd className="mono">{worker.id}</dd>
-          </div>
+          {(
+            [
+              ["graduation", "Education", worker.profile.education],
+              ["cpu", "AI exposure (comes with the job)", worker.profile.aiExposure],
+              ["hash", "Version", worker.id],
+            ] as const
+          ).map(([icon, label, value]) => (
+            <div key={label}>
+              <span className="ws-group-ico" aria-hidden="true">
+                <Icon name={icon} size={16} />
+              </span>
+              <span className="ws-fact-text">
+                <dt>{label}</dt>
+                <dd className={icon === "hash" ? "mono" : undefined}>{value}</dd>
+              </span>
+            </div>
+          ))}
         </dl>
       )}
     </aside>
@@ -375,6 +404,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                       onClick={() => setScenario(s.code)}
                     >
                       <span className="lvl-top">
+                        <Icon name={SCENARIO_ICON[s.code]} size={16} />
                         <span className="lvl-name">{s.name}</span>
                         <span className="lvl-year">{s.when}</span>
                       </span>
