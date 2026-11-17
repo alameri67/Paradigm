@@ -11,24 +11,32 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Hello Yusuf, and thanks for making the time. I'm a field researcher with the Work Futures Panel. We're an independent research group with no ties to AI companies, employers, unions, parties or government, and we're not selling anything. Everything you tell me is confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, how would you describe your work?"
+      "text": "Thanks for having me, Yusuf. I'm a field researcher with the Work Futures Panel, an independent research group. We're not linked to any company, union, party or government, and we don't sell anything. What you say stays confidential, so you can tell me your public line and, separately, what you really think. Is that all right?"
     },
     {
       "speaker": "persona",
-      "text": "I'm foreman at Brandt's, a family farm east of town with about 600 pigs, some beef stores, and maize and wheat for feed. Old Mr Brandt and his wife own it, their son does the selling, and I run the day to day with two other lads. Nineteen years now. It pays well for farm work, and between that, Lena's job and the little flat my dad left me, we're comfortable."
+      "text": "Fine by me. I'm not much of a talker, so you might have to dig. Kenji, my brother, is the one who likes meetings."
     },
     {
       "speaker": "interviewer",
-      "text": "Walk me through a normal working day. What do you do, what do you like, and what wears you out?"
+      "text": "Could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "Six o'clock I walk the pig sheds, check the water lines, the feeders, any sow that's about to farrow. Then it's mucking out, moving weaners, and in the season I'm on the drill or the forage harvester. I like a job done right and a shed that smells as it should. What wears me out is things changing for the sake of it; they put in a new feed computer three years ago and I still do the rounds by hand to check it, because I don't trust it."
+      "text": "My brother and I own Lower Fold Farm, 160 hectares that our dad bought in the eighties. I do the hands side: about 200 beef cattle we finish for the abattoir, plus potatoes and some barley. I'm up at six, feed round with the old Ford tractor, then it's the potato store or the fields depending on the month. Kenji does the books and the buyers, which suits me, because I can't stand a phone ringing."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "And at home?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Claire's a dental nurse in town, and we've got Ellie, fourteen, and Sam, eleven. We built a house on the edge of the farm with a mortgage, about half paid now. Money's fine, we've a good bit saved and the land behind us, so I don't lose sleep over it."
     }
   ],
   "scenarios": {
@@ -36,11 +44,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say nothing much, to be honest. Maybe that the people who sold all this got rich and we got another screen. I don't go online to talk about it."
+          "text": "I'd say I'm not surprised. At the auction mart I'd say the same thing I say about most new kit: wait and see what it does in a wet year. I don't go online much, Claire does that."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means I keep doing what I do. Good. I've got a job I'm good at, a house half paid for and money behind me. I don't need the world to change."
+          "text": "Honestly, it means nothing changes for me, and I'm happy with that. Kenji might use something for the paperwork, but the cattle don't care. My tractor is older than my daughter Ellie, and it still starts every morning without a software update."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on. Same hours, same sheds, same savings going in at the end of the month. Maybe I'd let the son put another sensor in if he must, and I'd keep checking it by hand."
+          "text": "I'd carry on as I am. Same cattle, same potato contract, same feed merchant. We'd keep paying the house down and leave the savings alone."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Fine. Calm. It's the kind of news you hear on the radio and forget by dinner."
+          "text": "Calm. I like a world where the next ten years look like the last ten."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use any AI tools yourself?"
+          "text": "Anything already on your mind about the farm, AI or not?"
         },
         {
           "speaker": "persona",
-          "text": "No. Lena uses something on her phone for recipes. I've got the same phone I had six years ago and I use it for calls and the weather."
+          "text": "Beef prices go up and down, and the potato buyer squeezes us every spring. But we've done this for twenty years. As long as Kenji and I keep talking, the farm's fine."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything you'd want from this picture?"
+          "text": "You said Kenji might use something for the paperwork. Would you ever?"
         },
         {
           "speaker": "persona",
-          "text": "For people to stop talking about it, honestly. Every farm meeting it's drones and data. I'd like one meeting about the price of pig feed."
+          "text": "No. I've never used one of those AI things and I don't see why I'd start. If I need a form filled, Kenji fills it, and if Kenji's away, it waits."
         }
       ],
-      "say": "I'd say nothing much, maybe that the people who sold all this got rich and we got another screen. I don't talk about it online.",
-      "think": "It means I keep doing what I do, and that's good. I've got a job I'm good at, a half-paid house and money behind me.",
-      "do": "Carries on with the same hours, sheds and monthly savings. Lets the farm's son add sensors if he insists, and keeps checking them by hand.",
-      "feel": "Calm, the kind of news you forget by dinner.",
+      "say": [
+        "I'd tell the auction mart to **wait and see** how new kit does in a wet year.",
+        "I'd leave **online talk** to Claire, because I rarely go online."
+      ],
+      "think": [
+        "**Nothing changes** for me, and I'm happy with that.",
+        "Kenji might use it for **paperwork**, but the cattle don't care."
+      ],
+      "do": [
+        "Keep the **same cattle**, potato contract and feed merchant.",
+        "Keep paying the **house mortgage** down and leave savings alone."
+      ],
+      "feel": [
+        "**Calm**, because the next ten years look like the last ten."
+      ],
       "mood": "calm",
-      "quote": "I'd like one meeting about the price of pig feed.",
-      "fieldNote": "Yusuf is quietly content and wants nothing to change. He does not use AI at all and checks the existing feed computer by hand. He blames no one, but he is tired of the talk.",
+      "quote": "My tractor is older than my daughter Ellie, and it still starts every morning without a software update.",
+      "fieldNote": [
+        "Yusuf is a **landowner** with a brother who handles the office side.",
+        "His usual worries, **prices and buyers**, are old ones he's used to.",
+        "He has **never used AI** and sees no reason to."
+      ],
       "actions": [
-        "keep-going",
-        "save-more"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Keep the same beef cattle, potato contract and feed merchant",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's how business goes. Some change helps, some doesn't. I'd keep my head down at work and let the son and his gadgets argue it out."
+          "text": "I'd say it's fine for offices and not much use in a muddy field. If people asked, I'd say farming changes slowly and that's no bad thing. At the mart we'd talk about it for five minutes and then go back to cattle prices."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +139,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think I'd lose some of what I like. The son's been on about robot cleaners for the sheds, and a camera system that weighs pigs as they walk past. I'd still be needed, but I'd be watching screens, and I'm no good at that."
+          "text": "Off the record, I think it changes Kenji's side, not mine. The potato buyer would probably send contracts through some AI system and want answers in an hour. That's annoying, but it's Kenji's annoyance."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +147,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait a year and see what they actually put in. I'd put a bit more aside, maybe an extra hundred and fifty a month. If they made me learn a computer system, I'd learn the least I could and keep checking by hand."
+          "text": "I wouldn't do much. Kenji can take a course if he wants. I'd wait and see what the neighbours do with any robots before we spend a penny."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +155,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not losing sleep, but I'd notice it on the drive in."
+          "text": "Calm, mostly. A little irritated that everyone keeps telling me the world's changing."
         },
         {
           "speaker": "interviewer",
-          "text": "If the Brandts brought in more machines, what would your part look like?"
+          "text": "Who around you would feel this picture?"
         },
         {
           "speaker": "persona",
-          "text": "Probably still foreman on paper, but half my rounds would be on a tablet. I'd hate that. I'd still walk the sheds, though, they can't stop me."
+          "text": "Claire, maybe. The dental practice books appointments and sends reminders, and that's the sort of thing a program does. My wife Claire is the one with the computer job in our house, and I never thought I'd say that about a dental nurse."
         },
         {
           "speaker": "interviewer",
-          "text": "There are other farms nearby. Would you move?"
+          "text": "If a neighbour bought a robot that worked, would you follow?"
         },
         {
           "speaker": "persona",
-          "text": "I could, there's plenty of farms around. But I've been there nineteen years. Mr Brandt came to my dad's funeral. You don't just move for a few machines."
+          "text": "Not quickly. I'd want to see it run three or four seasons, break down and get fixed. By then the price has dropped and the bugs are out."
         }
       ],
-      "say": "I'd say it's how business goes, some change helps and some doesn't. I'd keep my head down and let the son and his gadgets argue it out.",
-      "think": "I think I'd lose some of what I like, with robot cleaners and cameras weighing the pigs. I'd still be needed, but I'd be watching screens, and I'm no good at that.",
-      "do": "Waits a year to see what's installed and puts about 150 more a month into savings. Learns only the minimum of any new system and keeps checking by hand.",
-      "feel": "A mild unease he notices on the drive to work.",
-      "mood": "uneasy",
-      "quote": "I'd still walk the sheds, though, they can't stop me.",
-      "fieldNote": "Yusuf's resistance is gentle but firm. He would stay out of loyalty to the farm family rather than look elsewhere, even with jobs nearby. He frames change as just business, with no villain.",
+      "say": [
+        "I'd say AI is fine for **offices**, not much use in a muddy field.",
+        "I'd say farming **changes slowly**, and that's no bad thing."
+      ],
+      "think": [
+        "It changes **Kenji's side** of the farm, not mine.",
+        "The potato buyer would want **answers in an hour**, which is Kenji's problem."
+      ],
+      "do": [
+        "Leave any **AI course** to Kenji if he wants one.",
+        "Watch the **neighbours' robots** for several seasons before spending anything."
+      ],
+      "feel": [
+        "Calm, a little **irritated** at being told the world's changing."
+      ],
+      "mood": "calm",
+      "quote": "My wife Claire is the one with the computer job in our house, and I never thought I'd say that about a dental nurse.",
+      "fieldNote": [
+        "He sees Steady Disruption landing on the **office side** of his life, and even on Claire's job.",
+        "His rule is to wait **three or four seasons** before following anyone.",
+        "Ownership of land and a brother on the paperwork give him **a buffer**."
+      ],
       "actions": [
-        "wait-and-see",
-        "save-more",
-        "keep-going"
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep doing the cattle and potato work by hand",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Watch neighbours' robots for three or four seasons before buying",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a mess and nobody planned it. I wouldn't blame the Brandts, they'd be forced to keep up. I might blame government a bit for being asleep."
+          "text": "I'd say somebody had better slow this down. At the mart I'd say the big farms will buy robots and the rest of us will be squeezed. I'd vote for whoever promised to look after family farms, whatever colour they were."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +227,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think I'm done. A robot that can farrow sows and run a harvester doesn't need me. I've never used one of these AI things and two years isn't enough for me to start."
+          "text": "Truthfully, I'm not worried about losing the farm, it's ours. I'm worried about being the slow one. If the big potato growers have robots working nights by 2031, the buyer pays their price, and our potatoes don't pay anymore."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +235,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Cut back first: no holiday, no new car, the kids' extras trimmed. Keep the rent from the flat coming in, that's our steady money. I'd lean on Lena's brother, he's got a building firm, if he still has one."
+          "text": "First I'd stop the plan for a new potato store, that's eighty thousand we'd keep in the bank. I'd talk to Kenji about renting the potato ground to Hendersons next door, who'd buy robots straight away. I'd keep the cattle, because that's what I know."
         },
         {
           "speaker": "interviewer",
@@ -191,47 +243,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. Like the ground going soft under your feet."
+          "text": "Worried. Not frightened, we've got the land. But it's the first time I'd feel the farm getting away from me."
         },
         {
           "speaker": "interviewer",
-          "text": "Two years. What does that short warning change for you?"
+          "text": "The thinking AI comes in 2028 and the robots around 2031. What happens on Lower Fold in between?"
         },
         {
           "speaker": "persona",
-          "text": "With two years, there's no time to do it my way, which is slowly. I'd just be standing there while it happens. That's what scares me, more than the money."
+          "text": "Kenji's half changes in 2028: buyers, contracts, the bank all using AI. Mine changes in 2031. Three years is how long I'd have to decide whether Lower Fold Farm is still a farm or just land we rent out."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Lena that first night?"
+          "text": "You said you'd keep the cattle. Even if a robot could do it better?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, we've got the flat and we've got savings, so we're not on the street. Then probably nothing more, I'm not a talker. She'd know anyway."
+          "text": "Even then, for a while. I don't know what I'd do with myself otherwise. But Kenji would ask if we can afford my stubbornness, and he'd have a point."
         }
       ],
-      "say": "I'd say it's a mess nobody planned. I wouldn't blame the Brandts for keeping up, but I might blame government for being asleep.",
-      "think": "I think I'm done. A robot that can farrow sows and run a harvester doesn't need me, and two years is too short for me to start with AI.",
-      "do": "Cuts the holiday, a new car and the children's extras. Relies on rent from his flat as steady income and leans on his brother-in-law's building firm for possible work.",
-      "feel": "Alarmed, like the ground going soft underfoot, more about losing control than about money.",
-      "mood": "alarmed",
-      "quote": "There's no time to do it my way, which is slowly.",
-      "fieldNote": "Yusuf's savings and rental flat keep him from panic, but the speed takes away his slow way of handling change. He blames government lightly and the farm family not at all. He'd tell his partner the practical facts and little else.",
+      "say": [
+        "I'd say somebody should **slow this down** before big farms squeeze us.",
+        "I'd vote for whoever **backs family farms**, whatever their colour."
+      ],
+      "think": [
+        "The farm is ours, but I'd be **the slow one**.",
+        "Robot-run growers could make our **potatoes not pay** by 2031."
+      ],
+      "do": [
+        "Cancel the **£80,000 potato store** and keep the money in the bank.",
+        "Talk to Kenji about **renting the potato ground** to Hendersons next door.",
+        "Keep the **cattle**, because that's what I know."
+      ],
+      "feel": [
+        "Worried, feeling the **farm slip away** for the first time."
+      ],
+      "mood": "anxious",
+      "quote": "Three years is how long I'd have to decide whether Lower Fold Farm is still a farm or just land we rent out.",
+      "fieldNote": [
+        "Owning land protects him, but **falling behind** threatens the income.",
+        "He'd let a neighbour automate rather than **learn it himself**.",
+        "He's honest that keeping cattle is partly **stubbornness**."
+      ],
       "actions": [
-        "cut-spending",
-        "seek-support",
-        "save-more"
+        "save-more",
+        "sell-or-exit",
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Cancel the £80,000 potato store and keep the cash",
+          "tag": "save-more"
+        },
+        {
+          "text": "Rent the potato ground to Hendersons next door",
+          "tag": "sell-or-exit"
+        },
+        {
+          "text": "Vote for whoever promises to protect family farms",
+          "tag": "politics"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "Much the same. It's coming, best get ready, no point shouting. I'd say that over a pint and leave it."
+          "text": "I'd say we've a few years to see it coming, so let's watch closely. At the mart I'd be asking who's tried what. I'd tell Ellie and Sam to take school seriously, which I'd say anyway."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +321,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think I'd still lose the job, but I'd see it coming. Five years is long enough to put a good bit more by. I still don't see myself learning robots."
+          "text": "Privately, I'd feel I could manage this one. Five years to the AI and eight to the robots is long enough for others to find the problems. If the robots work, we rent the potato land out and I keep the cattle going a bit longer."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +329,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd save harder, maybe five hundred a month, and pay the mortgage down. Watch what the Brandts do and how the other farms go. If I saw a job that was still safe and still outdoors, I'd look at it, but only in the last year or two."
+          "text": "I'd do almost nothing in the first year, honestly, except keep saving. Around 2030 Kenji and I would sit down and agree a line: if the potato price drops below a set figure, we rent the land out. I'd keep the cattle till I'm sure."
         },
         {
           "speaker": "interviewer",
@@ -255,48 +337,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Less than the fast one, but there's a clock ticking."
+          "text": "Uneasy. It's more like watching a storm on the hills than standing in it."
         },
         {
           "speaker": "interviewer",
-          "text": "With five years instead of two, would you do anything differently?"
+          "text": "Your work is mostly hands-on. What does it mean that the robots come three years after the thinking AI?"
         },
         {
           "speaker": "persona",
-          "text": "I'd let them choose, but I'd say don't pick something a machine does. Hana likes drawing, Kai likes football. Neither of them wants to farm."
+          "text": "It means my side lasts longest, which I'm glad of. But by 2031 the buyers' computers will know my costs better than I do. I'd be doing the same jobs with someone smarter than me setting the price."
         },
         {
           "speaker": "interviewer",
-          "text": "What about Hana and Kai?"
+          "text": "You said you'd do almost nothing in the first year. Isn't that a risk?"
         },
         {
           "speaker": "persona",
-          "text": "And the flat. I'd do it up properly so it keeps renting. That's the one thing that pays without me lifting a fork."
+          "text": "Maybe. But in my experience the farmer who buys first pays twice. I've watched three neighbours go broke buying the newest machine, and none of them went broke waiting."
         }
       ],
-      "say": "I'd say it's coming, so best get ready and there's no point shouting. I'd say that over a pint and leave it there.",
-      "think": "I think I'd still lose the job, but I'd see it coming and could put more by. I still don't see myself learning robots.",
-      "do": "Saves around 500 a month and pays down the mortgage while watching how nearby farms change. Refurbishes the rental flat and only looks at other outdoor jobs in the last year or two.",
-      "feel": "Anxious, with a clock ticking, though less than in the fast picture.",
-      "mood": "anxious",
-      "quote": "That's the one thing that pays without me lifting a fork.",
-      "fieldNote": "Extra time makes Yusuf save harder rather than change. He relies on the rental flat as his real safety net. His advice to his children is cautious and practical.",
+      "say": [
+        "I'd say we've **a few years** to watch closely.",
+        "I'd ask around the mart about **who's tried what**."
+      ],
+      "think": [
+        "I could **manage this one**, because others will find the problems first.",
+        "If robots work, we **rent the potato land** and I keep the cattle longer."
+      ],
+      "do": [
+        "**Keep saving** and do little else in the first year.",
+        "Agree a **price line** with Kenji around 2030 for renting out the potato land."
+      ],
+      "feel": [
+        "Uneasy, like watching a **storm on the hills**."
+      ],
+      "mood": "uneasy",
+      "quote": "I've watched three neighbours go broke buying the newest machine, and none of them went broke waiting.",
+      "fieldNote": [
+        "Five years suits his **wait-and-see** style: others pay for the mistakes.",
+        "He senses a loss of **bargaining power** to AI-driven buyers.",
+        "His caution rests on a story about **neighbours going broke** on new machines."
+      ],
       "actions": [
-        "save-more",
         "wait-and-see",
-        "invest",
-        "family-plans"
+        "sell-or-exit"
+      ],
+      "steps": [
+        {
+          "text": "Keep saving and hold off on new machinery",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Set a potato price line with Kenji for renting out the land",
+          "tag": "sell-or-exit"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say there's time, so let's be sensible about it. No panic. I'm not one for big speeches."
+          "text": "I'd say ten years is a long time in farming, that's ten harvests. People would have time to sort it, and so would the government. I'd not get worked up about it in public."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +409,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd be 53 by then, mortgage gone, kids nearly done with school. I'd probably be fine. Not happy, but fine."
+          "text": "Honestly, it suits me. By 2039 I'm fifty-six, the house is paid off, and we could rent the land out to someone with robots and live on that. I'd miss the cattle, but I wouldn't be poor."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +417,7 @@
         },
         {
           "speaker": "persona",
-          "text": "This year, nothing new. I'd keep saving and keep working. Maybe in five or six years I'd do a heavy goods driving licence or a machinery ticket as a backup, something with an engine I understand."
+          "text": "I'd keep going as I am for most of the ten years. Kenji and I would make a plan to step back around 2038, renting out the land and keeping a few cattle as a hobby. I'd tell Ellie and Sam they don't have to farm, but the land's there if they want it."
         },
         {
           "speaker": "interviewer",
@@ -320,37 +425,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, a long way off. Like hearing thunder over the next county."
+          "text": "Calm. More settled than in any of the others."
         },
         {
           "speaker": "interviewer",
-          "text": "Ten years. Is there anything you'd start this year?"
+          "text": "What would you tell Ellie and Sam about the farm in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "Probably not, no. I'd keep going and see. I don't like jumping at things that haven't happened, I never have."
+          "text": "That the land isn't going anywhere, even if the jobs on it change. I'd tell my kids that land is the one thing a robot can't make more of, so we're keeping Lower Fold."
         },
         {
           "speaker": "interviewer",
-          "text": "You've said you'd wait. Is there a point where you'd stop waiting?"
+          "text": "Is there anything that would make you uneasy even with ten years?"
         },
         {
           "speaker": "persona",
-          "text": "When the Brandts sit me down. That'll be the day. Until then I've got pigs to feed."
+          "text": "Kenji. If he wanted to sell up and I didn't, that's a fight I'd hate. But we've agreed on most things for twenty years, so I'd hope we'd agree on that too."
         }
       ],
-      "say": "I'd say there's time, so let's be sensible and not panic. I'm not one for big speeches about it.",
-      "think": "I'd be 53 by then, mortgage gone and kids nearly done with school. I'd probably be fine, not happy but fine.",
-      "do": "Starts nothing new this year and keeps saving and working. Considers a heavy goods driving licence or machinery ticket in five or six years as a backup.",
-      "feel": "A distant unease.",
-      "mood": "uneasy",
-      "quote": "When the Brandts sit me down. That'll be the day. Until then I've got pigs to feed.",
-      "fieldNote": "Ten years lets Yusuf go back to what he likes best: waiting. He'd only move when his employer tells him, and his backup idea is a familiar kind of machine. His pragmatism is about patience, not planning.",
+      "say": [
+        "I'd say ten years is **ten harvests**, plenty of time to sort it.",
+        "I'd **not get worked up** about it in public."
+      ],
+      "think": [
+        "It **suits me**: by 2039 I'm fifty-six with the house paid off.",
+        "We could **rent the land** to someone with robots and live on that."
+      ],
+      "do": [
+        "Keep farming **as I am** for most of the ten years.",
+        "Plan with Kenji to **step back around 2038** and rent out the land.",
+        "Tell Ellie and Sam the **land stays** if they want it."
+      ],
+      "feel": [
+        "**Calm**, more settled than in any other picture."
+      ],
+      "mood": "calm",
+      "quote": "I'd tell my kids that land is the one thing a robot can't make more of, so we're keeping Lower Fold.",
+      "fieldNote": [
+        "Landownership turns robots into a **rental income**, not a threat.",
+        "His only worry is a possible **disagreement with Kenji**.",
+        "He sees land as the **family's anchor** whatever the jobs become."
+      ],
       "actions": [
-        "wait-and-see",
         "keep-going",
-        "save-more",
-        "retrain"
+        "retire-early",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Keep farming cattle and potatoes as now until the late 2030s",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Step back around 2038 and rent the land to a robot farmer",
+          "tag": "retire-early"
+        },
+        {
+          "text": "Tell Ellie and Sam the land stays in the family",
+          "tag": "family-plans"
+        }
       ]
     }
   },
@@ -361,7 +495,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. I can handle things if they come slowly, but that one doesn't give me time. What would help is some way to keep working with my hands, even if it's paid less, and the government having some kind of plan ready instead of making it up."
+      "text": "The 2028 one, because we'd have to decide too fast and I'm not built for fast. What would help is the government keeping prices fair, so the big robot farms can't push family farms out. Some honest advice on which machines actually work would help too, not from someone selling them."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +503,22 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe ask about loyalty. I've stayed at one farm nineteen years because that's how I was raised. If machines come, I'd like the farms to stay loyal back, even a little."
+      "text": "You didn't ask what farming is for. I don't farm because it pays best, I farm because my dad's name is still on the gate at Lower Fold."
     }
   ],
-  "headlineQuote": "I can handle things if they come slowly, but that one doesn't give me time.",
-  "portrait": "Yusuf Nakamura is a 43-year-old foreman at Brandt's, a family pig, beef and feed crop farm, where he's worked nineteen years. He's comfortable, with a good wage, a partner who works, savings and a rental flat his father left him, and he wants nothing to change. He never uses AI and checks the existing feed computer by hand. He stays calm or uneasy in the slower pictures but is alarmed by AGI in two years because it takes away his slow way of coping. He blames nobody much, and values loyalty between workers and farms.",
-  "biggestWorry": "AGI by 2028, because it wouldn't give him time to handle change slowly.",
-  "whatWouldHelp": "A way to keep working with his hands even for less pay, and a government plan ready in advance."
+  "headlineQuote": "I don't farm because it pays best, I farm because my dad's name is still on the gate at Lower Fold.",
+  "portrait": [
+    "Yusuf co-owns **Lower Fold Farm** with his brother Kenji and does the hands-on cattle and potatoes.",
+    "He has **never used AI**, leaves paperwork to Kenji, and waits years before copying neighbours.",
+    "Owning **land and savings** keeps him calm in most pictures, though fast AGI makes him anxious.",
+    "His fear is being **the slow one** while robot-run farms set the prices.",
+    "Given time, he'd **rent the land out** and step back around fifty-six."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because he'd have to make decisions faster than he's built for."
+  ],
+  "whatWouldHelp": [
+    "**Fair prices** so big robot farms can't push family farms out.",
+    "**Honest advice** on which machines work, from someone not selling them."
+  ]
 }
