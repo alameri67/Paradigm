@@ -150,7 +150,7 @@ export const LEVEL_PHRASE: Record<string, Record<string, string>> = {
   adaptability: { resistant: "resist change", steady: "take change steadily", adaptive: "adapt easily" },
 };
 /** The same, for "people who …" in the headline. */
-const WHO_PHRASE: Record<string, Record<string, string>> = {
+export const WHO_PHRASE: Record<string, Record<string, string>> = {
   lifeStage: { early: "early in their working life", mid: "in mid-life", late: "close to retirement" },
   standing: { low: "in junior roles", mid: "in mid-level roles", high: "in senior roles" },
   cushion: { thin: "with thin savings", moderate: "with some savings", strong: "with strong savings" },
@@ -194,6 +194,12 @@ export interface Segment {
   /** The most common actions, as sentences: "19 of 24 will invest money." */
   actions: { tag: string; count: number; text: string }[];
   quote: { id: string; name: string; job: string; text: string } | null;
+  /** The shared traits as counts, most shared first: { group: "adaptability", level: "adaptive", count: 23 }. */
+  top: { group: string; level: string; count: number }[];
+  /** How many in this end sit at each level of each group. */
+  levels: Record<string, Record<string, number>>;
+  /** How many in this end take each action. */
+  acts: Record<string, number>;
 }
 export interface Contrast {
   n: number;
@@ -226,10 +232,14 @@ function segment(group: InterviewSummary[], moods: MoodKey[], code: ScenarioCode
   const n = group.length;
   const traits: string[] = [];
   const mixed: string[] = [];
+  const tops: Segment["top"] = [];
+  const levels: Segment["levels"] = {};
   const dominant: number[] = [];
   groups.forEach((g, i) => {
     const counts = g.levels.map((_, li) => group.filter((p) => levelIdx(p.id, i) === li).length);
     const top = counts.indexOf(Math.max(...counts));
+    levels[g.key] = Object.fromEntries(g.levels.map((l, li) => [l.key, counts[li]]));
+    if (n && counts[top] / n >= 0.6) tops.push({ group: g.key, level: g.levels[top].key, count: counts[top] });
     dominant.push(counts[top] / n >= 0.6 ? top : -1);
     if (n && counts[top] / n >= 0.6) traits.push(`${counts[top] === n ? `All ${n}` : `${counts[top]} of ${n}`} ${LEVEL_PHRASE[g.key]?.[g.levels[top].key] ?? g.levels[top].label.toLowerCase()}.`);
     else mixed.push(g.label);
@@ -250,6 +260,9 @@ function segment(group: InterviewSummary[], moods: MoodKey[], code: ScenarioCode
     mixed,
     actions,
     quote: pick ? { id: pick.id, name: pick.name, job: pick.job, text: pick.scenarios[code].quote } : null,
+    top: tops.sort((a, b) => b.count - a.count),
+    levels,
+    acts: Object.fromEntries(acts),
   };
 }
 

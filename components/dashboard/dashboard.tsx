@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Icon, type IconName } from "@/components/simulator/icons";
@@ -11,7 +11,8 @@ import { DashIcon, hasDashIcon } from "./icons";
 import { MoodRadar } from "./mood-radar";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
-import { ACTION_LEVELS, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
+import { StatsBand, type Stat } from "@/components/ui/stats-band";
+import { ACTION_LEVELS, ACTION_PHRASE, LEVEL_PHRASE, WHO_PHRASE, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
 import { usePublishScreen } from "@/lib/ask/screen-store";
 import type { Screen } from "@/lib/ask/schema";
 import {
@@ -71,7 +72,57 @@ function CardHead({ icon, title, note }: { icon: "actions" | "mood" | "jobs" | "
 /** "life stage, work standing and outlook" */
 const listOf = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
 
-function End({ seg, side, named }: { seg: Segment; side: "low" | "high"; /** From the job summary, when one job is picked. */ named?: { name: string; story: string } }) {
+const cap = (t: string) => t[0].toUpperCase() + t.slice(1);
+const pctOf = (k: number, n: number) => (n ? Math.round((k / n) * 100) : 0);
+const ofText = (k: number, n: number) => (k === n ? `All ${n}` : `${k} of ${n}`);
+
+/** One end's headline numbers: how big it is, what it shares most, and what it does most. Hover shows the other end. */
+function endStats(seg: Segment, other: Segment, total: number, side: "low" | "high"): Stat[] {
+  const otherName = side === "low" ? "the most worried" : "the least worried";
+  const vs = (k: number) => `Among ${otherName}: ${ofText(k, other.n).toLowerCase()} (${pctOf(k, other.n)}%).`;
+  const out: Stat[] = [
+    {
+      label: "Of everyone shown",
+      value: pctOf(seg.n, total),
+      suffix: "%",
+      detail: `${ofText(seg.n, total)} people feel ${listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}.`,
+      context: `${cap(otherName)} are ${pctOf(other.n, total)}%, ${other.n} people.`,
+      visual: { kind: "share", count: seg.n, of: total },
+    },
+  ];
+  const t = seg.top[0];
+  if (t) {
+    const who = WHO_PHRASE[t.group]?.[t.level] ?? t.level;
+    out.push({
+      label: cap(who.replace(/^who /, "")),
+      value: pctOf(t.count, seg.n),
+      suffix: "%",
+      detail: `${ofText(t.count, seg.n)} ${LEVEL_PHRASE[t.group]?.[t.level] ?? who}.`,
+      context: vs(other.levels[t.group]?.[t.level] ?? 0),
+      visual: { kind: "share", count: t.count, of: seg.n },
+    });
+  }
+  for (const a of seg.actions.slice(0, t ? 2 : 3)) {
+    const phrase = ACTION_PHRASE[a.tag] ?? a.tag.replace(/-/g, " ");
+    out.push({
+      label: cap(phrase.replace(/^will /, "")),
+      value: pctOf(a.count, seg.n),
+      suffix: "%",
+      detail: a.text,
+      context: vs(other.acts[a.tag] ?? 0),
+      visual: { kind: "share", count: a.count, of: seg.n },
+    });
+  }
+  return out;
+}
+
+function End({ seg, other, total, side, named }: { seg: Segment; other: Segment; total: number; side: "low" | "high"; /** From the job summary, when one job is picked. */ named?: { name: string; story: string } }) {
+  const accent = MOOD_ACCENT[side === "low" ? seg.moods[0] : seg.moods[seg.moods.length - 1]];
+  const stats = endStats(seg, other, total, side);
+  // The traits the numbers above don't already cover.
+  const t = seg.top[0];
+  const lead = t ? `${ofText(t.count, seg.n)} ${LEVEL_PHRASE[t.group]?.[t.level]}.` : "";
+  const rest = seg.traits.filter((x) => x !== lead);
   return (
     <div className={"db-end db-end-" + side}>
       <div className="db-end-head">
@@ -79,33 +130,26 @@ function End({ seg, side, named }: { seg: Segment; side: "low" | "high"; /** Fro
           <span key={m} className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
         ))}
         <span className="db-end-title">{named ? named.name : side === "low" ? "Least worried" : "Most worried"}</span>
-        <span className="db-end-n">
-          {people(seg.n)}, {listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}
-        </span>
+        <span className="db-end-n">{people(seg.n)}</span>
       </div>
+      <StatsBand stats={stats} layout="divided" duration={1.2} className="db-end-kpis" style={{ "--sb-accent-in": accent } as CSSProperties} />
       {named && <p className="db-end-story">{named.story}</p>}
-      <div className="db-end-block">
-        <div className="db-end-label">Who they are</div>
-        <ul>
-          {seg.traits.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-          {seg.mixed.length > 0 && (
-            <li className="fg2">
-              {seg.traits.length ? "Their " : "They're a mix on every count: "}
-              {seg.traits.length ? `${listOf(seg.mixed.map((x) => x.toLowerCase()))} ${seg.mixed.length === 1 ? "varies" : "vary"}.` : `${listOf(seg.mixed.map((x) => x.toLowerCase()))}.`}
-            </li>
-          )}
-        </ul>
-      </div>
-      <div className="db-end-block">
-        <div className="db-end-label">What they&apos;ll do</div>
-        <ul>
-          {seg.actions.map((a) => (
-            <li key={a.tag}>{a.text}</li>
-          ))}
-        </ul>
-      </div>
+      {(rest.length > 0 || seg.mixed.length > 0) && (
+        <div className="db-end-block">
+          <div className="db-end-label">Also true of them</div>
+          <ul>
+            {rest.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+            {seg.mixed.length > 0 && (
+              <li className="fg2">
+                {seg.traits.length ? "Their " : "They're a mix on every count: "}
+                {seg.traits.length ? `${listOf(seg.mixed.map((x) => x.toLowerCase()))} ${seg.mixed.length === 1 ? "varies" : "vary"}.` : `${listOf(seg.mixed.map((x) => x.toLowerCase()))}.`}
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
       {seg.quote && (
         <figure className="db-end-quote">
           <blockquote>“{seg.quote.text}”</blockquote>
@@ -125,8 +169,8 @@ function Ends({ c, named }: { c: Contrast; named?: { least: { name: string; stor
       <CardHead icon="mood" title="Least and most worried" note={`Out of ${people(c.n)}`} />
       {c.headline && <p className="db-sowhat">{c.headline}</p>}
       <div className="db-ends-row">
-        <End seg={c.low} side="low" named={named?.least} />
-        <End seg={c.high} side="high" named={named?.most} />
+        <End seg={c.low} other={c.high} total={c.n} side="low" named={named?.least} />
+        <End seg={c.high} other={c.low} total={c.n} side="high" named={named?.most} />
       </div>
     </section>
   );
