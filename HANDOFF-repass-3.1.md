@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,166 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 23:33 Asia/Dubai.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,190 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 23:46 Asia/Dubai.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 125/243 | STALE from main - must redo |
-| A03 | 107/243 | STALE from main - must redo |
-| A04 | 104/243 | STALE from main - must redo |
+| A02 | 133/243 | STALE from main - must redo |
+| A03 | 115/243 | STALE from main - must redo |
+| A04 | 112/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,610 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,586 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -126,7 +126,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
   "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-133","A02-211","A02-231","A02-232","A02-312"],
-  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132","A03-133","A03-211"],
+  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132","A03-133","A03-211","A03-212"],
   "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131","A04-132","A04-133","A04-211","A04-311"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
@@ -270,17 +270,24 @@ files already on 3.1 that actually pass. Only the parent changes ownership, afte
 
 Next reserved gaps (confirmed against protected and reviewed IDs at this checkpoint):
 
-- `a02_small_first`: `A02-21222`, `A02-21223`.
-- `a02_small_second`: `A02-31313`, `A02-31321`.
-- `a03_early`: `A03-21231`, `A03-21232`.
-- `a03_mid`: `A03-31221`, `A03-31222`.
-- `a04_early`: `A04-21221`, `A04-21222`.
-- `a04_mid`: `A04-31213`, `A04-31221`.
+- `a02_small_first`: `A02-21233`, `A02-21311`.
+- `a02_small_second`: `A02-31331`, `A02-31332`.
+- `a03_early`: `A03-21312`, `A03-21313`.
+- `a03_mid`: `A03-31232`, `A03-31233`.
+- `a04_early`: `A04-21232`, `A04-21233`.
+- `a04_mid`: `A04-31231`, `A04-31232`.
 
 The complete lane plan is `/tmp/paradigm-repass/parallel/continuous-plan.json`; the shared protocol brief and
-lessons are in `/tmp/paradigm-repass/parallel/writer-brief.md`. Temporary review queues, accepted hashes, and
+lessons are in `/tmp/paradigm-repass/parallel/author-one.md`. Temporary review queues, accepted hashes, and
 checkpoint helpers are in that directory. The parent preserves all prior passing files and counts only reviewed
 files included in the commit; newer local drafts can already pass structural validation without being counted yet.
+
+Runtime models: `gpt-6-sol` at medium effort for drafting; `gpt-6-luna` at medium effort for read-only review.
+Use finite two-person sequential writer calls. For a stable checkpoint, add reviewed IDs with
+`checkpoint-counts.py`, run `/tmp/paradigm-repass/current-turn-status.py` for all 32 validators, then run
+`/tmp/paradigm-repass/parallel/prepare-checkpoint.py --stable`. That helper verifies the accepted set, updates
+counts/skip lists/next reservations/protected hashes, and writes `stage-files.json`. Stage those explicit paths,
+commit/push, and update `runtime-queue.json` with the pushed commit. All helpers stay outside the repository.
 
 On resume: inspect agent states and stable completed files; do not assume a completed agent means its lane is
 finished. Reassign any unfinished lane immediately, skipping validated existing files, and keep the goal active.
@@ -288,18 +295,13 @@ As jobs finish, regenerate current insights from scratch (especially A02-A04), v
 writers to A05-A32. Every job requires 243 expected IDs; summaries need at least 200 passing interviews. Do not
 stop at the end of a fixed-size tranche. Commit/push about every 30 minutes and before any interruption.
 
-Latest checkpoint: 26 further interviews reviewed and validated (10 A02, 8 A03 and 8 A04), for **2,166 total**.
-A02 is 125/243, A03 107/243 and A04 104/243. Drafting uses the stronger workhorse model after
-smaller-model defects required repair; smaller models perform read-only review. Supplemental checks now also
-reject repeated answers, copied scenario summaries, empty bold spans and wrong opening names, and invoke
-the actual repository validator. Targeted review corrected question order, age arithmetic, standalone quote
-references and conditional action annotations. Original protected files remain unchanged. Fresh authoring
-continues in the same lanes; unreviewed local drafts are excluded from these published counts.
-All 32 interview and all 32 insights validators were re-run at this checkpoint: passing IDs and complete-batch
-skip lists exactly match the reviewed baseline plus accepted additions. A01 remains 243/243 with passing insights.
-No other job has reached 200; A02-A04 insights remain stale. The next writer calls may each take the two
-reserved IDs above, sequentially. The last finite writing calls are complete, so recreate them immediately
-on the next automatic goal turn rather than waiting for another user prompt.
+Latest checkpoint: **2,190 reviewed passing interviews**. A02 is 133/243, A03 115/243 and A04 112/243.
+New interviews passed actual repository validation, supplemental protocol/profile checks and substantive review.
+All previously protected passing files remain byte-for-byte unchanged. All 32 interview and all 32 insights
+validators were re-run; the passing IDs and complete-batch skip lists match the accepted set. Only data and
+this handoff are committed. Use the next reserved gaps above immediately on the next automatic goal turn.
+All finite writing calls are complete and no unreviewed drafts remain at this checkpoint.
+
 
 An earlier short tranche added24 reviewed interviews (8 each in A02/A03/A04). After semantic tag
 corrections, all24 passed validator, supplemental audit, profile and protected-file checks. Published checkpoint
