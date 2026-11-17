@@ -11,24 +11,32 @@
     "outlook": "centre",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for talking with me, Aaron. I'm from the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions or parties, and what you say is confidential. You can tell me what you'd say in public and, separately, what you really think. What does a normal day look like?"
+      "text": "Hi Aaron, thanks for doing this. I'm a researcher with the Work Futures Panel, an independent group with no ties to tech companies, employers, unions, parties or government. It's confidential, and your name won't be used."
     },
     {
       "speaker": "persona",
-      "text": "I'm at Brightwater, which is free-range eggs, three sheds of about four thousand hens each, plus wheat and oilseed rape on the rest. Morning is egg collection and checking the sheds, the feeders, the water, the dead ones, which you get used to. Afternoon I'm with Hugh, the manager, on whatever's going, and I'm still the guy who gets the trailer stuck at the gateway."
+      "text": "Cool, no worries. I like talking about this stuff, I'm a bit of a nerd about farm tech."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like, and what's hard?"
+      "text": "Tell me about a normal working day."
     },
     {
       "speaker": "persona",
-      "text": "I like the gadgets, honestly. I use AI on my phone every day, I asked it to work out why shed two's laying dropped, and it was right, the lights were on the wrong timer. Hard part is money, I'm on the bottom rate, I share a house in Kelby with two lads from the meat plant, and I've got maybe three weeks saved. I spent the rest on a second-hand drone, which Hugh thinks was stupid."
+      "text": "I'm a tractor driver and general hand at Greywater Farms, which is a big farming company, about twelve hundred hectares of wheat, barley and beans, plus fifteen hundred ewes. In autumn I'm drilling seed all day on the big tractor with GPS autosteer, so I mostly watch the screen and do the headland turns. In winter I'm with the shepherds, feeding and moving sheep, and fixing fences. I'm the youngest on the team and I still get the worst jobs, like cleaning out the sprayer."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Do you use AI tools at all?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Every day, pretty much. I ask the chat app about spray rates and weeds, I use it to plan my budget, and I'm using it to study for my drone pilot licence. Nadia, the farm manager, thinks I'm obsessed. The pay's low though, I rent a flat above the bakery in town and I've got maybe ten days of money in the bank."
     }
   ],
   "scenarios": {
@@ -36,11 +44,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the first picture. It's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's still a good tool, people just oversold it. I'd probably post a video of me using it to sort out the hens, like 'see, still useful'. I don't get into arguments online."
+          "text": "Huh. That'd be a letdown, honestly. I was hoping for more."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's a decent tool and that's all. I'd still tell the older lads at Greywater to use it for spray plans. Online I'd probably post something like, cool, so we just keep farming then."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, a bit disappointed, because I was betting on it. If it stays small, I'm still a junior on a poultry farm with not much going on. But I'd still use it to get better faster."
+          "text": "Honestly, for me it doesn't change much. My job's fine, Greywater always needs drivers, but I'm still on low pay with no savings. The one thing I want is to start drone spraying on the side, and that doesn't need AGI."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep using it every day, keep learning. I'd try to get Hugh to let me run the shed data, the temperatures and egg counts. And I'd start charging neighbours to fly the drone over their fields, maybe thirty a go."
+          "text": "I'd finish the drone licence by spring and price up a second-hand spraying drone. I'd ask Nadia if Greywater would hire me to do the drone work on their fields. And I'd stop eating out at lunch so I could save a bit toward it."
         },
         {
           "speaker": "interviewer",
@@ -64,47 +80,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A bit flat, like a party that ended early."
+          "text": "Kind of flat, but okay. The worry's money, not the job."
         },
         {
           "speaker": "interviewer",
-          "text": "What's the drone for?"
+          "text": "How much would a spraying drone cost you?"
         },
         {
           "speaker": "persona",
-          "text": "Crop pictures, mostly. I fly it over the rape and you can see where the pigeons have been at it, or where it's waterlogged. Two farmers already asked me to do theirs, I did it for a coffee."
+          "text": "A decent second-hand spraying drone is maybe eight thousand, and I've got about four hundred pounds. So I'd need a loan or someone to go halves. That's the bit that keeps me from just doing it."
         },
         {
           "speaker": "interviewer",
-          "text": "If nothing much changes, where do you see yourself?"
+          "text": "What does Nadia think of the drone idea?"
         },
         {
           "speaker": "persona",
-          "text": "Running a farm's tech side, I hope. Or doing drone work for ten farms at once. Something where I'm the one people ring."
+          "text": "She laughed the first time, then asked how much it would save on the wet fields where the sprayer gets stuck. Nadia's not against it, she just needs to see the numbers. I'd put them together with the AI and show her."
         }
       ],
-      "say": "It's still a good tool, people just oversold it. I'd post a video of me using it on the hens, like 'see, still useful', but I don't argue online.",
-      "think": "I'd be a bit disappointed, because I was betting on it. I'd still be a junior on a poultry farm, but I'd use it to get better faster.",
-      "do": "Keeps using AI daily and asks Hugh to let him run the shed data. Starts charging neighbours about thirty a flight for drone crop pictures.",
-      "feel": "Calm, a little flat.",
-      "mood": "calm",
-      "quote": "Two farmers already asked me to do theirs, I did it for a coffee.",
-      "fieldNote": "Aaron is the tech-keen junior who'd find the plateau slightly disappointing. He already has the seed of a side business with his drone. He's practical and not political, more interested in being the person people call.",
+      "say": [
+        "I'd say AI is a **decent tool**, nothing more.",
+        "I'd still tell the older lads to use it for **spray plans**."
+      ],
+      "think": [
+        "My job's fine because Greywater always **needs drivers**.",
+        "The real goal is a **drone spraying** side business, which doesn't need AGI."
+      ],
+      "do": [
+        "Finish the **drone licence** by spring.",
+        "Ask Nadia to hire me for **drone work** on Greywater fields.",
+        "Stop eating out at lunch to **save** toward a drone."
+      ],
+      "feel": [
+        "**Flat but okay**, with money the real worry."
+      ],
+      "mood": "uneasy",
+      "quote": "A decent second-hand spraying drone is maybe eight thousand, and I've got about four hundred pounds.",
+      "fieldNote": [
+        "Aaron is a **daily AI user** and keen on farm tech.",
+        "His constraint is **capital**: an eight-thousand drone on ten days' savings.",
+        "He's **unworried about his job**, more about building a side income."
+      ],
       "actions": [
-        "learn-ai",
         "side-income",
-        "keep-going"
+        "retrain",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Pitch Nadia on paid drone spraying for Greywater's wet fields",
+          "tag": "side-income"
+        },
+        {
+          "text": "Finish the drone pilot licence by spring",
+          "tag": "retrain"
+        },
+        {
+          "text": "Stop buying lunch out and save the money",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say get on board, it's happening either way. Learn it now while it's new and you can be the expert. At the pub I'd be the one showing people the egg-counting app."
+          "text": "Thinking tasks first, robots slower. That's sort of what's happening already, to be fair."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is an opportunity if you're willing to learn. I'd tell people at work the planning will go to AI, so learn the kit. I'd post about my drone stuff and how farm workers can get into tech."
         },
         {
           "speaker": "interviewer",
@@ -112,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think it's good for me, honestly. Robots in the sheds need someone to look after them, and I'm the only one under fifty who wants to. I'd probably end up with more responsibility, maybe more pay."
+          "text": "For me, I think it's mostly good. My job is hands-on and on the tractor, and Greywater will want someone who understands the new tools. The risk is the office side at Greywater, Nadia's assistant does all the ordering and that'll go."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +174,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask Hugh to send me on whatever training the robot company runs, and offer to do it on my day off. I'd keep growing the drone thing, maybe ten farms by the end of the year. I'd do an online course in farm robotics in the evenings."
+          "text": "I'd get the drone licence and try to get a small loan for a drone, maybe five thousand, and do contract spraying for smaller farms. I'd learn the farm management software properly so I'm useful in planning. I'd keep my job at Greywater while the drone side grows."
         },
         {
           "speaker": "interviewer",
@@ -128,47 +182,90 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. A bit excited."
+          "text": "Excited, mostly. A little nervous about the loan."
         },
         {
           "speaker": "interviewer",
-          "text": "Who on the farm would you worry about?"
+          "text": "Who at work would you worry about?"
         },
         {
           "speaker": "persona",
-          "text": "Steve, who's been here twenty years. He hates computers, and he's good at his job, but his job is walking the sheds. I'd try to help him, but I don't know if he'd let me."
+          "text": "Nadia's assistant, Jen, who does the ordering and the paperwork. If AI does that, Jen's job shrinks a lot. I'd feel bad, she's been kind to me since I started."
         },
         {
           "speaker": "interviewer",
-          "text": "How would you pay for training on your money?"
+          "text": "A loan on ten days of savings is a big risk. Why take it?"
         },
         {
           "speaker": "persona",
-          "text": "Day off and evenings, and the drone money. If Brightwater paid for it, great, but I wouldn't wait for them. Most of the stuff I learn is free online anyway."
+          "text": "Because if I wait to start drone spraying, someone else does it first. I'd start small, one drone, three or four farms. If it doesn't work, I sell the drone and I've lost a bit, not everything."
         }
       ],
-      "say": "Get on board, it's happening either way. Learn it now while it's new and you can be the expert.",
-      "think": "It's good for me, honestly. Robots in the sheds need looking after, and I'm the only one under fifty who wants to, so I'd likely get more responsibility and maybe more pay.",
-      "do": "Asks Hugh to send him on the robot company's training, using his day off if needed, and takes an evening online course in farm robotics. Grows the drone work to about ten farms by the end of the year.",
-      "feel": "Calm and a bit excited.",
-      "mood": "calm",
-      "quote": "I'm the only one under fifty who wants to.",
-      "fieldNote": "Steady disruption looks like an opportunity to Aaron, and his thin savings don't stop him because most of what he learns is free. His one worry is for Steve, a long-serving colleague who walks the sheds. He'd act first, without waiting for the farm to pay.",
+      "say": [
+        "I'd say it's an **opportunity** if you're willing to learn.",
+        "I'd tell coworkers the **planning goes to AI**, so learn the kit."
+      ],
+      "think": [
+        "My **hands-on tractor job** is safe for now.",
+        "**Jen's ordering job** in the office is the one at risk."
+      ],
+      "do": [
+        "Take a **five-thousand loan** for a spraying drone.",
+        "Learn the **farm management software** properly.",
+        "Keep my **Greywater job** while the drone side grows."
+      ],
+      "feel": [
+        "**Excited**, with a little nerve about the loan."
+      ],
+      "mood": "uneasy",
+      "quote": "If I wait to start drone spraying, someone else does it first.",
+      "fieldNote": [
+        "Aaron sees **Steady Disruption** as good for his hands-on, tech-friendly role.",
+        "He'd take on **debt** for a drone with almost no savings, showing high risk comfort.",
+        "He worries about **office colleagues** like Jen more than himself."
+      ],
       "actions": [
-        "retrain",
+        "invest",
+        "side-income",
         "learn-ai",
-        "side-income"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Borrow five thousand for a second-hand spraying drone",
+          "tag": "invest"
+        },
+        {
+          "text": "Offer contract drone spraying to three or four small farms",
+          "tag": "side-income"
+        },
+        {
+          "text": "Learn Greywater's farm management software in depth",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep driving tractors at Greywater full time",
+          "tag": "keep-going"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is huge and nobody's ready, me included. I'd tell people not to wait for the government, because they won't be quick enough. I'd say look after each other."
+          "text": "By 2028, AGI, and robots by 2031. Okay, that's actually wild."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say get ready, it's coming whether you like it or not. I'd tell people to learn the tools now and not wait for the government. I'd probably post a lot about it, honestly."
         },
         {
           "speaker": "interviewer",
@@ -176,7 +273,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, two years is too fast for me to get ahead. If the AI can do everything, it can fly the drone and fix the robots itself. I'd have about a year of being useful, then I'm just another guy with no job."
+          "text": "Off the record, the drone business dies fast, because AGI can plan the spraying and the drones fly themselves. My tractor job lasts till the robots in 2031. So I'd have three years, and I'd need to be on the right side, fixing or running the robots."
         },
         {
           "speaker": "interviewer",
@@ -184,7 +281,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd make as much from the drone as I can, fast, while farmers still need someone. I'd cut back on everything else, sell the gaming PC. I'd look for whatever job is left, maybe installing the robots for a dealer. If there was a government scheme, I'd take it."
+          "text": "I'd skip the drone loan, because it'd be worthless by 2029. I'd apply for a robotics technician course or an apprenticeship with a machinery dealer straight away. I'd think about moving to a city if that's where the robot jobs are."
         },
         {
           "speaker": "interviewer",
@@ -192,48 +289,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Really anxious, but I'd be busy, which helps."
+          "text": "Anxious, but excited too. It's like jumping off a high board."
         },
         {
           "speaker": "interviewer",
-          "text": "You said in the slower one you'd be the expert. Does that still work here?"
+          "text": "What does moving mean for you?"
         },
         {
           "speaker": "persona",
-          "text": "Not really. Being the expert only works if the machines need a person. In two years they don't. I'd be like the guy who learned to fix fax machines."
+          "text": "Leaving town, my mates, the football team on Saturdays. I'd hate leaving, but I can. No kids and no mortgage is the one advantage of being broke and single."
         },
         {
           "speaker": "interviewer",
-          "text": "What does the money look like, month to month?"
+          "text": "You'd have three years between AGI and the robots. What's the plan for them?"
         },
         {
           "speaker": "persona",
-          "text": "Tight. Rent's the big one, and the drone money would come and go. If it goes bad, I'd move back to my mum's, she's got my old room. Not proud of that, but it's there."
+          "text": "Year one, get into a dealer or robotics course. Years two and three, get hands-on with the first robots coming onto farms. By 2031, I'd want to be the guy who installs them, not the guy who gets replaced."
         }
       ],
-      "say": "This is huge and nobody's ready, me included. Don't wait for the government, because they won't be quick enough, and look after each other.",
-      "think": "Two years is too fast for me to get ahead. If the AI can fly the drone and fix the robots itself, I'd have about a year of being useful before I'm just another guy with no job.",
-      "do": "Earns as much as possible from drone work while it lasts and cuts spending, selling his gaming PC. Looks for robot installation work with a dealer and could move back to his mum's if money runs out.",
-      "feel": "Really anxious, but busy, which helps.",
+      "say": [
+        "I'd say **get ready**, it's coming either way.",
+        "I'd tell people to **learn the tools** now, not wait."
+      ],
+      "think": [
+        "The **drone business** dies fast when drones fly themselves.",
+        "I'd have **three years** to get on the right side of robots."
+      ],
+      "do": [
+        "Skip the **drone loan**, since it'd be worthless by 2029.",
+        "Apply for a **robotics technician** course or dealer apprenticeship.",
+        "Consider **moving to a city** for robot jobs."
+      ],
+      "feel": [
+        "**Anxious and excited**, like jumping off a high board."
+      ],
       "mood": "anxious",
-      "quote": "I'd be like the guy who learned to fix fax machines.",
-      "fieldNote": "Aaron's confidence depends on machines still needing a person, and two years removes that. He stays active rather than frozen, which keeps him at anxious rather than alarmed. His mum's spare room is his quiet safety net.",
+      "quote": "No kids and no mortgage is the one advantage of being broke and single.",
+      "fieldNote": [
+        "Aaron **drops his drone plan** when AGI makes it obsolete.",
+        "He'd use the **three-year gap** to retrain as a robot installer.",
+        "He sees his **lack of ties** as freedom to move."
+      ],
       "actions": [
-        "side-income",
-        "cut-spending",
+        "retrain",
         "change-job",
-        "seek-support"
+        "move"
+      ],
+      "steps": [
+        {
+          "text": "Apply for a dealer apprenticeship installing farm robots",
+          "tag": "retrain"
+        },
+        {
+          "text": "Leave Greywater for a robotics technician job by 2031",
+          "tag": "change-job"
+        },
+        {
+          "text": "Move to a city if the robot jobs are there",
+          "tag": "move"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got a few years, so let's be clever about it. Learn the tools, build something. I'd show people what I'm doing on the drone side."
+          "text": "Five years for AGI, robots in 2034. That's a better runway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's coming, but there's time, so start now. I'd tell my mates to get skills that sit between machines and people. I'd still be the one posting about it."
         },
         {
           "speaker": "interviewer",
@@ -241,7 +375,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think five years is a real window. I'd be the one setting up robots on farms round here for a few years, and I'd make money doing it. At the end it might not need me, but I'd have savings and contacts."
+          "text": "The drone business works for a few years, maybe till 2031, then it gets squeezed. My tractor job lasts till about 2034. So I'd have time to make some money, but I'd need to switch before the robots, and I don't know exactly what into."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +383,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First year, I'd do a proper robotics certificate and register the drone business properly. I'd try to save a bit from every job, maybe a fifth. I'd also learn the AI tools that run farm robots, because that's where the work would be."
+          "text": "I'd get the drone and run it for three or four years, paying off the loan. Then I'd move into robot servicing with a dealer, using the drone money as a cushion. I'd keep studying with the AI every evening."
         },
         {
           "speaker": "interviewer",
@@ -257,48 +391,92 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. More excited than scared."
+          "text": "Anxious but with a plan. It's a gamble I'd take."
         },
         {
           "speaker": "interviewer",
-          "text": "What do you do with years three to five, once you see it coming?"
+          "text": "What if the drone loan isn't paid off by the time AGI arrives?"
         },
         {
           "speaker": "persona",
-          "text": "I'd try to move up the chain, from fixing the machines to setting up whole systems for farms. Then maybe to whoever manages them across a region. Each step buys a bit more time."
+          "text": "That's the risk. I'd try to pay it off in three years by doing more farms. If it isn't, I sell the drone and take the loss. I'd still be young enough to recover."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you stay at Brightwater?"
+          "text": "What would your parents say about this plan?"
         },
         {
           "speaker": "persona",
-          "text": "For a year or two, to learn their robots. Then I'd go out on my own, or with a dealer. Hugh would understand, he did the same when he was young."
+          "text": "My dad would say get a steady job and stop gambling, and my mum would say do it while you're young. I'd listen to my mum."
         }
       ],
-      "say": "We've got a few years, so let's be clever about it. Learn the tools, build something, and I'll show people what I'm doing on the drone side.",
-      "think": "Five years is a real window. I'd spend a few years setting up robots on local farms and make money doing it, so even if it ends up not needing me, I'd have savings and contacts.",
-      "do": "Takes a proper robotics certificate and registers his drone business. Saves about a fifth of every job and learns the AI tools that run farm robots.",
-      "feel": "Uneasy, more excited than scared.",
-      "mood": "uneasy",
-      "quote": "Each step buys a bit more time.",
-      "fieldNote": "Five years gives Aaron a plan to climb from fixing machines to setting up systems and then managing them regionally. He sees each step as buying time rather than a final answer. He'd leave Brightwater on good terms after learning the robots there.",
+      "say": [
+        "I'd say there's **time**, so start now.",
+        "I'd tell mates to get skills **between machines and people**.",
+        "I'd keep **posting** about it online, same as always."
+      ],
+      "think": [
+        "The **drone business** works until about 2031.",
+        "I'd need to **switch before the robots** in 2034.",
+        "I don't know **exactly what** I'd switch into yet."
+      ],
+      "do": [
+        "Run the **spraying drone** for three or four years.",
+        "Move into **robot servicing** with a dealer later.",
+        "Study with the **AI every evening**."
+      ],
+      "feel": [
+        "**Anxious**, but with a plan I'd gamble on."
+      ],
+      "mood": "anxious",
+      "quote": "My dad would say get a steady job and stop gambling, and my mum would say do it while you're young.",
+      "fieldNote": [
+        "Aaron plans a **two-stage move**: drone income first, then robot servicing.",
+        "He accepts **loan risk** because he's young and has no dependants.",
+        "He'd follow his **mother's advice** to take the chance."
+      ],
       "actions": [
-        "retrain",
+        "invest",
         "side-income",
-        "save-more",
+        "retrain",
         "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Buy a spraying drone on a loan and repay it in three years",
+          "tag": "invest"
+        },
+        {
+          "text": "Spray small farms at weekends to pay off the drone",
+          "tag": "side-income"
+        },
+        {
+          "text": "Move into robot servicing with a machinery dealer",
+          "tag": "retrain"
+        },
+        {
+          "text": "Study robotics with an AI tutor every evening",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a long time, get skilled up and you'll be fine for most of it. I'd tell the young lads at the plant to learn the machines now."
+          "text": "A decade, then robots in 2039. That's great for someone my age."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is the version where everyone gets a fair shot. I'd say get ready but don't panic. I'd tell the older lads it's their kids' problem more than theirs."
         },
         {
           "speaker": "interviewer",
@@ -306,7 +484,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think I'd do well for eight years, maybe nine. Robots spread slowly at first, and I'd be ahead. The end point's the same, but I'd have built something by then."
+          "text": "I'd be forty when the robots come, with a solid trade by then. The drone business could run for years. Honestly, I'm more worried about money in the next two years than the robots in thirteen."
         },
         {
           "speaker": "interviewer",
@@ -314,7 +492,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First year, the robotics certificate, the drone business, and I'd buy a second, better drone with what I save. I'd go to the farm shows to meet dealers. I'd learn the AI side every day, like I already do."
+          "text": "I'd do the drone thing properly, maybe two drones by year five. I'd keep the Greywater job as long as it makes sense. And I'd save, actually save, which I've never done."
         },
         {
           "speaker": "interviewer",
@@ -322,37 +500,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, a bit. Mostly hopeful."
+          "text": "Mostly good, a bit uneasy about the money side."
         },
         {
           "speaker": "interviewer",
-          "text": "What does the extra time do to your own life plans, outside work?"
+          "text": "You said you've never saved. Why would you now?"
         },
         {
           "speaker": "persona",
-          "text": "I'd want my own place, not a shared house. Maybe a girlfriend who doesn't mind me talking about drones. Ten years gives me time to actually get that, which two years doesn't."
+          "text": "Because I'd have a reason. Buying a second drone, maybe a van. Saving for nothing is hard, but saving for a drone is easy."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything that could go wrong with ten years?"
+          "text": "What would you say to Jen in the office?"
         },
         {
           "speaker": "persona",
-          "text": "I'd get comfortable. That's my risk, being too pleased with myself. If I'm doing well in year five, I might forget it all ends the same way."
+          "text": "I'd tell Jen to learn the farm software inside out, because someone has to check the AI. And I'd say it kindly."
         }
       ],
-      "say": "Ten years is a long time, so get skilled up and you'll be fine for most of it. Young lads should learn the machines now.",
-      "think": "I'd do well for eight or nine years, because robots spread slowly at first and I'd be ahead. The end point's the same, but I'd have built something by then.",
-      "do": "Takes the robotics certificate, grows the drone business and buys a second, better drone with savings. Goes to farm shows to meet dealers and keeps learning AI daily.",
-      "feel": "A little uneasy, but mostly hopeful.",
+      "say": [
+        "I'd say everyone gets a **fair shot** in this version.",
+        "I'd say **get ready** but don't panic.",
+        "I'd tell the older lads it's their **kids' problem** more than theirs."
+      ],
+      "think": [
+        "I'd be forty with a **solid trade** when robots arrive.",
+        "**Money now** worries me more than robots in thirteen years."
+      ],
+      "do": [
+        "Grow to **two drones** by year five.",
+        "Keep the **Greywater job** while it makes sense.",
+        "Actually **save** for the first time."
+      ],
+      "feel": [
+        "Mostly good, a bit **uneasy about money**."
+      ],
       "mood": "uneasy",
-      "quote": "If I'm doing well in year five, I might forget it all ends the same way.",
-      "fieldNote": "Ten years is Aaron's best case, giving him time to build a business and a personal life. He's honest that his risk is complacency rather than fear. He invests his small savings in equipment rather than keeping cash.",
+      "quote": "Saving for nothing is hard, but saving for a drone is easy.",
+      "fieldNote": [
+        "With a decade, Aaron's worry is **short-term cash**, not the robots.",
+        "He'd grow a **drone contracting** business slowly.",
+        "He'd advise Jen to become the person who **checks the AI**."
+      ],
       "actions": [
-        "retrain",
         "side-income",
         "invest",
-        "learn-ai"
+        "save-more",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Grow drone spraying to two drones by year five",
+          "tag": "invest"
+        },
+        {
+          "text": "Spray neighbouring farms at weekends for extra income",
+          "tag": "side-income"
+        },
+        {
+          "text": "Save toward a second drone and a van",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep the tractor job at Greywater while it pays",
+          "tag": "keep-going"
+        }
       ]
     }
   },
@@ -363,7 +576,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. I'd be learning stuff that's out of date before I finish. What would help is cheap loans for young people starting businesses, and some money to live on while you switch, so you don't have to sell your drone to pay rent."
+      "text": "AGI by 2028, because my drone plan dies and I'd have three years to retrain with no money behind me. What would help is cheap loans for young workers starting a trade, and courses run by the machine dealers that pay you while you learn."
     },
     {
       "speaker": "interviewer",
@@ -371,11 +584,22 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe what happens to the hens. If robots run the sheds, who decides when a hen's suffering? I'm into tech, but I've seen what happens when nobody's looking."
+      "text": "Maybe ask what we're actually good at. Everyone talks about what robots can do, but nobody asks what the farm workers know that the machines don't. I'd like that written down somewhere before it's lost."
     }
   ],
-  "headlineQuote": "I'm into tech, but I've seen what happens when nobody's looking.",
-  "portrait": "Aaron Torres is 27, the junior hand at Brightwater, a free-range egg and arable farm, sharing a house in Kelby with about three weeks of savings and a second-hand drone. He uses AI every day and is already earning a little from drone crop pictures for neighbours. He is calm in the plateau and steady disruption, seeing robots as his chance to become the farm's tech person. Only AGI in two years makes him anxious, because the machines would no longer need him. With five or ten years he plans to climb from fixing robots to setting up whole systems, while admitting his risk is getting comfortable.",
-  "biggestWorry": "AGI by 2028 worries him most, because whatever he learned would be out of date before he finished.",
-  "whatWouldHelp": "Cheap loans for young people starting businesses, and money to live on while switching work."
+  "headlineQuote": "Nobody asks what the farm workers know that the machines don't.",
+  "portrait": [
+    "Aaron is a **27-year-old tractor driver** at Greywater Farms, a large company-run arable and sheep farm.",
+    "He uses **AI daily** and wants to start a drone spraying business on the side.",
+    "His **risk appetite** is high: he'd borrow for a drone on ten days of savings.",
+    "In fast AGI, he'd **drop the drone** and retrain as a robot installer, even moving city.",
+    "With more time, his worry is **cash now** rather than robots later."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, which kills his drone plan and leaves him three years to retrain."
+  ],
+  "whatWouldHelp": [
+    "**Cheap loans** for young workers starting a trade.",
+    "Paid **dealer-run courses** for farm robots."
+  ]
 }

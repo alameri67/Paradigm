@@ -11,24 +11,24 @@
     "outlook": "progressive",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We aren't tied to any company, union, party or government, and nothing you say will be linked to your name. Could you start by walking me through a normal working day?"
+      "text": "Thanks for talking with me, Victor. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or parties. What you tell me stays confidential. Could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "I manage Hollis Farm for Ruth Hollis, who's 71 and still lives in the farmhouse. It's 400 hectares of wheat, oilseed and grass, plus about 90 beef cows with calves. I run two staff, Dev and old Frank. Most days I'm out on the tractor or in the cattle yard by seven, and the paperwork happens at the kitchen table after dark."
+      "text": "I'm assistant manager on Hollin Estate, about 900 hectares of wheat, oilseed rape and beans, plus 700 ewes. It's owned by a pension fund and run by a management company, so I answer to a manager who visits twice a month. My day is half outside with the team of five, half in the farm office sorting spray records, orders and rotas."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like most about it, and what wears you out?"
+      "text": "Which half do you prefer?"
     },
     {
       "speaker": "persona",
-      "text": "I like that Ruth trusts me with the whole place. She'll say, Victor, you decide, and she means it. What wears me out is the forms. Every grant, every spray record, every cattle movement has a form. I've started using an AI chat tool now and then to draft the grant letters, and it's saved me a few evenings."
+      "text": "Outside, easily. Lambing and harvest are when I feel useful, and the team is good, especially Dorota, who's been shepherding longer than I've been alive. The office half is fine, and lately I've been asking a chatbot to draft the spray records, then checking them, which saves me maybe an hour a week."
     }
   ],
   "scenarios": {
@@ -36,11 +36,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a useful tool and that's all it is. At the union branch I'd tell people to stop panicking and start asking for better pay, since the bosses can't claim the robots are coming. Online I'd probably post a joke about it."
+          "text": "That's roughly where I'd bet it ends up, to be honest."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it was a useful tool and not much more, which is how I already use it. To the team I'd say nothing changes, and I'd mean it. Online I don't post much, maybe a shrug in the farm managers' forum."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it means not much changes for me. My job is muddy boots and judgement calls, and that stays. I'd be a bit disappointed, actually, because some of the forms really could go."
+          "text": "Privately it means things stay as they are, and they're good. I earn well for a farm job, Sam's teaching salary is steady, and we've got about ten months saved plus our flat. My worry here is the pension fund itself, because every year they want a better return from the same land."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep using the chat tool for grant letters, maybe once a week. I'd keep putting money aside and keep the flat I rent out in town. I'd ask Ruth about a pay rise for Dev, who's earned it."
+          "text": "I'd keep the drafting trick for spray records and maybe try it for the lambing rota. I'd keep putting money into savings like we do. And I'd keep pushing the estate manager for a pay rise for Dorota, who's underpaid for what she knows."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A bit flat, maybe, like a forecast for rain that never comes."
+          "text": "Calm. A bit bored by the whole AI story, if anything."
         },
         {
           "speaker": "interviewer",
-          "text": "You said the chat tool saved you a few evenings. Would you keep using it here?"
+          "text": "You said the pension fund wants more every year. What does that look like on the ground?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, for the boring stuff. I checked the first letter it wrote line by line, and it had the grant rules a year out of date. So I use it, but I read every word. That's how I am with most new things."
+          "text": "Last year they cut the hedge-laying budget and asked us to run the same flock with one fewer person at lambing. We managed, but we were all wrecked by April. AI not changing much doesn't change them."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you be arguing about at the union in this picture?"
+          "text": "Is that pressure a threat to your own job?"
         },
         {
           "speaker": "persona",
-          "text": "Pay and housing for farmworkers, same as always. Half the young ones on farms round here live in caravans. That's a bigger problem than AI in this picture."
+          "text": "Not really, I'm the one they rely on to make the numbers work. The threat is to the team around me. The owners of Hollin Estate have never once stood in a lambing shed at two in the morning."
         }
       ],
-      "say": "It's a useful tool and that's all it is. At the union I'd tell people to stop panicking and start asking for better pay, since the bosses can't claim the robots are coming.",
-      "think": "Not much changes for me, because my job is muddy boots and judgement calls. I'd even be a bit disappointed, because some of the forms really could go.",
-      "do": "Keeps using an AI chat tool about once a week for grant letters, checking every line. Keeps saving and keeps his rented-out flat, and asks the owner for a pay rise for his worker Dev.",
-      "feel": "Calm and a little flat.",
+      "say": [
+        "I'd call AI a **useful tool**, not much more, in the managers' forum.",
+        "I'd tell the team plainly that **nothing changes** for them."
+      ],
+      "think": [
+        "Privately I think my job and **household money** are secure.",
+        "My real pressure is the **pension fund** squeezing more from the same land."
+      ],
+      "do": [
+        "Keep using a chatbot to draft **spray records**, and try the **lambing rota**.",
+        "Keep adding to **savings** at the usual monthly rate.",
+        "Keep pressing the estate manager for **Dorota's pay rise**."
+      ],
+      "feel": [
+        "He feels **calm**, and slightly **bored** by the AI story."
+      ],
       "mood": "calm",
-      "quote": "I checked the first letter it wrote line by line, and it had the grant rules a year out of date.",
-      "fieldNote": "Victor treats AI as a careful user would: useful, but checked. His politics come out straight away in his concern for farmworkers' pay and housing. He seems almost disappointed that the paperwork wouldn't shrink.",
+      "quote": "The owners of Hollin Estate have never once stood in a lambing shed at two in the morning.",
+      "fieldNote": [
+        "His frustration is with **absentee owners**, not with technology.",
+        "He already uses AI **lightly** and checks its output himself.",
+        "He sees the **team**, not himself, as exposed to cost cutting.",
+        "Two steady incomes and owned **flat** make him genuinely secure."
+      ],
       "actions": [
         "keep-going",
         "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep the team and lambing routine as it is",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Try the chatbot for drafting next spring's lambing rota",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is where unions earn their money. Change is coming, so let's make sure workers share in the gains and get trained. I'd say it at the branch and probably write something for the union newsletter."
+          "text": "That one's more real. The office half of my job is exactly that list."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we should get the tools in, but on our terms, with the time saved going back into the land and the people. I'd say it in the union branch too, because I joined last year after the lambing cuts. Farm work isn't going anywhere yet, and I'd say that clearly so people don't panic."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +154,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think I'm fine and my two staff might not be. A good farm manager is still needed in this picture. But a robot that can spot-spray weeds or push feed in the cattle yard takes hours off Dev and Frank."
+          "text": "Off the record, I think the management company would try to merge assistant manager jobs across two or three estates. Ordering, records and planning would be done by software, and they'd keep one person to walk the fields. I'd probably be that person, but I'd be stretched across more land for the same money."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +162,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd watch what the neighbours buy for a season before I touch anything. The Okafors next door always go first, so I'd learn from their mistakes. I'd do a short course on farm software in the winter, probably the one at the agricultural college, which costs a few hundred."
+          "text": "I'd learn the farm-management software properly in the first six months, before they bring it in, so I'm the one who sets it up. I'd raise a union claim that any merged roles get paid more, not the same. And I'd put an extra few hundred a month aside in case it goes badly."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +170,86 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, mostly about other people. For myself, more curious than worried."
+          "text": "Uneasy. Not panicky, but I'd be watching the emails from head office very closely."
         },
         {
           "speaker": "interviewer",
-          "text": "Which part of the farm would change first?"
+          "text": "Who on the team would you worry about?"
         },
         {
           "speaker": "persona",
-          "text": "Weeding and feeding. The weed-spotting sprayers already exist, the Okafors have one on trial. If it works on their wheat, Ruth will ask me about it by spring."
+          "text": "Not Dorota, nobody else can do what she does with sheep. I'd worry about Kieran, who's 23 and does a lot of the tractor and loader work, because self-driving tractors are the first thing they'd try. I'd want him on a mechanics course before that happens."
         },
         {
           "speaker": "interviewer",
-          "text": "What about Dev and Frank?"
+          "text": "You'd learn the software early and also fight the merger. Isn't that a bit of both sides?"
         },
         {
           "speaker": "persona",
-          "text": "Frank is 63 and he'd love to retire anyway, he talks about his allotment every lunch. Dev is the one I'd worry about. He's 22 and he's only ever done this. I'd push to keep him and train him on the new kit instead of letting him go."
+          "text": "Yes, and I'm fine with that. If the farm software is coming anyway, I'd rather be the person who knows it than the person it's done to. You can push for fair pay and still be good at your job."
         }
       ],
-      "say": "This is where unions earn their money. Change is coming, so workers should share in the gains and get trained, and I'd write that in the union newsletter.",
-      "think": "I think I'm fine as a farm manager, but my two staff might not be. Robots that spot-spray weeds or push feed would take hours off them.",
-      "do": "Watches the neighbouring farm's trials for a season before buying anything. Takes a winter course in farm software at the agricultural college for a few hundred, and pushes to keep his young worker Dev and train him on new machines.",
-      "feel": "Uneasy for others, curious for himself.",
+      "say": [
+        "I'd say bring in tools **on our terms**, with time saved going to people.",
+        "I'd tell the **union branch** that farm work isn't disappearing yet."
+      ],
+      "think": [
+        "Privately I expect the company to **merge manager roles** across estates.",
+        "I'd likely keep a job but cover **more land** for the same pay."
+      ],
+      "do": [
+        "Learn the **farm-management software** within six months, before rollout.",
+        "Raise a **union claim** for higher pay in any merged role.",
+        "Save a few **hundred extra** each month as a buffer."
+      ],
+      "feel": [
+        "He feels **uneasy** and watchful about **head office** emails."
+      ],
       "mood": "uneasy",
-      "quote": "The Okafors next door always go first, so I'd learn from their mistakes.",
-      "fieldNote": "His steady approach shows clearly: let the neighbours test it, then follow. His worry points outward to Dev, a 22-year-old with no other experience. There is a quiet confidence about his own place that he doesn't say loudly.",
+      "quote": "If the farm software is coming anyway, I'd rather be the person who knows it than the person it's done to.",
+      "fieldNote": [
+        "He sees the **thinking half** of his job as the part at risk.",
+        "He comfortably holds **two strategies**: learn early and bargain hard.",
+        "He worries for **Kieran**, the young tractor driver, ahead of himself.",
+        "His union membership grew out of real **lambing cuts**, not ideology alone."
+      ],
       "actions": [
         "learn-ai",
         "collective-action",
-        "retrain"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Learn the farm-management software in six months, before the rollout",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "File a union claim for higher pay in merged manager roles",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Add a few hundred extra to savings each month",
+          "tag": "save-more"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say governments need to move now, not after. If machines can do all the work, the gains have to be shared, through taxes, public ownership, whatever it takes. I'd be marching, probably, which I've done twice in my life."
+          "text": "Okay. That's a different conversation. Two years for the office, five for the field."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is the moment for governments to step in, with income support and public ownership of some of this technology. At work I'd tell the team straight that I don't know what Hollin will look like, and I won't pretend to. I'd want the union pushing for a deal before the robots arrive, not after."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +257,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think Ruth sells. She's 71, she has no family in farming, and a company would offer her a fortune for a farm that runs itself. Then I'm a manager with nothing to manage."
+          "text": "Privately, by 2028 my office half is gone overnight, and the pension fund won't pay a manager's salary for someone who just walks fields. I'd guess they'd keep me on less money as the person who watches the machines, then by 2031 maybe not even that. With Sam's salary and our savings we'd manage a few years, but I can't see what I'd be doing at 32."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +265,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd save hard, maybe half my pay, and stop the plan to buy a second flat. I'd join the union campaign for a tax on robots that pays into a fund for workers. I'd use the AI tools a lot more, every day, because if it's coming in two years I can't wait for the Okafors to test it."
+          "text": "I'd sign up for the agricultural robotics certificate at the college straight away, evening classes, because the people who fix and supervise farm robots will last longest. I'd hold off on trying for a baby, which Sam and I had planned for 2028. And I'd push hard through the union for a redundancy deal tied to years of service, not just a month's pay."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +273,91 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Sam would notice before me, she always does. I'd get short-tempered."
+          "text": "Anxious. I've got some control, but not much, and that's new for me."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Ruth, the first week?"
+          "text": "What would you and Sam actually say about the baby?"
         },
         {
           "speaker": "persona",
-          "text": "I'd ask her straight out what she plans to do with the farm. We've never talked about it. I'd ask whether she'd consider leaving part of it in a trust for the workers, or selling to a co-op, before a big company gets there."
+          "text": "We'd probably say wait a year and see, and then argue about whether waiting even helps. Sam would say kids still need teachers, so her job is the steadier one. I'd feel bad that my plan for our family depended on a farm I don't own."
         },
         {
           "speaker": "interviewer",
-          "text": "Two years isn't long for someone who likes to see things proven first. How does that sit with you?"
+          "text": "What gets cut first if your pay drops?"
         },
         {
           "speaker": "persona",
-          "text": "Badly. I'd have to break my own habit and jump before it's proven. The rental flat and savings give me a couple of years of room, so I'm not desperate. But I'd hate jumping blind."
+          "text": "The second car and the holiday in Portugal we do every September. We've got no debt apart from a small bit on the flat, so we'd pay that off fast. After that, it's just being careful."
         }
       ],
-      "say": "Governments need to move now, not after. If machines can do all the work, the gains have to be shared through taxes or public ownership, and I'd be marching for it.",
-      "think": "I think Ruth sells, because she's 71 with no family in farming and a company would pay a fortune for a farm that runs itself. Then I'm a manager with nothing to manage.",
-      "do": "Saves about half his pay, shelves the plan to buy a second flat and joins a union campaign for a robot tax that funds workers. Starts using AI tools every day and asks the owner directly about selling to a co-op or a workers' trust.",
-      "feel": "Anxious and short-tempered, though savings and the rental flat give him some room.",
+      "say": [
+        "I'd call for **income support** and some **public ownership** of the technology.",
+        "I'd tell the team honestly that I **don't know** Hollin's future."
+      ],
+      "think": [
+        "Privately I expect my **office half** gone by 2028 and a **pay cut**.",
+        "By 2031 I may lose the **field role** too, and can't picture age 32."
+      ],
+      "do": [
+        "Enrol in the **agricultural robotics** evening certificate straight away.",
+        "Delay **trying for a baby**, which was planned for 2028.",
+        "Push the union for a **redundancy deal** tied to years of service."
+      ],
+      "feel": [
+        "He feels **anxious**, with less **control** than he's used to."
+      ],
       "mood": "anxious",
-      "quote": "I'd have to break my own habit and jump before it's proven.",
-      "fieldNote": "The threat to him runs through the owner's choice to sell, not through his own skill. Two years forces a steady man to act like an early adopter, and he dislikes it. His instinct is a collective fix: a workers' trust or a co-op.",
+      "quote": "I'd feel bad that my plan for our family depended on a farm I don't own.",
+      "fieldNote": [
+        "The **three-year gap** matters to him: office goes first, fieldwork follows.",
+        "He chooses **robot maintenance** training as the longest-lasting role.",
+        "AGI reaches into **family plans**; the baby decision gets delayed.",
+        "Strong savings and **Sam's salary** keep him anxious rather than alarmed."
+      ],
       "actions": [
-        "save-more",
-        "politics",
-        "learn-ai",
-        "collective-action"
+        "retrain",
+        "family-plans",
+        "collective-action",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Enrol in the college's agricultural robotics evening certificate",
+          "tag": "retrain"
+        },
+        {
+          "text": "Put off trying for a baby until the farm job settles",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Push the union for redundancy pay tied to years of service",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Drop the second car and the September holiday",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is a five-year emergency and should be treated like one. Rules on who owns the robots, retraining paid for publicly, help for small farms to buy in together. I'd say it calmly but often."
+          "text": "Five years. That's enough to actually get ready, I think."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the same things about public support, but I'd also say it loudly to young farmers: start learning the machines now. In the forum I'd probably post a list of courses. I'd be calmer and more practical about it than in the fast version."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +365,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, five years is enough for me to land on my feet. Probably not as a farm manager. Maybe running the machines, or managing a group of farms that share robots. I'd be fine. Dev's the one who worries me again."
+          "text": "Between us, five years means I can be the robot person before anyone else at Hollin is. If I've got the certificate and a couple of years using the software, I'm the one they keep in 2034. I'm not thrilled about watching machines do lambing, but I'd rather be there than not."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +373,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, I'd learn what the robot dealers are selling and try a small one on Hollis Farm. I'd sit down with Ruth and the Okafors about sharing machines. I'd keep saving a third of my pay."
+          "text": "I'd start the robotics certificate next autumn, not straight away, so I can do it properly over two years. I'd use AI tools every week in the office instead of now and then, to get properly good at them. And we'd keep the baby plan, maybe a year later than we said."
         },
         {
           "speaker": "interviewer",
@@ -256,48 +381,86 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but with a plan. Five years is long enough that I could get ahead of it."
+          "text": "Uneasy. It's still a big change, but it feels like something I can walk through."
         },
         {
           "speaker": "interviewer",
-          "text": "You said with the fast one you'd hate jumping blind. Does five years fix that?"
+          "text": "Would you ask the estate to pay for the course?"
         },
         {
           "speaker": "persona",
-          "text": "Mostly. I'd get two or three years to watch it working on other farms. That's my natural speed. In the fast one I'd be guessing, here I'd be choosing."
+          "text": "Yes, and I'd ask the union to make it a standard request for every farm worker, not just managers. Dorota would never do it, she'd rather retire, and that's her right. Kieran, I'd drag along with me."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Sam over dinner, the night you heard?"
+          "text": "Is anything about the slower version harder than the fast one?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell her we're okay. Her school job might even outlast mine, kids still need a person in the room. Then I'd probably go quiet and do the sums in my head."
+          "text": "In a way, yes. In the fast version you just react, but in the slower version you have to decide, and you can get it wrong. If I'd bet on robots and they arrived late, I'd have spent two years of evenings on nothing."
         }
       ],
-      "say": "This is a five-year emergency and should be treated like one, with rules on who owns the robots, public retraining and help for small farms to buy in together.",
-      "think": "Five years is enough for me to land on my feet, maybe running the machines or managing a group of farms that share robots. Dev is the one I'd worry about again.",
-      "do": "Learns what robot dealers are selling and trials a small robot on the farm in year one. Talks with the owner and neighbours about sharing machines, and keeps saving a third of his pay.",
-      "feel": "Uneasy but steady, because five years fits his habit of watching before acting.",
+      "say": [
+        "I'd tell young farmers to **learn the machines** now, while there's time.",
+        "I'd post a practical list of **courses** in the managers' forum."
+      ],
+      "think": [
+        "Privately five years lets me become Hollin's **robot person** first.",
+        "I'd rather **supervise** machines at lambing than be gone."
+      ],
+      "do": [
+        "Start the **robotics certificate** next autumn and finish over two years.",
+        "Use AI tools **weekly** in the farm office to build skill.",
+        "Keep the **baby plan**, pushed back about a year."
+      ],
+      "feel": [
+        "He feels **uneasy** but able to **walk through** the change."
+      ],
       "mood": "uneasy",
-      "quote": "In the fast one I'd be guessing, here I'd be choosing.",
-      "fieldNote": "For Victor, the difference between two and five years is the difference between guessing and choosing. Five years matches his natural pace. He reassures his partner out loud and does the sums silently, a small gap between say and think.",
+      "quote": "In the fast version you just react, but in the slower version you have to decide, and you can get it wrong.",
+      "fieldNote": [
+        "More time shifts him from bargaining towards **planned retraining**.",
+        "He sees **decision risk** in the slow scenario that the fast one lacks.",
+        "He wants the **union** to win training for all workers, not managers only.",
+        "He respects that **Dorota** may simply retire rather than adapt."
+      ],
       "actions": [
+        "retrain",
         "learn-ai",
-        "automate",
-        "save-more",
-        "collective-action"
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Start the two-year robotics certificate next autumn",
+          "tag": "retrain"
+        },
+        {
+          "text": "Use AI tools every week for farm office records and orders",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Push the baby plan back about a year",
+          "tag": "family-plans"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a gift if we use it. Train people now, write the rules now, and don't let three companies own all the machines. I'd keep saying that at the union until people were sick of me."
+          "text": "Ten years. I'd be 37 when the thinking side lands, almost 40 for the robots."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we've got a decade to do this fairly, and if governments waste it, that's on them. I'd talk about it in the union, but it'd be one item on the list, not the whole meeting."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +468,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years catches me right in the middle. I'd be 37, maybe with kids, and the thing I'm best at would stop being needed. It's not a crisis, but it's the wrong time of life for it."
+          "text": "Off the record, it feels far enough that I'd mostly get on with life. I'd still want to be the robot person eventually, but not this year. The bigger question is whether I'm still on someone else's farm at 40, or on one of our own."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +476,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd spend the next few years getting a qualification in farm robotics or land management, probably part-time over two winters. I'd keep the flat and maybe sell it later to put money into a share of a farm. I'd want to be an owner of something by then, even a small piece."
+          "text": "I'd keep working Hollin as normal and keep saving. Somewhere around 2030 I'd do the robotics course. And I'd lobby our regional council for a public farm-training fund, because they'll actually listen if a few of us turn up."
         },
         {
           "speaker": "interviewer",
@@ -321,36 +484,67 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. It's far enough off that I can plan, close enough that I can't ignore it."
+          "text": "Uneasy, quietly. It's a background hum rather than a worry."
         },
         {
           "speaker": "interviewer",
-          "text": "At 37 you'd be in the middle of your career. Is ten years better or worse for you?"
+          "text": "You mentioned your own farm. Is that a real plan?"
         },
         {
           "speaker": "persona",
-          "text": "Better, honestly. Two years would hit me before I'd done anything. Ten gives me time to become someone who owns the robots instead of being replaced by them. But I'd have to actually do it, and I know I like to wait."
+          "text": "It's a dream more than a plan. Land round here is far too expensive for a farm worker, even a well-paid one. Maybe with ten years and Sam's help, a small share in a cooperative farm."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you still want to be farming in 2036?"
+          "text": "Would you tell your future kids to go into farming?"
         },
         {
           "speaker": "persona",
-          "text": "I'd want to be on the land, yes. Maybe not driving the tractor. But I'd still want to walk the fields in June and decide when the wheat's ready."
+          "text": "I'd tell my kids to go into farming only if they love it, and to learn to fix the machines as well as the animals. That's what I'd have told myself at 18, if I'd known."
         }
       ],
-      "say": "Ten years is a gift if we use it: train people now, write the rules now, and don't let three companies own all the machines.",
-      "think": "Ten years catches me right in the middle, at 37 and maybe with kids, just as the thing I'm best at stops being needed. It's not a crisis, but it's the wrong time of life.",
-      "do": "Studies part-time over two winters for a qualification in farm robotics or land management. Keeps his rental flat with a view to selling it later to buy a share in a farm.",
-      "feel": "Uneasy: far enough away to plan, close enough not to ignore.",
+      "say": [
+        "I'd say a decade is time to act **fairly**, and governments must not waste it.",
+        "I'd raise it at the **union**, as one item among many."
+      ],
+      "think": [
+        "Privately ten years lets me **get on with life** for now.",
+        "My bigger question is owning a **share of a farm** by 40."
+      ],
+      "do": [
+        "Keep working Hollin as normal and **keep saving** each month.",
+        "Plan the **robotics course** for around 2030.",
+        "Lobby the **regional council** for a public farm-training fund."
+      ],
+      "feel": [
+        "He feels **quietly uneasy**, like a **background hum**."
+      ],
       "mood": "uneasy",
-      "quote": "Ten gives me time to become someone who owns the robots instead of being replaced by them.",
-      "fieldNote": "He wants ownership, even a small share, which sits interestingly beside his left-leaning politics: he'd prefer co-ops but he'd still buy in. He's honest that his habit of waiting could waste the decade. The image of walking the fields in June shows what he's actually attached to.",
+      "quote": "I'd tell my kids to go into farming only if they love it, and to learn to fix the machines as well as the animals.",
+      "fieldNote": [
+        "A long horizon turns AI into a **background** concern behind land ownership.",
+        "He lowers his ambition to a **co-op share**, given land prices.",
+        "His advice to future kids blends **animal skill** and machine repair.",
+        "He prefers **local lobbying** where he thinks people listen."
+      ],
       "actions": [
-        "retrain",
-        "invest",
-        "collective-action"
+        "keep-going",
+        "politics",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep running Hollin's flock and arable as normal",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Lobby the regional council for a public farm-training fund",
+          "tag": "politics"
+        },
+        {
+          "text": "Keep saving towards a share in a cooperative farm",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -361,7 +555,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The fast one. Not because of me, I'd manage, but because Ruth would sell before anyone had a plan and people like Dev would be out with nothing. What would help is a public fund, paid for by taxing the robots, that helps workers buy into farms together."
+      "text": "AGI by 2028, because it lands right when Sam and I wanted to start a family and before I've retrained. What would help is paid retraining, run publicly or through the union, and a rule that big owners like pension funds can't sack a whole farm team with a month's notice."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +563,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe who owns the land. Everyone talks about the robots, but the robot just works for whoever owns the field. If that's three big companies, it doesn't matter how clever the machine is, the village dies."
+      "text": "Maybe who owns the robots. If the pension fund owns them, the money leaves the valley. If farmers own the robots together, the money stays where the work used to be."
     }
   ],
-  "headlineQuote": "The robot just works for whoever owns the field.",
-  "portrait": "Victor Chen is a 27-year-old farm manager running 400 hectares of crops and beef cattle for an elderly owner who trusts him completely. He's left-leaning, careful with new tools, and uses AI only now and then for grant letters, checking every line. Through the five pictures his main worry is not his own skill but whether the owner sells and what happens to his young worker Dev. More warning time suits his habit of watching before he acts, and with ten years he wants to become a part-owner rather than be replaced.",
-  "biggestWorry": "AGI by 2028 worries him most, because the owner would sell before anyone had a plan and workers like Dev would be left with nothing.",
-  "whatWouldHelp": "A public fund, paid for by taxing robots, that helps workers buy into farms together."
+  "headlineQuote": "If farmers own the robots together, the money stays where the work used to be.",
+  "portrait": [
+    "Victor is 27, **assistant manager** on a pension-fund-owned estate, living with Sam, a primary **teacher**.",
+    "His day splits between **fieldwork** with his team and office work he already partly hands to a **chatbot**.",
+    "He blames **absentee owners** more than technology, and joined the union after lambing cuts.",
+    "In faster scenarios he turns to **retraining** in farm robotics and delays a **baby**.",
+    "With more time he settles into **steady planning** and dreams of a co-op farm share."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because it hits when he wants a **family** and before retraining."
+  ],
+  "whatWouldHelp": [
+    "**Paid retraining** through the state or union, and limits on owners sacking teams at **short notice**."
+  ]
 }

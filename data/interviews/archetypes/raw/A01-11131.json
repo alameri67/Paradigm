@@ -11,24 +11,32 @@
     "outlook": "traditional",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thank you for having me, Beth. I'm from the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or political parties. Anything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Could you walk me through a normal day?"
+      "text": "Thank you for talking to me, Beth. I'm a field researcher with the Work Futures Panel, an independent group. We're not connected to any tech company, employer, union, party or government. What you say is confidential and won't carry your name."
     },
     {
       "speaker": "persona",
-      "text": "I work for the Morrows at Hollins Farm, they've had it four generations. It's ninety dairy cows and oats for the cattle. I'm in for the milking at half five with young Mrs Morrow, then it's calves, bedding, yard work, and in the evening the second milking. I'm slow on the tractor still, old Mr Morrow says I drive it like it owes me money, but I'm good with the calves."
+      "text": "All right. I'll be honest with you, I don't trust surveys much, but you seem straight enough."
     },
     {
       "speaker": "interviewer",
-      "text": "And outside work?"
+      "text": "Could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "I'm with Daniel, he works at the feed mill in Thornby, we've been together three years and we rent a little terrace near the chapel. Pay's the lowest they give, and we've got less than a month put by, so we're careful. Sundays I'm at chapel and then back for milking, the cows don't know it's Sunday."
+      "text": "I'm a shepherd at Hillside Farm, for Mr Gower, Owen Gower, who's farmed there all his life like his father did. We've six hundred ewes on the hill, a few beef cows, and some oats and spring barley down in the valley fields. Most days I'm out with my dog Nell gathering, checking feet, dosing, and in spring it's lambing, which is the best and the worst month of the year. I've been at it three years and I'm still learning, Mr Gower can read a ewe from across a field and I can't yet."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What's going on in your life outside work?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm getting married next August at the chapel in the village, to Daniel, who's a mechanic at the tractor garage. We're saving for it, or trying to, but I've maybe three weeks' money put by. I rent a little cottage on my own till the wedding, then Daniel moves in. My mother's doing the cakes, thank goodness."
     }
   ],
   "scenarios": {
@@ -36,11 +44,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the first picture. It's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say I'm not surprised, it was all talk from people who've never mucked out a shed. At chapel someone would say the Lord didn't make computers to milk cows, and we'd all laugh. I don't go online much."
+          "text": "Good. I never wanted it to be anything more than that."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I'm glad, and I'd mean it. At chapel and at the market, people would say we told you so, and they'd be right. I don't do online, so that's where it'd stay."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly I'd be glad. Things stay as they are, and that's how I like it. I'm not good with new things and I don't want to be."
+          "text": "Privately, I'm relieved, but it doesn't make my wages any bigger. The wedding's costing more than we thought and I'm on the bottom rate. My job's safe on the hill, Mr Gower needs me, but money's tight every month."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on. Learn the tractor properly, get better at the milking, maybe ask for a few more hours. Daniel and I would keep saving for a deposit, slowly."
+          "text": "I'd keep on as I am, gathering and lambing. Daniel and I would cut the wedding down a bit, fewer guests and no band, just a fiddler from chapel. And I'd ask Mr Gower if I could take on the hay contract for the neighbour in summer for extra."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +80,86 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Thankful."
+          "text": "Settled, mostly. A bit tight round the money, like always."
         },
         {
           "speaker": "interviewer",
-          "text": "Have you ever used any of these AI things?"
+          "text": "Why cut the wedding rather than borrow for it?"
         },
         {
           "speaker": "persona",
-          "text": "No. Daniel's sister tried to show me one on her phone, asked it for a recipe. I said I've got my nan's recipe book, what do I want that for."
+          "text": "Because my father always said you don't start married life in debt. We'd rather have forty people and a good meal than a hundred and a loan. My mother agrees, Daniel's mother doesn't, so that's a conversation."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to the Morrows about it?"
+          "text": "Would you use AI for anything at all?"
         },
         {
           "speaker": "persona",
-          "text": "Nothing much. Mr Morrow doesn't hold with it either. He says the farm's done fine for four generations without a computer telling it what to do."
+          "text": "No. I've no need of it. Mr Gower writes the flock book by hand and so do I."
         }
       ],
-      "say": "I'm not surprised, it was all talk from people who've never mucked out a shed. At chapel we'd laugh that the Lord didn't make computers to milk cows.",
-      "think": "I'd be glad, because things stay as they are and that's how I like it. I'm not good with new things and I don't want to be.",
-      "do": "Carries on learning the tractor and the milking and asks for a few more hours. Keeps saving slowly with Daniel towards a house deposit.",
-      "feel": "Calm and thankful.",
-      "mood": "calm",
-      "quote": "I said I've got my nan's recipe book, what do I want that for.",
-      "fieldNote": "Beth is grounded in the farm, chapel and Daniel, and is openly relieved by the plateau. She has never used AI and doesn't plan to. Her boss shares her dislike of computers, which reassures her.",
+      "say": [
+        "I'd say I'm **glad** AI stayed small.",
+        "I'd agree with chapel folk that we **told you so**.",
+        "I'd keep it **offline**, at chapel and the market."
+      ],
+      "think": [
+        "My **job's safe** on the hill because Mr Gower needs me.",
+        "My **wages** stay low and the wedding costs more than planned."
+      ],
+      "do": [
+        "Keep **gathering and lambing** as I always have.",
+        "Cut the wedding to **forty guests** and a chapel fiddler.",
+        "Ask to take the **hay contract** for the neighbour in summer."
+      ],
+      "feel": [
+        "**Settled**, mostly, but tight on money as always."
+      ],
+      "mood": "uneasy",
+      "quote": "My father always said you don't start married life in debt.",
+      "fieldNote": [
+        "Beth distrusts AI and **won't use it**, keeping the flock book by hand.",
+        "Her pressure is the **wedding cost** on bottom-rate pay.",
+        "Family values shape money choices: **no debt** to start married life."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "family-plans",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Keep shepherding the six hundred ewes at Hillside",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Cut the wedding to forty guests and a chapel fiddler",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Take on the neighbour's summer hay contract for extra pay",
+          "tag": "side-income"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's those big companies in the cities, pushing machines on farmers who never asked for them. I'd say we should look after our own, keep work for people who want it. I wouldn't be angry at the Morrows though."
+          "text": "Writing and booking and that. That's for people in offices, not up the hill."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's the office folk's problem, not ours. Sheep don't care about computers. I'd say people should learn a trade with their hands if they want something steady."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +167,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Between us, I'm frightened, because milking robots are already in some farms round here. If the Morrows got one, they'd keep family and let me go. I'm not family, that's just how it works."
+          "text": "Honestly, I think the hill is safe for a good while. Robots on a hill slope in the rain would fall over before they caught a single ewe. What worries me is the paperwork side, the subsidy forms and the movement records, because if Mr Gower gets a computer to do those, the government will expect more of them."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +175,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep my head down and keep working, and hope they don't. We'd cut back, no takeaways, no new clothes, maybe not go on holiday. I wouldn't learn the robot, I'd wait and see what happens."
+          "text": "I'd keep doing my job and keep my head down. I'd not touch the AI stuff, Mr Gower's daughter does the forms anyway. Daniel and I would still go ahead with the wedding, small."
         },
         {
           "speaker": "interviewer",
@@ -126,47 +183,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. A knot in my chest on the way to the farm."
+          "text": "A bit uneasy, but not scared. The hill's the hill."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you blame, if it came to that?"
+          "text": "What about Daniel's job at the tractor garage?"
         },
         {
           "speaker": "persona",
-          "text": "The companies, and the government for letting them. Not the farmers, they're just trying to stay alive. But I wouldn't want the government paying people to sit at home either, that's not right."
+          "text": "Daniel says the new tractors already tell you what's wrong with them on a screen. He thinks there'll still be work fixing them, maybe more. I trust him on that, he knows engines."
         },
         {
           "speaker": "interviewer",
-          "text": "What would Daniel say?"
+          "text": "You said the government would expect more forms. Who do you blame for that?"
         },
         {
           "speaker": "persona",
-          "text": "He'd say we'll manage, we always do. His mum and dad would help, they've got a bit of land. And chapel would help, they always do when somebody's in trouble."
+          "text": "The people in the city who've never lambed a ewe making rules for those of us who have. Every new tool they get, they find a new form for us to fill. That's not progress, that's just more nonsense."
         }
       ],
-      "say": "It's the big companies in the cities, pushing machines on farmers who never asked for them. We should look after our own and keep work for people who want it.",
-      "think": "I'm frightened, because milking robots are already on farms round here. If the Morrows got one, they'd keep family and let me go, because I'm not family.",
-      "do": "Keeps working and hopes the Morrows don't buy a robot, cutting takeaways, new clothes and holidays. Waits to see what happens rather than learning the new machines.",
-      "feel": "Anxious, with a knot in her chest on the way to work.",
-      "mood": "anxious",
-      "quote": "If the Morrows got one, they'd keep family and let me go. I'm not family, that's just how it works.",
-      "fieldNote": "Beth blames city companies and the government that allows them, but not the farmers she works for. She knows that as a non-family worker on a family farm she'd be let go first. She would wait and cut back rather than learn, and looks to family and chapel, not the state, for help.",
+      "say": [
+        "I'd say it's the **office folk's problem**, not ours.",
+        "I'd tell people to learn a **trade with their hands**."
+      ],
+      "think": [
+        "Robots on a **wet slope** won't manage for a good while.",
+        "AI might just bring **more government forms** for farmers."
+      ],
+      "do": [
+        "Keep doing my job and **keep my head down**.",
+        "Leave the **forms** to Mr Gower's daughter and avoid AI.",
+        "Go ahead with a **small wedding**."
+      ],
+      "feel": [
+        "A bit **uneasy**, but not scared."
+      ],
+      "mood": "uneasy",
+      "quote": "Robots on a hill slope in the rain would fall over before they caught a single ewe.",
+      "fieldNote": [
+        "Beth sees the **hill** as protection from slow-spreading robots.",
+        "She blames **city rule-makers**, not technology itself.",
+        "She trusts **Daniel's judgement** about mechanical work staying needed."
+      ],
       "actions": [
-        "cut-spending",
-        "wait-and-see",
-        "keep-going"
+        "keep-going",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Keep gathering and lambing on the hill at Hillside",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Hold a small chapel wedding with Daniel next August",
+          "tag": "family-plans"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's wrong, people weren't made to sit idle. I'd say families and churches will have to hold together. And I'd say whoever pushed this through should answer for it."
+          "text": "Two years. And robots in 2031. I don't like this one at all."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's wrong and it shouldn't be allowed to happen so fast. I'd say it at chapel and at the market, that working people built this country and they're being thrown aside. I'd vote for whoever promised to protect farming."
         },
         {
           "speaker": "interviewer",
@@ -174,7 +264,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I'd be terrified. Daniel's mill would go too, it's all machines already. We'd have nothing, no jobs, less than a month's money, and no idea what to do."
+          "text": "Off the record, I think by 2031 Mr Gower could have robots on the hill and drones gathering sheep. He wouldn't want to, he loves his dog work, but if the neighbours do it, he'd have to. Then there's no job for me, and I've nothing else I know how to do."
         },
         {
           "speaker": "interviewer",
@@ -182,7 +272,7 @@
         },
         {
           "speaker": "persona",
-          "text": "We'd move in with Daniel's parents, they've got the spare room and a bit of land. I'd stop spending on anything but food. I'd lean on chapel and family, and we'd probably put off getting married, because you can't start a home with nothing."
+          "text": "I'd keep working while I could. Daniel and I might put off having children, because how do you start a family when you don't know where the money comes from. I'd lean on chapel and my parents if it came to it."
         },
         {
           "speaker": "interviewer",
@@ -190,48 +280,91 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. Losing sleep, praying a lot."
+          "text": "Frightened. And angry, more angry than frightened maybe."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you wouldn't want the government paying people to sit at home. In this picture, would you take that money?"
+          "text": "The thinking AI arrives in 2028 and robots three years later. What does that gap mean for you?"
         },
         {
           "speaker": "persona",
-          "text": "I'd hate it, but yes, if it was that or not eating. I'd still say it's not right. I'd want it to come with some kind of work, even if it's helping at the school."
+          "text": "For me the first three years don't change much, I don't do the planning, Mr Gower does. Then it all goes at once in 2031. So I'd have three years of waiting for something bad to come down the lane."
         },
         {
           "speaker": "interviewer",
-          "text": "What would chapel do?"
+          "text": "You said you'd put off children. Is that something you and Daniel have talked about?"
         },
         {
           "speaker": "persona",
-          "text": "Chapel would do what it always does, food parcels, people taking turns to help. That's what community is for. But it can't feed a whole village forever."
+          "text": "Not really, we've only talked about the wedding. But if I didn't know whether we'd have work, I'd want to wait. My mother had me at twenty-five, and I'd always thought I'd be the same."
         }
       ],
-      "say": "It's wrong, people weren't made to sit idle. Families and churches will have to hold together, and whoever pushed this through should answer for it.",
-      "think": "I'd be terrified, because Daniel's mill would go too. We'd have no jobs, less than a month's money and no idea what to do.",
-      "do": "Moves in with Daniel's parents and spends only on food. Leans on chapel and family, and puts off getting married until they can start a home.",
-      "feel": "Alarmed, losing sleep and praying a lot.",
+      "say": [
+        "I'd say it's **wrong** for change to come so fast.",
+        "I'd say **working people** are being thrown aside.",
+        "I'd **vote** for whoever promised to protect farming."
+      ],
+      "think": [
+        "By 2031 Mr Gower might have **robots and drones** gathering sheep.",
+        "Then there's **no job** for me and nothing else I know."
+      ],
+      "do": [
+        "Keep **working** at Hillside while I can.",
+        "Put off **having children** with Daniel.",
+        "Lean on **chapel and my parents** if needed."
+      ],
+      "feel": [
+        "**Frightened**, and even more **angry**."
+      ],
       "mood": "alarmed",
-      "quote": "Chapel would do what it always does, food parcels, people taking turns to help.",
-      "fieldNote": "Beth would accept government money only if it came to that, and she'd still say it's not right without some work attached. Her first moves are family and faith: Daniel's parents' spare room and the chapel. Putting off the wedding shows how deep the shock would go.",
+      "quote": "I'd have three years of waiting for something bad to come down the lane.",
+      "fieldNote": [
+        "Beth sees the **three-year gap** as dread, not opportunity.",
+        "She'd **delay children**, a big change to her life plans.",
+        "Her anger is aimed at **people in power** who don't work the land."
+      ],
       "actions": [
+        "keep-going",
+        "family-plans",
         "seek-support",
-        "cut-spending",
-        "move",
-        "family-plans"
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Keep shepherding at Hillside until robots arrive",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put off starting a family with Daniel",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Lean on chapel friends and her parents for help",
+          "tag": "seek-support"
+        },
+        {
+          "text": "Vote for candidates who promise to protect farming",
+          "tag": "politics"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say the same, it's wrong, but at least there's time to get ready. I'd tell young ones to learn a trade with their hands, something people still want done by a person. I'd want the government to back apprenticeships, not handouts."
+          "text": "Five years for the thinking machines, eight for the robots. Better, still not good."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's time for people to stand up for what matters. I'd say families and communities should look after their own. I'd still say it's too fast."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +372,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think it still ends with me out of work. Five years just means it's slower. I'm not someone who changes easily, so I'd probably still be at the Morrows when it happens."
+          "text": "Eight years is long enough for me to have a baby and get through the hard early years. I'd be thirty-five when the robots come. I don't know what I'd do then, maybe help Daniel at the garage."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +380,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd try to save, even a little every week. Daniel and I might get married sooner, so we're settled before it all changes. I'd keep working and keep my head down."
+          "text": "I'd keep shepherding, and we'd go ahead with the wedding and probably a family. I'd start saving a little more each month, even a tenner. In a few years, I'd ask Daniel to teach me some of the garage work."
         },
         {
           "speaker": "interviewer",
@@ -255,47 +388,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed still, but quieter. Like a storm you can see on the hills."
+          "text": "Worried, but there's room to breathe. I'd pray on it."
         },
         {
           "speaker": "interviewer",
-          "text": "What would five years let you do that two wouldn't?"
+          "text": "You mentioned prayer. Does faith change how you'd face this?"
         },
         {
           "speaker": "persona",
-          "text": "Time to get married and settled, maybe. And time to put a bit by. Two years we'd be scrambling, five we'd at least have a home together."
+          "text": "It does. I'd trust that there's a plan for us, even if I can't see it. That doesn't mean sitting on my hands, though."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you think about learning anything new?"
+          "text": "Would working at Daniel's garage suit you?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe something with my hands, like baking. My nan taught me. But I'm not someone who goes back to school, I'd be scared of it."
+          "text": "I'm not sure. I like animals, not oily engines. But I'd rather be with Daniel at the garage than on benefits, that's for certain."
         }
       ],
-      "say": "It's wrong, but at least there's time to get ready. Young people should learn a trade with their hands, and the government should back apprenticeships, not handouts.",
-      "think": "It still ends with me out of work, just slower. I don't change easily, so I'd probably still be at the Morrows when it happens.",
-      "do": "Saves a little each week and may marry Daniel sooner so they're settled first. Keeps working quietly at the Morrows.",
-      "feel": "Still alarmed but quieter, like a storm visible on the hills.",
-      "mood": "alarmed",
-      "quote": "Two years we'd be scrambling, five we'd at least have a home together.",
-      "fieldNote": "Five years changes Beth's family plans more than her work plans: she'd marry sooner to be settled. She admits she'd likely still be at the Morrows when AGI lands. Baking from her nan's teaching is a faint possibility she's scared to pursue.",
+      "say": [
+        "I'd say there's time to **stand up** for what matters.",
+        "I'd say **families and communities** should look after their own."
+      ],
+      "think": [
+        "Eight years lets me have a **baby** first.",
+        "When robots come, I might **help Daniel** at the garage."
+      ],
+      "do": [
+        "Go ahead with the **wedding** and probably a family.",
+        "Save a **tenner a month** more.",
+        "Ask Daniel to teach me some **garage work** in a few years."
+      ],
+      "feel": [
+        "**Worried**, but with room to breathe and pray."
+      ],
+      "mood": "anxious",
+      "quote": "I'd rather be with Daniel at the garage than on benefits, that's for certain.",
+      "fieldNote": [
+        "Beth uses the extra time to keep **family plans** on track.",
+        "Her **faith** gives her comfort but not passivity.",
+        "She'd pick **family work** over government support."
+      ],
       "actions": [
+        "keep-going",
         "save-more",
-        "family-plans",
-        "keep-going"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Keep shepherding at Hillside through the next lambings",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save an extra ten pounds a month",
+          "tag": "save-more"
+        },
+        {
+          "text": "Learn basic garage work from Daniel in a few years",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough for the government and the churches to make a proper plan. I'd say keep work for people, apprenticeships, family businesses. Don't let the big companies take everything."
+          "text": "Ten years, robots in 2039. I'd be forty, with children at school, God willing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is enough to get it right, so people should get on with it. I'd still say hands-on work matters. People should be proud of it."
         },
         {
           "speaker": "interviewer",
@@ -303,7 +474,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think we'd be all right for a while. But I'm not really planning for 2036, I'm planning for next year. It's too far away to think about, honestly."
+          "text": "Honestly, by then Mr Gower will have retired and I don't know who'll have the farm. That worries me more than robots. Ten years feels far away."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +482,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year, nothing really changes. I'd keep working, keep saving for our own house, maybe get married next year. I'd wait to see what the Morrows do before thinking about anything else."
+          "text": "I'd carry on, get married, start a family. Maybe ask Mr Gower about renting a few fields myself one day. Daniel and I would try to save for a deposit."
         },
         {
           "speaker": "interviewer",
@@ -319,37 +490,67 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but I can put it away most days."
+          "text": "Uneasy, not scared. It's a long way off."
         },
         {
           "speaker": "interviewer",
-          "text": "With ten years, what about children?"
+          "text": "What happens when Mr Gower retires?"
         },
         {
           "speaker": "persona",
-          "text": "We'd want them, a couple. Ten years means they'd be young when it happens. I'd want them to grow up knowing farm work, even if there's not much left, because it teaches you things."
+          "text": "His daughter Sian doesn't want the sheep, she's a teacher. The farm might be sold, or let to a big neighbour. That's what scares me, not machines."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything you'd want the Morrows to do with that time?"
+          "text": "Would you ever learn the new technology in that time?"
         },
         {
           "speaker": "persona",
-          "text": "Stay as long as they can, the old way. And if they get a robot, keep a person on for the calves. I'd be happy just doing the calves."
+          "text": "If I had to, I suppose. But I'd want someone to show me, not a screen. Mr Gower taught me sheep by standing next to me, and that's how I learn."
         }
       ],
-      "say": "Ten years is enough for the government and the churches to make a proper plan. Keep work for people through apprenticeships and family businesses, and don't let big companies take everything.",
-      "think": "We'd be all right for a while, but I'm planning for next year, not 2036. It's too far away to think about.",
-      "do": "Keeps working and saving for a house, perhaps marrying Daniel next year. Waits to see what the Morrows do before considering any change.",
-      "feel": "Anxious, though she can put it away most days.",
-      "mood": "anxious",
-      "quote": "And if they get a robot, keep a person on for the calves. I'd be happy just doing the calves.",
-      "fieldNote": "Beth says plainly she can't plan for 2036, so ten years mostly lets her carry on. She hopes the farm keeps a person for the calves, which is the part of the job she loves. She still wants children raised knowing farm work.",
+      "say": [
+        "I'd say ten years is enough to **get it right**.",
+        "I'd say **hands-on work** matters and people should be proud of it."
+      ],
+      "think": [
+        "Mr Gower will have **retired** by then, and I don't know who'll farm Hillside.",
+        "His retirement worries me more than **robots** do.",
+        "Ten years feels **far away**."
+      ],
+      "do": [
+        "Get married and **start a family**.",
+        "Ask Mr Gower about **renting a few fields** one day.",
+        "Save toward a **house deposit** with Daniel."
+      ],
+      "feel": [
+        "**Uneasy**, not scared."
+      ],
+      "mood": "uneasy",
+      "quote": "Mr Gower taught me sheep by standing next to me, and that's how I learn.",
+      "fieldNote": [
+        "With a decade, Beth's worry is **farm succession**, not machines.",
+        "She'd learn tech only **in person**, not from a screen.",
+        "Her goals are **family** and maybe renting her own fields."
+      ],
       "actions": [
         "keep-going",
-        "save-more",
         "family-plans",
-        "wait-and-see"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Carry on shepherding at Hillside after the wedding",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Start a family with Daniel after the wedding",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Save toward a house deposit with Daniel",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -360,7 +561,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because there'd be no time to get married or settled. What would help is real work, apprenticeships, help for family farms to keep people on, not money for sitting at home."
+      "text": "AGI by 2028, because we'd be newly married and both not knowing where the money comes from. What would help is apprenticeships that are real, where someone stands next to you, and help for young families who want to stay working on the land, not handouts."
     },
     {
       "speaker": "interviewer",
@@ -368,11 +569,22 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about chapel or the village. When the work goes, the village goes, the shop, the school. That's what I'd miss most."
+      "text": "You could have asked about the dog. My sheepdog Nell is worth more than any machine to me. I'd want her to have work as long as I do."
     }
   ],
-  "headlineQuote": "When the work goes, the village goes, the shop, the school.",
-  "portrait": "Beth Baker is 27 and works for the Morrows at Hollins Farm, a four-generation dairy and oat farm, where she's good with the calves and still slow on the tractor. She rents a terrace near the chapel with Daniel, who works at the feed mill, on less than a month's savings. She has never used AI and doesn't want to, and she blames big city companies and the government that lets them in, never the farmers. She is calm in the plateau, anxious from steady disruption on, and alarmed by AGI in two or five years, with her answers centred on family, chapel and marriage plans. She'd accept public money only if it came with work, and says she plans for next year rather than 2036.",
-  "biggestWorry": "AGI by 2028 worries her most, because there would be no time to get married or settled before both she and Daniel lost their jobs.",
-  "whatWouldHelp": "Real work rather than payments for staying home: apprenticeships and help for family farms to keep people on."
+  "headlineQuote": "My sheepdog Nell is worth more than any machine to me.",
+  "portrait": [
+    "Beth is a **27-year-old shepherd** at Hillside, a hill sheep farm, engaged to Daniel, a mechanic.",
+    "She **never uses AI** and keeps the flock book by hand.",
+    "Her values are **faith, family** and no debt, and she distrusts city rule-makers.",
+    "She's most frightened by **AGI by 2028**, which would make her delay children.",
+    "With more time, her worry is **Mr Gower retiring** and the farm being sold."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, newly married with no idea where the money would come from."
+  ],
+  "whatWouldHelp": [
+    "Real **apprenticeships** where someone stands beside you.",
+    "Support for **young families** to stay working on the land."
+  ]
 }

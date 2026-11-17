@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We aren't tied to any company, union, party or government, and nothing you say will be linked to your name. Could you start by walking me through a normal working day?"
+      "text": "Thanks for seeing me, Emeka. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or parties. Anything you say stays confidential. What's a normal working day for you?"
     },
     {
       "speaker": "persona",
-      "text": "I'm head stockman on the Ashcombe Estate. It's a big place, 1,200 hectares, mostly wheat, and about 800 sows living outdoors in huts across the chalk fields. I'm out at six checking water and feed, then it's farrowing, moving pigs, sorting out whoever's off sick. I've got four people under me."
+      "text": "I'm head stockman at Haldane Farm, 420 hectares, about 250 beef cattle and the rest in wheat and grass. Old Mr Haldane owns it, he's 68, and I've worked for him since I was 19, part-time through my degree and full-time after. I'm up at half five, feed and check the cattle, then whatever the day throws at me, fencing, the silage clamp, the vet."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like most about it, and what wears you out?"
+      "text": "What do you like about it, and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "I like pigs. People think they're dirty but they're cleaner than most people's cars, and smarter. I like being outside in all weather. What wears me out is the estate office sending me emails I don't read. I've got a basic phone and I like it that way. My grandmother left me her cottage on Station Road, so I'm not chasing money, I just want to do the job."
+      "text": "I like that I know exactly where I stand. Mr Haldane trusts me, the cattle are the best in the district, and I go home tired in a good way. What wears me out is the uncertainty about what happens when he retires, because none of his kids want the farm."
     }
   ],
   "scenarios": {
@@ -36,11 +36,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say, there you go then. At the pub after football I'd tell the lads it was a lot of noise. I don't go online much, so that's about it."
+          "text": "Right. So, more or less the same as now."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I didn't expect much and I wasn't wrong. I don't use any of it anyway, never have. At the pub I'd say the farm's the same as it was, and leave it there."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means nothing changes for me, and I'm happy with that. A computer can't tell you a sow is about to lie on her piglets. You hear it in her grunt."
+          "text": "Privately, it's not AI that worries me, it's Mr Haldane selling up. If a big outfit buys it, they'll bring their own manager and maybe their own stockman. I'd find work, there's plenty round here, but I'd lose the best job I've had."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on. Same job, same cottage, same Sunday football. I'd keep putting a bit by each month, like I always have. Maybe redo the cottage roof next summer."
+          "text": "I'd keep doing what I do and keep saving. Ruth and I live in the farm cottage, and I own a small house in town that I rent out, so I'd keep that ticking over. And I'd finally ask Mr Haldane straight out what his plans are."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +72,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Fine. Calm. A bit like nothing happened, because nothing did."
+          "text": "Uneasy. Not about AI, about the farm changing hands."
         },
         {
           "speaker": "interviewer",
-          "text": "The estate office sends you emails you don't read. Does that change in this picture?"
+          "text": "Why haven't you asked Mr Haldane already?"
         },
         {
           "speaker": "persona",
-          "text": "Probably not. They'll keep sending them and I'll keep ringing Gill in the office to ask what they say. She sighs at me but she likes me really."
+          "text": "Because I don't like asking things I might not want the answer to. He's not a big talker either. We've worked side by side for eight years and never once talked about money."
         },
         {
           "speaker": "interviewer",
-          "text": "So what's the worst part of this picture for you?"
+          "text": "What does Ruth think?"
         },
         {
           "speaker": "persona",
-          "text": "Honestly, there isn't one. Maybe that the people who sold all this hype don't pay for it. But that's not my business, I've got pigs."
+          "text": "Ruth thinks I should've asked two years ago. She works the counter at the farm merchant's in town, so she hears every bit of gossip about who's selling. Ruth says Haldane Farm comes up every time someone with a big tractor walks into the merchant's."
         }
       ],
-      "say": "There you go then, it was a lot of noise. I'd say that at the pub after football and leave it there.",
-      "think": "Nothing changes for me and I'm happy with that. A computer can't tell you a sow is about to lie on her piglets, because you hear it in her grunt.",
-      "do": "Carries on with the same job, cottage and Sunday football, and keeps saving a little each month. Plans to redo the cottage roof next summer.",
-      "feel": "Calm, as if nothing happened.",
-      "mood": "calm",
-      "quote": "A computer can't tell you a sow is about to lie on her piglets. You hear it in her grunt.",
-      "fieldNote": "Emeka is content and not looking for change. His paid-off cottage removes most money pressure, so his interest is the work itself. He avoids technology but in a relaxed way, leaning on a colleague in the office rather than fighting it.",
+      "say": [
+        "I'd say I **expected little** from AI and was right.",
+        "I'd tell people at the pub the **farm's the same**."
+      ],
+      "think": [
+        "Privately I fear **Mr Haldane selling** the farm more than any AI.",
+        "A new owner could bring **their own stockman**, ending my best job."
+      ],
+      "do": [
+        "Keep working and **saving** at the usual rate.",
+        "Keep the **rental house** in town let and maintained.",
+        "Finally ask Mr Haldane about his **retirement plans**."
+      ],
+      "feel": [
+        "He feels **uneasy** about the farm **changing hands**."
+      ],
+      "mood": "uneasy",
+      "quote": "Ruth says Haldane Farm comes up every time someone with a big tractor walks into the merchant's.",
+      "fieldNote": [
+        "His main pressure is **succession** at the farm, unrelated to AI.",
+        "He avoids hard **conversations**, even after eight years.",
+        "A rental house and savings give him a solid **fallback**.",
+        "He has never used **AI tools** and feels no pull to start."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Ask Mr Haldane directly about selling or handing on the farm",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Keep saving monthly and keep the town house rented out",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it makes sense for the big estates and less sense for the small ones. You'd have to see what actually works. I'm not one for big opinions."
+          "text": "Thinking tasks. Buying, booking, answering customers. That's Ruth's job, more or less."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it doesn't touch cattle much, which is true. I'd probably say the computers can have the paperwork, I never liked it. I wouldn't say much online, I'm not on there."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +154,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think I'd be fine, because they'll always need someone who knows pigs. But I'd hate the screens. They'd want me reading data from collars on the sows and that's not why I do this."
+          "text": "Off the record, it's Ruth I'd think about. The merchant's counter is all orders, stock checks and answering farmers' questions, and that's exactly what they're saying the software takes. My job's fine for now, robots for cattle are a long way off."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +162,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait. I wouldn't do anything in the first year except keep doing my job well. If they bring in new kit, I'd let the younger ones learn it and stick to what I'm good at."
+          "text": "I'd keep my head down and keep going at Haldane's. I'd talk Ruth into saving her whole wage for a while, and we'd live on mine, which we can. And I'd wait and see what the merchant's does before panicking."
         },
         {
           "speaker": "interviewer",
@@ -126,46 +170,86 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like a new manager's coming and you don't know what they're like."
+          "text": "Anxious, for Ruth. Not for me."
         },
         {
           "speaker": "interviewer",
-          "text": "What kind of kit would turn up first?"
+          "text": "Would you learn any of the new tools, if Mr Haldane asked?"
         },
         {
           "speaker": "persona",
-          "text": "Feeding robots in the farrowing huts, probably, and cameras watching the pigs. The estate manager, Clive, already went to a show about it. He came back with a brochure and a hat."
+          "text": "He won't ask, he's worse than me. If a new owner made me, I'd do the minimum, record the weights and that's it. I'm good at cattle, not screens."
         },
         {
           "speaker": "interviewer",
-          "text": "If they asked you to learn the new kit, would you?"
+          "text": "What would you tell Ruth if her hours were cut?"
         },
         {
           "speaker": "persona",
-          "text": "If they made me, yes, but slowly and grumbling. I'd get Josie, she's 20 and good with phones, to show me. I'd try to keep it to what I actually need."
+          "text": "I'd tell her we're fine for money, which is true. I'd also tell her to look at the vet practice, they always need people on the desk who know farmers. I'm not sure that desk survives either, mind."
         }
       ],
-      "say": "It makes sense for the big estates and less for the small ones, and you'd have to see what actually works. I'm not one for big opinions.",
-      "think": "I think I'd be fine, because they'll always need someone who knows pigs. But I'd hate the screens and reading data from collars on the sows.",
-      "do": "Waits and does nothing new in the first year beyond doing his job well. Lets younger workers learn any new machines and would learn only what he must, with help from a young colleague.",
-      "feel": "Uneasy, like waiting for a new manager.",
-      "mood": "uneasy",
-      "quote": "He came back with a brochure and a hat.",
-      "fieldNote": "He's pragmatic and unbothered in public and mildly uneasy in private. The threat he sees is to the kind of work he likes, not to his income. He'd adapt only if pushed, and leans on a younger colleague for help.",
+      "say": [
+        "I'd say this **barely touches cattle**, which is true.",
+        "I'd say computers can have the **paperwork** I never liked."
+      ],
+      "think": [
+        "Privately I worry about **Ruth's counter job** at the merchant's.",
+        "Cattle **robots** feel a long way off for my own work."
+      ],
+      "do": [
+        "Keep working at Haldane's and **keep my head down**.",
+        "Have Ruth **save her whole wage** while we live on mine.",
+        "**Wait and see** what the merchant's does before acting."
+      ],
+      "feel": [
+        "He feels **anxious** for Ruth, but **not for himself**."
+      ],
+      "mood": "anxious",
+      "quote": "I'm good at cattle, not screens.",
+      "fieldNote": [
+        "The household risk sits with his partner's **ordering and counter** work.",
+        "He'd do the **minimum** with any tool a new owner forced on him.",
+        "Strong savings let them live on **one wage** comfortably.",
+        "He suggests a job for Ruth while **doubting** it lasts."
+      ],
       "actions": [
-        "wait-and-see",
-        "keep-going"
+        "keep-going",
+        "save-more",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Carry on feeding and checking Haldane's cattle as usual",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Bank Ruth's whole wage and live on his own pay",
+          "tag": "save-more"
+        },
+        {
+          "text": "Hold off on big decisions until the merchant's changes are clear",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a big change and nobody knows how it'll go. I wouldn't pretend to know. I'd say keep your head down and see."
+          "text": "Two years. And robots by 2031. That's the farm gone, isn't it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd probably say I don't believe it, at first. Then I'd say what everyone would say, that the government had better have a plan. I'm not one for marches, but I'd want someone to be in charge."
         },
         {
           "speaker": "interviewer",
@@ -173,7 +257,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think that's me out. If a robot can move pigs and do farrowing, the estate doesn't need a head stockman. They need someone to fix the robot, and that's not me."
+          "text": "Privately, I think Ruth's job goes in 2028 and Mr Haldane sells to some robot outfit by 2030 or 2031. I'd be 31 with nothing I know how to do except cattle, and the cattle would be done by machines. The rental house and the savings would keep us going a few years, but I'd have no idea what comes after."
         },
         {
           "speaker": "interviewer",
@@ -181,7 +265,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd cut back straight away: no new van, no holiday. I'd look at renting out the spare room in the cottage for some income. And I'd ring my brother Femi, he's in the city and knows more about this sort of thing than me."
+          "text": "First thing, I'd stop spending on anything we don't need, the new truck I've been looking at, the holiday. I'd save every penny. And then, honestly, I'd keep working and wait, because I don't know what else I'd do."
         },
         {
           "speaker": "interviewer",
@@ -189,48 +273,86 @@
         },
         {
           "speaker": "persona",
-          "text": "Worried. Properly worried, for the first time. It's not the money, it's what I'd do all day."
+          "text": "Alarmed. Lying awake, I'd say."
         },
         {
           "speaker": "interviewer",
-          "text": "You've got the cottage paid off. How much does that help?"
+          "text": "You said you'd wait. Is there anything that would make you move sooner?"
         },
         {
           "speaker": "persona",
-          "text": "A lot. No rent, no mortgage, so I need maybe a third of what I earn to live. With what I've saved I could go three years without work. That's why I'm worried and not panicking."
+          "text": "If Mr Haldane told me he was selling, I'd go looking that week. There'd be other farms for a year or two. I just don't know if moving farms helps when they're all getting the same robots."
         },
         {
           "speaker": "interviewer",
-          "text": "Two years isn't long. Would you do anything before it arrived?"
+          "text": "What's the worst moment you can picture?"
         },
         {
           "speaker": "persona",
-          "text": "Not much, honestly. I'm not someone who jumps. I'd probably keep working and hope Clive needs me longer than the brochure says. Maybe that's daft."
+          "text": "Standing at the gate watching a machine feed my cattle would be the worst moment I can picture. The new owner would be telling me it does it cheaper than me. I've been at Haldane's since I was 19, and that would be the end of the only job I've ever wanted."
         }
       ],
-      "say": "It's a big change and nobody knows how it'll go, so I wouldn't pretend to. I'd tell people to keep their heads down and see.",
-      "think": "I think that's me out, because if a robot can move pigs and do farrowing the estate doesn't need a head stockman. They'd need someone to fix the robot, and that's not me.",
-      "do": "Cuts spending straight away, dropping a new van and a holiday, and looks at renting out a spare room. Rings his brother in the city for advice and otherwise keeps working.",
-      "feel": "Properly worried for the first time, more about having nothing to do than about money.",
-      "mood": "anxious",
-      "quote": "It's not the money, it's what I'd do all day.",
-      "fieldNote": "His paid-off cottage and savings give him about three years without work, which keeps him from panic. The real fear is losing purpose. He admits his plan is mostly hoping, and calls it daft himself.",
+      "say": [
+        "I'd say at first I **don't believe** it.",
+        "I'd say the **government** had better have a plan, though I don't march."
+      ],
+      "think": [
+        "Privately I expect **Ruth's job** gone in 2028 and the farm sold by **2031**.",
+        "At 31, I'd only know **cattle**, and machines would do that."
+      ],
+      "do": [
+        "Cancel the **new truck** and the **holiday**.",
+        "**Save every penny** we can from both wages.",
+        "Keep working and **wait**, moving only if Mr Haldane sells."
+      ],
+      "feel": [
+        "He feels **alarmed**, **lying awake** at night."
+      ],
+      "mood": "alarmed",
+      "quote": "Standing at the gate watching a machine feed my cattle would be the worst moment I can picture.",
+      "fieldNote": [
+        "Both household incomes fall in sequence: **Ruth first**, then him.",
+        "He has savings and a house but **no plan** for what comes after.",
+        "His resistance shows as **waiting**, not as protest.",
+        "He sees no gain in **switching farms** if all automate."
+      ],
       "actions": [
         "cut-spending",
-        "side-income",
-        "seek-support",
-        "keep-going"
+        "save-more",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Cancel the new truck purchase and this year's holiday",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Save both wages in full where possible",
+          "tag": "save-more"
+        },
+        {
+          "text": "Stay at Haldane's until Mr Haldane says he's selling",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is something, at least. People can get ready. I'd still say I don't know how it'll go, because I don't."
+          "text": "Five years. And the robots by 2034. Bit more breathing room."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we've got a bit of time, so use it properly. I'd say it to the lads I play football with, because half of them work on farms. I'd still not be posting about it."
         },
         {
           "speaker": "interviewer",
@@ -238,7 +360,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd see it coming and probably still do nothing about it till late. That's how I am. But with five years I could set something up on the side, at my own pace."
+          "text": "Off the record, I'd be 34 when the robots come for cattle work. That's enough time for Mr Haldane to retire and sell, and enough time for me to find something they won't automate first. I don't know what that is yet, which bothers me."
         },
         {
           "speaker": "interviewer",
@@ -246,7 +368,7 @@
         },
         {
           "speaker": "persona",
-          "text": "There's a paddock behind the cottage, a bit over a hectare. I'd put a few pigs of my own on it and sell sausages and pork to people in the village. Small, but mine. And I'd keep saving."
+          "text": "In the first year I'd look at the livestock inspector jobs with the council. Somebody has to check animal welfare on all these robot farms, and they'd want people who know cattle. I'd keep saving and I'd tell Ruth to start looking for something before her job goes, not after."
         },
         {
           "speaker": "interviewer",
@@ -254,47 +376,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not as bad as the fast one. More like knowing winter's coming."
+          "text": "Anxious. Less than the fast one, but still there."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you do with the extra three years, compared with the fast one?"
+          "text": "Would becoming an inspector mean learning computer systems?"
         },
         {
           "speaker": "persona",
-          "text": "Time to get the paddock going, really. In two years I wouldn't have bothered. In five, I'd have a few customers and a name by the time the estate didn't need me."
+          "text": "Probably, yes, and I'd hate that part. I'd do it if it kept me with cattle. That's the trade I'd have to make."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything that would make you change your mind about learning the robots?"
+          "text": "Is that a contradiction, given you've never used any of these tools?"
         },
         {
           "speaker": "persona",
-          "text": "If it was learn it or leave pigs, maybe. Pigs are what I know. But I don't think a few pigs on a hectare needs a robot."
+          "text": "It is, I know. I'd rather learn one computer screen than lose the cattle altogether. A screen I can live with, a life without cattle I'm not sure I can."
         }
       ],
-      "say": "Five years is something at least, and people can get ready. I'd still say I don't know how it'll go, because I don't.",
-      "think": "I'd see it coming and probably still do nothing till late, because that's how I am. But with five years I could set something up on the side at my own pace.",
-      "do": "Puts a few pigs of his own on the paddock behind his cottage and sells sausages and pork in the village. Keeps saving while working at the estate.",
-      "feel": "Uneasy, like knowing winter is coming.",
-      "mood": "uneasy",
-      "quote": "In two years I wouldn't have bothered.",
-      "fieldNote": "The extra time turns into a small, low-tech plan that suits him: his own pigs on his own land. He's honest that he usually leaves things late. He'd learn robots only as a last resort to stay with pigs.",
+      "say": [
+        "I'd tell my **football mates** on farms to use the time properly.",
+        "I'd keep it **offline**, as usual."
+      ],
+      "think": [
+        "Privately at 34 robots arrive, and the **farm may sell** before that.",
+        "I don't yet know what job **won't be automated**, which bothers me."
+      ],
+      "do": [
+        "Apply for **livestock inspector** jobs with the council.",
+        "Keep **saving** each month as before.",
+        "Urge Ruth to find **new work** before hers goes."
+      ],
+      "feel": [
+        "He feels **anxious**, but **less** than in the fast picture."
+      ],
+      "mood": "anxious",
+      "quote": "I'd rather learn one computer screen than lose the cattle altogether.",
+      "fieldNote": [
+        "Extra time lets him find a **cattle-linked** role that needs human judgement.",
+        "He accepts learning **one system** as the price of staying with animals.",
+        "He names his own **contradiction** openly.",
+        "Still no wider plan; his thinking stays **close to home**."
+      ],
       "actions": [
-        "side-income",
-        "save-more",
-        "keep-going"
+        "change-job",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Apply for council livestock inspector jobs within the year",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep saving each month from both wages",
+          "tag": "save-more"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is plenty, nobody needs to panic. I'd probably say that a few times at the pub."
+          "text": "Ten years. That's a different thing. I'd be nearly 40."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's time, so no point panicking. People would have plenty to say, and I'd mostly listen. That's how I am."
         },
         {
           "speaker": "interviewer",
@@ -302,7 +458,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years feels far away. I'd keep doing the job and think about it in five."
+          "text": "Privately, I think ten years is long enough for Mr Haldane to sell and for me to have a go at buying some of it. Land's dear, but with the house in town and the savings, maybe 50 hectares and part of the herd. Robots or no robots, it's better to own the land than work it for someone."
         },
         {
           "speaker": "interviewer",
@@ -310,7 +466,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing straight away. Keep working, keep saving. Maybe start the pigs in the paddock in a few years, when it looks real."
+          "text": "I'd ask Mr Haldane whether he'd sell me the bottom fields and some cows when he retires, and give him a number. I'd keep working as normal till then. The rest I'd leave until it's closer, honestly."
         },
         {
           "speaker": "interviewer",
@@ -318,36 +474,67 @@
         },
         {
           "speaker": "persona",
-          "text": "Mostly calm, a bit uneasy at the back. Ten years is a long time in pigs."
+          "text": "Uneasy. It's there, but it's a long way off."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd be 37. What does that look like?"
+          "text": "Would you use robots on your own 50 hectares?"
         },
         {
           "speaker": "persona",
-          "text": "Same cottage, probably. Maybe married, I don't know. Still with pigs, I hope, even if it's just mine."
+          "text": "Not at first. Maybe once everyone else has them and they're cheap and they work. I'm not going to be the first, I never am."
         },
         {
           "speaker": "interviewer",
-          "text": "Some people say ten years makes them relax too much. Is that you?"
+          "text": "What would make you more confident?"
         },
         {
           "speaker": "persona",
-          "text": "Probably, yes. I'm not going to pretend. I'd leave it till it was on top of me. But I'd have the cottage and the savings, so I'd be all right."
+          "text": "Seeing it work on someone else's farm for a couple of years. Ruth says I'm the last man in the district to get a smartphone, and she's right."
         }
       ],
-      "say": "Ten years is plenty and nobody needs to panic. I'd probably say that a few times at the pub.",
-      "think": "Ten years feels far away, so I'd keep doing the job and think about it in five. I'd likely leave it till it was on top of me.",
-      "do": "Does nothing new straight away and keeps working and saving. Thinks about starting his own pigs in the paddock in a few years, once AGI looks real.",
-      "feel": "Mostly calm with some unease in the background.",
+      "say": [
+        "I'd say there's **time** to sort things, so no point **panicking**.",
+        "I'd mostly **listen** while others at the pub talked it through."
+      ],
+      "think": [
+        "Privately ten years gives a chance to **buy part** of Haldane Farm.",
+        "**Owning land** beats working it for someone, robots or not."
+      ],
+      "do": [
+        "Offer Mr Haldane a price for the **bottom fields** and some cows.",
+        "Keep working at Haldane's **as normal** until then.",
+        "Leave **robot decisions** until others have proved them."
+      ],
+      "feel": [
+        "He feels **uneasy**, but it's a **long way off**."
+      ],
       "mood": "uneasy",
-      "quote": "Ten years is a long time in pigs.",
-      "fieldNote": "With a decade he relaxes completely and admits he'd leave it late. His cottage and savings make that a reasonable choice for him rather than reckless. He pictures his future with pigs, even if only his own.",
+      "quote": "Robots or no robots, it's better to own the land than work it for someone.",
+      "fieldNote": [
+        "A long horizon finally prompts the **succession talk** he's avoided.",
+        "His assets make a **50-hectare** purchase plausible.",
+        "He'd adopt robots **last**, after seeing them proven.",
+        "The decade shifts his worry from job loss to **ownership**."
+      ],
       "actions": [
-        "wait-and-see",
+        "invest",
         "keep-going",
-        "save-more"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Offer Mr Haldane a price for the bottom fields and cows",
+          "tag": "invest"
+        },
+        {
+          "text": "Keep running Haldane's cattle as normal meanwhile",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait until neighbours prove robots work before buying any",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -358,7 +545,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The fast one. Not for the money, for the days. I'd have nothing to get up for. What would help is someone keeping a few real jobs with animals, where a person's still wanted, even if it pays less."
+      "text": "The 2028 one. Ruth's job first, then mine, and the farm sold before I've worked out anything else. What would help is time, really, and some help for young farmers to buy land, because then at least we'd own something when the robots came."
     },
     {
       "speaker": "interviewer",
@@ -366,11 +553,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe ask about the pigs. Everyone asks about the people. If it's all robots, does anyone still go out at night when one's farrowing badly? I'd want to know someone does."
+      "text": "Maybe about the older farmers like Mr Haldane. They're the ones deciding what happens to the land. Whoever buys the old farms decides who gets to work on them."
     }
   ],
-  "headlineQuote": "If it's all robots, does anyone still go out at night when one's farrowing badly?",
-  "portrait": "Emeka Olsen is a 27-year-old head stockman on a large estate with 800 outdoor sows, and one of the best pig men around. He owns his late grandmother's cottage outright, uses a basic phone and has no wish to learn new technology. He's calm or mildly uneasy in most pictures because his costs are low, but the fast AGI picture worries him properly, mainly because he'd have nothing to do all day. Given more time, his plan is small and his own: a few pigs on the paddock behind his cottage, though he admits he'd likely leave it late.",
-  "biggestWorry": "AGI by 2028 worries him most, not for the money but because he'd have nothing to get up for.",
-  "whatWouldHelp": "Keeping some real jobs with animals where a person is still wanted, even if they pay less."
+  "headlineQuote": "Whoever buys the old farms decides who gets to work on them.",
+  "portrait": [
+    "Emeka is 27, **head stockman** at an old family beef farm, living with Ruth, who works a **merchant's counter**.",
+    "He has never used **AI tools** and prefers cattle to screens.",
+    "His biggest fear before AI is the owner **selling the farm** with no successor.",
+    "He reacts to change by **saving and waiting**, and avoids hard conversations.",
+    "With more time he plans to **buy land** and maybe become a livestock **inspector**."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, with Ruth's job gone first, then his, and the farm **sold**."
+  ],
+  "whatWouldHelp": [
+    "More **time**, and help for young farmers to **buy land**."
+  ]
 }
