@@ -64,12 +64,12 @@ function CardHead({ icon, title, note }: { icon: "actions" | "mood" | "jobs" | "
   );
 }
 
-function Insights({ s, archetypes }: { s: Summary; archetypes: Archetype[] }) {
+function Insights({ s, archetypes, empty }: { s: Summary; archetypes: Archetype[]; /** What to say when no one is shown. */ empty: string }) {
   if (!s.n) {
     return (
       <div className="db-cards">
         <div className="db-card db-card-empty">
-          <p>No one is inside your selection. Drag a bigger box, or click an empty spot on the chart to start again.</p>
+          <p>{empty}</p>
         </div>
       </div>
     );
@@ -316,11 +316,11 @@ export function Dashboard({
                   Show everyone
                 </button>
               </>
-            ) : (
+            ) : points.length ? (
               <span>
                 Showing all {people(points.length)}. Drag across the chart to look at a group.
               </span>
-            )}
+            ) : null}
           </div>
         </div>
         {points.length ? (
@@ -369,7 +369,17 @@ export function Dashboard({
             <DashIcon name="arrow" size={16} />
           </Link>
         </div>
-        <Insights s={summary} archetypes={archetypes} />
+        <Insights
+          s={summary}
+          archetypes={archetypes}
+          empty={
+            brush
+              ? "No one is inside your selection. Drag a bigger box, or click an empty spot on the chart to start again."
+              : jobs.length
+                ? "No one has been interviewed for these jobs yet."
+                : "Pick at least one job on the left to see what people say."
+          }
+        />
         <p className="t-caption fg2">
           Everyone here is simulated: made-up versions of each job, interviewed by an AI interviewer. Shares are the part of
           the group that mentioned each step.
