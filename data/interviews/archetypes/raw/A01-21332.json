@@ -11,24 +11,32 @@
     "outlook": "traditional",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm from the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and nothing you say will be linked to your name. To start, could you walk me through a normal working day?"
+      "text": "Thanks for having me, Lena. I'm from the Work Futures Panel, an independent research group. We have no links to AI companies, employers, unions or government, and this is confidential. What does a normal working day look like?"
     },
     {
       "speaker": "persona",
-      "text": "I work at Whitlock's, past the chapel on Hill Street. They've three hundred dairy goats, and the milk goes to a cheese maker in the next valley, plus wheat and field beans on the rest. I start at six with the morning milking, it's a twenty-four-place parlour, so it's on and off, on and off. Then feeding, cleaning, kids in the spring. Two years ago I was a school secretary. Fourteen years of dinner money and head lice letters."
+      "text": "I'm a junior stockperson at Kerrow Farm, run by the Pennington family firm. They've got sixteen thousand free-range laying hens in four sheds, plus wheat and oilseed rape on the rest of the land. I'm in at six, walking the sheds, checking water, feed and dead birds, then I'm on the egg packing line most of the morning. Afternoons it's cleaning, letting the hens out onto the range, and learning the grading machine, which I'm still bad at."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
+      "text": "How did you come to farming?"
     },
     {
       "speaker": "persona",
-      "text": "I like the goats. They're cleverer than people think, and every one of them has a personality. Biscuit, the old lead nanny, opens the gate latch with her lips. What wears me out is that I'm still not good at the kidding. Sue Whitlock can tell a breech from the outside. I'm still learning which end is which, some nights."
+      "text": "I was a school cook for fifteen years. I cooked for four hundred children a day, so sixteen thousand hens don't frighten me, but the egg grader still does. When my dad died four years ago I wanted a change, and Mrs Pennington from church offered me a start. They pay well because they can't keep staff."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "And home?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Mark, my husband, sells tractors and farm machinery at the dealership in town, on commission. Josh is sixteen and desperate to farm, Ellie's twelve. We've a mortgage, and Dad left me enough that we've well over a year of savings. I use AI now and then, Mark showed me, mostly for meal plans and the odd letter."
     }
   ],
   "scenarios": {
@@ -36,11 +44,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. “Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, well, there we are. People get excited about new things and then they settle down. I'd say it to Sue over coffee, and to the women at chapel, who'd mostly agree."
+          "text": "I'd say good, the world's got enough to worry about. I'd say at church that people should spend less time on their phones and more time with each other."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd be glad, honestly. I like learning a thing properly and slowly. I use the AI on my phone now and then, to check a goat question at night when Sue's asleep, and that's all I need it for. A quiet world lets me get good."
+          "text": "For us it means steady. My job's fine, Mark's selling, the savings are there. The thing on my mind is Josh, who wants to go to agricultural college, and whether farming is a sensible thing to send a boy into."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep going. I'd sign up for the goat husbandry course the cheese maker runs in February, because I want to do the kidding properly. Money stays as it is, we're careful, we've a good bit put by."
+          "text": "I'd carry on at Kerrow and finally get confident on the grader. I'd help Josh apply for the agricultural college for next September, and keep the savings for his course."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Content, really."
+          "text": "Content. A bit of mum worry, that's all."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you check goat questions at night. Does it help?"
+          "text": "What worries you about Josh farming?"
         },
         {
           "speaker": "persona",
-          "text": "Sometimes. It told me once a kid was probably fine when it wasn't. So now I use it to know what to ask Sue in the morning, not to decide anything. That's about right for me."
+          "text": "That it's hard and the money's thin unless you own land, which we don't. I'd rather he did it with his eyes open. Mark says let the boy try."
         },
         {
           "speaker": "interviewer",
-          "text": "What does Mark think about all this?"
+          "text": "What's hard about the grader?"
         },
         {
           "speaker": "persona",
-          "text": "Mark's an electrician. He says nobody's going to trust a robot to rewire their gran's house. He's fairly calm about it. He's calmer than me about most things."
+          "text": "The egg grader is all screens and error codes. When the grader jams, I'm stood there and Kev has to come and reset it. I'll get there."
         }
       ],
-      "say": "I'd say people get excited about new things and then settle down. I'd say it to Sue over coffee and to the women at chapel, who'd mostly agree.",
-      "think": "I'd be glad, because I like learning a thing properly and slowly. I use AI now and then for a goat question at night, and that's all I need from it.",
-      "do": "Carries on as now and signs up for the cheese maker's goat husbandry course in February to learn kidding properly. Keeps the household's savings as they are.",
-      "feel": "Calm and content.",
+      "say": [
+        "The world has **enough to worry** about already.",
+        "People should spend **less time on phones** and more with each other."
+      ],
+      "think": [
+        "Life stays **steady**: her job, Mark's sales and the savings are fine.",
+        "Her real question is whether **farming suits Josh**."
+      ],
+      "do": [
+        "**Get confident** on the egg grading machine.",
+        "**Help** Josh apply to agricultural college for next September.",
+        "**Keep** the savings for Josh's course."
+      ],
+      "feel": [
+        "**Content**, with ordinary mum worry."
+      ],
       "mood": "calm",
-      "quote": "So now I use it to know what to ask Sue in the morning, not to decide anything.",
-      "fieldNote": "Lena uses AI cautiously, as a way to prepare questions for the person who really knows. She likes slow, proper learning and a quiet world suits her. Her chapel and her calm husband anchor her views.",
+      "quote": "The egg grader is all screens and error codes. When the grader jams, I'm stood there and Kev has to come and reset it.",
+      "fieldNote": [
+        "Came to farming after **her father died**, through a church contact.",
+        "Savings from **inheritance** make the household secure.",
+        "Her focus is her son's **farming future**, not her own job."
+      ],
       "actions": [
         "keep-going",
-        "retrain"
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Practise on the Kerrow egg grader until she can reset it alone",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Help Josh apply to agricultural college for next September",
+          "tag": "family-plans"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. “Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's up to businesses to do what they need to, and up to families to look after each other through it. I wouldn't want the government stepping in everywhere. I'd say we've been through changes before."
+          "text": "I'd say hands-on work is safer, and that's why trades and farming matter. I'd say it to the other mums at the school gate who push their kids into office jobs."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +145,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd think the milking parlour is the first thing they'd change. There are already robots for goats, Sue showed me a video. If Whitlock's bought one, I'd be the one moved off milking, because I'm the slowest."
+          "text": "My worry is Mark, not me. My husband Mark sells tractors for a living, and the first thing AI learns is how to write a quote. Farmers would order online, with a computer doing the advice, and his commission shrinks. Mark says he'd sell the robots instead, and maybe he's right."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +153,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait a bit and see what the cheese maker's other farms do. If the robots work there, I'd ask Sue to let me learn to run ours, because once a thing's proven I'm happy to learn it. I'd talk to Hannah about apprenticeships, too, because she's thirteen and starting to think."
+          "text": "I'd put a bit more aside each month in case Mark's commission drops. Once the Penningtons' new egg software was settled, I'd learn it properly, not just watch Kev. And I'd keep Josh on track for college."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +161,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like when the school changed the office system and I had to learn it all at once."
+          "text": "Uneasy. Watchful about Mark's pay."
         },
         {
           "speaker": "interviewer",
-          "text": "How did that go, at the school?"
+          "text": "What did Mark say when you raised it?"
         },
         {
           "speaker": "persona",
-          "text": "Badly for a month, then fine. I cried in the car park once. Then I was the one teaching the others. I think it'd be like that again, if I'm honest."
+          "text": "Mark laughed and said farmers like a handshake, not a chatbot. But he's had two big orders go online already this year. He didn't laugh as long as usual."
         },
         {
           "speaker": "interviewer",
-          "text": "You said families should look after each other. What would that look like for yours?"
+          "text": "Would you change anything about Josh's plans?"
         },
         {
           "speaker": "persona",
-          "text": "Mark's brother has a building firm. If I lost hours, I could do his office work, I've done enough of that. And my mum's house money, my share of it, is sitting there for a rainy day."
+          "text": "Not yet. I'd want him on a course that includes the machines, though, not just animals."
         }
       ],
-      "say": "I'd say it's for businesses to do what they need and for families to look after each other through it, not for government to step in everywhere. We've been through changes before.",
-      "think": "The milking parlour would be the first thing to change, since goat milking robots already exist. If Whitlock's bought one, I'd be moved off milking because I'm the slowest.",
-      "do": "Waits to see how milking robots work on the cheese maker's other farms, then asks to learn to run Whitlock's. Talks to her daughter Hannah about apprenticeships.",
-      "feel": "Uneasy, like when the school office system changed all at once.",
+      "say": [
+        "**Hands-on work** is safer, which is why trades and farming matter.",
+        "She'd tell **school-gate mums** not to push kids into office jobs."
+      ],
+      "think": [
+        "Her worry is **Mark's commission**, as AI writes quotes and advice.",
+        "Mark thinks he could **sell robots** instead, and he might be right."
+      ],
+      "do": [
+        "**Save** a bit more each month in case Mark's pay drops.",
+        "**Learn** the Penningtons' egg software once it's settled.",
+        "**Keep** Josh on track for college."
+      ],
+      "feel": [
+        "**Uneasy** and watchful about Mark's pay."
+      ],
       "mood": "uneasy",
-      "quote": "Badly for a month, then fine. I cried in the car park once. Then I was the one teaching the others.",
-      "fieldNote": "She expects to be moved first because she's the slowest, and says so plainly. Her past, crying in the car park and then teaching others, shows how she adapts once something is proven. Family is her safety net, through her brother-in-law's firm and her share of her mother's house.",
+      "quote": "My husband Mark sells tractors for a living, and the first thing AI learns is how to write a quote.",
+      "fieldNote": [
+        "Household exposure is her husband's **sales job**, not her own.",
+        "Mark has already lost **two big orders** to online buying.",
+        "Steady: she'll learn the egg software **once settled**."
+      ],
       "actions": [
-        "wait-and-see",
+        "save-more",
         "learn-ai",
         "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Save an extra amount each month against Mark's commission falling",
+          "tag": "save-more"
+        },
+        {
+          "text": "Learn the new egg grading software once it's settled",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep Josh's agricultural college application on track",
+          "tag": "family-plans"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. “Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we'd have to pull together. Families, chapels, neighbours. I wouldn't trust the government to sort it in two years, they can't sort the bin collections. I'd say that."
+          "text": "I'd say families need to stick together and help each other through it. I'd say the government should back apprenticeships, not handouts. And at church I'd ask for prayers for every family in the valley."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +239,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be frightened for Mark more than me. If robots can rewire a house in two years, his whole trade goes, and he's the one who loves his work. I'd be all right, I'd only just started anyway. We've money put by, so it's not about food. It's about what we'd both do with our days."
+          "text": "Off the record, it's the worst one for us. If my husband Mark loses the dealership job in 2028 and I lose the hens in 2031, our savings become a countdown. Egg sheds are already half machines, the robots would finish the job. I'd be lying awake working out how many months we'd last."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +247,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd sit down with Mark and go through the money properly, which we'd never quite done. I'd overpay the mortgage with some of my mum's money, maybe fifteen thousand. And I'd start something with my hands that people would still buy from a person, goat milk soap, maybe, I've made it for Christmas presents. Sue would sell me milk."
+          "text": "Straight away I'd cut the extras, no holiday, cancel the kitchen we were planning. I'd talk Josh out of agricultural college and into an engineering apprenticeship. And I'd ask at the care home where the chapel volunteers whether they'd train me as a carer, because people want people when they're old."
         },
         {
           "speaker": "interviewer",
@@ -191,47 +255,78 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. A churning feeling. But I'd pray, and I'd get on with it."
+          "text": "Frightened, honestly. I'd be keeping it from the kids, but not from Mark."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd start soap. Is that a real plan or a hope?"
+          "text": "How long would the savings last?"
         },
         {
           "speaker": "persona",
-          "text": "A hope, mostly. I sold twenty bars at the chapel fair last year. That's not a business. But it's something I could grow while I see which way things go."
+          "text": "About a year and a half if we both lost everything, maybe two with the cuts. The mortgage has eleven years left. That's the number I'd keep doing in my head."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Hannah and Joel?"
+          "text": "How would Josh take the change of plan?"
         },
         {
           "speaker": "persona",
-          "text": "That God doesn't waste anything, and neither do we. Hannah would roll her eyes. Joel's ten, he'd want to know if the goats would be all right. I'd say Biscuit would outlive us all."
+          "text": "Badly, at first. He'd slam his door. But I'd tell him he can still work on farms, fixing the machines, and that's more use than one more pair of hands."
         }
       ],
-      "say": "I'd say we'd have to pull together as families, chapels and neighbours, because I wouldn't trust government to sort it in two years when they can't sort the bins.",
-      "think": "I'd be frightened for Mark more than me, because robots that can rewire a house would end his trade and he loves it. It's not about food, since we've savings; it's about what we'd do with our days.",
-      "do": "Goes through the household finances properly with Mark and overpays the mortgage by about fifteen thousand from her inheritance. Starts making goat milk soap to sell, buying milk from Whitlock's.",
-      "feel": "Anxious and churning, steadied by prayer and getting on with things.",
-      "mood": "anxious",
-      "quote": "I sold twenty bars at the chapel fair last year. That's not a business.",
-      "fieldNote": "The fast timeline shifts her worry onto her husband's trade rather than her own job. She's frank that her soap idea is a hope rather than a plan. She trusts community over government and uses her inheritance to cut debt.",
+      "say": [
+        "**Families** need to stick together and help each other through it.",
+        "Government should back **apprenticeships**, not handouts.",
+        "She'd ask for **prayers at church** for every family in the valley."
+      ],
+      "think": [
+        "Mark could lose the **dealership job** in 2028 and she the hens by 2031.",
+        "Their savings would become a **countdown** of maybe two years."
+      ],
+      "do": [
+        "**Cancel** the new kitchen and the family holiday.",
+        "**Steer** Josh from agricultural college to an engineering apprenticeship.",
+        "**Ask** the chapel care home about carer training."
+      ],
+      "feel": [
+        "**Frightened**, keeping it from the children but not from Mark."
+      ],
+      "mood": "alarmed",
+      "quote": "If my husband Mark loses the dealership job in 2028 and I lose the hens in 2031, our savings become a countdown.",
+      "fieldNote": [
+        "**Two earners** exposed: Mark's thinking work first, her egg work three years later.",
+        "Already-high **automation in egg sheds** makes her expect fast job loss.",
+        "Changes **Josh's path** quickly, a sign of steady but decisive thinking."
+      ],
       "actions": [
-        "save-more",
-        "side-income",
-        "seek-support"
+        "cut-spending",
+        "family-plans",
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Cancel the new kitchen and this year's family holiday",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Steer Josh into an engineering apprenticeship instead of farm college",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Ask the chapel care home to train her as a carer",
+          "tag": "retrain"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. “Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough for people to get themselves sorted, if they start now. I'd say families should be talking at the kitchen table, not waiting for a letter from the council."
+          "text": "I'd say there's time to plan, so plan. Families that start now will be fine. I'd tell the women at church to sit down with their husbands and write it out."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +334,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years, I'd learn the robot parlour once Whitlock's got one, and I'd probably be the one minding it for a while. That suits me, I'm good at following a system once I know it. After that, I don't know."
+          "text": "Five years is long enough to steer our son Josh towards fixing the robots instead of doing the work they replace. Mark has until 2031 to move into servicing or something. My hens go in 2034, I'd be fifty-one. It's still two jobs, just not at once."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +342,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the goat course, then the robot course when the cheese maker's farms have them. I'd grow the soap slowly, a market stall once a month. And I'd want Mark to look at the solar and battery work, because that's newer and he says it's busy."
+          "text": "I'd save harder for the next few years and keep the kitchen on hold. I'd do the carer training part-time from 2029, so I'm ready. Josh would do the farm course with an engineering add-on."
         },
         {
           "speaker": "interviewer",
@@ -255,47 +350,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. But it's the kind you can work with."
+          "text": "Anxious, but with a plan. I'd sleep most nights."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you're good at following a system. Is that a strength or a worry here?"
+          "text": "What would Mark move into?"
         },
         {
           "speaker": "persona",
-          "text": "Both. If the system is a robot, it might not need a follower for long. But I'd rather be the one who knows how it works than the one standing outside watching."
+          "text": "Mark talked about the servicing side at the dealership, the mechanics. He'd hate the pay cut. But it's a job with his hands, and his dad was a mechanic."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you use AI more in those five years?"
+          "text": "Why still the farm course for Josh?"
         },
         {
           "speaker": "persona",
-          "text": "Probably, once Sue does. She's started using it for the cheese orders. If it's good enough for her, I'd learn it properly."
+          "text": "Because five years gives him time to try it. If the machines are the future, he'll learn them there too."
         }
       ],
-      "say": "I'd say five years is enough for people to sort themselves out if they start now, talking at the kitchen table instead of waiting for a letter from the council.",
-      "think": "In five years I'd learn the robot parlour and probably mind it for a while, which suits me because I follow a system well. After that, I don't know.",
-      "do": "Takes the goat course and then the robot course once the cheese maker's farms have robots. Grows the soap into a monthly market stall and encourages Mark towards solar and battery work.",
-      "feel": "Uneasy but workable.",
-      "mood": "uneasy",
-      "quote": "But I'd rather be the one who knows how it works than the one standing outside watching.",
-      "fieldNote": "Five years lets her follow her usual pattern of learning once something is proven. She sees her talent for following systems as both a strength and a risk. She'd adopt AI more once her employer does.",
+      "say": [
+        "There's **time to plan**, so plan, and families that start now will be fine.",
+        "Couples should sit down together and **write it out**."
+      ],
+      "think": [
+        "Five years lets her steer **Josh** toward fixing robots.",
+        "Still **two jobs** at risk, but not at once: Mark by 2031, her hens 2034."
+      ],
+      "do": [
+        "**Save** harder and keep the kitchen on hold.",
+        "**Start** part-time carer training from 2029.",
+        "**Enrol** Josh on the farm course with an engineering add-on."
+      ],
+      "feel": [
+        "**Anxious** but with a plan; she'd sleep most nights."
+      ],
+      "mood": "anxious",
+      "quote": "Five years is long enough to steer our son Josh towards fixing the robots instead of doing the work they replace.",
+      "fieldNote": [
+        "The **staggered timing** of the two job losses is what eases her.",
+        "Mark moving to **servicing** echoes his father's trade.",
+        "Keeps Josh's dream alive with an **engineering add-on**."
+      ],
       "actions": [
+        "save-more",
         "retrain",
-        "learn-ai",
-        "side-income"
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Save harder and keep the new kitchen on hold",
+          "tag": "save-more"
+        },
+        {
+          "text": "Start part-time carer training from 2029",
+          "tag": "retrain"
+        },
+        {
+          "text": "Enrol Josh on farm college with the engineering add-on",
+          "tag": "family-plans"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. “Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a long time. Plenty of time for families to plan and for young ones to learn a trade. I'd say don't panic, plan."
+          "text": "I'd say ten years is a gift, and families that waste it have only themselves to blame. I'd say it kindly, though."
         },
         {
           "speaker": "interviewer",
@@ -303,7 +428,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Ten years, I'm fifty-three, the kids are grown or nearly, and we've the house close to done. I'd be fine. I'd just want Hannah and Joel to choose well. That's where the worry goes."
+          "text": "I'd rather my son Josh spent ten years learning to mend machines than ten years learning a job that disappears. For me and Mark, 2036 hits his sales and 2039 my hens, when I'm fifty-six. We'd have the mortgage nearly paid. It's on my mind but it's not keeping me up."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +436,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on at Whitlock's, get good at the goats. Learn the robots when they're proven. I'd talk with Hannah about apprenticeships properly, maybe something with care or nursing, where people want people. Joel would go into Mark's trade, I think, if there's still a trade."
+          "text": "Carry on at Kerrow. Keep saving at the usual rate. Get Josh into an apprenticeship that covers the robots, and nudge Mark towards servicing over the next few years."
         },
         {
           "speaker": "interviewer",
@@ -319,36 +444,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. A bit wistful."
+          "text": "Uneasy, a little, but mostly fine."
         },
         {
           "speaker": "interviewer",
-          "text": "You said wistful. About what?"
+          "text": "What would you say to Ellie, who's twelve?"
         },
         {
           "speaker": "persona",
-          "text": "About Biscuit and the others, if I'm honest. A farm with goats and no people in the parlour. I'd miss the noise of it. I'd hope Whitlock's would keep a person on for the kidding, at least."
+          "text": "Ellie wants to be a nurse, and I'd say good, people will always need people. I'd tell her the same as Josh: learn the machines too."
         },
         {
           "speaker": "interviewer",
-          "text": "Does the extra time change anything with the money?"
+          "text": "Would ten years change your view on AI tools?"
         },
         {
           "speaker": "persona",
-          "text": "We'd keep saving and probably help Hannah with her training costs. I'd not go spending on anything big. Mark wants a new van, he can have it in year three."
+          "text": "I'd use them more, I think, once everyone else does. I'm not against them. I just like to see they work first."
         }
       ],
-      "say": "I'd say ten years is a long time, enough for families to plan and young ones to learn a trade. I'd tell people not to panic but to plan.",
-      "think": "At fifty-three, with the kids nearly grown and the house close to paid, I'd be fine. The worry goes to Hannah and Joel choosing well.",
-      "do": "Stays at Whitlock's, gets good with the goats and learns the robots once proven. Talks with Hannah about care or nursing apprenticeships and keeps saving to help with her training costs.",
-      "feel": "Mostly calm, a little wistful.",
-      "mood": "calm",
-      "quote": "A farm with goats and no people in the parlour. I'd miss the noise of it.",
-      "fieldNote": "Ten years calms her, and her focus moves to her children's choices. Her sadness is about the animals and the parlour's noise, not money. She plans to help her daughter with training costs.",
+      "say": [
+        "**Ten years** is a gift; families that waste it have themselves to blame.",
+        "She'd say it **kindly**, though."
+      ],
+      "think": [
+        "Better for Josh to **learn to mend** machines than a vanishing job.",
+        "Mark's sales by 2036 and **her hens** by 2039 are on her mind."
+      ],
+      "do": [
+        "**Carry on** at Kerrow and keep saving as usual.",
+        "**Get** Josh into an apprenticeship covering robots.",
+        "**Nudge** Mark towards servicing over the next few years."
+      ],
+      "feel": [
+        "A little **uneasy**, mostly fine."
+      ],
+      "mood": "uneasy",
+      "quote": "I'd rather my son Josh spent ten years learning to mend machines than ten years learning a job that disappears.",
+      "fieldNote": [
+        "Even with ten years, **two household jobs** keep her slightly uneasy.",
+        "Her plans centre on the **children's training**.",
+        "Classic steady stance on AI: **see it work** first."
+      ],
       "actions": [
         "keep-going",
         "family-plans",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Carry on at Kerrow's hen sheds",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Get Josh into an apprenticeship that covers farm robots",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Keep saving at the usual monthly rate",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -359,7 +514,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because of Mark. What would help is apprenticeships for grown-ups, not just teenagers, so a man of forty-five could learn a new trade properly while still earning. And fewer forms for little businesses like the soap."
+      "text": "AGI by 2028, because both of us get hit within three years. What would help is good apprenticeships for grown-ups and for kids, paid properly, and employers like the Penningtons keeping people on to work with the machines."
     },
     {
       "speaker": "interviewer",
@@ -367,11 +522,22 @@
     },
     {
       "speaker": "persona",
-      "text": "Ask about the animals, maybe. Biscuit opens gates. A robot might milk her, but it won't laugh when she gets out. Somebody should still be there to laugh."
+      "text": "About couples. A family can ride out one lost job, but two at once is how you lose the house."
     }
   ],
-  "headlineQuote": "A robot might milk her, but it won't laugh when she gets out. Somebody should still be there to laugh.",
-  "portrait": "Lena Abbott is 43, a former school secretary two years into work on a goat dairy and arable farm, where she's still learning to handle kidding. She's a chapel-goer who trusts families and community more than government, and she uses AI carefully, mainly to work out what to ask her boss. She follows new things once they're proven, as she did when her school's office system changed. Her worst fear, in AGI by 2028, is for her electrician husband's trade rather than her own job, and with more time her attention turns to her goats, her soap-making hopes and her children's choices.",
-  "biggestWorry": "AGI by 2028, mainly because of what it would do to her husband's electrical trade.",
-  "whatWouldHelp": "Apprenticeships for grown-ups who can keep earning while they learn a new trade, and fewer forms for small businesses."
+  "headlineQuote": "A family can ride out one lost job, but two at once is how you lose the house.",
+  "portrait": [
+    "Former **school cook**, four years into egg and arable work at a family-firm farm.",
+    "Husband Mark sells **farm machinery** on commission, exposed to thinking AI.",
+    "Churchgoing and **steady**: she'll use new tech once it's proven.",
+    "Calm in the plateau, **alarmed** at AGI by 2028 as both household jobs go within three years.",
+    "Her plans centre on **her children's training** and her own move into care work."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, when both she and Mark lose work within three years."
+  ],
+  "whatWouldHelp": [
+    "**Paid apprenticeships** for adults and children.",
+    "Employers **keeping people on** to work with the machines."
+  ]
 }
