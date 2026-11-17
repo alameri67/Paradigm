@@ -4,9 +4,9 @@
 export const SCENARIOS = [
   { code: "S0", name: "AI Plateau", when: "No radical change", description: "AI turns out to be mostly hype. It automates some routine tasks, but jobs, pay and prices carry on much as before." },
   { code: "S1", name: "Steady Disruption", when: "Strong, not radical", description: "AI takes over many tasks in many jobs. Some jobs shrink and new ones appear, but most people still have work and society has time to adjust." },
-  { code: "S4", name: "AGI by 2036", when: "In 10 years", description: "Full AGI arrives within 10 years. The same end point, with about a decade to prepare." },
-  { code: "S3", name: "AGI by 2031", when: "In 5 years", description: "Full AGI arrives within 5 years: AI that can do almost any work a person can. A few years to see it coming." },
-  { code: "S2", name: "AGI by 2028", when: "In 2 years", description: "The singularity hits fast. Within 2 years, AI can do almost any work a person can, hands-on work included through robots." },
+  { code: "S4", name: "AGI by 2036", when: "In 10 years", description: "Full AGI arrives within 10 years: AI that can do almost any thinking work a person can. Robots for hands-on work come about 3 years later. The same end point, with about a decade to prepare." },
+  { code: "S3", name: "AGI by 2031", when: "In 5 years", description: "Full AGI arrives within 5 years: AI that can do almost any thinking work a person can. Robots for hands-on work come about 3 years later. A few years to see it coming." },
+  { code: "S2", name: "AGI by 2028", when: "In 2 years", description: "The singularity hits fast. Within 2 years, AI can do almost any thinking work a person can. Robots for hands-on work come about 3 years later, around 2031." },
 ] as const;
 export type ScenarioCode = (typeof SCENARIOS)[number]["code"];
 

@@ -11,7 +11,7 @@ const byId = new Map(grid.people.map((p) => [p.id, p]));
 const SCEN = ["S0", "S1", "S2", "S3", "S4"];
 const MOODS = ["calm", "uneasy", "anxious", "alarmed", "panicked"];
 const ACTIONS = ["keep-going","cut-spending","save-more","retrain","learn-ai","change-job","side-income","invest","automate","sell-or-exit","retire-early","collective-action","politics","seek-support","move","family-plans","wait-and-see"];
-const OLD_CARD = /hands-on work is no longer a safe place|matches skilled professionals|handy tool, like a better search engine/i;
+const OLD_CARD = /hands-on work is no longer a safe place|matches skilled professionals|handy tool, like a better search engine|hands-on work included through robots|with robots it reaches hands-on work too/i;
 const BANNED = ["delve", "leverage", "it is important to note", "double-edged sword", "only time will tell"];
 const norm = (s) => s.toLowerCase().replace(/[“”"‘’']/g, "").replace(/\s+/g, " ").trim();
 const words = (s) => (s ?? "").trim().split(/\s+/).filter(Boolean).length;
