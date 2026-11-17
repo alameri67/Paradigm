@@ -602,3 +602,10 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .db-end-quote{margin:0;padding-left:12px;border-left:3px solid #d9d9d9;display:flex;flex-direction:column;gap:4px}
 .db-end-quote blockquote{margin:0;font-size:15px;line-height:21px;font-weight:600;text-wrap:pretty}
 .db-end-quote figcaption{font-size:12.5px;color:var(--fg2)}
+
+/* Bullets on the details page: short points with selective bold, instead of paragraphs. */
+.bullets{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.bullets li{padding-left:2px}
+.bullets li::marker{color:currentColor}
+.bullets strong{font-weight:600;color:var(--fg)}
+.ws-quote + .ws-voices .bullets,.ws-voice .bullets{font-size:inherit;line-height:inherit}

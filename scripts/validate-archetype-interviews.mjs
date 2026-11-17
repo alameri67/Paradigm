@@ -33,6 +33,26 @@ function standAlone(q) {
   return null;
 }
 
+
+// Bullet fields: a list of short, one-point sentences with a little bold (protocol section 6).
+const BULLET_LIMITS = { say: [2, 3], think: [2, 3], do: [2, 3], feel: [1, 2], fieldNote: [2, 4], portrait: [3, 5], biggestWorry: [1, 2], whatWouldHelp: [1, 2] };
+const asText = (v) => (Array.isArray(v) ? v.join(" ") : v ?? "");
+function checkBullets(where, k, v, errs) {
+  const [lo, hi] = BULLET_LIMITS[k];
+  if (!Array.isArray(v)) return errs.push(`${where}${k} should be a list of ${lo} to ${hi} bullets`);
+  if (v.length < lo || v.length > hi) errs.push(`${where}${k} has ${v.length} bullets; use ${lo} to ${hi}`);
+  let bold = 0;
+  for (const b of v) {
+    if (typeof b !== "string" || !b.trim()) { errs.push(`${where}${k} has an empty bullet`); continue; }
+    const plain = b.replace(/\*\*/g, "");
+    if (words(plain) > 22) errs.push(`${where}${k} bullet is over 22 words: "${plain.slice(0, 50)}…"`);
+    const spans = b.match(/\*\*[^*]+\*\*/g) ?? [];
+    bold += spans.length;
+    if (spans.reduce((n, sp) => n + words(sp.slice(2, -2)), 0) > 4) errs.push(`${where}${k} bullet bolds more than 4 words`);
+    if ((b.match(/\*\*/g) ?? []).length % 2) errs.push(`${where}${k} bullet has an unclosed **`);
+  }
+  if (!bold) errs.push(`${where}${k} needs at least one **key word** in bold`);
+}
 const args = process.argv.slice(2);
 const all = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith(".json")).sort() : [];
 const files = args.length ? all.filter((f) => args.some((a) => f.startsWith(a))) : all;
@@ -59,7 +79,8 @@ for (const f of files) {
     const t = x.transcript ?? [];
     if (t.length < 12) errs.push(`${s}: transcript has ${t.length} turns, needs at least 12`);
     if (t.some((u) => !["interviewer", "persona"].includes(u.speaker) || !u.text?.trim())) errs.push(`${s}: bad transcript turn`);
-    for (const k of ["say", "think", "do", "feel", "quote", "fieldNote"]) if (!x[k]?.trim()) errs.push(`${s}: empty ${k}`);
+    if (!x.quote?.trim()) errs.push(`${s}: empty quote`);
+    for (const k of ["say", "think", "do", "feel", "fieldNote"]) checkBullets(`${s}: `, k, x[k], errs);
     if (!MOODS.includes(x.mood)) errs.push(`${s}: bad mood "${x.mood}"`);
     if (!Array.isArray(x.actions) || x.actions.length < 1 || x.actions.length > 4) errs.push(`${s}: actions needs 1 to 4 tags`);
     else for (const a of x.actions) if (!ACTIONS.includes(a)) errs.push(`${s}: unknown action tag "${a}"`);
@@ -76,17 +97,18 @@ for (const f of files) {
       if (new Set(texts).size < texts.length) errs.push(`${s}: two steps are the same`);
     }
     if (OLD_CARD.test(JSON.stringify(t))) errs.push(`${s}: uses an old scenario card (see protocol v3)`);
-    for (const k of ["say", "think", "do"]) if (x[k] && words(x[k]) < 18) errs.push(`${s}: ${k} is thin (${words(x[k])} words; aim for 2 or 3 sentences)`);
-    if (x.fieldNote && words(x.fieldNote) < 25) errs.push(`${s}: fieldNote is thin (${words(x.fieldNote)} words)`);
+    for (const k of ["say", "think", "do"]) if (x[k] && words(asText(x[k])) < 18) errs.push(`${s}: ${k} is thin (${words(asText(x[k]))} words; aim for 2 or 3 bullets)`);
+    if (x.fieldNote && words(asText(x.fieldNote)) < 25) errs.push(`${s}: fieldNote is thin (${words(asText(x.fieldNote))} words)`);
     if (x.quote && words(x.quote) > 30) errs.push(`${s}: quote is over 30 words`);
     const lone = x.quote && standAlone(x.quote);
     if (lone) errs.push(`${s}: quote ${lone}; pick or improve a line that makes sense on its own`);
     const pt = personaText(t);
     everything += " " + pt;
     if (x.quote && !norm(pt).includes(norm(x.quote))) errs.push(`${s}: quote is not word for word from this scenario's answers`);
-    if (/^["“]/.test(x.say ?? "") || /^["“]/.test(x.quote ?? "")) errs.push(`${s}: say/quote should not start with a quote mark`);
+    if (/^["“]/.test(asText(x.say)) || /^["“]/.test(x.quote ?? "")) errs.push(`${s}: say/quote should not start with a quote mark`);
   }
-  for (const k of ["headlineQuote", "portrait", "biggestWorry", "whatWouldHelp"]) if (!d[k]?.trim()) errs.push(`missing ${k}`);
+  if (!d.headlineQuote?.trim()) errs.push("missing headlineQuote");
+  for (const k of ["portrait", "biggestWorry", "whatWouldHelp"]) checkBullets("", k, d[k], errs);
   if (d.headlineQuote && words(d.headlineQuote) > 30) errs.push("headlineQuote is over 30 words");
   const loneH = d.headlineQuote && standAlone(d.headlineQuote);
   if (loneH) errs.push(`headlineQuote ${loneH}; pick or improve a line that makes sense on its own`);
@@ -96,7 +118,7 @@ for (const f of files) {
   if (new Set(qs).size < qs.length) errs.push("two scenarios have the same quote; each needs its own");
   if (d.protocolVersion !== "3.0") errs.push(`protocolVersion should be "3.0"`);
   if (/\bS[0-4]\b/.test(personaText(d.opening) + JSON.stringify(Object.values(d.scenarios ?? {}).map((x) => x.transcript)))) errs.push("transcript says a scenario code (S0–S4); use the scenario's name");
-  if (d.portrait && words(d.portrait) < 45) errs.push(`portrait is thin (${words(d.portrait)} words)`);
+  if (d.portrait && words(asText(d.portrait)) < 45) errs.push(`portrait is thin (${words(asText(d.portrait))} words)`);
   const lower = JSON.stringify(d).toLowerCase();
   for (const w of BANNED) if (lower.includes(w)) errs.push(`uses "${w}"`);
   if (errs.length) { bad++; console.log(`✗ ${f}\n  - ${errs.join("\n  - ")}`); }

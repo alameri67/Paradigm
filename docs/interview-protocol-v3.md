@@ -85,13 +85,13 @@ After each scenario, the interviewer writes:
 
 | Field | Voice | Length | What it captures |
 |---|---|---|---|
-| `say` | First person | 2 or 3 sentences | Their public line, as they'd actually put it out loud. |
-| `think` | First person | 2 or 3 sentences | Their private view, which may differ from `say`. |
-| `do` | Third person, starting with a verb | 2 or 3 sentences | Concrete actions in the first year, with timing or money where possible. |
-| `feel` | Plain words | 1 or 2 sentences | Their emotions, including mixed ones. |
+| `say` | First person, bullets | 2 or 3 bullets | Their public line, as they'd actually put it out loud. |
+| `think` | First person, bullets | 2 or 3 bullets | Their private view, which may differ from `say`. |
+| `do` | Bullets, each starting with a verb | 2 or 3 bullets | Concrete actions in the first year, with timing or money where possible. |
+| `feel` | Plain words, bullets | 1 or 2 bullets | Their emotions, including mixed ones. |
 | `mood` | One key | — | `calm`, `uneasy`, `anxious`, `alarmed` or `panicked`. |
 | `quote` | Word for word from the transcript | Up to 30 words | The most memorable line in this scenario (section 5). |
-| `fieldNote` | The interviewer's own notes | 2 to 4 sentences | What stood out: what drives them, any gap between say and think, what surprised you. |
+| `fieldNote` | The interviewer's own notes, bullets | 2 to 4 bullets | What stood out: what drives them, any gap between say and think, what surprised you. |
 | `actions` | Tags | 1 to 4 | What they'd do, as tags from the list below. Only tag actions they actually describe. |
 | `steps` | Short plain phrases | 1 to 4 | The concrete things this person will actually do in the first year, in words a stranger understands. Each starts with a verb and names the real thing in their job and life: "Sell 40 of the 120 cows and rent out the top field", not "Cut back" or "Adapt". Each step carries the one action tag it belongs to, and every tag in `actions` has at least one step. |
 
@@ -138,9 +138,9 @@ After the closing, the interviewer also writes:
 | Field | Length | What it captures |
 |---|---|---|
 | `headlineQuote` | Up to 30 words, word for word | The single best line from the whole interview. It must be a different line from every scenario's `quote`, and the five scenario quotes must all be different from each other. |
-| `portrait` | 3 to 5 sentences | Who this person is and how they move through the five scenarios, written so a reader who skips the transcript still knows them. |
-| `biggestWorry` | 1 or 2 sentences | Their answer to "which scenario worries you most". |
-| `whatWouldHelp` | 1 or 2 sentences | What they said would help. |
+| `portrait` | 3 to 5 bullets | Who this person is and how they move through the five scenarios, written so a reader who skips the transcript still knows them. |
+| `biggestWorry` | 1 or 2 bullets | Their answer to "which scenario worries you most". |
+| `whatWouldHelp` | 1 or 2 bullets | What they said would help. |
 
 The summaries must match the transcript. Don't add anything the person didn't say.
 
@@ -175,8 +175,8 @@ Write one JSON file per person to `data/interviews/archetypes/raw/<ID>.json`, fo
   "scenarios": {
     "S0": {
       "transcript": [ { "speaker": "interviewer", "text": "…" }, { "speaker": "persona", "text": "…" } ],
-      "say": "…", "think": "…", "do": "…", "feel": "…", "mood": "calm",
-      "quote": "…", "fieldNote": "…", "actions": ["keep-going", "learn-ai"],
+      "say": ["…", "…"], "think": ["…", "…"], "do": ["…", "…"], "feel": ["…"], "mood": "calm",
+      "quote": "…", "fieldNote": ["…", "…"], "actions": ["keep-going", "learn-ai"],
       "steps": [ { "text": "Keep milking twice a day and keep the same buyer", "tag": "keep-going" }, { "text": "Try the co-op's feed-planning app this winter", "tag": "learn-ai" } ]
     },
     "S1": { "…": "same shape" },
@@ -186,13 +186,14 @@ Write one JSON file per person to `data/interviews/archetypes/raw/<ID>.json`, fo
   },
   "closing": [ { "speaker": "interviewer", "text": "…" }, { "speaker": "persona", "text": "…" } ],
   "headlineQuote": "…",
-  "portrait": "…",
-  "biggestWorry": "…",
-  "whatWouldHelp": "…"
+  "portrait": ["…", "…", "…"],
+  "biggestWorry": ["…"],
+  "whatWouldHelp": ["…"]
 }
 ```
 
 - `say`, `quote` and `headlineQuote` have no quote marks around them; the app adds them.
+- `say`, `think`, `do`, `feel`, `fieldNote`, `portrait`, `biggestWorry` and `whatWouldHelp` are lists of bullets (JSON arrays of strings), because readers scan rather than read paragraphs. Each bullet is one full sentence of at most 22 words and makes one point. Within a field the bullets don't overlap and together they cover what matters (MECE). Mark the one or two key words in each bullet with `**double asterisks**`, such as the thing at stake, the number or the decision. Bold at most 4 words per bullet, and never a whole bullet. Quotes stay as they are: no bullets and no bold.
 - `steps` are what the person does, so they come from their own answers and `do`. Make them specific to this person's job, money and family. Two people in the same job should only share a step when they'd really do the same thing.
 - The file must be valid JSON. Use straight double quotes for JSON strings; curly quotes and apostrophes inside the text are fine.
 - Each scenario's transcript has at least 12 turns: the card plus the 4 core questions, the 2 follow-ups, and an answer to each.

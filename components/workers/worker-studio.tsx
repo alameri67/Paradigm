@@ -11,6 +11,7 @@ import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
+import { Bullets } from "./bullets";
 import {
   MOODS,
   MOOD_ACCENT,
@@ -355,15 +356,13 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                   ).map(([k, label]) => (
                     <div key={k} className="ws-voice">
                       <span className="ws-label">{label}</span>
-                      <p key={sc[k]} className="swap">
-                        {k === "say" ? `“${sc[k]}”` : sc[k]}
-                      </p>
+                      <Bullets key={String(sc[k])} className="swap" text={sc[k]} />
                     </div>
                   ))}
                 </div>
                 <div className="ws-note">
                   <span className="ws-label">Interviewer&apos;s note</span>
-                  <p>{sc.fieldNote}</p>
+                  <Bullets text={sc.fieldNote} />
                 </div>
               </div>
             </section>
@@ -409,15 +408,15 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
               <div className="ws-about-grid">
                 <div>
                   <span className="label">Who they are</span>
-                  <p>{iv.portrait}</p>
+                  <Bullets text={iv.portrait} />
                 </div>
                 <div>
                   <span className="label">Biggest worry</span>
-                  <p>{iv.biggestWorry}</p>
+                  <Bullets text={iv.biggestWorry} />
                 </div>
                 <div>
                   <span className="label">What would help</span>
-                  <p>{iv.whatWouldHelp}</p>
+                  <Bullets text={iv.whatWouldHelp} />
                 </div>
               </div>
             </section>

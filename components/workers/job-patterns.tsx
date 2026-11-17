@@ -1,6 +1,7 @@
 "use client";
 
 import { ACTION_LABEL, MOODS, MOOD_ACCENT, MOOD_LABEL, type JobInsights, type ScenarioCode } from "@/lib/workers/types";
+import { Bullets, withBold } from "./bullets";
 
 const pct = (x: number) => `${Math.round(x * 100)}%`;
 
@@ -63,7 +64,7 @@ export function JobPatterns({
                 <span className="ws-act-bar" aria-hidden="true">
                   <span style={{ width: pct(share(a.tag)) }} />
                 </span>
-                <p>{a.text}</p>
+                <Bullets text={a.text} />
               </li>
             ))}
           </ol>
@@ -78,7 +79,7 @@ export function JobPatterns({
           ).map(([label, text]) => (
             <div key={label}>
               <h3 className="label">{label}</h3>
-              <p>{text}</p>
+              <Bullets text={text} />
             </div>
           ))}
         </div>
@@ -90,7 +91,7 @@ export function JobPatterns({
           <ul>
             {ins.differences.map((d) => (
               <li key={d.group}>
-                <strong>{d.group}.</strong> {d.text}
+                <strong>{d.group}.</strong> {withBold(Array.isArray(d.text) ? d.text.join(" ") : (d.text as string))}
               </li>
             ))}
           </ul>

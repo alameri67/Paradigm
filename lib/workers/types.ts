@@ -1,5 +1,8 @@
 /** Shared types for the archetype ("worker") study. Safe to import on client and server. */
 
+/** A list of short bullets, or prose from older files. */
+export type Points = string | readonly string[];
+
 /** The five scenarios in dial order, mildest to most extreme (AGI by 2028 is last). The code is for data only; the screen always shows the name. */
 export const SCENARIOS = [
   { code: "S0", name: "AI Plateau", when: "No radical change", description: "AI turns out to be mostly hype. It automates some routine tasks, but jobs, pay and prices carry on much as before." },
@@ -55,7 +58,8 @@ export interface Worker {
 
 export interface Turn { speaker: "interviewer" | "persona"; text: string }
 export interface ScenarioResult {
-  say: string; think: string; do: string; feel: string; mood: MoodKey; quote: string; fieldNote: string; transcript: Turn[];
+  /** Bullets (newer interviews) or prose (older ones). "**words**" marks key words to show in bold. */
+  say: Points; think: Points; do: Points; feel: Points; mood: MoodKey; quote: string; fieldNote: Points; transcript: Turn[];
   actions?: string[];
 }
 
@@ -90,9 +94,9 @@ export interface JobStatsScenario {
 export interface JobInsightsScenario {
   headline: string;
   whatTheyDo: { tag: string; text: string }[];
-  whatTheySay: string;
-  whatTheyThink: string;
-  howTheyFeel: string;
+  whatTheySay: Points;
+  whatTheyThink: Points;
+  howTheyFeel: Points;
   differences: { group: string; text: string }[];
   quotes: { id: string; name: string; text: string }[];
 }
@@ -109,7 +113,7 @@ export interface Interview {
   opening: Turn[];
   closing: Turn[];
   scenarios: Record<ScenarioCode, ScenarioResult>;
-  headlineQuote: string; portrait: string; biggestWorry: string; whatWouldHelp: string;
+  headlineQuote: string; portrait: Points; biggestWorry: Points; whatWouldHelp: Points;
 }
 
 /** Version id from a job code and the 5 level positions (1–3), e.g. A16-22222. */
