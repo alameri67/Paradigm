@@ -11,24 +11,32 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for meeting me, Ivan. I'm a field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions, parties or government. Everything you say is confidential. What's a normal working day for you?"
+      "text": "Hello, and thank you for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and we're not selling anything. Everything you say stays confidential, so feel free to tell me what you'd say in public and, separately, what you really think. Is that all right?"
     },
     {
       "speaker": "persona",
-      "text": "I'm farm manager on the Ashworth estate, so I don't own the land, I run it for the family that does. It's 900 hectares, mostly wheat, barley and beans, with 1,200 ewes on the hill ground. I've six staff. A typical day is a quick meeting in the yard at seven, then I'm in the pickup checking crops, ringing the grain merchant, sorting out whoever's off sick."
+      "text": "That's fine. I'll try to be honest, though I'm not a dramatic person."
     },
     {
       "speaker": "interviewer",
-      "text": "How much does technology figure in that?"
+      "text": "Good. To start, could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "More every year. The sprayer and the drill run on GPS, and we've yield maps from the combine. I'll use an AI chat tool now and then to sum up a long report or check a regulation, but I don't trust it with anything that matters. I'm never the first to try something, but I'm never the last either, and that's served me well for twenty years."
+      "text": "I'm at the college farm by half six, check the cattle and the sheep with my stockman Pete, then the students arrive at half eight. I teach them the practical side, calving, lambing, tractor work, fencing, and then I run the farm in the gaps. I love seeing a nervous student handle a calving for the first time; what wears me out is the college meetings about budgets."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Tell me about the farm and your family."
+    },
+    {
+      "speaker": "persona",
+      "text": "Northfield is the agricultural college's teaching farm: 160 beef cattle, 500 sheep and 200 hectares of cereals. I've run it for nine years with a degree in agriculture. My wife Katya is an accountant in town, and we've got Nina, who's twelve, and Max, who's nine, and a mortgage on a house near the college."
     }
   ],
   "scenarios": {
@@ -36,11 +44,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thank you. Now I'll read you five short pictures of the future, one at a time. The first is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say I'm not surprised. Most of what was promised never matched what happens in a muddy field. At the grain merchant's open day, I'd say we got a few handy tools and that's fine."
+          "text": "I'd say it's about what I expected, a useful tool and not much more. I'd tell the students it's worth knowing, like knowing how to use a spreadsheet. I'm not one for big opinions online."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, it'd be a relief for my job. My boss, old Mr Ashworth, likes having a manager he can phone. Nothing would push him to change that."
+          "text": "For me it means the job stays as it is, which suits me fine. I run the teaching farm at Northfield Agricultural College, beef, sheep and arable, and I teach the students the practical side. I use a chat tool now and then to draft student reports, and that saves me a Sunday afternoon each term."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep going as I am. I'd use the AI tools a bit more for paperwork, the subsidy forms especially. I'd keep pushing the estate to replace the old combine, which needs doing anyway."
+          "text": "I'd keep running the farm and teaching the way I do now. I'd write the end-of-term reports with the chat tool and check them over. And I'd go ahead with the house extension Katya and I have been planning, about 40,000, half from savings."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Business as usual."
+          "text": "Calm. The job's secure, Katya's job's secure, and the kids are happy at school. It's a good place to be."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anyone on the team who'd see it differently?"
+          "text": "What's the hardest part of your job right now, with or without AI?"
         },
         {
           "speaker": "persona",
-          "text": "Kasia, our sprayer operator, would be a bit disappointed, she reads all about the drones. The others wouldn't notice. Two of them have been on the estate longer than me."
+          "text": "Funding, every single year. The college board always eyes the teaching farm as a cost, and I have to show it pays its way. The cattle sales and the grain help, but last spring I still had to fight to keep a second stockman post."
         },
         {
           "speaker": "interviewer",
-          "text": "What about your household?"
+          "text": "Is there anyone at the college you'd worry about in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "My wife Clara works in an insurance office in town, and I think she'd be more relieved than me. Clara's job is the one I thought AI would come for first, not mine, so a fizzle suits us both."
+          "text": "Not really, which is a nice answer to give. The lecturers who teach the theory might use AI to mark essays, but they'd still be needed. Our admin team might shrink a little, but the college is growing."
         }
       ],
-      "say": "I'd say I'm not surprised, because most promises don't survive a muddy field. At the grain merchant's open day I'd say we got a few handy tools and that's fine.",
-      "think": "Privately it'd be a relief for my job, since the estate owner likes having a manager he can phone. Nothing would push him to change that.",
-      "do": "Keeps going as he is and uses AI tools a bit more for subsidy forms and paperwork. Keeps pushing the estate to replace the old combine.",
-      "feel": "Calm, business as usual.",
+      "say": [
+        "I'd say AI is a **useful tool** and not much more.",
+        "I'd tell students it's worth knowing, like a **spreadsheet**."
+      ],
+      "think": [
+        "I think my job **stays as it is**, which suits me.",
+        "The **chat tool** saves me a Sunday afternoon on student reports each term."
+      ],
+      "do": [
+        "Keep running the **teaching farm** and teaching as now.",
+        "Go ahead with the **house extension** for about 40,000, half from savings."
+      ],
+      "feel": [
+        "**Calm**, with both jobs secure and the kids happy."
+      ],
       "mood": "calm",
-      "quote": "Clara's job is the one I thought AI would come for first, not mine, so a fizzle suits us both.",
-      "fieldNote": "Ivan is an employee, not an owner, and his security depends on his boss's habits. He's measured and middle-of-the-road. He immediately thinks of his wife's office job as the more exposed one, which shapes the household's view.",
+      "quote": "The college board always eyes the teaching farm as a cost, and I have to show it pays its way.",
+      "fieldNote": [
+        "He manages a **college teaching farm** and teaches practical farming to students.",
+        "His real yearly fight is **funding**, not technology.",
+        "He uses AI **now and then** for reports, without strong feelings either way."
+      ],
       "actions": [
         "keep-going",
         "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep running the teaching farm and classes as now",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Draft end-of-term student reports with the chat tool",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thanks. The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a change we need to manage, not fight. Use what works, drop what doesn't. I'd say that to the estate and to the lads in the yard."
+          "text": "I'd say we need to teach students how to work alongside these tools, and I'd say it at the next staff meeting. Farming isn't top of the list for change, but the paperwork side is. I'd say it in a measured way, because that's how I am."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, the estate would cut staff. Six people on 900 hectares is already lean, and with robot sprayers and self-driving tractors they'd want four. I'd probably keep my job, because someone has to run it, but I'd be the one choosing who goes."
+          "text": "Privately, I'd be thinking about Katya more than me. Katya is an accountant at a mid-sized firm in town, and checking and writing reports is exactly what this picture takes over. My farm's safe for a good while, but her firm could stop hiring and squeeze the staff it has."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait to see what the neighbouring estates buy and how it goes, maybe six months. Then I'd put a plan to the Ashworths: one robot sprayer, and Kasia trained to run it. I'd learn the farm management software properly myself, over a winter. And I'd push for anyone who leaves to get decent notice and a reference."
+          "text": "I'd put the extension on hold for a year and add 500 a month to savings. I'd build a short course for the students on AI farm planning tools, because that's useful and it makes the farm look modern to the board. And I'd sit down with Katya to look at which parts of her work are harder to automate, like advising farm clients in person."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +160,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Mostly about the staff conversation."
+          "text": "Anxious, I'd say, though I'd look calm. My job's fine, but half our household income sits in an accounting firm full of exactly the tasks the machines are good at. That's a lot to carry."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you be most worried about losing?"
+          "text": "You said you'd look calm. Would Katya see through that?"
         },
         {
           "speaker": "persona",
-          "text": "Big Tom, honestly. He's 61, he's brilliant with sheep and useless with screens. Choosing between Tom and a robot sprayer is a sum the estate would do in a minute, and I'd hate every number in it."
+          "text": "Katya would see through it in about ten seconds. She'd probably be calmer than me about her own job; she's always been the practical one. We'd have that conversation at the kitchen table after the kids are in bed."
         },
         {
           "speaker": "interviewer",
-          "text": "Would Clara's job be affected?"
+          "text": "What would you tell the students in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "Probably, insurance claims are exactly the sort of thing AI would do. She'd be changing how she works more than me. We'd be fine with the savings, but we'd both be adjusting."
+          "text": "I'd tell them the hands-on skills, handling cattle, lambing, reading soil, are worth more than ever. And I'd tell them to learn the tools anyway, because the farmers who use both will run the best farms. I'd say it to every first-year group in September."
         }
       ],
-      "say": "I'd say this is a change to manage, not fight, by using what works and dropping what doesn't. I'd say that to the estate and to the staff in the yard.",
-      "think": "Privately I think the estate would cut from six staff to four once robot sprayers and self-driving tractors arrived. I'd probably keep my job but would be the one choosing who goes.",
-      "do": "Watches what neighbouring estates buy for about six months, then proposes one robot sprayer with Kasia trained to run it. Learns the farm management software properly over winter and pushes for fair notice and references for anyone who leaves.",
-      "feel": "Uneasy, mostly about having the staff conversation.",
-      "mood": "uneasy",
-      "quote": "Choosing between Tom and a robot sprayer is a sum the estate would do in a minute, and I'd hate every number in it.",
-      "fieldNote": "Ivan's role puts him between the owners and the staff, and that's where his discomfort sits. He's methodical: wait six months, then propose something small. He expects his wife's office job to change more than his, which keeps the household view balanced.",
+      "say": [
+        "I'd say we should teach students to **work alongside** AI tools.",
+        "I'd say farming's **paperwork side** changes before the fieldwork."
+      ],
+      "think": [
+        "I think **Katya's accounting job** is more at risk than mine.",
+        "Her firm could **stop hiring** and squeeze the staff it already has."
+      ],
+      "do": [
+        "Put the **extension on hold** for a year and add 500 a month to savings.",
+        "Build a short **student course** on AI farm planning tools.",
+        "Help Katya find **harder-to-automate** work, like advising farm clients in person."
+      ],
+      "feel": [
+        "**Anxious** underneath a calm face, mostly for **Katya**."
+      ],
+      "mood": "anxious",
+      "quote": "Half our household income sits in an accounting firm full of exactly the tasks the machines are good at.",
+      "fieldNote": [
+        "The household's risk sits with his partner's **accounting job**, not the farm.",
+        "He shows a **calm face** but admits his partner would see through it.",
+        "He would use the change to make the **teaching farm** look modern to the board."
+      ],
       "actions": [
-        "wait-and-see",
-        "learn-ai",
-        "automate"
+        "cut-spending",
+        "save-more",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Put the house extension on hold for a year",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Add 500 a month to savings while Katya's firm adjusts",
+          "tag": "save-more"
+        },
+        {
+          "text": "Build a short student course on AI farm planning tools",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thank you. The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's too fast and somebody should have seen it coming. I wouldn't be on a soapbox, but I'd say the government needs to pay people while they find their feet. I'd say it to anyone who asked."
+          "text": "I'd say we need a plan from the government quickly, and colleges like ours need to be part of it. I'd say we should be training people for whatever comes next, not panicking. I'd try to sound steady, because the students would be watching."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +238,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think the manager's job goes, along with most of the team. If a robot can plan the crops and run the machines, the Ashworths need a contractor and a laptop, not me. And it'd hit Clara's office at the same time, which is the bit that scares me."
+          "text": "Off the record, I think Katya's job is gone by 2028, or most of it. Then by 2031 the robots can do the farm work I teach, and the college asks why it's training stockmen at all. I think we'd lose one income quickly and mine would be shaky within five years."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +246,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop any big spending at home that week, no kitchen, no new car. I'd move as much as possible into paying down the mortgage. I'd also lean on family: my brother has a building firm, and building might hold up longer than farming. And honestly I'd start looking at jobs that need a person in the room, though I don't know which ones those are any more."
+          "text": "I'd cancel the extension for good and keep the savings for the gap. I'd sign up for the robotics technician course the college is setting up, so I'm the one who teaches robot maintenance. And we'd talk to the kids about money, honestly, for the first time, so they understand why we're cutting back."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +254,82 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. Two incomes going at once is what keeps me up."
+          "text": "Alarmed. Two years is no time at all. I keep picturing Katya clearing her desk."
         },
         {
           "speaker": "interviewer",
-          "text": "You said plenty of farm jobs nearby. Does that help here?"
+          "text": "The thinking AI comes first, the robots about three years later. How does that play out for your family?"
         },
         {
           "speaker": "persona",
-          "text": "Not if every estate does the same thing in the same year. There are plenty of farm manager jobs nearby right up until there aren't any, and in two years that's how it would go."
+          "text": "That gap is the whole story for us, really. My wife's work is all accounting, so she's hit in 2028, while mine is mostly hands-on and lasts till about 2031. So we'd have three years living on my wage and the savings, and I'd be working hard to make myself useful in a robot world."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Leo and Nina?"
+          "text": "What would you say to Nina and Max that night?"
         },
         {
           "speaker": "persona",
-          "text": "Leo's fourteen, he'd understand. I'd tell him we've got savings and a plan, and I'd try to sound like I meant it. Nina would just ask if we'd still have the dog."
+          "text": "I'd tell Nina, who's twelve, that Mum is going to find new work and nobody's going hungry. Max is nine, so for him it'd be that we're having a cheaper summer this year. And then I'd go out and check the cattle, because that's where I think best."
         }
       ],
-      "say": "I'd say it's too fast and someone should have seen it coming. I'd say, without getting on a soapbox, that the government needs to pay people while they find their feet.",
-      "think": "Privately I think the manager's job and most of the team would go, because the estate would need a contractor and a laptop instead. It would hit Clara's office job at the same time, which scares me most.",
-      "do": "Halts big household spending that week, including the kitchen and a new car, and moves money into paying down the mortgage. Leans on his brother's building firm as a possible fallback and starts looking for work that needs a person on site.",
-      "feel": "Alarmed, kept awake by the thought of two incomes going at once.",
+      "say": [
+        "I'd say we need a **government plan** quickly, with colleges part of it.",
+        "I'd say we should **train people** for what comes next, not panic."
+      ],
+      "think": [
+        "I think **Katya's job** is mostly gone by 2028.",
+        "By 2031 the college may ask why it **trains stockmen** at all."
+      ],
+      "do": [
+        "Cancel the **extension** for good and keep the savings for the gap.",
+        "Sign up for the college's **robotics technician course** to teach robot maintenance.",
+        "Talk to the kids about **money** honestly for the first time."
+      ],
+      "feel": [
+        "**Alarmed**, picturing **Katya** clearing her desk."
+      ],
       "mood": "alarmed",
-      "quote": "There are plenty of farm manager jobs nearby right up until there aren't any, and in two years that's how it would go.",
-      "fieldNote": "Ivan's alarm comes from losing both household incomes at once, since he and Clara are both employees. He quickly dismisses the comfort of nearby jobs because every estate would change in the same year. He leans on family rather than politics, which fits his middle-of-the-road views.",
+      "quote": "My wife's work is all accounting, so she's hit in 2028, while mine is mostly hands-on and lasts till about 2031.",
+      "fieldNote": [
+        "The **three-year gap** splits his household: partner hit first, him later.",
+        "He expects to lose **one income** quickly and fears for his own after.",
+        "He thinks best **out with the cattle**, not at the table."
+      ],
       "actions": [
         "cut-spending",
         "save-more",
-        "seek-support",
-        "change-job"
+        "retrain",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Cancel the house extension for good",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Keep the savings for the gap after Katya's job goes",
+          "tag": "save-more"
+        },
+        {
+          "text": "Take the college's robotics technician course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Tell Nina and Max honestly why the family is cutting back",
+          "tag": "family-plans"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thanks. The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is a fair warning, so let's use it. I'd tell the estate I want to be the one who runs the changeover, and I'd say to the team to get trained now."
+          "text": "Same as with the fast one, I'd say the colleges have to lead on retraining. With five years, I'd say there's time to get it right if we start now. I'd say it to the college principal first."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +337,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years gives me a chance. If I'm the person who knows how to run a robot estate, I'm worth keeping, at least for a while. Clara would have time to retrain too."
+          "text": "Privately, five years helps Katya most. She could move into financial advice for farmers, where people want a face across the table, before 2031. My job lasts till about 2034, and by then I'd want to be teaching robot farming."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +345,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year I'd do a proper course on farm robotics and data, the one the agricultural college runs at weekends. I'd push the Ashworths to trial one robot by year two, so we learn before everyone else. I'd keep saving and overpaying the mortgage, and I'd talk to Clara about what she'd retrain into."
+          "text": "I'd start the robotics course in about two years, once the college has worked out what it should teach. I'd keep saving, maybe 600 a month. And I'd wait for a year or so to see how the first robot farms do before changing the teaching farm itself."
         },
         {
           "speaker": "interviewer",
@@ -256,48 +353,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but it's the kind of anxious that gets you up early."
+          "text": "Anxious, but less than the fast one. Five years gives us a chance to steer. I still don't sleep as well thinking about it."
         },
         {
           "speaker": "interviewer",
-          "text": "That's quite a jump from 'never first' to trialling robots by year two. Why?"
+          "text": "You'd wait a year before changing the teaching farm. Why wait?"
         },
         {
           "speaker": "persona",
-          "text": "Because the timetable's changed, not me. I still wouldn't buy the first robot on the market. I'd let a neighbour buy the first one, and I'd make sure we bought the second one before anyone else."
+          "text": "Because I've seen colleges buy expensive kit that sits in a shed. The college bought a weeding robot in 2023 that never worked on our clay soil. I'd want to see these robots working on farms like ours first."
         },
         {
           "speaker": "interviewer",
-          "text": "And the team?"
+          "text": "What's the hardest conversation you'd have in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell them straight, at the yard meeting, and offer to pay for the course for anyone who wants it. Kasia would go for it. Big Tom would retire, I think, and I'd help him time it right."
+          "text": "Probably with my second stockman, Pete, who's 58 and doesn't want to learn anything new. I'd have to tell Pete that the college might not renew his post in 2034. That's a hard one, because Pete taught me half of what I know about cattle."
         }
       ],
-      "say": "I'd say five years is fair warning and we should use it. I'd tell the estate I want to run the changeover and urge the team to get trained now.",
-      "think": "Privately five years gives me a chance, because a manager who can run a robot estate is worth keeping for a while. Clara would have time to retrain too.",
-      "do": "Takes the agricultural college's weekend course in farm robotics and data in the first year and pushes the estate to trial one robot by year two. Keeps overpaying the mortgage and plans Clara's retraining with her.",
-      "feel": "Anxious, but in a way that gets him up early.",
+      "say": [
+        "I'd say **colleges must lead** on retraining.",
+        "I'd say with **five years** there's time to get it right if we start now."
+      ],
+      "think": [
+        "I think five years helps **Katya** move into face-to-face advice.",
+        "My job lasts till about **2034**, and I'd teach robot farming by then."
+      ],
+      "do": [
+        "Start the **robotics course** in about two years.",
+        "Save around **600 a month** meanwhile.",
+        "Wait a year to see **first robot farms** before changing the teaching farm."
+      ],
+      "feel": [
+        "**Anxious**, but less than in the fast picture."
+      ],
       "mood": "anxious",
-      "quote": "I'd let a neighbour buy the first one, and I'd make sure we bought the second one before anyone else.",
-      "fieldNote": "Ivan explains his faster move as the timetable changing, not his nature. He'd still let a neighbour go first but wants to be second. He offers his team paid training and plans Big Tom's retirement with care.",
+      "quote": "The college bought a weeding robot in 2023 that never worked on our clay soil.",
+      "fieldNote": [
+        "Five years gives his partner time to move into **farmer-facing advice**.",
+        "He is wary of **expensive kit** after a robot failed on their clay soil.",
+        "He dreads telling **Pete**, the older stockman who trained him, about his post."
+      ],
       "actions": [
         "retrain",
-        "learn-ai",
         "save-more",
-        "family-plans"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Start the robotics technician course in about two years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save around 600 a month while the change comes",
+          "tag": "save-more"
+        },
+        {
+          "text": "Watch the first robot farms for a year before changing anything",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thank you. The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is plenty, and anyone who doesn't plan has only themselves to blame. Maybe that's harsh. I'd say it more kindly at the yard."
+          "text": "I'd say ten years is enough to do this properly, and colleges like ours will matter a great deal. I'd say we should be training people for the jobs around robots now. I'd be fairly upbeat about it."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +431,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be fine. I'd be 53, the mortgage nearly done, and I'd have years to learn the new kit. I'd worry more about Leo, who'd be 24."
+          "text": "Off the record, ten years makes it manageable. Katya would have time to change her work slowly, and I'd be 56 when the robots come in 2039, with the mortgage nearly paid. I think we'd be fine, though the teaching farm would look very different."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +439,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on for a few years and watch. Around year three or four, I'd do the robotics course and push the estate to trial kit. I'd help Clara retrain at her own pace. And I'd talk to Leo about university, steering him towards something hands-on and hard to replace, if there is such a thing."
+          "text": "I'd carry on as now, and do the extension after all. I'd use the AI tools a bit more each year and add a module on robot farming to the course by 2030. And I'd keep saving steadily, the way we always have."
         },
         {
           "speaker": "interviewer",
@@ -321,36 +447,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but in the background."
+          "text": "Uneasy, but only a little. Ten years feels like enough. The thing that bothers me is not knowing what the students should learn."
         },
         {
           "speaker": "interviewer",
-          "text": "You said anyone who doesn't plan has only themselves to blame. Do you believe that?"
+          "text": "You said you don't know what the students should learn. What would you guess?"
         },
         {
           "speaker": "persona",
-          "text": "Half of it. Some people can't plan, they're living week to week. It's easy to say plan ahead when you've got a year's wages in the bank, and I know that."
+          "text": "My guess is caring for animals, fixing machines and talking to people. Robots will need someone to check their work, and the animals will still need someone who notices. That's my best guess, but nobody really knows."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you hope Leo does?"
+          "text": "Would you change anything about your own kids' plans?"
         },
         {
           "speaker": "persona",
-          "text": "I'd hope he does something he loves. If he wanted to farm, I'd say learn the robots and the soil both. I don't know what else to tell him."
+          "text": "Not much, honestly. Nina wants to be an engineer and Max wants to be a footballer, so we'll see. With ten years, I'd just tell them to do what they're good at and learn the tools as they go."
         }
       ],
-      "say": "I'd say ten years is plenty of time and people who don't plan have mostly themselves to blame. I'd say it more kindly in the yard.",
-      "think": "Privately I'd be fine at 53 with the mortgage nearly done and years to learn the new kit. I'd worry more about my son Leo, who'd be 24.",
-      "do": "Carries on and watches for a few years, then takes the robotics course and pushes the estate to trial kit around year three or four. Helps Clara retrain at her own pace and talks to Leo about a hands-on university course.",
-      "feel": "Uneasy in the background.",
+      "say": [
+        "I'd say ten years is enough to **do this properly**.",
+        "I'd say colleges should **train people** for jobs around robots now."
+      ],
+      "think": [
+        "I think ten years makes it **manageable** for our family.",
+        "I'd be **56** when the robots come, with the mortgage nearly paid."
+      ],
+      "do": [
+        "Carry on as now and **build the extension** after all.",
+        "Add a **robot farming module** to the course by 2030.",
+        "Keep **saving steadily** each month."
+      ],
+      "feel": [
+        "**Uneasy**, but only a little, mostly about what to teach."
+      ],
       "mood": "uneasy",
-      "quote": "It's easy to say plan ahead when you've got a year's wages in the bank, and I know that.",
-      "fieldNote": "Ivan goes back to his natural rhythm with ten years: watch, then follow. When challenged he softens his line about people who don't plan and admits his savings make it easy to say. His worry shifts to his son's future.",
+      "quote": "Robots will need someone to check their work, and the animals will still need someone who notices.",
+      "fieldNote": [
+        "With ten years he feels the change is **manageable** for his family.",
+        "His main unease is professional: **what to teach** the students.",
+        "He guesses **animal care**, fixing machines and talking to people will last."
+      ],
       "actions": [
-        "wait-and-see",
-        "retrain",
-        "family-plans"
+        "keep-going",
+        "learn-ai",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Carry on running the teaching farm and build the extension",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Add a robot farming module to the course by 2030",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep saving a steady amount each month",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -361,7 +517,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because Clara and I would both be hit at the same time. What would help is pay for people while they retrain, a year or so, and the estates being made to give staff proper notice and training before they bring the robots in."
+      "text": "AGI by 2028, because Katya's job would go before we'd had time to plan. What would help is proper support for people like Katya to move into new work, with some income while they retrain. And money for colleges like mine to retrain farm workers quickly."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +525,22 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the owners. People like the Ashworths would come out of this richer. I'm not angry about it, it's their land, but somebody should be asking what they owe the people who worked it."
+      "text": "You didn't ask about the students. The students are eighteen and choosing careers right now, and nobody can tell them what's safe. That bothers me more than my own job."
     }
   ],
-  "headlineQuote": "I'm never the first to try something, but I'm never the last either, and that's served me well for twenty years.",
-  "portrait": "Ivan Fischer is 43 and manages the 900-hectare Ashworth estate, arable land plus 1,200 ewes, for the family who own it, with a team of six. He's a careful follower who uses AI tools now and then and prides himself on being neither first nor last. As an employee married to an insurance office worker, he's most shaken by fast AGI because both household incomes would go at once. With more time he plans to retrain and lead the estate's changeover, while worrying about his long-serving staff and his son.",
-  "biggestWorry": "AGI in two years, because he and his wife would lose their incomes at the same time.",
-  "whatWouldHelp": "Pay for people while they retrain for about a year, and rules making estates give staff notice and training before bringing in robots."
+  "headlineQuote": "The students are eighteen and choosing careers right now, and nobody can tell them what's safe.",
+  "portrait": [
+    "Ivan, 43, runs an **agricultural college's teaching farm** and teaches practical farming.",
+    "He uses AI **now and then**, mostly to draft student reports.",
+    "His household's weak point is his wife's **accounting job**, exposed to thinking AI.",
+    "He is **anxious** in Steady Disruption and **alarmed** in AGI by 2028.",
+    "His deepest worry is what to tell **students** choosing careers now."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because Katya's job would go before they could plan."
+  ],
+  "whatWouldHelp": [
+    "Support with **income during retraining** for people like Katya.",
+    "Money for **colleges** to retrain farm workers quickly."
+  ]
 }
