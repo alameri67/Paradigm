@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { SCENARIOS, type ScenarioCode } from "@/lib/workers/types";
+import { SplitSparks } from "./split-sparks";
 
 const CODES = SCENARIOS.map((s) => s.code) as ScenarioCode[];
 /** How far the bottom half slides at each dial stop, mildest to most extreme. */
@@ -21,6 +22,7 @@ export function ShiftHeader() {
       <Link href="/" className="hx-shift-name" aria-label="Paradigm, home">
         <span className="hx-shift-top" aria-hidden="true">Paradigm</span>
         <span className="hx-shift-bottom" aria-hidden="true">Paradigm</span>
+        <SplitSparks level={at / (CODES.length - 1)} />
       </Link>
     </header>
   );
