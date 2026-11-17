@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Icon, type IconName } from "@/components/simulator/icons";
@@ -10,7 +10,7 @@ import { Avatar, SHORT_SECTOR } from "@/components/workers/avatar";
 import { DashIcon, hasDashIcon } from "./icons";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
-import { ACTION_LEVELS, pointsFor, summarize, type Summary } from "@/lib/workers/dashboard";
+import { ACTION_LEVELS, actionLevel, pointsFor, summarize, type Summary } from "@/lib/workers/dashboard";
 import {
   ACTION_LABEL,
   MOODS,
@@ -18,6 +18,7 @@ import {
   MOOD_LABEL,
   SCENARIOS,
   type Archetype,
+  type Group,
   type InterviewSummary,
   type ScenarioCode,
 } from "@/lib/workers/types";
@@ -155,12 +156,115 @@ function Insights({ s, archetypes, empty }: { s: Summary; archetypes: Archetype[
   );
 }
 
+/** The job's portrait in this person's gender. Every job has both; the other one ends in -f or -m. */
+function portraitFor(a: Archetype, gender?: string): Archetype {
+  if (!gender || !a.portraitUrl || a.portraitGender === gender) return a;
+  return { ...a, portraitUrl: a.portraitUrl.replace(/\.jpg$/, `-${gender.toLowerCase()}.jpg`) };
+}
+
+/** The five group levels encoded in an ID like A03-12323, as "Group: Level" pairs. */
+function levelsOf(id: string, groups: Group[]) {
+  const digits = id.split("-")[1] ?? "";
+  return groups.map((g, i) => ({ group: g, level: g.levels[Number(digits[i]) - 1] })).filter((x) => x.level);
+}
+
+/** A card about one person, opened by clicking their dot on the chart. */
+function PersonPop({
+  person,
+  archetype,
+  groups,
+  scenario,
+  at,
+  onClose,
+}: {
+  person: InterviewSummary;
+  archetype?: Archetype;
+  groups: Group[];
+  scenario: ScenarioCode;
+  at: { x: number; y: number };
+  onClose: () => void;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const r = person.scenarios[scenario];
+  const levels = levelsOf(person.id, groups);
+  const href = `/details?${new URLSearchParams({ job: person.archetype, ...Object.fromEntries(levels.map((x) => [x.group.key, x.level.key])), s: scenario })}`;
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const onDown = (e: PointerEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    // Let the click that opened the card finish before listening for outside clicks.
+    const t = setTimeout(() => window.addEventListener("pointerdown", onDown), 0);
+    ref.current?.focus();
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("pointerdown", onDown);
+    };
+  }, [onClose]);
+  return (
+    <div
+      ref={ref}
+      className="db-pop"
+      role="dialog"
+      aria-label={`${person.name}, ${person.job.toLowerCase()}`}
+      tabIndex={-1}
+      style={{ ["--px" as string]: `${at.x}px`, ["--py" as string]: `${at.y}px` }}
+    >
+      <button type="button" className="db-pop-x" aria-label="Close" onClick={onClose}>
+        ×
+      </button>
+      <div className="db-pop-who">
+        {archetype && <Avatar a={portraitFor(archetype, person.gender)} size={44} />}
+        <div>
+          <div className="db-pop-name">{person.name}</div>
+          <div className="db-pop-job">{person.job}</div>
+        </div>
+      </div>
+      <div className="db-pop-mood">
+        <span className="ws-dot" style={{ background: MOOD_ACCENT[r.mood] }} aria-hidden="true" />
+        {MOOD_LABEL[r.mood]} in {scenarioOf(scenario).name} · {ACTION_LEVELS[actionLevel(r.actions ?? []) - 1]}
+      </div>
+      {r.quote && <p className="db-pop-quote">“{r.quote}”</p>}
+      {(r.actions ?? []).length > 0 && (
+        <div className="db-pop-block">
+          <div className="db-pop-label">What they&apos;d do</div>
+          <ul>
+            {(r.actions ?? []).map((a) => (
+              <li key={a}>{ACTION_LABEL[a] ?? a}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <div className="db-pop-block">
+        <div className="db-pop-label">Who they are</div>
+        <dl className="db-pop-levels">
+          {levels.map(({ group, level }) => (
+            <div key={group.key}>
+              <dt>{group.label}</dt>
+              <dd>{level.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <Link href={href} className="db-pop-link">
+        Read their interview
+        <DashIcon name="arrow" size={14} />
+      </Link>
+    </div>
+  );
+}
+
 export function Dashboard({
   archetypes,
+  groups,
   people: everyone,
   versionsPerJob,
 }: {
   archetypes: Archetype[];
+  /** The five groups, to name each person's levels. */
+  groups: Group[];
   people: InterviewSummary[];
   /** How many versions each job has (every mix of the five groups). */
   versionsPerJob: number;
@@ -189,6 +293,7 @@ export function Dashboard({
   );
   const allOn = allCodes.length > 0 && allCodes.every((c) => jobs.includes(c));
   const [brush, setBrush] = useState<Brush | null>(null);
+  const [open, setOpen] = useState<{ id: string; view: string; at: { x: number; y: number } } | null>(null);
   const [showAll, setShowAll] = useState(false);
 
   // Shareable address bar.
@@ -201,6 +306,10 @@ export function Dashboard({
   const points = useMemo(() => pointsFor(shown, scenario), [shown, scenario]);
   const selected = useMemo(() => points.filter((p) => inBrush(p, brush)).map((p) => p.person), [points, brush]);
   const summary = useMemo(() => summarize(selected, scenario), [selected, scenario]);
+  // The card belongs to the view it was opened in: the dot moves when the scenario or the jobs change.
+  const view = `${scenario}|${jobs.join(",")}`;
+  const openPerson = open && open.view === view ? points.find((p) => p.person.id === open.id)?.person : undefined;
+  const closePop = () => setOpen(null);
   const chartPoints = useMemo(() => points.map(({ id, x, y, label, person }) => ({ id, x, y, label, color: MOOD_ACCENT[person.scenarios[scenario].mood] })), [points, scenario]);
 
   const toggleJob = (code: string) => {
@@ -324,6 +433,7 @@ export function Dashboard({
           </div>
         </div>
         {points.length ? (
+          <div className="db-chart-wrap">
           <ScatterBrush
             className="db-chart"
             points={chartPoints}
@@ -342,7 +452,23 @@ export function Dashboard({
             radius={4.5}
             left={104}
             ariaLabel={`Worry and action taken in ${sc.name}`}
+            tipRows={(i) => {
+              const r = points[i]?.person.scenarios[scenario];
+              return r ? [{ label: "Feels", value: MOOD_LABEL[r.mood] }, { label: "Acts", value: ACTION_LEVELS[actionLevel(r.actions ?? []) - 1] }, { label: "", value: "Click for more" }] : [];
+            }}
+            onPointClick={(i, at) => points[i] && setOpen({ id: points[i].person.id, view, at })}
           />
+          {openPerson && (
+            <PersonPop
+              person={openPerson}
+              archetype={archetypes.find((a) => a.code === openPerson.archetype)}
+              groups={groups}
+              scenario={scenario}
+              at={open!.at}
+              onClose={closePop}
+            />
+          )}
+          </div>
         ) : null}
         {points.length > 0 ? (
           <div className="db-legend" aria-label="Legend">

@@ -90,6 +90,7 @@ export async function getJobInsights(code: string): Promise<JobInsights | null> 
  */
 export async function getInterviewSummaries(): Promise<InterviewSummary[]> {
   const ids = (await listInterviewed()).filter((id) => /^A\d{2}-[1-3]{5}$/.test(id));
+  const { byId } = await grid();
   const read = async (id: string): Promise<InterviewSummary | null> => {
     try {
       const d = JSON.parse(await readFile(path.join(rawDir, `${id}.json`), "utf8"));
@@ -104,7 +105,7 @@ export async function getInterviewSummaries(): Promise<InterviewSummary[]> {
           actions: Array.isArray(r.actions) ? r.actions.filter((a: unknown) => typeof a === "string") : [],
         };
       }
-      return { id, archetype: id.slice(0, 3), job: String(d.job ?? ""), name: String(d.name ?? id), scenarios };
+      return { id, archetype: id.slice(0, 3), job: String(d.job ?? ""), name: String(d.name ?? id), gender: byId.get(id)?.gender, scenarios };
     } catch {
       // A file that is still being written, or isn't valid JSON yet.
       return null;

@@ -93,7 +93,7 @@ After each scenario, the interviewer writes:
 | `quote` | Word for word from the transcript | Up to 30 words | The most memorable line in this scenario (section 5). |
 | `fieldNote` | The interviewer's own notes | 2 to 4 sentences | What stood out: what drives them, any gap between say and think, what surprised you. |
 | `actions` | Tags | 1 to 4 | What they'd do, as tags from the list below. Only tag actions they actually describe. |
-| `steps` | Short plain phrases | 1 to 3 | The concrete things this person will actually do in the first year, in words a stranger understands. Each starts with a verb and names the real thing in their job and life: "Sell 40 of the 120 cows and rent out the top field", not "Cut back" or "Adapt". Each step carries the one action tag it belongs to, and every tag in `actions` has at least one step. |
+| `steps` | Short plain phrases | 1 to 4 | The concrete things this person will actually do in the first year, in words a stranger understands. Each starts with a verb and names the real thing in their job and life: "Sell 40 of the 120 cows and rent out the top field", not "Cut back" or "Adapt". Each step carries the one action tag it belongs to, and every tag in `actions` has at least one step. |
 
 Action tags:
 

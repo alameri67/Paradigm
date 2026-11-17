@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-// Paradigm: changed from the original only by the optional point colour, readout, radius and left props (marked "Paradigm:").
+// Paradigm: changed from the original only by the optional point colour, readout, radius, left, tipRows and onPointClick props (marked "Paradigm:").
 "use client";
 import "./bjork-scatter-brush-utils/bjork-theme.css";
 
@@ -91,6 +91,10 @@ export interface ScatterBrushProps {
   radius?: number;
   /** Paradigm: room left of the plot for the y labels, in px. Default 44. */
   left?: number;
+  /** Paradigm: rows for a point's hover tooltip, in place of its x and y. */
+  tipRows?: (index: number) => { label: string; value: string }[];
+  /** Paradigm: a click on a point (no drag). `at` is the point's position inside the chart, in px. */
+  onPointClick?: (index: number, at: { x: number; y: number }) => void;
 }
 
 const LEFT = 44;
@@ -172,6 +176,8 @@ interface Run {
   ready: boolean;
   plot: { l: number; r: number; t: number; b: number };
   hover: number | null;
+  /** Paradigm: the point under the pointer when it went down, for click-to-open. */
+  downHover: number | null;
   drag: null | { mode: DragMode; id: number; sx: number; sy: number; start: Brush | null };
   grid: Map<number, number[]>;
   gridKey: string;
@@ -203,6 +209,8 @@ export function ScatterBrush({
   readout = true,
   radius = RADIUS,
   left = LEFT,
+  tipRows,
+  onPointClick,
 }: ScatterBrushProps) {
   const { pal, reduce, vars } = useChartTheme(toneProp);
   const announcer = useRef<AnnouncerHandle>(null);
@@ -248,6 +256,7 @@ export function ScatterBrush({
     ready: false,
     plot: { l: 0, r: 0, t: 0, b: 0 },
     hover: null,
+    downHover: null,
     drag: null,
     grid: new Map(),
     gridKey: "",
@@ -538,10 +547,12 @@ export function ScatterBrush({
     return {
       key: `${i}|${pal.text}`,
       title: pt.label,
-      rows: [
-        { key: "x", label: xLabel, value: formatX(pt.x) },
-        { key: "y", label: yLabel, value: formatY(pt.y) },
-      ],
+      rows: tipRows
+        ? tipRows(i).map((r, k) => ({ key: `r${k}`, label: r.label, value: r.value }))
+        : [
+            { key: "x", label: xLabel, value: formatX(pt.x) },
+            { key: "y", label: yLabel, value: formatY(pt.y) },
+          ],
     };
   };
 
@@ -596,6 +607,33 @@ export function ScatterBrush({
   };
   const cursorFor: Record<string, string> = { move: "move", n: "ns-resize", s: "ns-resize", e: "ew-resize", w: "ew-resize", ne: "nesw-resize", sw: "nesw-resize", nw: "nwse-resize", se: "nwse-resize" };
 
+  // Nearest point within 16px of (px, py) in chart pixels, or null.
+  const nearestAt = (ptx: number, pty: number): number | null => {
+    const s = st.current;
+    const pt = { x: ptx, y: pty };
+    const cx = Math.floor(pt.x / 16);
+    const cy = Math.floor(pt.y / 16);
+    const [x0, x1] = dom.x;
+    const [y0, y1] = dom.y;
+    let best = -1;
+    let bd = 16 * 16;
+    for (let gx = cx - 1; gx <= cx + 1; gx++)
+      for (let gy = cy - 1; gy <= cy + 1; gy++) {
+        const list = s.grid.get(gx * 10007 + gy);
+        if (!list) continue;
+        for (const i of list) {
+          const px = s.plot.l + ((points[i].x - x0) / (x1 - x0)) * (s.plot.r - s.plot.l);
+          const py = s.plot.b - ((points[i].y - y0) / (y1 - y0)) * (s.plot.b - s.plot.t);
+          const dd = (px - pt.x) ** 2 + (py - pt.y) ** 2;
+          if (dd < bd) {
+            bd = dd;
+            best = i;
+          }
+        }
+      }
+    return best >= 0 ? best : null;
+  };
+
   const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
     st.current.lastInput = clock();
     if (wrapperRef.current) rectRef.current = wrapperRef.current.getBoundingClientRect();
@@ -605,6 +643,7 @@ export function ScatterBrush({
     if (pt.x < s.plot.l - HANDLE || pt.x > s.plot.r + HANDLE || pt.y < s.plot.t - HANDLE || pt.y > s.plot.b + HANDLE) return;
     const mode = modeAt(pt.x, pt.y) ?? "new";
     s.drag = { mode, id: e.pointerId, sx: pt.x, sy: pt.y, start: brush };
+    s.downHover = s.hover ?? nearestAt(pt.x, pt.y);
     e.currentTarget.setPointerCapture(e.pointerId);
     setHover(null);
     wake();
@@ -645,28 +684,7 @@ export function ScatterBrush({
       return;
     }
     if (wrapperRef.current) wrapperRef.current.style.cursor = cursorFor[modeAt(pt.x, pt.y) ?? ""] ?? "crosshair";
-    // Nearest point within 16px.
-    const cx = Math.floor(pt.x / 16);
-    const cy = Math.floor(pt.y / 16);
-    const [x0, x1] = dom.x;
-    const [y0, y1] = dom.y;
-    let best = -1;
-    let bd = 16 * 16;
-    for (let gx = cx - 1; gx <= cx + 1; gx++)
-      for (let gy = cy - 1; gy <= cy + 1; gy++) {
-        const list = s.grid.get(gx * 10007 + gy);
-        if (!list) continue;
-        for (const i of list) {
-          const px = s.plot.l + ((points[i].x - x0) / (x1 - x0)) * (s.plot.r - s.plot.l);
-          const py = s.plot.b - ((points[i].y - y0) / (y1 - y0)) * (s.plot.b - s.plot.t);
-          const dd = (px - pt.x) ** 2 + (py - pt.y) ** 2;
-          if (dd < bd) {
-            bd = dd;
-            best = i;
-          }
-        }
-      }
-    setHover(best >= 0 ? best : null);
+    setHover(nearestAt(pt.x, pt.y));
   };
 
   const endDrag = (e: PointerEvent<HTMLDivElement>) => {
@@ -674,7 +692,15 @@ export function ScatterBrush({
     if (s.drag && s.drag.id === e.pointerId) {
       // A click without a drag on empty space clears the brush.
       const moved = Math.abs((local(e)?.x ?? s.drag.sx) - s.drag.sx) > 3 || Math.abs((local(e)?.y ?? s.drag.sy) - s.drag.sy) > 3;
-      if (s.drag.mode === "new" && !moved) setBrush(null, true);
+      if (s.drag.mode === "new" && !moved && s.downHover !== null && onPointClick && points[s.downHover]) {
+        const i = s.downHover;
+        const [x0, x1] = dom.x;
+        const [y0, y1] = dom.y;
+        onPointClick(i, {
+          x: s.plot.l + ((points[i].x - x0) / (x1 - x0)) * (s.plot.r - s.plot.l),
+          y: s.plot.b - ((points[i].y - y0) / (y1 - y0)) * (s.plot.b - s.plot.t),
+        });
+      } else if (s.drag.mode === "new" && !moved) setBrush(null, true);
       else announcer.current?.say(describeStats(statsOf(points, brush ? points.map((p, i) => (inBrush(p, brush) ? i : -1)).filter((i) => i >= 0) : null)));
       s.drag = null;
       wake();

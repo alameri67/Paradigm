@@ -12,7 +12,7 @@ async function DashboardData() {
   await connection();
   const [people, groups] = await Promise.all([getInterviewSummaries(), getGroups()]);
   const versionsPerJob = groups.reduce((n, g) => n * g.levels.length, 1);
-  return <Dashboard archetypes={archetypes} people={people} versionsPerJob={versionsPerJob} />;
+  return <Dashboard archetypes={archetypes} groups={groups} people={people} versionsPerJob={versionsPerJob} />;
 }
 
 function Loading() {

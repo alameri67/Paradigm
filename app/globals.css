@@ -566,3 +566,24 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 /* Titles stay on one line; only a phone is narrow enough to wrap them. */
 .t-display,.db-panel-title,.t-section{white-space:nowrap;text-wrap:nowrap}
 @media (max-width: 640px){.t-display,.db-panel-title,.t-section{white-space:normal;text-wrap:pretty}}
+
+/* Person card, opened by clicking a dot on the summary chart. Sits beside the dot, kept inside the chart. */
+.db-chart-wrap{position:relative}
+.db-pop{position:absolute;z-index:20;top:clamp(8px,calc(var(--py) - 120px),calc(100% - 420px));left:clamp(8px,calc(var(--px) + 16px),calc(100% - 336px));width:320px;max-width:calc(100% - 16px);display:flex;flex-direction:column;gap:12px;padding:18px 18px 16px;border-radius:18px;background:#fff;border:1px solid #ececec;box-shadow:0 18px 48px rgb(13 13 13 / .14),0 2px 6px rgb(13 13 13 / .06);font-size:13px;line-height:18px;color:var(--fg);outline:none}
+.db-pop-x{position:absolute;top:8px;right:10px;width:28px;height:28px;border:0;border-radius:50%;background:transparent;font-size:20px;line-height:1;color:var(--fg2)}
+.db-pop-x:hover{background:var(--muted)}
+.db-pop-who{display:flex;align-items:center;gap:12px;padding-right:24px}
+.db-pop-name{font-size:15px;line-height:20px;font-weight:600}
+.db-pop-job{color:var(--fg2)}
+.db-pop-mood{display:flex;align-items:center;gap:8px;font-weight:500}
+.db-pop-quote{margin:0;font-size:15px;line-height:21px;font-weight:600;text-wrap:pretty}
+.db-pop-block{display:flex;flex-direction:column;gap:6px}
+.db-pop-label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg2);font-weight:500}
+.db-pop-block ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:2px}
+.db-pop-levels{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;margin:0}
+.db-pop-levels div{display:flex;justify-content:space-between;gap:8px}
+.db-pop-levels dt{color:var(--fg2)}
+.db-pop-levels dd{margin:0;font-weight:500}
+.db-pop-link{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-weight:600;color:var(--fg);text-decoration:none;padding:7px 12px;border-radius:999px;background:var(--muted)}
+.db-pop-link:hover{background:var(--muted-2)}
+@media (max-width:560px){.db-pop{left:8px;right:8px;width:auto;top:clamp(8px,calc(var(--py) + 16px),calc(100% - 420px))}}

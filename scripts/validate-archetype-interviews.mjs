@@ -63,7 +63,7 @@ for (const f of files) {
     if (!MOODS.includes(x.mood)) errs.push(`${s}: bad mood "${x.mood}"`);
     if (!Array.isArray(x.actions) || x.actions.length < 1 || x.actions.length > 4) errs.push(`${s}: actions needs 1 to 4 tags`);
     else for (const a of x.actions) if (!ACTIONS.includes(a)) errs.push(`${s}: unknown action tag "${a}"`);
-    if (!Array.isArray(x.steps) || x.steps.length < 1 || x.steps.length > 3) errs.push(`${s}: steps needs 1 to 3 concrete steps`);
+    if (!Array.isArray(x.steps) || x.steps.length < 1 || x.steps.length > 4) errs.push(`${s}: steps needs 1 to 4 concrete steps`);
     else {
       for (const st of x.steps) {
         const w = words(st?.text);

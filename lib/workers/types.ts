@@ -122,5 +122,7 @@ export interface InterviewSummary {
   archetype: string;
   job: string;
   name: string;
+  /** "F" or "M", from the person's profile, so the right portrait shows. */
+  gender?: string;
   scenarios: Record<ScenarioCode, { mood: MoodKey; quote: string; actions: string[] }>;
 }
