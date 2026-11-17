@@ -117,15 +117,19 @@ Action tags:
 | `family-plans` | Changes family plans, such as children's studies, a house move or a wedding |
 | `wait-and-see` | Waits to see what happens before acting |
 
-Mood scale, from calmest to most distressed:
+Mood scale, from calmest to most distressed. Mood is how the person feels about their work and their living over the next few years in that world. It includes the worries they already carry, not only the ones AI brings:
 
-- `calm`: life feels much the same, or the change looks good for them.
+- `calm`: their work and money feel secure, or the change looks good for them.
 - `uneasy`: some worry in the background, but no real threat yet.
 - `anxious`: clear pressure, still feeling in control.
 - `alarmed`: losing sleep, a real threat to their job, income or way of life.
 - `panicked`: overwhelmed and out of options or time.
 
 **Let each person's own life decide their mood, one person at a time.** There is no right mix of moods and no target to hit. Don't read other interviews, and don't steer towards the middle of the scale or towards what seems typical for the job. Work it out from this person alone: how exposed their work is, how much money they have to fall back on, how many similar jobs are nearby, what's at stake at their life stage, and how they handle change. Someone with thin savings, few local jobs and little appetite for change may already be anxious or alarmed in a mild scenario. Someone secure and adaptable may stay calm even when AGI arrives in 2 years. Both are fine if they follow from the person. The same goes for what they do: let each person's choices come from their own situation.
+
+**"Nothing changes" doesn't mean "nothing to worry about".** In AI Plateau, AI adds little, but the person's life still has its own pressures: rent or a mortgage, bills, a thin cushion, a firm that's struggling, seasonal or short-term work, few jobs nearby, ageing parents, their own health. Someone who was already worried before AI came up stays worried in AI Plateau. Only call them calm if their work and money really feel secure. The same applies to the routine tasks AI does take over in AI Plateau: if much of this person's day is routine screen work, even that small change can touch them.
+
+**Steady Disruption hits desk work first.** In Steady Disruption, AI takes over many tasks in many jobs. A job that's high on thinking AI (writing, checking, buying, booking, coding, answering customers) feels it now: fewer hires, new targets, tasks moved to software, colleagues not replaced. A mostly hands-on job feels it later and less. Judge how much of this person's own day is thinking work and let that shape the answer.
 
 After the closing, the interviewer also writes:
 
