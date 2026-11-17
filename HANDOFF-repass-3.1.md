@@ -29,15 +29,16 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,590 of 7,776 done.**
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,618 of 7,776 done.**
+(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:24 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 44/243 | STALE from main - must redo |
-| A03 | 43/243 | STALE from main - must redo |
-| A04 | 40/243 | STALE from main - must redo |
-| A05 | 49/243 | not written yet |
+| A02 | 51/243 | STALE from main - must redo |
+| A03 | 51/243 | STALE from main - must redo |
+| A04 | 47/243 | STALE from main - must redo |
+| A05 | 54/243 | not written yet |
 | A06 | 43/243 | not written yet |
 | A07 | 41/243 | not written yet |
 | A08 | 43/243 | not written yet |
@@ -52,7 +53,7 @@ Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. 
 | A17 | 41/243 | not written yet |
 | A18 | 43/243 | not written yet |
 | A19 | 46/243 | not written yet |
-| A20 | 43/243 | not written yet |
+| A20 | 44/243 | not written yet |
 | A21 | 41/243 | not written yet |
 | A22 | 44/243 | not written yet |
 | A23 | 40/243 | not written yet |
@@ -65,9 +66,8 @@ Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. 
 | A30 | 40/243 | not written yet |
 | A31 | 47/243 | not written yet |
 | A32 | 45/243 | not written yet |
-Only **A01 (farmer) is complete**: 243/243 pass and `validate-job-insights.mjs A01` passes.
 
-For every other job the work stopped mid-flight, so each one is a mix of new 3.1 files and leftover 3.0 files.
+Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missing people are simply new files to write.
 
 ### Two traps to know about
 
@@ -84,7 +84,13 @@ For every other job the work stopped mid-flight, so each one is a mix of new 3.1
 1. Finish the interviews for `A02`–`A32` (about 6,186 people).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
-3. **A01 brackets pass.** Most A01 interviews were written before the brackets rule existed, so their quotes name
+3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
+   still passes. The validator requires each quote to be word for word from the persona's answer, so the same bracket
+   was also added to the matching sentence in the transcript (that is how the new 3.1 files do it). A bracket containing
+   his/her right after a name at the start of a sentence trips the pronoun check, so those use the protocol's other
+   form instead (`My wife Mei and I...`). Names at the start of a sentence, which the scanner below skips, were
+   checked too. Original note:
+   Most A01 interviews were written before the brackets rule existed, so their quotes name Most A01 interviews were written before the brackets rule existed, so their quotes name
    people without saying who they are. A scan found about 378 name mentions across 174 of the 243 A01 files.
    This needs judgment per quote, not a find-and-replace: some flagged lines are already fine
    (`"My sheepdog Nell..."`, `"Mr Dorran's son..."`) and must be left as they are. Only the quote strings change
@@ -122,7 +128,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A02": ["A02-111","A02-112","A02-113","A02-121"],
   "A03": ["A03-111","A03-112","A03-113","A03-121"],
   "A04": ["A04-111","A04-112","A04-113","A04-121"],
-  "A05": ["A05-111","A05-112","A05-113","A05-121"],
+  "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121"],
   "A07": ["A07-111","A07-112","A07-113","A07-121"],
   "A08": ["A08-111","A08-112","A08-113","A08-121"],
@@ -149,7 +155,8 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A29": ["A29-111","A29-112","A29-113","A29-121"],
   "A30": ["A30-111","A30-112","A30-113","A30-121"],
   "A31": ["A31-111","A31-112","A31-113","A31-121"],
-  "A32": ["A32-111","A32-112","A32-113","A32-121"]}
+  "A32": ["A32-111","A32-112","A32-113","A32-121"]
+}
 ```
 
 ### The A01 bracket scanner
@@ -173,6 +180,13 @@ for(const f of fs.readdirSync(d)){ if(!f.startsWith(pre))continue; const j=JSON.
 console.log(hits.length+" mentions in "+new Set(hits.map(h=>h.file)).size+" files");
 fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
 ```
+
+## Session log
+
+- 2026-11-17: second session took over. Re-checked the skip lists with the validator (they matched), did the A01
+  brackets pass, and launched one workflow run per job for A02-A32 with a rewritten `USER_ASK` (kept in the session's
+  scratchpad copy of the script; the committed script is unchanged). The status table above is rebuilt from the
+  validators on each checkpoint commit.
 
 ## Working agreement
 
