@@ -520,10 +520,13 @@ button{cursor:pointer}
   .db-panel{padding:24px 14px 18px;border-radius:20px}
 }
 @media (max-width: 560px){
-  /* Five stop labels do not fit side by side on a phone: show the chosen one, name and timing. */
-  .db .amount-label:not(.on){visibility:hidden}
-  .db .amount-label.on .nm{display:block}
-  .db .amount-labels{height:64px}
+  /* On a phone all five stops stay in view: icon and a short, wrapped name, without the timing. */
+  .db .amount-labels,.ws-main .amount-labels{height:58px}
+  .db .amount-label,.ws-main .amount-label{width:58px;white-space:normal;text-align:center;align-items:center;font-size:11px;line-height:13px}
+  .db .amount-label:first-child,.ws-main .amount-label:first-child{text-align:left;align-items:flex-start}
+  .db .amount-label:last-child,.ws-main .amount-label:last-child{text-align:right;align-items:flex-end}
+  .db .amount-label .nm,.ws-main .amount-label .nm{display:block}
+  .db .amount-label .mono,.ws-main .amount-label .mono{display:none}
 }
 
 /* (?) help next to a title */
