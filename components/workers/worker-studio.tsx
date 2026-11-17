@@ -264,7 +264,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
   const [showTranscript, setShowTranscript] = useState(false);
   const [card] = useState<CardKind>(() => {
     const c = params.get("card");
-    return isCardKind(c) ? c : "current";
+    // The glass card is the chosen design; ?card= still shows the others for comparison.
+    return isCardKind(c) ? c : "glass";
   });
   const [insights, setInsights] = useState<{ job: string; data: JobInsights | null } | null>(null);
 
@@ -276,7 +277,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   // Shareable address bar.
   useEffect(() => {
-    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "current" ? { card } : {}) }).toString();
+    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "glass" ? { card } : {}) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
   }, [job, levels, scenario, card]);
 

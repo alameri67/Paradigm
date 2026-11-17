@@ -114,14 +114,14 @@ export function WeatherPersona({ worker, iv, scenario }: Omit<PersonaProps, "por
   );
 }
 
-/** Feature card: the version id, the job, their quote for this scenario, and their cutout, coloured by mood. */
+/** Feature card: the version id, the job, their one-line story (the scenario quote sits beside the card), and their cutout, coloured by mood. */
 export function FeaturePersona({ worker, iv, scenario, portrait }: Omit<PersonaProps, "onReadInterview">) {
   const sc = iv.scenarios[scenario];
   return (
     <AnimatedFeatureCard
       index={worker.id}
       tag={worker.job}
-      title={<span key={sc.quote} className="swap block">“{sc.quote}”</span>}
+      title={iv.headlineQuote ? `“${iv.headlineQuote}”` : plain(toPoints(iv.biggestWorry)[0] ?? "")}
       imageSrc={portrait.cutout}
       color={MOOD_FEATURE_COLOR[sc.mood]}
       className="h-[460px]"
