@@ -463,32 +463,60 @@ button.ws-kpi:focus-visible{outline-offset:-3px}
   .ws-main{padding:16px 16px 40px}
 }
 
-/* Job-level patterns */
+/* Job-level patterns: the compact panels use the same plates, icon badges and glass buttons as the worker above. */
 .ws-patterns{display:flex;flex-direction:column;gap:24px;padding-top:8px}
-.ws-pat-head{display:flex;flex-direction:column;gap:8px;max-width:72ch}
-.ws-pat-headline{font-size:20px;line-height:28px;font-weight:500;text-wrap:balance}
+.ws-pat-head{display:flex;flex-direction:column;gap:8px;width:100%}
+.ws-pat-headline{font-size:20px;line-height:28px;font-weight:500;text-wrap:wrap}
 .ws-moodbar{display:flex;height:12px;border-radius:999px;overflow:hidden;gap:2px;max-width:760px}
 .ws-moodbar span{display:block;min-width:4px}
 .ws-moodkey{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;line-height:18px;color:var(--fg2)}
 .ws-moodkey span{display:inline-flex;align-items:center;gap:6px}
 .ws-moodkey i{width:8px;height:8px;border-radius:999px;display:inline-block}
-.ws-pat-cols{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:40px}
-.ws-pat-do ol{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:18px}
+.ws-pat-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.ws-pat-panel{padding:16px 18px 18px;border:1px solid var(--muted-2);border-radius:16px;background:var(--plate);min-width:0}
+.ws-pat-section-head{margin-bottom:12px}
+.ws-pat-do ol{list-style:none;margin:0;padding:0}
+.ws-pat-do ol>li+li{border-top:1px solid var(--hair)}
+.ws-pat-action{padding:12px 0}
+.ws-pat-action summary{list-style:none;cursor:pointer;position:relative;padding-right:22px;font-size:14px}
+.ws-pat-action summary::-webkit-details-marker{display:none}
+.ws-pat-action summary::after{content:'+';position:absolute;right:0;top:0;color:var(--fg2)}
+.ws-pat-action[open] summary::after{content:'−'}
 .ws-act-top{display:flex;justify-content:space-between;gap:12px;font-size:15px;font-weight:500}
-.ws-act-bar{display:block;height:6px;border-radius:999px;background:var(--muted);margin:6px 0 8px}
+.ws-act-bar{display:block;height:6px;border-radius:999px;background:var(--muted);margin:8px 0 0}
 .ws-act-bar span{display:block;height:100%;border-radius:999px;background:var(--fg)}
-.ws-pat-do p,.ws-pat-voice p{font-size:15px;line-height:23px}
-.ws-pat-voice{display:flex;flex-direction:column;gap:18px}
-.ws-pat-voice p{margin-top:6px}
-.ws-pat-diff ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:23px;max-width:80ch}
-.ws-pat-quotes>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:12px}
-.ws-pat-quotes figure{margin:0;display:flex;flex-direction:column;gap:8px}
-.ws-pat-quotes blockquote{margin:0;font-size:17px;line-height:25px;font-weight:600;text-wrap:pretty}
-.ws-pat-quotes figcaption{font-size:13px;color:var(--fg2)}
-@container view (max-width: 900px){
-  .ws-pat-cols{grid-template-columns:1fr;gap:28px}
-  .ws-pat-quotes>div{grid-template-columns:1fr}
+.ws-pat-action .bullets{font-size:14px;line-height:21px;margin-top:10px}
+.ws-pat-voice-item{display:flex;flex-direction:column;gap:8px}
+.ws-pat-voice-item+.ws-pat-voice-item{border-top:1px solid var(--hair);padding-top:16px;margin-top:16px}
+.ws-pat-voice-item .bullets{font-size:14px;line-height:21px}
+.ws-pat-differences{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border:1px solid var(--muted-2);border-radius:14px;overflow:hidden}
+.ws-pat-difference{padding:14px;min-width:0;font-size:14px;line-height:21px}
+.ws-pat-difference+.ws-pat-difference{border-left:1px solid var(--muted-2)}
+.ws-pat-difference summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;font-weight:500}
+.ws-pat-difference summary::-webkit-details-marker{display:none}
+.ws-pat-difference-label{display:flex;align-items:center;gap:8px;min-width:0}
+.ws-pat-difference .ws-voice-ico{width:26px;height:26px;border-radius:8px}
+.ws-pat-difference summary>svg{flex:none;color:var(--fg2)}
+.ws-pat-difference p{margin-top:12px}
+.ws-pat-quote-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:start}
+.ws-pat-quote-row figure{margin:0}
+.ws-pat-quote-row blockquote{margin:0;font-size:17px;line-height:25px;font-weight:600;text-wrap:pretty}
+.ws-pat-quote-row figcaption{font-size:13px;color:var(--fg2);margin-top:8px}
+.ws-pat-quote-controls{display:flex;align-items:center;gap:8px}
+.ws-pat-quote-controls .lq-btn{width:30px;height:30px;padding:0}
+.ws-pat-quote-controls span{font-size:11px;color:var(--fg2);white-space:nowrap}
+.ws-profile-fold,.ws-interview-fold{border-top:1px solid var(--muted-2)}
+.ws-profile-fold>summary,.ws-interview-fold>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;padding:16px 0}
+.ws-profile-fold>summary::-webkit-details-marker,.ws-interview-fold>summary::-webkit-details-marker{display:none}
+.ws-profile-fold>summary>svg,.ws-interview-fold>summary>svg{flex:none;color:var(--fg2)}
+.ws-profile-fold[open]>summary>svg,.ws-interview-fold[open]>summary>svg,.ws-pat-difference[open] summary>svg{transform:rotate(180deg)}
+.ws-profile-fold .ws-about,.ws-interview-fold .ws-transcript{padding:8px 0 24px}
+@container view (max-width:700px){
+  .ws-pat-cols{grid-template-columns:1fr}
+  .ws-pat-differences{grid-template-columns:1fr}
+  .ws-pat-difference+.ws-pat-difference{border-left:0;border-top:1px solid var(--muted-2)}
 }
+@media (max-width:640px){.ws-pat-quote-row{grid-template-columns:1fr}}
 
 /* Link to the summary from the worker page */
 .ws-jobs-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:12px 10px 6px}

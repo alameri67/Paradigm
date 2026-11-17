@@ -14,7 +14,7 @@ import { JobPatterns } from "./job-patterns";
 import { GROUP_ICON } from "./group-icons";
 import { Bullets, toPoints } from "./bullets";
 import { DashIcon } from "@/components/dashboard/icons";
-import { Brain, Footprints, Heart, MessageCircle, NotebookPen } from "lucide-react";
+import { Brain, ChevronDown, Footprints, Heart, MessageCircle, NotebookPen, UserRound } from "lucide-react";
 import { FeaturePersona, GlassPersona, SCENARIO_SHORT, WeatherPersona, isCardKind, type CardKind } from "./persona-cards";
 import { usePublishScreen } from "@/lib/ask/screen-store";
 import type { Screen } from "@/lib/ask/schema";
@@ -474,34 +474,41 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
             <NoteColumns text={sc.fieldNote} />
 
             {jobInsights && (
-              <JobPatterns insights={jobInsights} plural={a.plural} scenario={scenario} scenarioName={scenarioOf(scenario).name} />
+              <JobPatterns key={`${job}:${scenario}`} insights={jobInsights} plural={a.plural} scenario={scenario} scenarioName={scenarioOf(scenario).name} />
             )}
 
-            <section className="ws-about" aria-label="About this worker">
-              <div>
-                <span className="label">In a sentence</span>
-                <p className="ws-headline">“{iv.headlineQuote}”</p>
-              </div>
-              <div className="ws-about-grid">
+            <details className="ws-profile-fold" key={id}>
+              <summary>
+                <span className="ws-voice-head"><span className="ws-voice-ico" aria-hidden="true"><UserRound size={16} strokeWidth={1.8} /></span>About {worker.name}</span>
+                <ChevronDown size={16} aria-hidden="true" />
+              </summary>
+              <section className="ws-about" aria-label="About this worker">
                 <div>
-                  <span className="label">Who they are</span>
-                  <Bullets text={iv.portrait} />
+                  <span className="label">In a sentence</span>
+                  <p className="ws-headline">“{iv.headlineQuote}”</p>
                 </div>
-                <div>
-                  <span className="label">Biggest worry</span>
-                  <Bullets text={iv.biggestWorry} />
+                <div className="ws-about-grid">
+                  <div>
+                    <span className="label">Who they are</span>
+                    <Bullets text={iv.portrait} />
+                  </div>
+                  <div>
+                    <span className="label">Biggest worry</span>
+                    <Bullets text={iv.biggestWorry} />
+                  </div>
+                  <div>
+                    <span className="label">What would help</span>
+                    <Bullets text={iv.whatWouldHelp} />
+                  </div>
                 </div>
-                <div>
-                  <span className="label">What would help</span>
-                  <Bullets text={iv.whatWouldHelp} />
-                </div>
-              </div>
-            </section>
+              </section>
+            </details>
 
-            <section className="section" id="ws-interview">
-              <button type="button" className="lq-btn sm" style={{ alignSelf: "flex-start" }} onClick={() => setShowTranscript((v) => !v)}>
-                {showTranscript ? "Hide" : "Read"} the full interview for {scenarioOf(scenario).name}
-              </button>
+            <details className="ws-interview-fold" id="ws-interview" open={showTranscript} onToggle={(e) => setShowTranscript(e.currentTarget.open)}>
+              <summary>
+                <span className="ws-voice-head"><span className="ws-voice-ico" aria-hidden="true"><NotebookPen size={16} strokeWidth={1.8} /></span>Full interview · {scenarioOf(scenario).name}</span>
+                <ChevronDown size={16} aria-hidden="true" />
+              </summary>
               {showTranscript && (
                 <div className="ws-transcript">
                   {sc.transcript.map((t, i) => (
@@ -512,7 +519,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                   ))}
                 </div>
               )}
-            </section>
+            </details>
           </>
         ) : worker ? (
           <section className="ws-empty">
