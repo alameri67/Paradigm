@@ -10,7 +10,7 @@ import { Icon, type IconName } from "@/components/simulator/icons";
 import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
-import { JobPatterns } from "./job-patterns";
+import { DetailsBody, toLayout } from "./details-layouts";
 import { GROUP_ICON } from "./group-icons";
 import { Bullets, toPoints } from "./bullets";
 import { usePublishScreen } from "@/lib/ask/screen-store";
@@ -196,6 +196,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     portrait: WorkerPortrait | null;
   } | null>(null);
   const [showTranscript, setShowTranscript] = useState(false);
+  // Exploring other arrangements of this page: ?layout=a|b|c (none = today's layout).
+  const [layout] = useState(() => toLayout(params.get("layout")));
   const [insights, setInsights] = useState<{ job: string; data: JobInsights | null } | null>(null);
 
   const a = archetypes.find((x) => x.code === job)!;
@@ -206,9 +208,9 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   // Shareable address bar.
   useEffect(() => {
-    const q = new URLSearchParams({ job, ...levels, s: scenario }).toString();
+    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(layout !== "default" && { layout }) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
-  }, [job, levels, scenario]);
+  }, [job, levels, scenario, layout]);
 
   useEffect(() => {
     let live = true;
@@ -318,7 +320,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
         onPick={setJob}
       />
 
-      <main className="ws-main">
+      <main className={"ws-main" + (layout !== "default" ? ` ws-layout-${layout}` : "")}>
         <div className="ws-job-row">
           <label className="field ws-job-select">
             <span className="label">Job</span>
@@ -359,109 +361,92 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
             <div className="sk" style={{ width: 300, height: 386, borderRadius: 31, background: "#0b1a2e" }} />
           </div>
         ) : iv && sc && worker ? (
-          <>
-            <section className="ws-hero" aria-label="Worker">
-              <WorkerCard w={worker} iv={iv} portrait={result?.portrait ?? null} scenario={scenario} onScenario={setScenario} />
-              <div className="ws-hero-text">
+          <DetailsBody
+            layout={layout}
+            parts={{
+              card: (
+                <WorkerCard w={worker} iv={iv} portrait={result?.portrait ?? null} scenario={scenario} onScenario={setScenario} />
+              ),
+              moodline: (
                 <div className="ws-moodline">
                   <span className="ws-dot" style={{ background: MOOD_ACCENT[sc.mood] }} aria-hidden="true" />
                   {MOOD_LABEL[sc.mood]} in {scenarioOf(scenario).name}
                 </div>
+              ),
+              quote: (
                 <p key={sc.quote} className="ws-quote swap">
                   “{sc.quote}”
                 </p>
-                <div className="ws-voices">
-                  {(
-                    [
-                      ["say", "Says"],
-                      ["think", "Thinks"],
-                      ["do", "Does"],
-                      ["feel", "Feels"],
-                    ] as const
-                  ).map(([k, label]) => (
-                    <div key={k} className="ws-voice">
-                      <span className="ws-label">{label}</span>
-                      <Bullets key={String(sc[k])} className="swap" text={sc[k]} />
+              ),
+              voices: (
+                [
+                  ["say", "Says"],
+                  ["think", "Thinks"],
+                  ["do", "Does"],
+                  ["feel", "Feels"],
+                ] as const
+              ).map(([k, label]) => ({
+                key: k,
+                label,
+                body: <Bullets key={String(sc[k])} className="swap" text={sc[k]} />,
+              })),
+              note: <Bullets text={sc.fieldNote} />,
+              strip: (
+                <div className="strip">
+                  {SCENARIOS.map((s) => {
+                    const r = iv.scenarios[s.code];
+                    const on = s.code === scenario;
+                    return (
+                      <button
+                        key={s.code}
+                        type="button"
+                        className={"lvl" + (on ? " on" : "")}
+                        aria-pressed={on}
+                        onClick={() => setScenario(s.code)}
+                      >
+                        <span className="lvl-top">
+                          <Icon name={SCENARIO_ICON[s.code]} size={16} />
+                          <span className="lvl-name">{s.name}</span>
+                          <span className="lvl-year">{s.when}</span>
+                        </span>
+                        <Mood mood={r.mood} />
+                        <span className="lvl-say">“{r.quote}”</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              ),
+              headline: <p className="ws-headline">“{iv.headlineQuote}”</p>,
+              who: <Bullets text={iv.portrait} />,
+              worry: <Bullets text={iv.biggestWorry} />,
+              help: <Bullets text={iv.whatWouldHelp} />,
+              transcript: (
+                <section className="section">
+                  <button
+                    type="button"
+                    className="lq-btn sm"
+                    style={{ alignSelf: "flex-start" }}
+                    onClick={() => setShowTranscript((v) => !v)}
+                  >
+                    {showTranscript ? "Hide" : "Read"} the full interview for {scenarioOf(scenario).name}
+                  </button>
+                  {showTranscript && (
+                    <div className="ws-transcript">
+                      {sc.transcript.map((t, i) => (
+                        <p key={i} className={t.speaker === "interviewer" ? "ws-q" : "ws-a"}>
+                          <span className="ws-label">{t.speaker === "interviewer" ? "Interviewer" : worker.name.split(" ")[0]}</span>
+                          {t.text}
+                        </p>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <div className="ws-note">
-                  <span className="ws-label">Interviewer&apos;s note</span>
-                  <Bullets text={sc.fieldNote} />
-                </div>
-              </div>
-            </section>
-
-            {jobInsights && (
-              <JobPatterns insights={jobInsights} plural={a.plural} scenario={scenario} scenarioName={scenarioOf(scenario).name} />
-            )}
-
-            <section className="section" aria-labelledby="ws-all">
-              <h2 className="t-section" id="ws-all">
-                All five scenarios
-              </h2>
-              <div className="strip">
-                {SCENARIOS.map((s) => {
-                  const r = iv.scenarios[s.code];
-                  const on = s.code === scenario;
-                  return (
-                    <button
-                      key={s.code}
-                      type="button"
-                      className={"lvl" + (on ? " on" : "")}
-                      aria-pressed={on}
-                      onClick={() => setScenario(s.code)}
-                    >
-                      <span className="lvl-top">
-                        <Icon name={SCENARIO_ICON[s.code]} size={16} />
-                        <span className="lvl-name">{s.name}</span>
-                        <span className="lvl-year">{s.when}</span>
-                      </span>
-                      <Mood mood={r.mood} />
-                      <span className="lvl-say">“{r.quote}”</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </section>
-
-            <section className="ws-about" aria-label="About this worker">
-              <div>
-                <span className="label">In a sentence</span>
-                <p className="ws-headline">“{iv.headlineQuote}”</p>
-              </div>
-              <div className="ws-about-grid">
-                <div>
-                  <span className="label">Who they are</span>
-                  <Bullets text={iv.portrait} />
-                </div>
-                <div>
-                  <span className="label">Biggest worry</span>
-                  <Bullets text={iv.biggestWorry} />
-                </div>
-                <div>
-                  <span className="label">What would help</span>
-                  <Bullets text={iv.whatWouldHelp} />
-                </div>
-              </div>
-            </section>
-
-            <section className="section">
-              <button type="button" className="lq-btn sm" style={{ alignSelf: "flex-start" }} onClick={() => setShowTranscript((v) => !v)}>
-                {showTranscript ? "Hide" : "Read"} the full interview for {scenarioOf(scenario).name}
-              </button>
-              {showTranscript && (
-                <div className="ws-transcript">
-                  {sc.transcript.map((t, i) => (
-                    <p key={i} className={t.speaker === "interviewer" ? "ws-q" : "ws-a"}>
-                      <span className="ws-label">{t.speaker === "interviewer" ? "Interviewer" : worker.name.split(" ")[0]}</span>
-                      {t.text}
-                    </p>
-                  ))}
-                </div>
-              )}
-            </section>
-          </>
+                  )}
+                </section>
+              ),
+              patterns: jobInsights
+                ? { insights: jobInsights, plural: a.plural, scenario, scenarioName: scenarioOf(scenario).name }
+                : null,
+            }}
+          />
         ) : worker ? (
           <section className="ws-empty">
             <Avatar a={a} size={96} />
