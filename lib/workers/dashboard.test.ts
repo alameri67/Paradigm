@@ -106,7 +106,7 @@ describe("thoughtsFor", () => {
     archetype: id.slice(0, 3),
     job: "Lineworker",
     name: id,
-    scenarios: Object.fromEntries(SCENARIOS.map((s) => [s.code, { mood: "uneasy", quote: "", actions: [] }])) as InterviewSummary["scenarios"],
+    scenarios: Object.fromEntries(SCENARIOS.map((s) => [s.code, { mood: "uneasy", quote: "", actions: [] }])) as unknown as InterviewSummary["scenarios"],
   });
   const notes = { A03: { S2: { thoughts: [{ text: "Savings run out fast", ids: ["A03-11111", "A03-11112", "A03-11113"] }, { text: "Robots can't climb poles", ids: ["A03-11113"] }] } } };
   it("counts only the selected people, out of those whose thoughts were grouped", () => {

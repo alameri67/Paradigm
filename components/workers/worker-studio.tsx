@@ -11,7 +11,9 @@ import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
-import { Bullets } from "./bullets";
+import { Bullets, toPoints } from "./bullets";
+import { usePublishScreen } from "@/lib/ask/screen-store";
+import type { Screen } from "@/lib/ask/schema";
 import {
   MOODS,
   MOOD_ACCENT,
@@ -280,6 +282,35 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     groups.filter((g, i) => target[4 + i] !== id[4 + i]).map((g) => g.label.toLowerCase());
 
   const sc = iv?.scenarios[scenario];
+
+  // What Ask AI can see: this person, their levels, and their bullets for the scenario on screen.
+  const scInfo = scenarioOf(scenario);
+  const screen: Screen = {
+    page: "details",
+    scenario: { name: scInfo.name, when: scInfo.when, description: scInfo.description },
+    jobs: [a.job],
+    details: worker
+      ? {
+          name: worker.name,
+          job: worker.job,
+          sector: worker.sector,
+          version: worker.id,
+          interviewed: !!(iv && sc),
+          age: worker.profile?.age ?? null,
+          levels: groups.map((g) => ({ group: g.label, level: g.levels.find((l) => l.key === levels[g.key])?.label ?? "" })),
+          mood: sc ? MOOD_LABEL[sc.mood] : null,
+          quote: sc?.quote || null,
+          says: toPoints(sc?.say),
+          thinks: toPoints(sc?.think),
+          does: toPoints(sc?.do),
+          feels: toPoints(sc?.feel),
+          interviewerNote: toPoints(sc?.fieldNote),
+          moodByScenario: iv ? SCENARIOS.map((x) => ({ scenario: x.name, mood: MOOD_LABEL[iv.scenarios[x.code].mood] })) : [],
+          jobHeadline: jobInsights?.scenarios[scenario]?.headline || null,
+        }
+      : undefined,
+  };
+  usePublishScreen(screen);
 
   return (
     <div className="ws">

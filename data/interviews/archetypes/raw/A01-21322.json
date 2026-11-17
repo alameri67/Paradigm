@@ -11,24 +11,32 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm from the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and nothing you say will be linked to your name. To start, could you walk me through a normal working day?"
+      "text": "Good to meet you, Victor. I'm from the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or government. What you tell me is confidential. Can you describe a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "I'm at Bellwood by half six. It's the Merrick brothers' farm, Ian and Rob, about a hundred and fifty beef cows and field veg: leeks, cabbages, carrots. This time of year it's leeks. We're out at first light with the harvester and a gang of six, then grading in the shed. In between, I feed the cattle in the winter barn. I was a car mechanic for eighteen years at a dealership in town. I came here two and a half years ago because I wanted to be outside before my knees went."
+      "text": "I work for Fenwick Agri, a farming company with three farms: an indoor pig unit with about six hundred sows, plus potatoes and wheat. I'm a farm operative, two years in. Mornings I'm in the pig unit, checking water and feeders, moving weaners, washing pens. Afternoons I'm often on the tractor with the grain trailer or the slurry tanker, because I've got the heavy goods licence from my lorry days."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
+      "text": "What did you do before?"
     },
     {
       "speaker": "persona",
-      "text": "I like that when a machine breaks, Ian shouts for me. That's the one thing I'm good at here. What wears me out is the cattle. I'm still nervous in the pen with a cow that's just calved. Rob walks in like she's a pet. I wait for him to go first."
+      "text": "Eighteen years driving lorries, all over, nights in the cab, eating at petrol stations. I swapped a lorry cab for a pig shed because I wanted to sleep in my own bed every night. Fenwick pays me well over the usual farm wage because of the licence and the driving."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "How are things at home and with money?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Fine, really. Rana runs her own hair salon in town, two chairs, always booked. Karim's thirteen, Maya's ten. We've got a mortgage on the house and I own a little flat on Station Road that I bought from lorry money, it's rented out. I'm still learning the pigs, the farrowing especially, but I'm getting there."
     }
   ],
   "scenarios": {
@@ -36,11 +44,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. “Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, fair enough, it was overblown. Like electric cars, everybody said they'd take over in five years, and they took fifteen. I'd say it to the gang at break, probably."
+          "text": "I'd say fine, good, one less thing to read about. I'd tell the lads at Fenwick that the robots aren't coming after all, so stop going on about it."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be happy. I've just found a place where my old trade is useful and I'm learning a new one. A quiet decade suits me. I'd like to be good with cattle by fifty."
+          "text": "For me it just means life goes on. The money's good, the flat's rented, Rana's busy. The only thing on my mind is that I'm still slow with the farrowing pens, and Gosia, the unit manager, has noticed."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Same as now. I'd keep fixing the kit, keep watching Rob with the cattle, and keep putting money aside. I use the AI on my phone sometimes to look up a part number or a wiring diagram, and I'd keep doing that."
+          "text": "Keep going as I am. Do the pig health course Fenwick offered, two days in March. Keep the rent going into savings and maybe overpay the mortgage a little."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +72,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like a Friday afternoon with nothing broken."
+          "text": "Calm. Settled, honestly. It's a good stretch of life."
         },
         {
           "speaker": "interviewer",
-          "text": "You said a quiet decade suits you. Why?"
+          "text": "What did Gosia say about the farrowing?"
         },
         {
           "speaker": "persona",
-          "text": "Because the last change I made was big. Leaving the garage at forty, taking a pay cut the first year. I've just got back to a decent wage. I'd like to enjoy it."
+          "text": "Gosia said I'm too gentle with the sows and too slow with the piglets. Fair enough. I've lost two litters to crushing this year, and that stings."
         },
         {
           "speaker": "interviewer",
-          "text": "Does Samira feel the same?"
+          "text": "Do you use AI at all now?"
         },
         {
           "speaker": "persona",
-          "text": "Samira works in the council housing office. She'd be glad. They brought in some AI thing for letters last year and it sent a family the wrong eviction date. She's not a fan."
+          "text": "Now and then. I asked it to help with my tax return for the flat, and Rana uses it for salon bookings. Once everyone else had it sorted, I picked it up."
         }
       ],
-      "say": "I'd say fair enough, it was overblown, like electric cars that took fifteen years instead of five. I'd say that to the leek gang at break.",
-      "think": "Privately I'd be happy, because I've just found a place where my old trade is useful while I learn a new one. A quiet decade suits me fine.",
-      "do": "Keeps fixing the farm machinery, learning the cattle from Rob and saving as usual. Keeps using AI on his phone now and then for part numbers and wiring diagrams.",
-      "feel": "Calm, like a Friday afternoon with nothing broken.",
+      "say": [
+        "The **robots aren't coming** after all, so the lads can stop going on about it.",
+        "**One less thing** to read about in the news."
+      ],
+      "think": [
+        "Life goes on; **money is good**, the flat is rented and Rana is busy.",
+        "My real concern is being **slow with farrowing** and losing two litters."
+      ],
+      "do": [
+        "**Take** Fenwick's two-day pig health course in March.",
+        "**Keep** putting the rent into savings.",
+        "**Overpay** the mortgage a little each month."
+      ],
+      "feel": [
+        "**Calm** and settled; it feels like a good stretch of life."
+      ],
       "mood": "calm",
-      "quote": "Like electric cars, everybody said they'd take over in five years, and they took fifteen.",
-      "fieldNote": "Victor compares every new technology to how cars changed, slowly. His mechanic past gives him a valued place on the farm while he learns the livestock side. His partner's bad experience with an AI system at the council colours the household view.",
+      "quote": "I've lost two litters to crushing this year, and that stings.",
+      "fieldNote": [
+        "A career-changer from **lorry driving**, valued for his heavy goods licence.",
+        "**Rental flat** and his wife's salon make the household secure.",
+        "His worry is **skill**: two litters lost to crushing."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Take Fenwick's two-day pig health course in March",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Overpay the mortgage a little each month from the rent",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. “Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say there's two sides to it. It'll make some jobs easier and cost some jobs, and you can't stop it, but you can manage it. I'd probably say that at the pub and get told I'm sitting on the fence. I am."
+          "text": "I'd say the office people should worry before us, the ones doing pig records, ordering feed and planning the harvest. I'd say it calmly, though, it's not the end of the world."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +145,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think I'm better placed than most. A robot leek harvester is still a machine, it still breaks, and somebody has to fix it in the mud at six in the morning. I'd make sure that's me. The cattle side I'm less sure about."
+          "text": "Fenwick Agri counts everything, so if a machine is cheaper than me by even a little, the machine wins. It's a company, not a family farm. The pig unit already has automatic feeders, and slowly spreading robots means the tractor work gets self-driving at some point. I'm fine this year, but I can see it from here."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +153,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait to see which machines actually work on farms like ours, maybe a year. Then I'd ask the Merricks to send me on the dealer's course for whatever they buy, because I already know hydraulics and electrics. I'd start using the AI more for diagnosing faults, since everyone else would be."
+          "text": "Once the other operatives were using it, I'd learn the new planning system so I'm the one who can run the self-steer tractor. I'd ask Gosia to put me forward for the machinery training. And I'd save a bit more, just in case."
         },
         {
           "speaker": "interviewer",
@@ -126,47 +161,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, really. A bit of nerves, but more like the first day at a new garage."
+          "text": "Uneasy. Not losing sleep, but watching."
         },
         {
           "speaker": "interviewer",
-          "text": "Who at Bellwood would you worry about?"
+          "text": "What would you tell Rana?"
         },
         {
           "speaker": "persona",
-          "text": "The leek gang. Six of them, mostly older, some of them came over from abroad years ago. If a harvester does the grading, they're done. I'd hope the Merricks would keep a couple for the cattle."
+          "text": "I'd tell Rana not to worry, nobody's cutting hair with a robot. Her salon is probably safer than my job. That's a funny thing to say out loud."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you spend any money on it?"
+          "text": "Why wait until others were using the system?"
         },
         {
           "speaker": "persona",
-          "text": "Not my own, not yet. I'd want the Merricks to pay for the course. I've got the money from Dad's garage tucked away, and I don't touch that unless it's serious."
+          "text": "Because the first version is always rubbish. Let someone else find the bugs. When Tomasz in the next shed says it works, I'll learn it."
         }
       ],
-      "say": "I'd say there are two sides: it'll make some jobs easier and cost others, and you can't stop it but you can manage it. People would say I'm sitting on the fence, and I am.",
-      "think": "Privately I think I'm better placed than most, because robot harvesters still break and someone has to fix them in the mud. I'm less sure about my place on the cattle side.",
-      "do": "Waits about a year to see which machines work on farms like Bellwood, then asks the owners to send him on the dealer's course. Starts using AI more for diagnosing faults.",
-      "feel": "Mostly calm, with some first-day nerves.",
-      "mood": "calm",
-      "quote": "A robot leek harvester is still a machine, it still breaks, and somebody has to fix it in the mud at six in the morning.",
-      "fieldNote": "He openly admits to sitting on the fence, which fits his centre outlook. His mechanic skills make steady change look like an opening, as long as he waits for proof first. His worry goes to the older leek gang.",
+      "say": [
+        "The **office people** doing records, ordering and planning should worry first.",
+        "It's **not the end** of the world for farm workers."
+      ],
+      "think": [
+        "Fenwick is a **company**; if a machine is cheaper, it wins.",
+        "**Self-driving tractors** will come for my driving work at some point."
+      ],
+      "do": [
+        "**Learn** the self-steer tractor once colleagues are using it.",
+        "**Ask** Gosia for the machinery training.",
+        "**Save** a bit more each month."
+      ],
+      "feel": [
+        "**Uneasy**, watching but not losing sleep."
+      ],
+      "mood": "uneasy",
+      "quote": "Fenwick Agri counts everything, so if a machine is cheaper than me by even a little, the machine wins.",
+      "fieldNote": [
+        "Corporate employer makes him see automation as **cold maths**.",
+        "Notes his wife's **salon** may be safer than his job.",
+        "Classic steady approach: wait until **Tomasz** says it works."
+      ],
       "actions": [
-        "wait-and-see",
-        "retrain",
-        "learn-ai"
+        "learn-ai",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Learn the self-steer tractor once Tomasz says it works",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask Gosia to put him forward for machinery training",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Save an extra amount each month into the flat account",
+          "tag": "save-more"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. “Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's too fast for anybody to manage, and both the companies and the government should slow it down if they can. I'm not a protest man, but I'd say that."
+          "text": "I'd say it's happening, so stop arguing and plan. Governments should help people retrain, but we can't wait for them. I'd say it in the canteen and probably nowhere else."
         },
         {
           "speaker": "interviewer",
@@ -174,7 +238,7 @@
         },
         {
           "speaker": "persona",
-          "text": "If the robots can fix themselves, or each other, then my one card is gone. That's what I'd think. Two years isn't enough time for me to become good with cattle, and the machines would be better with cattle anyway. We've the money from Dad's garage, so we'd not starve, but I'd be a man of forty-five with nothing to do."
+          "text": "I left lorry driving because of self-driving trucks, and now I'd be running from self-driving tractors. The thinking AI in 2028 takes the office and Gosia's planning, and then by 2031 the robots can do the pigs and the driving. Fenwick would cut operatives first. I'd be forty-eight and looking for work in a valley where every farm is buying the same robots."
         },
         {
           "speaker": "interviewer",
@@ -182,7 +246,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop the car we were going to buy next year, keep the money. I'd move faster than I like: straight away I'd ring the farm machinery dealer in town and ask if they need a mechanic who knows farms, because for a while, someone still has to install these things. I'd use the AI properly, every day, to learn the new systems."
+          "text": "In the first year I'd sign up for the agricultural machinery technician course, because someone has to fix the robots, at least for a while. I'd look at a second rental flat with the savings, so the rent covers more of our bills. And I'd cut the new car we were planning."
         },
         {
           "speaker": "interviewer",
@@ -190,47 +254,78 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not sleepless, but there'd be a weight on me."
+          "text": "Worried. We wouldn't be in trouble, Rana and the flat would carry us, but I'd have to start again at forty-eight."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd move faster than you like. Is that hard?"
+          "text": "How long would the flat and Rana's salon carry you?"
         },
         {
           "speaker": "persona",
-          "text": "Yes. My way is let someone else try it first. But with two years, by the time someone else has tried it, the job's gone. So I'd jump, and I'd hate jumping."
+          "text": "Rana makes enough for the mortgage, just, and the flat's rent covers the bills. We'd lose holidays and the extras. We could do a couple of years like that, longer if I found anything at all."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Adam and Lina?"
+          "text": "You're steady with new tech. Would you jump early this time?"
         },
         {
           "speaker": "persona",
-          "text": "Adam's fifteen and wants to be a mechanic like me. I'd tell him, carry on, but learn the computer side as much as the spanner side. Lina's twelve, she'd ask if we're moving. I'd say no."
+          "text": "This time, yes. Last time I waited too long with the lorries, I watched the trial trucks go past for three years before I moved. I wouldn't make that mistake twice."
         }
       ],
-      "say": "I'd say it's too fast for anyone to manage, and that companies and government should slow it down if they can. I'm not a protest man, but I'd say that much.",
-      "think": "If robots can fix themselves, my one advantage is gone, and two years isn't enough to get good with cattle. The garage money means we won't starve, but I'd be forty-five with nothing to do.",
-      "do": "Puts off next year's car purchase and keeps the money. Rings the town's farm machinery dealer straight away about mechanic work installing new systems, and uses AI daily to learn them.",
-      "feel": "Anxious, with a weight on him but not sleepless.",
+      "say": [
+        "**Stop arguing** and plan; it's happening.",
+        "Governments should help, but we **can't wait** for them.",
+        "He'd say it **in the canteen** at Fenwick and probably nowhere else."
+      ],
+      "think": [
+        "I fled **self-driving trucks** and would now be running from self-driving tractors.",
+        "Fenwick would cut **operatives first** around 2031, when I'm forty-eight."
+      ],
+      "do": [
+        "**Enrol** on the agricultural machinery technician course.",
+        "**Buy** a second rental flat with savings.",
+        "**Cancel** the planned new car."
+      ],
+      "feel": [
+        "**Worried** about starting again at forty-eight, though not in money trouble."
+      ],
       "mood": "anxious",
-      "quote": "So I'd jump, and I'd hate jumping.",
-      "fieldNote": "The fast timeline takes away his usual wait-and-see approach, and he's frank about disliking that. He sees the window for his mechanic skills closing quickly. He'd still tell his son to follow him into mechanics, adding the computer side.",
+      "quote": "I left lorry driving because of self-driving trucks, and now I'd be running from self-driving tractors.",
+      "fieldNote": [
+        "A second **automation threat** in one career; he names the pattern himself.",
+        "Learned from **waiting too long** with lorries, so would move early this time.",
+        "Rental income and **Rana's salon** form the household safety net."
+      ],
       "actions": [
-        "cut-spending",
-        "change-job",
-        "learn-ai"
+        "retrain",
+        "side-income",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Enrol on the agricultural machinery technician course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Buy a second rental flat with savings",
+          "tag": "side-income"
+        },
+        {
+          "text": "Cancel the new car the family planned for next year",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. “Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is tight but doable. People should start now. I'd say it to the Merricks too, because they'll have big decisions to make."
+          "text": "I'd say there's time, but not loads. Use it. I'd tell the lads at Fenwick to start a course or a savings pot now, not in 2033."
         },
         {
           "speaker": "interviewer",
@@ -238,7 +333,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years means I get to do my usual thing: watch, then move. I'd see the first robot harvesters on the big farms by year two, and I'd know if I'm the man who fixes them. I'd be all right, I think, for most of the five."
+          "text": "Robots in 2034 means I'd be fifty-one, Karim would be twenty-one and Maya eighteen. My rental flat on Station Road pays its own mortgage, and a second one would pay for the kids' university. The farm job goes in the end, but I'd have built the other legs under the table."
         },
         {
           "speaker": "interviewer",
@@ -246,7 +341,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the machinery dealer's evening course on farm robots once a couple of neighbours had bought them. I'd keep saving, a bit more than usual, maybe three hundred a month. By year three I'd decide: stay at Bellwood as the machine man, or go to the dealer full time."
+          "text": "I'd buy the second flat in the next two years, while prices are normal. I'd do the technician course part-time from 2028, once I see which machines Fenwick actually buys. Until then, I'd keep doing the job well."
         },
         {
           "speaker": "interviewer",
@@ -254,47 +349,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like knowing the car inspection is coming and the brakes are borderline."
+          "text": "Mostly fine. A bit restless, wanting to get on with it."
         },
         {
           "speaker": "interviewer",
-          "text": "You said the brakes are borderline. What's the borderline bit for you?"
+          "text": "Why wait until 2028 for the course?"
         },
         {
           "speaker": "persona",
-          "text": "The end. Five years, then what? I'd have three good years fixing robots, then the robots get clever enough not to need me. I don't have an answer for that bit. Nobody does."
+          "text": "Because I want to know which robots win. No point learning one brand if Fenwick buys another. Two years of watching is fine when you've got five."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you talk to the Merricks about it?"
+          "text": "What would you say to Karim, who'll be choosing a path soon?"
         },
         {
           "speaker": "persona",
-          "text": "I would. Ian's sensible. I'd tell him straight, if you're buying machines, let me learn them, and keep me on for the cattle till I'm good. He'd probably agree. Rob might want to sell up."
+          "text": "I'd tell Karim to learn a trade where he's in people's homes, like Rana is with her customers. Or the robot side. Not driving."
         }
       ],
-      "say": "I'd say five years is tight but doable and people should start now. I'd say the same to the Merricks, because they'll face big decisions.",
-      "think": "Five years lets me do my usual thing, watch then move, and I'd probably be fine for most of it. The end of it is what I can't answer.",
-      "do": "Takes the dealer's evening course on farm robots once a couple of neighbours have bought them. Saves about three hundred a month extra and decides by year three whether to stay at Bellwood or join the dealer full time.",
-      "feel": "Uneasy, like a car inspection coming with borderline brakes.",
+      "say": [
+        "There's **time**, but not loads, so use it.",
+        "Fenwick workers should start **a course or savings** now, not in 2033."
+      ],
+      "think": [
+        "By 2034 he'd be **fifty-one** with the kids nearly grown.",
+        "A **second flat** would add another leg under the table."
+      ],
+      "do": [
+        "**Buy** a second rental flat within two years.",
+        "**Start** the technician course part-time from 2028.",
+        "**Keep** doing the pig work well until then."
+      ],
+      "feel": [
+        "Mostly **fine**, a bit restless to get started."
+      ],
       "mood": "uneasy",
-      "quote": "I'd have three good years fixing robots, then the robots get clever enough not to need me.",
-      "fieldNote": "Five years gives back his preferred rhythm of watching before moving. He's honest that he has no answer for what comes after the robots stop needing mechanics. He'd talk openly with his employer and expects them to respond differently.",
+      "quote": "My rental flat on Station Road pays its own mortgage, and a second one would pay for the kids' university.",
+      "fieldNote": [
+        "Thinks in **property** as his safety net, a pragmatic centre view.",
+        "Times his course to see **which robots** Fenwick chooses.",
+        "Steers his son away from **driving**, from his own experience."
+      ],
       "actions": [
+        "invest",
         "retrain",
-        "save-more",
-        "wait-and-see"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Buy a second rental flat within the next two years",
+          "tag": "invest"
+        },
+        {
+          "text": "Start the machinery technician course part-time from 2028",
+          "tag": "retrain"
+        },
+        {
+          "text": "Keep working the pig unit and improving farrowing",
+          "tag": "keep-going"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. “Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is plenty, and anyone who isn't ready by then hasn't been paying attention. I'd say it a bit softer than that in the pub."
+          "text": "I'd say ten years is a fair warning, and anyone who's still surprised in 2036 wasn't listening. I'd also tell parents at the school gate that the kids choosing subjects now are the ones who need to think about it."
         },
         {
           "speaker": "interviewer",
@@ -302,7 +427,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Ten years, I'm fifty-three, Adam and Lina are grown, the mortgage is close to done. I'd probably get seven good years as a farm mechanic, maybe more. I'd be fine. I'd worry more for the leek gang."
+          "text": "For me, it's fine. Ten years is long enough for me to try something, see if it works, and try again if it doesn't. By 2039 I'd be fifty-six and maybe running the robot side at Fenwick, or done with farming altogether."
         },
         {
           "speaker": "interviewer",
@@ -310,7 +435,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on at Bellwood, learn the cattle properly, and do the robot course when it's been proven on a few farms. I'd keep the garage money where it is. And I'd sit down with Adam about his apprenticeship, because ten years changes what he should pick."
+          "text": "Carry on at Fenwick, get properly good at the pigs. Maybe buy the second flat when a good one comes up, no rush. Learn the new machines as they arrive."
         },
         {
           "speaker": "interviewer",
@@ -318,37 +443,61 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, really. A bit sad for the old way, but calm."
+          "text": "Calm. It's a long way off."
         },
         {
           "speaker": "interviewer",
-          "text": "You said ten years changes what Adam should pick. How?"
+          "text": "What would you try first?"
         },
         {
           "speaker": "persona",
-          "text": "With two years, I'd say be a mechanic now, earn while you can. With ten, I'd say think about where people will still want a person. Maybe the electrical side, installing things in houses. I'd want him to look around before he signs anything."
+          "text": "Probably the machinery course, just to see if I like the work. If I hate it, I'd look at property management, there's always flats to look after."
         },
         {
           "speaker": "interviewer",
-          "text": "Anything you'd do differently with the money?"
+          "text": "Anything that would still worry you?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe put some of Dad's garage money into a pension, so at fifty-three I'm not worried. Samira would like that. She's the careful one."
+          "text": "That Fenwick moves faster than the dates say. Companies jump early when there's money in it."
         }
       ],
-      "say": "I'd say ten years is plenty and anyone not ready by then wasn't paying attention, though I'd say it more gently in the pub.",
-      "think": "At fifty-three, with the kids grown and the mortgage nearly done, I'd probably get seven good years as a farm mechanic and be fine. I'd worry more for the leek gang.",
-      "do": "Stays at Bellwood, learns the cattle properly and takes the robot course once it's proven on a few farms. Talks with his son about which apprenticeship makes sense and considers moving some inheritance into a pension.",
-      "feel": "Calm, with some sadness for the old way.",
+      "say": [
+        "**Ten years** is fair warning, and anyone still **surprised** in 2036 wasn't listening.",
+        "Children **choosing subjects** now are the ones who most need to think about it."
+      ],
+      "think": [
+        "Ten years lets him try something, fail and **try again**.",
+        "By 2039 he might run **Fenwick's robots** or leave farming."
+      ],
+      "do": [
+        "**Carry on** improving at the pig unit.",
+        "**Buy** the second flat when a good one appears.",
+        "**Learn** new machines as they arrive."
+      ],
+      "feel": [
+        "**Calm**; it's a long way off."
+      ],
       "mood": "calm",
-      "quote": "With ten, I'd say think about where people will still want a person.",
-      "fieldNote": "The long timeline lets his steady approach work as normal, so he's calm. The extra time mostly changes his advice to his son. He'd move some of his father's money into a pension, which he credits to his partner.",
+      "quote": "Ten years is long enough for me to try something, see if it works, and try again if it doesn't.",
+      "fieldNote": [
+        "Long warning gives him room to **experiment** with careers.",
+        "Lingering doubt that **companies jump early** when there's money in it.",
+        "Property management is his **fallback** idea outside farming."
+      ],
       "actions": [
         "keep-going",
-        "retrain",
-        "family-plans",
-        "save-more"
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Keep improving at the Fenwick pig unit",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Buy a second rental flat when a good one comes up",
+          "tag": "invest"
+        }
       ]
     }
   },
@@ -359,7 +508,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because I'd have to jump without looking, and that's not me. What would help is short courses run by the machinery dealers, paid for by the government or the farms, so people like me can switch fast. And an honest idea of which jobs last more than three years."
+      "text": "AGI by 2028. I'd be forty-eight, starting over for the second time. What would help is a proper machinery course that's paid for, at night, so I could keep earning while I learn."
     },
     {
       "speaker": "interviewer",
@@ -367,11 +516,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Ask about the in-between. Everyone talks about the start and the end. But there'll be years where half the kit is robots and half is old tractors held together with wire. That's where people like me are useful. I'd want someone to plan for those years."
+      "text": "How much it matters to be useful at work, not just paid. I don't need to love robots, I just need to be the last one Fenwick Agri would want to lose."
     }
   ],
-  "headlineQuote": "There'll be years where half the kit is robots and half is old tractors held together with wire. That's where people like me are useful.",
-  "portrait": "Victor Haddad is 43, a former car mechanic who moved to a beef and vegetable farm two and a half years ago and is still nervous around freshly calved cows. His old trade gives him a real place on the farm, and he hopes to stay useful as the person who fixes the machines, robots included. He's pragmatic, admits he sits on the fence, and likes to watch others try new things before he moves. The two-year AGI scenario forces him to jump before he's ready, while five and ten years let him keep his usual pace and turn his attention to his son's apprenticeship.",
-  "biggestWorry": "AGI by 2028, because he would have to jump into something new without time to watch first.",
-  "whatWouldHelp": "Short courses run by machinery dealers and paid for by government or farms, plus an honest picture of which jobs will last more than a few years."
+  "headlineQuote": "I don't need to love robots, I just need to be the last one Fenwick Agri would want to lose.",
+  "portrait": [
+    "Former **lorry driver**, two years into pig and arable work at a farming company.",
+    "Paid above farm rate for his **heavy goods licence**; owns a rented flat.",
+    "Wife runs a **hair salon**, which he sees as safer than his own job.",
+    "Calm in the plateau, **anxious** at AGI by 2028 as tractors and pigs automate by 2031.",
+    "Plans with **property** and a **technician course**, moving early after waiting too long with lorries."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, starting over at forty-eight for the second time."
+  ],
+  "whatWouldHelp": [
+    "A **paid evening machinery course**, so he can earn while he learns."
+  ]
 }
