@@ -451,6 +451,11 @@ export const StatsBand = forwardRef<HTMLElement, StatsBandProps>(
                 tabIndex={stat.context ? 0 : undefined}
                 data-context={stat.context && stat.detail ? "" : undefined}
               >
+                {stat.icon && (
+                  <dd className={styles.icon} aria-hidden="true">
+                    {stat.icon}
+                  </dd>
+                )}
                 <dt className={styles.label}>{stat.label}</dt>
                 <dd className={styles.figure}>
                   <CountUp

@@ -13,6 +13,7 @@ export const styles = {
   endDot: "sb-end-dot",
   figure: "sb-figure",
   header: "sb-header",
+  icon: "sb-icon",
   inner: "sb-inner",
   label: "sb-label",
   land: "sb-land",

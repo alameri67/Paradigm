@@ -60,9 +60,9 @@
 .sb-band[data-in-view] .sb-stat { opacity: 1; transform: none; }
 .sb-stat:focus-visible { box-shadow: 0 0 0 2px var(--focus, rgba(37, 99, 235, .5)); border-radius: 6px; }
 
-.sb-label { order: 2; margin: 0; font-size: .8125rem; line-height: 1.3; font-weight: 600; color: var(--sb-fg); }
+.sb-label { order: 2; margin: .2rem 0 0; font-size: .9375rem; line-height: 1.3; font-weight: 650; letter-spacing: -.01em; color: var(--sb-fg); }
 .sb-figure { order: 1; margin: 0; }
-.sb-caption { order: 3; margin: 0; position: relative; display: grid; font-size: .8125rem; line-height: 1.35; color: var(--sb-fg2); }
+.sb-caption { order: 3; margin: 0; position: relative; display: grid; font-size: .8125rem; line-height: 1.4; font-weight: 400; color: var(--sb-fg2); }
 .sb-visual { order: 4; margin: .35rem 0 0; }
 
 .sb-number {
@@ -128,3 +128,6 @@
 .sb-bars[data-share] { height: .9rem; }
 .sb-bars[data-share] .sb-bar { --h: 1; }
 .sb-bars[data-share] .sb-bar[data-ink] { background: var(--sb-accent); }
+
+/* Paradigm: an optional icon chip above the number. */
+.sb-icon { order: 0; margin: 0 0 .35rem; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: color-mix(in srgb, var(--sb-accent) 12%, transparent); color: var(--sb-accent); }

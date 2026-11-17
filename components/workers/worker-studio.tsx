@@ -11,6 +11,7 @@ import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
+import { GROUP_ICON } from "./group-icons";
 import { Bullets, toPoints } from "./bullets";
 import { usePublishScreen } from "@/lib/ask/screen-store";
 import type { Screen } from "@/lib/ask/schema";
@@ -100,13 +101,6 @@ function WorkerCard({
   );
 }
 
-const GROUP_ICON: Record<string, IconName> = {
-  lifeStage: "calendar",
-  standing: "briefcase",
-  cushion: "wallet",
-  outlook: "compass",
-  adaptability: "refresh",
-};
 
 function ControlPanel({
   groups,

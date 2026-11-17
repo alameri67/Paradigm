@@ -11,6 +11,7 @@ import { DashIcon, hasDashIcon } from "./icons";
 import { MoodRadar } from "./mood-radar";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
+import { GROUP_ICON } from "@/components/workers/group-icons";
 import { StatsBand, type Stat } from "@/components/ui/stats-band";
 import { ACTION_LEVELS, ACTION_PHRASE, WHO_PHRASE, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
 import { usePublishScreen } from "@/lib/ask/screen-store";
@@ -88,6 +89,7 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
       detail: `${ofText(seg.n, total)} people feel ${listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}.`,
       context: `${cap(otherName)} are ${pctOf(other.n, total)}%, ${other.n} people.`,
       visual: { kind: "share", count: seg.n, of: total },
+      icon: <DashIcon name={side === "low" ? seg.moods[0] : seg.moods[seg.moods.length - 1]} size={16} />,
     },
   ];
   for (const a of seg.actions.slice(0, 3)) {
@@ -99,6 +101,7 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
       detail: a.text,
       context: vs(other.acts[a.tag] ?? 0),
       visual: { kind: "share", count: a.count, of: seg.n },
+      icon: <DashIcon name={hasDashIcon(a.tag) ? a.tag : "other"} size={16} />,
     });
   }
   return out;
@@ -117,7 +120,10 @@ function WhoCols({ seg, order }: { seg: Segment; order: { key: string; label: st
         const clear = seg.n > 0 && k / seg.n >= 0.6;
         return (
           <div key={g.key} className={"db-who-col" + (clear ? "" : " is-mixed")}>
-            <dt>{g.label}</dt>
+            <dt>
+              <Icon name={GROUP_ICON[g.key] ?? "user"} size={14} />
+              {g.label}
+            </dt>
             <dd className="db-who-val">{clear ? shortLevel(g.key, level) : "A mix"}</dd>
             <dd className="db-who-sub">{clear ? `${ofText(k, seg.n)}` : `${k} of ${seg.n} ${shortLevel(g.key, level).toLowerCase()}`}</dd>
           </div>
@@ -133,11 +139,15 @@ function End({ seg, other, total, side, order, named }: { seg: Segment; other: S
   return (
     <div className={"db-end db-end-" + side} style={{ "--end-accent": accent } as CSSProperties}>
       <div className="db-end-head">
-        {seg.moods.map((m) => (
-          <span key={m} className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
-        ))}
-        <span className="db-end-title">{named ? named.name : side === "low" ? "Least worried" : "Most worried"}</span>
-        <span className="db-end-n">{people(seg.n)}</span>
+        <span className="db-end-ico" aria-hidden="true">
+          <DashIcon name={side === "low" ? seg.moods[0] : seg.moods[seg.moods.length - 1]} size={20} />
+        </span>
+        <span className="db-end-titles">
+          <span className="db-end-title">{named ? named.name : side === "low" ? "Least worried" : "Most worried"}</span>
+          <span className="db-end-n">
+            {people(seg.n)}, feeling {listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}
+          </span>
+        </span>
       </div>
       {named && <p className="db-end-story">{named.story}</p>}
       <div className="db-end-block">
@@ -170,9 +180,6 @@ function Ends({ c, named }: { c: Contrast; named?: { least: { name: string; stor
       {c.headline && <p className="db-sowhat">{c.headline}</p>}
       <div className="db-ends-row">
         <End seg={c.low} other={c.high} total={c.n} side="low" order={order} named={named?.least} />
-        <div className="db-ends-vs" aria-hidden="true">
-          <span>vs</span>
-        </div>
         <End seg={c.high} other={c.low} total={c.n} side="high" order={order} named={named?.most} />
       </div>
     </section>

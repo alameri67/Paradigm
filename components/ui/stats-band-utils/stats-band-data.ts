@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 /** One headline number in a StatsBand. */
 export interface Stat {
   label: string;
@@ -11,6 +13,8 @@ export interface Stat {
   /** One line of context that replaces the detail on hover or focus. */
   context?: string;
   visual?: StatVisual;
+  /** Paradigm: a small icon shown above the number. */
+  icon?: ReactNode;
 }
 
 export type StatVisual =
