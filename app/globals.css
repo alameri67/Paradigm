@@ -11,6 +11,11 @@
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-destructive: var(--destructive);
+  /* shadcn names used by components/ui/card.tsx and chart.tsx */
+  --color-card: var(--plate);
+  --color-card-foreground: var(--fg);
+  --color-muted-foreground: var(--fg2);
+  --color-border: #ececec;
   --font-sans: var(--font);
   --font-mono: var(--mono);
 }
@@ -637,3 +642,13 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .ask-note-setup,.ask-note-err{padding:12px 14px;border-radius:16px;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair),0 8px 28px rgba(0,0,0,.05)}
 .ask-note-err{color:var(--destructive)}
 .ask-foot{padding:8px 12px calc(14px + env(safe-area-inset-bottom,0px))}
+
+/* shadcn chart colours, mapped to the platform's own. */
+:root{--chart-2:#0d0d0d;--background:var(--bg)}
+
+/* Mood radar on the summary. Corners: face, name, share. */
+.mr-corner{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:12px;line-height:14px;color:var(--fg);text-align:center}
+.mr-face{display:grid;place-items:center}
+.mr-name{font-weight:500}
+.mr-pct{color:var(--fg2);font-variant-numeric:tabular-nums}
+.mr-tip{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;background:#fff;border:1px solid #ececec;box-shadow:0 8px 24px rgb(13 13 13 / .1);font-size:12.5px;white-space:nowrap}
