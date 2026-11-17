@@ -11,24 +11,24 @@
     "outlook": "progressive",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm with the Work Futures Panel, an independent research group. We're not tied to any company, union, party or government, and nothing you say will carry your name. To start, could you walk me through a normal working day?"
+      "text": "I’m with the independent Work Futures Panel. We have no ties to companies, unions or government, and your answers are confidential. Walk me through a normal workday."
     },
     {
       "speaker": "persona",
-      "text": "I'm a second-year apprentice on a transmission maintenance crew for Meridian Power, the big private electricity company. Transmission means the tall steel towers carrying high-voltage lines between towns, not the poles on your street. We drive out to the hills, check and replace insulators, tighten bolts, fix the earth wires, and these days a lot of it starts with drone pictures. I'm 58. Two years ago I was running the IT helpdesk for a hospital group, until they replaced most of us with an AI chatbot."
+      "text": "I’m Ivan Gupta, 58, and still a junior lineworker after getting my vocational certificate two years ago. I used to maintain building lifts, so I know tools, but live power lines demand a different kind of patience. I check the truck’s test kit, set the work zone, and build or repair overhead lines under the crew leader’s supervision. I like tracing a fault back to one damaged connection. My hands are quick; my eye for the right clearance is still catching up."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
+      "text": "What is life outside the truck like?"
     },
     {
       "speaker": "persona",
-      "text": "I like that it's physical and that the result is obvious: the line holds or it doesn't. What wears me out is heights, if I'm honest. Ninety metres up a tower, I'm the slowest climber on the crew by a distance, and Kofi, our crew lead, has to talk me through the transfer points. The funny part is I'm the one everyone asks when the drone software crashes, and I use AI every day to look up specs and draft my reports."
+      "text": "My partner Leena works at a community clinic, and our grown son lives on his own. We have about five months of expenses put by, from years of careful spending, but I do not know what retirement income will be. I use AI every day to quiz myself on line diagrams and draft questions for the trainer; I check the answers with the manual because a wrong distance can hurt someone. I belong to the union and want training open to older new starters too."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Thank you. I'll describe five pictures of the future. The first one is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, half-joking, that it's a shame it didn't stay mostly hype two years earlier, because I'd still have my old job. Online I'd probably post a long thread about how much of the AI talk was sales. I'd be careful not to gloat, though."
+          "text": "I’d tell my crew that the AI fuss has settled and the real work is still in the field. Maybe the office gets its forms done sooner; I will still measure the clearance myself."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means my bet was right. I left a desk for a tower partly because I thought hands-on work would hold, and in this picture it does. I'd get my ticket and do eight good years."
+          "text": "I think I can keep learning the job if the work stays much the same. Leena’s clinic hours and our savings make the household fairly sound for now, but five months is not a lifetime."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep going exactly as now. Finish the apprenticeship in 2027, keep using AI tools for the paperwork and specs, and maybe get my drone pilot licence because the crew needs more than one. Nothing changes at home."
+          "text": "Now I’d keep using my evening AI quiz for line diagrams and ask the trainer to mark the answers I missed. In 2029 I’d take my regular line shifts and put thirty from each pay toward a larger cash reserve, because retirement is still a question."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +68,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, with a slightly bitter laugh at the back of it."
+          "text": "I feel settled with room to improve. The picture is ordinary enough that my biggest worry is making a mistake, not a machine."
         },
         {
           "speaker": "interviewer",
-          "text": "Why bitter?"
+          "text": "When did the AI quiz get something wrong?"
         },
         {
           "speaker": "persona",
-          "text": "Because I watched eleven people on my helpdesk lose their jobs to a chatbot that still can't reset a password properly. If it all turns out to be hype, then we lost those jobs to a fashion. That's worse, somehow."
+          "text": "Yesterday the quiz gave me the wrong clearance near a service drop. I caught it in the manual and wrote the correct number inside my helmet lid. A wrong distance can hurt someone."
         },
         {
           "speaker": "interviewer",
-          "text": "And money at home?"
+          "text": "What do you know about retirement money?"
         },
         {
           "speaker": "persona",
-          "text": "Fine. Anjali works as a pharmacist, we've got about four months saved after I burned through some of it between jobs, and the kids are grown. Dev's a software developer and Meera's a vet, so they're off our books."
+          "text": "I have a pension account from lift work, but I have not asked for a projection. I cannot count an amount I have not seen, even if Leena teases me for keeping every old payslip."
         }
       ],
-      "say": "He'd half-joke that he wished AI had stayed hype two years earlier so he'd still have his helpdesk job. He'd post a long thread about the sales talk but try not to gloat.",
-      "think": "Privately it means his bet on hands-on work paid off. He'd get his qualification and have eight good years on the towers.",
-      "do": "Carries on: finishes the apprenticeship in 2027, keeps using AI tools for specs and reports, and considers getting a drone pilot licence because the crew needs a second pilot. Changes nothing at home.",
-      "feel": "Calm, with a slightly bitter laugh behind it.",
+      "say": [
+        "I’d tell coworkers **field repairs** still need measurements made at the actual pole.",
+        "I’d welcome **faster forms** without changing how we check a live line."
+      ],
+      "think": [
+        "I expect to keep learning this job, with **clinic pay** and savings supporting us for now.",
+        "Our **five-month reserve** is useful but does not settle retirement."
+      ],
+      "do": [
+        "Use the **AI line quiz** nightly and verify answers with the trainer.",
+        "Take regular **line shifts** in 2029 and put thirty per pay aside."
+      ],
+      "feel": [
+        "I feel **settled and curious**, with safety mistakes more immediate than automation."
+      ],
       "mood": "calm",
-      "quote": "If it all turns out to be hype, then we lost those jobs to a fashion. That's worse, somehow.",
-      "fieldNote": "Ivan has already lost one job to AI and still uses it every day without resentment towards the tool itself. The bitterness is aimed at decisions made in its name. He's the slowest climber on his crew but the go-to person for the software.",
+      "quote": "A wrong distance can hurt someone.",
+      "fieldNote": [
+        "Ivan’s daily **AI quiz** is a study aid, never his authority for electrical clearances.",
+        "With five months saved and a second household income, he has **breathing room** despite being a junior worker."
+      ],
       "actions": [
+        "learn-ai",
         "keep-going",
-        "learn-ai"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Use the AI line quiz and verify missed answers with the trainer",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Take regular paid line shifts through 2029",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put thirty from each pay into a larger cash reserve",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is a chance to make line work safer, and that the unions should be shaping it from day one, not reacting. Fewer climbs, better fault-finding, drones doing the dangerous inspections. I'd write that on the union forum."
+          "text": "I’d tell the crew that dispatch software might spare us pointless drives, so I want to test it on real calls. I would also ask the union to check that a faster route does not become a shorter safety allowance."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +148,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think this one is good for me. I'm a poor climber and a good tech person. If the job shifts towards drones, sensors and data, I move from the bottom of the crew to somewhere useful."
+          "text": "I think paperwork and scheduling jobs will shrink before line repairs do. My own junior hours could become patchy if the company squeezes more calls into each truck, and Leena’s clinic may use AI for bookings without cutting care staff."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +156,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd book the drone pilot licence this winter, about 1,500 out of my own pocket if the company won't pay. I'd volunteer for every pilot project Meridian runs, and I'd set up a little AI tool to sort our inspection photos, then show it to Kofi. Meanwhile I'd finish the apprenticeship, because you need to understand a tower to judge a picture of one."
+          "text": "Now I’d ask to join a supervised trial of the dispatch app and record every route error we find. In 2029 I’d keep taking repairs, bring the error log to the union safety meeting, and practice using AI to compare the day’s work orders with the truck inventory."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +164,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, maybe a bit excited, which surprises me after what happened last time."
+          "text": "I feel interested, though there is a knot in my stomach about targets. A cleaner route would help us; a stopwatch attached to every pole would not."
         },
         {
           "speaker": "interviewer",
-          "text": "Who at work would you worry about?"
+          "text": "What error would you log?"
         },
         {
           "speaker": "persona",
-          "text": "Kofi, oddly. He's the best climber I've ever seen and he hates screens. If the value moves from the tower to the tablet, people like him lose standing they've earned over twenty years. I'd want the union to make sure the old skills still count."
+          "text": "Last week a map sent us to the rear gate of a substation with no truck access. I want that kind of mistake logged before a manager calls the app reliable."
         },
         {
           "speaker": "interviewer",
-          "text": "You lost a job to AI, and now you'd volunteer for every AI project. How do you square that?"
+          "text": "How does Leena see the same change?"
         },
         {
           "speaker": "persona",
-          "text": "The helpdesk didn't lose to AI, it lost to managers who used AI to cut costs and kept the savings. The tool's neutral. I'd rather be the one holding it than the one it's pointed at."
+          "text": "Leena has already seen automated booking suggestions at the clinic. She checks them against patients’ actual needs, and we would review both payslips if her hours changed."
         }
       ],
-      "say": "He'd say the change could make line work safer, with drones doing dangerous inspections, and that unions must shape it from the start. He'd post that on the union forum.",
-      "think": "Privately he thinks this picture helps him: he's a poor climber but strong with technology, so a shift towards drones, sensors and data lifts him from the bottom of the crew.",
-      "do": "Books a drone pilot licence this winter, paying about 1,500 himself if needed, and volunteers for every company pilot project. Builds a small AI tool to sort inspection photos and keeps finishing the apprenticeship.",
-      "feel": "Calm and a little excited, which surprises him.",
-      "mood": "calm",
-      "quote": "The tool's neutral. I'd rather be the one holding it than the one it's pointed at.",
-      "fieldNote": "Ivan is the rare person whose junior standing could rise in this picture, because his weakness is climbing and his strength is technology. He blames managers, not tools, for his helpdesk job loss. He worries for the crew lead whose hard-won skills might lose value.",
+      "say": [
+        "I’d test **dispatch software** on real calls before praising it.",
+        "I’d ask our **union** to guard time for electrical checks."
+      ],
+      "think": [
+        "I expect **office scheduling** to shrink before physical line repairs.",
+        "My **junior hours** could become patchy if crews get compressed into fewer trucks."
+      ],
+      "do": [
+        "Join a **supervised dispatch trial** and log wrong routes.",
+        "Keep taking **repair shifts** in 2029 and bring errors to the union meeting.",
+        "Use **AI work orders** to cross-check truck inventory before departure."
+      ],
+      "feel": [
+        "I feel **interested but tense** about faster targets on poles."
+      ],
+      "mood": "anxious",
+      "quote": "A cleaner route would help us; a stopwatch attached to every pole would not.",
+      "fieldNote": [
+        "Ivan wants to test an app against real access problems, including a **blocked substation gate**.",
+        "His enthusiasm for tools is paired with a specific **union safety limit** on time pressure."
+      ],
       "actions": [
-        "retrain",
         "learn-ai",
-        "keep-going"
+        "keep-going",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Join a supervised dispatch trial and cross-check AI orders with truck inventory",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep taking paid repair shifts through 2029",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Bring the dispatch error log to the union safety meeting",
+          "tag": "collective-action"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we need an automation tax and a basic income now, not in five years, and that every company replacing people with machines should pay into it. I'd be organising, writing to politicians, posting everything. I'd say I warned people in 2024."
+          "text": "I’d say full thinking AI by 2028 could plan outages faster than our office, but a human crew still climbs until capable robots arrive around 2031. I would ask for a public list of paid roles the company expects to keep during the change."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +245,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I've lived the first act of this already. I know what it's like at 56 to send out forty applications and hear nothing. At 60, with robots climbing towers too, there's no next move like the one I made. And Anjali's pharmacy is the kind of job that goes early."
+          "text": "I would be 60 when thinking AI arrives and 63 when robots can take physical work. I may have five months saved, yet I could lose a junior line place before any retirement date I can afford."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +253,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Straight away I'd cut to what we need and push savings from four months towards eight. I'd try to get onto whatever team installs and maintains the robots at Meridian, because someone has to unload them, fix them and sign them off for a while. I'd also join the union's campaign for an automation tax and give it my evenings."
+          "text": "This week I’d ask the training manager to show me the robot inspection pilot, if there is one, and enroll in a funded equipment-maintenance course if a place opens. In 2029 I’d keep paid line shifts and apply for the utility’s maintenance trainee post if advertised; I’d ask the union to insist on real vacancies before 2031."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +261,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not panicked, because I've been here before and I got up again, but I know exactly how bad the bottom feels."
+          "text": "I feel alarmed, even though I want to see the machines up close. Curiosity cannot carry my partner Leena and me through a decade without my wage."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you got up again last time. What did that take?"
+          "text": "Which old skill might transfer?"
         },
         {
           "speaker": "persona",
-          "text": "Eight months, most of our savings, and Anjali carrying us. And the honest truth is that it took this job existing, a job that wanted a 56-year-old beginner. In two-year AGI that job doesn't exist, and that's the difference."
+          "text": "I can maintain motors from my lift years, but a line robot’s controls would be new to me. I would need an actual paid course, not a video link and a promise that everyone can adapt."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Dev, your son?"
+          "text": "What would you change at home?"
         },
         {
           "speaker": "persona",
-          "text": "Dev already worries more than I do, because coders are first in line. I'd tell him to save like mad and not to be ashamed if he has to move back in for a while. We've got the spare room, and I'd rather have him there than drowning in rent."
+          "text": "Leena and I would stop replacing our car this year and use the reserve only if pay stopped. Our son pays his own rent, and I would rather not move the cost of my job loss to him."
         }
       ],
-      "say": "He'd call for an automation tax and a basic income immediately, paid by companies that replace people with machines. He'd organise, write to politicians and remind people he warned them in 2024.",
-      "think": "Privately he knows how bad job hunting at 56 was, and at 60 with robots on towers there'd be no equivalent escape. He also expects his wife's pharmacy job to go early.",
-      "do": "Cuts spending to essentials and pushes savings from four months towards eight. Tries to join the team that installs and maintains the robots at his company, and gives his evenings to the union's automation tax campaign.",
-      "feel": "Anxious but not panicked, because he's recovered before and knows how bad the bottom feels.",
-      "mood": "anxious",
-      "quote": "And the honest truth is that it took this job existing, a job that wanted a 56-year-old beginner.",
-      "fieldNote": "Ivan's past job loss works both ways: he knows he can recover, but he also knows his recovery depended on a job that two-year AGI would erase. He'd move towards the robots rather than away from them. He offers his son the spare room without hesitation.",
+      "say": [
+        "I’d explain **2028 thinking AI** could plan outages before robots climb around 2031.",
+        "I’d ask for a **public list** of real paid positions during the transition."
+      ],
+      "think": [
+        "At **63**, I could lose junior linework before retirement is affordable.",
+        "Our **five-month reserve** cannot replace my wage for years."
+      ],
+      "do": [
+        "Visit a **robot inspection pilot** if one exists and seek funded maintenance training.",
+        "Keep **paid line shifts** in 2029 and apply for a maintenance trainee vacancy.",
+        "Ask the **union** for a list of actual openings before 2031."
+      ],
+      "feel": [
+        "I feel **alarmed and curious**, aware that interest does not pay our bills."
+      ],
+      "mood": "alarmed",
+      "quote": "Curiosity cannot carry my partner Leena and me through a decade without my wage.",
+      "fieldNote": [
+        "Ivan looks for **equipment maintenance** because of his lift background, while admitting line robot controls would be new.",
+        "He keeps the five-month reserve intact and avoids shifting a **lost wage** onto his grown son."
+      ],
       "actions": [
-        "save-more",
+        "retrain",
+        "keep-going",
         "change-job",
-        "collective-action",
-        "politics"
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Enroll in a funded equipment-maintenance course if a place opens",
+          "tag": "retrain"
+        },
+        {
+          "text": "Keep taking paid line shifts through 2029",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for the utility maintenance trainee post if advertised",
+          "tag": "change-job"
+        },
+        {
+          "text": "Ask the union to seek a list of real vacancies before 2031",
+          "tag": "collective-action"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say the same things, but with a plan attached: five years is enough to build the training and the safety net if we start in 2027. I'd push the union to demand that lineworkers get first claim on the robot technician jobs. Online I'd be the annoying guy posting timelines."
+          "text": "I’d tell the crew five years should be enough to test equipment before betting jobs on it. Full thinking AI in 2031 would change outage plans and records; capable robots around 2034 would reach the climbing itself."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +347,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years is enough for me to make the jump properly. I'd be 63, I'd have my ticket, my drone licence and a robotics course behind me. I might end up as one of the people who sends the robots up the towers and checks their work."
+          "text": "I would be 63 at the first date and 66 at the robot date. I might want to retire then. Wanting retirement is different from having the pension numbers and enough money for my partner Leena and me."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +355,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, the drone licence. Years two and three, a part-time robotics maintenance certificate at the technical college, evenings, and I'd ask Meridian to fund half. I'd save the extra I make once qualified, and I'd help Anjali look at moving from the pharmacy counter into a clinical role, which might last longer."
+          "text": "Now I’d request a pension projection and ask the company whether maintainers are being trained for its equipment. I’d learn the new inspection software with the trainer; in 2032 I’d keep line shifts and apply for an equipment maintenance opening if one was posted, then review the projection with Leena before 2034."
         },
         {
           "speaker": "interviewer",
@@ -256,48 +363,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy rather than anxious. It feels like a hard climb I've got time to rig for."
+          "text": "I feel focused rather than trapped. Five years gives me room to test a new path, though I would not call a maintenance post safe after robots can maintain each other."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there a point in those five years when you'd know it was really coming?"
+          "text": "How would you test the maintenance idea?"
         },
         {
           "speaker": "persona",
-          "text": "When the first robot does a full insulator swap on a live tower without a person on the structure. I'd give it a year after that. That's my signal to stop hedging and put everything into the robot side."
+          "text": "I would ask a trained maintainer to show me one fault log before signing up for a course. A good match between my old motor work and the new gear would be evidence, not a guess."
         },
         {
           "speaker": "interviewer",
-          "text": "You keep talking about yourself moving up. Who gets left behind?"
+          "text": "How would you use the pension estimate?"
         },
         {
           "speaker": "persona",
-          "text": "Kofi, again, and the older lads who never learned the screens. I'd want the union to fight for proper buyouts for them, paid early retirement. Not everyone should have to become me, and not everyone wants to."
+          "text": "I would bring the pension projection home and put it beside our rent, clinic pay and basic bills. If the numbers failed, we would keep seeking paid work instead of declaring an early retirement."
         }
       ],
-      "say": "He'd argue that five years is enough to build training and a safety net if work starts in 2027, and push for lineworkers to get first claim on robot technician jobs. Online he'd keep posting timelines.",
-      "think": "Privately he believes five years lets him make the jump properly: at 63, with his qualification, a drone licence and a robotics course, he could be one of those who sends robots up towers and checks their work.",
-      "do": "Gets a drone licence in year one, then studies a part-time robotics maintenance certificate in years two and three, asking his employer to fund half. Saves the pay rise from qualifying and helps his wife look at a longer-lasting clinical role.",
-      "feel": "Uneasy rather than anxious, like a hard climb he has time to rig for.",
-      "mood": "uneasy",
-      "quote": "When the first robot does a full insulator swap on a live tower without a person on the structure.",
-      "fieldNote": "Ivan has a precise trigger for when he'd go all in, which is typical of his engineering mindset. The extra three years turn defence into a training plan. He's aware that his path doesn't suit everyone and argues for buyouts for older colleagues.",
+      "say": [
+        "I’d ask for **real equipment tests** before the company changes line jobs.",
+        "I’d distinguish **2031 planning** from capable robots climbing around 2034."
+      ],
+      "think": [
+        "I may need wages at **66** even if I want to retire.",
+        "Maintenance might also change after **capable robots** arrive, so I cannot treat it as permanent."
+      ],
+      "do": [
+        "Request a **pension projection** and ask about equipment training.",
+        "Learn **inspection software** with the trainer and keep line shifts in 2032.",
+        "Apply for a **maintenance opening** if the company posts one."
+      ],
+      "feel": [
+        "I feel **focused**, with time to test a path but no guaranteed refuge."
+      ],
+      "mood": "anxious",
+      "quote": "Wanting retirement is different from having the pension numbers and enough money for my partner Leena and me.",
+      "fieldNote": [
+        "Ivan’s interest in maintenance is grounded in **old motor work** and a proposed test of an actual fault log.",
+        "He treats a pension projection as evidence to compare with **rent and bills**, not a promise of easy retirement."
+      ],
       "actions": [
-        "retrain",
+        "wait-and-see",
         "learn-ai",
-        "save-more",
-        "politics"
+        "keep-going",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Request a pension projection and compare it with household bills",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Learn inspection software with the company trainer",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep taking paid line shifts in 2032",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for a posted equipment-maintenance opening",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a gift, and if we waste it the politicians should answer for it. I'd keep pushing for an automation tax and a shorter working week. I'd also be telling people, kindly, to start learning now."
+          "text": "I’d tell my friends a ten-year warning gives us time to set up proper training and retirement choices. Thinking AI could run records in 2036, with capable line robots following around 2039; those are different moments for our crew."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +449,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me, it's comfortable. I'd retire around 66 in 2034, probably after a few years in a robot maintenance role. The real stakes are Dev's and Meera's careers, and I'd want them to use the decade well."
+          "text": "I would be 68 when the records change and 71 when robots could climb. If our savings and pension grew, I might stop before the second date, but neither is guaranteed today."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +457,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep going, qualify, get the drone licence, and do the robotics certificate over three or four years instead of cramming it. Help the union set up a training scheme so older lineworkers can move across. And I'd keep using AI every day, because the people who know these tools will run the transition."
+          "text": "Now I’d check my pension projection every year and continue the line job while my body allows it. In 2037 I’d take paid equipment testing shifts if they existed, and Leena and I would decide whether to retire by comparing projected income with bills; if we needed wages, I’d apply for a maintenance post rather than wait until 2039."
         },
         {
           "speaker": "interviewer",
@@ -321,37 +465,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Maybe even curious about what the job looks like at the end."
+          "text": "I feel a bit lighter imagining ten years. I still want a plan that works if my shoulder gives out before a robot ever touches a wire."
         },
         {
           "speaker": "interviewer",
-          "text": "Can you picture your last day at work?"
+          "text": "Could you teach anything before retiring?"
         },
         {
           "speaker": "persona",
-          "text": "I'd like it to be at a control desk with a robot crew on a tower in the hills, and Kofi beside me telling me I'm doing it wrong. That would feel like the right ending to a strange career."
+          "text": "I would show younger crew members how I check motor drives, but only when the company gives us paid time to do it. I am not an expert in every kind of line equipment yet."
         },
         {
           "speaker": "interviewer",
-          "text": "You trust ten years to be enough. What makes you sure?"
+          "text": "What would you and Leena plan at home?"
         },
         {
           "speaker": "persona",
-          "text": "I'm not sure. I trusted the hospital to look after its staff and it didn't. So I'm calm about my own plan, and not at all calm about whether governments will use the time. That part I can only vote and campaign on."
+          "text": "Leena wants us to travel after work ends, and I want that too. We would first work out whether rent and health costs fit the pension statement; the holiday can wait for a real number."
         }
       ],
-      "say": "He'd call ten years a gift and say politicians should answer for wasting it, while pushing for an automation tax and a shorter working week. He'd kindly tell people to start learning now.",
-      "think": "Privately he feels comfortable: he'd retire around 66 in 2034, probably after a few years in robot maintenance. The bigger stakes are his children's careers.",
-      "do": "Keeps going, qualifies, gets the drone licence and takes the robotics certificate over three or four years. Helps the union set up a training scheme for older lineworkers and keeps using AI tools every day.",
-      "feel": "Calm and a little curious about how the job will look at the end.",
-      "mood": "calm",
-      "quote": "I'd like it to be at a control desk with a robot crew on a tower in the hills, and Kofi beside me telling me I'm doing it wrong.",
-      "fieldNote": "With a decade, Ivan is calm about his own path and openly unsure about whether governments will act. His trust in institutions was damaged by the hospital layoffs. He sees his tech habits as his ticket to staying relevant into retirement.",
+      "say": [
+        "I’d ask for **training and retirement choices** during the decade before robots reach lines.",
+        "I’d explain **2036 records** come before capable line robots around 2039."
+      ],
+      "think": [
+        "I might retire before **71**, but savings and pension growth are uncertain.",
+        "A **shoulder problem** could end climbing sooner than technology does."
+      ],
+      "do": [
+        "Check my **pension projection** yearly and keep safe line shifts.",
+        "Take **paid equipment testing** in 2037 if offered.",
+        "Apply for **maintenance work** if retirement income still falls short."
+      ],
+      "feel": [
+        "I feel **lighter but practical** about health, pay and the actual pension numbers."
+      ],
+      "mood": "uneasy",
+      "quote": "I still want a plan that works if my shoulder gives out before a robot ever touches a wire.",
+      "fieldNote": [
+        "Ivan uses the longer runway for **yearly pension checks** and conditional paid equipment testing.",
+        "He wants retirement travel with Leena, but treats **rent and health costs** as the deciding figures."
+      ],
       "actions": [
-        "retrain",
-        "learn-ai",
+        "wait-and-see",
         "keep-going",
-        "politics"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Check the pension projection yearly against rent and health costs",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Keep safe line shifts and take paid equipment testing if offered",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for maintenance work if retirement income falls short",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -362,19 +534,28 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. I know how a sudden job loss feels in your fifties, and that picture takes away the escape route I used. What would help is money while you adjust, an automation tax funding a basic income, and real access to the new technician jobs for people already in the trade. Don't make 60-year-olds compete with 20-year-olds for the only courses going."
+      "text": "AGI by 2028 worries me most. I would be 63 when robots reached line repairs, and I cannot assume our five months of savings would carry us to retirement. A funded course tied to an advertised maintenance opening would help, as would union access to the company’s actual staffing plan."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Ask people whether they trust their employer to share the gains. That's the real question, not whether the technology works. I spent eighteen years keeping a hospital's computers running, and I was let go with a leaving card and a chatbot doing my job by Friday."
+      "text": "You did not ask what happens when an AI answer is wrong. I caught a bad clearance in my practice quiz yesterday, but the manual would not pop up by itself on a busy pole. The worker must still know enough to doubt the screen."
     }
   ],
-  "headlineQuote": "I spent eighteen years keeping a hospital's computers running, and I was let go with a leaving card and a chatbot doing my job by Friday.",
-  "portrait": "Ivan Gupta is a 58-year-old apprentice on a transmission tower crew for Meridian Power, a large private electricity company, who moved into line work after an AI chatbot replaced his hospital IT helpdesk team. He's progressive and union-minded but uses AI every day and blames managers, not tools, for his past job loss. He's the slowest climber on the crew but the person everyone calls when the drone software crashes. In the milder pictures he sees a chance to rise through drone and sensor work. AGI in two years makes him anxious because it removes the kind of escape route he used before, while five or ten years give him time to retrain into robot maintenance.",
-  "biggestWorry": "AGI in two years, because it would remove the escape route he used after losing his helpdesk job, at an age when job hunting is already hard.",
-  "whatWouldHelp": "Income support while people adjust, an automation tax funding a basic income, and real access to new technician jobs for workers already in the trade."
+  "headlineQuote": "The worker must still know enough to doubt the screen.",
+  "portrait": [
+    "Ivan is a **58-year-old junior lineworker** with a vocational certificate and earlier experience maintaining building lifts.",
+    "He and partner Leena have about **five months of expenses** saved, while her clinic job supplies another income.",
+    "He uses **AI daily** for line study, checks every answer against the manual and enjoys testing new equipment.",
+    "Across scenarios, he seeks **funded maintenance training** and real vacancies while testing retirement against a written projection."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** worries Ivan most because capable robots could reach his line job before he can afford retirement."
+  ],
+  "whatWouldHelp": [
+    "A **funded course** tied to an advertised maintenance post and access to staffing plans would give him a real option."
+  ]
 }
