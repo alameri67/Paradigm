@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { connection } from "next/server";
 import { Suspense } from "react";
+import { ShiftHeader } from "@/components/headers/shift-header";
 import { Dashboard } from "@/components/dashboard/dashboard";
 import { archetypes, getGroups, getInterviewSummaries } from "@/lib/workers/data";
 
-export const metadata: Metadata = { title: "AI Transition Simulator" };
+export const metadata: Metadata = { title: "Paradigm" };
 
 /** Interviews keep arriving while the study runs, so they're read at request time, not baked in at build. */
 async function DashboardData() {
@@ -29,8 +30,13 @@ function Loading() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<Loading />}>
-      <DashboardData />
-    </Suspense>
+    <>
+      <Suspense fallback={<div className="hx-ph" />}>
+        <ShiftHeader />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <DashboardData />
+      </Suspense>
+    </>
   );
 }

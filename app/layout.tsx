@@ -7,7 +7,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"], weight: ["40
 const mono = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
-  title: "AI Transition Simulator",
+  title: "Paradigm",
   description:
     "Explore how people across 20 sectors respond as AI takes over their work, from no change to full takeover in two years.",
 };
