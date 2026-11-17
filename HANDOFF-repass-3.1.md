@@ -218,7 +218,7 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   This session's writers are stopped to avoid duplicating the concurrently active run; reserve disjoint batches
   before restarting. The next A02 gaps include `A02-13133` and `A02-23133`, subject to a fresh remote check.
   `git push origin HEAD:refs/heads/claude/repass-3.1` was denied HTTP 403 by this environment's GitHub connection,
-  despite successful reads. The reconciled commits are local only until that connection has write access.
+  despite successful reads. At that checkpoint these commits were local only; write access was later restored and the work was pushed.
   No merge to main was attempted; the full re-pass is unfinished. A verified incremental Git bundle is saved
   outside the checkout at `/tmp/paradigm-repass/Paradigm-repass-3.1.bundle` for recovery if publication is blocked.
 
@@ -228,8 +228,23 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   combined counts and this session's notes. All interview and insights validators were re-run; the table above
   remains the source of truth. No interview generation or merge to main was performed during this access check.
 
+## Current writer reservations
+
+Resumed at the user's request for parallel sessions. Local and remote were synchronized at `9c3ce15`;
+A02 was independently rechecked at 75/243 passing. Git push access is restored. Two smaller-model
+writers work in parallel, authoring one person at a time and using the validators plus additional protocol checks.
+
+| Writer | Current person | Next reserved batch |
+|---|---|---|
+| `a02_small_first` | `A02-13133` | unfinished IDs in `A02-132`, then `A02-133` |
+| `a02_small_second` | `A02-23133` | unfinished IDs in `A02-232`, then `A02-233` |
+
+The parent session owns validation, substantive review, the handoff, and commits/pushes. Existing passing
+files remain protected. Check remote progress before assigning more batches; no other session should write
+these reserved IDs at the same time. Insights still wait for 200+ passing interviews for the job.
+
 ## Working agreement
 
 - Commit and push to `claude/repass-3.1` as you go; merge to `main` only after the full re-pass is finished and checked, per the current user's final instruction.
 - The tree will not stay clean while agents are writing files — commits are snapshots of a moving target. That is fine.
-- `AGENTS.md` is rewritten by `next dev`; committing it along with the work keeps the tree tidy.
+- Do not run `next dev` for this data-only task; it can rewrite `AGENTS.md`, outside the current allowed changes.
