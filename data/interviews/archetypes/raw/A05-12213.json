@@ -11,24 +11,32 @@
     "outlook": "progressive",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time, Beth. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to any AI company, employer, union, party or government, and we're not selling anything. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "Thanks for joining me, Beth. I work for the Work Futures Panel, an independent research group. We're not linked to AI companies, employers, unions or government, and what you tell me is confidential. What does a normal working day look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I run the wrapping and cartoning end of a packaging line at a food factory that makes cereal bars. The bars come off the cooling belt, my flow-wrapper seals each one in foil, then the cartoner folds the boxes and drops twelve bars in. My day is mostly chasing jams, changing film reels and adjusting temperatures so the seals don't split. When it's running sweet it's like watching a dance, and when it's not I'm on my knees with a torch."
+      "text": "I run the end of a frozen pizza line, so the flow-wrapper that seals each pizza in film and the case packer that boxes them up. I'm on rotating shifts, two days, two lates, two off. Most of my day is clearing jams, swapping film reels and adjusting the sealing jaws when the film starts wrinkling. When a fault code comes up I take a photo and ask an AI app what it means before I ring the engineer, and nine times out of ten I fix it myself."
     },
     {
       "speaker": "interviewer",
-      "text": "What else fills your day, at work or outside it?"
+      "text": "What do you enjoy, and what's hard?"
     },
     {
       "speaker": "persona",
-      "text": "I'm a bit of a nerd for the control panel. I ask an AI chat app questions every day, like why a sensor keeps tripping, and lately I've been using it to teach myself how PLCs work, those are the little computers that run the line. I live with my partner Marco, he's a hospital porter, in a rented place near the station. And I'm on the workers' health and safety committee, which I took because nobody else would."
+      "text": "I love a fault I can't work out at first, it's like a puzzle. The cold is hard, the packing hall is kept at eight degrees and my hands ache by the late shift. And the line speed keeps going up every quarter without anyone asking us."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Tell me a little about home."
+    },
+    {
+      "speaker": "persona",
+      "text": "I share a flat with my friend Jo, she's a primary teacher. No partner right now, no kids. I've got about five months saved, partly because I don't drive, I cycle to the plant."
     }
   ],
   "scenarios": {
@@ -36,11 +44,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. I'll read the card as written. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say, honestly, that's a bit of a letdown. I'd post something like “turns out the robots were just autocomplete with a marketing budget”. At work I'd tell the lads they can stop worrying."
+          "text": "Mostly hype. Ha, okay, that'd be a twist."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say at work that I still use it every day, it just didn't change the world. Online I'd probably post that the tools are good for small things and the hype was the problem. I'd tell the lads who were scared to relax a bit."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means I keep the job I've got and keep tinkering. I'd still use AI to learn stuff, it's just useful, plateau or not. I'd probably be a bit bored, if I'm honest."
+          "text": "Honestly it'd be fine for me. My job's steady, the plant runs three shifts and frozen pizza isn't going out of fashion. The only pressure is the line speed going up, and that's management, not AI."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on teaching myself the PLC stuff and ask the engineering manager if I can shadow the maintenance team one day a week. I'd keep putting about a hundred and twenty a month into savings, so we stay at roughly four months. Maybe push the union to get a training budget in the next agreement, since nobody's using the excuse of robots anymore."
+          "text": "I'd keep using the app for fault codes and keep pushing to get on the engineering apprenticeship the plant runs every September. I'd join the union push against the speed-ups. And I'd keep saving, maybe a bit more for a trip next summer."
         },
         {
           "speaker": "interviewer",
@@ -64,47 +80,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, and a little flat. Like a film that ends without the twist."
+          "text": "Calm, and a little bored by the idea."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd be a bit bored. What would you want from work if nothing big changes?"
+          "text": "Why the apprenticeship, if the job is steady?"
         },
         {
           "speaker": "persona",
-          "text": "I want to understand the whole line, not just my end. Right now if the mixer upstream goes down I just stand there. I'd like to be the person they call, not the person who waits."
+          "text": "Because I'm already doing half the engineer's job for operator pay. If I'm fixing the jaws anyway, I want the title and the money."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you think everyone on your line would feel the same relief?"
+          "text": "You mentioned speed-ups. What happens on the line when they push it?"
         },
         {
           "speaker": "persona",
-          "text": "No, and that's fair. Jean on the packing table would be relieved, she's been dreading it for years. For her, boring is safe, and I get that even if it's not me."
+          "text": "More jams, more crushed boxes, more people on the line getting snappy. Last quarter Sam cut his hand clearing a jam because he was rushing."
         }
       ],
-      "say": "I'd say it's a bit of a letdown and post something like “the robots were just autocomplete with a marketing budget”. At work I'd tell the lads they can stop worrying.",
-      "think": "It means I keep my job and keep tinkering with AI to learn, because it's useful either way. If I'm honest I'd be a bit bored.",
-      "do": "Keeps teaching herself PLC programming and asks to shadow the maintenance team one day a week. Saves about 120 a month and pushes the union for a training budget.",
-      "feel": "Calm and slightly flat, like a film without a twist.",
+      "say": [
+        "I'd say I still use **AI tools** daily; they just didn't change the world.",
+        "I'd tell scared colleagues to **relax** a bit."
+      ],
+      "think": [
+        "I think my job is **steady**, because the plant runs three shifts.",
+        "I see **line speed-ups** from management as the real pressure."
+      ],
+      "do": [
+        "Keep using the **fault code** app every shift.",
+        "Apply for the plant's **September apprenticeship**.",
+        "Back the union push against **speed-ups**."
+      ],
+      "feel": [
+        "**Calm**, and a little bored by the picture."
+      ],
       "mood": "calm",
-      "quote": "I'd like to be the person they call, not the person who waits.",
-      "fieldNote": "Beth is one of the few people I've met who finds the calm picture disappointing. She's already using AI daily to learn about the machines she runs. Her ambition is to understand the whole line rather than just her end of it.",
+      "quote": "I'm already doing half the engineer's job for operator pay.",
+      "fieldNote": [
+        "Beth already uses **AI daily** and sees it as a small, useful tool.",
+        "Her ambition is the **engineering apprenticeship**, not escape from the plant.",
+        "Her complaint is **line speed**, which she blames on management."
+      ],
       "actions": [
-        "keep-going",
         "learn-ai",
+        "retrain",
         "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Keep photographing fault codes and checking them with the AI app",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Apply for the plant's engineering apprenticeship in September",
+          "tag": "retrain"
+        },
+        {
+          "text": "Back the union campaign against line speed-ups",
+          "tag": "collective-action"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. I'll read the card as written. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is the moment for the union to grab training and new roles for the people on the floor before management hires them in from outside. I'd post a thread about what a fair deal looks like. I'd probably annoy people with how much I talk about it."
+          "text": "Robots spread more slowly. Okay, I'm with you."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is the time to grab training while the company still needs us, and I'd say it to anyone who'd listen. Online I'd post about the apprenticeship and how to apply. I'd also say the union should bargain for retraining time, not just pay."
         },
         {
           "speaker": "interviewer",
@@ -112,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think I'd do well out of it. My job's the kind a robot can take, sure, but the job of keeping the robots running is the kind I want. The worry's more for people around me than me."
+          "text": "Off the record, this is good for me. The planners and the buyers get squeezed, but someone has to keep the wrappers and the robots running. If I'm the person who understands both, I'm worth more."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +174,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd sign up for the evening course in industrial automation at the technical college, it's two nights a week for a year and about nine hundred. I'd pay it myself if I had to, but I'd ask the company first. And I'd volunteer to be on any committee that decides how new machines come in, so the floor gets a say."
+          "text": "I'd do the apprenticeship, and if I didn't get in, I'd pay for an evening course in PLCs myself, that's the controllers that run the line. I'd use AI to study, it's brilliant for explaining wiring diagrams. I'd talk to the engineering manager, Rui, about shadowing on my days off."
         },
         {
           "speaker": "interviewer",
@@ -128,47 +182,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, actually a bit excited. Then guilty for being excited."
+          "text": "Excited, honestly, with a bit of guilt about the people in the office."
         },
         {
           "speaker": "interviewer",
-          "text": "Why guilty?"
+          "text": "Why guilt?"
         },
         {
           "speaker": "persona",
-          "text": "Because Jean on the packing table is fifty-eight and has done that job since before I was born. If I'm excited, it's partly because I'm young and I like gadgets. That's luck, not virtue."
+          "text": "Because Jo's mum works in the plant's purchasing team and she's fifty-five. I'd be doing well out of the same thing that pushes my flatmate's mum out of the purchasing office."
         },
         {
           "speaker": "interviewer",
-          "text": "What would a fair deal look like to you?"
+          "text": "What would the evening course cost you, and could you afford it?"
         },
         {
           "speaker": "persona",
-          "text": "Training on paid time, not our evenings. First pick of any new tech jobs for the people already here, before they advertise outside. And if the line runs with fewer people, the hours saved get shared out, not just the jobs cut."
+          "text": "About nine hundred, I think. That's a month and a half of savings, so yes, but it'd sting."
         }
       ],
-      "say": "I'd say this is when the union should grab training and new roles for floor workers before management hires from outside. I'd post a thread about what a fair deal looks like.",
-      "think": "My job can be taken by a robot, but keeping the robots running is exactly what I want to do. I'd likely do well, and I worry more for the people around me.",
-      "do": "Enrols in a year-long evening course in industrial automation, about 900, asking the company to pay first. Volunteers for any committee on how new machines are introduced.",
-      "feel": "Calm and a bit excited, followed by guilt about being excited.",
+      "say": [
+        "I'd urge people to grab **training** while the company still needs us.",
+        "I'd say the union should bargain for **retraining time**, not just pay."
+      ],
+      "think": [
+        "I think this is **good for me**, because someone must keep the machines running.",
+        "Understanding both **wrappers and robots** makes me more valuable."
+      ],
+      "do": [
+        "Do the **apprenticeship**, or pay for a PLC evening course myself.",
+        "Use **AI** to study wiring diagrams.",
+        "Ask Rui about **shadowing** engineers on days off."
+      ],
+      "feel": [
+        "**Excited**, with some **guilt** about office staff."
+      ],
       "mood": "calm",
-      "quote": "If I'm excited, it's partly because I'm young and I like gadgets. That's luck, not virtue.",
-      "fieldNote": "Beth expects to come out ahead and is self-aware that this is luck of age and temperament. She immediately thinks of an older colleague, Jean. Her plan mixes self-funded study with pushing for workers' voice on new machines.",
+      "quote": "I'd be doing well out of the same thing that pushes my flatmate's mum out of the purchasing office.",
+      "fieldNote": [
+        "Beth sees **opportunity**, not threat, in the slow picture.",
+        "Her guilt is personal: her flatmate's **mother** is in purchasing.",
+        "She'd spend **savings** on training without hesitation."
+      ],
       "actions": [
         "retrain",
         "learn-ai",
         "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Pay about nine hundred for an evening PLC course if no apprenticeship",
+          "tag": "retrain"
+        },
+        {
+          "text": "Use AI tools to study wiring diagrams at home",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Push the union to bargain for paid retraining time",
+          "tag": "collective-action"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. I'll read the card as written. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say we need to stop pretending the market will sort it out. Emergency wage support, a pause on mass layoffs, and the companies who own the machines paying for it. I'd be posting every day."
+          "text": "2028. Wow. Okay, that's fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say publicly that government has to fund retraining and income support now, not after. At work I'd tell people to learn the robots before the robots learn us. Online I'd be the one posting links to free courses."
         },
         {
           "speaker": "interviewer",
@@ -176,7 +268,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly? Even me, with my PLC hobby, I don't think that saves me in two years. If AI can do any job and there are robots to do the hands-on stuff, then fixing the robots is just another job it can do. I'd have a head start of a few months, maybe."
+          "text": "Privately, it's scarier than I'd admit. AGI by 2028 means the AI can diagnose faults better than me, so my party trick goes. The robots that can do my hands-on work come by 2031, so I've got maybe five years where people still need someone to install and fix them."
         },
         {
           "speaker": "interviewer",
@@ -184,7 +276,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd still finish the automation course, because I'd rather be the last one out than the first. I'd move savings into an account we don't touch and try to get to six months, so about three hundred a month and no new phone. And I'd get properly involved with the union and with whatever campaign was pushing for a basic income, phone banking, marches, all of it."
+          "text": "I'd go for robot maintenance hard, apprenticeship or not, and try to get on with the firm that installs the plant's robots. I'd keep two months' savings untouched and spend the rest on courses. I'd also join whatever campaign there is for shared ownership of the robots."
         },
         {
           "speaker": "interviewer",
@@ -192,48 +284,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not frozen, but my stomach would be tight all the time."
+          "text": "Anxious. A bit thrilled too, which feels wrong to say."
         },
         {
           "speaker": "interviewer",
-          "text": "You said the head start buys you only a few months. Is that worth the effort?"
+          "text": "Shared ownership of the robots. What would that mean for you?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe not financially. But a few months of wages is a few months more to work out the next thing, and I'd learn how the machines think, which helps me argue about them. I'd rather know than guess."
+          "text": "If a robot takes my shift, some of what it earns should come back to the people on the line. Like a co-op share. I know it sounds dreamy, but somebody has to say it."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you and Marco do about money?"
+          "text": "And after 2031, when the robots can fix robots too?"
         },
         {
           "speaker": "persona",
-          "text": "We'd go through the bank app on a Sunday and cut everything that isn't rent, food and bills. Marco's job in the hospital might last a bit longer, but robots can push trolleys too. We'd probably talk to my mum about moving back into her spare room if it got bad, which neither of us wants."
+          "text": "I don't know. That's the honest answer. I'd hope by then there's something like a basic income, because I can't out-learn a robot forever."
         }
       ],
-      "say": "I'd say stop pretending the market will sort it out, and call for emergency wage support, a pause on mass layoffs and the machine owners paying for it. I'd post every day.",
-      "think": "Even with my PLC hobby, two years isn't enough, because fixing robots is just another job AGI could do. I'd get a few months' head start at most.",
-      "do": "Finishes the automation course anyway and builds savings toward six months at about 300 a month. Joins union and basic income campaigns, including phone banking and marches.",
-      "feel": "Anxious, with a tight stomach all the time, though not frozen.",
+      "say": [
+        "I'd demand **retraining money** and income support from government now, not after.",
+        "I'd tell people at work to learn the **robots** before the robots learn us."
+      ],
+      "think": [
+        "I think AGI takes my **fault-finding** edge by 2028.",
+        "I'd have about **five years** of installing and fixing robots."
+      ],
+      "do": [
+        "Apply to the **robot installer** firm that serves the plant.",
+        "Spend all but **two months'** savings on courses.",
+        "Join the campaign for **shared ownership** of robots."
+      ],
+      "feel": [
+        "**Anxious**, and a little **thrilled**, which feels wrong."
+      ],
       "mood": "anxious",
-      "quote": "If AI can do any job and there are robots to do the hands-on stuff, then fixing the robots is just another job it can do.",
-      "fieldNote": "Beth's usual optimism runs into the logic of the card, and she follows that logic honestly rather than reassuring herself. She keeps learning even though it may only buy months. Her politics turn more active in this picture.",
+      "quote": "I can't out-learn a robot forever.",
+      "fieldNote": [
+        "Beth admits AGI takes her **party trick**: fault diagnosis.",
+        "She'd spend most **savings** on training, keeping a small buffer.",
+        "Her progressive views show in the **co-op share** idea."
+      ],
       "actions": [
+        "change-job",
         "retrain",
-        "save-more",
-        "collective-action",
-        "politics"
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Apply to the firm that installs the plant's robots",
+          "tag": "change-job"
+        },
+        {
+          "text": "Spend savings above two months on robot maintenance courses",
+          "tag": "retrain"
+        },
+        {
+          "text": "Join a campaign for workers to share robot earnings",
+          "tag": "collective-action"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. I'll read the card as written. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough time to do this fairly if we start this year. Workers on the boards of companies bringing robots in, retraining paid for by them, and a plan for what people do after. I'd be saying it everywhere, union, online, the pub."
+          "text": "Five years. That's a bit more like it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say five years is enough if we start now, and I'd say it loudly at the union branch. With friends I'd say this is the moment to retrain. I'd share my study notes online."
         },
         {
           "speaker": "interviewer",
@@ -241,7 +370,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Like the fast one, the end point's the same, but five years means I could get two or three good years as an automation tech. That's real money and real experience. After that, I honestly don't know."
+          "text": "Privately, I think I'd be well placed. Robots by 2034 gives me time to finish the apprenticeship, get a few years as an engineer and maybe move to the installer side. The thinking part of my job goes in 2031, but I'm not a thinking-job person anyway."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +378,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Finish the course in year one, then apply for maintenance or controls jobs, here or at the drinks plant across town that's already putting in robot palletisers. I'd keep saving around two hundred a month. I'd help run a union study group so other operators could learn the basics with me."
+          "text": "I'd finish the apprenticeship by 2029 and start building a name with the robot installer. I'd keep saving, maybe aim for eight months. I'd still go to union meetings, because the people on the line need someone who knows the tech on their side."
         },
         {
           "speaker": "interviewer",
@@ -257,48 +386,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but there's energy in it. I'd have a plan and something to do on Tuesday nights."
+          "text": "Mostly good. Uneasy about the people around me."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you leave your current factory for one with more robots?"
+          "text": "Who around you worries you?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, if the pay and the training were better. I like my line, but I'm not sentimental about it. The people I'd miss, the machines not so much."
+          "text": "Sam on my line. The man on my line who hates screens is forty, and he'll be the one they let go first. I'd try to drag him to the course with me."
         },
         {
           "speaker": "interviewer",
-          "text": "What's the study group you mentioned?"
+          "text": "You said you're not a thinking-job person. What does that mean?"
         },
         {
           "speaker": "persona",
-          "text": "It's just an idea, but say six of us meet in the canteen after the late shift on Tuesdays, and I show what I've learned about PLCs and robot cells. Free, no exams. If I'm going to get a head start, I'd rather drag a few people with me."
+          "text": "I'm a hands person. I learn by taking things apart. That's why the three years between AGI and the robots matter so much to me."
         }
       ],
-      "say": "I'd say five years is enough to do this fairly if we start now: workers on company boards, robot owners paying for retraining, and a plan for afterwards. I'd say it everywhere.",
-      "think": "Five years means two or three good years as an automation tech, which is real money and experience. After that, I honestly don't know.",
-      "do": "Finishes the automation course in year one and applies for maintenance or controls roles, including at a drinks plant installing robot palletisers. Saves about 200 a month and helps run a union study group.",
-      "feel": "Uneasy but energised, with a plan and something to do on Tuesday nights.",
+      "say": [
+        "I'd say **five years** is enough if we start now.",
+        "I'd share my **study notes** online to help others."
+      ],
+      "think": [
+        "I think robots by 2034 give me time to become an **engineer**.",
+        "I'm a **hands person**, so the three-year gap protects me."
+      ],
+      "do": [
+        "Finish the **apprenticeship** by 2029.",
+        "Build a name with the **robot installer**.",
+        "Save toward **eight months** of expenses."
+      ],
+      "feel": [
+        "Mostly **good**, but **uneasy** about the people around me."
+      ],
       "mood": "uneasy",
-      "quote": "I like my line, but I'm not sentimental about it. The people I'd miss, the machines not so much.",
-      "fieldNote": "With five years Beth is willing to change employer to follow the robots. She sees the window as a few good years rather than safety. Her habit of bringing others along shows again in the study group idea.",
+      "quote": "The man on my line who hates screens is forty, and he'll be the one they let go first.",
+      "fieldNote": [
+        "Beth's own path looks safe; her worry is **colleagues** like Sam.",
+        "She values the **three-year gap** because her work is hands-on.",
+        "She keeps the **union** link as a bridge for less tech-minded workers."
+      ],
       "actions": [
         "retrain",
-        "change-job",
-        "collective-action",
-        "save-more"
+        "save-more",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Finish the engineering apprenticeship by 2029",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save toward eight months of living costs",
+          "tag": "save-more"
+        },
+        {
+          "text": "Bring Sam from her line to the robot course with her",
+          "tag": "collective-action"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. I'll read the card as written. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a gift if we use it, and a disgrace if we waste it. Shorter working weeks, a public fund from the profits, and free college for anyone who wants to switch. I'd probably run for something on the union executive."
+          "text": "Ten years. Okay, that's a different feeling."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is a gift and we'd be stupid to waste it. At work I'd say let's get a training scheme written into the next contract. Online I'd talk about it as a chance."
         },
         {
           "speaker": "interviewer",
@@ -306,7 +472,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think I'd have a proper career out of this. I'd be thirty-seven at the end, with ten years in automation behind me. Even if robots eventually do that too, I'd be one of the people who helped set it up, and I'd hope that counts for something."
+          "text": "Honestly, I'd be calm. By 2039 I'd be thirty-nine with ten years as an engineer behind me. Even if robots fix robots one day, I'd have had time to save, and maybe teach."
         },
         {
           "speaker": "interviewer",
@@ -314,7 +480,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, finish the course. Years two to four, move into controls engineering, maybe do the two-year technical diploma part time. And I'd campaign hard for a shorter working week, because if machines do more, people should work less, not lose everything."
+          "text": "I'd do the apprenticeship, then an engineering diploma part-time, paid partly by the plant. I'd start saving properly for a flat of my own. I'd help set up a training buddy scheme at the plant."
         },
         {
           "speaker": "interviewer",
@@ -322,37 +488,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Hopeful, even, though I know that's partly my personality."
+          "text": "Calm. Curious about what the job looks like then."
         },
         {
           "speaker": "interviewer",
-          "text": "You keep mentioning a shorter week. Why that, specifically?"
+          "text": "What's the training buddy scheme?"
         },
         {
           "speaker": "persona",
-          "text": "Because my granddad worked six days a week at the steelworks and died at sixty-four. If robots can make the cereal bars, I'd like Marco and me to have Fridays together. That seems like the point of any of this."
+          "text": "Pair one person who's good with tech with one who isn't, for an hour a week on the clock. I'd pair myself with Sam, obviously."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you and Marco plan for, with ten years?"
+          "text": "Is there any part of this picture that bothers you?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe a kid, in a few years, once I'm settled in a better-paid job. And maybe a small place of our own. With ten years I'd feel I could plan things like that without it being reckless."
+          "text": "The office people still get it first, in 2036. Ten years doesn't help someone who's fifty-five now."
         }
       ],
-      "say": "I'd say ten years is a gift if we use it and a disgrace if we waste it, and call for shorter weeks, a public fund from profits and free college. I might run for the union executive.",
-      "think": "I'd have a proper career out of this and be thirty-seven with ten years in automation. Even if robots eventually do that too, I'd hope helping set it up counts for something.",
-      "do": "Finishes the automation course in year one and moves into controls engineering, possibly studying a technical diploma part time. Campaigns for a shorter working week through the union.",
-      "feel": "Calm and hopeful, though she admits that's partly her nature.",
+      "say": [
+        "I'd call ten years a **gift** we mustn't waste.",
+        "I'd push for a **training scheme** in the next contract."
+      ],
+      "think": [
+        "I think I'd be thirty-nine with **ten years** as an engineer by 2039.",
+        "I'd have time to **save** and maybe teach."
+      ],
+      "do": [
+        "Do an **engineering diploma** part-time after the apprenticeship.",
+        "Save for a **flat** of my own.",
+        "Set up a **training buddy** scheme at the plant."
+      ],
+      "feel": [
+        "**Calm**, and **curious** about what the job will become."
+      ],
       "mood": "calm",
-      "quote": "If robots can make the cereal bars, I'd like Marco and me to have Fridays together.",
-      "fieldNote": "Beth is calmest of all with ten years and openly says some of that is temperament. Her push for a shorter week comes from a family story about her granddad. She sees the long runway as a career, not just a reprieve.",
+      "quote": "Ten years doesn't help someone who's fifty-five now.",
+      "fieldNote": [
+        "With a long warning Beth is fully **calm** about herself.",
+        "Her concern shifts to **older workers** in the office.",
+        "The **buddy scheme** shows she thinks in terms of the whole workforce."
+      ],
       "actions": [
         "retrain",
-        "change-job",
-        "politics",
+        "save-more",
         "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Take a part-time engineering diploma partly paid by the plant",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save for a deposit on a flat of her own",
+          "tag": "save-more"
+        },
+        {
+          "text": "Set up an hour-a-week training buddy scheme at the plant",
+          "tag": "collective-action"
+        }
       ]
     }
   },
@@ -363,7 +558,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because even the stuff I'm learning wouldn't save anyone, and the people on my line would have nowhere to go. What would help is wage support straight away, not after months of forms, and companies paying into it in proportion to how many people their robots replace."
+      "text": "AGI by 2028, because my edge disappears and I'd be racing a clock. What would help is the plant paying for robot training now, and some kind of income floor so people like Sam aren't just dumped."
     },
     {
       "speaker": "interviewer",
@@ -371,11 +566,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the good bit. If this goes right, nobody has to stand on concrete wrapping cereal bars for eight hours. I just want the people who did that work to get some of the time back, not just a letter."
+      "text": "You didn't ask about the cold. Nobody wants to stand in an eight-degree packing hall for eight hours, so if a robot does that bit, I won't miss it."
     }
   ],
-  "headlineQuote": "If this goes right, nobody has to stand on concrete wrapping cereal bars for eight hours.",
-  "portrait": "Beth Diaz, 27, runs the wrapping and cartoning end of a cereal bar packaging line and lives with her partner Marco, a hospital porter. She uses AI every day to teach herself how the line's control computers work and sits on the health and safety committee. She finds the calm picture a little dull, feels excited and then guilty about steady change, and becomes anxious only when AGI arrives in two years. With five or ten years she would study automation and move into controls work, while pushing her union for shared gains and a shorter working week.",
-  "biggestWorry": "AGI by 2028 worries her most, because even her own learning wouldn't help and her colleagues would have nowhere to go.",
-  "whatWouldHelp": "Immediate wage support without months of forms, funded by companies in proportion to how many workers their robots replace."
+  "headlineQuote": "Nobody wants to stand in an eight-degree packing hall for eight hours, so if a robot does that bit, I won't miss it.",
+  "portrait": [
+    "Beth is a **27-year-old** operator on a frozen pizza packing line, sharing a flat with a friend.",
+    "She uses **AI apps** daily to read fault codes and wants an **engineering apprenticeship**.",
+    "She sees the slower pictures as a **chance** and spends savings on training.",
+    "Her worry is less for herself than for **older colleagues** who dislike screens.",
+    "Only **AGI by 2028** makes her anxious, because it removes her fault-finding edge."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because her edge goes and she'd be racing a **clock**."
+  ],
+  "whatWouldHelp": [
+    "The plant paying for **robot training** now, plus an **income floor** for colleagues left behind."
+  ]
 }

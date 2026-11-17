@@ -11,24 +11,32 @@
     "outlook": "traditional",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for having me, Marco. I'm a field researcher with the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions, parties or government. Everything you tell me is confidential and won't carry your name. Could you walk me through a normal working day?"
+      "text": "Thanks for making time, Marco. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Is that all right?"
     },
     {
       "speaker": "persona",
-      "text": "I work for the small electric company that covers our town and the valley around it, about forty people all told. My dad was a lineman there for thirty-one years, so half the old guys knew me as a kid. A normal day, we load the truck at seven, go out and change a pole or fix a service line to some farmhouse, and I do whatever the journeyman tells me, mostly digging, hauling and holding the ladder."
+      "text": "That's fine. I'm Marco, 27, apprentice lineworker with the electricity company in the town I grew up in. I'm engaged to Ania, who's a teaching assistant at the primary school, and we're getting married at St. Stanislaus church next June."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
+      "text": "Good. Then let's start simple. Walk me through a normal working day for you."
     },
     {
       "speaker": "persona",
-      "text": "I like that it's honest work and people in town see you doing it. What wears me out is how much I still don't know. I'm slow with the theory, the formulas and the books, I'm better with my hands, and the journeymen have to explain things twice."
+      "text": "We're the district crew, so we cover everything from the river out to the hill farms. Mostly it's fixing what storms and tractors break: a pole knocked over, a fuse blown on a transformer, a line down on a farm track. Dale, my foreman, makes me do the jobs the old way first, by hand, so I learn it properly. I like that. My dad did this job for 34 years, so half the farmers already know my face."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Do you use any of the new tech on the crew?"
+    },
+    {
+      "speaker": "persona",
+      "text": "As little as I can. The company gave us tablets for the job sheets and I let Dale fill mine in. I've never touched one of those AI chatbots and I don't plan to."
     }
   ],
   "scenarios": {
@@ -36,11 +44,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture. It's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say I'm not surprised. Around here nobody believed it in the first place. I'd say it at the diner or after church, I don't go online for that kind of thing."
+          "text": "Good. That's what I've been saying all along."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I told you so. I'd say it at the pub and to my dad, and probably at the men's breakfast after church. I'm not online much."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means things stay the way they ought to be. People do the work, people get paid for it. A computer can't hold a pole steady in the wind, and that's the end of it."
+          "text": "For me it means nothing changes, which is what I want. My dad Jerzy climbed poles for this company for 34 years. I'd like to do the same, and in this picture I can."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing different. Keep working, finish my apprenticeship, keep the money I've got put away, which is a few months' worth. Maybe help my uncle fix up the roof on the house I rent from him."
+          "text": "I'd keep at my apprenticeship and keep learning off Dale. I'd keep saving about 250 a month: the wedding first, then a deposit on a small house near my parents. That's my plan anyway."
         },
         {
           "speaker": "interviewer",
@@ -68,41 +84,75 @@
         },
         {
           "speaker": "interviewer",
-          "text": "You said nobody around here believed it. Why not?"
+          "text": "What's already on your mind about money, wedding aside or including it?"
         },
         {
           "speaker": "persona",
-          "text": "Because we've heard it all before. When I was nineteen, the sawmill here got told new machines would make it more competitive, and two years later it closed anyway because a bigger automated mill opened four hours away. People here don't trust promises from far away."
+          "text": "The wedding, mainly. The hall, the band, Ania's dress, it adds up to more than I thought, maybe 9,000. Between us we've got about three months of bills saved after that, which is enough, but only just."
         },
         {
           "speaker": "interviewer",
-          "text": "Did you work at the sawmill?"
+          "text": "What does your dad say about all this AI talk?"
         },
         {
           "speaker": "persona",
-          "text": "Two years, straight out of school. It was a good job until it wasn't. That's why I went into lines, you can't ship a power line to another town."
+          "text": "Dad says the company tried to replace meter readers with clever boxes years ago, and the boxes kept breaking. He thinks this is the same. I tend to believe him."
         }
       ],
-      "say": "I'd say I'm not surprised, because nobody around here believed it in the first place. I'd say it at the diner or after church, not online.",
-      "think": "It means things stay the way they ought to be: people do the work and get paid for it. A computer can't hold a pole steady in the wind.",
-      "do": "Carries on as normal, finishing his apprenticeship and keeping his savings of a few months. Helps his uncle repair the roof on the house he rents from him.",
-      "feel": "Calm, as if things are as they should be.",
+      "say": [
+        "I'd say **I told you so** at the pub and after church.",
+        "AI is just another fad, like the **meter boxes** my dad saw break."
+      ],
+      "think": [
+        "Nothing changes, which is **exactly what** I want.",
+        "I'd like to climb poles for **34 years**, like my dad."
+      ],
+      "do": [
+        "Keep at the **apprenticeship** and keep learning off foreman Dale.",
+        "Save about **250 a month** for the wedding and then a house deposit."
+      ],
+      "feel": [
+        "**Calm**, as if things are as they **should be**."
+      ],
       "mood": "calm",
-      "quote": "A computer can't hold a pole steady in the wind, and that's the end of it.",
-      "fieldNote": "Marco's distrust of technology isn't abstract: he lost his first job when a sawmill closed after an automated rival opened. He chose line work specifically because it can't be moved elsewhere. His sense of the right order of things, people working and being paid, runs through everything he says.",
+      "quote": "My dad Jerzy climbed poles for this company for 34 years. I'd like to do the same, and in this picture I can.",
+      "fieldNote": [
+        "His model of a career is his **father's** 34 years with one company.",
+        "He avoids **tablets** and AI entirely and lets his foreman fill in forms.",
+        "The **wedding cost**, about 9,000, is his main money pressure."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep learning district repairs the old way from foreman Dale",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save 250 a month for the wedding and a deposit",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say people need to stand on their own feet and adapt, same as always. But I'd also say I don't want some company from the city deciding how we do things here. At church I'd keep it to small talk."
+          "text": "Hm. That's the office getting computers, mostly. Not us."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Let the office have their computers. A pole still needs a man at the top of it, and I'm happy to be that man. I'd say that to anyone."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +160,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, it worries me more than I'd say. I saw what new machines did to the sawmill, and I don't want to go through that twice before I'm thirty. I'm not good with the computer side, and if that's what they start judging us on, I'm in trouble."
+          "text": "Honestly, I think my job's fine. The people who book jobs and answer the phones might be in trouble. And the tech companies get richer while everyone else adjusts."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +168,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and try to finish my apprenticeship early so I've at least got the ticket. I'd save harder, maybe put my truck payment towards savings once it's paid off next spring. I wouldn't go looking for computer courses, I'd do what the company makes me do and no more."
+          "text": "I'd keep doing my work and keep saving. If the company made me use a new app, I'd use it, but I'd leave it to others to work out first. I'd wait and see."
         },
         {
           "speaker": "interviewer",
@@ -126,46 +176,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like the feeling before the sawmill news."
+          "text": "Uneasy. I'm fine, but I don't like the direction."
         },
         {
           "speaker": "interviewer",
-          "text": "What would your dad say about it?"
+          "text": "Would anyone in your town feel this one?"
         },
         {
           "speaker": "persona",
-          "text": "He'd say keep your head down, work hard and they'll keep you. That's how it worked for him. I'm not sure it works like that anymore, but I wouldn't tell him that."
+          "text": "Ania's cousin Kasia works in the company's call centre in town. That's thirty people in one building. If half of those go, that's thirty families on our side of town feeling it."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd do what the company makes you do and no more. What if that's not enough?"
+          "text": "You said not us, but you also said you'd watch. Why watch?"
         },
         {
           "speaker": "persona",
-          "text": "Then I'd have to think again, I suppose. But I'd rather be the guy they can count on in a storm than the guy who's good on a tablet. I'd hope that still counts for something."
+          "text": "Because I've seen what happened to the mill. Everyone said it was fine right up until the gates shut. I'd keep an eye out, that's all."
         }
       ],
-      "say": "I'd say people need to stand on their own feet and adapt, same as always. But I don't want a company from the city deciding how we do things here.",
-      "think": "It worries me more than I'd say, because I saw what new machines did to the sawmill. I'm not good with computers, and if that's what they judge us on, I'm in trouble.",
-      "do": "Keeps working and tries to finish his apprenticeship early to secure the ticket. Moves his truck payment into savings once the truck is paid off next spring and does only the training the company requires.",
-      "feel": "Uneasy, like the feeling before the sawmill closed.",
+      "say": [
+        "A **pole** still needs a man at the top of it.",
+        "Let the **office** have their computers; I'll stay on the lines."
+      ],
+      "think": [
+        "**Tech companies** get richer while ordinary people adjust.",
+        "Call centre staff like **Kasia** are the ones in trouble."
+      ],
+      "do": [
+        "Keep working the **district crew** as normal and keep saving.",
+        "Use any new **app** only after others have worked it out."
+      ],
+      "feel": [
+        "**Uneasy** about the direction, though **his own** job feels fine."
+      ],
       "mood": "uneasy",
-      "quote": "I'm not good with the computer side, and if that's what they start judging us on, I'm in trouble.",
-      "fieldNote": "His public line about self-reliance sits next to a private fear rooted in the sawmill closure. He'd keep his father's advice to work hard and stay put, while privately doubting it still holds. His only lever is to be dependable in a storm rather than good with a tablet.",
+      "quote": "Let the office have their computers. A pole still needs a man at the top of it, and I'm happy to be that man.",
+      "fieldNote": [
+        "He blames **tech companies** rather than government for the shift.",
+        "The closed **mill** in his town is his reference for sudden loss.",
+        "He links job cuts to **families** on his side of town, a community view."
+      ],
       "actions": [
         "keep-going",
-        "save-more"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep working the district crew and saving for the wedding",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Leave the new job apps until others have tried them",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's wrong, and the big tech companies don't care who they wreck. I wouldn't say the government should hand everyone money, I don't believe in that. I'd say families and towns are going to have to look after their own."
+          "text": "Two years. And robots by 2031? That's the year I wanted our first child."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the people who built these machines should answer for it. I'd say it at church and at the pub. I wouldn't want handouts, I'd want my job."
         },
         {
           "speaker": "interviewer",
@@ -173,7 +256,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I'd be in a bad spot. Two years, I won't even have my ticket, and I've got no other skills a robot can't do. I already lost one job to a machine I never saw. I'd be losing the second one before I've learned it properly."
+          "text": "My fiancée Ania and I want kids by 2030. I can't start a family on a job that a robot takes the year after. And Ania's school job would be under the thinking AI too, maybe."
         },
         {
           "speaker": "interviewer",
@@ -181,7 +264,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop any spending that isn't needed, no new rifle, no trips, nothing. I'd keep working as long as they'd have me and ask my uncle about working with him on the side, he does plumbing. I'd lean on family and church, that's what they're for."
+          "text": "I'd shrink the wedding to the church and the parish hall, no band, saving maybe 5,000. All of it goes in the bank. I'd ask Dad and my uncle Piotr, who's a builder, whether there's any work going if the line job goes."
         },
         {
           "speaker": "interviewer",
@@ -189,47 +272,91 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. Sick in the stomach, honestly."
+          "text": "Alarmed. I'd be lying awake, which I never do."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to your dad that first night?"
+          "text": "What would you and Ania decide about the wedding and children?"
         },
         {
           "speaker": "persona",
-          "text": "I don't know if I'd say anything. He'd see it on the news and we'd sit on the porch and not talk about it. In my family that's how you talk about bad things, you sit there and you don't talk."
+          "text": "We'd still marry, that's not in question. But kids would wait till we knew where the money was coming from. That would break Ania's heart, and mine."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you don't want government handouts. If it came to that, would you take help?"
+          "text": "Who would you lean on?"
         },
         {
           "speaker": "persona",
-          "text": "I'd take help from family first, then church. Government only if I really had nothing. I'd hate it, but I'm not stupid, I wouldn't let myself go hungry over pride."
+          "text": "Family first. My parents, Ania's parents, and the parish. Father Tomasz always says the community looks after its own, and I'd be counting on it."
         }
       ],
-      "say": "I'd say it's wrong and the big tech companies don't care who they wreck. I don't believe in government handing out money, so families and towns will have to look after their own.",
-      "think": "I'd be in a bad spot, without my ticket and with no skills a robot can't do. I already lost one job to a machine I never saw and would lose this one before I've learned it properly.",
-      "do": "Stops all non-essential spending straight away and keeps working as long as he's kept on. Asks his uncle about plumbing work on the side and leans on family and church.",
-      "feel": "Alarmed and sick to his stomach.",
+      "say": [
+        "The people who built these machines should **answer for it**.",
+        "I'd want to **keep my job**, not take handouts from the government."
+      ],
+      "think": [
+        "I can't start a **family** on a job robots take in 2031.",
+        "Ania's **school job** might be under threat too."
+      ],
+      "do": [
+        "Cut the wedding to **church and parish hall**, saving about 5,000.",
+        "Put the saved **5,000** straight into the bank.",
+        "Ask **uncle Piotr** about building work if the line job goes."
+      ],
+      "feel": [
+        "**Alarmed** and lying awake, which he says he never does."
+      ],
       "mood": "alarmed",
-      "quote": "I already lost one job to a machine I never saw. I'd be losing the second one before I've learned it properly.",
-      "fieldNote": "The fast picture would mean a second job lost to machines before he's thirty, and he says so plainly. He blames big tech but rejects government handouts, ranking family, then church, then state. The porch scene with his father shows a family that copes in silence.",
+      "quote": "My fiancée Ania and I want kids by 2030. I can't start a family on a job that a robot takes the year after.",
+      "fieldNote": [
+        "The robot date of **2031** collides with his plan for a first child.",
+        "His safety net is **family and parish**, not government help.",
+        "No retraining at all: his only moves are **cutting and leaning** on relatives.",
+        "Rejects **handouts** while preparing to rely on community support."
+      ],
       "actions": [
         "cut-spending",
-        "keep-going",
+        "save-more",
+        "family-plans",
         "seek-support"
+      ],
+      "steps": [
+        {
+          "text": "Cut the wedding back to church and parish hall",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Bank the 5,000 saved from the smaller wedding",
+          "tag": "save-more"
+        },
+        {
+          "text": "Put off having children until the money is clear",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Ask uncle Piotr about building work as a fallback",
+          "tag": "seek-support"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got a few years, so people should get to work and not wait for anyone to save them. I'd say the company should train its own people first before bringing in machines. That's how it should be, apprentices learning from the older guys."
+          "text": "Five years. Robots in 2034. I'd be 35."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the companies should train apprentices for whatever comes next, not just bin us. That's what a decent employer does. I'd say it to Dale and the union rep."
         },
         {
           "speaker": "interviewer",
@@ -237,7 +364,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years, I'd have my ticket, at least. I'd be a lineman like my dad, for a few years. But I'd know it was ending, and that's a hard thing to carry around every day."
+          "text": "Five years is enough time to get married, buy a house and find out it was the wrong house to buy. I'd be qualified and earning more, but with a mortgage and maybe a baby when the robots come."
         },
         {
           "speaker": "interviewer",
@@ -245,7 +372,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd finish the apprenticeship and work every hour I can to build the savings past six months. I'd start helping my uncle on plumbing jobs on weekends so I've got something else in my hands. I'd wait and see how fast the robots actually come before doing anything bigger."
+          "text": "I'd marry as planned, but keep the house deposit in the bank another year or two and watch. I'd save 400 a month once I qualify. I'd wait and see what the company says before changing anything else."
         },
         {
           "speaker": "interviewer",
@@ -253,48 +380,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. It's better than the two years, but it sits on you."
+          "text": "Anxious. Not the lying-awake kind, but there all the time."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd help your uncle with plumbing. Wouldn't robots do plumbing too, in this picture?"
+          "text": "Would you still buy the house?"
         },
         {
           "speaker": "persona",
-          "text": "Probably, yeah. But it's family work, and family looks after each other. If my uncle's still working, he'll find me something to do, robot or no robot."
+          "text": "Not straight away. I'd rent near my parents and see which way it goes by 2030."
         },
         {
           "speaker": "interviewer",
-          "text": "What would make you act on something bigger?"
+          "text": "Is there anything you'd learn or try in those years?"
         },
         {
           "speaker": "persona",
-          "text": "If I saw the company buy one of those machines. We're a small company, so if even we buy one, then everyone has. That would be the sign."
+          "text": "Probably not, if I'm honest. I don't trust the new stuff. If Dale or my dad said it was worth learning, I might."
         }
       ],
-      "say": "I'd say we've got a few years, so people should get to work and not wait to be saved. The company should train its own people before bringing in machines.",
-      "think": "Five years means I'd get my ticket and be a lineman like my dad for a few years. But I'd know it was ending, and that's hard to carry every day.",
-      "do": "Finishes his apprenticeship and works every hour possible to build savings past six months. Starts helping his uncle on plumbing jobs at weekends and waits to see how fast robots arrive.",
-      "feel": "Anxious, better than two years but weighing on him.",
+      "say": [
+        "Companies should **train apprentices** for what comes next.",
+        "A **decent employer** doesn't just bin its people when new machines arrive."
+      ],
+      "think": [
+        "I'd have a **mortgage** and maybe a baby when the robots arrive.",
+        "Five years could be just enough to **buy the wrong house**."
+      ],
+      "do": [
+        "Marry as planned but hold the **house deposit** a year or two.",
+        "Save **400 a month** once qualified.",
+        "Wait for the **company's plan** before changing anything else."
+      ],
+      "feel": [
+        "**Anxious**, a steady worry rather than sleepless nights."
+      ],
       "mood": "anxious",
-      "quote": "If my uncle's still working, he'll find me something to do, robot or no robot.",
-      "fieldNote": "The extra time lets him follow his father into the trade, but with the end in sight. His fallback is family loyalty more than a new skill, and he admits plumbing may not be safe either. He'd treat his own small company buying a robot as the signal to act.",
+      "quote": "Five years is enough time to get married, buy a house and find out it was the wrong house to buy.",
+      "fieldNote": [
+        "His fear is about **timing**: big commitments landing just before robots.",
+        "Prefers **employer training** to state help, in line with his traditional view.",
+        "Would only learn new tech if **Dale or his dad** vouched for it."
+      ],
       "actions": [
+        "family-plans",
         "save-more",
-        "side-income",
-        "seek-support",
         "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Hold the house deposit and rent near his parents until 2030",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Save 400 a month once qualified",
+          "tag": "save-more"
+        },
+        {
+          "text": "Wait for the company's robot plan before changing trades",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough for people to get ready on their own, without the government telling them how. I'd say get a trade, buy some land if you can, look after your family. That's what I'd say after church."
+          "text": "Ten years. I'd be 39 when the robots come."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is enough for the company to look after its own. I'd expect them to, and I'd say so. I wouldn't be shouting about it."
         },
         {
           "speaker": "interviewer",
@@ -302,7 +466,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, ten years is better, but I don't trust that anyone's going to look after people like me at the end of it. So I'd want to need less from anyone. Land, a woodstove and a freezer full of deer meat. That's my retirement plan if the robots win."
+          "text": "In ten years I'd have kids in school and a mortgage, and I still can't picture myself doing anything but this. That's the worry, not the robots exactly."
         },
         {
           "speaker": "interviewer",
@@ -310,7 +474,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd finish the apprenticeship and work as a lineman for as long as it lasts. In the first few years I'd save for a deposit on a few acres my uncle has been talking about selling. I'd keep saving and not do anything with computers unless I had to."
+          "text": "I'd go ahead with the wedding, the house and children as planned. I'd keep saving and wait to see what the company offers around 2034. I wouldn't jump trades."
         },
         {
           "speaker": "interviewer",
@@ -318,36 +482,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious still, but steadier. I'd have something to work towards."
+          "text": "Anxious, but quieter. It's a long way off, but I'd be the one with the most to lose by then."
         },
         {
           "speaker": "interviewer",
-          "text": "Would the ten years change any plans about family?"
+          "text": "Ten years is a long time. Why still worried?"
         },
         {
           "speaker": "persona",
-          "text": "I'd like to get married someday and have kids, that's always been the plan. It'd make me want a woman who's practical, who can live simple. My mum would say I'm making it a requirement for the wrong reasons."
+          "text": "Because ten years is enough time for me to get comfortable and stop paying attention. My dad never had to change, and I'm built the same."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you wouldn't do anything with computers unless you had to. Even with ten years?"
+          "text": "What would you tell your children about work?"
         },
         {
           "speaker": "persona",
-          "text": "Even with ten years. I'm not going to spend a decade learning to be second best at something a machine will do better anyway. I'd rather be first-rate at what I'm already doing."
+          "text": "I'd tell them to learn a trade that needs a person's hands and a person's judgement. Whatever that is by then. I wouldn't know."
         }
       ],
-      "say": "I'd say ten years is enough for people to get ready without the government telling them how. Get a trade, buy some land if you can and look after your family.",
-      "think": "Ten years is better, but I don't trust anyone to look after people like me at the end, so I'd want to need less from anyone. Land, a woodstove and a freezer of deer meat is my plan.",
-      "do": "Finishes his apprenticeship and works as a lineman as long as it lasts. Saves for a deposit on a few acres his uncle may sell and avoids computers unless required.",
-      "feel": "Still anxious, but steadier with something to work towards.",
+      "say": [
+        "Ten years is enough for the company to **look after** its own.",
+        "I'd expect that and **say so**, without shouting."
+      ],
+      "think": [
+        "By then I'd have **kids and a mortgage**.",
+        "I can't picture myself doing **anything else**, and that's the worry."
+      ],
+      "do": [
+        "Go ahead with the **wedding, house and children** as planned.",
+        "Keep saving and **wait** for the company's offer around 2034."
+      ],
+      "feel": [
+        "**Anxious** but quieter, knowing he'd have **most to lose** later."
+      ],
       "mood": "anxious",
-      "quote": "Land, a woodstove and a freezer full of deer meat. That's my retirement plan if the robots win.",
-      "fieldNote": "With a decade, Marco's answer is self-reliance: land, wood heat and hunting rather than retraining. He flatly refuses to spend the time learning computers, seeing no point in being second best to a machine. Even his marriage hopes bend towards a simpler life.",
+      "quote": "In ten years I'd have kids in school and a mortgage, and I still can't picture myself doing anything but this.",
+      "fieldNote": [
+        "More time means **more commitments** stacked up before robots, not more preparation.",
+        "He knows he will **stop paying attention**, like his father never had to.",
+        "His **resistance** to change is the thread through all five pictures."
+      ],
       "actions": [
-        "save-more",
-        "invest",
-        "keep-going"
+        "family-plans",
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Go ahead with the wedding, house and children as planned",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Keep working the district crew and saving each month",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for the company's offer around 2034 before switching",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -358,7 +551,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. I'd lose my second job to machines before I'm thirty. What would help is companies having to keep and train their own people first, apprentices especially, instead of throwing them out the second a machine shows up."
+      "text": "AGI by 2028. It hits right when Ania and I want to start a family. Every family on our street had someone at the power company or the mill. The mill's gone, and I don't want the power company going the same way. What would help is the company keeping its apprentices and training us for whatever comes next."
     },
     {
       "speaker": "interviewer",
@@ -366,11 +559,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe what it does to a town. When the sawmill closed, the hardware store went, then the bakery, then half the church. If the robots do every job, I don't know what holds a place like ours together."
+      "text": "You could ask about the town. When one big employer goes, it's not one job, it's the bakery, the church collection, the football club. Everybody feels it."
     }
   ],
-  "headlineQuote": "I'm not going to spend a decade learning to be second best at something a machine will do better anyway.",
-  "portrait": "Marco is a 27-year-old second-year apprentice at the small electric company where his father worked for thirty-one years, better with his hands than with the books. He lost his first job when the local sawmill closed after an automated rival opened, and that memory shapes how he sees every scenario. He doesn't use AI and won't, trusting family and church over government. He's calm if AI fizzles, uneasy about steady disruption and alarmed by the two-year AGI picture, where he'd lose a second job before thirty. With more time he'd become a lineman like his father and plan for self-reliance on a few acres rather than retrain.",
-  "biggestWorry": "AGI by 2028 worries him most, because he would lose a second job to machines before he turns thirty.",
-  "whatWouldHelp": "Companies being required to keep and train their own people first, apprentices especially, instead of dropping them when a machine arrives."
+  "headlineQuote": "Every family on our street had someone at the power company or the mill. The mill's gone, and I don't want the power company going the same way.",
+  "portrait": [
+    "Marco is a 27-year-old **apprentice** lineworker in his home town, engaged to Ania, a teaching assistant.",
+    "His father worked **34 years** for the same company, and that's the career Marco wants.",
+    "He never uses **AI** and lets his foreman fill in his tablet forms.",
+    "He is **alarmed** at AGI by 2028 because robots would arrive just as he wants children.",
+    "He relies on **family and parish** rather than retraining or government help."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, which lands as he and Ania plan to start a family."
+  ],
+  "whatWouldHelp": [
+    "The company **keeping apprentices** and training them for what comes next."
+  ]
 }

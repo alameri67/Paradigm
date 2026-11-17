@@ -11,24 +11,24 @@
     "outlook": "traditional",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for talking with me, Kira. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions, parties or government. Everything you say is confidential. Could you start by describing a normal working day?"
+      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or government. Everything you say stays confidential, and your name won't be attached to any of it. To start, could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "Sure. I drive a front-end loader on the ore pad at the Gidgee Plains phosphate mine, which is a huge open pit out on the flats. The ore pad is where the trucks dump the rock before it goes into the crusher, and my job is to blend the piles and feed the crusher at the right rate so it doesn't choke or run empty. Twelve-hour shifts, seven on seven off, and I'm still learning to read the piles by colour the way the old hands do."
+      "text": "I run a hydraulic shovel at an open-pit zinc mine, the big digger that loads the haul trucks. I sit up high, take a bite of the blasted rock, swing and dump it in the truck, around sixty trucks a shift when things go well. I'm still learning to read the muck pile, and the trainer, Graham, reckons I waste swings because I second-guess myself. What I love is getting into a rhythm where the trucks never wait."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
+      "text": "Tell me about your life outside the pit."
     },
     {
       "speaker": "persona",
-      "text": "I like that it's a rhythm, and the crusher tells you straight away if you've got it wrong. What wears me out is the dust and the boredom on nights, and that my supervisor, Carmen, still checks my blend twice. On my weeks off I run a little drone survey business with my partner Ben, measuring stockpiles for quarries and mapping paddocks for farmers, and I use AI every day to process the maps and write the reports."
+      "text": "I married Josh two years ago, he's a diesel fitter at the same mine. No kids yet, but we want them. Between us we've got close to a year of pay saved, and on weekends Josh and I run a little earthmoving business with a skid steer, doing driveways and house pads for farmers. I use AI every day to write quotes, sort invoices and study for my next ticket. There's plenty of mining work around, so we're not stuck."
     }
   ],
   "scenarios": {
@@ -36,11 +36,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say fine, the tools are still useful, they just didn't change the world. I'd post something like that on the business page. At work nobody would notice anything changed."
+          "text": "Fine. I'd still use it for the business, though."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it was overhyped but still handy, because it writes my quotes in five minutes instead of an hour. At work I'd say the hard work still gets done by people. Online I'd just post about the skid steer jobs."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it suits me pretty well. I'd keep the mine wage, which is great money for someone with just school behind her, and keep growing the drone business on the side. The AI tools I already use would still save me hours a week."
+          "text": "Privately, it means I keep getting better on the shovel and keep growing the weekend business. Nothing much changes, and that's okay. The zinc price is what I watch."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep both going like now. I'd put a chunk of the mine money into a second drone and a better software licence, and keep about a year of costs in the bank as I do now. I'd also ask Carmen to sign me off on the bigger loader."
+          "text": "Keep working, keep the business going, and buy a second machine, maybe a small excavator, next year. Save for a house and kids in a couple of years. I'd do my next ticket so I can move up."
         },
         {
           "speaker": "interviewer",
@@ -64,48 +72,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like the plan just carries on."
+          "text": "Calm. Pretty good, actually."
         },
         {
           "speaker": "interviewer",
-          "text": "How much does the drone business bring in now?"
+          "text": "How much does the weekend business bring in?"
         },
         {
           "speaker": "persona",
-          "text": "Not a lot yet, maybe a fifth of what the mine pays, but it's growing. Ben does the flying, I do the maps and the quotes. My dad ran a small trucking business his whole life, so I've grown up thinking you should own something."
+          "text": "Maybe a fifth of what I earn at the mine. It's not huge, but it's ours. The skid steer business Josh (my husband) and I run on weekends only brings in a fifth of my mine pay, but nobody can sack us from it."
         },
         {
           "speaker": "interviewer",
-          "text": "How do you use AI in the business, exactly?"
+          "text": "Any worries in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "It stitches the drone photos into a 3D model, works out the volume of a stockpile, and I use a chat tool to write the reports and chase late payers politely. Stuff that used to take me a whole evening takes forty minutes. I'd never go back."
+          "text": "Zinc prices. And Josh's back, he's done some damage in the workshop. But we'd manage."
         }
       ],
-      "say": "I'd say the tools are still useful, they just didn't change the world. I'd post that on the business page and nobody at work would notice a difference.",
-      "think": "It suits me well: I keep the mine wage and grow the drone business on the side. The AI tools I use would still save me hours a week.",
-      "do": "Runs both the mine job and the drone business, putting mine pay into a second drone and better software. Keeps about a year of costs in the bank and asks to be signed off on the bigger loader.",
-      "feel": "Calm, as the plan carries on.",
+      "say": [
+        "It was **overhyped** but still writes her quotes in **five minutes**.",
+        "At work I'd say the hard work still gets done by **people**."
+      ],
+      "think": [
+        "She keeps improving on the **shovel** and growing the weekend business.",
+        "The **zinc price** is what she watches, not AI."
+      ],
+      "do": [
+        "Buy a **second machine**, maybe a small excavator, next year.",
+        "Save for a **house and kids** in a couple of years.",
+        "Do her **next ticket** to move up."
+      ],
+      "feel": [
+        "**Calm**, and pretty good about it."
+      ],
       "mood": "calm",
-      "quote": "Stuff that used to take me a whole evening takes forty minutes.",
-      "fieldNote": "Kira already treats AI as an everyday business tool. Her sense of security comes from building something she owns, inspired by her father's trucking firm. The quiet scenario simply lets her plan continue.",
+      "quote": "The skid steer business Josh (my husband) and I run on weekends only brings in a fifth of my mine pay, but nobody can sack us from it.",
+      "fieldNote": [
+        "Her **weekend business** gives her a sense of independence.",
+        "She uses AI **every day**, but for the business, not the shovel.",
+        "Her worries are **zinc prices** and Josh's back."
+      ],
       "actions": [
-        "keep-going",
-        "side-income",
         "invest",
-        "learn-ai"
+        "save-more",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Buy a small excavator for the weekend earthmoving business",
+          "tag": "invest"
+        },
+        {
+          "text": "Save for a house and kids within two years",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep running the hydraulic shovel and sit her next ticket",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is good news for anyone willing to work and learn. Change creates openings, and the people who complain usually haven't tried the tools. I'd say it at work, maybe a bit more gently."
+          "text": "That one I'd see as a chance."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say people who work hard and learn will do fine, and the rest need to get on with it. At work I'd tell the crew to learn the systems. Online I'd share how I use AI for the business."
         },
         {
           "speaker": "interviewer",
@@ -113,7 +158,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think the loader on the pad will go automatic, and I'm fine with that. It's dull, dusty work, and if they need someone to watch the system, I'd do that. But the real chance for me is selling survey and automation services to smaller mines and quarries that can't afford their own teams."
+          "text": "Privately, I think it's good for me. The planning and dispatch work goes to software first, and I'd want to be the one who learns the fleet control screens. I'd rather be the woman in the control room running ten autonomous trucks than the one waiting for a robot to take my shovel."
         },
         {
           "speaker": "interviewer",
@@ -121,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first six months I'd buy a second drone and an automated ground station, so it can fly set routes by itself. I'd pitch to the three quarries within two hours of us. I'd keep the mine job for the steady money until the business paid at least half as much."
+          "text": "I'd ask for training on the fleet management system straight away. I'd use AI more for the business, maybe get a booking tool online. And I'd buy that second machine."
         },
         {
           "speaker": "interviewer",
@@ -129,47 +174,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, and a bit excited. This is the one I'd bet on."
+          "text": "Calm, maybe a bit excited."
         },
         {
           "speaker": "interviewer",
-          "text": "Who at work would you worry about?"
+          "text": "What about Josh?"
         },
         {
           "speaker": "persona",
-          "text": "Carmen, maybe. She's brilliant at reading the piles, but she's fifty and hates computers. I'd honestly offer her work with us, she knows rock better than anyone."
+          "text": "He's hands-on, a fitter, so he's safe for a good while. Robots break down and need fixing. He's the steady one."
         },
         {
           "speaker": "interviewer",
-          "text": "Should the government help the people who lose out?"
+          "text": "Who would you worry about at the mine?"
         },
         {
           "speaker": "persona",
-          "text": "Some help, for the older ones especially. But I'd rather see money go into apprenticeships and small business loans than straight payments. People want to be useful, not just paid."
+          "text": "Some of the older blokes who won't touch a computer. But I'd tell them to learn, it's not that hard."
         }
       ],
-      "say": "I'd say it's good news for anyone willing to work and learn, and that complainers usually haven't tried the tools. I'd say it at work, a bit more gently.",
-      "think": "The loader on the pad will go automatic, and I'm fine with that. My real chance is selling survey and automation services to smaller mines and quarries.",
-      "do": "Buys a second drone and an automated ground station within six months and pitches to three nearby quarries. Keeps the mine job until the business earns at least half her mine pay.",
-      "feel": "Calm and a bit excited, the scenario she'd bet on.",
+      "say": [
+        "People who **work hard and learn** will do fine.",
+        "I'd tell the crew to **learn the systems** and share how I use **AI**."
+      ],
+      "think": [
+        "It's **good for her**, and she wants the fleet control role.",
+        "Josh's **fitter job** is safe for a good while."
+      ],
+      "do": [
+        "Ask for **fleet management training** straight away.",
+        "Add an **online booking tool** to the business.",
+        "Buy the **second machine**."
+      ],
+      "feel": [
+        "**Calm**, maybe a bit excited."
+      ],
       "mood": "calm",
-      "quote": "I'd honestly offer her work with us, she knows rock better than anyone.",
-      "fieldNote": "She sees her own seat going and doesn't mind, because her business could gain. Her free-market views come with a real wish to help her supervisor. She favours apprenticeships and small business loans over direct payments.",
+      "quote": "I'd rather be the woman in the control room running ten autonomous trucks than the one waiting for a robot to take my shovel.",
+      "fieldNote": [
+        "Her **free-market** views show in telling others to get on with it.",
+        "She sees Josh's **hands-on job** as the household anchor.",
+        "She treats change as a **chance** to move up."
+      ],
       "actions": [
+        "learn-ai",
         "automate",
-        "invest",
-        "side-income"
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Ask for training on the fleet management system",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Set up an online booking tool for the earthmoving business",
+          "tag": "automate"
+        },
+        {
+          "text": "Buy a second machine for the business",
+          "tag": "invest"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a shock, but people who start building now will be better off than people who wait for the government. I'd say that to the guys at work and on the business page. I'd try not to sound smug about it."
+          "text": "That's fast. Two years for the thinking, five for the robots."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say people should take responsibility and get ready, not wait for handouts. At work I'd tell the crew to learn what they can now. Online I'd keep sharing tips."
         },
         {
           "speaker": "interviewer",
@@ -177,7 +260,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think it's a race. If AI and robots can do almost anything, my drone business can be done by anyone with the same robots, including the big mines themselves. My edge is that I know the local quarries and farmers by name, and that's worth something for a while."
+          "text": "Privately, I'd think the control room job I wanted goes in 2028 too, because AGI can run the fleet itself. Then the shovel goes by 2031. With AGI by 2028, even the control room I was aiming for would be run by software before I got a seat in it."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +268,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd quit the mine within the first year, before they let me go, and go full time on the business with Ben. I'd spend a big chunk of our savings on automated drones and a small robot rover for ground surveys, and sign as many local customers as I could onto yearly contracts. I'd keep six months of costs untouched no matter what."
+          "text": "I'd grow the weekend business fast, because farmers still want someone they know. I'd save harder and maybe put off kids for a year. I'd help Josh get into robot maintenance."
         },
         {
           "speaker": "interviewer",
@@ -193,48 +276,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Excited and scared in the same breath."
+          "text": "Anxious. I'd be working to stay ahead."
         },
         {
           "speaker": "interviewer",
-          "text": "With only two years' warning, what changes in your plan?"
+          "text": "Would the business survive robots too?"
         },
         {
           "speaker": "persona",
-          "text": "Speed, mostly. In two years I can't wait for the business to grow slowly, I'd have to jump. And I'd lock customers into contracts early, because once the big players arrive with their own robots, price will be all that matters."
+          "text": "Not forever. But farmers trust people, and robots on a small job are expensive. I'd give it ten years."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd keep six months untouched. Why that line?"
+          "text": "What would you tell your family?"
         },
         {
           "speaker": "persona",
-          "text": "Because Ben and I want kids in a few years, and I'm not betting the family on a race. My dad nearly lost the house once when a client didn't pay. Six months is the line I don't cross."
+          "text": "That we're working hard and we'll manage. My mum would pray for us, and that'd help too."
         }
       ],
-      "say": "I'd say it's a shock, but people who start building now will be better off than those who wait for the government. I'd try not to sound smug.",
-      "think": "It's a race, because anyone with the same robots could run my drone business, including the big mines. My edge is knowing local quarries and farmers by name, for a while.",
-      "do": "Quits the mine within the first year and goes full time on the business with her partner. Spends a large part of savings on automated drones and a ground rover, signs local customers to yearly contracts, and keeps six months of costs untouched.",
-      "feel": "Uneasy, excited and scared at once.",
-      "mood": "uneasy",
-      "quote": "My dad nearly lost the house once when a client didn't pay. Six months is the line I don't cross.",
-      "fieldNote": "Even the fastest scenario reads to her as a business race rather than a disaster. She moves boldly but protects a hard floor of savings for future children. Her advantage, local relationships, is one she knows won't last.",
+      "say": [
+        "People should **take responsibility** and get ready, not wait for **handouts**.",
+        "I'd tell the crew to **learn** what they can now."
+      ],
+      "think": [
+        "Even the **control room** job she wanted goes in 2028, run by software.",
+        "Her **shovel job** at the zinc mine goes by 2031."
+      ],
+      "do": [
+        "Grow the **weekend business** fast.",
+        "Save harder and **put off kids** for a year.",
+        "Help Josh get into **robot maintenance**."
+      ],
+      "feel": [
+        "**Anxious**, working hard to stay ahead."
+      ],
+      "mood": "anxious",
+      "quote": "With AGI by 2028, even the control room I was aiming for would be run by software before I got a seat in it.",
+      "fieldNote": [
+        "She expects her **mine job** to go but feels in control.",
+        "She'd lean on her **business** and Josh's trade.",
+        "Her **faith and family** are a source of comfort, not a plan."
+      ],
       "actions": [
-        "sell-or-exit",
-        "automate",
-        "invest",
-        "side-income"
+        "side-income",
+        "family-plans",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Grow the weekend earthmoving business with more farm jobs",
+          "tag": "side-income"
+        },
+        {
+          "text": "Put off having kids by a year",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Save harder from both mine pays",
+          "tag": "save-more"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is plenty if you start this year. I'd tell the younger ones at work to learn a skill they could sell themselves. I'd probably post about it on the business page too."
+          "text": "Five years and then eight. That's more workable."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's time to get ready if people actually try. I'd say that at work and at church."
         },
         {
           "speaker": "interviewer",
@@ -242,7 +362,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years is a good window for me. Long enough to grow the business properly and get known, short enough that the big companies won't have squeezed out small operators yet."
+          "text": "Privately, I'd think I can learn fleet control, then move into the business full time by 2034. Five years is enough to grow the weekend business into a full-time one before robots take my shovel."
         },
         {
           "speaker": "interviewer",
@@ -250,7 +370,7 @@
         },
         {
           "speaker": "persona",
-          "text": "This year I'd keep the mine job and pour savings into the business: another drone, the automated station, and a part-time worker on our busy weeks. In year two, if it's paying, I'd leave the mine. By the time it lands I'd want contracts with every quarry in the district."
+          "text": "Train on fleet systems, grow the business, buy a second machine. Have kids on schedule. Josh keeps fitting."
         },
         {
           "speaker": "interviewer",
@@ -258,48 +378,89 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Busy, focused, mostly calm."
+          "text": "Mostly calm. A little uneasy."
         },
         {
           "speaker": "interviewer",
-          "text": "What do the extra three years give you, compared with 2028?"
+          "text": "Would you take on workers in the business?"
         },
         {
           "speaker": "persona",
-          "text": "Time to do it without betting everything at once. In two years I'd have to quit and spend big straight away. In five I can grow step by step, keep the mine wage a bit longer, and have savings left over when it arrives."
+          "text": "Maybe one or two. Probably people from the mine who lost jobs. I'd like that."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you take on a worker even though robots are coming?"
+          "text": "What would you do with AI in the business?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, a young person from town, maybe my cousin Lucy, as a kind of apprentice. Someone should learn this stuff from a person, not just a manual. Even if it only lasts a few years, it's a start for her."
+          "text": "Quotes, bookings, maybe planning the jobs. It'd let me run it without an office."
         }
       ],
-      "say": "I'd say five years is plenty if you start this year. I'd tell younger workers to learn a skill they could sell themselves.",
-      "think": "Five years is a good window to grow the business before big companies squeeze out small operators. I'd get known while there's still room.",
-      "do": "Keeps the mine job and puts savings into another drone, an automated station and a part-time helper in the first year. Leaves the mine in year two if the business is paying, aiming for contracts with every quarry in the district.",
-      "feel": "Calm, busy and focused.",
-      "mood": "calm",
-      "quote": "Someone should learn this stuff from a person, not just a manual.",
-      "fieldNote": "Five years lets her grow step by step instead of betting everything. Her traditional values show in wanting to give a young relative an apprenticeship-style start. She is comfortable spending on automation for her own business.",
+      "say": [
+        "There's **time** to get ready if people actually try.",
+        "I'd say that at work and at **church**, without waiting for anyone to help."
+      ],
+      "think": [
+        "She can learn **fleet control**, then go full time in the business.",
+        "She'd aim to make the move **by 2034**."
+      ],
+      "do": [
+        "Train on **fleet systems** at the mine.",
+        "Grow the business and buy a **second machine**.",
+        "Have **kids on schedule**."
+      ],
+      "feel": [
+        "**Mostly calm**, a little uneasy."
+      ],
+      "mood": "uneasy",
+      "quote": "Five years is enough to grow the weekend business into a full-time one before robots take my shovel.",
+      "fieldNote": [
+        "Five years lets her **move into business** before robots arrive.",
+        "She'd **hire** miners who lose jobs.",
+        "She'd use **AI to run** the business without an office."
+      ],
       "actions": [
+        "learn-ai",
         "invest",
-        "automate",
-        "side-income",
-        "sell-or-exit"
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Train on the mine's fleet control systems",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Grow the business and buy a second machine",
+          "tag": "invest"
+        },
+        {
+          "text": "Have kids on the original schedule",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Hire one or two laid-off miners for the business",
+          "tag": "invest"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a decade to build something, so don't waste it waiting for someone to save you. I'd say it at work and online. I'd say families and towns should plan together."
+          "text": "Ten years. That's plenty of time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's no excuse not to get ready. People should learn and plan. I'd say it at work and church."
         },
         {
           "speaker": "interviewer",
@@ -307,7 +468,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, this is the one where I'd feel most at peace. I could build the business slowly, have kids, and by 2036 hopefully own something that runs partly by itself. I'd be thirty-seven."
+          "text": "Privately, I'd think it's a good chance for me. Ten years means I could turn a weekend skid steer business into a proper company before robots take my seat on the shovel."
         },
         {
           "speaker": "interviewer",
@@ -315,7 +476,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, I'd keep the mine job, grow the drone business on weeks off, and keep investing in gear. Ben and I would probably get married and start trying for a baby, because there's time to do it right. I'd plan to leave the mine around year three."
+          "text": "Keep working, grow the business, buy more machines. Have kids. Use AI every day to run the business."
         },
         {
           "speaker": "interviewer",
@@ -323,37 +484,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Settled, even."
+          "text": "Calm. Optimistic."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything about the ten-year picture that bothers you?"
+          "text": "What would your company look like by 2036?"
         },
         {
           "speaker": "persona",
-          "text": "That the bigger companies would have time to get ready too. In the fast ones, small and quick wins. In this one, the big players catch up. I'd have to find a corner they don't care about, like farmers' paddocks."
+          "text": "Maybe three machines and a couple of workers. Josh would join full time."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you raise your kids to go into mining?"
+          "text": "Is anything still worrying?"
         },
         {
           "speaker": "persona",
-          "text": "Probably not into driving a loader, that'll be gone. Into owning things and fixing things. I'd want them to grow up seeing their mum and dad run something, like I watched my dad."
+          "text": "Robots in small earthmoving, eventually. But by then I'd have time to adapt again."
         }
       ],
-      "say": "I'd say ten years is a decade to build something, so don't wait for someone to save you. Families and towns should plan together.",
-      "think": "This is where I'd feel most at peace, building the business slowly and having kids. By 2036 I'd hope to own something that partly runs itself.",
-      "do": "Keeps the mine job while growing the drone business on weeks off and investing in gear. Marries her partner and starts trying for a baby, planning to leave the mine around year three.",
-      "feel": "Calm and settled.",
+      "say": [
+        "There's **no excuse** not to get ready with ten years' warning.",
+        "People should **learn and plan**, and I'd say so at work and church."
+      ],
+      "think": [
+        "It's a **good chance** for her to build a proper company.",
+        "She'd keep the **shovel** until robots arrive around 2039."
+      ],
+      "do": [
+        "Grow the business and buy **more machines**.",
+        "**Have kids** as planned.",
+        "Use **AI every day** to run the business."
+      ],
+      "feel": [
+        "**Calm** and optimistic."
+      ],
       "mood": "calm",
-      "quote": "In the fast ones, small and quick wins. In this one, the big players catch up.",
-      "fieldNote": "Oddly, the slowest scenario gives her a competitive worry the fast ones don't: big companies get time to catch up. Personally, it's the most settled picture, with marriage and children moved forward. She wants her children to grow up watching their parents run a business.",
+      "quote": "Ten years means I could turn a weekend skid steer business into a proper company before robots take my seat on the shovel.",
+      "fieldNote": [
+        "Ten years turns her **side business** into her main plan.",
+        "She'd bring **Josh** in full time.",
+        "She expects to **adapt again** if robots reach small earthmoving."
+      ],
       "actions": [
-        "side-income",
         "invest",
         "family-plans",
-        "keep-going"
+        "automate"
+      ],
+      "steps": [
+        {
+          "text": "Grow the business to three machines and a couple of workers",
+          "tag": "invest"
+        },
+        {
+          "text": "Have kids with Josh",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Use AI daily to quote and schedule business jobs",
+          "tag": "automate"
+        }
       ]
     }
   },
@@ -364,7 +554,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because I'd have to bet our savings fast and there's no time to learn from mistakes. What would help is small business loans with fair terms and less paperwork for drone and survey licences. And apprenticeship money, so I could train young people from town instead of watching them leave."
+      "text": "The two-year one, because even my backup plan, the control room, goes away. What would help is training on the new systems and fewer rules for small businesses. My weekend skid steer business is my real safety net, more than any mine job or government plan."
     },
     {
       "speaker": "interviewer",
@@ -372,11 +562,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask if I'm scared of the robots. I'm not, really. I'm scared of the robots all belonging to three companies in a city somewhere, and nobody out here owning a single one."
+      "text": "Maybe ask about small businesses. People like me can build something that lasts, if we're allowed to."
     }
   ],
-  "headlineQuote": "I'm scared of the robots all belonging to three companies in a city somewhere, and nobody out here owning a single one.",
-  "portrait": "Kira Lopez is a 27-year-old front-end loader operator on the ore pad of a large phosphate mine, still learning to read the piles. With her partner Ben she runs a small drone survey business on her weeks off, uses AI every day to process maps and write reports, and keeps about a year of costs saved. She believes in owning something, small business and apprenticeships over handouts, as her trucking father did. She is calm in most pictures, treating automation as a chance to grow, and only uneasy when AGI arrives in two years and she must quit the mine and bet heavily on the business at once.",
-  "biggestWorry": "AGI by 2028, because she would have to bet their savings fast with no time to learn from mistakes.",
-  "whatWouldHelp": "Fair small business loans, less paperwork for drone and survey licences, and apprenticeship money to train young people from town."
+  "headlineQuote": "My weekend skid steer business is my real safety net, more than any mine job or government plan.",
+  "portrait": [
+    "Kira is a **27-year-old** hydraulic shovel operator at an open-pit zinc mine, still learning.",
+    "She's married to Josh, a diesel fitter, and they have close to **a year saved**.",
+    "They run a **weekend business** doing earthmoving, and she uses AI every day for it.",
+    "She sees change as a **chance** and believes in hard work, not handouts.",
+    "She's **calm** in most scenarios but **anxious** if AGI comes by 2028."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because her control room backup plan would vanish."
+  ],
+  "whatWouldHelp": [
+    "**Training** on new mine systems and **fewer rules** for small businesses."
+  ]
 }
