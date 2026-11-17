@@ -10,6 +10,17 @@
  * The mic is a demo: it listens for a moment, then "dictates" a message by typing it out.
  * Enter sends; Escape closes the model list, stops dictation and leaves the field. Behind it, soft
  * pink and blue brush strokes drift about.
+ *
+ * Paradigm changes (each marked with a "Paradigm:" comment below; everything else is as supplied):
+ *   1. `variant="panel"` drops the full-screen centred wrapper and the Brushwork background, so the
+ *      composer fits the width of a side panel. The default (`"page"`) renders exactly as before.
+ *   2. `model` and `onModelChange` let the parent control or read the selected model. Without them
+ *      the component keeps its own state, as before.
+ *   3. Paradigm's prompts, models and dictation lines are passed in by the parent (the Ask AI panel),
+ *      not hardcoded here; the defaults below are unchanged.
+ *   4. A fix: the open model list sits above the message field, so every option can be clicked.
+ *   5. In a panel, the Search and Research labels are screen-reader only and a long model name
+ *      truncates, so the bottom row fits about 360px.
  */
 "use client";
 
@@ -55,6 +66,12 @@ export type AIComposerProps = {
     options: { model: string; search: boolean; research: boolean },
   ) => void;
   className?: string;
+  /** Paradigm: "panel" renders a compact composer for a side panel (no full-screen wrapper, no Brushwork). */
+  variant?: "page" | "panel";
+  /** Paradigm: the selected model's name, when the parent controls it. */
+  model?: string;
+  /** Paradigm: called with the model's name when the user picks a different one. */
+  onModelChange?: (name: string) => void;
 };
 
 const PROMPTS = [
@@ -88,7 +105,11 @@ export function AIComposer({
   dictation = DICTATION,
   onSubmit,
   className,
+  variant = "page", // Paradigm: see the header note
+  model: modelProp, // Paradigm: controlled model
+  onModelChange, // Paradigm: controlled model
 }: AIComposerProps) {
+  const panel = variant === "panel"; // Paradigm
   const inputRef = useRef(null as HTMLInputElement | null);
   const fileRef = useRef(null as HTMLInputElement | null);
   const typing = useRef(0); // dictation timer
@@ -101,7 +122,13 @@ export function AIComposer({
   const [focus, setFocus] = useState(false);
   const [listening, setListening] = useState(false);
   const [prompt, setPrompt] = useState(0);
-  const [model, setModel] = useState(models[0]?.name ?? "");
+  // Paradigm: the parent can control the model; otherwise it's kept here as before.
+  const [ownModel, setOwnModel] = useState(modelProp ?? models[0]?.name ?? "");
+  const model = modelProp ?? ownModel;
+  const setModel = (name: string) => {
+    setOwnModel(name);
+    onModelChange?.(name);
+  };
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [research, setResearch] = useState(false);
@@ -215,13 +242,16 @@ export function AIComposer({
     <MotionConfig reducedMotion="user">
       <div
         className={cn(
-          "relative flex min-h-dvh w-full items-center justify-center px-4 font-sans text-[#111]",
+          // Paradigm: in a panel, no full-screen centred area and no tinted background
+          panel
+            ? "relative w-full font-sans text-[#111]"
+            : "relative flex min-h-dvh w-full items-center justify-center px-4 font-sans text-[#111]",
           className,
         )}
-        style={{ background: "#f7f5f8" }}
+        style={panel ? undefined : { background: "#f7f5f8" }}
         onKeyDown={onKeyDown}
       >
-        <Brushwork />
+        {!panel && <Brushwork /> /* Paradigm: no Brushwork in a panel */}
         {menu && (
           <div className="fixed inset-0 z-10" onClick={() => setMenu(false)} />
         )}
@@ -230,7 +260,12 @@ export function AIComposer({
           onSubmit={send}
           className="relative z-20"
           style={{
-            width: big ? "min(94vw, 660px)" : "min(92vw, 560px)",
+            // Paradigm: in a panel, take the panel's width
+            width: panel
+              ? "100%"
+              : big
+                ? "min(94vw, 660px)"
+                : "min(92vw, 560px)",
           }}
         >
           {/* the last thing sent drifts up and away */}
@@ -345,7 +380,10 @@ export function AIComposer({
               <div
                 className="grid items-center gap-x-2"
                 style={{
-                  gridTemplateColumns: "auto auto auto 1fr auto",
+                  // Paradigm: in a panel the model column may shrink (its name truncates) so nothing spills out
+                  gridTemplateColumns: panel
+                    ? "auto minmax(0, auto) auto 1fr auto"
+                    : "auto auto auto 1fr auto",
                   gridTemplateAreas: big
                     ? '"input input input input input" "plus model tools . action"'
                     : '"plus input input input action"',
@@ -445,6 +483,10 @@ export function AIComposer({
                   className={cn(
                     "relative",
                     !big && "pointer-events-none absolute",
+                    // Paradigm: lift the open model list above the message field. The blur filter makes this
+                    // wrapper its own stacking layer, so without it the field (z-10) covers the lower options.
+                    menu && "z-20",
+                    panel && "min-w-0", // Paradigm: lets a long model name truncate in a panel
                   )}
                   style={{ gridArea: big ? "model" : undefined }}
                 >
@@ -456,9 +498,10 @@ export function AIComposer({
                     }}
                     aria-haspopup="listbox"
                     aria-expanded={menu}
-                    className="flex h-10 cursor-pointer items-center gap-1.5 rounded-full px-3 text-[14px] font-medium text-[#333] transition-colors hover:bg-[#f3f3f1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111]"
+                    className="flex h-10 max-w-full cursor-pointer items-center gap-1.5 rounded-full px-3 text-[14px] font-medium text-[#333] transition-colors hover:bg-[#f3f3f1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111]"
                   >
-                    {model}
+                    {/* Paradigm: max-w-full and a truncating span, so a long name fits a panel */}
+                    <span className="min-w-0 truncate">{model}</span>
                     <motion.span
                       animate={{ rotate: menu ? 180 : 0 }}
                       transition={{
@@ -599,7 +642,10 @@ export function AIComposer({
                       )}
                     >
                       <Icon className="size-4" strokeWidth={2} />
-                      <span className="hidden sm:inline">{label}</span>
+                      {/* Paradigm: in a panel the labels are for screen readers only, so the row fits */}
+                      <span className={panel ? "sr-only" : "hidden sm:inline"}>
+                        {label}
+                      </span>
                     </button>
                   ))}
                 </motion.div>
