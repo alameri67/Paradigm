@@ -293,6 +293,49 @@ function buildHalo(px: number) {
   return c
 }
 
+/**
+ * Paradigm: a progressive blur over the lower part of a picture. Layers of growing blur are each faded in a little
+ * lower down, so the picture goes from sharp to soft to gone at the bottom edge. Built once per picture.
+ */
+function withBottomBlur(im: HTMLImageElement): HTMLCanvasElement | HTMLImageElement {
+  const w = im.naturalWidth, h = im.naturalHeight
+  if (!w || !h) return im
+  const out = document.createElement("canvas")
+  out.width = w; out.height = h
+  const o = out.getContext("2d")
+  if (!o) return im
+  o.drawImage(im, 0, 0)
+  const layer = document.createElement("canvas")
+  layer.width = w; layer.height = h
+  const c = layer.getContext("2d")
+  if (!c) return out
+  const start = 0.5, steps = 6, maxBlur = w * 0.03
+  for (let i = 1; i <= steps; i++) {
+    const k = i / steps
+    c.globalCompositeOperation = "source-over"
+    c.clearRect(0, 0, w, h)
+    c.filter = `blur(${(maxBlur * k * k).toFixed(1)}px)`
+    c.drawImage(im, 0, 0)
+    c.filter = "none"
+    // Each layer starts a little lower and ramps in over the next band.
+    const y0 = h * (start + (1 - start) * (i - 1) / steps * 0.85)
+    const y1 = Math.min(h, y0 + h * 0.14)
+    const g = c.createLinearGradient(0, y0, 0, y1)
+    g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,1)")
+    c.globalCompositeOperation = "destination-in"
+    c.fillStyle = g
+    c.fillRect(0, 0, w, h)
+    o.drawImage(layer, 0, 0)
+  }
+  // Then let the very bottom dissolve.
+  const fade = o.createLinearGradient(0, h * 0.8, 0, h)
+  fade.addColorStop(0, "rgba(0,0,0,1)"); fade.addColorStop(1, "rgba(0,0,0,0)")
+  o.globalCompositeOperation = "destination-in"
+  o.fillStyle = fade
+  o.fillRect(0, 0, w, h)
+  return out
+}
+
 /** Faint grid that fades out upward and toward the sides. */
 function buildGrid(px: number) {
   const w = Math.round(px)
@@ -516,7 +559,7 @@ export function PeakChart({
     decimals,
     loop,
     kick: () => {},
-    img: null as HTMLImageElement | null,
+    img: null as HTMLImageElement | HTMLCanvasElement | null,
     imgBox: imageBox,
     imgA: imageOpacity,
     imgFilter: "none",
@@ -541,13 +584,13 @@ export function PeakChart({
     return `saturate(${(1 / Math.max(k, 0.05)).toFixed(3)}) hue-rotate(${(-d).toFixed(1)}deg)`
   })()
 
-  // Paradigm: load the picture drawn inside the card
+  // Paradigm: load the picture drawn inside the card, blurred progressively toward its bottom edge
   React.useEffect(() => {
     const L = live.current
     if (!image) { L.img = null; L.kick(); return }
     const im = new Image()
     im.decoding = "async"
-    im.onload = () => { L.img = im; L.kick() }
+    im.onload = () => { L.img = withBottomBlur(im); L.kick() }
     im.src = image
     return () => { im.onload = null }
   }, [image])
