@@ -11,24 +11,24 @@
     "outlook": "traditional",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Hello Maya, and thank you for your time. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to companies, unions, parties or government. What you tell me stays confidential. Could you walk me through a normal working day?"
+      "text": "The Work Futures Panel is independent and has no ties to employers or AI companies. What you tell me is confidential. Could you describe a normal shift? "
     },
     {
       "speaker": "persona",
-      "text": "I run the big front-end loader on the ore pad at the zinc mine, feeding the primary crusher, and I lead the crusher crew on my shift. If I get the blend wrong, the mill upstairs has a bad day, so it's a job where you have to think. I've been the lead for six years and I train all the new loader operators. I love it when the crusher runs smooth for a whole shift and nobody's on the radio. What wears me out is that the crusher crew gets paid less than the pit crews, even though we work the same hours."
+      "text": "I am Maya Garcia, 43, a senior loader operator at a large mine. I check the haul route, operate the loader, and make sure the next shift knows about faults before they climb in."
     },
     {
       "speaker": "interviewer",
-      "text": "And outside of work?"
+      "text": "What do you like about the work, and what follows you home?"
     },
     {
       "speaker": "persona",
-      "text": "My husband Tom is an electrician, self-employed, so some months are good and some are thin. Our son's sixteen and talking about university, our daughter's twelve. We have a mortgage on a house near the church, and honestly not much in the bank, less than a month. Sundays are church and lunch at my mother's, that's not negotiable."
+      "text": "I like the responsibility and the way a careful crew watches one another. My husband Luis and I have two school-age children and a mortgage; we both work at the mine, and our savings cover less than a month."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, well, there you go, the sky didn't fall. I'd say it at the Sunday lunch, and my brother-in-law who's always reading about AI would have to eat his words. I'm not one for posting online."
+          "text": "I'd say small software can help with reports, but the loader still needs an experienced operator. I would keep our safety checks exactly as they are."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be relieved, but not hugely, because I didn't think the AI was coming for my loader anyway. I use the chatbot now and then for the church newsletter, and it's handy. If that's all it ever is, fine."
+          "text": "Our savings are under a month's expenses, and Luis and I both work at this mine. Even without major AI, one slow production month could squeeze the mortgage."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep doing what I do. I'd keep putting money aside for my son's university, even if it's only twenty a week. And I'd ask the supervisor again about bringing crusher pay up to pit pay, politely."
+          "text": "I would keep my current shifts and ask the planner to show me any new dispatch screen. I would put my next overtime payment toward the emergency account."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +68,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Content, really."
+          "text": "I feel a little relief that the machine work stays familiar, but the household budget still sits in my mind. I keep the next payment date in my head."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you didn't think AI was coming for your loader. Has anything changed on the pad already?"
+          "text": "Which bill or household choice would you look at first if hours changed?"
         },
         {
           "speaker": "persona",
-          "text": "There's a sensor system now that tells me the ore grade in each pile, so I blend better. When it came, I waited to see if it was right, and after a few weeks it was. Now I wouldn't want to go back."
+          "text": "I would look at the mortgage and school costs first, then postpone replacing the car. I would tell Luis the actual numbers before we agreed to cut anything."
         },
         {
           "speaker": "interviewer",
-          "text": "Why do you ask politely about the pay, rather than pushing?"
+          "text": "You have described the mine as central to your income. What would you do in the first year after thinking AI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "Because I think you get further being reliable than being loud. My dad always said, do the work and they'll notice. They haven't noticed in six years, mind, so maybe he was wrong about that one."
+          "text": "I would check whether the newer operators had lost hours before assuming the change only affected office staff. Their shifts are less secure than mine."
         }
       ],
-      "say": "I'd say the sky didn't fall and make my AI-obsessed brother-in-law eat his words at Sunday lunch. I'm not one for posting online.",
-      "think": "Privately I'd be relieved but not hugely, since I never thought AI was after my loader. I use the chatbot now and then for the church newsletter, and that's fine if it's all it ever is.",
-      "do": "Keeps working as usual and sets aside about twenty a week for her son's university. Asks her supervisor again, politely, about lifting crusher pay to match the pit.",
-      "feel": "Calm and content.",
-      "mood": "calm",
-      "quote": "They haven't noticed in six years, mind, so maybe he was wrong about that one.",
-      "fieldNote": "Maya values reliability over protest, a lesson from her father that she half questions. She adopted the grade sensor only after it proved itself. Her son's university fund is her quiet priority.",
+      "say": [
+        "**Small software** can help with reports, but the loader still needs an experienced operator.",
+        "I would keep our **safety checks** exactly as they are."
+      ],
+      "think": [
+        "Our savings are under a **month**, and Luis and I both work at this mine.",
+        "One slow production month could squeeze the **mortgage**."
+      ],
+      "do": [
+        "Keep my current **shifts** and ask about the dispatch screen.",
+        "Put the next overtime payment into our **emergency account**."
+      ],
+      "feel": [
+        "Some **relief** comes from familiar machine work, but bills stay on my mind."
+      ],
+      "mood": "anxious",
+      "quote": "I'd say small software can help with reports, but the loader still needs an experienced operator.",
+      "fieldNote": [
+        "Maya separates modest **software help** from the household budget pressure.",
+        "She wants to keep **safety checks** under experienced operator control.",
+        "Her **mortgage** concern persists even when the automation itself is slight."
+      ],
       "actions": [
         "keep-going",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep the loader shifts and current safety checks",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put overtime into the emergency account",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say people need to roll up their sleeves and learn the new ways, and companies should train their own people rather than lay them off. I'd say the community should look after its own through it."
+          "text": "I'd tell the crew that planning software may book and report faster, while we still have to read the ground. I would ask for training before targets change."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Truthfully, I think the loader goes autonomous in a few years, like the trucks at some mines. Somebody would still need to watch the blend and the crusher, and I'd want that to be me. It depends on whether they value experience."
+          "text": "I do shift handovers and check maintenance notes, so the thinking tasks touch part of my job. Luis also works at the mine; if our hours shrink together, there are few local alternatives."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Once I'd seen it working at another site, I'd ask to train on the control side early. I'd cut back on eating out and the cable, maybe fifty a month, and keep the university fund going. And Tom would look at getting certified for the mine's automation wiring, since electricians would be needed."
+          "text": "I would ask the training office for the mine’s maintenance inspection course and request more time on equipment inspections. I would check the fee and shift schedule before accepting a place."
         },
         {
           "speaker": "interviewer",
@@ -127,48 +160,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. There's a way through, but I'd want to see it before I trusted it."
+          "text": "I feel anxious about the shared employer risk, even though robots spread more slowly than office tools. I do not want Luis to carry that worry alone."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned the community looking after its own. What does that look like?"
+          "text": "Which bill or household choice would you look at first if hours changed?"
         },
         {
           "speaker": "persona",
-          "text": "The church has a job board in the hall, and people help each other with lifts and meals when there's trouble. When the sawmill closed ten years ago, that's how families got through. I'd expect the same, and I'd do my part."
+          "text": "I would freeze the kitchen renovation and keep the children's school costs steady. Luis and I would review our payslips together before changing the mortgage plan."
         },
         {
           "speaker": "interviewer",
-          "text": "What about your son's university plans?"
+          "text": "You have described the mine as central to your income. What would you do in the first year after thinking AI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "I'd still want him to go, but I'd ask him to think about what he studies. Something practical, engineering maybe. He wants to do history, and I'd be lying if I said that doesn't worry me."
+          "text": "I would ask the supervisor to rotate me through more physical inspections during the first year. That work uses my experience and is less like routine booking."
         }
       ],
-      "say": "I'd say people need to roll up their sleeves and learn new ways, and companies should train their own staff rather than lay them off. The community should look after its own through it.",
-      "think": "I really think the loader goes autonomous in a few years, though someone will still need to watch the blend and crusher. I'd want that to be me, if they value experience.",
-      "do": "Asks to train on the control side once she has seen it work at another site. Cuts eating out and cable by about fifty a month, keeps the university fund going, and Tom looks at certifying for automation wiring.",
-      "feel": "Uneasy, wanting to see the path before trusting it.",
-      "mood": "uneasy",
-      "quote": "He wants to do history, and I'd be lying if I said that doesn't worry me.",
-      "fieldNote": "Maya trusts community and church networks, citing how families survived the sawmill closure. She'd retrain, but only after seeing the new system work elsewhere. Her son's choice of study is where her worry lands.",
+      "say": [
+        "Planning software may book and report faster, while we still have to read the **ground**.",
+        "Ask for **training** before targets change."
+      ],
+      "think": [
+        "Shift handovers and maintenance notes make some of my work **exposed**.",
+        "If both our hours shrink, **local alternatives** are few."
+      ],
+      "do": [
+        "Learn the adopted **dispatch screens** and request more inspections.",
+        "Ask the **training office** about its maintenance inspection course."
+      ],
+      "feel": [
+        "I feel **anxious** about the shared employer risk, despite slower robot change."
+      ],
+      "mood": "anxious",
+      "quote": "I'd tell the crew that planning software may book and report faster, while we still have to read the ground.",
+      "fieldNote": [
+        "Her own **handover duties** face more change than the loader work.",
+        "Her husband also works at the same **mine**, concentrating household risk.",
+        "She wants a verified **course** before spending scarce household cash."
+      ],
       "actions": [
-        "retrain",
-        "cut-spending",
-        "save-more",
-        "family-plans"
+        "learn-ai",
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Learn the dispatch screens adopted by the mine",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask for a maintenance inspection course",
+          "tag": "retrain"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is too much too fast, and nobody voted for it. I'm not one for big government, but someone has to slow this down. And I'd say families need to stick together, because that's what will get us through."
+          "text": "I'd tell people thinking AI arrives by 2028, but the hands-on robots come around 2031. I would ask management for a written plan for operators and maintenance staff."
         },
         {
           "speaker": "interviewer",
@@ -176,7 +236,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think the loader and the crusher control both go within a year or two, and Tom's work dries up too if robots do wiring. We'd have no savings and two incomes gone. I'd be scared stiff."
+          "text": "The three-year gap helps my loader role for a while, but it may not protect my shift or Luis's maintenance hours. Less than a month saved means we cannot wait until 2031 to ask about transfers."
         },
         {
           "speaker": "interviewer",
@@ -184,7 +244,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd sit down with Tom the first night and work out what we can live on. We'd stop the university fund and use it for the mortgage, which would break my heart. I'd ask my mother about moving in with her if we had to, and I'd go to the church job board on the first Sunday."
+          "text": "I would meet the training coordinator this month and ask which maintenance certificate leads to an open post. Luis and I would pause the renovation and keep every overtime payment available."
         },
         {
           "speaker": "interviewer",
@@ -192,48 +252,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd pray a lot, and I'd still be awake at three in the morning."
+          "text": "I feel alarmed because the dates are close and both wages come from the same site. I can act, but I cannot make another mine appear nearby."
         },
         {
           "speaker": "interviewer",
-          "text": "You said stopping the university fund would break your heart. Why that one first?"
+          "text": "Which bill or household choice would you look at first if hours changed?"
         },
         {
           "speaker": "persona",
-          "text": "Because a house is a roof for four people and university is a hope for one. That's how I'd have to think, even though he's my son. He'd understand, I think, he's a good boy."
+          "text": "I would show Luis the notice and work out how long we could cover the mortgage if one of us lost hours. We would tell the children only what we know, not guess at a closure."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you lean on most?"
+          "text": "You have described the mine as central to your income. What would you do in the first year after thinking AI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "My mother, my sister and the church, in that order. Not the government, unless there was no choice. If there was nothing else, I'd take it, I suppose, for the kids."
+          "text": "During 2029, I would ask for a maintenance shadow shift and record which inspections I can already do. I would keep my operator shifts while applying for the mine's paid certificate."
         }
       ],
-      "say": "I'd say it's too much too fast and nobody voted for it, and that someone has to slow it down even though I'm not one for big government. Families need to stick together to get through.",
-      "think": "I think the loader and crusher control both go within a year or two, and Tom's wiring work dries up too. With no savings and both incomes gone, I'd be scared stiff.",
-      "do": "Works out a bare-bones budget with Tom on the first night and diverts the university fund to the mortgage. Asks her mother about moving in and checks the church job board on the first Sunday.",
-      "feel": "Alarmed: praying a lot and awake at three in the morning.",
-      "mood": "alarmed",
-      "quote": "Because a house is a roof for four people and university is a hope for one.",
-      "fieldNote": "Fast AGI threatens both incomes in Maya's home at once. She would turn first to family and church, and accept government help only as a last resort for her children. Choosing the mortgage over her son's fund was clearly painful.",
+      "say": [
+        "Thinking AI arrives by **2028**, but hands-on robots come around 2031.",
+        "Ask management for a **written plan** for operators."
+      ],
+      "think": [
+        "The three-year gap helps my loader role, but may not protect both **wages**.",
+        "We cannot wait until 2031 to ask about **transfers**."
+      ],
+      "do": [
+        "Meet the **training coordinator** this month about a certificate.",
+        "Pause the renovation and keep **overtime** available.",
+        "Keep my **operator shifts** while the certificate route is confirmed."
+      ],
+      "feel": [
+        "I feel **alarmed** by the dates and our shared dependence on one mine."
+      ],
+      "mood": "anxious",
+      "quote": "I'd tell people thinking AI arrives by 2028, but the hands-on robots come around 2031.",
+      "fieldNote": [
+        "She treats the **three-year lag** as time to seek training, not a guarantee.",
+        "The thin cushion makes the household **timing** acute.",
+        "Maya protects the **current wage** while seeking a path into maintenance."
+      ],
       "actions": [
+        "retrain",
         "cut-spending",
-        "seek-support",
-        "family-plans",
-        "move"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Meet the coordinator about a maintenance certificate",
+          "tag": "retrain"
+        },
+        {
+          "text": "Pause the kitchen renovation",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Keep operating while the certificate is confirmed",
+          "tag": "keep-going"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got some years, so let's use them: apprenticeships, retraining, companies keeping their loyal people. I'd want the mine to tell us the plan so we can plan our families."
+          "text": "I'd say five years gives us time to move toward maintenance before thinking AI arrives in 2031. Robots around 2034 still put physical jobs on the clock."
         },
         {
           "speaker": "interviewer",
@@ -241,7 +334,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think I'd get a few years on the control side if I train for it. Tom could get into automation wiring and ride that a while. The university fund might survive, which matters to me a lot."
+          "text": "I can prepare more carefully than in the two-year picture, but our household income remains tied to one mine. I want a transfer based on skills, not a promise that everyone will be retrained."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +342,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the control-room training in the first year or two, once the first group had shown it works. Tom would do the automation certificate. We'd keep the university fund going and try to build a month's savings by year three, which we've never had."
+          "text": "I would request the next maintenance course date and ask to shadow a technician one shift a month. Luis and I would direct overtime into savings instead of home improvements."
         },
         {
           "speaker": "interviewer",
@@ -257,47 +350,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but I'd have something to do with my hands, so to speak."
+          "text": "I am worried, but five years gives me room to test a path while keeping a wage. A real opening would make the training feel less like a gamble."
         },
         {
           "speaker": "interviewer",
-          "text": "You keep saying once others have shown it works. What would convince you?"
+          "text": "Which bill or household choice would you look at first if hours changed?"
         },
         {
           "speaker": "persona",
-          "text": "Seeing someone like me, a loader operator, sitting in that room a year later and not hating it. I don't need the company brochure, I need to talk to her at the canteen."
+          "text": "We would keep the mortgage current and delay the kitchen work for another year. I would check with Luis before committing any course fee from our small savings."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you change what you tell your children?"
+          "text": "You have described the mine as central to your income. What would you do in the first year after thinking AI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell my son engineering, not history, and I'd say it more firmly. My daughter's twelve, she loves animals and the church choir. I'd let her be twelve for now."
+          "text": "In 2032, I would take the maintenance course if a paid place had opened and ask the instructor to assess my practical skills. I would keep my regular shifts until a real vacancy appeared."
         }
       ],
-      "say": "I'd say there are some years, so let's use them for apprenticeships, retraining and keeping loyal staff. I'd want the mine to share its plan so families can plan.",
-      "think": "I think I'd get a few years on the control side if I trained, and Tom could ride automation wiring for a while. The university fund might survive, which matters to me a lot.",
-      "do": "Takes control-room training within the first year or two after others prove it works, while Tom does an automation certificate. Keeps the university fund going and aims for a month's savings by year three.",
-      "feel": "Anxious but busy, with practical things to do.",
+      "say": [
+        "Five years gives us time to move toward **maintenance** before AGI arrives in 2031.",
+        "Robots around 2034 still put physical jobs on the **clock**."
+      ],
+      "think": [
+        "Five years lets me prepare, but both incomes remain tied to one **mine**.",
+        "I need a skill-based **transfer**, not a vague retraining promise."
+      ],
+      "do": [
+        "Request the maintenance course date and a technician **shadow shift**.",
+        "Direct overtime into **savings** instead of home improvements."
+      ],
+      "feel": [
+        "I am **worried**, but five years lets me test a path while earning."
+      ],
       "mood": "anxious",
-      "quote": "I don't need the company brochure, I need to talk to her at the canteen.",
-      "fieldNote": "With five years Maya returns to her pattern of following once someone she trusts has shown the way. Both she and her husband plan to retrain. She becomes firmer about steering her son towards engineering.",
+      "quote": "I'd say five years gives us time to move toward maintenance before thinking AI arrives in 2031.",
+      "fieldNote": [
+        "She values a **skills-based transfer** and rejects vague assurances.",
+        "**Savings** and course access shape how quickly she can prepare.",
+        "A real **vacancy** must appear before she leaves her operator roster."
+      ],
       "actions": [
         "retrain",
-        "save-more",
-        "family-plans"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Request a maintenance course and technician shadow shift",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save overtime instead of renovating",
+          "tag": "save-more"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last one is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a fair warning, and good families and good companies will use it well. I'd tell the young ones at church to pick a trade that'll last."
+          "text": "I'd tell the crew a decade is enough time to prepare if the mine gives honest updates. AGI comes in 2036 and hands-on robots around 2039, so I would not leave planning until later."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +426,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think ten years is manageable for us. My son would be through university, my daughter nearly, and I'd be fifty-three with some years left on the control side or in something else. It'd still be hard, but it wouldn't break us."
+          "text": "I would be 53 at AGI and 56 when robots arrive, still too young to rely on retirement. The added time could let me qualify for inspections, but Luis and I need to build a cushion first."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +434,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd train on the control side when others had shown it works, maybe in year two or three. We'd keep the university fund going and slowly build two months of savings. And I might help run a skills night at the church hall, if the company would send someone."
+          "text": "I would start the mine's inspection training while staying on the loader roster. We would set a small monthly savings transfer and help our children compare trades with work beyond this site."
         },
         {
           "speaker": "interviewer",
@@ -321,59 +442,92 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but at peace with it mostly. God gives us time for a reason."
+          "text": "The longer warning eases the rush, though I still fear losing two incomes tied to one employer. I would still want an annual update from the mine."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything about the ten years that worries you?"
+          "text": "Which bill or household choice would you look at first if hours changed?"
         },
         {
           "speaker": "persona",
-          "text": "That the company waits until the last minute to tell us. They did that with the mill shutdown last year, told us two weeks before. Ten years only helps if they're honest early."
+          "text": "I would keep the mortgage and school costs protected, then cut the renovation before touching essentials. Luis and I would increase savings only when our shifts allow it."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want the end of those ten years to look like?"
+          "text": "You have described the mine as central to your income. What would you do in the first year after thinking AI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "Both kids settled, mortgage nearly paid, and me still working somewhere I'm useful. Maybe training people, I'm good at that. And still Sunday lunch at my mother's, if she's with us."
+          "text": "In 2037, I would apply for inspection work and bring my training record to the mine manager. I would also ask for the next year's staffing dates before deciding whether to move closer to another industrial town."
         }
       ],
-      "say": "I'd say ten years is fair warning, and good families and good companies will use it well. I'd tell young people at church to choose a trade that lasts.",
-      "think": "I think ten years is manageable: my son through university, my daughter nearly, and me at fifty-three with some working years left. It would be hard, but it wouldn't break us.",
-      "do": "Trains on the control side in year two or three once others have shown it works. Keeps the university fund going, slowly builds two months of savings, and helps run a skills night at the church hall.",
-      "feel": "Uneasy but mostly at peace, seeing the time as given for a reason.",
-      "mood": "uneasy",
-      "quote": "Ten years only helps if they're honest early.",
-      "fieldNote": "Ten years lines up with Maya's family timeline and her faith, so she feels mostly at peace. Her doubt is about the company's honesty, after a mill shutdown announced at two weeks' notice. She pictures herself training others.",
+      "say": [
+        "A **decade** is enough time to prepare if the mine gives honest updates.",
+        "**AGI** comes in 2036 and hands-on robots around 2039; I would plan early."
+      ],
+      "think": [
+        "At 53 and 56, we are still too young to rely on **retirement**.",
+        "The extra time could qualify me for inspections, but we need **savings** first."
+      ],
+      "do": [
+        "Start inspection training while staying on the **loader roster**.",
+        "Set monthly **savings** and compare wider trade options with our children."
+      ],
+      "feel": [
+        "The longer warning eases the **rush**, but two incomes remain exposed."
+      ],
+      "mood": "anxious",
+      "quote": "I'd tell the crew a decade is enough time to prepare if the mine gives honest updates.",
+      "fieldNote": [
+        "She uses the decade to pursue **inspection work** while retaining wages.",
+        "A potential **move** depends on real staffing information, not forecasts.",
+        "Both household wages come from the **same site**, while savings cover less than a month."
+      ],
       "actions": [
         "retrain",
-        "save-more",
-        "family-plans"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Start inspection training while keeping loader shifts",
+          "tag": "retrain"
+        },
+        {
+          "text": "Set a monthly savings transfer with Luis",
+          "tag": "save-more"
+        }
       ]
     }
   },
   "closing": [
     {
       "speaker": "interviewer",
-      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+      "text": "Of the five pictures, which one worries you most, and what would actually help if it happened?"
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because Tom and I could lose work at the same time and my son's university would go first. What would help is the company keeping people on while they retrain, and honest notice, years not weeks, so families can plan."
+      "text": "The two-year picture worries me most because Luis and I both depend on one mine and have little saved. Paid training, clear staffing dates and a real transfer route would help me plan."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I did not ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the women on the crusher crew. There are four of us now, and we fought to get there. I'd want to know we're kept on for the new jobs, not just the men who shout loudest."
+      "text": "The mine should explain what work it expects to keep and when it will train people for it. Families can make careful choices when the dates and course places are real."
     }
   ],
-  "headlineQuote": "My dad always said, do the work and they'll notice.",
-  "portrait": "Maya Garcia is a 43-year-old loader operator and crusher crew lead at a zinc mine, married to a self-employed electrician, with a teenage son hoping for university, a younger daughter, a mortgage and less than a month saved. She is a churchgoer who prefers being reliable to being loud, and she adopts new technology once she has seen it work. She is content if AI stalls and uneasy under steady change, then alarmed by fast AGI because both household incomes and her son's university fund are at risk. With more time she plans to retrain after others prove the way, leaning on family and church rather than government.",
-  "biggestWorry": "AGI by 2028, because she and her husband could lose work at the same time and her son's university fund would go first.",
-  "whatWouldHelp": "The company keeping people on while they retrain, and honest notice measured in years rather than weeks."
+  "headlineQuote": "The mine should explain what work it expects to keep and when it will train people for it.",
+  "portrait": [
+    "Maya is a 43-year-old senior **loader operator** with a technical diploma.",
+    "She values crew safety and learns new systems once they are **proven**.",
+    "Her husband Luis also works at the mine; their **two wages** support a mortgage and children.",
+    "Thin savings and few nearby employers make each **transfer option** consequential."
+  ],
+  "biggestWorry": [
+    "The **two-year AGI** picture worries her because both incomes depend on one mine."
+  ],
+  "whatWouldHelp": [
+    "Paid **training**, clear staffing dates and a real transfer route would help Maya plan."
+  ]
 }
