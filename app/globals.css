@@ -457,7 +457,7 @@ button{cursor:pointer}
 .db-chip-more:hover{color:var(--fg)}
 .db-panel{display:flex;flex-direction:column;gap:20px;padding:32px 32px 28px;border-radius:28px;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair),0 8px 28px rgba(0,0,0,.05);overflow:hidden;min-width:0}
 .db-panel-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px}
-.db-panel-head>div:first-child{display:flex;flex-direction:column;gap:6px;max-width:62ch}
+.db-panel-head>div:first-child{display:flex;flex-direction:column;gap:6px}
 .db-panel-title{font-size:20px;line-height:28px;font-weight:600;color:var(--fg);text-wrap:balance}
 .db-panel-sub{font-size:14px;line-height:21px;color:var(--fg2)}
 .db-panel-status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13px;line-height:18px;color:var(--fg)}
@@ -468,7 +468,7 @@ button{cursor:pointer}
 .db-legend-item{display:inline-flex;align-items:center;gap:6px}
 /* Summary layout: the same job list as the details page, then the summary. */
 .db-shell{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100%}
-.db-shell>.db{margin:0;width:100%}
+.db-shell>.db{margin:0;width:100%;max-width:none}
 .db-chips-block{display:none}
 .js-tabs{display:flex;gap:4px;margin:6px 0 4px;padding:3px;border-radius:999px;background:var(--muted)}
 .js-tab{flex:1 1 0;display:grid;place-items:center;height:32px;border-radius:999px;font-size:13px;font-weight:500;color:var(--fg2);text-decoration:none}
@@ -552,3 +552,17 @@ button{cursor:pointer}
 .hx-shift-cap b{color:var(--fg);font-weight:600}
 @media (max-width:640px){.hx-ph,.hx{min-height:96px}}
 @media (prefers-reduced-motion:reduce){.hx-shift-bottom{transition:none}}
+
+/* Scrollbars: thin and quiet, in the page's greys, so they don't fight the design. */
+html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
+*{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#d6d6d6;border-radius:999px;border:3px solid transparent;background-clip:content-box}
+::-webkit-scrollbar-thumb:hover{background:#b5b5b5;background-clip:content-box}
+.ws-jobs{scrollbar-color:transparent transparent}
+.ws-jobs:hover{scrollbar-color:#d6d6d6 transparent}
+
+/* Titles stay on one line; only a phone is narrow enough to wrap them. */
+.t-display,.db-panel-title,.t-section{white-space:nowrap;text-wrap:nowrap}
+@media (max-width: 640px){.t-display,.db-panel-title,.t-section{white-space:normal;text-wrap:pretty}}

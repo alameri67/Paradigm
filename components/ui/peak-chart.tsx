@@ -1,5 +1,5 @@
 "use client"
-/* Third-party component. Changed from the original only by the optional `image`, `imageBox`,
+/* Third-party component. Changed from the original only by the optional `image`, `imageBox`, (plus a colour fix so photos keep their real colours),
    `imageOpacity` and `headline` props (marked "Paradigm:"); without them it behaves as supplied. It drives a canvas from refs on purpose, so the
    React Compiler lint rules below do not apply to it. */
 /* eslint-disable react-hooks/refs, react-hooks/set-state-in-effect */
@@ -519,6 +519,7 @@ export function PeakChart({
     img: null as HTMLImageElement | null,
     imgBox: imageBox,
     imgA: imageOpacity,
+    imgFilter: "none",
   })
   live.current.labels = pointLabels
   live.current.fmt = formatValue
@@ -527,6 +528,18 @@ export function PeakChart({
   live.current.loop = loop
   live.current.imgBox = imageBox
   live.current.imgA = imageOpacity
+  // Paradigm: the canvas is hue-shifted to the accent colour. Undo that shift on the photo so
+  // colour portraits keep their real colours.
+  live.current.imgFilter = (() => {
+    const a = hslOf(accent), b = hslOf(BASE_ACCENT)
+    if (!a || !b) return "none"
+    let d = a[0] - b[0]
+    if (d > 180) d -= 360
+    if (d < -180) d += 360
+    const k = b[1] > 0 ? a[1] / b[1] : 1
+    if (Math.abs(d) < 0.5 && Math.abs(k - 1) < 0.02) return "none"
+    return `saturate(${(1 / Math.max(k, 0.05)).toFixed(3)}) hue-rotate(${(-d).toFixed(1)}deg)`
+  })()
 
   // Paradigm: load the picture drawn inside the card
   React.useEffect(() => {
@@ -690,7 +703,9 @@ export function PeakChart({
         if (a > 0.001) {
           const [ix, iy, iw, ih] = L.imgBox
           ctx.globalAlpha = a
+          ctx.filter = L.imgFilter
           ctx.drawImage(L.img, ix, iy, iw, ih)
+          ctx.filter = "none"
         }
       }
       ctx.globalAlpha = 1

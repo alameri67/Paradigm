@@ -22,9 +22,6 @@ export function ShiftHeader() {
         <span className="hx-shift-top" aria-hidden="true">Paradigm</span>
         <span className="hx-shift-bottom" aria-hidden="true">Paradigm</span>
       </Link>
-      <p className="hx-shift-cap">
-        The bigger the change, the further the name splits. Now: <b>{SCENARIOS[at].name}</b>
-      </p>
     </header>
   );
 }
