@@ -11,24 +11,24 @@
     "outlook": "progressive",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Good to meet you, Marco. I'm with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions, parties or government. Everything here is confidential, so feel free to tell me both what you'd say in public and what you actually think. Could you describe a normal working day?"
+      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We aren't linked to AI companies, employers, unions, parties or government, and nothing you say will carry your name. Could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "Sure. First thing, before boots, I check the overnight report on my phone: soil moisture probes, the weather model, and what the AI assistant thinks I should do about the wheat. We're three hundred hectares, wheat, beans and oilseed rape, plus sixty suckler cows, which are mothers raising beef calves. Dev, our stockman, does the cattle with me in the morning, and then I'm usually on the tractor with the GPS steering doing the drilling or flying the drone over the beans to look for disease."
+      "text": "Look, it starts on my phone before I'm out of bed. The AI feed planner has already worked out the rations for the 300 sows overnight, and the camera in the finishing shed has flagged any pig that's off its weight. My wife Lucia's a vet nurse, so she's gone by seven, and I'm out with Piotr and Jade by half seven. Ridgeway's 160 hectares, pigs outdoors and maize and barley on the rest, so it's pigs in the morning and fields in the afternoon."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you enjoy, and what wears you out?"
+      "text": "What do you like most about it, and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "I enjoy getting something to work that didn't before. Last spring the drone spotted a patch of rust two weeks before I'd have seen it from the ground, and that saved us maybe four thousand in spray. What wears me out is the hours in harvest, and the feeling that the companies selling us all this kit get more from our data than we do."
+      "text": "I love trying things. I had a drone spraying the headlands last spring before anyone round here had seen one. What wears me out is the pig price, which goes up and down like a yo-yo, and the hours in winter when the mud's up to your knees. And I worry about Piotr and Jade, because I'm the one who has to make their jobs make sense."
     }
   ],
   "scenarios": {
@@ -36,11 +36,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. I'll read the card as it's written. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, well, I still found it useful, so I'm not complaining. I'd probably post something in the farmers' group chat like, the hype's gone but the drone still spots rust. People would tease me, because I'm the one who's always first with the gadgets."
+          "text": "I'd say, told you, it's a good tool, not a miracle. I'd post something on the farm tech forum I'm on, probably a bit disappointed. People round here would rib me for all the gadgets."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I'd be a little disappointed. I was half looking forward to the robot weeders, the way my dad looked forward to his first tractor with a cab. But it wouldn't change my farm. I'd keep using what works."
+          "text": "For me it's fine. The tools I use already save me maybe an hour a day, and that carries on. The farm's in good shape, we've got savings and no big debts, so the pig price is the only thing that keeps me up."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on as I am and keep using the AI tools every day for the spray plans and the grain marketing. I'd probably still buy the weed-mapping camera for the sprayer next year, about twelve thousand, because it already pays for itself. Nothing else would change."
+          "text": "I'd keep using the feed planner and the camera, and probably try one or two new apps a year like I do now. I'd keep Piotr and Jade on, same hours. Nothing else changes."
         },
         {
           "speaker": "interviewer",
@@ -64,47 +64,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, a bit flat. Like a film that everyone said was amazing and turned out just fine."
+          "text": "Calm. Slightly let down, if I'm honest, because I like new toys."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you think your neighbours would feel differently?"
+          "text": "What's the thing that keeps you up, then?"
         },
         {
           "speaker": "persona",
-          "text": "Some would be relieved. Old Bram across the road still writes his spray records in a notebook, and he'd say, see, Marco, all that money for nothing. I'd buy him a beer and tell him the notebook's lovely."
+          "text": "The pig price, always. In 2023 the pig price dropped so far we lost money on every pig for six months. The savings got us through, and that's why I keep them."
         },
         {
           "speaker": "interviewer",
-          "text": "Would anything about your worries over data go away?"
+          "text": "What would you tell your sons?"
         },
         {
           "speaker": "persona",
-          "text": "No, that stays. Even if AI is just a handy tool, the machinery firm still gets every yield map I've ever made. I'd keep pushing at the union for farmers to own their own data. That fight doesn't need AGI to matter."
+          "text": "My older son Leo writes software for a bank, so he'd be glad. My younger one, Sam, is a chef. I'd tell Leo his job's safe after all and to stop sending me articles about the end of the world."
         }
       ],
-      "say": "I'd say I still find the tools useful, so I'm not complaining. I'd post in the farmers' group chat that the hype's gone but the drone still spots rust.",
-      "think": "I'd be a little disappointed, because I was looking forward to robot weeders. But it wouldn't change my farm; I'd keep using what works.",
-      "do": "Keeps using AI tools daily for spray plans and grain marketing. Buys a weed-mapping camera for the sprayer next year for about twelve thousand, and keeps raising farm data ownership at the union.",
-      "feel": "Calm and slightly flat, like a much-hyped film that turned out just fine.",
+      "say": [
+        "AI is a good **tool**, not a miracle, like I always said.",
+        "I'd post my mild **disappointment** on the farm tech forum."
+      ],
+      "think": [
+        "My tools already save me about **an hour a day**, and that carries on.",
+        "With **savings and no debts**, only the pig price keeps me up."
+      ],
+      "do": [
+        "Keep using the **feed planner** and shed camera.",
+        "Try one or two **new apps** a year, as now.",
+        "Keep **Piotr and Jade** on the same hours."
+      ],
+      "feel": [
+        "**Calm**, and a little let down because he likes **new toys**."
+      ],
       "mood": "calm",
-      "quote": "I was half looking forward to the robot weeders, the way my dad looked forward to his first tractor with a cab.",
-      "fieldNote": "Marco is the gadget farmer of his area and enjoys the role. Even in the hype-only picture he keeps his main political concern: farmers owning their own data. His neighbour Bram is the comic counterweight in his stories.",
+      "quote": "In 2023 the pig price dropped so far we lost money on every pig for six months.",
+      "fieldNote": [
+        "A daily AI user who sees the plateau as a **letdown**, not a relief.",
+        "His standing worry is the **pig price**, and the cushion was built for it.",
+        "Thinks of his two **workers** before he's asked."
+      ],
       "actions": [
-        "keep-going",
         "learn-ai",
-        "invest"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Keep using the AI feed planner and shed weight camera daily",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep Piotr and Jade on at the same hours",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Here's the card. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is good for farming if we get the rules right. I'd say it at the union meeting and in the group chat: robots are fine, but the data and the profits shouldn't all go to three big companies. And I'd say we need public money for retraining farm workers, not just tax breaks for machines."
+          "text": "I'd say farmers should get stuck in and learn it, because the buyers and the feed companies already are. Online I'd say the government needs to fund training for farm workers, not just hand out grants for kit. Kit is easy, it's the people side that gets forgotten."
         },
         {
           "speaker": "interviewer",
@@ -112,7 +137,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, it's mostly good for me. I've got the cushion and I like the tech, so I can move early and take the gains. The danger isn't that a robot takes my job. It's that the robot works for a company that ends up owning my job."
+          "text": "For me it's mostly good news. The thinking side of my job, ordering feed, booking the lorry, planning the drilling, the pig movement paperwork, that's maybe a fifth of my week, and AI would take most of it. My hands-on work changes slowly, so I'd have more time in the sheds where I'm actually useful."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +145,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year I'd buy or lease a robot weeder for the beans, probably around forty thousand, and see if it cuts our spray bill. I'd put Dev through a course on running and fixing it, paid by us. And I'd join the union's working group on farm data, which I've been meaning to do for two years."
+          "text": "I'd hand all the ordering and paperwork to AI tools in the first six months. I'd put about 35,000 into a robot weeder for the maize the moment a decent one is on sale. And I'd sit down with Jade and offer to pay for her to learn the machines, so she runs them instead of being replaced by them."
         },
         {
           "speaker": "interviewer",
@@ -128,48 +153,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, actually. A bit excited, with a little worry at the back about who ends up owning it all."
+          "text": "Calm, a bit excited. It's the version I was hoping for."
         },
         {
           "speaker": "interviewer",
-          "text": "What does Dev think about all this?"
+          "text": "Who on the farm would feel it?"
         },
         {
           "speaker": "persona",
-          "text": "Dev's thirty-eight and smarter than he lets on. He said to me once, Marco, if a robot does the cattle, who's going to notice a cow that's off her food? He's right, and that's why he'd be the one running the machines, not replaced by them."
+          "text": "Jade's 22 and does a lot of the field work by hand. If I buy the weeder, her hoeing hours go, so I'd pay her more to take on the machine. I'd rather Jade learned to run and fix the robot, because otherwise I'm the bloke who bought a machine to replace a young woman."
         },
         {
           "speaker": "interviewer",
-          "text": "Where does the forty thousand come from?"
+          "text": "Anyone in the family who'd feel it more than you?"
         },
         {
           "speaker": "persona",
-          "text": "Savings, mostly, and we'd sell the old sprayer. We've got more than a year's costs in the bank, and Lucía's vet practice pays well, so we're not stretched. That's exactly why I can afford to go first, and I know not everyone can."
+          "text": "Leo, my son at the bank, would feel it more than me in this one. His bank would want fewer coders. I'd tell him to come and talk it through over Sunday lunch, and that he can always stay with us while he works out his next move."
         }
       ],
-      "say": "This is good for farming if we get the rules right. Robots are fine, but the data and profits shouldn't all go to three big companies, and we need public money for retraining farm workers.",
-      "think": "It's mostly good for me, because I've got the cushion and like the tech. The danger isn't a robot taking my job; it's that the robot works for a company that ends up owning it.",
-      "do": "Buys or leases a robot weeder for the beans for about forty thousand, funded from savings and the sale of an old sprayer. Pays for Dev's training to run it and joins the union's farm data working group.",
-      "feel": "Calm and a bit excited, with a small worry about who ends up owning it all.",
+      "say": [
+        "Farmers should **learn it now**, because buyers and feed firms already have.",
+        "Government should fund **training for workers**, not just grants for kit."
+      ],
+      "think": [
+        "About **a fifth** of my week is thinking work, and AI would take most of it.",
+        "That frees me for the **sheds**, where I'm actually useful."
+      ],
+      "do": [
+        "Hand **ordering and paperwork** to AI tools within six months.",
+        "Buy a **35,000 robot weeder** for the maize when one is ready.",
+        "Pay for **Jade** to learn to run and fix the machines."
+      ],
+      "feel": [
+        "**Calm** and a bit **excited**; it's the version he hoped for."
+      ],
       "mood": "calm",
-      "quote": "The danger isn't that a robot takes my job. It's that the robot works for a company that ends up owning my job.",
-      "fieldNote": "Marco is open about the fact that his savings and his partner's income let him move first, and he says plainly that not everyone can. His concern is ownership and power, not his own job. He sees Dev as the operator of the machines rather than their victim.",
+      "quote": "I'd rather Jade learned to run and fix the robot, because otherwise I'm the bloke who bought a machine to replace a young woman.",
+      "fieldNote": [
+        "Clearly **gains** from this picture and knows it.",
+        "His progressive view shows as **duty to his workers**, not opposition to tech.",
+        "Notes his son **Leo** in banking software is more exposed than he is."
+      ],
       "actions": [
         "automate",
-        "invest",
-        "retrain",
-        "collective-action"
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Move feed ordering, lorry bookings and pig paperwork to AI tools",
+          "tag": "automate"
+        },
+        {
+          "text": "Buy a 35,000 robot weeder for the maize fields",
+          "tag": "invest"
+        },
+        {
+          "text": "Pay for Jade to train on running and fixing the weeder",
+          "tag": "invest"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Now let's speed things up a lot. This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Here's the card. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, publicly, that this is too fast and the government has to act now. I'd want a law that says farm data belongs to farmers, a tax on the robot companies' profits, and a basic income for people who lose work. I'd say it on the radio if they asked, and they might, because I'm the AI guy round here."
+          "text": "I'd say this needs a plan from government, now, not in 2030: retraining money, and some kind of income for people whose work goes. I'd say it on the forum and I'd say it to the farmers' union, who'll think I've gone soft. Two years is nothing when you're talking about whole trades."
         },
         {
           "speaker": "interviewer",
@@ -177,7 +230,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, my farm would probably be fine. I could buy robots quicker than most. What scares me is the investment funds buying up every farm around me and running them from a screen in another country. Two years isn't long enough for anyone to stop that."
+          "text": "For Ridgeway itself, I think we'd do all right. The AI in 2028 takes my paperwork and planning, which I'd welcome, and the robots in 2031 could run most of the sheds and fields. The hard part is that Piotr and Jade's jobs basically vanish in 2031, and when every farm has robots the pig price falls, so the margin I've got now won't last."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +238,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd move fast. In the first six months I'd buy the robots I'd been eyeing, probably a hundred thousand, half from savings and half on a loan, so we stay competitive. I'd get Dev certified to supervise the whole fleet. And I'd help set up an emergency group in the union to lobby for the data law and against land sales to funds."
+          "text": "From 2028 I'd let AI run the planning, the buying and the selling. I'd start pricing robots for the sheds straight away, and I'd budget about 120,000 from savings and the bank for 2031. I'd tell Piotr in writing that I'll pay for a course of his choice from 2029, and keep his wage until he's into something else. And I'd join a campaign for a public retraining fund, which I've never done."
         },
         {
           "speaker": "interviewer",
@@ -193,48 +246,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. I'm not scared for my own family, but I'd feel like I was watching the village change from the cab of a robot."
+          "text": "Uneasy. My farm's fine, but I'd be the one telling two good people their jobs are going."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell your kids?"
+          "text": "How would you tell Piotr?"
         },
         {
           "speaker": "persona",
-          "text": "Pablo writes software in the city, so he'd be in the firing line before me. I'd tell him to come home if he needed to, there's a room and there's work. Inés is studying agronomy, which is crop science, and I'd tell her to finish, because someone still has to decide what to grow."
+          "text": "Piotr's 45 and has been with me eleven years. He's got two teenagers. I'd tell him myself, in the kitchen, with a coffee, not by text. I'd offer him the first job running the robots if he wants it, and the course money if he doesn't."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd borrow fifty thousand with only two years' warning. Isn't that risky?"
+          "text": "You're buying robots and campaigning for the people they replace. How do you square that?"
         },
         {
           "speaker": "persona",
-          "text": "It is. If everything goes robot, machines will get cheaper fast, and I'd be the idiot who bought at the top. But if I wait, the funds buy the land next door and I can't compete. I'd rather be the idiot with a robot than the idiot without one."
+          "text": "It's not a contradiction, it's just uncomfortable. I'd buy the robots because my neighbours will, and if I don't, the farm can't compete. I'd still want laws so that everyone who loses work to a machine gets something back from the people who own the machines, including me."
         }
       ],
-      "say": "This is too fast and the government has to act now. I'd want a law that farm data belongs to farmers, a tax on robot company profits and a basic income for people who lose work.",
-      "think": "My farm would probably be fine because I can buy robots quicker than most. What scares me is investment funds buying up the farms around me and running them from a screen abroad.",
-      "do": "Buys about a hundred thousand of robots within six months, half from savings and half borrowed. Gets Dev certified to supervise the fleet and sets up a union emergency group to lobby for a data law and against land sales to funds.",
-      "feel": "Uneasy, not for his family but for the village, which he'd watch change from the cab of a robot.",
+      "say": [
+        "We need a **government plan** now: retraining money and income support.",
+        "**Two years** is nothing when whole trades are changing."
+      ],
+      "think": [
+        "Ridgeway would **do all right**, with AI and robots running most of the work.",
+        "**Piotr and Jade's** jobs vanish in 2031, and the pig price falls."
+      ],
+      "do": [
+        "Let AI run **planning, buying and selling** from 2028.",
+        "Budget about **120,000** for shed robots by 2031.",
+        "Pay for **Piotr's course** and join a campaign for a public retraining fund."
+      ],
+      "feel": [
+        "**Uneasy**: the farm is fine, but he'd have to tell two people their **jobs are going**."
+      ],
       "mood": "uneasy",
-      "quote": "What scares me is the investment funds buying up every farm around me and running them from a screen in another country.",
-      "fieldNote": "Even at two years, Marco's personal position looks safe to him; his fear is about investment funds and remote ownership. He admits borrowing to buy fast could be a mistake, but sees standing still as worse. He'd invite his son home if software work vanished.",
+      "quote": "I'd buy the robots because my neighbours will, and if I don't, the farm can't compete.",
+      "fieldNote": [
+        "Sees the **gap** between AI in 2028 and robots in 2031 as time to prepare his workers.",
+        "Holds an **uncomfortable position**: buys robots and campaigns for those they replace.",
+        "Plans to tell **Piotr** face to face, in the kitchen, not by text."
+      ],
       "actions": [
         "automate",
         "invest",
-        "politics",
-        "collective-action"
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Hand feed buying, planning and pig sales to AI from 2028",
+          "tag": "automate"
+        },
+        {
+          "text": "Budget about 120,000 from savings and the bank for shed robots",
+          "tag": "invest"
+        },
+        {
+          "text": "Join a campaign for a public retraining fund for farm workers",
+          "tag": "politics"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Here's the card. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "With five years, I'd say this is the window to set the rules. I'd push the union to get a farm-data law and land-sale rules passed in the first two years, before the machines are everywhere. I'd say farmers who are scared should talk to the ones who've already tried the kit."
+          "text": "I'd say five years is enough to get this right if we start today. I'd be the one at the farmers' union saying, let's plan retraining now, before 2031. I'd probably offer Ridgeway as a test farm so people can see the machines working."
         },
         {
           "speaker": "interviewer",
@@ -242,7 +324,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means I can do it properly, not in a panic. I'd be sixty-three when it fully lands, which is about when I'd want to step back anyway. So the timing suits me, as long as the rules come first."
+          "text": "For me, the timing's almost perfect. The AI arrives in 2031, the robots around 2034, and I'm 66 in 2034. I could set Ridgeway up with the machines and step back to a couple of days a week, and that sounds good to me."
         },
         {
           "speaker": "interviewer",
@@ -250,7 +332,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd buy robots in stages, one machine a year, and only once the last one paid for itself, so no big loan. I'd run a free open day twice a year for the neighbours to see the kit working. I'd rather Bram laughs at my robot in my yard than buys a worse one off a salesman. And I'd start talking to Inés about taking over the arable side."
+          "text": "I'd start now by trialling a robot for the sheds with the supplier, maybe on a lease, so I know what works before I buy. I'd offer the neighbours my drone and planning setup as a paid service, a few hundred a job. And I'd give Piotr and Jade five years' notice of the plan, so they can choose training on my money while they're still earning."
         },
         {
           "speaker": "interviewer",
@@ -258,48 +340,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. Five years is enough to be clever about it."
+          "text": "Calm. A bit of me is looking forward to it."
         },
         {
           "speaker": "interviewer",
-          "text": "Why the open days?"
+          "text": "How would you get your neighbours on board?"
         },
         {
           "speaker": "persona",
-          "text": "Because the worst thing that happens in farming is everyone making the same mistake on their own. If twenty of us see what works and what breaks, we can buy smarter, maybe even buy together. It's what the old discussion groups used to do with grass and fertiliser."
+          "text": "I'd invite the neighbours round every spring to see what the robots were doing, with bacon rolls. Half of them would come to laugh and half to steal ideas. Farming's always moved that way: you see a new thing over the hedge before you try it."
         },
         {
           "speaker": "interviewer",
-          "text": "How does this compare with the two-year one for you?"
+          "text": "Who in your family would have it harder in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "Two years makes me borrow and shout. Five makes me plan and teach. The end is the same, but in this one I keep my blood pressure."
+          "text": "My son Leo probably. His bank job would go with the AI in 2031, and he's got a mortgage. I'd tell him there's a place at Ridgeway running the systems, and he'd probably turn it down, but the offer would be there."
         }
       ],
-      "say": "This is the window to set the rules: a farm-data law and land-sale rules in the first two years. Farmers who are scared should talk to the ones who've already tried the kit.",
-      "think": "I can do it properly, not in a panic. I'd be sixty-three when it lands, about when I want to step back anyway, so the timing suits me if the rules come first.",
-      "do": "Buys robots in stages, one machine a year and only once the last has paid for itself, with no big loan. Runs free open days twice a year for neighbours and starts talking with his daughter about taking over the arable side.",
-      "feel": "Calm; five years is enough to be clever about it.",
+      "say": [
+        "Five years is **enough** if we start today.",
+        "I'd offer Ridgeway as a **test farm** so people see the machines working."
+      ],
+      "think": [
+        "The timing is **almost perfect**: robots around 2034, when I'm 66.",
+        "I could set the farm up and step back to **two days a week**."
+      ],
+      "do": [
+        "Lease a **shed robot** on trial before buying.",
+        "Sell his drone and planning setup to **neighbours** as a paid service.",
+        "Give Piotr and Jade **five years' notice** with paid training."
+      ],
+      "feel": [
+        "**Calm**, and partly **looking forward** to it."
+      ],
       "mood": "calm",
-      "quote": "I'd rather Bram laughs at my robot in my yard than buys a worse one off a salesman.",
-      "fieldNote": "Marco sums up the difference in warning time neatly: two years makes him 'borrow and shout', five makes him 'plan and teach'. The open days show his instinct to share knowledge. Succession to his daughter becomes part of the plan.",
+      "quote": "Farming's always moved that way: you see a new thing over the hedge before you try it.",
+      "fieldNote": [
+        "The five-year warning lines up neatly with his **retirement at 66**.",
+        "Sees himself as the **local demonstrator** of new machines.",
+        "His worry shifts to his son **Leo**, a coder with a mortgage."
+      ],
       "actions": [
         "automate",
-        "invest",
-        "politics",
-        "family-plans"
+        "side-income",
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Lease a shed robot from the supplier on a trial",
+          "tag": "automate"
+        },
+        {
+          "text": "Sell drone spraying and AI planning to neighbours for a few hundred a job",
+          "tag": "side-income"
+        },
+        {
+          "text": "Buy the shed robots once the trial works, before 2034",
+          "tag": "invest"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Here's the card. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough to get this right, so there's no excuse. I'd keep pushing at the union for public research farms that test robots and share the results freely. I'd say we should be training young people now for the jobs that run alongside the machines."
+          "text": "I'd say ten years is plenty, and the farms that waste it deserve what they get. Then I'd feel bad for saying that, and I'd add that the government should still fund training. I tend to say the second thing a bit late."
         },
         {
           "speaker": "interviewer",
@@ -307,7 +418,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me, it's the most comfortable one. By 2036 I'll be sixty-eight, and I'd love to see Inés running a robot farm that I helped her set up. My worry is only whether the rules get written by us or by the companies."
+          "text": "For me it's after retirement. Robots arrive around 2039, when I'm 71, and I'd have been half-retired for years. The AI in 2036 might still be useful to me for running Ridgeway from the kitchen."
         },
         {
           "speaker": "interviewer",
@@ -315,7 +426,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on adding one machine a year, like in the five-year one, and keep the open days. I'd work with Inés on a handover plan over about seven years, with her running more each season. And I'd put a little of our savings into a farmer-owned machinery co-op if the union started one."
+          "text": "I'd carry on as I am, adding tools as they come. I'd grow the drone and planning service for neighbours into a proper little business. Piotr would likely retire before the robots, and Jade would have time to retrain on whatever she chooses."
         },
         {
           "speaker": "interviewer",
@@ -323,37 +434,61 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm and quite hopeful. A bit wistful for the old ways, but not much."
+          "text": "Calm. Honestly, this is the easy one."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you miss anything about farming the old way?"
+          "text": "What does retirement look like for you, then?"
         },
         {
           "speaker": "persona",
-          "text": "Being tired in a good way. When you've been on the combine fourteen hours and you smell of diesel and dust, and you sit on the step with a cup of tea. If the robot does the combining, I lose that. I'd miss it more than I'd admit to Bram."
+          "text": "My wife Lucia says I'll never retire, I'll just retire into the shed with a laptop. She's probably right. I'd like to be the old man in the village who can fix the robots when they go wrong."
         },
         {
           "speaker": "interviewer",
-          "text": "What would Lucía say about your plans?"
+          "text": "Who on the farm would have to think hardest?"
         },
         {
           "speaker": "persona",
-          "text": "She'd say make sure you actually retire this time. She's heard me say I'm stepping back three times already. I'd tell her the robots will make sure of it."
+          "text": "Jade would have the hard choice, because she's the only one young enough to work through it. I'd tell her the tech side will always need people who can talk to farmers. She's good at that, better than me."
         }
       ],
-      "say": "Ten years is enough to get this right, so there's no excuse. We need public research farms that test robots and share results freely, and training for young people now.",
-      "think": "It's the most comfortable one for me. I'd love to see my daughter running a robot farm I helped her set up, as long as the rules are written by us and not the companies.",
-      "do": "Keeps adding one machine a year and runs the open days. Works out a seven-year handover with Inés and puts some savings into a farmer-owned machinery co-op if the union starts one.",
-      "feel": "Calm and hopeful, with a small wistfulness for the old ways.",
+      "say": [
+        "Ten years is **plenty**, and farms that waste it will pay.",
+        "The government should still **fund training**, I'd add a bit late."
+      ],
+      "think": [
+        "The robots arrive around **2039**, after I've half-retired.",
+        "The AI in **2036** could help me run Ridgeway from the kitchen."
+      ],
+      "do": [
+        "Keep adding **new tools** as they come.",
+        "Grow the **drone and planning** service into a small business.",
+        "Leave **Jade** time to retrain on whatever she chooses."
+      ],
+      "feel": [
+        "**Calm**; he calls this one the **easy one**."
+      ],
       "mood": "calm",
-      "quote": "By 2036 I'll be sixty-eight, and I'd love to see Inés running a robot farm that I helped her set up.",
-      "fieldNote": "Ten years is Marco's ideal case: he gets to hand a modern farm to his daughter. His only nostalgia is for being tired in a good way after a long harvest day. His political worry, who writes the rules, never goes away in any scenario.",
+      "quote": "My wife Lucia says I'll never retire, I'll just retire into the shed with a laptop.",
+      "fieldNote": [
+        "Catches himself being **harsh** and corrects himself, showing his progressive side.",
+        "Plans to turn his tech hobby into a **side business** for neighbours.",
+        "Sees **Jade** as the one with the real choice to make."
+      ],
       "actions": [
-        "automate",
-        "invest",
-        "family-plans",
-        "collective-action"
+        "keep-going",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Keep adding AI tools at Ridgeway as they come out",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Grow the neighbour drone and planning service into a small business",
+          "tag": "side-income"
+        }
       ]
     }
   },
@@ -364,7 +499,7 @@
     },
     {
       "speaker": "persona",
-      "text": "AGI by 2028, the two-year one. Not for my farm, but because the investment funds would hoover up land before anyone could write a rule. What would help is a law saying farm data belongs to the farmer, limits on funds buying farmland, and public money for farmer-owned machine co-ops."
+      "text": "AGI by 2028. My farm would cope, but Piotr and Jade wouldn't have time, and neither would most farm workers. What would help is a public retraining fund paid for partly by the people who own the machines, me included, and a proper income for anyone whose trade disappears."
     },
     {
       "speaker": "interviewer",
@@ -372,11 +507,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask who fixes the robots. Everyone pictures a shiny machine in a field, but the real question is whether the mechanic lives in our village or on a server somewhere. That decides whether the money stays here."
+      "text": "You didn't ask whether I'm excited, and I am, a bit. People like me should say we're excited, and then pay our share for the people who lose out."
     }
   ],
-  "headlineQuote": "Everyone pictures a shiny machine in a field, but the real question is whether the mechanic lives in our village or on a server somewhere.",
-  "portrait": "Marco Reyes, 58, farms three hundred hectares of wheat, beans and oilseed rape with a sixty-cow suckler herd, and is the local early adopter: GPS steering, a scouting drone and AI tools every day. He's left-leaning and worries far more about corporate and investment-fund control of farming than about his own job. With strong savings and a vet partner's income, he can afford to move first and says so openly. Two years of warning makes him 'borrow and shout'; five or ten let him 'plan and teach', with open days for neighbours and a handover to his daughter Inés.",
-  "biggestWorry": "AGI by 2028, because investment funds would buy up farmland before any rules could be written.",
-  "whatWouldHelp": "A law that farm data belongs to farmers, limits on funds buying farmland and public money for farmer-owned machinery co-ops."
+  "headlineQuote": "People like me should say we're excited, and then pay our share for the people who lose out.",
+  "portrait": [
+    "A 58-year-old **pig and maize** farmer at Ridgeway who uses AI tools every day.",
+    "Employs two workers, **Piotr and Jade**, and thinks about them first in every picture.",
+    "Sees robots as **good for his farm** and backs taxes and retraining for those who lose out.",
+    "Calm in most pictures and **uneasy** in the fastest, because of his workers."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because his workers and others wouldn't have time to retrain."
+  ],
+  "whatWouldHelp": [
+    "A **public retraining fund** paid partly by machine owners, including him.",
+    "A proper **income** for anyone whose trade disappears."
+  ]
 }
