@@ -1,0 +1,104 @@
+/* Paradigm: the weather card (components/ui/weather.tsx) was supplied without its design tokens.
+   These are plain global classes (the Tailwind turbopack loader treats every .css as global),
+   in a light palette that matches the rest of the app. Every class the card uses is defined here. */
+
+:root{
+  --wx-slab:#ffffff;
+  --wx-sky:#e9f0f7;
+  --wx-ink:var(--fg);
+  --wx-ink2:var(--fg2);
+  --wx-ink-off:#d9e3ee;
+  --wx-ink-sun:#f0a92e;
+  --wx-ink-moon:#aeb8c6;
+  --wx-ink-star:#8d9bb0;
+  --wx-ink-cloud:#a9b6c6;
+  --wx-ink-cloud-dark:#6d7c90;
+  --wx-ink-rain:#2f7fd6;
+  --wx-ink-snow:#ffffff;
+  --wx-ink-hill:#8fae8a;
+  --wx-ink-hz:#6f8f6a;
+}
+
+/* Utils: Surface, Well, Led, Rule */
+.wx-surface{display:flex;flex-direction:column;background:var(--wx-slab);color:var(--wx-ink)}
+.wx-surface-raise{border:1px solid var(--muted-2);box-shadow:0 1px 2px rgba(13,13,13,.04),0 12px 28px -14px rgba(13,13,13,.22)}
+.wx-radius-card{border-radius:24px}
+.wx-radius-panel{border-radius:14px}
+.wx-well{position:relative}
+.wx-well-field{background:var(--wx-sky);box-shadow:inset 0 1px 3px rgba(13,13,13,.1),inset 0 0 0 1px rgba(13,13,13,.04)}
+.wx-led{display:inline-block;flex:none;width:8px;height:8px;border-radius:999px}
+.wx-led-live{background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+.wx-led-off{background:#c4c4c4}
+.wx-rule{border:0;margin:0;flex:none;background:var(--muted-2)}
+.wx-rule-horizontal{height:1px}
+.wx-rule-vertical{width:1px;align-self:stretch}
+
+/* Blocks */
+.mu-weather{box-sizing:border-box;max-width:100%}
+.mu-weather-tile{box-sizing:border-box}
+.mu-weather-sky{position:relative}
+.mu-weather-glyph{display:block}
+
+/* Sizes */
+.w-weather-width{width:380px}
+.h-weather-height{height:auto}
+.p-weather-pad{padding:14px}
+.gap-weather-gap{gap:12px}
+.size-weather-tile-size{width:180px;height:180px}
+.p-weather-tile-pad{padding:8px}
+.px-weather-header-inset{padding-inline:6px}
+.mx-weather-header-inset{margin-inline:6px}
+.pt-weather-header-top{padding-top:4px}
+.gap-weather-header-gap{gap:2px}
+.gap-weather-header-led-gap{gap:6px}
+.h-weather-header-height{height:26px}
+.h-weather-screen-height{height:234px}
+.h-weather-tile-screen{height:164px}
+.rounded-weather-screen-radius{border-radius:16px}
+.inset-x-weather-screen-inset{left:16px;right:16px}
+.inset-x-weather-tile-inset{left:10px;right:10px}
+.bottom-weather-screen-foot{bottom:10px}
+.pb-weather-screen-lift{padding-bottom:6px}
+.pb-weather-tile-lift{padding-bottom:2px}
+.h-weather-hour-height{height:82px}
+.gap-weather-hour-gap{gap:6px}
+.size-weather-hour-glyph{width:21px;height:21px}
+.gap-weather-week-gap{gap:4px}
+.gap-weather-week-col{gap:10px}
+.h-weather-week-row{height:24px}
+.w-weather-week-day{width:44px;flex:none}
+.size-weather-week-glyph{width:14px;height:14px;flex:none}
+.w-weather-week-value{width:30px;flex:none}
+.w-weather-week-bar{width:168px;flex:none}
+.h-weather-week-bar-height{height:6px}
+
+/* Type */
+.type-display{font-size:20px;line-height:26px;font-weight:650;letter-spacing:-.01em}
+.type-title{font-size:14px;line-height:20px;font-weight:600}
+.type-content{font-size:15px;line-height:20px;font-weight:600}
+.type-ui{font-size:13px;line-height:18px}
+.type-meta{font-size:13px;line-height:18px}
+.type-label{font-size:10.5px;line-height:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.type-readout{font-family:var(--mono);font-size:12px;line-height:16px;font-variant-numeric:tabular-nums}
+.type-pixel{font-family:var(--mono);font-size:46px;line-height:1;font-weight:700;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.type-weather-hour{font-family:var(--mono);font-size:13px;line-height:16px;font-weight:600;font-variant-numeric:tabular-nums}
+.engraved{color:var(--wx-ink2);text-shadow:0 1px 0 rgba(255,255,255,.9)}
+
+/* Inks */
+.text-ink{color:var(--wx-ink)}
+.text-ink2{color:var(--wx-ink2)}
+.fill-ink{fill:var(--wx-ink)}
+.fill-weather-ink-off{fill:var(--wx-ink-off)}
+.fill-weather-ink-sun{fill:var(--wx-ink-sun)}
+.fill-weather-ink-moon{fill:var(--wx-ink-moon)}
+.fill-weather-ink-star{fill:var(--wx-ink-star)}
+.fill-weather-ink-cloud{fill:var(--wx-ink-cloud)}
+.fill-weather-ink-cloud-dark{fill:var(--wx-ink-cloud-dark)}
+.fill-weather-ink-rain{fill:var(--wx-ink-rain)}
+.fill-weather-ink-snow{fill:var(--wx-ink-snow)}
+.fill-weather-ink-hill{fill:var(--wx-ink-hill)}
+.fill-weather-ink-hz{fill:var(--wx-ink-hz)}
+.opacity-weather-ink-glow-opacity{opacity:.35}
+.opacity-weather-ink-moon-dark-opacity{opacity:.3}
+.opacity-weather-ink-heat-opacity{opacity:.45}
+.opacity-weather-ink-fog-opacity{opacity:.6}

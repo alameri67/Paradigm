@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "../components/ui/stats-band-utils/stats-band.css";
+@import "../components/ui/weather-utils/weather.css";
+
+/* Light mode only: Tailwind's dark: variant follows a .dark class (never set), not the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Design tokens are exposed to Tailwind so new components can use them
    (bg-muted, text-fg2, font-mono ...). The simulator's own styles below are
@@ -17,6 +21,16 @@
   --color-card-foreground: var(--fg);
   --color-muted-foreground: var(--fg2);
   --color-border: #ececec;
+  /* shadcn names used by components/ui/button.tsx */
+  --color-primary: var(--fg);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--muted);
+  --color-secondary-foreground: var(--fg);
+  --color-accent: var(--muted);
+  --color-accent-foreground: var(--fg);
+  --color-destructive-foreground: #ffffff;
+  --color-input: var(--muted-2);
+  --color-ring: var(--water-ring);
   --font-sans: var(--font);
   --font-mono: var(--mono);
 }
@@ -345,16 +359,71 @@ button{cursor:pointer}
 .amount-ico{display:inline-flex;margin-bottom:2px;color:var(--fg2)}
 .amount-label.on .amount-ico,.amount-label:hover .amount-ico{color:var(--fg)}
 .ws-main .amount-label .mono{font-family:var(--font);font-size:12px}
-.ws-hero{display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:start;padding:40px;border-radius:28px;background:var(--muted);color:var(--fg);overflow:hidden}
+/* Hero: the persona card on the left, the quote beside it. Light, no plate. */
+.ws-hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:48px;align-items:center;color:var(--fg);overflow-x:clip}
+.ws-hero-card{display:flex;justify-content:center;min-width:0}
+.ws-hero-current .ws-hero-card{width:300px}
+.ws-hero-glass .ws-hero-card,.ws-hero-feature .ws-hero-card{width:360px}
+.ws-hero-weather .ws-hero-card{width:380px}
+.ws-hero-feature .ws-hero-card>*{max-width:none}
 .ws-card{position:relative;width:300px}
-.ws-hero-text{display:flex;flex-direction:column;gap:24px;min-width:0}
+.ws-hero-text{display:flex;flex-direction:column;gap:14px;min-width:0}
 .ws-moodline{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--fg)}
 .ws-dot{width:8px;height:8px;border-radius:999px;flex:none}
 .ws-quote{font-size:28px;line-height:36px;font-weight:600;letter-spacing:-.01em;color:var(--fg);text-wrap:balance}
-.ws-voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px}
-.ws-voice{display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:23px}
+.ws-quote-by{font-size:14px;line-height:20px;color:var(--fg2)}
+.ws-sk-kpis{height:92px;border-radius:14px;width:100%}
+.ws-hero:has(.ws-sk-kpis){grid-template-columns:1fr;gap:36px}
+/* Says, thinks, does, feels: four cards in a 2 × 2 grid. */
+.ws-voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ws-voice{display:flex;flex-direction:column;gap:10px;min-width:0;padding:16px 18px 18px;border:1px solid var(--muted-2);border-radius:16px;background:var(--plate);font-size:15px;line-height:23px}
+.ws-voice-head{display:flex;align-items:center;gap:10px;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--fg2)}
+.ws-voice-ico{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--muted);color:var(--fg)}
 .ws-label{font-size:12px;line-height:16px;font-weight:500;letter-spacing:.025em;text-transform:uppercase;color:var(--fg2)}
-.ws-note{display:flex;flex-direction:column;gap:6px;padding-top:16px;border-top:1px solid var(--muted-2);font-size:14px;line-height:21px;color:var(--fg2)}
+/* KPI columns (the look of the summary's .db-who): a white plate split by hairlines. */
+.ws-kpis{margin:0;display:grid;grid-template-columns:repeat(var(--kpi-n,4),minmax(0,1fr));border:1px solid var(--muted-2);background:var(--plate);border-radius:14px;overflow:hidden}
+.ws-kpis-scen{--kpi-n:5}
+.ws-kpis-note.n1{--kpi-n:1}.ws-kpis-note.n2{--kpi-n:2}.ws-kpis-note.n3{--kpi-n:3}
+.ws-kpi{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:12px 14px;min-width:0;margin:0;border:0;background:transparent;text-align:left;font:inherit;color:inherit}
+.ws-kpi+.ws-kpi{border-left:1px solid var(--muted-2)}
+.ws-kpi-label{display:flex;align-items:center;gap:6px;font-size:11px;line-height:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg2);font-weight:500;white-space:nowrap}
+.ws-kpi-label svg{flex:none}
+.ws-kpi dd{margin:0}
+.ws-kpi-val{display:flex;align-items:center;gap:6px;font-size:15px;line-height:19px;text-wrap:balance;font-weight:650;letter-spacing:-.01em;color:var(--fg);margin-top:2px}
+.ws-kpi-sub{font-size:13px;line-height:18px;font-weight:400;color:var(--fg2)}
+.ws-kpi-face{flex:none;display:grid;place-items:center;color:var(--kpi-accent)}
+button.ws-kpi{cursor:pointer;transition:background 140ms var(--ease)}
+button.ws-kpi:hover{background:var(--muted)}
+button.ws-kpi.on,button.ws-kpi.on:hover{background:#f3f8fe}
+button.ws-kpi.on::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--kpi-accent)}
+button.ws-kpi.on .ws-kpi-label{color:var(--fg)}
+button.ws-kpi:focus-visible{outline-offset:-3px}
+.ws-notes{display:flex;flex-direction:column;gap:10px}
+.ws-kpis-note .ws-kpi-label svg{color:var(--fg2)}
+@container view (max-width: 900px){
+  .ws-hero{gap:36px}
+  .ws-quote{font-size:25px;line-height:33px}
+}
+@container view (max-width: 680px){
+  .ws-hero{grid-template-columns:1fr;justify-items:center;gap:28px}
+  .ws-hero-text{width:100%}
+}
+@container view (max-width: 720px){
+  .ws-kpis-note{--kpi-n:2}
+  .ws-kpis-note .ws-kpi:nth-child(odd){border-left:0}
+  .ws-kpis-note .ws-kpi:nth-child(n+3){border-top:1px solid var(--muted-2)}
+  .ws-kpis-note.n3 .ws-kpi:last-child{grid-column:1/-1}
+  /* Five scenarios scroll sideways inside their own row. */
+  .ws-kpis-scen{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(124px,1fr);overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}
+  .ws-kpis-scen::-webkit-scrollbar{display:none}
+  .ws-kpis-scen .ws-kpi{scroll-snap-align:start}
+}
+@container view (max-width: 560px){
+  .ws-voices{grid-template-columns:1fr}
+  .ws-quote{font-size:23px;line-height:30px}
+  .ws-hero-card,.ws-hero-glass .ws-hero-card,.ws-hero-feature .ws-hero-card,.ws-hero-weather .ws-hero-card{width:100%;max-width:380px}
+  .w-weather-width{width:100%}
+}
 .ws-about{display:flex;flex-direction:column;gap:20px}
 .ws-headline{font-size:22px;line-height:30px;font-weight:600;text-wrap:balance;margin-top:6px}
 .ws-about-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
@@ -382,15 +451,7 @@ button{cursor:pointer}
 .ws-fact-text{display:flex;flex-direction:column;gap:2px;min-width:0}
 .ws-facts dt{font-size:12px;line-height:16px;color:var(--fg2)}
 .ws-facts dd{margin:0;font-size:13px;line-height:18px}
-@container view (max-width: 900px){
-  .ws-hero{grid-template-columns:1fr;justify-items:center;padding:40px 24px}
-  .ws-hero-text{width:100%}
-  .ws-about-grid{grid-template-columns:1fr}
-}
-@container view (max-width: 560px){
-  .ws-voices{grid-template-columns:1fr}
-  .ws-quote{font-size:23px;line-height:30px}
-}
+@container view (max-width: 900px){.ws-about-grid{grid-template-columns:1fr}}
 @media (max-width: 1200px){
   .ws{grid-template-columns:minmax(0,1fr) 320px}
   .ws-jobs{display:none}

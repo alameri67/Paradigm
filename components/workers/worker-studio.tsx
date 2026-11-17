@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
@@ -13,13 +13,15 @@ import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
 import { GROUP_ICON } from "./group-icons";
 import { Bullets, toPoints } from "./bullets";
+import { DashIcon } from "@/components/dashboard/icons";
+import { Brain, Footprints, Heart, MessageCircle, NotebookPen } from "lucide-react";
+import { FeaturePersona, GlassPersona, SCENARIO_SHORT, WeatherPersona, isCardKind, type CardKind } from "./persona-cards";
 import { usePublishScreen } from "@/lib/ask/screen-store";
 import type { Screen } from "@/lib/ask/schema";
 import {
   MOODS,
   MOOD_ACCENT,
   MOOD_LABEL,
-  MOOD_TONE,
   SCENARIOS,
   workerId,
   type Archetype,
@@ -51,15 +53,6 @@ function levelDetail(l: GroupLevel) {
     .filter(([k]) => k !== "key" && k !== "label")
     .map(([k, v]) => (k === "age" ? `Age ${v}` : String(v).replace(/\.$/, "")))
     .join(". ");
-}
-
-function Mood({ mood }: { mood: MoodKey }) {
-  return (
-    <span className={`mood tone-${MOOD_TONE[mood]}`}>
-      <span className="dot" aria-hidden="true" />
-      <span className="mood-word">{MOOD_LABEL[mood]}</span>
-    </span>
-  );
 }
 
 /** The worker card: a Peak Chart of worry across S0–S4, with the job's portrait blended inside it. */
@@ -101,6 +94,79 @@ function WorkerCard({
   );
 }
 
+
+/** All five scenarios as one row of columns: the person's mood in each. Clicking one picks that scenario. */
+function ScenarioColumns({ iv, scenario, onScenario }: { iv: Interview; scenario: ScenarioCode; onScenario: (s: ScenarioCode) => void }) {
+  return (
+    <div className="ws-kpis ws-kpis-scen" role="group" aria-label="All five scenarios">
+      {SCENARIOS.map((s) => {
+        const mood = iv.scenarios[s.code].mood;
+        const on = s.code === scenario;
+        return (
+          <button
+            key={s.code}
+            type="button"
+            className={"ws-kpi" + (on ? " on" : "")}
+            aria-pressed={on}
+            title={s.name}
+            onClick={() => onScenario(s.code)}
+            style={{ "--kpi-accent": MOOD_ACCENT[mood] } as CSSProperties}
+          >
+            <span className="ws-kpi-label">
+              <Icon name={SCENARIO_ICON[s.code]} size={14} />
+              {SCENARIO_SHORT[s.code]}
+            </span>
+            <span className="ws-kpi-val">
+              <span className="ws-kpi-face" aria-hidden="true">
+                <DashIcon name={mood} size={18} />
+              </span>
+              {MOOD_LABEL[mood]}
+            </span>
+            <span className="ws-kpi-sub">{s.when}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+/** The interviewer's note as columns: the bold phrase (or first few words) on top, the point under it. */
+function NoteColumns({ text }: { text: Interview["scenarios"][ScenarioCode]["fieldNote"] }) {
+  const points = toPoints(text).slice(0, 4);
+  if (!points.length) return null;
+  return (
+    <section className="ws-notes" aria-labelledby="ws-note-h">
+      <h2 className="ws-label" id="ws-note-h">
+        Interviewer&apos;s note
+      </h2>
+      <dl className={"ws-kpis ws-kpis-note n" + points.length}>
+        {points.map((p, i) => {
+          const bold = p.match(/\*\*([^*]+)\*\*/);
+          const words = p.replace(/\*\*/g, "").split(/\s+/);
+          const val = bold ? bold[1] : words.slice(0, 3).join(" ");
+          const sub = bold ? p.replace(/\*\*/g, "") : words.slice(3).join(" ");
+          return (
+            <div key={i} className="ws-kpi">
+              <dt className="ws-kpi-label">
+                <NotebookPen size={14} strokeWidth={1.8} aria-hidden="true" />
+                Note {i + 1}
+              </dt>
+              <dd className="ws-kpi-val">{val.charAt(0).toUpperCase() + val.slice(1)}</dd>
+              {sub && <dd className="ws-kpi-sub">{sub}</dd>}
+            </div>
+          );
+        })}
+      </dl>
+    </section>
+  );
+}
+
+const VOICES = [
+  ["say", "Says", MessageCircle],
+  ["think", "Thinks", Brain],
+  ["do", "Does", Footprints],
+  ["feel", "Feels", Heart],
+] as const;
 
 function ControlPanel({
   groups,
@@ -196,6 +262,11 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
     portrait: WorkerPortrait | null;
   } | null>(null);
   const [showTranscript, setShowTranscript] = useState(false);
+  const [card] = useState<CardKind>(() => {
+    const c = params.get("card");
+    // The glass card is the chosen design; ?card= still shows the others for comparison.
+    return isCardKind(c) ? c : "glass";
+  });
   const [insights, setInsights] = useState<{ job: string; data: JobInsights | null } | null>(null);
 
   const a = archetypes.find((x) => x.code === job)!;
@@ -206,9 +277,14 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   // Shareable address bar.
   useEffect(() => {
-    const q = new URLSearchParams({ job, ...levels, s: scenario }).toString();
+    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "glass" ? { card } : {}) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
-  }, [job, levels, scenario]);
+  }, [job, levels, scenario, card]);
+
+  function readInterview() {
+    setShowTranscript(true);
+    requestAnimationFrame(() => document.getElementById("ws-interview")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
 
   useEffect(() => {
     let live = true;
@@ -356,12 +432,25 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
         {loading ? (
           <div className="ws-hero">
-            <div className="sk" style={{ width: 300, height: 386, borderRadius: 31, background: "#0b1a2e" }} />
+            <div className="sk ws-sk-kpis" />
+            <div className="sk" style={{ width: 300, height: 386, borderRadius: 31 }} />
           </div>
         ) : iv && sc && worker ? (
           <>
-            <section className="ws-hero" aria-label="Worker">
-              <WorkerCard w={worker} iv={iv} portrait={result?.portrait ?? null} scenario={scenario} onScenario={setScenario} />
+            <ScenarioColumns iv={iv} scenario={scenario} onScenario={setScenario} />
+
+            <section className={"ws-hero ws-hero-" + (result?.portrait ? card : "current")} aria-label="Worker">
+              <div className="ws-hero-card">
+                {card === "glass" && result?.portrait ? (
+                  <GlassPersona worker={worker} iv={iv} scenario={scenario} portrait={result.portrait} onReadInterview={readInterview} />
+                ) : card === "weather" ? (
+                  <WeatherPersona worker={worker} iv={iv} scenario={scenario} />
+                ) : card === "feature" && result?.portrait ? (
+                  <FeaturePersona worker={worker} iv={iv} scenario={scenario} portrait={result.portrait} />
+                ) : (
+                  <WorkerCard w={worker} iv={iv} portrait={result?.portrait ?? null} scenario={scenario} onScenario={setScenario} />
+                )}
+              </div>
               <div className="ws-hero-text">
                 <div className="ws-moodline">
                   <span className="ws-dot" style={{ background: MOOD_ACCENT[sc.mood] }} aria-hidden="true" />
@@ -370,60 +459,31 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                 <p key={sc.quote} className="ws-quote swap">
                   “{sc.quote}”
                 </p>
-                <div className="ws-voices">
-                  {(
-                    [
-                      ["say", "Says"],
-                      ["think", "Thinks"],
-                      ["do", "Does"],
-                      ["feel", "Feels"],
-                    ] as const
-                  ).map(([k, label]) => (
-                    <div key={k} className="ws-voice">
-                      <span className="ws-label">{label}</span>
-                      <Bullets key={String(sc[k])} className="swap" text={sc[k]} />
-                    </div>
-                  ))}
-                </div>
-                <div className="ws-note">
-                  <span className="ws-label">Interviewer&apos;s note</span>
-                  <Bullets text={sc.fieldNote} />
-                </div>
+                <p className="ws-quote-by">
+                  {worker.name}, {worker.job.toLowerCase()}
+                </p>
               </div>
             </section>
+
+            <section className="ws-voices" aria-label="What they say, think, do and feel">
+              {VOICES.map(([k, label, Ico]) => (
+                <div key={k} className="ws-voice">
+                  <h3 className="ws-voice-head">
+                    <span className="ws-voice-ico" aria-hidden="true">
+                      <Ico size={16} strokeWidth={1.8} />
+                    </span>
+                    {label}
+                  </h3>
+                  <Bullets key={String(sc[k])} className="swap" text={sc[k]} />
+                </div>
+              ))}
+            </section>
+
+            <NoteColumns text={sc.fieldNote} />
 
             {jobInsights && (
               <JobPatterns insights={jobInsights} plural={a.plural} scenario={scenario} scenarioName={scenarioOf(scenario).name} />
             )}
-
-            <section className="section" aria-labelledby="ws-all">
-              <h2 className="t-section" id="ws-all">
-                All five scenarios
-              </h2>
-              <div className="strip">
-                {SCENARIOS.map((s) => {
-                  const r = iv.scenarios[s.code];
-                  const on = s.code === scenario;
-                  return (
-                    <button
-                      key={s.code}
-                      type="button"
-                      className={"lvl" + (on ? " on" : "")}
-                      aria-pressed={on}
-                      onClick={() => setScenario(s.code)}
-                    >
-                      <span className="lvl-top">
-                        <Icon name={SCENARIO_ICON[s.code]} size={16} />
-                        <span className="lvl-name">{s.name}</span>
-                        <span className="lvl-year">{s.when}</span>
-                      </span>
-                      <Mood mood={r.mood} />
-                      <span className="lvl-say">“{r.quote}”</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </section>
 
             <section className="ws-about" aria-label="About this worker">
               <div>
@@ -446,7 +506,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
               </div>
             </section>
 
-            <section className="section">
+            <section className="section" id="ws-interview">
               <button type="button" className="lq-btn sm" style={{ alignSelf: "flex-start" }} onClick={() => setShowTranscript((v) => !v)}>
                 {showTranscript ? "Hide" : "Read"} the full interview for {scenarioOf(scenario).name}
               </button>
