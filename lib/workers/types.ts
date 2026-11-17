@@ -99,12 +99,16 @@ export interface JobInsightsScenario {
   howTheyFeel: Points;
   differences: { group: string; text: string }[];
   quotes: { id: string; name: string; text: string }[];
+  /** 3.1: the thoughts that come up most, each with the people who hold it, so any selection can be counted. */
+  thoughts?: { text: string; ids: string[] }[];
+  /** 3.1: a name and one-line story for the calmest and the most worried ends of this job. */
+  segments?: { least: { name: string; story: string }; most: { name: string; story: string } };
 }
 export interface JobInsights {
   code: string;
   job: string;
   interviews: number;
-  overview: string;
+  overview: Points;
   scenarios: Record<ScenarioCode, JobInsightsScenario>;
   stats: { interviews: number; scenarios: Record<ScenarioCode, JobStatsScenario> };
 }
