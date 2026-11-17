@@ -39,9 +39,10 @@ html,body{height:100%}
 body{background:var(--bg);color:var(--fg);font:400 14px/20px var(--font);-webkit-font-smoothing:antialiased}
 h1,h2,h3,p{margin:0}
 h1,h2,h3,b,strong,th{font-weight:600}
-button,input,select{font-family:inherit;color:inherit}
+/* The Ask AI composer (.ask-foot) styles itself with Tailwind utilities, which these unlayered rules would beat. */
+:is(button,input,select):where(:not(.ask-foot *)){font-family:inherit;color:inherit}
 button{cursor:pointer}
-:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+:focus-visible:where(:not(.ask-foot *)){outline:3px solid var(--focus);outline-offset:2px}
 .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
 .fg2{color:var(--fg2)}
 
@@ -609,3 +610,30 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .bullets li::marker{color:currentColor}
 .bullets strong{font-weight:600;color:var(--fg)}
 .ws-quote + .ws-voices .bullets,.ws-voice .bullets{font-size:inherit;line-height:inherit}
+
+/* Ask AI: the pill at the top right and the panel it opens. White, Inter, the cards' soft shadows. */
+.ask-pill{position:fixed;z-index:60;top:calc(16px + env(safe-area-inset-top,0px));right:16px;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px 0 12px;border:0;border-radius:999px;background:#fff;color:var(--fg);font-size:13px;line-height:18px;font-weight:500;box-shadow:0 0 0 1px var(--hair),0 1px 2px rgb(0 0 0/.04),0 8px 28px rgba(0,0,0,.08);transition:box-shadow 160ms var(--ease),transform 160ms var(--ease)}
+.ask-pill:hover{transform:translateY(-1px);box-shadow:0 0 0 1px var(--muted-2),0 1px 2px rgb(0 0 0/.05),0 12px 32px rgba(0,0,0,.12)}
+.ask-pill[aria-expanded="true"]{visibility:hidden}
+@media (max-width:480px){.ask-pill{top:calc(12px + env(safe-area-inset-top,0px));right:12px;width:36px;padding:0;justify-content:center}.ask-pill-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+.ask-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ask-panel{position:fixed;z-index:70;top:0;right:0;bottom:0;width:420px;max-width:100vw;display:flex;flex-direction:column;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair),-8px 0 28px rgba(0,0,0,.08),-1px 0 4px rgba(0,0,0,.03)}
+@media (max-width:560px){.ask-panel{width:100vw}}
+.ask-head{display:flex;align-items:flex-start;gap:12px;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 14px 20px;border-bottom:1px solid var(--hair)}
+.ask-head-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.ask-title{font-size:18px;line-height:28px;font-weight:600}
+.ask-where{font-size:13px;line-height:18px;color:var(--fg2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ask-x{flex:none;display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:999px;background:transparent;color:var(--fg2);transition:background-color 120ms var(--ease),color 120ms var(--ease)}
+.ask-x:hover{background:var(--muted);color:var(--fg)}
+.ask-log{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:16px;padding:20px 20px 12px}
+.ask-intro{display:flex;flex-direction:column;gap:8px;padding:16px 18px;border-radius:20px;background:var(--muted);font-size:14px;line-height:21px}
+.ask-intro .fg2{font-size:13px;line-height:19px}
+.ask-q{align-self:flex-end;max-width:85%;padding:10px 14px;border-radius:18px 18px 6px 18px;background:var(--muted);font-size:14px;line-height:21px;overflow-wrap:anywhere}
+.ask-a{display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:22px;overflow-wrap:anywhere}
+.ask-a ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.ask-a li::marker{color:var(--fg3)}
+.ask-thinking{color:var(--fg2);animation:pulse 1.4s ease-in-out infinite}
+.ask-note{font-size:13px;line-height:19px;color:var(--fg2)}
+.ask-note-setup,.ask-note-err{padding:12px 14px;border-radius:16px;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair),0 8px 28px rgba(0,0,0,.05)}
+.ask-note-err{color:var(--destructive)}
+.ask-foot{padding:8px 12px calc(14px + env(safe-area-inset-bottom,0px))}

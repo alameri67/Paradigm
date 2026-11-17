@@ -3,6 +3,7 @@ import { connection } from "next/server";
 import { Suspense } from "react";
 import { ShiftHeader } from "@/components/headers/shift-header";
 import { Dashboard } from "@/components/dashboard/dashboard";
+import { AskAI } from "@/components/ask/ask-ai";
 import { archetypes, getGroups, getInterviewSummaries } from "@/lib/workers/data";
 
 export const metadata: Metadata = { title: "Paradigm" };
@@ -34,6 +35,7 @@ export default function Home() {
       <Suspense fallback={<div className="hx-ph" />}>
         <ShiftHeader />
       </Suspense>
+      <AskAI />
       <Suspense fallback={<Loading />}>
         <DashboardData />
       </Suspense>

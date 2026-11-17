@@ -11,6 +11,8 @@ import { DashIcon, hasDashIcon } from "./icons";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { ACTION_LEVELS, actionLevel, contrast, pointsFor, summarize, type Contrast, type Segment, type Summary } from "@/lib/workers/dashboard";
+import { usePublishScreen } from "@/lib/ask/screen-store";
+import type { Screen } from "@/lib/ask/schema";
 import {
   ACTION_LABEL,
   MOODS,
@@ -362,6 +364,30 @@ export function Dashboard({
         : allOn
           ? `Every version of ${picked.length === 2 ? "both" : `all ${picked.length}`} jobs interviewed so far`
           : `Every version of ${picked.length} jobs`;
+
+  // What Ask AI can see: the same counts and sentences this page shows.
+  const seg = (x: Segment) => ({
+    people: x.n,
+    moods: x.moods.map((m) => MOOD_LABEL[m]),
+    traits: x.traits,
+    mixed: x.mixed,
+    actions: x.actions.map((a) => a.text),
+    quote: x.quote ? `${x.quote.text} (${x.quote.name}, ${x.quote.job.toLowerCase()})` : null,
+  });
+  const screen: Screen = {
+    page: "summary",
+    scenario: { name: sc.name, when: sc.when, description: sc.description },
+    jobs: picked.map((a) => a.job),
+    summary: {
+      scope,
+      selection: brush ? `a box dragged on the chart, holding ${selected.length} of the ${people(points.length)} shown` : null,
+      people: summary.n,
+      moods: MOODS.map((m) => ({ mood: MOOD_LABEL[m], count: summary.moods[m] })),
+      topActions: summary.actions.slice(0, 5).map((a) => ({ action: ACTION_LABEL[a.tag] ?? a.tag.replace(/-/g, " "), share: a.share })),
+      ends: ends ? { headline: ends.headline, least: seg(ends.low), most: seg(ends.high) } : null,
+    },
+  };
+  usePublishScreen(screen);
 
   return (
     <div className="db-shell">
