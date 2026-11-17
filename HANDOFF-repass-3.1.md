@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,087 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 18:22 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,096 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 18:46 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 95/243 | STALE from main - must redo |
-| A03 | 82/243 | STALE from main - must redo |
-| A04 | 80/243 | STALE from main - must redo |
+| A02 | 98/243 | STALE from main - must redo |
+| A03 | 85/243 | STALE from main - must redo |
+| A04 | 83/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,689 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,680 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -237,11 +237,22 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   so insights were not regenerated. The new wave uses the next reserved people below. Helpers and accepted-file
   hashes are under `/tmp/paradigm-repass/parallel/`; only data and this handoff are committed.
 
+- 2026-11-17: automatic goal continuation recovered 9 completed files and resumed drafting without a user prompt.
+  All 9 passed independent content review after correcting real annotation issues; the Say question was already
+  included in the first card turn and was not duplicated. Explicit conditional course enrollment remains retrain,
+  with funding/acceptance conditions preserved in the step. A question-order defect was also corrected in five
+  of this session's own earlier A04 outputs: Feel now precedes both follow-ups, with the answer text unchanged.
+  The supplemental audit now enforces that placement. The original 2,033 protected baseline files remain unchanged.
+  Separately, review rejected damaged or copied summaries in several new uncommitted smaller-model drafts;
+  those are being repaired by a stronger workhorse model before publication, while smaller models review.
+
 ## Current continuous writer lanes
 
 The user's latest instruction is explicit: **do not pause after batches; continue until all interviews are done.**
 The Codex continuous goal is active. Earlier four-person limits and pause-for-review instructions are superseded.
 The parent keeps reviewing and publishing checkpoints without waiting for another user prompt.
+
+Runtime scheduling: lane manifests define ownership, not a requirement to author 70+ interviews in one worker turn. Dispatch concrete one-person execution calls and automatically requeue the next unfinished ID when a call completes. Do not leave a finished small assignment waiting for user input. Agent-team state can reset between automatic goal turns; inspect live agents and stable files, then recreate missing workers. Keep in-flight calls finite, finish or safely checkpoint their work before yielding a goal turn, and let the active goal immediately schedule the next turn.
 
 Six smaller-model writers own disjoint complete remaining lanes in A02-A04. They author one fresh person at a
 time, validate and audit that file, report it, and continue immediately. They never run git or touch accepted files.
