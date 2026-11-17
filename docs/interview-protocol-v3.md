@@ -82,6 +82,7 @@ Good quotes are:
 - **Surprising or honest.** They admit something, flip an expectation, or show a contradiction.
 - **In their own voice.** Their words, not a slogan or a news headline.
 - **Clear on its own.** A reader sees the quote alone, with no question and no story around it. It must be full sentences that make sense to a stranger. Name every person, place and thing it points to: say "my daughter", "my boss" or "the mine", not "her", "him", "they", "it" or "that place". Don't start with "And", "But", "So", "Yeah", "Well", "It", "That" or "This" when they point back to something said before. For example, "I'd tell her not to rent" doesn't work, because no one knows who "her" is. "I'd tell my daughter never to rent, and to get the education I didn't" does.
+- **Say who named people are.** When a quote names a person, put who they are in brackets straight after the name, the first time it appears in that quote: "Mei (his wife) does the books", "Arthur (her boss) could sell the farm". Write it from the reader's side ("his wife", "her boss", "their neighbour"), using the speaker's gender. Skip it only when the quote already says who they are ("my boss Arthur", "my wife Mei"). Do the same for named places or firms a stranger wouldn't know: "Greystone (the farm he works on)".
 
 Avoid clichés like "it's a double-edged sword" or "only time will tell". If no line in the transcript is good enough, or the best line only makes sense with the question around it, improve the persona's answer so it contains a line that stands alone, before you pick it.
 
