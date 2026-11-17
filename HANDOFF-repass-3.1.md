@@ -29,43 +29,43 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,737 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 13:07 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,033 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 13:13 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 68/243 | STALE from main - must redo |
-| A03 | 54/243 | STALE from main - must redo |
-| A04 | 53/243 | STALE from main - must redo |
-| A05 | 58/243 | not written yet |
-| A06 | 47/243 | not written yet |
-| A07 | 45/243 | not written yet |
-| A08 | 47/243 | not written yet |
-| A09 | 47/243 | not written yet |
-| A10 | 46/243 | not written yet |
-| A11 | 44/243 | not written yet |
-| A12 | 43/243 | not written yet |
-| A13 | 47/243 | not written yet |
-| A14 | 53/243 | not written yet |
-| A15 | 50/243 | not written yet |
-| A16 | 41/243 | not written yet |
-| A17 | 43/243 | not written yet |
-| A18 | 45/243 | not written yet |
-| A19 | 48/243 | not written yet |
-| A20 | 48/243 | not written yet |
-| A21 | 45/243 | not written yet |
-| A22 | 49/243 | not written yet |
-| A23 | 44/243 | not written yet |
-| A24 | 47/243 | not written yet |
-| A25 | 47/243 | not written yet |
-| A26 | 47/243 | not written yet |
-| A27 | 47/243 | not written yet |
-| A28 | 49/243 | not written yet |
-| A29 | 49/243 | not written yet |
-| A30 | 44/243 | not written yet |
-| A31 | 50/243 | not written yet |
-| A32 | 49/243 | not written yet |
+| A02 | 75/243 | STALE from main - must redo |
+| A03 | 65/243 | STALE from main - must redo |
+| A04 | 63/243 | STALE from main - must redo |
+| A05 | 70/243 | not written yet |
+| A06 | 57/243 | not written yet |
+| A07 | 56/243 | not written yet |
+| A08 | 57/243 | not written yet |
+| A09 | 56/243 | not written yet |
+| A10 | 56/243 | not written yet |
+| A11 | 55/243 | not written yet |
+| A12 | 55/243 | not written yet |
+| A13 | 56/243 | not written yet |
+| A14 | 63/243 | not written yet |
+| A15 | 60/243 | not written yet |
+| A16 | 44/243 | not written yet |
+| A17 | 54/243 | not written yet |
+| A18 | 55/243 | not written yet |
+| A19 | 56/243 | not written yet |
+| A20 | 56/243 | not written yet |
+| A21 | 55/243 | not written yet |
+| A22 | 58/243 | not written yet |
+| A23 | 55/243 | not written yet |
+| A24 | 54/243 | not written yet |
+| A25 | 57/243 | not written yet |
+| A26 | 57/243 | not written yet |
+| A27 | 57/243 | not written yet |
+| A28 | 57/243 | not written yet |
+| A29 | 58/243 | not written yet |
+| A30 | 54/243 | not written yet |
+| A31 | 60/243 | not written yet |
+| A32 | 59/243 | not written yet |
 
 Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missing people are simply new files to write.
 
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (6,039 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,743 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -127,35 +127,35 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
   "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123"],
   "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123"],
-  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-123"],
+  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
-  "A06": ["A06-111","A06-112","A06-113","A06-121"],
-  "A07": ["A07-111","A07-112","A07-113","A07-121"],
-  "A08": ["A08-111","A08-112","A08-113","A08-121"],
-  "A09": ["A09-111","A09-112","A09-113","A09-121"],
-  "A10": ["A10-111","A10-112","A10-113","A10-121"],
-  "A11": ["A11-111","A11-112","A11-113","A11-121"],
-  "A12": ["A12-111","A12-112","A12-113","A12-121"],
-  "A13": ["A13-111","A13-112","A13-113","A13-121"],
-  "A14": ["A14-111","A14-112","A14-113","A14-121","A14-123"],
-  "A15": ["A15-111","A15-112","A15-113","A15-121"],
+  "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
+  "A07": ["A07-111","A07-112","A07-113","A07-121","A07-122","A07-123"],
+  "A08": ["A08-111","A08-112","A08-113","A08-121","A08-122","A08-123"],
+  "A09": ["A09-111","A09-112","A09-113","A09-121","A09-122","A09-123"],
+  "A10": ["A10-111","A10-112","A10-113","A10-121","A10-122","A10-123"],
+  "A11": ["A11-111","A11-112","A11-113","A11-121","A11-122","A11-123"],
+  "A12": ["A12-111","A12-112","A12-113","A12-121","A12-122","A12-123"],
+  "A13": ["A13-111","A13-112","A13-113","A13-121","A13-122"],
+  "A14": ["A14-111","A14-112","A14-113","A14-121","A14-122","A14-123"],
+  "A15": ["A15-111","A15-112","A15-113","A15-121","A15-122","A15-123"],
   "A16": ["A16-111","A16-112","A16-113","A16-121"],
-  "A17": ["A17-111","A17-112","A17-113","A17-121"],
-  "A18": ["A18-111","A18-112","A18-113","A18-121"],
-  "A19": ["A19-111","A19-112","A19-113","A19-121"],
-  "A20": ["A20-111","A20-112","A20-113","A20-121"],
-  "A21": ["A21-111","A21-112","A21-113","A21-121"],
-  "A22": ["A22-111","A22-112","A22-113","A22-121"],
-  "A23": ["A23-111","A23-112","A23-113","A23-121"],
-  "A24": ["A24-111","A24-112","A24-113","A24-121"],
-  "A25": ["A25-111","A25-112","A25-113","A25-121"],
-  "A26": ["A26-111","A26-112","A26-113","A26-121"],
-  "A27": ["A27-111","A27-112","A27-113","A27-121"],
-  "A28": ["A28-111","A28-112","A28-113","A28-121"],
-  "A29": ["A29-111","A29-112","A29-113","A29-121"],
-  "A30": ["A30-111","A30-112","A30-113","A30-121"],
-  "A31": ["A31-111","A31-112","A31-113","A31-121","A31-122"],
-  "A32": ["A32-111","A32-112","A32-113","A32-121"]
+  "A17": ["A17-111","A17-112","A17-113","A17-121","A17-122","A17-123"],
+  "A18": ["A18-111","A18-112","A18-113","A18-121","A18-122","A18-123"],
+  "A19": ["A19-111","A19-112","A19-113","A19-121","A19-122","A19-123"],
+  "A20": ["A20-111","A20-112","A20-113","A20-121","A20-122","A20-123"],
+  "A21": ["A21-111","A21-112","A21-113","A21-121","A21-122","A21-123"],
+  "A22": ["A22-111","A22-112","A22-113","A22-121","A22-122","A22-123"],
+  "A23": ["A23-111","A23-112","A23-113","A23-121","A23-122"],
+  "A24": ["A24-111","A24-112","A24-113","A24-121","A24-122"],
+  "A25": ["A25-111","A25-112","A25-113","A25-121","A25-122","A25-123"],
+  "A26": ["A26-111","A26-112","A26-113","A26-121","A26-122","A26-123"],
+  "A27": ["A27-111","A27-112","A27-113","A27-121","A27-122","A27-123"],
+  "A28": ["A28-111","A28-112","A28-113","A28-121","A28-122","A28-123"],
+  "A29": ["A29-111","A29-112","A29-113","A29-121","A29-122","A29-123"],
+  "A30": ["A30-111","A30-112","A30-113","A30-121","A30-122","A30-123"],
+  "A31": ["A31-111","A31-112","A31-113","A31-121","A31-122","A31-123"],
+  "A32": ["A32-111","A32-112","A32-113","A32-121","A32-122","A32-123"]
 }
 ```
 
@@ -189,7 +189,7 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   The current machine uses `/workspace/Paradigm`, not `/home/user/Paradigm`. The committed workflow requires an
   external `agent`/`parallel`/`pipeline` runner which is unavailable here; it cannot run directly with Node. An adapted
   copy with current paths, fresh `USER_ASK` and `SCRATCH=/tmp/paradigm-repass` is kept outside the checkout, and two
-  supported assistant workers are writing unfinished A02 interviews. Existing passing files are skipped individually,
+  supported assistant workers began writing unfinished A02 interviews. Existing passing files are skipped individually,
   including within partial batches. Helpers, validation logs and initial passing-file hashes are outside the checkout
   under `/tmp/paradigm-repass`. Node v24.22.1 runs the data validators without npm installation or API credentials.
   Reusable instructions were saved in the cloud environment's `start_skill` draft; publication has not been performed.
@@ -205,6 +205,22 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   brackets pass, and launched one workflow run per job for A02-A32 with a rewritten `USER_ASK` (kept in the session's
   scratchpad copy of the script; the committed script is unchanged). The status table above is rebuilt from the
   validators on each checkpoint commit.
+
+- 2026-11-17: cloud checkpoint reconciled with concurrent remote commit `0bb34b6` (which reported 2,024
+  passing interviews). This session authored 15 passing A02 interviews in local commits `37ced25` and `87867bc`.
+  Six overlapped incoming files that independently passed, so those incoming versions were retained; both versions
+  remain in the merged history. The incoming `A02-13132` did not pass, so the freshly authored, reviewed local
+  Pedro interview was retained instead. Net addition over the remote checkpoint: **9 passing A02 interviews**.
+  All 32 interview validators and all 32 insights validators were re-run after reconciliation; the table and skip
+  lists above reflect that local combined tree, not an assumption that every remote file passes. A01 remains
+  243/243 with passing insights; A02-A04 insights remain stale and no unfinished job has reached 200 passes.
+  Only data files and this handoff differ from the incoming feature-branch checkpoint. No app code changed.
+  This session's writers are stopped to avoid duplicating the concurrently active run; reserve disjoint batches
+  before restarting. The next A02 gaps include `A02-13133` and `A02-23133`, subject to a fresh remote check.
+  `git push origin HEAD:refs/heads/claude/repass-3.1` was denied HTTP 403 by this environment's GitHub connection,
+  despite successful reads. The reconciled commits are local only until that connection has write access.
+  No merge to main was attempted; the full re-pass is unfinished. A verified incremental Git bundle is saved
+  outside the checkout at `/tmp/paradigm-repass/Paradigm-repass-3.1.bundle` for recovery if publication is blocked.
 
 ## Working agreement
 
