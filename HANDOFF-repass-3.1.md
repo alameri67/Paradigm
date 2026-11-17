@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,618 of 7,776 done.**
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,625 of 7,776 done.**
 (Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:24 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 51/243 | STALE from main - must redo |
-| A03 | 51/243 | STALE from main - must redo |
-| A04 | 47/243 | STALE from main - must redo |
+| A02 | 53/243 | STALE from main - must redo |
+| A03 | 53/243 | STALE from main - must redo |
+| A04 | 49/243 | STALE from main - must redo |
 | A05 | 54/243 | not written yet |
 | A06 | 43/243 | not written yet |
 | A07 | 41/243 | not written yet |
@@ -55,7 +55,7 @@ Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. 
 | A19 | 46/243 | not written yet |
 | A20 | 44/243 | not written yet |
 | A21 | 41/243 | not written yet |
-| A22 | 44/243 | not written yet |
+| A22 | 45/243 | not written yet |
 | A23 | 40/243 | not written yet |
 | A24 | 45/243 | not written yet |
 | A25 | 43/243 | not written yet |
@@ -125,8 +125,8 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 ```json
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
-  "A02": ["A02-111","A02-112","A02-113","A02-121"],
-  "A03": ["A03-111","A03-112","A03-113","A03-121"],
+  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-123"],
+  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-123"],
   "A04": ["A04-111","A04-112","A04-113","A04-121"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121"],
