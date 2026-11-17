@@ -29,13 +29,13 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,724 of 7,776 done.**
-(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:27 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,737 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 13:07 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 55/243 | STALE from main - must redo |
+| A02 | 68/243 | STALE from main - must redo |
 | A03 | 54/243 | STALE from main - must redo |
 | A04 | 53/243 | STALE from main - must redo |
 | A05 | 58/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (about 6,186 people).
+1. Finish the interviews for `A02`–`A32` (6,039 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -90,7 +90,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
    his/her right after a name at the start of a sentence trips the pronoun check, so those use the protocol's other
    form instead (`My wife Mei and I...`). Names at the start of a sentence, which the scanner below skips, were
    checked too. Original note:
-   Most A01 interviews were written before the brackets rule existed, so their quotes name Most A01 interviews were written before the brackets rule existed, so their quotes name
+   Most A01 interviews were written before the brackets rule existed, so their quotes name
    people without saying who they are. A scan found about 378 name mentions across 174 of the 243 A01 files.
    This needs judgment per quote, not a find-and-replace: some flagged lines are already fine
    (`"My sheepdog Nell..."`, `"Mr Dorran's son..."`) and must be left as they are. Only the quote strings change
@@ -183,6 +183,24 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
 
 ## Session log
 
+- 2026-11-17: current cloud session resumed at `6f3cd18` on `claude/repass-3.1`. Re-ran all 32 interview
+  validators and all 32 insights validators: the starting total of 1,724 passing interviews and every complete-batch
+  skip list matched this document. A01 interviews (243/243) and insights pass; its bracket pass was already committed.
+  The current machine uses `/workspace/Paradigm`, not `/home/user/Paradigm`. The committed workflow requires an
+  external `agent`/`parallel`/`pipeline` runner which is unavailable here; it cannot run directly with Node. An adapted
+  copy with current paths, fresh `USER_ASK` and `SCRATCH=/tmp/paradigm-repass` is kept outside the checkout, and two
+  supported assistant workers are writing unfinished A02 interviews. Existing passing files are skipped individually,
+  including within partial batches. Helpers, validation logs and initial passing-file hashes are outside the checkout
+  under `/tmp/paradigm-repass`. Node v24.22.1 runs the data validators without npm installation or API credentials.
+  Reusable instructions were saved in the cloud environment's `start_skill` draft; publication has not been performed.
+  The current user's final instruction authorizes merging into main **only when the full re-pass is finished**.
+  At the user's request, subsequent writing workers use the smaller `gpt-6-luna` model, with the same independent
+  validation and content review. A local Codex CLI smoke test could initialize using temporary writable state,
+  but its ChatGPT connection was denied by the network proxy (HTTP CONNECT 403). `chatgpt.com` was added to
+  the environment configuration draft; it is not yet applied or verified, and no unattended CLI workflow is running.
+  The current assistant workers use the supported collaboration tools instead. Temporary authentication links
+  created for that CLI test were removed; no credential values were copied into the repository or setup instructions.
+
 - 2026-11-17: second session took over. Re-checked the skip lists with the validator (they matched), did the A01
   brackets pass, and launched one workflow run per job for A02-A32 with a rewritten `USER_ASK` (kept in the session's
   scratchpad copy of the script; the committed script is unchanged). The status table above is rebuilt from the
@@ -190,6 +208,6 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
 
 ## Working agreement
 
-- Commit and push to `claude/repass-3.1` as you go; don't merge to `main`.
+- Commit and push to `claude/repass-3.1` as you go; merge to `main` only after the full re-pass is finished and checked, per the current user's final instruction.
 - The tree will not stay clean while agents are writing files — commits are snapshots of a moving target. That is fine.
 - `AGENTS.md` is rewritten by `next dev`; committing it along with the work keeps the tree tidy.
