@@ -1,6 +1,6 @@
 # Handoff: protocol 3.1 re-pass of the archetype interviews
 
-Branch: `claude/repass-3.1` (branched from `main`). Work was stopped partway on request.
+Branch: `claude/repass-3.1` (branched from `main`). Work resumed with parallel writers; see current reservations.
 **Do not merge into `main` until the re-pass is finished and checked.**
 
 ## The goal
@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,035 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 14:23 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,043 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 14:33 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 77/243 | STALE from main - must redo |
-| A03 | 65/243 | STALE from main - must redo |
-| A04 | 63/243 | STALE from main - must redo |
+| A02 | 81/243 | STALE from main - must redo |
+| A03 | 68/243 | STALE from main - must redo |
+| A04 | 64/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,741 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,733 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -236,12 +236,14 @@ writers work in parallel across three jobs (two per job), authoring one person a
 
 | Writer | Current person | Next reserved batch |
 |---|---|---|
-| `a02_small_first` | `A02-13231` | unfinished IDs in `A02-132`, then `A02-133` |
-| `a02_small_second` | `A02-23212` | unfinished IDs in `A02-232`, then `A02-233` |
-| `a03_early` | `A03-13123` | unfinished IDs in `A03-131`, then `A03-132` |
-| `a03_mid` | `A03-21111` | unfinished IDs in `A03-211`, then `A03-212` |
-| `a04_early` | `A04-13123` | unfinished IDs in `A04-131`, then `A04-132` |
-| `a04_mid` | `A04-21111` | unfinished IDs in `A04-211`, then `A04-212` |
+| `a02_small_first` | `A02-13232` | unfinished IDs in `A02-132`, then `A02-133` |
+| `a02_small_second` | `A02-23213` | unfinished IDs in `A02-232`, then `A02-233` |
+| `a03_early` | `A03-13132` | unfinished IDs in `A03-131`, then `A03-132` |
+| `a03_mid` | `A03-21112` | unfinished IDs in `A03-211`, then `A03-212` |
+| `a04_early` | `A04-13132` | unfinished IDs in `A04-131`, then `A04-132` |
+| `a04_mid` | `A04-21112` | unfinished IDs in `A04-211`, then `A04-212` |
+
+Checkpoint counts include only independently reviewed interviews included in commits; drafts still under review may already pass the structural validator. A read-only smaller-model reviewer helps inspect drafts while writers continue.
 
 The parent session owns validation, substantive review, the handoff, and commits/pushes. Existing passing
 files remain protected. Check remote progress before assigning more batches; no other session should write
