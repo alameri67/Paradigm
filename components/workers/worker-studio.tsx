@@ -377,6 +377,10 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
           interviewerNote: toPoints(sc?.fieldNote),
           moodByScenario: iv ? SCENARIOS.map((x) => ({ scenario: x.name, mood: MOOD_LABEL[iv.scenarios[x.code].mood] })) : [],
           jobHeadline: jobInsights?.scenarios[scenario]?.headline || null,
+          headline: iv?.headlineQuote || null,
+          about: toPoints(iv?.portrait),
+          biggestWorry: toPoints(iv?.biggestWorry),
+          whatWouldHelp: toPoints(iv?.whatWouldHelp),
         }
       : undefined,
   };
@@ -451,32 +455,20 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                   <WorkerCard w={worker} iv={iv} portrait={result?.portrait ?? null} scenario={scenario} onScenario={setScenario} />
                 )}
               </div>
-              <div className="ws-hero-text">
-                <div className="ws-moodline">
-                  <span className="ws-dot" style={{ background: MOOD_ACCENT[sc.mood] }} aria-hidden="true" />
-                  {MOOD_LABEL[sc.mood]} in {scenarioOf(scenario).name}
-                </div>
-                <p key={sc.quote} className="ws-quote swap">
-                  “{sc.quote}”
-                </p>
-                <p className="ws-quote-by">
-                  {worker.name}, {worker.job.toLowerCase()}
-                </p>
+              {/* Says, thinks, does, feels: a 2 × 2 beside the card, as tall as it. */}
+              <div className="ws-voices" aria-label="What they say, think, do and feel">
+                {VOICES.map(([k, label, Ico]) => (
+                  <div key={k} className="ws-voice">
+                    <h3 className="ws-voice-head">
+                      <span className="ws-voice-ico" aria-hidden="true">
+                        <Ico size={16} strokeWidth={1.8} />
+                      </span>
+                      {label}
+                    </h3>
+                    <Bullets key={String(sc[k])} className="swap" text={sc[k]} />
+                  </div>
+                ))}
               </div>
-            </section>
-
-            <section className="ws-voices" aria-label="What they say, think, do and feel">
-              {VOICES.map(([k, label, Ico]) => (
-                <div key={k} className="ws-voice">
-                  <h3 className="ws-voice-head">
-                    <span className="ws-voice-ico" aria-hidden="true">
-                      <Ico size={16} strokeWidth={1.8} />
-                    </span>
-                    {label}
-                  </h3>
-                  <Bullets key={String(sc[k])} className="swap" text={sc[k]} />
-                </div>
-              ))}
             </section>
 
             <NoteColumns text={sc.fieldNote} />

@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 // Paradigm: Clock and Plus are replaced by a scenario icon and a "read" icon.
-import { BookOpen, Copy, Hourglass, Zap } from "lucide-react";
+import { BookOpen, Copy, Hourglass, MessageCircle, Zap } from "lucide-react";
 
 interface ComponentProps {
   name?: string;
@@ -29,6 +29,9 @@ interface ComponentProps {
   /** What the second button copies, and its label. */
   copyText?: string;
   copyLabel?: string;
+  /** When given, the second button runs this (with a chat icon) instead of copying. */
+  onSecondary?: () => void;
+  secondaryLabel?: string;
 }
 
 export default function Component({
@@ -46,6 +49,8 @@ export default function Component({
   onPrimary,
   copyText,
   copyLabel = "Copy Email",
+  onSecondary,
+  secondaryLabel,
 }: ComponentProps) {
   const [copied, setCopied] = useState(false);
 
@@ -113,18 +118,28 @@ export default function Component({
             <Button
               variant="outline"
               onClick={onPrimary}
-              className="h-12 justify-start gap-3 rounded-2xl bg-white/50 hover:bg-white"
+              className="h-12 min-w-0 justify-center gap-1.5 rounded-2xl bg-white/50 px-2.5 text-[13px] hover:bg-white"
             >
-              <BookOpen className="h-4 w-4" /> {primaryLabel}
+              <BookOpen className="h-4 w-4 shrink-0" /> {primaryLabel}
             </Button>
 
-            <Button
-              variant="outline"
-              onClick={handleCopy}
-              className="h-12 justify-start gap-3 rounded-2xl bg-white/50 hover:bg-white"
-            >
-              <Copy className="h-4 w-4" /> {copied ? "Copied" : copyLabel}
-            </Button>
+            {onSecondary ? (
+              <Button
+                variant="outline"
+                onClick={onSecondary}
+                className="h-12 min-w-0 justify-center gap-1.5 rounded-2xl bg-white/50 px-2.5 text-[13px] hover:bg-white"
+              >
+                <MessageCircle className="h-4 w-4 shrink-0" /> {secondaryLabel}
+              </Button>
+            ) : (
+              <Button
+                variant="outline"
+                onClick={handleCopy}
+                className="h-12 min-w-0 justify-center gap-1.5 rounded-2xl bg-white/50 px-2.5 text-[13px] hover:bg-white"
+              >
+                <Copy className="h-4 w-4 shrink-0" /> {copied ? "Copied" : copyLabel}
+              </Button>
+            )}
           </div>
         </CardContent>
       </Card>

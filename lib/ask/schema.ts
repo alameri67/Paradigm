@@ -50,6 +50,11 @@ export const ScreenSchema = z.object({
       moodByScenario: z.array(z.object({ scenario: text(100), mood: text(40) })).max(5),
       /** The job-wide pattern for this scenario, when one has been written. */
       jobHeadline: text().nullable(),
+      /** Their story across the whole interview, for chatting with them. */
+      headline: text().nullable().optional(),
+      about: list().optional(),
+      biggestWorry: list().optional(),
+      whatWouldHelp: list().optional(),
     })
     .optional(),
 });
@@ -63,6 +68,8 @@ export const AskRequestSchema = z.object({
     .array(z.object({ role: z.enum(["user", "assistant"]), content: z.string().max(12000) }))
     .max(40),
   screen: ScreenSchema,
+  /** "ask" answers about the page; "persona" answers as the person on the details page. */
+  mode: z.enum(["ask", "persona"]).optional(),
   /** Sent along from the composer's toggles. The server doesn't use them yet. */
   search: z.boolean().optional(),
   research: z.boolean().optional(),

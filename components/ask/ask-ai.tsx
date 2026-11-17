@@ -7,6 +7,7 @@ import { AIComposer } from "@/components/ui/ai-composer";
 import { withBold } from "@/components/workers/bullets";
 import { ASK_MODELS, DEFAULT_MODEL, type AskErrorCode, type AskModelId } from "@/lib/ask/models";
 import { useScreen } from "@/lib/ask/screen-store";
+import { onPersonaChat } from "@/lib/ask/chat-store";
 
 /** Paradigm's defaults for the composer. */
 const PROMPTS = [
@@ -19,6 +20,8 @@ const DICTATION = [
   "What do family doctors plan to do if AGI comes in five years?",
   "Does having savings change how worried people are?",
 ];
+/** Starter questions when chatting with the person on the details page. */
+const PERSONA_PROMPTS = ["What worries you most about AI?", "What will you do first?", "What would actually help you?"];
 const MODELS = ASK_MODELS.map((m) => ({ name: m.name, note: m.note }));
 const idOf = (name: string) => ASK_MODELS.find((m) => m.name === name)?.id ?? DEFAULT_MODEL;
 const nameOf = (id: AskModelId) => ASK_MODELS.find((m) => m.id === id)!.name;
@@ -186,6 +189,8 @@ export function AskAI() {
   const [open, setOpen] = useState(false);
   const [model, setModel] = useState<AskModelId>(DEFAULT_MODEL);
   const [messages, setMessages] = useState<Message[]>([]);
+  // "ask": questions about the page. "persona": a chat with the person on the details page.
+  const [mode, setMode] = useState<"ask" | "persona">("ask");
   const screen = useScreen();
   const [draft, setDraft] = useState("");
   const intent = useRef<Intent>("type");
@@ -198,11 +203,23 @@ export function AskAI() {
 
   const close = useCallback(() => setOpen(false), []);
 
-  const openWith = useCallback((text: string, how: Intent) => {
-    setDraft(text);
-    intent.current = how;
-    setOpen(true);
-  }, []);
+  // Switching between asking about the page and chatting with the person starts a fresh conversation.
+  const openWith = useCallback(
+    (text: string, how: Intent, as: "ask" | "persona" = "ask") => {
+      if (as !== mode) {
+        inFlight.current?.abort();
+        setMessages([]);
+        setMode(as);
+      }
+      setDraft(text);
+      intent.current = how;
+      setOpen(true);
+    },
+    [mode],
+  );
+
+  // The details page's "Chat with …" button.
+  useEffect(() => onPersonaChat(() => openWith("", "type", "persona")), [openWith]);
 
   // Focus: into the message field on open (cursor at the end), back to the bar on close.
   // The bar's plus and mic carry on in the panel: the file picker opens, or dictation starts.
@@ -277,6 +294,7 @@ export function AskAI() {
           question: q,
           model,
           history,
+          mode: chatting ? "persona" : "ask",
           screen: screen ?? {
             page: typeof window !== "undefined" && window.location.pathname.startsWith("/details") ? "details" : "summary",
             scenario: { name: "Unknown", when: "", description: "The page was still loading." },
@@ -324,6 +342,9 @@ export function AskAI() {
     }
   };
 
+  const person = screen?.page === "details" ? screen.details : undefined;
+  const chatting = mode === "persona" && !!person;
+  const first = person?.name.split(" ")[0] ?? "";
   const where =
     screen?.page === "details"
       ? screen.details
@@ -353,7 +374,7 @@ export function AskAI() {
             <header className="ask-head">
               <div className="ask-head-text">
                 <h2 className="ask-title" id={titleId}>
-                  Ask AI
+                  {chatting ? `Chat with ${first}` : "Ask AI"}
                 </h2>
                 <p className="ask-where">{where}</p>
               </div>
@@ -364,6 +385,18 @@ export function AskAI() {
 
             <div className="ask-log" ref={logRef} aria-live="polite" aria-busy={messages.some((m) => m.role === "assistant" && m.status === "streaming")}>
               {messages.length === 0 ? (
+                chatting && person ? (
+                  <div className="ask-intro">
+                    <p>
+                      You&apos;re talking with {person.name}, {person.job.toLowerCase()}, about {screen?.scenario.name}. {first} answers from
+                      their own interview.
+                    </p>
+                    <p className="fg2">
+                      {first} is made up: a simulated person, played by an AI model. Change the scenario on the page and {first} talks about that
+                      one instead.
+                    </p>
+                  </div>
+                ) : (
                 <div className="ask-intro">
                   <p>Ask about what you&apos;re looking at. Answers come only from what this page shows.</p>
                   <p className="fg2">
@@ -371,6 +404,7 @@ export function AskAI() {
                     files don&apos;t change answers yet.
                   </p>
                 </div>
+                )
               ) : (
                 messages.map((m) =>
                   m.role === "user" ? (
@@ -380,7 +414,7 @@ export function AskAI() {
                     </div>
                   ) : (
                     <div key={m.id} className="ask-a">
-                      <span className="ask-sr">Answer: </span>
+                      <span className="ask-sr">{chatting ? `${first}: ` : "Answer: "}</span>
                       {m.text ? <Answer text={m.text} /> : null}
                       {m.status === "streaming" && !m.text && (
                         <p className="ask-thinking" role="status">
@@ -398,7 +432,7 @@ export function AskAI() {
             <div className="ask-foot">
               <AIComposer
                 variant="panel"
-                prompts={PROMPTS}
+                prompts={chatting ? PERSONA_PROMPTS : PROMPTS}
                 models={MODELS}
                 dictation={DICTATION}
                 defaultText={draft}

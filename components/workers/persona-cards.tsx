@@ -2,6 +2,7 @@
 
 import GlassProfileCard from "@/components/ui/glassmorphism-profile-card";
 import Weather, { type WeatherHour, type WeatherKind } from "@/components/ui/weather";
+import { openPersonaChat } from "@/lib/ask/chat-store";
 import { AnimatedFeatureCard } from "@/components/ui/feature-card-1";
 import { toPoints } from "./bullets";
 import {
@@ -63,11 +64,10 @@ interface PersonaProps {
   onReadInterview: () => void;
 }
 
-/** Glass profile card: portrait, name, job, mood in this scenario, and their one-line headline. */
+/** Glass profile card: portrait, name, job, mood in this scenario, their quote for it, and a way to chat with them. */
 export function GlassPersona({ worker, iv, scenario, portrait, onReadInterview }: PersonaProps) {
   const sc = iv.scenarios[scenario];
   const s = scenarioOf(scenario);
-  const headline = iv.headlineQuote ? `“${iv.headlineQuote}”` : plain(toPoints(iv.biggestWorry)[0] ?? "");
   return (
     <GlassProfileCard
       key={scenario}
@@ -77,11 +77,11 @@ export function GlassPersona({ worker, iv, scenario, portrait, onReadInterview }
       statusText={MOOD_LABEL[sc.mood]}
       accent={MOOD_ACCENT[sc.mood]}
       metaText={`${s.name} · ${s.when.charAt(0).toLowerCase()}${s.when.slice(1)}`}
-      glowText={headline}
+      glowText={`“${sc.quote}”`}
       primaryLabel="Read the interview"
       onPrimary={onReadInterview}
-      copyText={`“${sc.quote}” (${worker.name}, ${worker.job.toLowerCase()})`}
-      copyLabel="Copy quote"
+      secondaryLabel={`Chat with ${worker.name.split(" ")[0]}`}
+      onSecondary={openPersonaChat}
     />
   );
 }

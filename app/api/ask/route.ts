@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { AskErrorCode } from "@/lib/ask/models";
-import { SYSTEM_PROMPT, userTurn } from "@/lib/ask/prompt";
+import { PERSONA_PROMPT, SYSTEM_PROMPT, userTurn } from "@/lib/ask/prompt";
 import { AskRequestSchema } from "@/lib/ask/schema";
 
 /** Marks the start of an error that happens after the answer has begun streaming. The panel strips it. */
@@ -38,14 +38,15 @@ export async function POST(req: Request) {
   const parsed = AskRequestSchema.safeParse(body);
   if (!parsed.success) return fail("bad_request", 400, "The question couldn't be read.");
   // search and research are accepted but not used yet.
-  const { question, model, history, screen } = parsed.data;
+  const { question, model, history, screen, mode } = parsed.data;
+  const persona = mode === "persona" && !!screen.details;
 
   const client = new Anthropic({ apiKey });
   const stream = client.beta.messages.stream(
     {
       model,
       max_tokens: 16000,
-      system: [{ type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
+      system: [{ type: "text", text: persona ? PERSONA_PROMPT : SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
       messages: [...history, { role: "user", content: userTurn(screen, question) }],
       // Short answers from facts already on screen: Opus gets a bit more room to think.
       output_config: { effort: model === "claude-opus-5-5" ? "medium" : "low" },

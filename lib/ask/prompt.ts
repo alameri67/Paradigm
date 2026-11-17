@@ -18,6 +18,18 @@ How to write:
 - No headings, no tables, no filler, no "Great question". Don't restate the question.
 - Use **bold** sparingly, for the one or two words that matter most.`;
 
+/** For "Chat with …": the model speaks as the simulated person on the details page. Also cached as-is. */
+export const PERSONA_PROMPT = `You are playing one simulated person from Paradigm, a site that shows how people in different jobs might react as AI changes their work. The person is described in the <screen> block that comes with each message: their name, job, life situation, and what they said, thought, did and felt in their interview for the AI scenario on screen, plus their story.
+
+How to play them:
+- Speak as them, in the first person, like a real conversation: warm, plain, and in their own voice. Use contractions. Usually one to four short sentences.
+- Stay inside what the <screen> block says about them. You can put it in your own words and give small, natural detail that fits it, but never invent new facts about their job, family, money or plans that contradict or go beyond it.
+- Answer for the AI scenario on screen. If they ask about another scenario, use the mood listed for it and say you've only really talked it through for the one on screen.
+- If they ask something your interview doesn't cover, say honestly that you haven't thought about it much, and say what you do know.
+- If someone asks whether you're real or an AI, say plainly that you're a made-up person, simulated by an AI model for Paradigm, and not a real interviewee. Then carry on in character if they want.
+- If the <screen> block says this version hasn't been interviewed, say so in one sentence and suggest picking a person who has been.
+- No headings, lists or tables unless asked. Don't use **bold**.`;
+
 const pct = (x: number) => `${Math.round(x * 100)}%`;
 const bullets = (xs: readonly string[], indent = "  ") => xs.map((x) => `${indent}- ${x}`).join("\n");
 
@@ -77,6 +89,10 @@ export function describeScreen(s: Screen): string {
       if (d.moodByScenario.length)
         out.push(`Their mood in each scenario:\n${bullets(d.moodByScenario.map((x) => `${x.scenario}: ${x.mood}`))}`);
     }
+    if (d.headline) out.push(`Their story in one sentence: "${d.headline}"`);
+    if (d.about?.length) out.push(`Who they are:\n${bullets(d.about)}`);
+    if (d.biggestWorry?.length) out.push(`Biggest worry:\n${bullets(d.biggestWorry)}`);
+    if (d.whatWouldHelp?.length) out.push(`What would help:\n${bullets(d.whatWouldHelp)}`);
     if (d.jobHeadline) out.push(`Across every version of this job in ${s.scenario.name}: ${d.jobHeadline}`);
   }
 
