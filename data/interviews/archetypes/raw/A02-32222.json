@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for having me, Maya. I'm a researcher with the Work Futures Panel. We're independent, with no links to companies, unions or government, and nothing you say will be tied to your name. Could you describe a normal working day?"
+      "text": "I’m with the Work Futures Panel, an independent research group. We have no ties to employers, AI companies, unions, parties or government, and we sell nothing. What you say stays confidential. What does a normal shift look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I run a blast-hole drill at the nickel mine outside Saltmarsh. The drill makes the holes the explosives go in, so if my holes are wrong, the whole blast is wrong. I drive in two hours on a Monday, stay in the camp, and drive home Thursday night."
+      "text": "I’m 58 and drive a haul truck at a large open mine. I check the tyres and brakes before dawn, carry rock from the face to the crusher, and write down anything the truck does strangely. I like the clear rhythm of a good run, but the cab steps feel taller at the end of twelve hours."
     },
     {
       "speaker": "interviewer",
-      "text": "What's the part of the job you like best, and what wears you down?"
+      "text": "Who is at home when you finish?"
     },
     {
       "speaker": "persona",
-      "text": "I like the order of it. There's a pattern on the screen, forty holes in a grid, and I work through it and tick them off in my little notebook as well, because I don't trust a screen alone. What wears me down is the drive home on Thursday when I'm tired. Greg, my husband, retired from electrical work last year, so now he waits up with dinner, which is nice."
+      "text": "My partner, Niko, makes supper on days I’m on the early shift. Our two children are grown and live on their own, so we’re trying to keep a modest retirement fund for ourselves. We’ve saved about four months of expenses, and I’d like another year or two of steady wages before making any promises about stopping."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's what I expected, mostly useful for the paperwork. I wouldn't post about it, I'd just say it over dinner at the camp."
+          "text": "I’d tell the crew that a faster form is welcome if the brakes still get a real inspection. The mine has bought clever systems before, and the dust never seemed to read the brochure. My hands and judgement are still on the truck."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it's good news. I'm planning to finish at sixty-three when my retirement savings and Greg's pension line up, and this keeps that on track."
+          "text": "Privately, I’d be relieved to keep the same roster and pay while Niko and I add to our savings. Four months of bills is a cushion, but it isn’t a retirement plan. I still wonder how long my knees will take the climb into the cab."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing much changes. I'd keep drilling, keep saving the bit we save, and maybe use that chatbot my daughter showed me a bit more for the garden and the holiday planning."
+          "text": "I’d keep driving and use the current maintenance checklist each shift. This winter I’d put an extra amount from each pay packet into the retirement account, provided our bills stay where they are. In the first year after the small software changes, I’d check its inspection suggestions against what I can see myself."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +68,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Settled. Like the end of a long shift when the pattern's done."
+          "text": "I’d feel fairly settled about the job and mildly annoyed by another screen. There’s some comfort in knowing the truck still needs a driver. My body, rather than AI, would be the thing on my mind."
         },
         {
           "speaker": "interviewer",
-          "text": "You said 'mostly'. What would the mine still do with AI in this picture?"
+          "text": "How much would you put away?"
         },
         {
           "speaker": "persona",
-          "text": "They bought two self-driving drills last year, and they'd keep them. They do the simple patterns on the flat benches, and I get the awkward edges. That suits me fine."
+          "text": "I’d start with fifty from each pay packet and see whether we can keep doing it. We finished helping our son with a deposit last year, so that money can finally stay with us."
         },
         {
           "speaker": "interviewer",
-          "text": "How did you find the chatbot when your daughter showed you?"
+          "text": "What do you mean by checking the software?"
         },
         {
           "speaker": "persona",
-          "text": "Useful for some things. It told me what to plant in the shady bit by the shed, and Jess checked it. I wouldn't ask it about money or my health, not yet."
+          "text": "If a screen says a tyre is fine and I see a split, I park the truck. I’d tell the fitter what I found and write it in the log as usual."
         }
       ],
-      "say": "I'd say it's what I expected and mostly useful for paperwork. I wouldn't post about it; I'd just say it over dinner at the camp.",
-      "think": "Privately it's good news, because I plan to finish at sixty-three when my retirement savings and Greg's pension line up. This keeps that plan on track.",
-      "do": "Keeps drilling and saving at the same rate. Uses the chatbot her daughter showed her a bit more for garden and holiday planning.",
-      "feel": "Settled, like the end of a shift when the pattern is done.",
+      "say": [
+        "I’d welcome **faster forms** while insisting that real brake checks stay with the driver.",
+        "My truck still needs **human judgement** on a dusty shift."
+      ],
+      "think": [
+        "I’d value **steady pay** while Niko and I build our four-month cushion.",
+        "My **knees** worry me more than routine software changes."
+      ],
+      "do": [
+        "Keep driving the **haul truck** and complete each maintenance check.",
+        "Put **fifty** from each pay packet into retirement savings if bills permit.",
+        "Check software suggestions against visible **truck faults** during the first year."
+      ],
+      "feel": [
+        "**Settled** about work, with mild irritation at another screen."
+      ],
       "mood": "calm",
-      "quote": "They do the simple patterns on the flat benches, and I get the awkward edges. That suits me fine.",
-      "fieldNote": "Maya is calm and orderly, and the plateau fits her retirement timetable. She already works next to two self-driving drills and is comfortable sharing the work. She uses AI for low-stakes tasks and draws a clear line at money and health.",
+      "quote": "The mine has bought clever systems before, and the dust never seemed to read the brochure.",
+      "fieldNote": [
+        "Maya is more concerned about her **knees** than modest AI changes; the cab climb already taxes her after a long shift.",
+        "Her willingness to use inspection software is **conditional** on keeping a direct look at the truck and logging faults."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep driving the haul truck and checking brakes each shift",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put fifty from each pay packet into retirement savings if bills permit",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "At work I'd say let's see the numbers before we panic. The self-driving drills are good, but they still need someone to watch them and fix the bad holes."
+          "text": "I’d say the planning office will have a harder adjustment than the drivers at first. If dispatch software sends us odd routes, somebody on shift must be allowed to call it out. We can use a tool without pretending it knows the ground."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, drilling is one of the first jobs to go at our mine, because it's already half done. If they buy six more of those drills, they need maybe two of us watching screens instead of eight of us in cabs. I'm average, so it's a coin toss."
+          "text": "The worry is that fewer office people means the rest of us get watched against a tighter timetable. I’m mid-level, not the person who decides how many trucks run. Robots are slower in this picture, but at 58 a few years pass quickly."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask my supervisor, Priya, in the first month what the plan is and whether I can learn to supervise the self-driving drills. I'd use the chatbot to read up on how they work before the course. And we'd put an extra three hundred a month aside so I could take a lower-paid role if I had to."
+          "text": "I’d ask our shift supervisor to show us how the new dispatch plan is checked, and I’d try the route tool alongside the printed map. I’d keep driving through the first year and note the runs where its timings miss the road conditions. I’d also stop replacing my old car this year and send that money into savings."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +160,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but in a way I can handle. I like knowing what's coming."
+          "text": "I’d be uneasy, especially for the people who schedule and buy our parts. I’d still expect my own wages for now, so I could sleep. It would feel like the beginning of a longer argument about who sets the pace."
         },
         {
           "speaker": "interviewer",
-          "text": "You said 'a coin toss'. What would decide it?"
+          "text": "What would an odd route look like?"
         },
         {
           "speaker": "persona",
-          "text": "Who's been friendly with the supervisor, honestly, and who's put their hand up first. That's why I'd go to Priya early. I'm not pushy, but I'm not daft either."
+          "text": "Last wet season the south ramp had standing water for three days. A route that treats that road as dry can cost a driver half an hour, and I’d bring the run sheet to the supervisor."
         },
         {
           "speaker": "interviewer",
-          "text": "Who else at the drill would you worry about?"
+          "text": "You sound confident about wages but are delaying the car. Why?"
         },
         {
           "speaker": "persona",
-          "text": "Ken, he's sixty-one and he's been drilling forty years. He'd be devastated. And the young ones who only came for the money, they'd go to another mine, there's a few nearby."
+          "text": "Our car runs fine for now, and I want the choice to replace it later. I’m not claiming my job is about to disappear; I just don’t like losing a choice."
         }
       ],
-      "say": "I'd say let's see the numbers before we panic, because the self-driving drills still need someone to watch them and fix bad holes.",
-      "think": "Privately I think drilling is one of the first jobs to go at our mine because it's already half automated. If they buy more self-driving drills, two people at screens could replace eight in cabs, and for me it's a coin toss.",
-      "do": "Asks her supervisor in the first month about the plan and to be trained to supervise the self-driving drills. Reads up on them with a chatbot beforehand and saves an extra three hundred a month in case she takes a lower-paid role.",
-      "feel": "Anxious but manageable, because she likes knowing what's coming.",
-      "mood": "anxious",
-      "quote": "I'm not pushy, but I'm not daft either.",
-      "fieldNote": "Maya is under real pressure even in the moderate scenario, because her own task is already half automated at her site. Her response is methodical: talk to the supervisor early, read up, build a small buffer. She sees seniority politics clearly and refuses to be left out of it.",
+      "say": [
+        "I’d say **dispatch staff** face the first change while drivers still work the trucks.",
+        "I’d want crews to challenge **bad routes** without being blamed."
+      ],
+      "think": [
+        "I fear fewer planners could mean **tighter timetables** for my shifts.",
+        "Robots arrive later here, but my remaining **working years** are limited."
+      ],
+      "do": [
+        "Ask the supervisor how the **dispatch tool** checks its routes.",
+        "Drive the truck and record **bad timings** during its first year.",
+        "Delay replacing our **car** and direct that money into savings."
+      ],
+      "feel": [
+        "**Uneasy** about the office team and future pace, while expecting my wages for now."
+      ],
+      "mood": "uneasy",
+      "quote": "We can use a tool without pretending it knows the ground.",
+      "fieldNote": [
+        "Maya expects **desk changes** to reach the mine before robots reach the truck, and she sees pressure moving toward drivers.",
+        "She postpones a **car purchase** to preserve choices, although she does not forecast immediate lost pay."
+      ],
       "actions": [
-        "retrain",
         "learn-ai",
+        "keep-going",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Try the new dispatch route tool beside the printed map",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep driving the haul truck and recording poor route timings",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Delay replacing the family car and move that money into savings",
+          "tag": "save-more"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This next one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's too fast and the government needs to slow it down or cushion it. I'm not one for protests, but I'd sign a petition for that."
+          "text": "I’d tell the crew that thinking software in 2028 could rewrite dispatch, but the trucks still need drivers until robots can handle them around 2031. We should ask for the timetable in writing, not guess from rumours. I wouldn’t promise anyone a place after that."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +241,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Two years and I'm sixty, three years before I planned to stop. Even the screen job goes if the machines can watch themselves. We've got around five months saved, and Greg's pension, so we wouldn't starve, but the plan would be broken."
+          "text": "I would be 60 when full AGI arrives and about 63 when the robot part reaches my cab. If the mine can run trucks without us then, I could lose several years of wages I expected to save. Four months of expenses would vanish quickly if Niko and I had to live on it."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +249,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd cut the extras that week: no new caravan, which we were looking at, and fewer trips to see our son in the city. I'd take a redundancy if it came, and look at drawing my retirement savings early, even with the hit. We'd lean on Greg's pension and probably sell the camper trailer."
+          "text": "I’d speak to the supervisor this month about whether the maintenance crew has openings and what certificates they require. I’d check actual course fees before I enroll; I won’t empty our cushion on a guess. In the first year after 2028, I’d keep driving if shifts remain, apply for any advertised maintenance trainee place, and stop the small weekend trips."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +257,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd be doing sums at the kitchen table at midnight, which I never do."
+          "text": "I’d feel anxious about the gap between my planned last shift and the one the mine might choose. There’s a short window to learn, but I still have paid work in this picture for a while. I’d be cross if management called that plenty of time."
         },
         {
           "speaker": "interviewer",
-          "text": "What do the sums look like at midnight?"
+          "text": "Would maintenance work be safe once robots arrive?"
         },
         {
           "speaker": "persona",
-          "text": "Greg's pension covers the rates, the power and food, more or less. My savings would cover the rest for about a year. After that, it's dipping into retirement money that's meant to last twenty years."
+          "text": "I don’t know. A robot fleet will still need repairs, but I cannot assume the mine will hire me to do them. That is why I’d apply for a real opening rather than call a course a job."
         },
         {
           "speaker": "interviewer",
-          "text": "What does only two years' warning take away from you, compared with longer?"
+          "text": "What would you tell Niko at home?"
         },
         {
           "speaker": "persona",
-          "text": "The bit where I watch and learn and then step in. I'm a once-I've-seen-it-work person. With two years, by the time I've seen it work, it's already working without me."
+          "text": "I’d tell my partner Niko we may need to postpone replacing the kitchen cabinets and keep the savings untouched for bills. Our children have their own rent to meet, and I don’t want to count on them."
         }
       ],
-      "say": "I'd say it's too fast and the government needs to slow it down or cushion it. I'm not one for protests, but I'd sign a petition.",
-      "think": "Privately I'd be sixty, three years short of my plan, and even the screen job would go. With five months saved and Greg's pension we wouldn't starve, but the plan would be broken.",
-      "do": "Drops the planned caravan and cuts trips to see her son straight away. Takes redundancy if offered, considers drawing retirement savings early despite the penalty, leans on her husband's pension and sells the camper trailer.",
-      "feel": "Alarmed, doing sums at the kitchen table at midnight for the first time.",
-      "mood": "alarmed",
-      "quote": "With two years, by the time I've seen it work, it's already working without me.",
-      "fieldNote": "For a careful, wait-until-proven person, two years is the worst shape of change: no time to watch before it arrives. Her husband's pension gives her a floor but not a plan. She is moderate in public, signing petitions rather than protesting.",
+      "say": [
+        "I’d tell colleagues **dispatch** may change in 2028 while truck robots follow around 2031.",
+        "I’d ask management for a written **robot timetable** before trusting rumours."
+      ],
+      "think": [
+        "At **63**, I might lose years of pay I planned to save.",
+        "Our **four-month cushion** cannot cover a long spell without wages."
+      ],
+      "do": [
+        "Ask the supervisor about **maintenance openings** and certificate costs this month.",
+        "Keep driving through 2029 if shifts remain and apply for **trainee places**.",
+        "Stop **weekend trips** during the first year after AGI."
+      ],
+      "feel": [
+        "**Anxious** about a possibly shortened career, with some time and paid work left to act."
+      ],
+      "mood": "anxious",
+      "quote": "I could lose several years of wages I expected to save.",
+      "fieldNote": [
+        "Maya distinguishes the **2028 dispatch shift** from the more direct threat to her driving income around 2031.",
+        "She will seek an **advertised maintenance opening** but doubts that a course alone could guarantee work in a robot fleet."
+      ],
       "actions": [
-        "cut-spending",
-        "sell-or-exit",
-        "retire-early",
-        "seek-support"
+        "change-job",
+        "keep-going",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Apply for an advertised maintenance trainee place after checking certificate costs",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep driving the haul truck through 2029 if shifts remain",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Stop weekend trips after AGI arrives to protect the bill cushion",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is short, but it's enough to sort something out if people get on with it. I'd tell the younger ones at camp to start looking now."
+          "text": "I’d say the five-year warning lets crews ask better questions, but it doesn’t turn a robot into a pension. Thinking AI would arrive in 2031, when I’m 63, and truck robots around 2034. I’d want the mine to tell drivers what work remains before we make household decisions."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +338,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years gets me to sixty-three, which is exactly my plan. So privately, if I keep my job until then, I'm fine. The risk is them cutting drill crews in year two."
+          "text": "I would be 66 by the robot date, so this is closer to when I hoped to step back anyway. I cannot assume a pension payment or a safe last job, though. Losing the last couple of wage years would still take a bite out of what Niko and I can afford."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +346,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the supervisor training on the self-driving drills this year, so I'm one of the last ones they let go. We'd save an extra few hundred a month and pay off the car. And I'd write a plan in my notebook for if I'm let go at sixty-one."
+          "text": "I’d request the mine’s written retirement and redundancy terms now, then sit with Niko and list our monthly essentials. Over the next five years I’d save the car replacement money and ask about a shorter driving roster as I get older. In the first year after 2031 I’d continue on the truck if the roster exists, and compare any offered exit terms with our actual bills."
         },
         {
           "speaker": "interviewer",
@@ -256,47 +354,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, still, but less. I've got a list, and a list helps."
+          "text": "I’d be uneasy rather than desperate, because I can use those years to make the numbers real. The unknown part is whether I get to choose my final shift. I’d rather hear an honest no than a cheerful promise."
         },
         {
           "speaker": "interviewer",
-          "text": "What's on the plan for if you're let go at sixty-one?"
+          "text": "What would be on that essentials list?"
         },
         {
           "speaker": "persona",
-          "text": "Redundancy money into the offset account, Greg's pension for the bills, maybe part-time work at the hardware store in Saltmarsh. It's not exciting, but it adds up."
+          "text": "Heat, food, the car, and the medicine Niko takes each month would go first. The grown children can pay their own way now, though we still like visiting them."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Jess and your son?"
+          "text": "Would you accept a shorter roster with less pay?"
         },
         {
           "speaker": "persona",
-          "text": "Jess is a vet nurse, and I think animals will want people for a while. Ben's an accountant in the city, and I'd tell him he's probably more at risk than me, the poor thing."
+          "text": "Only after I see the figures next to our bills. My knees might welcome shorter weeks, but I won’t volunteer for a cut just because a manager says it is sensible."
         }
       ],
-      "say": "I'd say five years is short but enough to sort something out if people get on with it. I'd tell the younger ones at camp to start looking now.",
-      "think": "Privately five years takes me exactly to my planned finish at sixty-three. The risk is drill crews being cut in year two.",
-      "do": "Takes supervisor training on the self-driving drills this year to be among the last let go. Saves a few hundred extra a month, pays off the car, and writes a fallback plan for being let go at sixty-one, including part-time work at the local hardware store.",
-      "feel": "Still anxious but less so, because having a list helps.",
-      "mood": "anxious",
-      "quote": "It's not exciting, but it adds up.",
-      "fieldNote": "Five years lines up almost exactly with Maya's retirement plan, and she responds by making a written fallback. She's pragmatic about modest work after the mine. Her concern for her accountant son shows how she reads AI risk across jobs.",
+      "say": [
+        "I’d say a **five-year warning** should bring written answers about remaining driving work.",
+        "A robot is no substitute for a known **retirement figure**."
+      ],
+      "think": [
+        "At **66** when robots arrive, I may be close to stopping but still need those wages.",
+        "I cannot assume a **pension** or a safe last post."
+      ],
+      "do": [
+        "Request written **retirement terms** and list household essentials with Niko now.",
+        "Save the delayed **car money** across the warning years.",
+        "Drive in **2032** if shifts exist and compare any exit offer with bills."
+      ],
+      "feel": [
+        "**Uneasy** about who chooses my final shift, but able to plan against real figures."
+      ],
+      "mood": "uneasy",
+      "quote": "I’d rather hear an honest no than a cheerful promise.",
+      "fieldNote": [
+        "The later robot date meets Maya near her hoped-for **retirement**, changing the scale of the wage loss rather than removing it.",
+        "She needs **written terms** and actual monthly costs before considering fewer shifts or any exit offer."
+      ],
       "actions": [
-        "retrain",
-        "save-more",
-        "retire-early"
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Continue driving the mine truck in 2032 if shifts remain",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save the delayed car replacement money across the warning years",
+          "tag": "save-more"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "And the last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough time for the country to plan, so it should. I'd say it in a sensible way, not a scary one."
+          "text": "I’d tell the crew a decade is long enough to plan if the mine shares real dates. Full thinking AI in 2036 would change the office before the trucks, and truck robots arrive around 2039. By then I’d hope to have left the cab on my own terms."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +430,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me, it's fine. I'd be sixty-eight and retired five years by then. I'd keep my notebook plan anyway, out of habit."
+          "text": "I’d be 68 at the thinking AI date and 71 at the robot date. I do not plan to drive until 71, but I also don’t know yet what our savings and retirement income will allow at 68. The longer warning gives Niko and me room to make that decision from figures rather than fear."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +438,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd work to sixty-three as planned, maybe do the supervisor course if offered, and keep saving. I'd tell Ben to think about his own path while there's time."
+          "text": "I’d get a current account of my retirement savings this winter and revisit it with Niko each year. I’d keep paid driving shifts while my health permits and save what we can from them. In the first year after 2036, I’d take stock of our income and stop driving if we can meet our monthly bills; if not, I’d ask for a lighter roster while it exists."
         },
         {
           "speaker": "interviewer",
@@ -320,35 +446,60 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. I'd be watching it from the garden."
+          "text": "I’d feel more settled than in the fast picture. The cab may be gone for drivers eventually, but I could reach a normal stopping point before the robots. The thought of my knees getting older is still there."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything in the ten-year version you'd still want to change now?"
+          "text": "What would tell you the time is right to stop?"
         },
         {
           "speaker": "persona",
-          "text": "Probably nothing big. Maybe I'd buy the caravan after all, since I'd know I'm safe. Greg would like that."
+          "text": "I’d need the monthly figures to cover housing, medicine, food and a little travel to see the children. A date on a calendar alone would not pay those bills."
         },
         {
           "speaker": "interviewer",
-          "text": "You've been careful through all of these. Does that change at all with ten years?"
+          "text": "Does that mean you would drive to 71 if the money falls short?"
         },
         {
           "speaker": "persona",
-          "text": "No, I'm careful by nature. But with ten years, careful is enough. With two, careful is just slow."
+          "text": "I hope not. I’d ask about lighter shifts before then and revise the household spending, but I cannot promise my body will let me stay."
         }
       ],
-      "say": "I'd say ten years is enough time for the country to plan, so it should. I'd say it in a sensible way, not a scary one.",
-      "think": "Privately it's fine, because I'd be sixty-eight and retired five years by then. I'd keep my notebook plan anyway out of habit.",
-      "do": "Works to sixty-three as planned, perhaps takes the supervisor course if offered, and keeps saving. Encourages her son to think about his own career path while there's time.",
-      "feel": "Calm, picturing watching it from her garden.",
-      "mood": "calm",
-      "quote": "With ten years, careful is enough. With two, careful is just slow.",
-      "fieldNote": "Maya's age carries her past the ten-year end point, and she even considers buying the caravan she'd dropped in faster scenarios. Her line about careful being enough over ten years but too slow over two neatly sums up how timing shapes her. Her worry passes to her son's office job.",
+      "say": [
+        "I’d say a **decade** gives the mine time to share useful dates.",
+        "I hope to leave the **truck cab** before robots reach it around 2039."
+      ],
+      "think": [
+        "At **68** in 2036, I need real income figures before deciding to stop.",
+        "I do not expect to drive to **71**, but savings may constrain the choice."
+      ],
+      "do": [
+        "Review **retirement savings** with Niko each year.",
+        "Keep paid truck shifts while **health** and the roster permit.",
+        "Check **2037 bills** and stop driving only if household income covers them."
+      ],
+      "feel": [
+        "**Settled** by the longer warning, with some concern about health and retirement income."
+      ],
+      "mood": "uneasy",
+      "quote": "A date on a calendar alone would not pay those bills.",
+      "fieldNote": [
+        "Maya sees the **2039 robot date** as likely to come after her preferred driving years, although her retirement finances remain uncertain.",
+        "Her decision to stop depends on **monthly income** and health, and she would request lighter shifts if she still needs wages."
+      ],
       "actions": [
         "keep-going",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep paid truck shifts while health and the roster permit",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save part of driving pay after reviewing retirement figures yearly",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -359,19 +510,28 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. What would help is being allowed to take my retirement savings at sixty without a penalty if my job goes to a machine, and a decent redundancy. I don't need much, just the plan back."
+      "text": "The 2028 one worries me most, because the truck robots could reach me at 63, before I’m ready to stop earning. A written timetable, real access to maintenance vacancies and clear exit terms would help. I can do some planning with those; I cannot do much with a rumour."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe the drive. If the mine runs itself, nobody will maintain the road to Saltmarsh like they do now. The mine pays for a lot of things people don't notice until they're gone."
+      "text": "Ask what happens to the drivers whose bodies have already done decades of shifts. My knees are not a dramatic story, but they matter when somebody says we can all simply retrain. I would want any new job to be one I can actually do."
     }
   ],
-  "headlineQuote": "I don't need much, just the plan back.",
-  "portrait": "Maya Petrov is a 58-year-old blast-hole drill operator at a nickel mine near Saltmarsh, who drives in for the week and keeps a paper notebook alongside the drill's screen. She uses a chatbot now and then for the garden and is open to change once she has seen it work. She is calm on the plateau, anxious under steady change because her own task is already half done by self-driving drills, and alarmed if AGI comes in two years and breaks her retirement plan. With five years she makes a written fallback, and with ten she is calm and might even buy the caravan.",
-  "biggestWorry": "AGI by 2028, because she would lose her job at sixty, three years before she planned to stop, with no time to watch and step in.",
-  "whatWouldHelp": "Access to her retirement savings at sixty without a penalty if a machine takes her job, plus a decent redundancy."
+  "headlineQuote": "My knees are not a dramatic story, but they matter when somebody says we can all simply retrain.",
+  "portrait": [
+    "Maya, **58**, drives a haul truck and checks its condition on long shifts at a large mine.",
+    "She has a **four-month cushion** and hopes for more paid years before retiring with Niko.",
+    "She tries proven tools, yet insists a driver can challenge **bad routes** and faulty inspection advice.",
+    "Fast truck robots threaten wages she expects; a **decade of warning** lets her weigh income against health."
+  ],
+  "biggestWorry": [
+    "The **2028 picture** worries Maya most because truck robots around 2031 could cut off wages at age 63."
+  ],
+  "whatWouldHelp": [
+    "A written **robot timetable**, genuine maintenance vacancies and clear exit terms would let her plan."
+  ]
 }
