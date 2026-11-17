@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Particles that shoot out of the middle of the logo's diagonal split. They run along the cut, both ways, with a
- * little spread off it. `level` (0–1) follows the AI scenario: none at the mildest stop, a steady stream at the most
+ * Dust that drifts out of the middle of the logo's diagonal split. It runs along the cut, both ways, with a
+ * little spread off it, rising slightly as it fades. `level` (0–1) follows the AI scenario: none at the mildest stop, a steady stream at the most
  * extreme. Paused under reduced motion and while the tab is hidden.
  */
 export function SplitSparks({ level }: { level: number }) {
@@ -24,7 +24,7 @@ export function SplitSparks({ level }: { level: number }) {
     type P = { x: number; y: number; vx: number; vy: number; life: number; max: number; r: number; c: string };
     const parts: P[] = [];
     let w = 0, h = 0, dpr = 1, raf = 0, last = performance.now(), carry = 0;
-    // The cut, in the name box: from 85% down on the left to 21.5% down on the right (matches the clip-paths).
+    // The cut, in the name box: from 68% down on the left to 32% down on the right (matches the clip-paths).
     const pad = 40;
     const resize = () => {
       const r = box.getBoundingClientRect();
@@ -42,27 +42,28 @@ export function SplitSparks({ level }: { level: number }) {
 
     const spawn = () => {
       const bw = w - pad * 2, bh = h - pad * 2;
-      const dx = bw, dy = -0.635 * bh;
+      const dx = bw, dy = -0.36 * bh;
       const len = Math.hypot(dx, dy);
       const ux = dx / len, uy = dy / len;
       // Born near the middle of the cut, a little either side of it.
       const t = (Math.random() - 0.5) * 0.16;
       const x = pad + bw / 2 + ux * t * len;
-      const y = pad + bh * 0.535 + uy * t * len;
+      const y = pad + bh * 0.5 + uy * t * len;
       const dir = Math.random() < 0.5 ? -1 : 1;
-      const speed = 60 + Math.random() * 140 * (0.5 + levelRef.current);
+      // Chosen in the logo lab: dust, speed 0.5×, size 1.2×, amount 2.7×, black.
+      const speed = (60 + Math.random() * 140 * (0.5 + levelRef.current)) * 0.5 * 0.45;
       const spread = (Math.random() - 0.5) * 0.5;
       const vx = (ux * dir - uy * spread) * speed;
       const vy = (uy * dir + ux * spread) * speed;
-      const max = 0.5 + Math.random() * 0.7;
-      parts.push({ x, y, vx, vy, life: 0, max, r: 0.8 + Math.random() * 1.6, c: Math.random() < 0.65 ? "224,83,46" : "13,13,13" });
+      const max = 1.2 + Math.random() * 0.7;
+      parts.push({ x, y, vx, vy, life: 0, max, r: (0.6 + Math.random()) * 1.2, c: "13,13,13" });
     };
 
     const frame = (now: number) => {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       const lv = levelRef.current;
-      carry += dt * lv * 90;
+      carry += dt * lv * 90 * 2.7;
       while (carry >= 1) {
         spawn();
         carry -= 1;
@@ -76,8 +77,9 @@ export function SplitSparks({ level }: { level: number }) {
           parts.splice(i, 1);
           continue;
         }
-        p.vx *= 0.985;
-        p.vy *= 0.985;
+        p.vx *= 0.97;
+        p.vy *= 0.97;
+        p.vy -= 12 * dt;
         p.x += p.vx * dt;
         p.y += p.vy * dt;
         const a = 1 - p.life / p.max;
