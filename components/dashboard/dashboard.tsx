@@ -11,7 +11,7 @@ import { DashIcon, hasDashIcon } from "./icons";
 import { MoodRadar } from "./mood-radar";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
-import { ACTION_LEVELS, actionLevel, contrast, pointsFor, summarize, type Contrast, type Segment, type Summary } from "@/lib/workers/dashboard";
+import { ACTION_LEVELS, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
 import {
   ACTION_LABEL,
   MOODS,
@@ -69,18 +69,19 @@ function CardHead({ icon, title, note }: { icon: "actions" | "mood" | "jobs" | "
 /** "life stage, work standing and outlook" */
 const listOf = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
 
-function End({ seg, side }: { seg: Segment; side: "low" | "high" }) {
+function End({ seg, side, named }: { seg: Segment; side: "low" | "high"; /** From the job summary, when one job is picked. */ named?: { name: string; story: string } }) {
   return (
     <div className={"db-end db-end-" + side}>
       <div className="db-end-head">
         {seg.moods.map((m) => (
           <span key={m} className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
         ))}
-        <span className="db-end-title">{side === "low" ? "Least worried" : "Most worried"}</span>
+        <span className="db-end-title">{named ? named.name : side === "low" ? "Least worried" : "Most worried"}</span>
         <span className="db-end-n">
           {people(seg.n)}, {listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}
         </span>
       </div>
+      {named && <p className="db-end-story">{named.story}</p>}
       <div className="db-end-block">
         <div className="db-end-label">Who they are</div>
         <ul>
@@ -116,20 +117,40 @@ function End({ seg, side }: { seg: Segment; side: "low" | "high" }) {
 }
 
 /** The least and most worried ends of the selection, side by side, with what separates them on top. */
-function Ends({ c }: { c: Contrast }) {
+function Ends({ c, named }: { c: Contrast; named?: { least: { name: string; story: string }; most: { name: string; story: string } } }) {
   return (
     <section className="db-card db-ends" aria-label="Least and most worried">
       <CardHead icon="mood" title="Least and most worried" note={`Out of ${people(c.n)}`} />
       {c.headline && <p className="db-sowhat">{c.headline}</p>}
       <div className="db-ends-row">
-        <End seg={c.low} side="low" />
-        <End seg={c.high} side="high" />
+        <End seg={c.low} side="low" named={named?.least} />
+        <End seg={c.high} side="high" named={named?.most} />
       </div>
     </section>
   );
 }
 
-function Insights({ s, c, empty }: { s: Summary; c: Contrast | null; /** What to say when no one is shown. */ empty: string }) {
+/** The thoughts that come up most, as bullets with how many share each. */
+function Thinks({ list }: { list: ThoughtCount[] }) {
+  const manyJobs = new Set(list.map((t) => t.job)).size > 1;
+  return (
+    <section className="db-card db-thinks" aria-label="What they think">
+      <CardHead icon="quote" title="What they think" />
+      <ul className="db-think-list">
+        {list.map((t) => (
+          <li key={t.job + t.text}>
+            <span className="db-think-text">“{t.text}”</span>
+            <span className="db-think-n">
+              {t.count} of {t.of} {manyJobs ? t.job.toLowerCase() + "s" : "people"}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function Insights({ s, c, thinks, named, empty }: { s: Summary; c: Contrast | null; thinks: ThoughtCount[]; named?: Parameters<typeof Ends>[0]["named"]; /** What to say when no one is shown. */ empty: string }) {
   if (!s.n) {
     return (
       <div className="db-cards">
@@ -167,7 +188,8 @@ function Insights({ s, c, empty }: { s: Summary; c: Contrast | null; /** What to
         <MoodRadar moods={s.moods} n={s.n} />
       </section>
 
-      {c && <Ends c={c} />}
+      {thinks.length > 0 && <Thinks list={thinks} />}
+      {c && <Ends c={c} named={named} />}
     </div>
   );
 }
@@ -275,12 +297,15 @@ function PersonPop({
 export function Dashboard({
   archetypes,
   groups,
+  notes = {},
   people: everyone,
   versionsPerJob,
 }: {
   archetypes: Archetype[];
   /** The five groups, to name each person's levels. */
   groups: Group[];
+  /** Grouped thoughts and named ends from each job's written summary. */
+  notes?: JobNotes;
   people: InterviewSummary[];
   /** How many versions each job has (every mix of the five groups). */
   versionsPerJob: number;
@@ -323,6 +348,10 @@ export function Dashboard({
   const selected = useMemo(() => points.filter((p) => inBrush(p, brush)).map((p) => p.person), [points, brush]);
   const summary = useMemo(() => summarize(selected, scenario), [selected, scenario]);
   const ends = useMemo(() => contrast(selected, scenario, groups), [selected, scenario, groups]);
+  const thinks = useMemo(() => thoughtsFor(selected, scenario, notes), [selected, scenario, notes]);
+  // The job summary names the two ends, so use it only when everyone shown is one job and nothing is dragged.
+  const oneJob = selected.length > 0 && selected.every((p) => p.archetype === selected[0].archetype) ? selected[0].archetype : null;
+  const named = oneJob && !brush ? notes[oneJob]?.[scenario]?.segments : undefined;
   // The card belongs to the view it was opened in: the dot moves when the scenario or the jobs change.
   const view = `${scenario}|${jobs.join(",")}`;
   const openPerson = open && open.view === view ? points.find((p) => p.person.id === open.id)?.person : undefined;
@@ -515,6 +544,8 @@ export function Dashboard({
         <Insights
           s={summary}
           c={ends}
+          thinks={thinks}
+          named={named}
           empty={
             brush
               ? "No one is inside your selection. Drag a bigger box, or click an empty spot on the chart to start again."

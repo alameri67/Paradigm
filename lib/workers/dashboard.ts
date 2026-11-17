@@ -292,3 +292,32 @@ function listOf(xs: string[]) {
   const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
   return xs.length < 2 ? cap(xs[0]) : `${cap(xs.slice(0, -1).join(", "))} and ${xs[xs.length - 1]}`;
 }
+
+/* ---------- What they think, and the named ends, from each job's written summary ---------- */
+
+/** Per job and scenario: the grouped thoughts and the named ends, from data/insights. */
+export type JobNotes = Record<string, Partial<Record<ScenarioCode, { thoughts?: { text: string; ids: string[] }[]; segments?: { least: { name: string; story: string }; most: { name: string; story: string } } }>>>;
+
+export interface ThoughtCount {
+  text: string;
+  job: string;
+  count: number;
+  /** Selected people in this job whose thoughts were grouped, so the count has a fair "out of". */
+  of: number;
+}
+
+/** The thoughts that come up most among the selected people, counted from each job's grouping. */
+export function thoughtsFor(people: readonly InterviewSummary[], code: ScenarioCode, notes: JobNotes, max = 5): ThoughtCount[] {
+  const chosen = new Set(people.map((p) => p.id));
+  const jobs = new Map(people.map((p) => [p.archetype, p.job]));
+  const out: ThoughtCount[] = [];
+  for (const [job, name] of jobs) {
+    const list = notes[job]?.[code]?.thoughts ?? [];
+    const grouped = new Set(list.flatMap((t) => t.ids).filter((id) => chosen.has(id)));
+    for (const t of list) {
+      const count = t.ids.filter((id) => chosen.has(id)).length;
+      if (count) out.push({ text: t.text, job: name, count, of: grouped.size });
+    }
+  }
+  return out.sort((a, b) => b.count / b.of - a.count / a.of || b.count - a.count).slice(0, max);
+}

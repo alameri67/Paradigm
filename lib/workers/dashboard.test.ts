@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ACTION_LABEL, SCENARIOS, type InterviewSummary, type MoodKey } from "./types";
-import { ACTION_WEIGHT, actionLevel, contrast, JITTER_X, JITTER_Y, pointsFor, summarize, worryOf } from "./dashboard";
+import { ACTION_WEIGHT, actionLevel, contrast, JITTER_X, JITTER_Y, pointsFor, summarize, thoughtsFor, worryOf } from "./dashboard";
 
 function person(id: string, job: string, mood: MoodKey, actions: string[], quote = `Quote from ${id}`): InterviewSummary {
   const s = { mood, quote, actions };
@@ -97,5 +97,24 @@ describe("contrast", () => {
   it("says nothing when everyone feels the same", () => {
     const same = Array.from({ length: 8 }, (_, i) => person(`A03-1111${(i % 3) + 1}`, "uneasy", []));
     expect(contrast(same, "S2", groups)).toBeNull();
+  });
+});
+
+describe("thoughtsFor", () => {
+  const p = (id: string): InterviewSummary => ({
+    id,
+    archetype: id.slice(0, 3),
+    job: "Lineworker",
+    name: id,
+    scenarios: Object.fromEntries(SCENARIOS.map((s) => [s.code, { mood: "uneasy", quote: "", actions: [] }])) as InterviewSummary["scenarios"],
+  });
+  const notes = { A03: { S2: { thoughts: [{ text: "Savings run out fast", ids: ["A03-11111", "A03-11112", "A03-11113"] }, { text: "Robots can't climb poles", ids: ["A03-11113"] }] } } };
+  it("counts only the selected people, out of those whose thoughts were grouped", () => {
+    const t = thoughtsFor([p("A03-11111"), p("A03-11113")], "S2", notes);
+    expect(t[0]).toMatchObject({ text: "Savings run out fast", count: 2, of: 2 });
+    expect(t[1]).toMatchObject({ text: "Robots can't climb poles", count: 1, of: 2 });
+  });
+  it("is empty for a job without a summary yet", () => {
+    expect(thoughtsFor([p("A03-11111")], "S0", notes)).toEqual([]);
   });
 });
