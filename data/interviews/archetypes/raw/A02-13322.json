@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for meeting me, Amira. I'm with the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions or government, and what you tell me stays confidential. Is that okay?"
+      "text": "We are the independent Work Futures Panel. We have no ties to mining companies or technology firms, and what you tell me stays confidential. What is a normal shift like for you?"
     },
     {
       "speaker": "persona",
-      "text": "Yes, that's fine. I'll try to give you straight answers."
+      "text": "I lead a haul-truck crew at a large mine and check the tire and hydraulic notes before the first run. Once a month I use an approved assistant to translate a section of the service manual, then I ask the mechanic to confirm the wording before I pass it on."
     },
     {
       "speaker": "interviewer",
-      "text": "Great. What does a normal working day look like for you?"
+      "text": "What do you value about the job, and what makes it hard?"
     },
     {
       "speaker": "persona",
-      "text": "I drive and train on the ultra-class haul trucks at an oil sands mine, the four-hundred-tonne ones where the tyres are twice my height. I'm a lead hauler and trainer, so I spend about half my shift driving and half sitting beside new drivers in the trainer seat. In winter it's minus thirty and the roads are like glass, so the whole job is about reading the haul road and not rushing. I like teaching; when someone gets their first clean dump at the crusher, they light up. What wears me out is the twelve-hour nights and the drive home in the dark."
+      "text": "I like that I can teach someone a safe route and still trust them to make their own call. The rotating nights are tiring, but I earn high pay and have eleven months of expenses saved, so I can consider a change without rushing."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's what I expected, mostly. Some useful bits, nothing that changes how we haul. I'd tell the new drivers to focus on learning the job, not worrying about the robots."
+          "text": "I would say a small tool can sort routine notices, but it should not make the safety decision. I will keep my own route checks in the loop, even if a screen saves time."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me it's good news. I'm early in a long career with a solid base, and I'd keep building on it. Nothing to fix."
+          "text": "My job is mostly hands-on and this picture only automates some routine tasks, so I do not expect my income to change. I have eleven months saved and similar mines nearby, which means I can judge the tool on its merits."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep training, put in for the shift supervisor role next year, and keep paying down the mortgage on the flat. Tomas and I would probably get engaged and start looking at a house with a bit of land."
+          "text": "I would keep my current rotation and let the assistant sort notices after I checked them against the route sheet. I would keep the emergency fund at eleven months or better rather than spend it to follow a small trend."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +68,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Normal."
+          "text": "I feel calm about my own work and pay in this mild case. I would be glad if a useful screen saved time, as long as the person in the cab still had authority to stop."
         },
         {
           "speaker": "interviewer",
-          "text": "You own a rental flat, you mentioned on the form. How does that fit in?"
+          "text": "What would make you stop using its notices?"
         },
         {
           "speaker": "persona",
-          "text": "I bought it two years ago with my savings and a mortgage, and a nurse rents it. The flat's my backup plan, so in a quiet picture like this it just quietly pays itself off."
+          "text": "If it missed a tire warning or a radio closure, I would pause and compare it with the signed route sheet. I would tell the mechanic and the next crew what detail had been left out."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there any part of AI you use now?"
+          "text": "How would you tell whether it had saved time without losing the important details?"
         },
         {
           "speaker": "persona",
-          "text": "Now and then. I used one to write the training checklist for winter driving, and to help me read the lease when I bought the flat. I check what it says, though, it got a number wrong once."
+          "text": "I would compare a month of notices with the service log and count what the crew had to add back. If the warnings stayed complete, I would let it keep sorting the routine parts."
         }
       ],
-      "say": "She'd say it's what she expected: some useful bits but nothing that changes hauling. She'd tell new drivers to focus on learning the job instead of worrying about robots.",
-      "think": "She sees it as good news, because she's early in a long career with a solid base and nothing needs fixing.",
-      "do": "Keeps training drivers, applies for shift supervisor next year and keeps paying down the mortgage on her rental flat. Plans to get engaged to Tomas and look for a house with some land.",
-      "feel": "Calm and settled.",
+      "say": [
+        "I would let a small tool sort notices, but **people make safety calls**.",
+        "I will keep **route checks** in the loop even if a screen saves time."
+      ],
+      "think": [
+        "I think my hands-on job and pay stay **secure** in this scenario.",
+        "My eleven-month fund lets me **judge the tool calmly**."
+      ],
+      "do": [
+        "Keep my **current rotation** and check notices against the route sheet.",
+        "Maintain an **eleven-month emergency fund** or better."
+      ],
+      "feel": [
+        "I feel **calm** about my own job and pay in this mild case."
+      ],
       "mood": "calm",
-      "quote": "The flat's my backup plan, so in a quiet picture like this it just quietly pays itself off.",
-      "fieldNote": "Amira is measured and practical, with a rental flat as her backup plan. She uses AI occasionally and checks its work. Her plans revolve around normal life steps like promotion and engagement.",
+      "quote": "I will keep my own route checks in the loop, even if a screen saves time.",
+      "fieldNote": [
+        "Amira accepts a small tool only when people retain **safety authority**.",
+        "Her **eleven-month reserve** and nearby employers make the mild case secure.",
+        "She proposes checking notices against **service logs** before expanding use."
+      ],
       "actions": [
         "keep-going",
-        "invest"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep the truck rotation and check notices against the route sheet",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait one month of complete notices before expanding use",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it makes sense to automate where it's proven, like the long, flat haul routes. But I'd say you still need people for the tricky stuff, winter roads, breakdowns, anything new. Somewhere in the middle."
+          "text": "I would say the planning tool is worth learning after another crew has proved it on our road. I would also ask the mine to tell us whether route checks or lead hours are changing."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Haul driving is one of the first jobs to go. I'd be fine because I'm a trainer and a lead, but the trainer part shrinks if there are fewer new drivers. So I'd need to move."
+          "text": "Most of my shift is still driving, but I do route checks and write handover notes as a lead. I am uneasy that those tasks could move to software and leave me with more checking work but less paid time."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait until the first autonomous trucks had been running a few months, then put my hand up for the control room or the fleet monitoring role. I'd take the company course on the new software and use an AI tool to study for it. I'd keep the flat and keep saving."
+          "text": "I would wait for another crew to test the planner, then compare its route with the mine's signed map. If it proved accurate, I would learn that feature on a paid shift and ask who remains responsible for a wrong route."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +160,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. I can see the shape of it, and it's fine for me, but it's not nothing."
+          "text": "I feel uneasy because my own driving looks secure but the lead tasks could be reorganized. I would check the allowance and handover time on my pay slip instead of assuming every saved minute becomes a staff cut."
         },
         {
           "speaker": "interviewer",
-          "text": "Autonomous haul trucks already run at some mines. How would that play out at yours?"
+          "text": "Which change would tell you that the new software had affected your role?"
         },
         {
           "speaker": "persona",
-          "text": "In winter you'd still want a person there for a while. Those trucks have never seen a whiteout on the north ramp, and I've seen eleven. But after a couple of years they'd learn."
+          "text": "I would look for fewer paid lead hours or more routes assigned without an operator's check. If I saw either, I would bring the rota to the foreman and ask for a paid retraining path."
         },
         {
           "speaker": "interviewer",
-          "text": "What would Tomas say?"
+          "text": "If the planner disagreed with the signed map, what would you do?"
         },
         {
           "speaker": "persona",
-          "text": "He'd say electricians will be needed to fix the robots, and he'd tease me about switching. He's probably right, but I'd rather stay near the trucks."
+          "text": "I would stop the trial route and ask another experienced driver to inspect the road with me. If the system had missed a change in the ground, I would report it and keep the current route until it was corrected."
         }
       ],
-      "say": "She'd say it makes sense to automate proven routes like long, flat hauls, but people are still needed for winter roads, breakdowns and new situations.",
-      "think": "She thinks haul driving is among the first jobs to go. She'd be fine as a trainer and lead, but that role shrinks too, so she'd need to move.",
-      "do": "Waits a few months after autonomous trucks start running, then applies for the control room or fleet monitoring role. Takes the company course on the new software, using AI to study, and keeps the flat and her savings.",
-      "feel": "Uneasy: fine for herself, but it's not nothing.",
+      "say": [
+        "I would learn the planner after another crew **proves it** on our road.",
+        "I would ask whether lead hours or **route checks** are changing."
+      ],
+      "think": [
+        "I think my driving work remains **mostly hands-on**.",
+        "I worry about more checking work and **less paid time**."
+      ],
+      "do": [
+        "Wait for another crew to test the **route planner**.",
+        "Learn the feature on paid time and clarify **route responsibility**."
+      ],
+      "feel": [
+        "I feel **uneasy** because lead tasks may change while driving remains."
+      ],
       "mood": "uneasy",
-      "quote": "Those trucks have never seen a whiteout on the north ramp, and I've seen eleven.",
-      "fieldNote": "Amira's steadiness shows in her timing: she waits a few months to see the trucks work before moving. She takes pride in winter driving experience that machines lack, while admitting they'd learn. Her partner Tomas gives her a nearby option in electrical work.",
+      "quote": "I would say the planning tool is worth learning after another crew has proved it on our road.",
+      "fieldNote": [
+        "Amira waits for **peer proof** before adopting a new system.",
+        "Her concern is **unpaid review work**, not immediate loss of the truck.",
+        "She checks **pay and handover time** rather than assuming a staff cut."
+      ],
       "actions": [
-        "learn-ai",
-        "change-job",
-        "save-more"
+        "wait-and-see",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Wait for another crew to test the route planner on site",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Learn the planner feature during a paid shift after it is proven",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's going too fast to be safe and somebody should put the brakes on. Not stop it, but slow it so people can catch up. That's what I'd say at work."
+          "text": "I would explain that thinking AI comes first and robots reach hands-on work about three years later. I would ask for funded courses and a real list of openings, because two years is too short for workers to plan from slogans."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +236,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means I'm out of a job in two years, along with everyone I've trained. I've got money, I've got the flat, but I'm twenty-seven with no job and no plan."
+          "text": "I think my haul-truck hours could shrink by 2031, even if the first change is to planning and records. Eleven months saved gives me a buffer, but I would still start looking at physical inspection work before the robots arrive."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +244,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop any new spending and pay down as much of the flat's mortgage as I can, so the rent is pure income. I'd keep the rest in cash. I'd wait a few months to see what the government does before choosing anything else."
+          "text": "Now I would ask the mine to fund a physical equipment-inspection course and enroll if it did. In 2029, after AGI arrives, I would apply for an inspection post only if it involved hands-on checks and had a clear wage."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +252,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not panicked, because of the flat, but anxious."
+          "text": "I feel anxious because robots could reduce my main paid task within five years, and that is close enough to plan around. My savings and nearby mines give me choices, but I do not know how many people will be hired for inspection."
         },
         {
           "speaker": "interviewer",
-          "text": "Does the rental flat help you here, or not?"
+          "text": "What if inspection work is mostly records and planning, which AGI can already do?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe. If the nurse who rents it loses her job too, there's no rent. But people still need a roof. Owning one small flat might be the smartest thing I ever did, or it might be worth nothing. I honestly don't know."
+          "text": "Then I would not treat the job title as protection; AGI can do that thinking work. I would ask how much of the position is a physical check and how many paid posts remain after robots arrive."
         },
         {
           "speaker": "interviewer",
-          "text": "What about the engagement and the house with land?"
+          "text": "If the mine cannot give a wage or duration for the post in 2029, what would you do?"
         },
         {
           "speaker": "persona",
-          "text": "We'd still get engaged. The house with land waits. Maybe forever, if neither of us has a job."
+          "text": "I would keep my truck job and compare openings at the other mines before spending on another course. I would apply only when the work and pay were written down, because I do not need to jump without a plan."
         }
       ],
-      "say": "She'd say it's going too fast to be safe and someone should slow it down so people can catch up, without stopping it outright.",
-      "think": "She thinks she and everyone she's trained are out within two years, leaving her 27 with money and a flat but no job or plan.",
-      "do": "Stops new spending and pays down as much of the flat's mortgage as she can so the rent becomes pure income, holding the rest in cash. Waits a few months to see what government does and puts the house with land on hold.",
-      "feel": "Anxious but not panicked, steadied by the flat.",
+      "say": [
+        "I would explain that robots follow thinking AI by **three years**.",
+        "I would ask for **funded courses** and actual openings."
+      ],
+      "think": [
+        "I think my truck hours could shrink by **2031**.",
+        "Eleven months saved gives me a buffer, but I need to **plan early**."
+      ],
+      "do": [
+        "Ask the mine to fund and enroll me in a **physical inspection course**.",
+        "In 2029, apply only for hands-on checks with a **clear wage**."
+      ],
+      "feel": [
+        "I feel **anxious** because robots could reduce my main paid task within five years."
+      ],
       "mood": "anxious",
-      "quote": "Owning one small flat might be the smartest thing I ever did, or it might be worth nothing. I honestly don't know.",
-      "fieldNote": "The rental flat is Amira's anchor, but she's honest that its value depends on her tenant keeping a job. Her instinct is to slow things and wait for government moves. The engagement survives while the bigger house plans stall.",
+      "quote": "I think my haul-truck hours could shrink by 2031, even if the first change is to planning and records.",
+      "fieldNote": [
+        "Amira sees a **specific earnings risk** by the robot date.",
+        "Her savings give her choices, but do not guarantee a **new vacancy**.",
+        "She distinguishes physical inspection from **records AGI can handle**."
+      ],
       "actions": [
-        "save-more",
-        "cut-spending",
-        "wait-and-see",
-        "family-plans"
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Enroll in the mine-funded physical equipment-inspection course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for hands-on inspection work with a clear wage in 2029",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got a few years to prepare, so let's prepare. Training money, notice periods, that kind of thing. Nothing radical."
+          "text": "I would say five years is enough time to train if the mine pays for it and publishes the job numbers. I will not call a physical job permanent when robots are due in 2034."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +328,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It's tight, but I'd get the flat paid off and probably get into the control room for a few years. Then out."
+          "text": "Eight years gives me time to learn how mechanics inspect the fleet while I keep my regular pay. The thinking records could go at AGI, so I would not count a desk role as a safe move after 2031."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +336,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd move into the autonomous fleet control room in the first year, once it was running. I'd put every spare dollar into the flat's mortgage, aiming to clear it in four years. I'd look at a second small property if prices made sense."
+          "text": "I would complete the mine's paid inspection course before 2031 and keep my truck qualification current. In 2032, the first year after AGI arrives, I would apply for physical inspection work only if the wage and expected duration were clear."
         },
         {
           "speaker": "interviewer",
@@ -256,47 +344,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. There's a plan, it just ends somewhere strange."
+          "text": "I feel uneasy because I have time to prepare, but no one knows how many physical jobs will remain after 2034. I would keep my current income while I trained instead of leaving for a short contract."
         },
         {
           "speaker": "interviewer",
-          "text": "What does five years let you do that two doesn't?"
+          "text": "What would make you pay for training beyond the mine's course?"
         },
         {
           "speaker": "persona",
-          "text": "Time to own things outright. Two years, I'm scrambling. Five years, I can turn my wages into bricks before the wages stop."
+          "text": "I would ask two nearby mines whether the credential qualifies workers for physical inspections and what graduates earn. If it only teaches record entry, I would not spend more money on it after AGI arrives."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you buy another property?"
+          "text": "If the inspection post is only a bridge to 2034, what would you do in 2032?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe, if Tomas and I went halves. Something small, near a hospital, because I think people will still need care and still need to live near it."
+          "text": "I would take it if the pay covered my costs and gave me time to find the next role before robots arrived. If it did not, I would keep my truck shift and continue comparing openings."
         }
       ],
-      "say": "She'd say there are a few years to prepare, so people should prepare through training money and notice periods, nothing radical.",
-      "think": "She thinks it's tight, but she could clear the flat and work in the control room for a few years before being out.",
-      "do": "Moves into the autonomous fleet control room in the first year and puts every spare dollar into the flat's mortgage to clear it in four years. Considers a second small property near a hospital, split with Tomas, if prices make sense.",
-      "feel": "Uneasy: there's a plan, but it ends somewhere strange.",
+      "say": [
+        "I would say training needs pay and **published job numbers**.",
+        "I will not call physical work **permanent** when robots are due."
+      ],
+      "think": [
+        "Eight years lets me learn while **keeping regular pay**.",
+        "I will not count a desk role as safe after **AGI**."
+      ],
+      "do": [
+        "Complete the mine's **paid inspection course** before 2031 and keep my truck qualification current.",
+        "In 2032, apply only with clear **wage and duration**."
+      ],
+      "feel": [
+        "I feel **uneasy** because I can prepare, but later job numbers are unknown."
+      ],
       "mood": "uneasy",
-      "quote": "Two years, I'm scrambling. Five years, I can turn my wages into bricks before the wages stop.",
-      "fieldNote": "Amira's plan with five years is to turn wages into property before wages stop. She reasons practically about where demand will stay, choosing near a hospital. Her politics stay modest and centrist.",
+      "quote": "I will not call a physical job permanent when robots are due in 2034.",
+      "fieldNote": [
+        "Amira views the longer lead as **time to train** while earning.",
+        "She rejects records work as a safe **fallback after AGI**.",
+        "She checks **graduate pay** and later vacancies before moving."
+      ],
       "actions": [
-        "change-job",
-        "save-more",
-        "invest"
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Complete the mine's paid physical inspection course before 2031",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for physical inspection work with stated pay in 2032",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a sensible amount of time if everyone uses it. Companies should plan the handover, people should plan their next step."
+          "text": "I would say the ten-year lead gives us time to plan, but the mine should share actual training routes and vacancies. I would not tell people to leave a good job just because the date is on a card."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +420,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It's still the same ending, but I'd have time to get married, buy the house with land, pay off the flat. I'd be in a good spot when it lands."
+          "text": "I have time to make a careful move, and no reason to leave a good wage early. I would explore physical inspection training, but I would check whether that work still exists after robots arrive in 2039."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +428,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going as planned in year one: supervisor role, engagement, mortgage payments. Around year three I'd move into fleet control. By year six or seven I'd want both places paid off."
+          "text": "I would keep my current rotation and review which paid courses have led to jobs at nearby mines. In 2037, the first year after AGI arrives, I would compare physical vacancies and pay before deciding whether to transfer."
         },
         {
           "speaker": "interviewer",
@@ -320,37 +436,60 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but in a way I can live with."
+          "text": "I feel calm because my income and savings give me time to plan around the later robot date. I would stay where I am until a new job had clear physical duties and a wage worth changing for."
         },
         {
           "speaker": "interviewer",
-          "text": "Ten years puts you at thirty-seven. What do you want your life to look like then?"
+          "text": "What information would you need before changing mines?"
         },
         {
           "speaker": "persona",
-          "text": "Married, two properties paid off, maybe a kid. And a vegetable garden. If robots do all the work, I want to be the one with a garden and no mortgage."
+          "text": "I would ask whether the job is physical, what it pays and how long the employer expects to keep the post. I would also check whether the training credential works at more than one mine."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything you'd tell the new drivers you train?"
+          "text": "If the vacancy information is still unclear in 2037, what would you do?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell them to save from day one and not buy the big truck. It's what I'd want someone to have told me at nineteen."
+          "text": "I would keep the truck job while asking the other mines for current figures. I would wait to transfer until a real vacancy and wage were in writing."
         }
       ],
-      "say": "She'd say ten years is a sensible amount of time if everyone uses it, with companies planning the handover and people planning their next step.",
-      "think": "She thinks it's the same ending, but with time to marry, buy the house with land and pay off the flat, leaving her in a good spot.",
-      "do": "Keeps to plan in year one with the supervisor role, engagement and mortgage payments. Moves into fleet control around year three and aims to own both properties outright by year six or seven.",
-      "feel": "Uneasy, but in a way she can live with.",
-      "mood": "uneasy",
-      "quote": "If robots do all the work, I want to be the one with a garden and no mortgage.",
-      "fieldNote": "Amira's ten-year plan is calm and orderly, built around owning her home outright before work runs out. She passes on practical advice to young drivers about saving. She never expressed strong blame toward anyone.",
+      "say": [
+        "I would ask for **training routes and vacancies** before deciding.",
+        "I would not leave a good job just because **a date is stated**."
+      ],
+      "think": [
+        "I have time for a careful move while **my present job pays**.",
+        "I will check if physical inspection lasts after **2039**."
+      ],
+      "do": [
+        "Review **paid courses** and their graduate employers at nearby mines.",
+        "In 2037, compare physical vacancies and **pay** before transferring to another mine."
+      ],
+      "feel": [
+        "I feel **calm** because my income and savings give me time."
+      ],
+      "mood": "calm",
+      "quote": "I have time to make a careful move, and no reason to leave a good wage early.",
+      "fieldNote": [
+        "Amira treats the decade as **time to plan**, not a reason to quit.",
+        "Her income and savings support a **deliberate choice**.",
+        "She checks whether physical training transfers across **multiple mines**."
+      ],
       "actions": [
         "keep-going",
-        "save-more",
-        "invest",
-        "family-plans"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep the current truck rotation while reviewing paid course outcomes",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for a written physical vacancy and wage before transferring",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -361,19 +500,29 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. There's no time to finish anything. What would help is a decent notice period from employers and some help with mortgages, so people don't lose their homes while things settle."
+      "text": "AGI by 2028 worries me most because robots could affect my main work by about 2031. Paid training, reliable job numbers and enough time to check wages would help me make a move without rushing."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I did not ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe about the trainees. I've signed off forty new drivers, and every one of them thinks this is a job for life because I told them it was. I'd feel responsible."
+      "text": "I want the person on the road to be able to question the machine's answer. A tool can help us notice a problem, but workers still need the right to stop when the ground disagrees."
     }
   ],
-  "headlineQuote": "I've signed off forty new drivers, and every one of them thinks this is a job for life because I told them it was.",
-  "portrait": "Amira Larsen is 27, a lead haul truck driver and trainer at an oil sands mine, living with her partner Tomas, an electrician, and owning a rental flat. She is pragmatic and measured, uses AI tools now and then and checks their work, and she prefers to move once something is proven. She stays calm in the mild picture, uneasy in Steady Disruption, and anxious only when AGI arrives in two years and her plans stall. With five or ten years, her strategy is to move into fleet control and turn her wages into property she owns outright before paid work runs out.",
-  "biggestWorry": "The two-year AGI picture, because there would be no time to finish anything.",
-  "whatWouldHelp": "Decent notice periods from employers and help with mortgages so people don't lose their homes while things settle."
+  "headlineQuote": "I want the person on the road to be able to question the machine's answer.",
+  "portrait": [
+    "Amira Larsen is **27** and leads a haul-truck crew at a large mine.",
+    "She earns **higher pay** and has eleven months of expenses saved.",
+    "Plenty of nearby mines give her **options** if her role changes.",
+    "She uses AI occasionally and confirms unfamiliar **technical wording** with a mechanic.",
+    "She is open to proven tools but will not assume physical jobs last after **robots**."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** gives only about five years before robots could reduce her truck work."
+  ],
+  "whatWouldHelp": [
+    "**Paid training**, reliable vacancy numbers and time to compare wages would help Amira plan a move."
+  ]
 }

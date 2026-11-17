@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,063 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 14:55 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,087 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 18:22 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 87/243 | STALE from main - must redo |
-| A03 | 74/243 | STALE from main - must redo |
-| A04 | 72/243 | STALE from main - must redo |
+| A02 | 95/243 | STALE from main - must redo |
+| A03 | 82/243 | STALE from main - must redo |
+| A04 | 80/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,713 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,689 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -125,9 +125,9 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 ```json
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
-  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-231"],
-  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131"],
-  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131"],
+  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-231","A02-232"],
+  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132"],
+  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131","A04-132"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
   "A07": ["A07-111","A07-112","A07-113","A07-121","A07-122","A07-123"],
@@ -237,26 +237,42 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   so insights were not regenerated. The new wave uses the next reserved people below. Helpers and accepted-file
   hashes are under `/tmp/paradigm-repass/parallel/`; only data and this handoff are committed.
 
-## Current writer reservations
+## Current continuous writer lanes
 
-Resumed at the user's request for parallel sessions. Local and remote were synchronized at `9c3ce15`;
-A02 was independently rechecked at 75/243 passing. Git push access is restored. Six smaller-model
-writers work in parallel across three jobs (two per job), authoring one person at a time and using the validators plus additional protocol checks.
+The user's latest instruction is explicit: **do not pause after batches; continue until all interviews are done.**
+The Codex continuous goal is active. Earlier four-person limits and pause-for-review instructions are superseded.
+The parent keeps reviewing and publishing checkpoints without waiting for another user prompt.
 
-| Writer | Next reserved person | Reserved batch |
-|---|---|---|
-| `a02_small_first` | `A02-13312` | unfinished IDs in `A02-132`, then `A02-133` |
-| `a02_small_second` | `A02-23223` | unfinished IDs in `A02-232`, then `A02-233` |
-| `a03_early` | `A03-13232` | unfinished IDs in `A03-131`, then `A03-132` |
-| `a03_mid` | `A03-21122` | unfinished IDs in `A03-211`, then `A03-212` |
-| `a04_early` | `A04-13223` | unfinished IDs in `A04-131`, then `A04-132` |
-| `a04_mid` | `A04-21122` | unfinished IDs in `A04-211`, then `A04-212` |
+Six smaller-model writers own disjoint complete remaining lanes in A02-A04. They author one fresh person at a
+time, validate and audit that file, report it, and continue immediately. They never run git or touch accepted files.
+The manifests below are outside the checkout; if lost, rebuild from grid IDs within the inclusive bounds, skipping
+files already on 3.1 that actually pass. Only the parent changes ownership, after inspecting in-flight work.
 
-Checkpoint counts include only independently reviewed interviews included in commits; drafts still under review may already pass the structural validator. A read-only smaller-model reviewer helps inspect drafts while writers continue.
+| Writer | Job | Initially remaining | Inclusive ID bounds | Manifest |
+|---|---|---:|---|---|
+| `a02_small_first` | `A02` | 74 | `A02-13323`–`A02-31131` | `/tmp/paradigm-repass/parallel/continuous-lanes/a02_small_first.json` |
+| `a02_small_second` | `A02` | 74 | `A02-31132`–`A02-33333` | `/tmp/paradigm-repass/parallel/continuous-lanes/a02_small_second.json` |
+| `a03_early` | `A03` | 81 | `A03-13313`–`A03-31111` | `/tmp/paradigm-repass/parallel/continuous-lanes/a03_early.json` |
+| `a03_mid` | `A03` | 80 | `A03-31112`–`A03-33333` | `/tmp/paradigm-repass/parallel/continuous-lanes/a03_mid.json` |
+| `a04_early` | `A04` | 82 | `A04-13311`–`A04-23333` | `/tmp/paradigm-repass/parallel/continuous-lanes/a04_early.json` |
+| `a04_mid` | `A04` | 81 | `A04-31111`–`A04-33333` | `/tmp/paradigm-repass/parallel/continuous-lanes/a04_mid.json` |
 
-The parent session owns validation, substantive review, the handoff, and commits/pushes. Existing passing
-files remain protected. Check remote progress before assigning more batches; no other session should write
-these reserved IDs at the same time. Insights still wait for 200+ passing interviews for the job.
+The complete lane plan is `/tmp/paradigm-repass/parallel/continuous-plan.json`; the shared protocol brief and
+lessons are in `/tmp/paradigm-repass/parallel/writer-brief.md`. Temporary review queues, accepted hashes, and
+checkpoint helpers are in that directory. The parent preserves all prior passing files and counts only reviewed
+files included in the commit; newer local drafts can already pass structural validation without being counted yet.
+
+On resume: inspect agent states and stable completed files; do not assume a completed agent means its lane is
+finished. Reassign any unfinished lane immediately, skipping validated existing files, and keep the goal active.
+As jobs finish, regenerate current insights from scratch (especially A02-A04), validate them, and move freed
+writers to A05-A32. Every job requires 243 expected IDs; summaries need at least 200 passing interviews. Do not
+stop at the end of a fixed-size tranche. Commit/push about every 30 minutes and before any interruption.
+
+The last completed short tranche added24 reviewed interviews (8 each in A02/A03/A04). After semantic tag
+corrections, all24 passed validator, supplemental audit, profile and protected-file checks. Published checkpoint
+counts are now 2,087 total: A02 95/243, A03 82/243, A04 80/243. No incomplete job has reached 200 yet.
+Existing funds kept available are not save-more; union negotiation alone is not course completion; continued
+paid work, actual applications, AI learning and practical training must use the tags actually supported.
 
 ## Working agreement
 
