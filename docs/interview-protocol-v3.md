@@ -42,7 +42,7 @@ Today is November 2026. Read each card in everyday words, as written, and always
 | Code | Name | Card the interviewer reads out |
 |---|---|---|
 | S0 | AI Plateau | "Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway." |
-| S1 | Steady Disruption | "Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust." |
+| S1 | Steady Disruption | "Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust." |
 | S2 | AGI by 2028 | "Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare." |
 | S3 | AGI by 2031 | "Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast." |
 | S4 | AGI by 2036 | "Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans." |
@@ -120,10 +120,12 @@ Action tags:
 Mood scale, from calmest to most distressed. Mood is how the person feels about their work and their living over the next few years in that world. It includes the worries they already carry, not only the ones AI brings:
 
 - `calm`: their work and money feel secure, or the change looks good for them.
-- `uneasy`: some worry in the background, but no real threat yet.
-- `anxious`: clear pressure, still feeling in control.
-- `alarmed`: losing sleep, a real threat to their job, income or way of life.
-- `panicked`: overwhelmed and out of options or time.
+- `uneasy`: their own job and income look safe, but things around them are shifting and it's on their mind.
+- `anxious`: their own job, hours or income could realistically shrink or go in the next few years, or the household's could; they still feel they have some control.
+- `alarmed`: they expect to lose their job or a big part of their income, or a household earner will, and it's keeping them up at night.
+- `panicked`: overwhelmed, with no plan and no time or money to make one.
+
+Pick the mood from what the person says is likely to happen to them and their household, not from how calmly they say it. If they think their team will be cut and they might be one of the ones to go, that's at least anxious, even if they sound composed.
 
 **Let each person's own life decide their mood, one person at a time.** There is no right mix of moods and no target to hit. Don't read other interviews, and don't steer towards the middle of the scale or towards what seems typical for the job. Work it out from this person alone: how exposed their work is, how much money they have to fall back on, how many similar jobs are nearby, what's at stake at their life stage, and how they handle change. Someone with thin savings, few local jobs and little appetite for change may already be anxious or alarmed in a mild scenario. Someone secure and adaptable may stay calm even when AGI arrives in 2 years. Both are fine if they follow from the person. The same goes for what they do: let each person's choices come from their own situation.
 
