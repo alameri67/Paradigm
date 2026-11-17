@@ -30,7 +30,7 @@ Every interview file must pass. A job's summary is written only once that job ha
 ## Where it stands
 
 Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,024 of 7,776 done.**
-(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:54 UTC.)
+(Table rebuilt from the validators by the session's status script; last update 2026-11-17 13:24 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
