@@ -30,7 +30,7 @@ Every interview file must pass. A job's summary is written only once that job ha
 ## Where it stands
 
 Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,033 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 13:13 UTC.)
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 14:10 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
@@ -221,6 +221,12 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   despite successful reads. The reconciled commits are local only until that connection has write access.
   No merge to main was attempted; the full re-pass is unfinished. A verified incremental Git bundle is saved
   outside the checkout at `/tmp/paradigm-repass/Paradigm-repass-3.1.bundle` for recovery if publication is blocked.
+
+- 2026-11-17: after the user updated GitHub authorization, the push negotiation no longer returned HTTP 403.
+  The remote branch had advanced through `25a19ab` to `0f01c5e`; those two commits only updated the handoff
+  timestamp. Their history was merged into this feature branch while retaining the independently validated
+  combined counts and this session's notes. All interview and insights validators were re-run; the table above
+  remains the source of truth. No interview generation or merge to main was performed during this access check.
 
 ## Working agreement
 
