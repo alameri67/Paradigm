@@ -29,8 +29,8 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,625 of 7,776 done.**
-(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:24 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,626 of 7,776 done.**
+(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:25 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
@@ -38,7 +38,7 @@ Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. 
 | A02 | 53/243 | STALE from main - must redo |
 | A03 | 53/243 | STALE from main - must redo |
 | A04 | 49/243 | STALE from main - must redo |
-| A05 | 54/243 | not written yet |
+| A05 | 55/243 | not written yet |
 | A06 | 43/243 | not written yet |
 | A07 | 41/243 | not written yet |
 | A08 | 43/243 | not written yet |
