@@ -6,11 +6,11 @@ import { useSearchParams } from "next/navigation";
 import { Icon, type IconName } from "@/components/simulator/icons";
 import { AmountSlider } from "@/components/ui/amount-slider";
 import { ScatterBrush, type Brush } from "@/components/ui/bjork-scatter-brush";
-import { Avatar, SHORT_SECTOR } from "@/components/workers/avatar";
+import { Avatar } from "@/components/workers/avatar";
 import { DashIcon, hasDashIcon } from "./icons";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
-import { ACTION_LEVELS, actionLevel, pointsFor, summarize, type Summary } from "@/lib/workers/dashboard";
+import { ACTION_LEVELS, actionLevel, contrast, pointsFor, summarize, type Contrast, type Segment, type Summary } from "@/lib/workers/dashboard";
 import {
   ACTION_LABEL,
   MOODS,
@@ -65,7 +65,70 @@ function CardHead({ icon, title, note }: { icon: "actions" | "mood" | "jobs" | "
   );
 }
 
-function Insights({ s, archetypes, empty }: { s: Summary; archetypes: Archetype[]; /** What to say when no one is shown. */ empty: string }) {
+/** "life stage, work standing and outlook" */
+const listOf = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
+
+function End({ seg, side }: { seg: Segment; side: "low" | "high" }) {
+  return (
+    <div className={"db-end db-end-" + side}>
+      <div className="db-end-head">
+        {seg.moods.map((m) => (
+          <span key={m} className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
+        ))}
+        <span className="db-end-title">{side === "low" ? "Least worried" : "Most worried"}</span>
+        <span className="db-end-n">
+          {people(seg.n)}, {listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}
+        </span>
+      </div>
+      <div className="db-end-block">
+        <div className="db-end-label">Who they are</div>
+        <ul>
+          {seg.traits.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
+          {seg.mixed.length > 0 && (
+            <li className="fg2">
+              {seg.traits.length ? "Their " : "They're a mix on every count: "}
+              {seg.traits.length ? `${listOf(seg.mixed.map((x) => x.toLowerCase()))} ${seg.mixed.length === 1 ? "varies" : "vary"}.` : `${listOf(seg.mixed.map((x) => x.toLowerCase()))}.`}
+            </li>
+          )}
+        </ul>
+      </div>
+      <div className="db-end-block">
+        <div className="db-end-label">What they&apos;ll do</div>
+        <ul>
+          {seg.actions.map((a) => (
+            <li key={a.tag}>{a.text}</li>
+          ))}
+        </ul>
+      </div>
+      {seg.quote && (
+        <figure className="db-end-quote">
+          <blockquote>“{seg.quote.text}”</blockquote>
+          <figcaption>
+            {seg.quote.name}, {seg.quote.job.toLowerCase()}
+          </figcaption>
+        </figure>
+      )}
+    </div>
+  );
+}
+
+/** The least and most worried ends of the selection, side by side, with what separates them on top. */
+function Ends({ c }: { c: Contrast }) {
+  return (
+    <section className="db-card db-ends" aria-label="Least and most worried">
+      <CardHead icon="mood" title="Least and most worried" note={`Out of ${people(c.n)}`} />
+      {c.headline && <p className="db-sowhat">{c.headline}</p>}
+      <div className="db-ends-row">
+        <End seg={c.low} side="low" />
+        <End seg={c.high} side="high" />
+      </div>
+    </section>
+  );
+}
+
+function Insights({ s, c, empty }: { s: Summary; c: Contrast | null; /** What to say when no one is shown. */ empty: string }) {
   if (!s.n) {
     return (
       <div className="db-cards">
@@ -118,40 +181,7 @@ function Insights({ s, archetypes, empty }: { s: Summary; archetypes: Archetype[
         </ul>
       </section>
 
-      <section className="db-card" aria-label="Who they are">
-        <CardHead icon="jobs" title="Who they are" />
-        <ul className="db-rows">
-          {s.jobs.map((j) => {
-            const a = archetypes.find((x) => x.code === j.code);
-            return (
-              <li key={j.code} className="db-row">
-                {a ? <Avatar a={a} size={32} /> : <span className="db-row-icon" />}
-                <span className="db-row-text">
-                  <span className="db-row-name">{j.job}</span>
-                  <span className="db-row-sub">{a ? (SHORT_SECTOR[a.sector] ?? a.sector) : ""}</span>
-                </span>
-                <span className="db-row-num mono">
-                  {j.count} <span className="fg2">· {pct(j.share)}</span>
-                </span>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
-      <section className="db-card" aria-label="In their words">
-        <CardHead icon="quote" title="In their words" />
-        <div className="db-quotes">
-          {s.quotes.map((q) => (
-            <figure key={q.id} className="db-quote swap">
-              <blockquote>“{q.text}”</blockquote>
-              <figcaption>
-                {q.name}, {q.job.toLowerCase()}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
+      {c && <Ends c={c} />}
     </div>
   );
 }
@@ -306,6 +336,7 @@ export function Dashboard({
   const points = useMemo(() => pointsFor(shown, scenario), [shown, scenario]);
   const selected = useMemo(() => points.filter((p) => inBrush(p, brush)).map((p) => p.person), [points, brush]);
   const summary = useMemo(() => summarize(selected, scenario), [selected, scenario]);
+  const ends = useMemo(() => contrast(selected, scenario, groups), [selected, scenario, groups]);
   // The card belongs to the view it was opened in: the dot moves when the scenario or the jobs change.
   const view = `${scenario}|${jobs.join(",")}`;
   const openPerson = open && open.view === view ? points.find((p) => p.person.id === open.id)?.person : undefined;
@@ -497,7 +528,7 @@ export function Dashboard({
         </div>
         <Insights
           s={summary}
-          archetypes={archetypes}
+          c={ends}
           empty={
             brush
               ? "No one is inside your selection. Drag a bigger box, or click an empty spot on the chart to start again."

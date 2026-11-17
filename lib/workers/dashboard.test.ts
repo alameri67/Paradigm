@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ACTION_LABEL, SCENARIOS, type InterviewSummary, type MoodKey } from "./types";
-import { ACTION_WEIGHT, actionLevel, JITTER_X, JITTER_Y, pointsFor, summarize, worryOf } from "./dashboard";
+import { ACTION_WEIGHT, actionLevel, contrast, JITTER_X, JITTER_Y, pointsFor, summarize, worryOf } from "./dashboard";
 
 function person(id: string, job: string, mood: MoodKey, actions: string[], quote = `Quote from ${id}`): InterviewSummary {
   const s = { mood, quote, actions };
@@ -67,5 +67,35 @@ describe("summarize", () => {
     expect(s.n).toBe(0);
     expect(s.actions).toEqual([]);
     expect(s.quotes).toEqual([]);
+  });
+});
+
+describe("contrast", () => {
+  const groups = ["lifeStage", "standing", "cushion", "outlook", "adaptability"].map((key) => ({
+    key,
+    label: key,
+    levels: ["a", "b", "c"].map((k) => ({ key: k, label: k })),
+  }));
+  const person = (id: string, mood: MoodKey, actions: string[]): InterviewSummary => ({
+    id,
+    archetype: id.slice(0, 3),
+    job: "Lineworker",
+    name: id,
+    scenarios: Object.fromEntries(SCENARIOS.map((s) => [s.code, { mood, quote: "Owning things is worth more now.", actions }])) as InterviewSummary["scenarios"],
+  });
+  it("counts each end from the selection and names what moves worry", () => {
+    const calm = Array.from({ length: 6 }, (_, i) => person(`A03-1113${(i % 3) + 1}`, "calm", ["invest"]));
+    const panicked = Array.from({ length: 6 }, (_, i) => person(`A03-1111${(i % 3) + 1}`, "panicked", ["seek-support", "cut-spending"]));
+    const c = contrast([...calm, ...panicked], "S2", groups)!;
+    expect(c.low.n).toBe(6);
+    expect(c.high.n).toBe(6);
+    expect(c.low.actions[0].text).toBe("All 6 will invest money.");
+    expect(c.high.actions.map((a) => a.tag)).toEqual(["cut-spending", "seek-support"]);
+    expect(c.drivers[0].key).toBe("outlook");
+    expect(c.headline).toMatch(/^outlook matters most/);
+  });
+  it("says nothing when everyone feels the same", () => {
+    const same = Array.from({ length: 8 }, (_, i) => person(`A03-1111${(i % 3) + 1}`, "uneasy", []));
+    expect(contrast(same, "S2", groups)).toBeNull();
   });
 });

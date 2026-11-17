@@ -1,5 +1,5 @@
 /** The numbers behind the summary dashboard. Pure functions, safe on client and server. */
-import { MOODS, type InterviewSummary, type MoodKey, type ScenarioCode } from "./types";
+import { MOODS, type Group, type InterviewSummary, type MoodKey, type ScenarioCode } from "./types";
 
 /**
  * How big a step each action is. 0: no change. 1: small, careful steps. 2: a real plan.
@@ -137,4 +137,158 @@ export function summarize(people: readonly InterviewSummary[], code: ScenarioCod
       .sort((a, b) => b.count - a.count || a.code.localeCompare(b.code)),
     quotes: picked.map((p) => ({ id: p.id, name: p.name, job: p.job, text: p.scenarios[code].quote })),
   };
+}
+
+/* ---------- Least vs most worried: what separates the two ends of a selection ---------- */
+
+/** How a level reads in a sentence about a group of people: "23 of 24 adapt easily". */
+export const LEVEL_PHRASE: Record<string, Record<string, string>> = {
+  lifeStage: { early: "are early in their working life", mid: "are in mid-life, often with kids and a mortgage", late: "are close to retirement" },
+  standing: { low: "are junior in their job", mid: "are mid-level in their job", high: "are senior in their job" },
+  cushion: { thin: "have thin savings", moderate: "have some savings", strong: "have strong savings" },
+  outlook: { progressive: "lean progressive", centre: "sit in the political centre", traditional: "lean traditional" },
+  adaptability: { resistant: "resist change", steady: "take change steadily", adaptive: "adapt easily" },
+};
+/** The same, for "people who …" in the headline. */
+const WHO_PHRASE: Record<string, Record<string, string>> = {
+  lifeStage: { early: "early in their working life", mid: "in mid-life", late: "close to retirement" },
+  standing: { low: "in junior roles", mid: "in mid-level roles", high: "in senior roles" },
+  cushion: { thin: "with thin savings", moderate: "with some savings", strong: "with strong savings" },
+  outlook: { progressive: "who lean progressive", centre: "in the political centre", traditional: "who lean traditional" },
+  adaptability: { resistant: "who resist change", steady: "who take change steadily", adaptive: "who adapt easily" },
+};
+/** What a group will do, as the end of "19 of 24 …". */
+export const ACTION_PHRASE: Record<string, string> = {
+  "keep-going": "will carry on as normal",
+  "cut-spending": "will cut back on spending",
+  "save-more": "will save more or pay down debt",
+  retrain: "will retrain or learn a new trade",
+  "learn-ai": "will learn to use AI tools at work",
+  "change-job": "will look for a different job",
+  "side-income": "will start a side income",
+  invest: "will invest money",
+  automate: "will bring in AI or robots themselves",
+  "sell-or-exit": "will sell up or leave the job",
+  "retire-early": "will retire early",
+  "collective-action": "will join a union or group action",
+  politics: "will lobby, vote or campaign",
+  "seek-support": "will lean on government, family or community",
+  move: "will move home or region",
+  "family-plans": "will change their family plans",
+  "wait-and-see": "will wait and see",
+};
+
+/** The level digit of group i in an ID like A03-12323. */
+const levelIdx = (id: string, i: number) => Number(id.split("-")[1]?.[i] ?? 0) - 1;
+/** A quote that makes sense on its own: no opening word that points back to something unseen. */
+const standsAlone = (q: string) => !!q && !/^(and|but|so|yeah|well|it|it's|that|that's|this|these|those|they|they're|them|he|he's|she|she's|him|her|then)\b/i.test(q.trim());
+
+export interface Segment {
+  /** The moods included, calmest first. */
+  moods: MoodKey[];
+  n: number;
+  /** Traits most of this end share, as sentences: "23 of 24 adapt easily." */
+  traits: string[];
+  /** Groups where this end is mixed, by name: ["Life stage", "Work standing"]. */
+  mixed: string[];
+  /** The most common actions, as sentences: "19 of 24 will invest money." */
+  actions: { tag: string; count: number; text: string }[];
+  quote: { id: string; name: string; job: string; text: string } | null;
+}
+export interface Contrast {
+  n: number;
+  low: Segment;
+  high: Segment;
+  /** What moves worry most, as one sentence, or null when nothing stands out. */
+  headline: string | null;
+  /** Each group's worry gap, largest first. */
+  drivers: { key: string; label: string; gap: number; from: number; to: number }[];
+}
+
+/** Takes the calmest (or most worried) mood present, and the next one too when fewer than 5 people are there. */
+function endOf(people: readonly InterviewSummary[], code: ScenarioCode, dir: 1 | -1): { group: InterviewSummary[]; moods: MoodKey[] } {
+  const order = dir === 1 ? [...MOODS] : [...MOODS].reverse();
+  // Only reach into the next mood when the extreme holds too few people to say anything about.
+  const min = 5;
+  const group: InterviewSummary[] = [];
+  const moods: MoodKey[] = [];
+  for (const m of order) {
+    const at = people.filter((p) => p.scenarios[code].mood === m);
+    if (!at.length) continue;
+    group.push(...at);
+    moods.push(m);
+    if (group.length >= min) break;
+  }
+  return { group, moods: dir === 1 ? moods : moods.reverse() };
+}
+
+function segment(group: InterviewSummary[], moods: MoodKey[], code: ScenarioCode, groups: readonly Group[]): Segment {
+  const n = group.length;
+  const traits: string[] = [];
+  const mixed: string[] = [];
+  const dominant: number[] = [];
+  groups.forEach((g, i) => {
+    const counts = g.levels.map((_, li) => group.filter((p) => levelIdx(p.id, i) === li).length);
+    const top = counts.indexOf(Math.max(...counts));
+    dominant.push(counts[top] / n >= 0.6 ? top : -1);
+    if (n && counts[top] / n >= 0.6) traits.push(`${counts[top] === n ? `All ${n}` : `${counts[top]} of ${n}`} ${LEVEL_PHRASE[g.key]?.[g.levels[top].key] ?? g.levels[top].label.toLowerCase()}.`);
+    else mixed.push(g.label);
+  });
+  const acts = new Map<string, number>();
+  for (const p of group) for (const t of new Set(p.scenarios[code].actions)) acts.set(t, (acts.get(t) ?? 0) + 1);
+  const actions = [...acts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, 3)
+    .map(([tag, count]) => ({ tag, count, text: `${count === n ? `All ${n}` : `${count} of ${n}`} ${ACTION_PHRASE[tag] ?? tag.replace(/-/g, " ")}.` }));
+  // The quote comes from the person who shares the most of this end's main traits, so it speaks for the group.
+  const typical = (p: InterviewSummary) => dominant.reduce((k, d, i) => k + (d >= 0 && levelIdx(p.id, i) === d ? 1 : 0), 0);
+  const pick = [...group].filter((p) => standsAlone(p.scenarios[code].quote)).sort((a, b) => typical(b) - typical(a) || a.id.localeCompare(b.id))[0];
+  return {
+    moods,
+    n,
+    traits,
+    mixed,
+    actions,
+    quote: pick ? { id: pick.id, name: pick.name, job: pick.job, text: pick.scenarios[code].quote } : null,
+  };
+}
+
+/** What separates the least and the most worried people in a selection, counted from the selection itself. */
+export function contrast(people: readonly InterviewSummary[], code: ScenarioCode, groups: readonly Group[]): Contrast | null {
+  if (people.length < 6) return null;
+  const low = endOf(people, code, 1);
+  const high = endOf(people, code, -1);
+  if (!low.group.length || !high.group.length || low.moods.some((m) => high.moods.includes(m))) return null;
+  const drivers = groups
+    .map((g, i) => {
+      const avg = g.levels.map((_, li) => {
+        const at = people.filter((p) => levelIdx(p.id, i) === li);
+        return at.length ? at.reduce((s, p) => s + worryOf(p.scenarios[code].mood), 0) / at.length : NaN;
+      });
+      const valid = avg.map((v, li) => ({ v, li })).filter((x) => !Number.isNaN(x.v));
+      const hi = valid.reduce((a, b) => (b.v > a.v ? b : a), valid[0]);
+      const lo = valid.reduce((a, b) => (b.v < a.v ? b : a), valid[0]);
+      return { key: g.key, label: g.label, gap: hi.v - lo.v, from: hi.v, to: lo.v, hiKey: g.levels[hi.li].key, loKey: g.levels[lo.li].key };
+    })
+    .sort((a, b) => b.gap - a.gap);
+  const [first, second] = drivers;
+  let headline: string | null = null;
+  if (first && first.gap >= 0.3) {
+    headline = `${first.label} matters most here: people ${WHO_PHRASE[first.key]?.[first.hiKey] ?? first.hiKey} worry ${first.from.toFixed(1)} out of 5, against ${first.to.toFixed(1)} for people ${WHO_PHRASE[first.key]?.[first.loKey] ?? first.loKey}.`;
+    if (second && second.gap >= 0.3) headline += ` ${second.label} comes next.`;
+    const quiet = drivers.filter((d) => d.gap < 0.3).map((d) => d.label.toLowerCase());
+    if (quiet.length) headline += ` ${quiet.length === 1 ? quiet[0][0].toUpperCase() + quiet[0].slice(1) + " barely changes" : listOf(quiet) + " barely change"} how worried people are.`;
+  }
+  return {
+    n: people.length,
+    low: segment(low.group, low.moods, code, groups),
+    high: segment(high.group, high.moods, code, groups),
+    headline,
+    drivers: drivers.map(({ key, label, gap, from, to }) => ({ key, label, gap, from, to })),
+  };
+}
+
+function listOf(xs: string[]) {
+  const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
+  return xs.length < 2 ? cap(xs[0]) : `${cap(xs.slice(0, -1).join(", "))} and ${xs[xs.length - 1]}`;
 }
