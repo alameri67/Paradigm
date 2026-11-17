@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,043 of 7,776 done.**
-(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 14:33 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,063 of 7,776 done.**
+(Table rebuilt from the validators by the current session's status script; last update 2026-11-17 14:55 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 81/243 | STALE from main - must redo |
-| A03 | 68/243 | STALE from main - must redo |
-| A04 | 64/243 | STALE from main - must redo |
+| A02 | 87/243 | STALE from main - must redo |
+| A03 | 74/243 | STALE from main - must redo |
+| A04 | 72/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,733 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,713 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -125,9 +125,9 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 ```json
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
-  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-231"],
-  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123"],
-  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123"],
+  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-231"],
+  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131"],
+  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
   "A07": ["A07-111","A07-112","A07-113","A07-121","A07-122","A07-123"],
@@ -215,8 +215,7 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   lists above reflect that local combined tree, not an assumption that every remote file passes. A01 remains
   243/243 with passing insights; A02-A04 insights remain stale and no unfinished job has reached 200 passes.
   Only data files and this handoff differ from the incoming feature-branch checkpoint. No app code changed.
-  This session's writers are stopped to avoid duplicating the concurrently active run; reserve disjoint batches
-  before restarting. The next A02 gaps include `A02-13133` and `A02-23133`, subject to a fresh remote check.
+  At that checkpoint this session's writers were stopped to avoid duplicating the concurrent run; they later resumed on disjoint reserved batches. The next A02 gaps include `A02-13133` and `A02-23133`, subject to a fresh remote check.
   `git push origin HEAD:refs/heads/claude/repass-3.1` was denied HTTP 403 by this environment's GitHub connection,
   despite successful reads. At that checkpoint these commits were local only; write access was later restored and the work was pushed.
   No merge to main was attempted; the full re-pass is unfinished. A verified incremental Git bundle is saved
@@ -228,20 +227,30 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
   combined counts and this session's notes. All interview and insights validators were re-run; the table above
   remains the source of truth. No interview generation or merge to main was performed during this access check.
 
+- 2026-11-17: user requested parallel sessions. Six smaller-model writers were organized into disjoint
+  early/mid-life lanes for A02, A03 and A04, with read-only reviewers using free slots. The first parallel wave
+  completed **30 new interviews**: 12 for A02, 9 for A03 and 9 for A04. All 30 passed repository validation,
+  exact-card/question/follow-up/answer-length/quote/bullet checks, profile checks and substantive review after
+  corrections. All 2,033 interviews that passed at the start of this wave remain byte-for-byte unchanged.
+  All 32 interview and 32 insights validators were re-run before checkpointing: **2,063 passing overall**;
+  A02 87/243, A03 74/243, A04 72/243. A01 remains 243/243 with passing insights. No other job has 200 passes,
+  so insights were not regenerated. The new wave uses the next reserved people below. Helpers and accepted-file
+  hashes are under `/tmp/paradigm-repass/parallel/`; only data and this handoff are committed.
+
 ## Current writer reservations
 
 Resumed at the user's request for parallel sessions. Local and remote were synchronized at `9c3ce15`;
 A02 was independently rechecked at 75/243 passing. Git push access is restored. Six smaller-model
 writers work in parallel across three jobs (two per job), authoring one person at a time and using the validators plus additional protocol checks.
 
-| Writer | Current person | Next reserved batch |
+| Writer | Next reserved person | Reserved batch |
 |---|---|---|
-| `a02_small_first` | `A02-13232` | unfinished IDs in `A02-132`, then `A02-133` |
-| `a02_small_second` | `A02-23213` | unfinished IDs in `A02-232`, then `A02-233` |
-| `a03_early` | `A03-13132` | unfinished IDs in `A03-131`, then `A03-132` |
-| `a03_mid` | `A03-21112` | unfinished IDs in `A03-211`, then `A03-212` |
-| `a04_early` | `A04-13132` | unfinished IDs in `A04-131`, then `A04-132` |
-| `a04_mid` | `A04-21112` | unfinished IDs in `A04-211`, then `A04-212` |
+| `a02_small_first` | `A02-13312` | unfinished IDs in `A02-132`, then `A02-133` |
+| `a02_small_second` | `A02-23223` | unfinished IDs in `A02-232`, then `A02-233` |
+| `a03_early` | `A03-13232` | unfinished IDs in `A03-131`, then `A03-132` |
+| `a03_mid` | `A03-21122` | unfinished IDs in `A03-211`, then `A03-212` |
+| `a04_early` | `A04-13223` | unfinished IDs in `A04-131`, then `A04-132` |
+| `a04_mid` | `A04-21122` | unfinished IDs in `A04-211`, then `A04-212` |
 
 Checkpoint counts include only independently reviewed interviews included in commits; drafts still under review may already pass the structural validator. A read-only smaller-model reviewer helps inspect drafts while writers continue.
 
