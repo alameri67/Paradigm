@@ -11,24 +11,32 @@
     "outlook": "traditional",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thank you for having me, Yusuf. I'm a field researcher with the Work Futures Panel. We're independent, with no ties to AI companies, employers, unions, parties or government, and everything you say stays confidential. Can you tell me about a normal working day?"
+      "text": "Hello, and thank you for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and we're not selling anything. Everything you say stays confidential, so feel free to tell me what you'd say in public and, separately, what you really think. Is that all right?"
     },
     {
       "speaker": "persona",
-      "text": "Milking at five, every day, Christmas included. We've 90 dairy cows at Five Oaks, plus wheat and maize for feed, about 160 hectares. I farm it with my younger brother Hassan, and my father still walks the fields every morning even though he's seventy. My wife Amina does the farm's books and keeps us all fed, and we've two children, Omar and Sara."
+      "text": "Yes, all right. I'll tell you straight, I don't do many of these."
     },
     {
       "speaker": "interviewer",
-      "text": "What does a good day look like for you?"
+      "text": "Good. To start, could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "A good day is when the milk's in the tank, the cows are content and we're at the table together at seven. On Fridays I go to prayers in town and see half the farmers in the valley afterwards. My grandfather started this farm with six cows and a borrowed bull, and I'd like Omar to have it with more than that. I've never touched any of this AI business, and I won't."
+      "text": "I'm up at five, out with my father to check the sheep on the hill, then feed the cattle in the sheds in winter. The rest of the day it's fencing, hay, the barley, or fixing the old tractor, which is twenty years old and runs fine. I love the hills at dawn; what wears me out is the forms the government sends."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Tell me about the farm and your family."
+    },
+    {
+      "speaker": "persona",
+      "text": "Stone Cross is 220 hectares, been in my family four generations, with 150 beef cattle, 400 ewes, hay and some barley. I studied agriculture at university, then came home. My wife Leila works part-time at the church school office and does the farm books, and we've got Marco, who's fourteen, and Sofia, who's eleven, and a mortgage from when we bought my uncle's share."
     }
   ],
   "scenarios": {
@@ -36,11 +44,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thank you. Now I'll read you five short pictures of the future, one at a time. The first is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say I knew it. Lot of noise from people in cities who've never done a day's work outside. I'd say that after Friday prayers to anyone who'd listen."
+          "text": "I'd say I'm not surprised one bit. Every few years somebody in a suit tells farmers the world's about to change, and it never does. I'd say it after church to anyone who asked, and leave it there."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, relief. I wouldn't have to think about it. The farm carries on the way it's carried on for three generations."
+          "text": "It means nothing for me, and I'm glad. Stone Cross has been in my family since my great-grandfather, 220 hectares on the edge of the hills with 150 beef cattle, 400 ewes, hay and barley. I don't use computers for farming, I use my eyes, and the farm pays well when I run it right."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing different. Milk, sell, pay the bank, save what's left. I'd keep putting money aside for Omar to take over one day."
+          "text": "I'd carry on exactly as I do. I'd replace the roof on the old cattle shed next summer, about 25,000, paid from savings because I don't like borrowing. And I'd keep teaching Marco to handle the cattle at weekends."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Content."
+          "text": "Calm. My worries are cattle prices, the weather and the rules the government keeps adding. AI was never one of them."
         },
         {
           "speaker": "interviewer",
-          "text": "Are there any of your neighbours who'd be disappointed?"
+          "text": "You mentioned rules. What rules bother you most?"
         },
         {
           "speaker": "persona",
-          "text": "The young Dawson boy, he's mad for gadgets. He's got a drone counting his sheep. A drone can count sheep, but it's never had to carry a lamb through snow. He'll learn."
+          "text": "The forms for every animal movement, the inspections, the subsidy schemes that change every two years. My wife Leila spends two evenings a week on the paperwork. If the government left us alone to farm, we'd do it better and cheaper."
         },
         {
           "speaker": "interviewer",
-          "text": "What about the milk price, would anything change there?"
+          "text": "Is there anyone at work you'd think about?"
         },
         {
           "speaker": "persona",
-          "text": "The dairy company sets the price and we take it, that's always been the way. If they use computers to squeeze us harder, that's their game. We've survived worse."
+          "text": "My father, Enzo, who's seventy-two and still helps with the sheep every morning. My father would be pleased nothing changed, he never trusted any of it. And Tom, the neighbour's lad who helps us part-time, would carry on too."
         }
       ],
-      "say": "I'd say I knew it, and that it was a lot of noise from city people who've never worked outside. I'd say that after Friday prayers to anyone listening.",
-      "think": "Privately I'd feel relief that I don't have to think about it. The farm would carry on as it has for three generations.",
-      "do": "Carries on milking, selling and paying the bank, and saves what's left. Keeps putting money aside so his son Omar can take over the farm one day.",
-      "feel": "Calm and content.",
+      "say": [
+        "I'd say I'm **not surprised**, because suits always predict big change.",
+        "I'd say it **after church** to anyone who asked, and leave it."
+      ],
+      "think": [
+        "I think it means **nothing for me**, which I'm glad about.",
+        "I farm with **my eyes**, not computers, and the farm pays well."
+      ],
+      "do": [
+        "Replace the **cattle shed roof** next summer for about 25,000 from savings.",
+        "Keep teaching **Marco** to handle the cattle at weekends."
+      ],
+      "feel": [
+        "**Calm**, as AI was never among his worries."
+      ],
       "mood": "calm",
-      "quote": "A drone can count sheep, but it's never had to carry a lamb through snow.",
-      "fieldNote": "Yusuf's sense of himself is tied to three generations on the farm and passing it to his son. He dismisses AI as city noise. His jab at a young neighbour's drone shows pride in hands-on knowledge.",
+      "quote": "If the government left us alone to farm, we'd do it better and cheaper.",
+      "fieldNote": [
+        "He owns a **family hill-edge farm** and farms by eye, never with AI.",
+        "His real complaint is **government paperwork**, which his wife handles.",
+        "He hates **borrowing** and pays for improvements from savings."
+      ],
       "actions": [
-        "keep-going",
-        "save-more"
+        "invest",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Replace the old cattle shed roof next summer from savings",
+          "tag": "invest"
+        },
+        {
+          "text": "Keep farming cattle and sheep the same way with his father",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thanks. The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say let the market sort it out. Good farmers will keep farming. I don't want the government stepping in with grants for robots, they always get these things wrong."
+          "text": "I'd say it's the office people's problem and they'll sort it out. A cow still has to be fed by somebody. I'd say the same at the mart, where most of us would agree."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be a bit worried. The big dairies would buy robot milkers and drive the price down, and I don't want robots in my parlour. But a cow still needs a herdsman, and we've the land paid for, most of it."
+          "text": "Privately, it touches Leila a bit. Leila works three mornings a week in the church school office, and that kind of work is what this picture takes over. But that's a small wage, and she's said she'd be happy to stay home with the farm books."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on as I am. I'd put more aside, maybe another few hundred a month. If the dairy company insisted on some computer system, I'd let Hassan deal with it, he's more patient than me."
+          "text": "I'd keep farming the way I do. I wouldn't buy any of these gadgets until a neighbour I trust has used one for five years. If Leila's hours went, she'd take on more of the farm paperwork and we'd manage fine."
         },
         {
           "speaker": "interviewer",
@@ -127,46 +160,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like the sky before rain."
+          "text": "Calm, really. It's not my world. I'd feel a bit sorry for the young people in offices."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you don't want government grants. What if your neighbours took them and got ahead?"
+          "text": "You said you'd wait five years after a neighbour uses something. Has that ever cost you?"
         },
         {
           "speaker": "persona",
-          "text": "Then they'd be farming on taxpayers' money, and I'd be farming on mine. I'd rather be a poorer farmer who owns his own cows than a richer one who owes the government for his robots."
+          "text": "Once, maybe. I was the last farm round here to get a quad bike, and my father and I walked the hills for years while others rode. But I've also never bought a machine that broke the bank, and three of my neighbours have."
         },
         {
           "speaker": "interviewer",
-          "text": "What would your father make of it?"
+          "text": "What would you say to Marco about this?"
         },
         {
           "speaker": "persona",
-          "text": "He'd laugh. He saw the first milking machines come in and said the same things I'm saying now. He'd say farming always changes and the family carries on."
+          "text": "I'd tell Marco to learn a trade with his hands, like I did, and to never trust a job that sits behind a screen. Marco is fourteen and already handles the cattle better than most men. If he wants to farm, the farm will be here."
         }
       ],
-      "say": "I'd say let the market sort it out, because good farmers will keep farming. I don't want government grants for robots; they always get these things wrong.",
-      "think": "Privately I'd be a bit worried that big dairies with robot milkers would drive the price down. But a cow still needs a herdsman and most of our land is paid for.",
-      "do": "Carries on as he is and saves a few hundred more each month. Leaves any computer system the dairy company demands to his brother Hassan.",
-      "feel": "Uneasy, like the sky before rain.",
-      "mood": "uneasy",
-      "quote": "I'd rather be a poorer farmer who owns his own cows than a richer one who owes the government for his robots.",
-      "fieldNote": "Yusuf rejects government help on principle, preferring to own his cows outright even if poorer. He'd hand any new system to his brother rather than learn it. His father's memory of the first milking machines gives him a sense that families outlast change.",
+      "say": [
+        "I'd say it's the **office people's** problem, not mine.",
+        "I'd say at the mart that **a cow still** has to be fed by somebody."
+      ],
+      "think": [
+        "I think it touches **Leila's part-time** school office job a little.",
+        "Her **small wage** matters less than the farm, and she'd happily stay home."
+      ],
+      "do": [
+        "Keep farming the **same way** without buying new gadgets.",
+        "Wait until a **trusted neighbour** has used a gadget for five years."
+      ],
+      "feel": [
+        "**Calm**, and a little **sorry** for young office workers."
+      ],
+      "mood": "calm",
+      "quote": "I was the last farm round here to get a quad bike, and my father and I walked the hills for years while others rode.",
+      "fieldNote": [
+        "He sees Steady Disruption as **someone else's problem**.",
+        "His wife's **part-time office job** is the only household exposure.",
+        "His slow approach once cost him **a quad bike**, but saved him from bad loans."
+      ],
       "actions": [
         "keep-going",
-        "save-more"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep farming the same way without new gadgets",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait until a trusted neighbour has used a new machine for five years",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thank you. The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this has been forced on ordinary people by a handful of rich men in tech and politicians who don't know one end of a cow from the other. I wouldn't hold back. I'd say it at the mosque, at the market, everywhere."
+          "text": "I'd say it's madness, and that people should slow it down. I don't believe the government will do anything useful, but the companies selling it should be held responsible. I'd keep farming and say my piece at the mart."
         },
         {
           "speaker": "interviewer",
@@ -174,7 +232,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think it would ruin us. Not overnight, we've land and savings, but the big robot dairies would make milk so cheap we couldn't sell ours at a living price. Two years isn't time to do anything, and I don't know what I'd do anyway."
+          "text": "Off the record, I think it hurts us badly by 2031. The big beef ranches will get robots first and push the price of cattle down. I'd still own the land, but the farm might not pay the mortgage, and Marco might have nothing to take over."
         },
         {
           "speaker": "interviewer",
@@ -182,7 +240,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd hold onto the cash and stop anything that isn't needed, Amina and I would sit down that week. I'd lean on family, my brother and my father, and we'd decide together, the way we always have. I wouldn't buy a robot. I'd rather sell the cows and rent out the land."
+          "text": "I'd stop spending on anything but the animals: no new shed roof, no new car. I'd build the savings to two years of costs. And I'd talk to my cousin Paolo, who has a butcher's shop in town, about selling our beef straight to his customers, so we're not at the mercy of the big buyers."
         },
         {
           "speaker": "interviewer",
@@ -190,48 +248,78 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. Angry, more than anything."
+          "text": "Anxious, I won't lie. I'd be the generation of my family that couldn't keep the land paying, and that keeps me up some nights. My great-grandfather would turn in his grave."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd rather sell the cows. Is that really what you'd do?"
+          "text": "The thinking AI arrives in 2028 and the robots three years later. What does that mean on your farm?"
         },
         {
           "speaker": "persona",
-          "text": "I don't know. It would break my father's heart. I'd keep ten cows in the old shed just so Omar knows what milking smells like."
+          "text": "In 2028, almost nothing, because there's hardly any thinking work on my farm that I'd hand to a machine. It's 2031 that scares me, when the big ranches get robots that work all night. Those three years I'd spend getting the butcher's shop deal going, so we have our own customers."
         },
         {
           "speaker": "interviewer",
-          "text": "Who do you think would help your family?"
+          "text": "You said the companies should be held responsible. Should the government help farmers like you?"
         },
         {
           "speaker": "persona",
-          "text": "Family and the community, not the government. The mosque runs a fund for people in hard times. We'd be giving to it, not taking from it, God willing."
+          "text": "I don't want a handout, I've never taken one I didn't have to. But if the government lets these companies flood the market with cheap robot beef, it should at least make them label it. People will pay for beef raised by a family, if they know."
         }
       ],
-      "say": "I'd say this has been forced on ordinary people by rich tech men and politicians who don't know one end of a cow from the other. I'd say it at the mosque, at the market, everywhere.",
-      "think": "Privately I think it would ruin us over time, because robot dairies would make milk too cheap to sell at a living price. Two years isn't enough to do anything, and I don't know what I'd do anyway.",
-      "do": "Holds onto cash and cuts anything that isn't needed after sitting down with Amina that week. Decides the farm's future together with his brother and father, and would sooner sell the cows and rent out the land than buy a robot.",
-      "feel": "Alarmed, and above all angry.",
-      "mood": "alarmed",
-      "quote": "I'd keep ten cows in the old shed just so Omar knows what milking smells like.",
-      "fieldNote": "Yusuf's alarm comes out as anger at tech elites and politicians. He would turn to family and his faith community rather than the state, and is proud to be a giver to the mosque's fund. His plan to keep ten cows for his son shows the farm is more about identity than income.",
+      "say": [
+        "I'd say it's **madness** and should be slowed down.",
+        "I'd say the **companies selling it** should be held responsible."
+      ],
+      "think": [
+        "I think it hurts us **badly by 2031**, when robot ranches cut cattle prices.",
+        "We'd own the land, but it might not **pay the mortgage**."
+      ],
+      "do": [
+        "Stop spending on **anything but the animals**.",
+        "Build savings to **two years** of farm and household costs.",
+        "Sell beef **straight through** cousin Paolo's butcher's shop."
+      ],
+      "feel": [
+        "**Anxious**, fearing to be the generation that **lost the farm**."
+      ],
+      "mood": "anxious",
+      "quote": "I'd be the generation of my family that couldn't keep the land paying, and that keeps me up some nights.",
+      "fieldNote": [
+        "His fear is about **family legacy**, not just money.",
+        "He sees the **robot ranches** as the real threat, not thinking AI.",
+        "He rejects **handouts** but wants robot-raised beef labelled.",
+        "His answer is to build **direct sales** through family."
+      ],
       "actions": [
         "cut-spending",
         "save-more",
-        "seek-support",
-        "sell-or-exit"
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Stop spending on anything except the animals",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Build savings to two years of farm and household costs",
+          "tag": "save-more"
+        },
+        {
+          "text": "Sell beef directly through cousin Paolo's butcher's shop",
+          "tag": "side-income"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thanks. The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is long enough for families to sort themselves out without waiting for government. I'd say farmers should stick together and help each other through it."
+          "text": "Like with the fast one, I'd say slow it down. Five years is still fast for farming. I'd say it at the mart and to the parish council."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +327,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years is a bit better. Omar would be eighteen, so we'd have to talk properly about the farm. I'd still not want robots in my parlour."
+          "text": "Privately, five years gives us time to get our own customers. If Paolo's butcher shop and a few restaurants take our beef by 2031, the robot ranches matter less. I think we'd come through it, though tighter."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +335,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep farming and saving, and I'd pay off the last of the land loan within three years. I'd talk to Omar, honestly, about whether he still wants the farm, or wants to study first. Hassan and I would look at turning some milk into cheese or yogurt to sell ourselves, because people might still pay for something made by hand."
+          "text": "I'd start the butcher's deal with Paolo in the next year and see how it goes. I'd hold off on any big decisions until I see what the robots actually do. And I'd talk to Marco about an apprenticeship as a farm mechanic, because somebody has to fix the machines."
         },
         {
           "speaker": "interviewer",
@@ -255,48 +343,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. More about Omar than me."
+          "text": "Uneasy, but I can live with it. Five years is time to build something. I'd pray on it, too."
         },
         {
           "speaker": "interviewer",
-          "text": "The cheese is a change. Isn't that new for you?"
+          "text": "You've said you'd talk to Marco about an apprenticeship. Would he want that?"
         },
         {
           "speaker": "persona",
-          "text": "My mother made cheese in the back kitchen when I was a boy. So it's not new, it's old. If I have to change, I'd rather go backwards to my mother's kitchen than forwards to a robot."
+          "text": "Marco would want to farm, plain and simple. But I'd tell Marco this: a farmer who can fix a robot will keep the family farm, and one who can't might not. It's not what I'd have chosen for him, but it's practical."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Omar?"
+          "text": "You'd pray on it. What role does your church play in this?"
         },
         {
           "speaker": "persona",
-          "text": "That the farm is his if he wants it, robot or no robot. But I'd want him to learn a trade too, a proper apprenticeship, so he's got something in his hands."
+          "text": "The church is where we look after each other when things go wrong. When the Bennetts' barn burned down, the whole parish turned out to rebuild it. If robots hurt the farms round here, that's where we'd lean, not on the government."
         }
       ],
-      "say": "I'd say five years is long enough for families to sort themselves out without waiting for government. I'd say farmers should stick together and help each other through it.",
-      "think": "Privately five years is a bit better, since Omar would be eighteen and we'd have to talk properly about the farm. I still wouldn't want robots in my parlour.",
-      "do": "Keeps farming and saving and pays off the last of the land loan within three years. Talks honestly with Omar about the farm and an apprenticeship, and looks with Hassan at making cheese or yogurt to sell directly.",
-      "feel": "Anxious, more for his son than for himself.",
-      "mood": "anxious",
-      "quote": "If I have to change, I'd rather go backwards to my mother's kitchen than forwards to a robot.",
-      "fieldNote": "Yusuf frames the cheese idea as going backwards to his mother's kitchen rather than forwards to robots, which lets him change without feeling he's giving in. His worry centres on Omar. He wants his son to take an apprenticeship, in line with his views on work over handouts.",
+      "say": [
+        "I'd say **slow it down**, because five years is still fast.",
+        "I'd say it at the **mart** and to the parish council."
+      ],
+      "think": [
+        "I think five years gives us time to **build our own customers**.",
+        "With direct sales, the **robot ranches** matter less."
+      ],
+      "do": [
+        "Start the **butcher's deal** with Paolo in the next year.",
+        "Hold off **big decisions** until the robots prove themselves.",
+        "Talk to **Marco** about a farm mechanic apprenticeship."
+      ],
+      "feel": [
+        "**Uneasy**, but able to live with it."
+      ],
+      "mood": "uneasy",
+      "quote": "A farmer who can fix a robot will keep the family farm, and one who can't might not.",
+      "fieldNote": [
+        "With time he would build **direct sales** to protect the farm.",
+        "He would steer **Marco** to a mechanic apprenticeship, against his own wishes.",
+        "He would lean on the **church community** rather than the government."
+      ],
       "actions": [
-        "keep-going",
-        "save-more",
-        "family-plans",
-        "side-income"
+        "side-income",
+        "wait-and-see",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Start selling beef through Paolo's butcher's shop next year",
+          "tag": "side-income"
+        },
+        {
+          "text": "Hold off big decisions until the robots prove themselves",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Talk to Marco about a farm mechanic apprenticeship",
+          "tag": "family-plans"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Thank you. The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a long time, and a good farmer plans for the long term anyway. I'd say we don't need the government telling us how to do it."
+          "text": "I'd say ten years is better, and we can adjust slowly. But I'd still say there's no need to rush into it. Let people decide for themselves."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +421,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, it's still the end of the farm as I know it, just slower. I'd be 53 and still farming. The question is whether there's anything left for Omar, and I can't answer that."
+          "text": "Off the record, ten years means I can hand the farm to Marco in good shape. I'd be 56 when the robots come in 2039, and Marco would be 27, old enough to decide what to do with it. I think we'd be all right, if we keep our customers."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +429,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd farm on, the way I do now, and keep saving. I'd get the cheese going in the first couple of years, so it's established before the robots arrive. I'd want Omar to do his apprenticeship and decide for himself. I'd let Hassan look into robots, if he wants, but not in my lifetime in that parlour."
+          "text": "I'd keep farming and keep saving as I always have. I'd build up the direct beef sales slowly over the decade. And I'd make sure Marco gets both his farming skills and his mechanic's training."
         },
         {
           "speaker": "interviewer",
@@ -320,37 +437,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but slow. Like watching water rise."
+          "text": "Uneasy, mostly. It's a long time, and a lot can happen. I'd feel better than with the fast ones."
         },
         {
           "speaker": "interviewer",
-          "text": "You say not in your lifetime. Even with ten years' warning?"
+          "text": "What would your father, Enzo, say about this?"
         },
         {
           "speaker": "persona",
-          "text": "Even then. I know it's stubborn. Ten years just gives me longer to watch it come up the lane. My father was stubborn too, and the farm's still here."
+          "text": "My father would say we've seen worse: the foot-and-mouth years, the droughts, the price crashes. My father's generation survived all of it by sticking together. He'd say robots are just another storm."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything that would make you change your mind?"
+          "text": "Is there anything you'd change, even now?"
         },
         {
           "speaker": "persona",
-          "text": "If Omar asked me to. If he came home and said, Dad, I want to farm, but with the machines. Then I'd listen. Family first."
+          "text": "I'd spend more time with Sofia, my daughter, who's eleven. Sofia doesn't care for the farm like Marco does, and I've not paid her enough attention. Whatever happens with the machines, I can spend more time with my daughter Sofia now."
         }
       ],
-      "say": "I'd say ten years is a long time and a good farmer plans long-term anyway. I'd say we don't need the government telling us how to do it.",
-      "think": "Privately it's still the end of the farm as I know it, only slower. The question is whether anything will be left for Omar, and I can't answer it.",
-      "do": "Farms on as now and keeps saving, getting the cheese business established in the first couple of years. Encourages Omar to do an apprenticeship and decide for himself, and leaves robots to his brother Hassan.",
-      "feel": "Anxious, but slowly, like watching water rise.",
-      "mood": "anxious",
-      "quote": "Ten years just gives me longer to watch it come up the lane.",
-      "fieldNote": "More time doesn't calm Yusuf, because for him the end point is the loss of a family way of life. He knows he's stubborn and says so. The only thing that would change his mind is his son asking, which shows family outranks everything else.",
+      "say": [
+        "I'd say ten years is **better**, with time to adjust slowly.",
+        "I'd say **let people decide** for themselves, with no rush."
+      ],
+      "think": [
+        "I think I can **hand the farm** to Marco in good shape.",
+        "I'd be **56** and Marco 27 when the robots come."
+      ],
+      "do": [
+        "Keep farming and **saving** as always.",
+        "Build up **direct beef sales** slowly over the decade.",
+        "Make sure **Marco** gets farming and mechanic's training."
+      ],
+      "feel": [
+        "**Uneasy**, but better than in the fast pictures."
+      ],
+      "mood": "uneasy",
+      "quote": "Whatever happens with the machines, I can spend more time with my daughter Sofia now.",
+      "fieldNote": [
+        "With ten years his focus becomes **handing over** the farm to his son.",
+        "He draws strength from his **father's** experience of past crises.",
+        "The question makes him think about his **daughter**, Sofia, not just the farm."
+      ],
       "actions": [
         "keep-going",
         "save-more",
-        "side-income",
         "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Keep farming cattle and sheep as always",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Keep saving steadily from the farm income",
+          "tag": "save-more"
+        },
+        {
+          "text": "Make sure Marco gets both farming and mechanic's training",
+          "tag": "family-plans"
+        }
       ]
     }
   },
@@ -361,7 +507,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. No time to do anything properly. What would help is a fair milk price, that the dairy companies can't just drop when the robot farms come in, and keeping the land in families, not sold off to big companies."
+      "text": "AGI by 2028, because there'd be no time to build our own customers before the robot ranches came. What would help is honest labelling, so people know beef from a family farm. And for the government to cut the paperwork so we can get on with farming."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +515,22 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about faith. Some things you can't put on a machine. Working with animals, thanking God for a good harvest. People will need that more, not less."
+      "text": "You didn't ask about the land itself. Land is the only thing they're not making more of, and families like mine have looked after it for generations. Robots won't love a hill the way my father does."
     }
   ],
-  "headlineQuote": "My grandfather started this farm with six cows and a borrowed bull, and I'd like Omar to have it with more than that.",
-  "portrait": "Yusuf Rossi is 43 and farms Five Oaks, a 90-cow dairy with wheat and maize, alongside his brother and his seventy-year-old father, three generations on the same land. He's never used AI and won't have robots in his milking parlour. He believes in markets, family and faith over government help, and blames tech elites and politicians for fast change. He's calm when AI fizzles, alarmed and angry at AGI in two years, and still anxious with ten years, because for him the end point means losing the farm he wants to hand to his son Omar.",
-  "biggestWorry": "AGI in two years, because there'd be no time to do anything properly.",
-  "whatWouldHelp": "A fair milk price the dairy companies can't drop when robot farms arrive, and keeping land in families rather than sold to big companies."
+  "headlineQuote": "Robots won't love a hill the way my father does.",
+  "portrait": [
+    "Yusuf, 43, owns a **four-generation** hill-edge beef and sheep farm with his father helping.",
+    "He **never uses AI** and waits years after neighbours before buying new machines.",
+    "He blames **companies and government paperwork**, and rejects handouts.",
+    "He goes from **calm** to **anxious** in AGI by 2028, fearing for the family farm.",
+    "His answer is **direct beef sales** through family and passing the farm to his son."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, as there'd be no time to build direct customers."
+  ],
+  "whatWouldHelp": [
+    "**Honest labelling** of beef from family farms.",
+    "Less **government paperwork** so farmers can get on with it."
+  ]
 }
