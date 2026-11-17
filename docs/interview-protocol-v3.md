@@ -75,8 +75,9 @@ Good quotes are:
 - **Concrete.** Built from their own world: the tractor, the till, the lunch break, the mortgage letter. For example: "My dad drove this land with a horse. I'll be the one who watches a robot do it from the kitchen window."
 - **Surprising or honest.** They admit something, flip an expectation, or show a contradiction.
 - **In their own voice.** Their words, not a slogan or a news headline.
+- **Clear on its own.** A reader sees the quote alone, with no question and no story around it. It must be full sentences that make sense to a stranger. Name every person, place and thing it points to: say "my daughter", "my boss" or "the mine", not "her", "him", "they", "it" or "that place". Don't start with "And", "But", "So", "Yeah", "Well", "It", "That" or "This" when they point back to something said before. For example, "I'd tell her not to rent" doesn't work, because no one knows who "her" is. "I'd tell my daughter never to rent, and to get the education I didn't" does.
 
-Avoid clichés like "it's a double-edged sword" or "only time will tell". If no line in the transcript is good enough, improve the persona's answer so it contains one, before you pick it.
+Avoid clichés like "it's a double-edged sword" or "only time will tell". If no line in the transcript is good enough, or the best line only makes sense with the question around it, improve the persona's answer so it contains a line that stands alone, before you pick it.
 
 ## 6. What to record
 

@@ -16,6 +16,23 @@ const BANNED = ["delve", "leverage", "it is important to note", "double-edged sw
 const norm = (s) => s.toLowerCase().replace(/[“”"‘’']/g, "").replace(/\s+/g, " ").trim();
 const words = (s) => (s ?? "").trim().split(/\s+/).filter(Boolean).length;
 
+// A quote is shown on its own, so it must make sense to a stranger (protocol section 5).
+const LEAD = /^(and|but|so|yeah|well|it|it's|its|that|that's|this|these|those|they|they're|them|he|he's|she|she's|him|her|then)\b/i;
+const PRONOUN = /\b(he|he's|he'd|he'll|him|his|she|she's|she'd|she'll|her|hers)\b/i;
+const PERSON = /\b(wife|husband|daughter|son|sons|kid|kids|boy|girl|lad|lass|mum|mom|mother|dad|father|brother|sister|partner|boss|manager|foreman|supervisor|grandson|granddaughter|grandad|grandpa|grandma|granny|nan|niece|nephew|friend|neighbour|neighbor|man|woman|child|baby|uncle|aunt|cousin|customer|doctor|teacher|girlfriend|boyfriend|fiancée|fiance|fiancé)\b/i;
+function standAlone(q) {
+  const t = q.trim();
+  if (LEAD.test(t)) return `starts with "${t.match(LEAD)[0]}", which points back to something the reader can't see`;
+  const m = t.match(PRONOUN);
+  if (m) {
+    const before = t.slice(0, m.index);
+    // A name counts: a capitalised word that isn't the first word of a sentence and isn't "I".
+    const named = /(?<![.!?]\s)(?<!^)\b(?!I\b)[A-Z][a-z]+/.test(before);
+    if (!PERSON.test(before) && !named) return `says "${m[0]}" without saying who that is`;
+  }
+  return null;
+}
+
 const args = process.argv.slice(2);
 const all = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith(".json")).sort() : [];
 const files = args.length ? all.filter((f) => args.some((a) => f.startsWith(a))) : all;
@@ -50,6 +67,8 @@ for (const f of files) {
     for (const k of ["say", "think", "do"]) if (x[k] && words(x[k]) < 18) errs.push(`${s}: ${k} is thin (${words(x[k])} words; aim for 2 or 3 sentences)`);
     if (x.fieldNote && words(x.fieldNote) < 25) errs.push(`${s}: fieldNote is thin (${words(x.fieldNote)} words)`);
     if (x.quote && words(x.quote) > 30) errs.push(`${s}: quote is over 30 words`);
+    const lone = x.quote && standAlone(x.quote);
+    if (lone) errs.push(`${s}: quote ${lone}; pick or improve a line that makes sense on its own`);
     const pt = personaText(t);
     everything += " " + pt;
     if (x.quote && !norm(pt).includes(norm(x.quote))) errs.push(`${s}: quote is not word for word from this scenario's answers`);
@@ -57,6 +76,8 @@ for (const f of files) {
   }
   for (const k of ["headlineQuote", "portrait", "biggestWorry", "whatWouldHelp"]) if (!d[k]?.trim()) errs.push(`missing ${k}`);
   if (d.headlineQuote && words(d.headlineQuote) > 30) errs.push("headlineQuote is over 30 words");
+  const loneH = d.headlineQuote && standAlone(d.headlineQuote);
+  if (loneH) errs.push(`headlineQuote ${loneH}; pick or improve a line that makes sense on its own`);
   if (d.headlineQuote && !norm(everything).includes(norm(d.headlineQuote))) errs.push("headlineQuote is not word for word from the transcript");
   const qs = SCEN.map((s) => d.scenarios?.[s]?.quote).filter(Boolean).map(norm);
   if (d.headlineQuote && qs.includes(norm(d.headlineQuote))) errs.push("headlineQuote repeats a scenario quote; pick a different line");
