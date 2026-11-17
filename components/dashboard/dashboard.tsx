@@ -8,6 +8,7 @@ import { AmountSlider } from "@/components/ui/amount-slider";
 import { ScatterBrush, type Brush } from "@/components/ui/bjork-scatter-brush";
 import { Avatar } from "@/components/workers/avatar";
 import { DashIcon, hasDashIcon } from "./icons";
+import { MoodRadar } from "./mood-radar";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { ACTION_LEVELS, actionLevel, contrast, pointsFor, summarize, type Contrast, type Segment, type Summary } from "@/lib/workers/dashboard";
@@ -163,22 +164,7 @@ function Insights({ s, c, empty }: { s: Summary; c: Contrast | null; /** What to
 
       <section className="db-card" aria-label="How they feel">
         <CardHead icon="mood" title="How they feel" />
-        <div className="ws-moodbar db-moodbar" role="img" aria-label={MOODS.map((m) => `${MOOD_LABEL[m]} ${s.moods[m]}`).join(", ")}>
-          {MOODS.filter((m) => s.moods[m] > 0).map((m) => (
-            <span key={m} style={{ flexGrow: s.moods[m], background: MOOD_ACCENT[m] }} />
-          ))}
-        </div>
-        <ul className="db-rows">
-          {MOODS.map((m) => (
-            <li key={m} className={"db-row db-row-mood" + (s.moods[m] ? "" : " none")}>
-              <span className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
-              <span className="db-row-name">{MOOD_LABEL[m]}</span>
-              <span className="db-row-num mono">
-                {s.moods[m]} <span className="fg2">· {pct(s.moods[m] / s.n)}</span>
-              </span>
-            </li>
-          ))}
-        </ul>
+        <MoodRadar moods={s.moods} n={s.n} />
       </section>
 
       {c && <Ends c={c} />}

@@ -11,6 +11,11 @@
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-destructive: var(--destructive);
+  /* shadcn names used by components/ui/card.tsx and chart.tsx */
+  --color-card: var(--plate);
+  --color-card-foreground: var(--fg);
+  --color-muted-foreground: var(--fg2);
+  --color-border: #ececec;
   --font-sans: var(--font);
   --font-mono: var(--mono);
 }
@@ -609,3 +614,13 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .bullets li::marker{color:currentColor}
 .bullets strong{font-weight:600;color:var(--fg)}
 .ws-quote + .ws-voices .bullets,.ws-voice .bullets{font-size:inherit;line-height:inherit}
+
+/* shadcn chart colours, mapped to the platform's own. */
+:root{--chart-2:#0d0d0d;--background:var(--bg)}
+
+/* Mood radar on the summary. Corners: face, name, share. */
+.mr-corner{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:12px;line-height:14px;color:var(--fg);text-align:center}
+.mr-face{display:grid;place-items:center}
+.mr-name{font-weight:500}
+.mr-pct{color:var(--fg2);font-variant-numeric:tabular-nums}
+.mr-tip{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;background:#fff;border:1px solid #ececec;box-shadow:0 8px 24px rgb(13 13 13 / .1);font-size:12.5px;white-space:nowrap}

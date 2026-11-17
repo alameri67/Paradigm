@@ -3,6 +3,12 @@ const PATHS = {
   // Card headings
   actions: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
   mood: '<circle cx="12" cy="12" r="9.5"/><path d="M8.5 14.5s1.3 1.8 3.5 1.8 3.5-1.8 3.5-1.8"/><path d="M9 9.5h.01"/><path d="M15 9.5h.01"/>',
+  // One face per mood, calm to panicked: the mouth and eyes do the work.
+  calm: '<circle cx="12" cy="12" r="9.5"/><path d="M8.5 14s1.3 2 3.5 2 3.5-2 3.5-2"/><path d="M9 9.5h.01"/><path d="M15 9.5h.01"/>',
+  uneasy: '<circle cx="12" cy="12" r="9.5"/><path d="M9 15h6"/><path d="M9 9.5h.01"/><path d="M15 9.5h.01"/>',
+  anxious: '<circle cx="12" cy="12" r="9.5"/><path d="M8.5 16s1.3-1.6 3.5-1.6 3.5 1.6 3.5 1.6"/><path d="M8 8l2 1"/><path d="M16 8l-2 1"/><path d="M9.5 10.5h.01"/><path d="M14.5 10.5h.01"/>',
+  alarmed: '<circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="15.5" r="1.8"/><circle cx="9" cy="9.5" r="1"/><circle cx="15" cy="9.5" r="1"/>',
+  panicked: '<circle cx="12" cy="12" r="9.5"/><ellipse cx="12" cy="15.6" rx="2.2" ry="2.6"/><path d="M7.5 8.5l2.5 1.2"/><path d="M16.5 8.5l-2.5 1.2"/><path d="M19 4.5c.8 1.2 1 2.2.4 2.8-.6.6-1.6.3-1.8-.6"/>',
   jobs: '<rect x="2.5" y="7" width="19" height="13.5" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2.5 13h19"/>',
   quote: '<path d="M6 7h4v4c0 3-1.4 5-4 6"/><path d="M14 7h4v4c0 3-1.4 5-4 6"/>',
   chart: '<path d="M3 3v18h18"/><circle cx="8" cy="15" r="1.4"/><circle cx="12.5" cy="10" r="1.4"/><circle cx="17" cy="13" r="1.4"/><circle cx="18" cy="6" r="1.4"/>',
