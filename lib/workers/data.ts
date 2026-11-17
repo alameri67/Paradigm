@@ -94,7 +94,8 @@ export async function getInterviewSummaries(): Promise<InterviewSummary[]> {
   const read = async (id: string): Promise<InterviewSummary | null> => {
     try {
       const d = JSON.parse(await readFile(path.join(rawDir, `${id}.json`), "utf8"));
-      if (d.protocolVersion !== "3.0" || !d.scenarios) return null;
+      // 3.0 files stay visible until the re-pass replaces them with 3.1.
+      if (!["3.0", "3.1"].includes(d.protocolVersion) || !d.scenarios) return null;
       const scenarios = {} as InterviewSummary["scenarios"];
       for (const s of SCENARIOS) {
         const r = d.scenarios[s.code];

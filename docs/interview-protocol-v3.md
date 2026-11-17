@@ -1,6 +1,6 @@
 # Interview protocol v3: industry archetypes
 
-Version 3.0 · 16 November 2026
+Version 3.1 · 17 November 2026
 
 This guide runs the archetype study. Each industry has one typical job (see `data/archetypes/archetypes-v1.json`), and each job has 243 versions of the same worker (see `data/archetypes/grid.json`). The versions differ on five things: life stage, work standing, money cushion, outlook and adaptability.
 
@@ -8,6 +8,12 @@ Version 3 keeps everything from version 2 (longer interviews, two follow-ups, fi
 
 1. **A new set of five scenarios** (section 3), each with a name. The interviewer always says the scenario's name, never its code.
 2. **Action tags.** Each scenario records what the person would do as tags from a fixed list (section 6), so their actions can be counted across all the versions of a job.
+
+Version 3.1 changes, after review of the first five jobs:
+
+- The AGI cards say thinking AI comes first and robots for hands-on work about 3 years later; the Steady Disruption card names the thinking tasks AI takes first.
+- The mood scale says what each mood means for the person's own job and income, and counts the worries they already carry.
+- Each scenario records concrete `steps`; say, think, do, feel and the notes are bullets with key words in bold; quotes must make sense on their own.
 
 Everything this produces is simulated. These are made-up people, and their answers are a model's guess at how someone like them would react. They aren't survey data and aren't real quotes.
 
@@ -169,7 +175,7 @@ Write one JSON file per person to `data/interviews/archetypes/raw/<ID>.json`, fo
   "sector": "Agriculture (logging and farm support)",
   "name": "Uma Petrov",
   "levels": { "lifeStage": "early", "standing": "low", "cushion": "thin", "outlook": "progressive", "adaptability": "resistant" },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [ { "speaker": "interviewer", "text": "…" }, { "speaker": "persona", "text": "…" } ],
   "scenarios": {
