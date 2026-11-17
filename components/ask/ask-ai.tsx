@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
-import { Sparkles, X } from "lucide-react";
+import { Mic, Plus, X } from "lucide-react";
 import { AIComposer } from "@/components/ui/ai-composer";
 import { withBold } from "@/components/workers/bullets";
 import { ASK_MODELS, DEFAULT_MODEL, type AskErrorCode, type AskModelId } from "@/lib/ask/models";
@@ -69,8 +69,116 @@ function Answer({ text }: { text: string }) {
   return <>{blocks}</>;
 }
 
+type Intent = "type" | "files" | "mic";
+
 /**
- * The "Ask AI" pill at the top right, and the panel it opens on the right-hand side.
+ * The composer's collapsed white pill, sitting at the top right: black plus, cycling placeholder, black mic.
+ * Clicking, focusing or typing in it opens the panel with the composer focused and the words carried over.
+ * The plus opens the panel's file picker; the mic opens the panel and starts dictation.
+ * On narrow screens, and once the page scrolls, it shrinks to just the mic in a white pill.
+ */
+function AskBar({
+  hidden,
+  onOpen,
+  restore,
+}: {
+  hidden: boolean;
+  onOpen: (text: string, intent: Intent) => void;
+  /** Goes up by one each time the panel closes, to take focus back without reopening. */
+  restore: number;
+}) {
+  const [text, setText] = useState("");
+  const [prompt, setPrompt] = useState(0);
+  const [narrow, setNarrow] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const iconRef = useRef<HTMLButtonElement>(null);
+  const quiet = useRef(false); // focus coming back from the panel shouldn't reopen it
+  const iconOnly = narrow || scrolled;
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 560px)");
+    const onMq = () => setNarrow(mq.matches);
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    onMq();
+    onScroll();
+    mq.addEventListener("change", onMq);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      mq.removeEventListener("change", onMq);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (text || hidden) return;
+    const t = setInterval(() => setPrompt((p) => (p + 1) % PROMPTS.length), 3000);
+    return () => clearInterval(t);
+  }, [text, hidden]);
+
+  useEffect(() => {
+    if (!restore) return;
+    quiet.current = true;
+    (iconOnly ? iconRef.current : inputRef.current)?.focus();
+    quiet.current = false;
+    // Only when the panel closes, not when the shape changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [restore]);
+
+  const open = (t: string, intent: Intent = "type") => {
+    onOpen(t, intent);
+    setText("");
+  };
+
+  return (
+    <div className={"ask-bar" + (iconOnly ? " is-icon" : "")} data-hidden={hidden || undefined}>
+      {iconOnly ? (
+        <button ref={iconRef} type="button" className="ask-bar-btn" aria-label="Ask AI" aria-haspopup="dialog" onClick={() => open("")}>
+          <Mic size={18} strokeWidth={2.2} aria-hidden="true" />
+        </button>
+      ) : (
+        <>
+          <button type="button" className="ask-bar-btn ask-bar-plus" aria-label="Ask AI about a file" onClick={() => open("", "files")}>
+            <Plus size={18} strokeWidth={2.2} aria-hidden="true" />
+          </button>
+          <div className="ask-bar-field">
+            <input
+              ref={inputRef}
+              value={text}
+              aria-label="Ask AI about this page"
+              aria-haspopup="dialog"
+              autoComplete="off"
+              onChange={(e) => open(e.target.value)}
+              onFocus={() => !quiet.current && open(text)}
+              onClick={() => open(text)}
+            />
+            {!text && (
+              <div className="ask-bar-ph" aria-hidden="true">
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.span
+                    key={prompt}
+                    initial={{ y: 14, opacity: 0, filter: "blur(6px)" }}
+                    animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                    exit={{ y: -14, opacity: 0, filter: "blur(6px)" }}
+                    transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    {PROMPTS[prompt % PROMPTS.length]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+            )}
+          </div>
+          <button type="button" className="ask-bar-btn" aria-label="Ask AI by voice" onClick={() => open("", "mic")}>
+            <Mic size={18} strokeWidth={2.2} aria-hidden="true" />
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
+
+/**
+ * The Ask AI bar at the top right, and the panel it opens on the right-hand side.
  * Questions go to /api/ask with the chosen model and the facts the page has published.
  */
 export function AskAI() {
@@ -79,7 +187,9 @@ export function AskAI() {
   const [model, setModel] = useState<AskModelId>(DEFAULT_MODEL);
   const [messages, setMessages] = useState<Message[]>([]);
   const screen = useScreen();
-  const pillRef = useRef<HTMLButtonElement>(null);
+  const [draft, setDraft] = useState("");
+  const intent = useRef<Intent>("type");
+  const [restore, setRestore] = useState(0);
   const panelRef = useRef<HTMLDivElement>(null);
   const logRef = useRef<HTMLDivElement>(null);
   const nextId = useRef(0);
@@ -88,14 +198,29 @@ export function AskAI() {
 
   const close = useCallback(() => setOpen(false), []);
 
-  // Focus: into the message field on open, back to the pill on close.
+  const openWith = useCallback((text: string, how: Intent) => {
+    setDraft(text);
+    intent.current = how;
+    setOpen(true);
+  }, []);
+
+  // Focus: into the message field on open (cursor at the end), back to the bar on close.
+  // The bar's plus and mic carry on in the panel: the file picker opens, or dictation starts.
   useEffect(() => {
     if (open) {
-      const t = setTimeout(() => panelRef.current?.querySelector<HTMLInputElement>('input[aria-label="Message"]')?.focus(), 60);
+      const t = setTimeout(() => {
+        const root = panelRef.current;
+        const input = root?.querySelector<HTMLInputElement>('input[aria-label="Message"]');
+        input?.focus();
+        input?.setSelectionRange(input.value.length, input.value.length);
+        if (intent.current === "files") root?.querySelector<HTMLInputElement>('input[type="file"]')?.click();
+        if (intent.current === "mic") root?.querySelector<HTMLButtonElement>('button[aria-label="Voice input"]')?.click();
+        intent.current = "type";
+      }, 60);
       wasOpen.current = true;
       return () => clearTimeout(t);
     }
-    if (wasOpen.current) pillRef.current?.focus();
+    if (wasOpen.current) setRestore((n) => n + 1);
   }, [open]);
 
   // Escape closes the panel, unless the model list is open (the composer closes that first).
@@ -210,18 +335,7 @@ export function AskAI() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <button
-        ref={pillRef}
-        type="button"
-        className="ask-pill"
-        aria-haspopup="dialog"
-        aria-expanded={open}
-        aria-controls={open ? "ask-panel" : undefined}
-        onClick={() => setOpen((v) => !v)}
-      >
-        <Sparkles size={16} strokeWidth={2} aria-hidden="true" />
-        <span className="ask-pill-text">Ask AI</span>
-      </button>
+      <AskBar hidden={open} onOpen={openWith} restore={restore} />
 
       <AnimatePresence>
         {open && (
@@ -287,6 +401,7 @@ export function AskAI() {
                 prompts={PROMPTS}
                 models={MODELS}
                 dictation={DICTATION}
+                defaultText={draft}
                 model={nameOf(model)}
                 onModelChange={(name) => setModel(idOf(name))}
                 onSubmit={(text, _files, opts) => void ask(text, opts)}

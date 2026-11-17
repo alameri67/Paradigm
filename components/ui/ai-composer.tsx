@@ -21,6 +21,7 @@
  *   4. A fix: the open model list sits above the message field, so every option can be clicked.
  *   5. In a panel, the Search and Research labels are screen-reader only and a long model name
  *      truncates, so the bottom row fits about 360px.
+ *   6. `defaultText` starts the message field with text, so words typed elsewhere carry over.
  */
 "use client";
 
@@ -72,6 +73,8 @@ export type AIComposerProps = {
   model?: string;
   /** Paradigm: called with the model's name when the user picks a different one. */
   onModelChange?: (name: string) => void;
+  /** Paradigm: what the message field starts with. */
+  defaultText?: string;
 };
 
 const PROMPTS = [
@@ -108,6 +111,7 @@ export function AIComposer({
   variant = "page", // Paradigm: see the header note
   model: modelProp, // Paradigm: controlled model
   onModelChange, // Paradigm: controlled model
+  defaultText = "", // Paradigm: carried-over text
 }: AIComposerProps) {
   const panel = variant === "panel"; // Paradigm
   const inputRef = useRef(null as HTMLInputElement | null);
@@ -116,7 +120,7 @@ export function AIComposer({
   const said = useRef(0); // which dictation line is next
   const nextId = useRef(0);
 
-  const [text, setText] = useState("");
+  const [text, setText] = useState(defaultText); // Paradigm: was useState("")
   const [files, setFiles] = useState([] as Attachment[]);
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
