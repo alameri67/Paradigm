@@ -29,43 +29,43 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,626 of 7,776 done.**
-(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:25 UTC.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **1,724 of 7,776 done.**
+(Table rebuilt from the validators by the session's status script; last update 2026-11-17 12:27 UTC.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 53/243 | STALE from main - must redo |
-| A03 | 53/243 | STALE from main - must redo |
-| A04 | 49/243 | STALE from main - must redo |
-| A05 | 55/243 | not written yet |
-| A06 | 43/243 | not written yet |
-| A07 | 41/243 | not written yet |
-| A08 | 43/243 | not written yet |
-| A09 | 43/243 | not written yet |
-| A10 | 41/243 | not written yet |
-| A11 | 40/243 | not written yet |
-| A12 | 42/243 | not written yet |
+| A02 | 55/243 | STALE from main - must redo |
+| A03 | 54/243 | STALE from main - must redo |
+| A04 | 53/243 | STALE from main - must redo |
+| A05 | 58/243 | not written yet |
+| A06 | 47/243 | not written yet |
+| A07 | 45/243 | not written yet |
+| A08 | 47/243 | not written yet |
+| A09 | 47/243 | not written yet |
+| A10 | 46/243 | not written yet |
+| A11 | 44/243 | not written yet |
+| A12 | 43/243 | not written yet |
 | A13 | 47/243 | not written yet |
-| A14 | 49/243 | not written yet |
-| A15 | 46/243 | not written yet |
-| A16 | 40/243 | not written yet |
-| A17 | 41/243 | not written yet |
-| A18 | 43/243 | not written yet |
-| A19 | 46/243 | not written yet |
-| A20 | 44/243 | not written yet |
-| A21 | 41/243 | not written yet |
-| A22 | 45/243 | not written yet |
-| A23 | 40/243 | not written yet |
-| A24 | 45/243 | not written yet |
-| A25 | 43/243 | not written yet |
-| A26 | 44/243 | not written yet |
-| A27 | 43/243 | not written yet |
-| A28 | 45/243 | not written yet |
-| A29 | 46/243 | not written yet |
-| A30 | 40/243 | not written yet |
-| A31 | 47/243 | not written yet |
-| A32 | 45/243 | not written yet |
+| A14 | 53/243 | not written yet |
+| A15 | 50/243 | not written yet |
+| A16 | 41/243 | not written yet |
+| A17 | 43/243 | not written yet |
+| A18 | 45/243 | not written yet |
+| A19 | 48/243 | not written yet |
+| A20 | 48/243 | not written yet |
+| A21 | 45/243 | not written yet |
+| A22 | 49/243 | not written yet |
+| A23 | 44/243 | not written yet |
+| A24 | 47/243 | not written yet |
+| A25 | 47/243 | not written yet |
+| A26 | 47/243 | not written yet |
+| A27 | 47/243 | not written yet |
+| A28 | 49/243 | not written yet |
+| A29 | 49/243 | not written yet |
+| A30 | 44/243 | not written yet |
+| A31 | 50/243 | not written yet |
+| A32 | 49/243 | not written yet |
 
 Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missing people are simply new files to write.
 
@@ -125,9 +125,9 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 ```json
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
-  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-123"],
-  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-123"],
-  "A04": ["A04-111","A04-112","A04-113","A04-121"],
+  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123"],
+  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123"],
+  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-123"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121"],
   "A07": ["A07-111","A07-112","A07-113","A07-121"],
@@ -137,7 +137,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A11": ["A11-111","A11-112","A11-113","A11-121"],
   "A12": ["A12-111","A12-112","A12-113","A12-121"],
   "A13": ["A13-111","A13-112","A13-113","A13-121"],
-  "A14": ["A14-111","A14-112","A14-113","A14-121"],
+  "A14": ["A14-111","A14-112","A14-113","A14-121","A14-123"],
   "A15": ["A15-111","A15-112","A15-113","A15-121"],
   "A16": ["A16-111","A16-112","A16-113","A16-121"],
   "A17": ["A17-111","A17-112","A17-113","A17-121"],
@@ -154,7 +154,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A28": ["A28-111","A28-112","A28-113","A28-121"],
   "A29": ["A29-111","A29-112","A29-113","A29-121"],
   "A30": ["A30-111","A30-112","A30-113","A30-121"],
-  "A31": ["A31-111","A31-112","A31-113","A31-121"],
+  "A31": ["A31-111","A31-112","A31-113","A31-121","A31-122"],
   "A32": ["A32-111","A32-112","A32-113","A32-121"]
 }
 ```
