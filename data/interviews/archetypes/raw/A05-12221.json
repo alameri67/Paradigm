@@ -11,24 +11,32 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time, Ivan. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to any AI company, employer, union, party or government, and we're not selling anything. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "Thanks for seeing me, Ivan. I'm a researcher with the Work Futures Panel, an independent group with no links to AI companies, employers, unions or government. Anything you say stays confidential. What's a normal day at work for you?"
     },
     {
       "speaker": "persona",
-      "text": "I work a 400-tonne stamping press at a metal plant on the industrial estate. We punch steel sheet into brackets and back panels for washing machines. I feed the coil, check the die's lined up, watch the parts drop, and measure one every half hour with a gauge. It's loud, so I wear ear defenders all day and mostly live inside my own head."
+      "text": "I run a 200-tonne press at a metal stamping plant. We make steel brackets and back panels for washing machines. I feed the coil, check the die is clamped right, then the press thumps away all shift and I stack the parts in cages and watch for burrs. Every two hours the quality lady, Agnes, comes round with her gauge and we compare notes."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what do you not?"
+      "text": "What do you like about it, and what gets to you?"
     },
     {
       "speaker": "persona",
-      "text": "I like that it's steady. Same press for six years, same shift pattern, I know every noise it makes. What I don't like is the night rotation every third week, it wrecks my football on Thursdays. I live on my own in a rented flat above a bakery, which is great until you smell bread at four in the morning and you're on a diet."
+      "text": "I like the rhythm. Thump, stack, thump, stack, you get into it and the shift goes. What gets to me is the noise, even with the ear defenders, and the die changes when the tool room is late and we stand around doing nothing."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "And at home?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I live with Hanna, she's a hairdresser and rents a chair in a salon in town. We've got about four months of money put by. Weekends I go fishing at the reservoir with my brother, that's my thing."
     }
   ],
   "scenarios": {
@@ -36,11 +44,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. I'll read the card as written. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say “fair enough” and get on with it. I'm not really one for big opinions about tech. At football I'd maybe say the people who sold it made a lot of money for not much."
+          "text": "Mostly hype. I'd believe that."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I always thought it was overblown. At work we'd have a laugh about it at break. I don't really post anything online, I'm not on there much."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means nothing changes, and that suits me. I don't use any of these AI apps anyway, never have. I'd be quietly pleased."
+          "text": "For me nothing changes, which is how I like it. The plant's been steady for years, washing machines always break. There's a press shop across the estate too, so if this one closed I'd probably get on there."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep doing what I'm doing. Keep putting a bit by, about a hundred a month, so I stay at around three months saved. Maybe finally get my car fixed properly instead of just topping up the coolant."
+          "text": "I'd carry on. Keep putting a bit by each month, same as now. Maybe finally buy the new reel I've been looking at."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +80,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like getting the same shift pattern next year as this one."
+          "text": "Calm. That's my favourite one so far."
         },
         {
           "speaker": "interviewer",
-          "text": "Would it bother you that it turned out to be mostly hype?"
+          "text": "You said 'if this one closed'. Has that ever crossed your mind for real?"
         },
         {
           "speaker": "persona",
-          "text": "Fine by me. I've seen plenty of new stuff come in at the plant and most of it ends up in a corner. There's a touchscreen on press four that nobody uses because the buttons are faster."
+          "text": "Once, when they lost a contract with a dishwasher brand a few years back. We went to four days for a couple of months, then it picked up. You don't forget it, but I don't lose sleep."
         },
         {
           "speaker": "interviewer",
-          "text": "If nothing big changes, what would you like to change about your own work?"
+          "text": "What does Hanna think about your job?"
         },
         {
           "speaker": "persona",
-          "text": "Probably the night shifts. Not AI, just the rota. If I could get off nights I'd stay at that press till I'm forty."
+          "text": "She thinks it's loud and boring, and she's right. But my partner Hanna's money goes up and down with the season, so my steady pay matters."
         }
       ],
-      "say": "I'd say fair enough and get on with it, because I'm not one for big opinions about tech. At football I might say the sellers made a lot of money for not much.",
-      "think": "It means nothing changes, and that suits me fine since I don't use AI apps anyway. I'd be quietly pleased about it.",
-      "do": "Keeps working the stamping press and saving about 100 a month, holding at roughly three months saved. Might finally get his car properly repaired.",
-      "feel": "Calm, like getting the same shift pattern again next year.",
+      "say": [
+        "I'd say I always thought the **AI hype** was overblown.",
+        "I'd have a laugh about it at **break** with the press crew."
+      ],
+      "think": [
+        "I think nothing changes for me, and that's how I **like it**.",
+        "There's a **second press shop** on the estate if this one ever closed."
+      ],
+      "do": [
+        "**Carry on** at the press with no changes.",
+        "Keep putting a bit into **savings** each month.",
+        "Buy the new **fishing reel** I've wanted."
+      ],
+      "feel": [
+        "**Calm**; it's my favourite picture."
+      ],
       "mood": "calm",
-      "quote": "There's a touchscreen on press four that nobody uses because the buttons are faster.",
-      "fieldNote": "Ivan values steadiness above almost everything and has no interest in technology. He speaks in short, low-key sentences and avoids grand statements. His only wish for change is to get off the night rotation.",
+      "quote": "My partner Hanna's money goes up and down with the season, so my steady pay matters.",
+      "fieldNote": [
+        "Ivan values **routine** above almost anything else.",
+        "He's reassured by a **second press shop** on the same estate.",
+        "His steady wage balances his partner's **seasonal** income."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep running the 200-tonne press on the same shifts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Keep putting a bit into savings each month",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. I'll read the card as written. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's just how it goes, firms do what saves money. I wouldn't moan about it in public. Maybe I'd say they should give people time to switch, that seems fair."
+          "text": "Robots more slowly. Hm. That's the part that matters for me."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's the office lot who should worry, not us on the presses. I'd say it at break and believe it about half. I'd keep off the internet arguments."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +161,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, a press like mine with a robot loading the sheet, I've seen it at the other plant down the road. They had six operators and now they've got two and a guy with a laptop. So it means I could be one of the four."
+          "text": "Honestly, they've already got a robot arm moving blanks between two presses on line three. It took two blokes off that line. If robots spread even slowly, my press is next, and I don't want to learn some new screen job."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +169,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep my head down and do my job well, so I'm not first on the list. I'd cut back on going out and get my savings up toward five months, so maybe a hundred and eighty a month. If the company offered a course I'd probably go, but I wouldn't go looking for one myself."
+          "text": "I'd start putting more aside, maybe an extra hundred a month, and stop eating out on Fridays. I'd keep my head down and do my job well so they keep me. If they offered training I'd go, but I wouldn't ask for it."
         },
         {
           "speaker": "interviewer",
@@ -126,47 +177,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. There'd be a little voice every time a manager walks past with someone in a suit."
+          "text": "Anxious, if I'm honest. Like when the dishwasher contract went."
         },
         {
           "speaker": "interviewer",
-          "text": "Why wouldn't you go looking for a course yourself?"
+          "text": "What happened to the two men on line three?"
         },
         {
           "speaker": "persona",
-          "text": "Because I don't know what I'd look for. I'm not a computer person. I'd rather wait for someone to tell me what's actually needed than spend money on the wrong thing."
+          "text": "One got moved to the warehouse on less money. The other, Petr, left and drives a delivery van now. He says he likes it, but he doesn't look like he does."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned the plant down the road. Do you know anyone who made the switch there?"
+          "text": "You said you wouldn't ask for training. Why not?"
         },
         {
           "speaker": "persona",
-          "text": "Darren, he's the guy with the laptop now. He was an operator like me, and they trained him up. I don't really know how he got picked, to be honest, maybe he just asked."
+          "text": "Asking for training puts your name on a list, and lists are how they decide things. I'd rather they just think I'm fine where I am."
         }
       ],
-      "say": "I'd say firms do what saves money and that's how it goes, though they should give people time to switch. I wouldn't moan about it in public.",
-      "think": "I've seen a robot-loaded press at a plant down the road cut six operators to two plus a guy with a laptop. I could easily be one of the four who go.",
-      "do": "Keeps his head down and works carefully so he isn't first on the list. Cuts back on going out and raises savings toward five months at about 180 a month, attending a course only if the company offers it.",
-      "feel": "Uneasy, with a nagging voice whenever a manager walks past with someone in a suit.",
-      "mood": "uneasy",
-      "quote": "They had six operators and now they've got two and a guy with a laptop.",
-      "fieldNote": "Ivan doesn't blame anyone; he treats job loss as normal business. His plan is defensive: work well, save more, wait for the company to offer training. He wonders aloud whether his old colleague Darren got picked just by asking, but doesn't draw the lesson for himself.",
+      "say": [
+        "I'd say the **office staff** should worry, not press operators.",
+        "I'd say it at break and **half believe** it."
+      ],
+      "think": [
+        "I think the **robot arm** on line three shows my press is next.",
+        "I don't want to learn a new **screen job**."
+      ],
+      "do": [
+        "Save an **extra hundred** a month.",
+        "Stop **eating out** on Fridays.",
+        "Keep my head down and wait for **training** to be offered."
+      ],
+      "feel": [
+        "**Anxious**, like when the dishwasher **contract** went."
+      ],
+      "mood": "anxious",
+      "quote": "Asking for training puts your name on a list, and lists are how they decide things.",
+      "fieldNote": [
+        "Ivan's public line and private fear **differ** sharply.",
+        "The **robot arm** on line three is concrete proof to him.",
+        "He avoids training requests because he distrusts **lists**."
+      ],
       "actions": [
         "save-more",
         "cut-spending",
-        "wait-and-see"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Save an extra hundred a month from his press pay",
+          "tag": "save-more"
+        },
+        {
+          "text": "Stop Friday meals out with Hanna",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Keep running the press well and avoid drawing attention",
+          "tag": "keep-going"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. I'll read the card as written. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say the government needs to do something, quickly, because you can't have everyone out of work at once. I'm not political, but that's just common sense. I'd say it to my dad and at football, not online."
+          "text": "2028. Two years. Bloody hell."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the government needs to sort out something for people, because companies won't. At work I'd say we'll be fine for a bit because the robots come later. I'd say that to calm people down, mostly myself."
         },
         {
           "speaker": "interviewer",
@@ -174,7 +263,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be finished at the plant. Two years and a robot does my press better, and I wouldn't even know what to switch to, since the robots do hands-on work too. Three months of savings goes very fast."
+          "text": "Really, my press is mostly hands-on, so by the card I'd have until about 2031. But the planning and the quality checks go first, so our quality checker Agnes goes in 2028, and then it's just me and a press that doesn't need me. Three more years, then nothing I know how to do."
         },
         {
           "speaker": "interviewer",
@@ -182,7 +271,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop spending on anything but rent and food straight away, and sell the car if I had to. I'd move back in with my parents if the job went, they've got my old room. And I'd sign on for whatever help the government offered, because what else is there."
+          "text": "I'd cut everything back and try to get to six months saved. I'd ask Petr about van driving, even though I don't want to. Hanna and I would stop talking about getting a dog and a bigger place."
         },
         {
           "speaker": "interviewer",
@@ -190,48 +279,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd be lying awake above the bakery doing sums."
+          "text": "Alarmed. I'd be lying awake, which I never do."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd keep doing your job in the steady picture. With only two years' warning, would you try anything new before it arrives?"
+          "text": "Van driving would face robots too. Have you thought about that?"
         },
         {
           "speaker": "persona",
-          "text": "I wouldn't know where to start, that's the honest answer. Two years isn't long enough for someone like me to learn something totally new. I'd probably just keep turning up until they told me not to."
+          "text": "Yeah, I know. It's just the only door I can see. I don't know what's behind the other doors."
         },
         {
           "speaker": "interviewer",
-          "text": "How would it feel moving back in with your parents?"
+          "text": "What would you tell your brother on the reservoir that weekend?"
         },
         {
           "speaker": "persona",
-          "text": "Sort of embarrassed. I'm twenty-seven, I'm meant to be the one getting my own place, not going back. But my mum would be pleased, she still asks if I'm eating properly."
+          "text": "Probably nothing, we'd just fish. Maybe I'd say I'm worried, and he'd say so is everyone. That's how we talk."
         }
       ],
-      "say": "I'd say the government has to do something fast, because you can't have everyone out of work at once, and that's common sense. I'd say it to my dad and at football, not online.",
-      "think": "I'd be finished at the plant within two years, with no idea what to switch to if robots do hands-on work too. Three months of savings would go very fast.",
-      "do": "Stops all spending beyond rent and food and would sell the car if needed. Moves back in with his parents if the job goes and signs on for any government help available.",
-      "feel": "Alarmed, lying awake above the bakery doing sums.",
+      "say": [
+        "I'd say **government** must step in because companies won't.",
+        "I'd tell the crew we have time because **robots come later**."
+      ],
+      "think": [
+        "I think quality checks go in **2028** and my press by **2031**.",
+        "After that I'd have **nothing** I know how to do."
+      ],
+      "do": [
+        "**Cut back** everything to reach six months saved.",
+        "Ask Petr about **van driving** work.",
+        "Drop plans for a **dog** and a bigger place."
+      ],
+      "feel": [
+        "**Alarmed**, lying awake when I **never** do."
+      ],
       "mood": "alarmed",
-      "quote": "I'd probably just keep turning up until they told me not to.",
-      "fieldNote": "Ivan freezes rather than plans when time is short; he admits he wouldn't know where to start. His fallback is family, with some embarrassment about moving home at 27. He frames government action as common sense rather than politics.",
+      "quote": "Our quality checker Agnes goes in 2028, and then it's just me and a press that doesn't need me.",
+      "fieldNote": [
+        "Ivan understands the **three-year gap** but sees no path after it.",
+        "Van driving is his only **door**, and he knows it's shaky.",
+        "He'd hide the fear behind **calming** words for others."
+      ],
       "actions": [
         "cut-spending",
-        "seek-support",
-        "move",
-        "wait-and-see"
+        "change-job",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Cut spending to reach six months of savings",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Ask Petr about delivery van driving jobs",
+          "tag": "change-job"
+        },
+        {
+          "text": "Shelve plans for a dog and a bigger flat with Hanna",
+          "tag": "family-plans"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. I'll read the card as written. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\""
         },
         {
           "speaker": "persona",
-          "text": "Same as the fast one, really: someone in charge needs a plan. Five years is enough time to make one. I'd still keep it to the pub and my family."
+          "text": "Five years. Okay. Still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's time to see what happens and not to panic. At break I'd say the people in charge will work something out. I'd stay off line about it."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +365,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means I've got maybe three good years at the press, then the same problem. I'd like to think I'd use the time well, but if I'm honest I'd probably wait too long. That's how I am with most things."
+          "text": "Privately, robots by 2034 gives me eight years, more or less. That's a long time to me, but I know it goes, I've been at the plant six years already and it feels like nothing. I'd still end up out of a job I like."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +373,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd build my savings up properly, maybe two hundred a month, and skip the lads' holiday. I'd watch what Darren and the maintenance guys do and ask them, around year two, what they'd learn if they were me. I'd want to see it working for someone first."
+          "text": "In the first year I'd mostly wait and save, maybe an extra hundred a month. If the plant offered a forklift licence or warehouse training I'd take it. I'd ask my brother about his job at the water company."
         },
         {
           "speaker": "interviewer",
@@ -255,47 +381,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not as bad as the fast one, more like a toothache you keep ignoring."
+          "text": "Anxious. Less than the two-year one, but it's there."
         },
         {
           "speaker": "interviewer",
-          "text": "If you did ask Darren and he gave you advice, what kind of work would you want to move into?"
+          "text": "Why the water company?"
         },
         {
           "speaker": "persona",
-          "text": "Something with my hands, if there's anything left. My uncle's an electrician and he's always said I'd be good at it. But in this picture I don't know if electricians are safe either."
+          "text": "Pipes and pumps, out in the weather, digging. Feels like the sort of thing robots would be slow at. I could be wrong though."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd probably wait too long. Is that what you think would actually happen?"
+          "text": "You said you'd mostly wait. What would make you stop waiting?"
         },
         {
           "speaker": "persona",
-          "text": "Pretty much, yes. I know I said I'd ask around in year two. But I'd probably let that slip to year three, and then it's late."
+          "text": "If they put a robot arm on my press, that's my line, and until then I'd tell myself I've got time."
         }
       ],
-      "say": "I'd say someone in charge needs a plan, and five years is enough to make one. I'd keep that to the pub and my family.",
-      "think": "I'd have maybe three good years at the press and then the same problem. I'd like to use the time well, but I'd probably wait too long, as I do with most things.",
-      "do": "Saves about 200 a month and skips the lads' holiday. Plans to ask Darren and the maintenance staff around year two what to learn, wanting to see it work for someone first.",
-      "feel": "Anxious, like a toothache he keeps ignoring.",
+      "say": [
+        "I'd say there's time to **wait** and not panic.",
+        "I'd say the people **in charge** will work something out."
+      ],
+      "think": [
+        "I think robots by 2034 give me about **eight years**.",
+        "Six years at the plant **flew by**, so eight will too."
+      ],
+      "do": [
+        "**Wait** and save an extra hundred a month.",
+        "Take a **forklift licence** if the plant offers one.",
+        "Ask my brother about the **water company**."
+      ],
+      "feel": [
+        "**Anxious**, though less than the **two-year** picture."
+      ],
       "mood": "anxious",
-      "quote": "I'd like to think I'd use the time well, but if I'm honest I'd probably wait too long. That's how I am with most things.",
-      "fieldNote": "Ivan is unusually honest about his own habit of delay. More warning lowers his alarm but doesn't really change his behaviour beyond saving. He mentions electrical work through his uncle but doubts it would be safe.",
+      "quote": "If they put a robot arm on my press, that's my line, and until then I'd tell myself I've got time.",
+      "fieldNote": [
+        "Ivan sets a clear **trigger**: a robot arm on his own press.",
+        "He picks **outdoor** work as a guess at safety.",
+        "Waiting is his comfort, and he **knows** it."
+      ],
       "actions": [
+        "wait-and-see",
         "save-more",
-        "cut-spending",
-        "wait-and-see"
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Wait until a robot arm reaches his own press before moving",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Save an extra hundred a month",
+          "tag": "save-more"
+        },
+        {
+          "text": "Take a forklift licence if the plant offers one",
+          "tag": "retrain"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. I'll read the card as written. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a long time, let's see what happens. People said the internet would end shops, and there are still shops. I wouldn't panic in public."
+          "text": "Ten years. That's more like it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is a long time and lots can change. At work I'd say let's not worry about 2039 in 2026. Hanna would roll her eyes at me."
         },
         {
           "speaker": "interviewer",
@@ -303,7 +467,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think ten years is enough that even I'd get moving eventually. I'd be thirty-seven. My uncle could get me onto an electrician apprenticeship, and I'd probably go for it after a few years of watching."
+          "text": "Honestly, I'd relax for a few years, which is probably a mistake. I'd be thirty-nine when the robots come for the presses. That's young enough to start over but I'd be starting over with the same nothing."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +475,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First few years, carry on at the press and save about a hundred and fifty a month. Somewhere around year three or four, if I saw others making it work, I'd do the electrician course with my uncle's help. I wouldn't make any big moves straight away."
+          "text": "I'd keep going at the press and keep saving. In about year five I'd look properly at the water company or a trade. I'd maybe do one evening course on something with my hands, plumbing maybe."
         },
         {
           "speaker": "interviewer",
@@ -319,36 +483,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but it's far enough off that I'd mostly not think about it."
+          "text": "Easier. Still a worry in the back of my head."
         },
         {
           "speaker": "interviewer",
-          "text": "Does it matter that it's your uncle who'd help, rather than a course you'd find yourself?"
+          "text": "Why is relaxing a mistake?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, partly, it's family. I wouldn't be on my own figuring it out. That's the difference for me."
+          "text": "Because I know myself. I'd say year five and then it'd be year eight, so my partner Hanna would have to push me."
         },
         {
           "speaker": "interviewer",
-          "text": "Would ten years change anything about how you feel at work day to day?"
+          "text": "What would you miss most about the press shop?"
         },
         {
           "speaker": "persona",
-          "text": "The rota, probably. If I'm leaving in a few years anyway, I wouldn't fight about nights. I'd just get through it."
+          "text": "The rhythm, and the crew at break. Nobody talks about anything important, and that's the point."
         }
       ],
-      "say": "I'd say ten years is a long time, so let's see, because people said the internet would end shops and there are still shops. I wouldn't panic in public.",
-      "think": "Ten years is enough that even I'd get moving eventually. At thirty-seven, my uncle could get me onto an electrician apprenticeship after a few years of watching.",
-      "do": "Carries on at the press for the first few years, saving about 150 a month. Around year three or four, starts an electrician course with his uncle's help if he sees others succeed.",
-      "feel": "Uneasy, but far enough off that he'd mostly not think about it.",
-      "mood": "uneasy",
-      "quote": "People said the internet would end shops, and there are still shops.",
-      "fieldNote": "Ten years lets Ivan's slow style work for him: he can watch others and still move in time. Family, through his uncle, is the bridge that makes retraining feel possible. He remains cautious about making any big move early.",
+      "say": [
+        "I'd say **ten years** is long and a lot can change.",
+        "I'd say let's not worry about **2039** in 2026."
+      ],
+      "think": [
+        "I think I'd **relax** for a few years, probably a mistake.",
+        "I'd be **thirty-nine** and starting over with nothing new."
+      ],
+      "do": [
+        "**Keep going** at the press and keep saving.",
+        "Look at the water company or a **trade** in about year five.",
+        "Try an **evening plumbing** course."
+      ],
+      "feel": [
+        "**Easier**, with a **worry** at the back of my head."
+      ],
+      "mood": "anxious",
+      "quote": "I'd say year five and then it'd be year eight, so my partner Hanna would have to push me.",
+      "fieldNote": [
+        "Ivan knows his own **delay** habit and depends on Hanna to push.",
+        "He still expects to **lose** the press job by 2039.",
+        "He values the **crew** more than the work itself."
+      ],
       "actions": [
-        "wait-and-see",
+        "keep-going",
         "save-more",
         "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Keep running the press and saving each month",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Keep adding to the savings account monthly",
+          "tag": "save-more"
+        },
+        {
+          "text": "Take an evening plumbing course within five years",
+          "tag": "retrain"
+        }
       ]
     }
   },
@@ -359,7 +553,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. I'd be back in my old bedroom with nothing to switch to. What would help is someone telling me clearly what jobs will still be there, and a course I can do while I'm still working, so I'm not gambling my savings on a guess."
+      "text": "AGI by 2028. Three years after the office goes, my press goes, and I've got no other trade. What would help is someone telling me straight which jobs will still be there, and paying me while I learn one."
     },
     {
       "speaker": "interviewer",
@@ -367,11 +561,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe how much I'd actually miss it. People think a press is just noise. But I've got six years of knowing that machine, and it'd be strange to watch a robot do it without anyone noticing it ever needed a person."
+      "text": "Maybe what happens to the noise. Funny thing, I'd miss it. A quiet factory with nobody in it sounds worse than a loud one with the crew."
     }
   ],
-  "headlineQuote": "I've got six years of knowing that machine, and it'd be strange to watch a robot do it without anyone noticing it ever needed a person.",
-  "portrait": "Ivan Jensen, 27, runs a 400-tonne stamping press making washing machine brackets and lives alone in a rented flat above a bakery. He's low-key, practical and avoids technology, never using AI tools. He blames nobody, seeing job loss as normal business, but freezes when time is short and admits he tends to wait too long. Calm if AI fizzles and alarmed by AGI in two years, he would lean on his parents and his electrician uncle, and with ten years' warning he could see himself retraining as an electrician after watching others go first.",
-  "biggestWorry": "AGI by 2028 worries him most, because he'd be back in his old bedroom with nothing to switch to.",
-  "whatWouldHelp": "Clear information about which jobs will still exist, and a course he could do while still working so he isn't gambling his savings on a guess."
+  "headlineQuote": "A quiet factory with nobody in it sounds worse than a loud one with the crew.",
+  "portrait": [
+    "Ivan is a **27-year-old** press operator stamping washing machine parts.",
+    "He lives with Hanna, a **hairdresser** with seasonal income, and fishes at weekends.",
+    "He loves **routine**, never uses AI tools, and avoids asking for training.",
+    "He's calm only in AI Plateau and grows **anxious** or alarmed once robots come close.",
+    "He knows he **delays** change and relies on Hanna to push him."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because his press goes three years later with no other **trade**."
+  ],
+  "whatWouldHelp": [
+    "Being told **straight** which jobs will last, and **paid** while he learns one."
+  ]
 }
