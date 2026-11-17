@@ -674,3 +674,32 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .db-end-story{margin:0;font-size:14px;line-height:20px;color:var(--fg)}
 /* Least and most worried: the KPI row sits on the end's grey plate, so it gets a white plate of its own. */
 .db-end-kpis{background:var(--plate);border-radius:12px;padding:2px 0}
+/* Least vs most worried: two ends split by a strong rule with a "vs" chip. */
+.db-ends-row{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:0;container-type:inline-size}
+.db-ends-row>.db-end{background:none;padding:4px 28px;container:end/inline-size}
+.db-ends-row>.db-end:first-child{padding-left:4px}
+.db-ends-row>.db-end:last-child{padding-right:4px}
+.db-ends-vs{position:relative;width:2px;background:var(--fg);border-radius:2px;margin:6px 0}
+.db-ends-vs span{position:sticky;top:45vh;display:grid;place-items:center;width:34px;height:34px;margin-left:-16px;margin-top:40px;border-radius:999px;background:var(--fg);color:var(--bg);font-size:12px;font-weight:600;letter-spacing:.02em}
+.db-end-head{padding-bottom:10px;border-bottom:3px solid var(--end-accent,var(--fg))}
+.db-end-title{font-size:16px}
+/* Who they are: one column per trait group. */
+.db-who{margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--muted-2);background:var(--plate);border-radius:12px}
+.db-who-col{display:flex;flex-direction:column;gap:3px;padding:12px;min-width:0}
+.db-who-col+.db-who-col{border-left:1px solid var(--muted-2)}
+.db-who dt{font-size:11px;line-height:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg2);font-weight:500}
+.db-who dd{margin:0}
+.db-who-val{font-size:14px;line-height:18px;text-wrap:balance;font-weight:600;color:var(--fg)}
+.db-who-col.is-mixed .db-who-val{color:var(--fg2);font-weight:500}
+.db-who-sub{font-size:12.5px;line-height:17px;color:var(--fg2)}
+@container (max-width: 820px){
+  .db-ends-row{grid-template-columns:minmax(0,1fr)}
+  .db-ends-row>.db-end{padding:4px 0}
+  .db-ends-vs{width:auto;height:2px;margin:22px 0}
+  .db-ends-vs span{position:absolute;left:50%;top:50%;margin:0;transform:translate(-50%,-50%)}
+}
+@container end (max-width: 380px){
+  .db-who{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .db-who-col:nth-child(odd){border-left:0}
+  .db-who-col:nth-child(n+3){border-top:1px solid var(--muted-2)}
+}

@@ -12,7 +12,7 @@ import { MoodRadar } from "./mood-radar";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { StatsBand, type Stat } from "@/components/ui/stats-band";
-import { ACTION_LEVELS, ACTION_PHRASE, LEVEL_PHRASE, WHO_PHRASE, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
+import { ACTION_LEVELS, ACTION_PHRASE, WHO_PHRASE, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
 import { usePublishScreen } from "@/lib/ask/screen-store";
 import type { Screen } from "@/lib/ask/schema";
 import {
@@ -90,19 +90,7 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
       visual: { kind: "share", count: seg.n, of: total },
     },
   ];
-  const t = seg.top[0];
-  if (t) {
-    const who = WHO_PHRASE[t.group]?.[t.level] ?? t.level;
-    out.push({
-      label: cap(who.replace(/^who /, "")),
-      value: pctOf(t.count, seg.n),
-      suffix: "%",
-      detail: `${ofText(t.count, seg.n)} ${LEVEL_PHRASE[t.group]?.[t.level] ?? who}.`,
-      context: vs(other.levels[t.group]?.[t.level] ?? 0),
-      visual: { kind: "share", count: t.count, of: seg.n },
-    });
-  }
-  for (const a of seg.actions.slice(0, t ? 2 : 3)) {
+  for (const a of seg.actions.slice(0, 3)) {
     const phrase = ACTION_PHRASE[a.tag] ?? a.tag.replace(/-/g, " ");
     out.push({
       label: cap(phrase.replace(/^will /, "")),
@@ -116,15 +104,34 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
   return out;
 }
 
-function End({ seg, other, total, side, named }: { seg: Segment; other: Segment; total: number; side: "low" | "high"; /** From the job summary, when one job is picked. */ named?: { name: string; story: string } }) {
+/** Short form of a level for a column: "Adapt easily", "In junior roles". */
+const shortLevel = (group: string, level: string) => cap((WHO_PHRASE[group]?.[level] ?? level).replace(/^who /, ""));
+
+/** Who this end is: one column per trait group, the groups that move worry most first. */
+function WhoCols({ seg, order }: { seg: Segment; order: { key: string; label: string }[] }) {
+  return (
+    <dl className="db-who">
+      {order.map((g) => {
+        const counts = Object.entries(seg.levels[g.key] ?? {});
+        const [level, k] = counts.reduce((x, y) => (y[1] > x[1] ? y : x), ["", -1] as [string, number]);
+        const clear = seg.n > 0 && k / seg.n >= 0.6;
+        return (
+          <div key={g.key} className={"db-who-col" + (clear ? "" : " is-mixed")}>
+            <dt>{g.label}</dt>
+            <dd className="db-who-val">{clear ? shortLevel(g.key, level) : "A mix"}</dd>
+            <dd className="db-who-sub">{clear ? `${ofText(k, seg.n)}` : `${k} of ${seg.n} ${shortLevel(g.key, level).toLowerCase()}`}</dd>
+          </div>
+        );
+      })}
+    </dl>
+  );
+}
+
+function End({ seg, other, total, side, order, named }: { seg: Segment; other: Segment; total: number; side: "low" | "high"; /** Trait groups, most telling first. */ order: { key: string; label: string }[]; /** From the job summary, when one job is picked. */ named?: { name: string; story: string } }) {
   const accent = MOOD_ACCENT[side === "low" ? seg.moods[0] : seg.moods[seg.moods.length - 1]];
   const stats = endStats(seg, other, total, side);
-  // The traits the numbers above don't already cover.
-  const t = seg.top[0];
-  const lead = t ? `${ofText(t.count, seg.n)} ${LEVEL_PHRASE[t.group]?.[t.level]}.` : "";
-  const rest = seg.traits.filter((x) => x !== lead);
   return (
-    <div className={"db-end db-end-" + side}>
+    <div className={"db-end db-end-" + side} style={{ "--end-accent": accent } as CSSProperties}>
       <div className="db-end-head">
         {seg.moods.map((m) => (
           <span key={m} className="ws-dot" style={{ background: MOOD_ACCENT[m] }} aria-hidden="true" />
@@ -132,24 +139,15 @@ function End({ seg, other, total, side, named }: { seg: Segment; other: Segment;
         <span className="db-end-title">{named ? named.name : side === "low" ? "Least worried" : "Most worried"}</span>
         <span className="db-end-n">{people(seg.n)}</span>
       </div>
-      <StatsBand stats={stats} layout="divided" duration={1.2} className="db-end-kpis" style={{ "--sb-accent-in": accent } as CSSProperties} />
       {named && <p className="db-end-story">{named.story}</p>}
-      {(rest.length > 0 || seg.mixed.length > 0) && (
-        <div className="db-end-block">
-          <div className="db-end-label">Also true of them</div>
-          <ul>
-            {rest.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-            {seg.mixed.length > 0 && (
-              <li className="fg2">
-                {seg.traits.length ? "Their " : "They're a mix on every count: "}
-                {seg.traits.length ? `${listOf(seg.mixed.map((x) => x.toLowerCase()))} ${seg.mixed.length === 1 ? "varies" : "vary"}.` : `${listOf(seg.mixed.map((x) => x.toLowerCase()))}.`}
-              </li>
-            )}
-          </ul>
-        </div>
-      )}
+      <div className="db-end-block">
+        <div className="db-end-label">Who they are</div>
+        <WhoCols seg={seg} order={order} />
+      </div>
+      <div className="db-end-block">
+        <div className="db-end-label">What they&apos;ll do</div>
+        <StatsBand stats={stats} layout="divided" duration={1.2} className="db-end-kpis" style={{ "--sb-accent-in": accent } as CSSProperties} />
+      </div>
       {seg.quote && (
         <figure className="db-end-quote">
           <blockquote>“{seg.quote.text}”</blockquote>
@@ -164,13 +162,18 @@ function End({ seg, other, total, side, named }: { seg: Segment; other: Segment;
 
 /** The least and most worried ends of the selection, side by side, with what separates them on top. */
 function Ends({ c, named }: { c: Contrast; named?: { least: { name: string; story: string }; most: { name: string; story: string } } }) {
+  // Four columns: the groups that change worry most.
+  const order = c.drivers.slice(0, 4);
   return (
     <section className="db-card db-ends" aria-label="Least and most worried">
       <CardHead icon="mood" title="Least and most worried" note={`Out of ${people(c.n)}`} />
       {c.headline && <p className="db-sowhat">{c.headline}</p>}
       <div className="db-ends-row">
-        <End seg={c.low} other={c.high} total={c.n} side="low" named={named?.least} />
-        <End seg={c.high} other={c.low} total={c.n} side="high" named={named?.most} />
+        <End seg={c.low} other={c.high} total={c.n} side="low" order={order} named={named?.least} />
+        <div className="db-ends-vs" aria-hidden="true">
+          <span>vs</span>
+        </div>
+        <End seg={c.high} other={c.low} total={c.n} side="high" order={order} named={named?.most} />
       </div>
     </section>
   );
