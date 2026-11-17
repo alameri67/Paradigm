@@ -63,6 +63,18 @@ for (const f of files) {
     if (!MOODS.includes(x.mood)) errs.push(`${s}: bad mood "${x.mood}"`);
     if (!Array.isArray(x.actions) || x.actions.length < 1 || x.actions.length > 4) errs.push(`${s}: actions needs 1 to 4 tags`);
     else for (const a of x.actions) if (!ACTIONS.includes(a)) errs.push(`${s}: unknown action tag "${a}"`);
+    if (!Array.isArray(x.steps) || x.steps.length < 1 || x.steps.length > 3) errs.push(`${s}: steps needs 1 to 3 concrete steps`);
+    else {
+      for (const st of x.steps) {
+        const w = words(st?.text);
+        if (w < 3 || w > 16) errs.push(`${s}: step "${st?.text ?? ""}" should be 3 to 16 words`);
+        if (/^(i|i'll|i'd|we|my)\b/i.test(st?.text ?? "")) errs.push(`${s}: step "${st.text}" should start with a verb, not "I" or "we"`);
+        if (!x.actions?.includes(st?.tag)) errs.push(`${s}: step "${st?.text ?? ""}" has tag "${st?.tag}", which isn't in actions`);
+      }
+      for (const a of x.actions ?? []) if (!x.steps.some((st) => st?.tag === a)) errs.push(`${s}: action "${a}" has no step`);
+      const texts = x.steps.map((st) => norm(st?.text ?? ""));
+      if (new Set(texts).size < texts.length) errs.push(`${s}: two steps are the same`);
+    }
     if (OLD_CARD.test(JSON.stringify(t))) errs.push(`${s}: uses an old scenario card (see protocol v3)`);
     for (const k of ["say", "think", "do"]) if (x[k] && words(x[k]) < 18) errs.push(`${s}: ${k} is thin (${words(x[k])} words; aim for 2 or 3 sentences)`);
     if (x.fieldNote && words(x.fieldNote) < 25) errs.push(`${s}: fieldNote is thin (${words(x.fieldNote)} words)`);
