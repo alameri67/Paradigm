@@ -11,6 +11,7 @@ import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
+import { ScenarioGuidePill } from "./scenario-guide";
 import { GROUP_ICON } from "./group-icons";
 import { Bullets, toPoints } from "./bullets";
 import { DashIcon } from "@/components/dashboard/icons";
@@ -419,12 +420,15 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
         </div>
 
         <div className="dialbar">
-          <span className="label" id="ws-dial">
-            AI scenario{" "}
-            <HelpTip>
-              <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
-            </HelpTip>
-          </span>
+          <div className="sg-dialhead">
+            <span className="label" id="ws-dial">
+              AI scenario{" "}
+              <HelpTip>
+                <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
+              </HelpTip>
+            </span>
+            <ScenarioGuidePill current={scenario} onPick={setScenario} />
+          </div>
           <AmountSlider
             stops={STOPS}
             value={CODES.indexOf(scenario)}

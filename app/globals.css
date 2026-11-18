@@ -809,3 +809,80 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 /* Lists inside a flex column lose their markers; keep them as list items so the bullets show. */
 .bullets{list-style:disc}
 .bullets li{display:list-item}
+
+/* ---------- Scenario guide: the pill beside "AI scenario" and the popup it opens ---------- */
+.sg-dialhead{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px}
+.db-chip.sg-pill{min-height:28px;padding:0 12px 0 10px;gap:6px;font-size:12.5px;color:var(--fg)}
+.db-chip.sg-pill svg{flex:none;color:var(--fg2)}
+.sg{width:min(1360px,calc(100vw - 48px));max-width:none;max-height:calc(100dvh - 48px);margin:auto;padding:0;border:0;border-radius:28px;background:#fff;color:var(--fg);box-shadow:0 0 0 1px var(--hair),0 24px 64px rgb(13 13 13 / .18);overflow:hidden}
+.sg[open]{display:flex;animation:appear 200ms var(--ease) both}
+.sg::backdrop{background:rgb(13 13 13 / .32);backdrop-filter:blur(2px)}
+.sg-panel{display:flex;flex-direction:column;width:100%;min-height:0}
+.sg-body>*{flex:none}
+.sg-head{display:flex;align-items:flex-start;gap:16px;padding:24px 20px 18px 28px;border-bottom:1px solid var(--hair)}
+.sg-head-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.sg-head-text p{max-width:90ch}
+.sg-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:28px;padding:24px 28px 28px}
+/* The tinted plates of the least / most worried cards, one per scenario in its dial colour. */
+.sg .db-end{container:none;background:color-mix(in srgb,var(--end-accent) 7%,#fff);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--end-accent) 30%,#fff);padding:18px 18px 20px;border-radius:18px;gap:16px}
+.sg .db-end.on{box-shadow:inset 0 0 0 2px var(--end-accent),0 8px 24px color-mix(in srgb,var(--end-accent) 18%,transparent)}
+.sg .db-end-head{padding-bottom:12px;gap:10px}
+.sg .db-end-ico{width:36px;height:36px;border-radius:11px}
+.sg .db-end-title{font-size:16px;line-height:20px}
+.sg .db-end ul{font-size:13.5px;line-height:19px}
+.sg .db-end-head{position:relative}
+.sg-now{position:absolute;top:-28px;right:-4px;padding:3px 8px;border-radius:999px;background:var(--end-accent);color:#fff;font-size:11px;line-height:14px;font-weight:600;white-space:nowrap}
+.sg-strong{font-size:15px;line-height:21px;font-weight:600;text-wrap:pretty}
+.sg-cols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:stretch}
+.sg-pick{border:0;font-size:13px}
+.sg-col .sg-pick{margin-top:auto}
+/* Shared: what every scenario has in common. */
+.sg-shared{display:flex;flex-direction:column;gap:14px;padding-top:4px}
+.sg-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.sg-tiles .ws-voice{font-size:14px;line-height:21px;padding:14px 16px 16px;gap:8px}
+.sg-shared-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.sg-shared-row>.db-end-block{padding:16px 18px;border-radius:16px;background:var(--muted)}
+.sg-shared-row .db-end-label{font-size:11.5px;letter-spacing:.07em;font-weight:600;text-transform:uppercase;color:var(--fg2)}
+.sg-plain{list-style:disc}.sg-plain li{display:list-item}
+.sg-shared-row .bullets,.sg-plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:13.5px;line-height:19px}
+.sg-closing{font-size:15px;line-height:21px;font-weight:600;text-wrap:pretty}
+/* C. Timeline */
+.sg-tl{display:flex;flex-direction:column;gap:6px;padding:18px 20px 16px;border-radius:18px;background:var(--muted)}
+.sg-tl-axis,.sg-tl-row{display:grid;grid-template-columns:170px minmax(0,1fr);align-items:center;gap:16px}
+.sg-tl-axis{position:relative;height:20px;margin-left:186px;display:block}
+.sg-tl-axis span{position:absolute;top:0;translate:-50% 0;font-size:11.5px;color:var(--fg2)}
+.sg-tl-axis span:first-child{translate:0 0}
+.sg-tl-row{min-height:34px}
+.sg-tl-name{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--fg)}
+.sg-tl-name svg{color:var(--end-accent)}
+.sg-tl-row.on .sg-tl-name{font-weight:650}
+.sg-tl-track{position:relative;height:28px;border-radius:8px;background:#fff}
+.sg-tl-lead{position:absolute;left:0;top:50%;height:2px;translate:0 -50%;background:repeating-linear-gradient(90deg,var(--end-accent) 0 4px,transparent 4px 8px);opacity:.6}
+.sg-tl-gap{position:absolute;top:50%;height:10px;translate:0 -50%;border-radius:999px;background:color-mix(in srgb,var(--end-accent) 35%,#fff)}
+.sg-tl-after{position:absolute;top:50%;right:0;height:10px;translate:0 -50%;border-radius:0 999px 999px 0;background:var(--end-accent)}
+.sg-tl-dot{position:absolute;top:50%;width:14px;height:14px;translate:-50% -50%;border-radius:999px;background:var(--end-accent,var(--fg));box-shadow:0 0 0 3px #fff;z-index:1}
+.sg-tl-dot.hollow{background:#fff;box-shadow:inset 0 0 0 3px var(--end-accent,var(--fg)),0 0 0 3px #fff}
+.sg-tl-flat{position:absolute;inset:0;display:flex;align-items:center;padding-left:12px;font-size:12px;color:var(--fg2);background:linear-gradient(90deg,color-mix(in srgb,var(--end-accent) 14%,#fff),#fff);border-radius:8px}
+.sg-tl-flat.rising{background:linear-gradient(90deg,#fff,color-mix(in srgb,var(--end-accent) 28%,#fff))}
+.sg-tl-key{display:flex;flex-wrap:wrap;gap:6px 20px;margin:6px 0 0 186px;font-size:12px;color:var(--fg2)}
+.sg-tl-key span{display:inline-flex;align-items:center;gap:8px}
+.sg-tl-key .sg-tl-dot{position:static;translate:none;box-shadow:none;width:11px;height:11px}
+.sg-tl-key .sg-tl-dot.hollow{box-shadow:inset 0 0 0 2.5px var(--fg)}
+/* Narrower screens: the five columns scroll sideways, one and a bit in view. */
+@media (max-width:1100px){
+  .sg-cols{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 0 6px}
+  .sg-cols>*{scroll-snap-align:start}
+  .sg-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sg-shared-row{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .sg{width:100vw;max-height:100dvh;height:100dvh;border-radius:0}
+  .sg-head{padding:calc(18px + env(safe-area-inset-top,0px)) 12px 14px 16px}
+  .sg-body{padding:18px 16px 24px;gap:22px}
+  .sg-cols{grid-auto-columns:82%}
+  .sg-tiles{grid-template-columns:1fr}
+  .sg-tl{padding:14px 12px}
+  .sg-tl-axis,.sg-tl-key{margin-left:0}
+  .sg-tl-axis{display:none}
+  .sg-tl-row{grid-template-columns:1fr;gap:4px}
+}
