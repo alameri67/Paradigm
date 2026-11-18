@@ -11,10 +11,10 @@
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
   "claimedAt": "2026-11-18T09:33:53.331733+00:00",
-  "phase": "A21 195/243 reviewed; A22 58/243 reviewed; A23 55/243 reviewed; A24 54/243 reviewed",
+  "phase": "A21 201/243 reviewed; A22 58/243 reviewed; A23 55/243 reviewed; A24 54/243 reviewed",
   "jobs": {
     "A21": {
-      "reviewedCount": 195,
+      "reviewedCount": 201,
       "reviewedIds": [
         "A21-11111",
         "A21-11112",
@@ -209,17 +209,17 @@
         "A21-32112",
         "A21-32113",
         "A21-32121",
-        "A21-32131",
-        "A21-32132"
-      ],
-      "insightsValidated": false,
-      "remainingGaps": [
         "A21-32122",
         "A21-32123",
+        "A21-32131",
+        "A21-32132",
         "A21-32133",
         "A21-32211",
         "A21-32212",
-        "A21-32213",
+        "A21-32213"
+      ],
+      "insightsValidated": false,
+      "remainingGaps": [
         "A21-32221",
         "A21-32222",
         "A21-32223",
@@ -263,7 +263,22 @@
         "A21-33332",
         "A21-33333"
       ],
-      "baselineReview": "Inherited accepted 3.1 sources from coordinator; independently reran actual validator and hash-protected."
+      "baselineReview": "Inherited accepted 3.1 sources from coordinator; independently reran actual validator and hash-protected.",
+      "insightsWork": {
+        "sourceCount": 201,
+        "sourceProtocol": "3.1",
+        "state": "exact private-THINK membership evidence under independent parent audit",
+        "evidenceDirectory": "/tmp/paradigm-s5-20261118-ownership/A21-insights-201",
+        "thoughtGroupsReviewedPeople": 114,
+        "numericAudit": "Independent Python recount matches all mood counts, action counts/shares, subgroup averages and leading actions; named-end memberships computed.",
+        "independentMembershipAudits": [
+          "Luna1 A21-11111/11112 ten memberships approved",
+          "Luna1 A21-11232/11233 ten memberships approved",
+          "Luna2 A21-11313/11321 ten memberships approved"
+        ],
+        "updatedAt": "2026-11-18T12:53:24.306907+00:00",
+        "headingCalibration": "Private evidence distinguishes current financial/work security from a promise of constant wages; baseline fee erosion is not automatically attributed to AI; required funding alone does not establish a viable alternative role."
+      }
     },
     "A22": {
       "reviewedCount": 58,
@@ -1022,32 +1037,7 @@
       "baselineReview": "Inherited accepted 3.1 sources from coordinator; independently reran actual validator and hash-protected."
     }
   },
-  "reservations": [
-    {
-      "agent": "author1",
-      "ids": [
-        "A21-32122",
-        "A21-32123"
-      ],
-      "state": "drafting"
-    },
-    {
-      "agent": "author3",
-      "ids": [
-        "A21-32133",
-        "A21-32211"
-      ],
-      "state": "drafting"
-    },
-    {
-      "agent": "author2",
-      "ids": [
-        "A21-32212",
-        "A21-32213"
-      ],
-      "state": "drafting"
-    }
-  ],
+  "reservations": [],
   "validation": [
     {
       "command": "node scripts/validate-archetype-interviews.mjs A21",
@@ -1427,6 +1417,21 @@
       "command": "node scripts/validate-archetype-interviews.mjs A21-32131 A21-32132",
       "exitCode": 0,
       "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-32133 A21-32211",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-32212 A21-32213",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-32122 A21-32123",
+      "exitCode": 0,
+      "result": "2/2 files valid"
     }
   ],
   "initialPassingHashes": {
@@ -1793,9 +1798,15 @@
     "A21-32113": "a1972def43c6a837c97ab292a9c7633bdac6681170faad5c2ad9f0859cf18042",
     "A21-32121": "e2e2afd11fa5c176526498f6986c8cd18ae3a9377a4ab415f9bbcf979b028fdb",
     "A21-32131": "ff1ed2e651d920917a476b121ff02d09fb1e63eb50bf31e9195946eba39d1e23",
-    "A21-32132": "fa3ab127394d63013d634190b2a7df589c9f31e416970be4e50fa55b2ef89de6"
+    "A21-32132": "fa3ab127394d63013d634190b2a7df589c9f31e416970be4e50fa55b2ef89de6",
+    "A21-32133": "a70e0826003c72ae2cdae3466a9e8954025e5fe093fddeb8aa490be2b874b06c",
+    "A21-32211": "35e421466eea3b28a06ab175ee6e573c588d8fd8cf599ea8c23bf1154b11899c",
+    "A21-32212": "6b49386675d4d245974ee842d494cdad81989c89296015af54bbd51a08ae3638",
+    "A21-32213": "546ace044adf92a19fbb8ae01c48c12de5a92bcc2ff9a662332ef2a0f0c04f96",
+    "A21-32122": "c6a048be6dfa1c55e7863cd5a7396eb70df09f301490000562da2ec36c1429e1",
+    "A21-32123": "bfaaeee71d8e70f9cec76a0b6eba5b67bc2db5ab6aaabd166d0640e0a2078d19"
   },
-  "latestCheckpointCommit": "e586b08e7febf75115928052695274525498e463",
+  "latestCheckpointCommit": "bb630d5c8497b5e21071600a3b2e5b1a820a8489",
   "semanticReview": [
     {
       "ids": [
@@ -2861,10 +2872,55 @@
         "parent full-content review",
         "independent read-only review"
       ]
+    },
+    {
+      "ids": [
+        "A21-32133",
+        "A21-32211"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read both full profiles and every source turn and annotation after independent review and author repairs. Ivan has supervised paid two-session error/privacy gate, explicit posted funded work, no protected depot paperwork and conditional retirement wage gap. Priya has large-cut housing trigger, paid real appeal cases and household terms; parent restored mortgage-rise saving-stop condition in S4 step. Baseline and scenario moods match reserve and actual stated pay risk.",
+      "reviewedAt": "2026-11-18T12:25:46.981684+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-32212",
+        "A21-32213"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read both full profiles, sources and annotations after independent review and repairs. Both distinguish current AI use from paid new learning and signed historical trials, retain authorized paid fallback and posted written after-travel wage/hour/start conditions. Yusuf liaison is paid firm-assigned and client billed; Freya correction practice has firm-paid supervision and contractor billing. Later reductions need verified income and written rota; post-loss searches require income shortfall. Parent adjusted Yusuf portrait to accurately describe favoured association pressure rather than direct organizing.",
+      "reviewedAt": "2026-11-18T12:26:05.613085+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-32122",
+        "A21-32123"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent fully read both exact profiles, sources and annotations, then reviewed final step repairs after independent review. Karl preserves posted funded work after cuts/loss, written household-covering pay and start, confirmed Mira rota plus bus/lift, insufficient-or-unpayable pension gates and offered paid fallback. Sara preserves posted real in-person care, paid supervised agency practice plus written firm-paid release, mortgage-and-bills pay/start and shared car fitting actual Jules bookings, with after-loss and verified pension conditions. Parent restored confirmed Mira rota in Karl S2 do.",
+      "reviewedAt": "2026-11-18T12:27:56.300584+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
     }
   ],
-  "checkpointAt": "2026-11-18T12:24:59.353771+00:00",
-  "updatedAt": "2026-11-18T12:24:42.979676+00:00",
+  "checkpointAt": "2026-11-18T12:53:24.354849+00:00",
+  "updatedAt": "2026-11-18T12:27:56.300709+00:00",
   "acceptanceAmendments": [
     {
       "at": "2026-11-18T11:01:14.398704+00:00",
