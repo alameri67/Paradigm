@@ -13,7 +13,7 @@
   "startedAt": "2026-11-18T09:32:25.600883+00:00",
   "jobs": {
     "A09": {
-      "reviewedCount": 64,
+      "reviewedCount": 72,
       "reviewedIds": [
         "A09-11111",
         "A09-11112",
@@ -78,11 +78,7 @@
         "A09-13131",
         "A09-13132",
         "A09-13133",
-        "A09-13211"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
-      "remainingGaps": [
+        "A09-13211",
         "A09-13212",
         "A09-13213",
         "A09-13221",
@@ -90,7 +86,11 @@
         "A09-13223",
         "A09-13231",
         "A09-13232",
-        "A09-13233",
+        "A09-13233"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
+      "remainingGaps": [
         "A09-13311",
         "A09-13312",
         "A09-13313",
@@ -1024,29 +1024,29 @@
   "reservations": {
     "author1": {
       "ids": [
-        "A09-13221",
-        "A09-13222"
+        "A09-13313",
+        "A09-13321"
       ],
       "state": "drafting"
     },
     "author2": {
       "ids": [
-        "A09-13232",
-        "A09-13233"
+        "A09-13331",
+        "A09-13332"
       ],
       "state": "drafting"
     },
     "author3": {
       "ids": [
-        "A09-13223",
-        "A09-13231"
+        "A09-13322",
+        "A09-13323"
       ],
       "state": "drafting"
     },
     "author4": {
       "ids": [
-        "A09-13212",
-        "A09-13213"
+        "A09-13311",
+        "A09-13312"
       ],
       "state": "drafting"
     }
@@ -1127,9 +1127,57 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "353a668f5774b58188337ad9d2fc44f7af658b9ba98d13a53df19397119b2998"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "dbdc518753de35f99893b908294b2e1c3c4d58594384e5c963cb47182e91ccac"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13213",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "57b51472794e25aec10604e7642236b55fc8b9a14744960f3ad13803791c6e8a"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13221",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "bd25186ebabfcde4a589be4ee2096b1fc76d8da5381b4284bf5cd864ffbe8dd7"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13222",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "677359c8ab6dae8456212d806eb8651b39e663c23e73739d979031dfb5ac259c"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13223",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "efc221599386d2b06e02e0bece2799cbe2d106970f1e60ca1b755acca4a01797"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13231",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "e032be60d782e0d4050cca6387fff0b5a4213285a37472366a915f9f0cee75b7"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13232",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ea8569ad56ffd10db990bdaae3c0405e937c2e34b7e84928e1eb8fe0a2516a43"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13233",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "31896289f507de15e7789ffb66f2818059930dd2480f7da97ee3271caa508376"
     }
   ],
-  "latestCheckpointCommit": "eb51a41b65d5c349ef79566a43f901d66f31603b",
+  "latestCheckpointCommit": "898b12a6243acd7dc1e4bdd5400cefb4f78c50fa",
   "semanticReviewRecord": [
     "Startup: full remote handoff and protocol read; clean checkout; no existing session-2 branch or owner. No interviews drafted before pushed ownership claim.",
     {
@@ -1163,6 +1211,38 @@
       ],
       "review": "Full parent transcript/profile review plus independent read-only review; fixed quote referents, grammar, baseline moods, rent-affordable savings, paid clinic course and vacancy conditions, new AI learning, two-paying-customer threshold, wage floor for business and actual paid vacancies. Final validators pass.",
       "at": "2026-11-18T09:42:46.794976+00:00"
+    },
+    {
+      "ids": [
+        "A09-13212",
+        "A09-13213"
+      ],
+      "review": "Parent source and annotation review plus independent read-only review; preserved moderate cushions, differentiated anxious overtime loss from uneasy workload-only pressure, clarified independent saving vs funded rotation, actual support offer rent/basic-bill floor, new learning and future vacancy limits. Final actual validators pass.",
+      "at": "2026-11-18T09:47:37.399562+00:00"
+    },
+    {
+      "ids": [
+        "A09-13221",
+        "A09-13222"
+      ],
+      "review": "Parent source and annotation review plus independent read-only approval; exact raw-quote capitalization fixed, first-person summaries natural, pay/cushion/AI habits match profiles, current and conditional training/free-material/vacancy/household saving conditions preserved. Final actual validators pass.",
+      "at": "2026-11-18T09:47:37.832329+00:00"
+    },
+    {
+      "ids": [
+        "A09-13223",
+        "A09-13231"
+      ],
+      "review": "Parent source/annotation review plus independent read-only review; fixed unresolved headline, explicit extra saving, rent-covering short-contract fallback, course requires funded paid rotation, conditional rent rise and verified apprenticeship pay before affordable course. Exact profiles, mood security and all final checks pass.",
+      "at": "2026-11-18T09:49:07.338628+00:00"
+    },
+    {
+      "ids": [
+        "A09-13232",
+        "A09-13233"
+      ],
+      "review": "Full parent source/annotation review and independent read-only review; corrected paused house transfers/reallocated cash vs genuine new saving, explicit house-plan delay, laptop cancellation as cut-spending, preserved rent plus three-month essentials tool floor, course fallback and paid trial while keeping wage. Final actual validators pass.",
+      "at": "2026-11-18T09:49:57.853301+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -1397,7 +1477,15 @@
     "A09-13131": "40c9bd333fdd4d0a326da207748b87e8406524a0e41a1f340e7adb8d60b8ec81",
     "A09-13132": "74c5a7aa09cef97d97a9123944ad600c57253d2ad9270e66ca3d6a68637306ab",
     "A09-13122": "54e824fddc5a749a2c5a6a7b963999c1d1b0500d8311ca3ccbd354d8ca223523",
-    "A09-13123": "353a668f5774b58188337ad9d2fc44f7af658b9ba98d13a53df19397119b2998"
+    "A09-13123": "353a668f5774b58188337ad9d2fc44f7af658b9ba98d13a53df19397119b2998",
+    "A09-13212": "dbdc518753de35f99893b908294b2e1c3c4d58594384e5c963cb47182e91ccac",
+    "A09-13213": "57b51472794e25aec10604e7642236b55fc8b9a14744960f3ad13803791c6e8a",
+    "A09-13221": "bd25186ebabfcde4a589be4ee2096b1fc76d8da5381b4284bf5cd864ffbe8dd7",
+    "A09-13222": "677359c8ab6dae8456212d806eb8651b39e663c23e73739d979031dfb5ac259c",
+    "A09-13223": "efc221599386d2b06e02e0bece2799cbe2d106970f1e60ca1b755acca4a01797",
+    "A09-13231": "e032be60d782e0d4050cca6387fff0b5a4213285a37472366a915f9f0cee75b7",
+    "A09-13232": "ea8569ad56ffd10db990bdaae3c0405e937c2e34b7e84928e1eb8fe0a2516a43",
+    "A09-13233": "31896289f507de15e7789ffb66f2818059930dd2480f7da97ee3271caa508376"
   },
-  "updatedAt": "2026-11-18T09:43:04.240219+00:00"
+  "updatedAt": "2026-11-18T09:50:12.929334+00:00"
 }
