@@ -10,10 +10,10 @@
     "A32"
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
-  "updatedAt": "2026-11-18T09:41:56.871002+00:00",
+  "updatedAt": "2026-11-18T09:47:00.652113+00:00",
   "jobs": {
     "A29": {
-      "reviewedCount": 66,
+      "reviewedCount": 74,
       "reviewedIds": [
         "A29-11111",
         "A29-11112",
@@ -80,9 +80,7 @@
         "A29-13133",
         "A29-13211",
         "A29-13212",
-        "A29-13213"
-      ],
-      "remainingGaps": [
+        "A29-13213",
         "A29-13221",
         "A29-13222",
         "A29-13223",
@@ -90,7 +88,9 @@
         "A29-13232",
         "A29-13233",
         "A29-13311",
-        "A29-13312",
+        "A29-13312"
+      ],
+      "remainingGaps": [
         "A29-13313",
         "A29-13321",
         "A29-13322",
@@ -1262,24 +1262,32 @@
     "A29-13131": "df40275b178df235742b4f03ca5a34223c65485d248f3fc33c7935adb43626d7",
     "A29-13132": "1d6deec23adcb11253aef61bdb652b5dbcde5f218702a53a04078b8e75723490",
     "A29-13133": "5a4c78861690d69469f08582b7e6360555dbfc03e40541eaaed491392d11a6bd",
-    "A29-13213": "de9c869f0bd2e1f22938e9a6ccecd106746a3717266e3bd949206c24c5a6aac7"
+    "A29-13213": "de9c869f0bd2e1f22938e9a6ccecd106746a3717266e3bd949206c24c5a6aac7",
+    "A29-13221": "8ecb997e94bf8ae0cc0c6579303caa67519ac6c15648e39702351157c27cd884",
+    "A29-13223": "f7bd15b3382d2b315a8236aea49bc0d03c906d7412027216984be2ae1c4815c0",
+    "A29-13231": "3da63c3a8bbfa0279d42ac2cc8aaa5ada1d342fda94de7df7c1ec93ab21e7ee4",
+    "A29-13222": "e2e544880d7f6aa9f4c37aa816c08b78967a95caf75e1900cf4a8893e8996d3d",
+    "A29-13232": "615167c18620ca0db3db6b91bc42196db05101c308e86817cb71cb9ad4e0382a",
+    "A29-13311": "6414d98e45a702d9879e74a7165717dd4c491efbb8aaffd8699903d78ff0a564",
+    "A29-13233": "36d9986aa0b536d3460859b44469dd2c3059a90b50475b839675ab04ca43e0cb",
+    "A29-13312": "a228649f6781c310dc14555f0bb31a92bef91c9fb34a4d3f0cb44c98e0334dc4"
   },
   "reservations": {
     "author1": [
-      "A29-13221",
-      "A29-13222"
+      "A29-13313",
+      "A29-13321"
     ],
     "author2": [
-      "A29-13223",
-      "A29-13231"
+      "A29-13322",
+      "A29-13323"
     ],
     "author3": [
-      "A29-13232",
-      "A29-13233"
+      "A29-13333",
+      "A29-21111"
     ],
     "author4": [
-      "A29-13311",
-      "A29-13312"
+      "A29-13331",
+      "A29-13332"
     ]
   },
   "validation": [
@@ -1330,9 +1338,41 @@
     {
       "command": "node scripts/validate-archetype-interviews.mjs A29-13213",
       "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13221",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13223",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13231",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13222",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13232",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13311",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13233",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-13312",
+      "result": "1/1 valid; parent supplemental audit PASS"
     }
   ],
-  "latestCheckpointCommit": "94e96a70012b0fea20fddfc5fa2e575c811fef7a",
+  "latestCheckpointCommit": "5adfe425bf0451e95998bb07354986c104762ca6",
   "semanticReview": [
     {
       "id": "A29-13113",
@@ -1381,6 +1421,54 @@
       "decision": "APPROVE",
       "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
       "sha256": "de9c869f0bd2e1f22938e9a6ccecd106746a3717266e3bd949206c24c5a6aac7"
+    },
+    {
+      "id": "A29-13221",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "8ecb997e94bf8ae0cc0c6579303caa67519ac6c15648e39702351157c27cd884"
+    },
+    {
+      "id": "A29-13223",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "f7bd15b3382d2b315a8236aea49bc0d03c906d7412027216984be2ae1c4815c0"
+    },
+    {
+      "id": "A29-13231",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "3da63c3a8bbfa0279d42ac2cc8aaa5ada1d342fda94de7df7c1ec93ab21e7ee4"
+    },
+    {
+      "id": "A29-13222",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "e2e544880d7f6aa9f4c37aa816c08b78967a95caf75e1900cf4a8893e8996d3d"
+    },
+    {
+      "id": "A29-13232",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "615167c18620ca0db3db6b91bc42196db05101c308e86817cb71cb9ad4e0382a"
+    },
+    {
+      "id": "A29-13311",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "6414d98e45a702d9879e74a7165717dd4c491efbb8aaffd8699903d78ff0a564"
+    },
+    {
+      "id": "A29-13233",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "36d9986aa0b536d3460859b44469dd2c3059a90b50475b839675ab04ca43e0cb"
+    },
+    {
+      "id": "A29-13312",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "a228649f6781c310dc14555f0bb31a92bef91c9fb34a4d3f0cb44c98e0334dc4"
     }
   ],
   "reviewEvidence": {
@@ -1539,6 +1627,174 @@
       "mood": "Calm S0 supported by secure repair work/money and moderate buffer; uneasy S1 for colleagues/workload but own income secure; anxious S2/S3 for possible personal income squeeze; uneasy S4 explicit near-term security without permanent immunity.",
       "actions": "Association working-group meetings and paid-training proposal support collective action; letter to local representative supports politics. New software trials support learn-ai; course retrain; conditional posted vacancies change-job; no speculative machine purchase tagged invest.",
       "quotes": "All six exact standalone distinct; no unclear named relationship in quotes. Current actions distinguished from first-year after AGI software use and robot dates2031/2034/2039."
+    },
+    "A29-13221": {
+      "id": "A29-13221",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "8ecb997e94bf8ae0cc0c6579303caa67519ac6c15648e39702351157c27cd884",
+      "reviewedAt": "2026-11-18T09:42:56.015599+00:00",
+      "scope": [
+        "exact grid profile/education",
+        "full transcript and annotations",
+        "protocol3.1",
+        "cards/questions/follow-ups",
+        "summary/action support",
+        "quotes exact/standalone",
+        "dates/moods/conditions"
+      ],
+      "notes": [
+        "Four-month uncommitted reserve, normal pay and nearby alternatives support calm baseline and secure near-term S4 finances.",
+        "Resistant office habits coexist with competent ongoing trade learning, without sudden AI adoption.",
+        "Fast/medium scenarios retain realistic potential hour loss and conditional job searches; AGI and robot dates separated.",
+        "Savings and work checks remain conditional on real vacancies, adequate guaranteed hours, travel costs and acceptable written terms.",
+        "S4 quote rewritten in both transcript and quote to identify savings/work reminder; verified exact.",
+        "Parent removed S0 invest tag for routine meter-lead replacement, retaining ordinary upkeep in do detail."
+      ],
+      "blockers": []
+    },
+    "A29-13223": {
+      "id": "A29-13223",
+      "decision": "APPROVE",
+      "sha256": "f7bd15b3382d2b315a8236aea49bc0d03c906d7412027216984be2ae1c4815c0",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Repository validator and supplemental exact audit pass.",
+      "profile": "Age27/single childless/lead/master licence and diploma/four-month cushion/typical pay/some firms nearby/centre/adaptive daily checked AI match.",
+      "support": "Wage-funded course budget separated from emergency reserve; no claim of completed future skills or guaranteed vacancies; written wage/hours and travel checked. Current savings targets distinct from existing fund.",
+      "mood": "Calm baseline has reliable wages and covered bills. Uneasy S1 because office staff threatened while own hours secure; anxious fast scenario from possible paid-hour loss; longer dates explicitly preserve secure preparation pay while acknowledging later robots.",
+      "quotes": "All six exact standalone full distinct sentences; no unexplained named people or places.",
+      "resolvedNote": "S2 private answer now says income loss with decades of work ahead, preserving card dates without ambiguous age29 implication."
+    },
+    "A29-13231": {
+      "id": "A29-13231",
+      "decision": "APPROVE",
+      "sha256": "3da63c3a8bbfa0279d42ac2cc8aaa5ada1d342fda94de7df7c1ec93ab21e7ee4",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Repository validator and supplemental exact audit pass.",
+      "profile": "Age27/partner/no children/lead/master licence and technical diploma/three-month reserve/typical pay/some nearby firms match exact early/high/moderate/traditional/resistant profile. Never uses AI throughout, paper evidence and cautious vacancy checks remain consistent.",
+      "support": "Cancel TV is actual cut-spending, not guaranteed savings. Small new transfer is budget/wage-dependent. No retrain or learn-ai tags attached to mere course inquiry or other people using software. Change-job applications depend on posted jobs, written better wages/hours and signed offer before exit. Partner wages not assumed.",
+      "mood": "Calm baseline secure income and moderate buffer; uneasy steady scenario own wage secure but scheduling/control/colleagues worrying. Fast AGI anxious possible future work scarcity without assumed immediate job extinction. Longer timelines uneasy from explicit near-term hands-on earnings and reserve.",
+      "timeline": "Thinking dates and three-year later robot dates preserved, ages29/32/37/40 consistent. Current2026 saving/logs/cancel-TV distinct from first-year after AGI applications; no pension guarantees.",
+      "quotes": "All six exact standalone distinct full sentences. No unexplained named person/place references in displayed quotes.",
+      "semantic": "Distinct resistant traditional voice grounded in paper test book, family dinners and earned practical work, while acknowledging observed competition rather than denying scenario."
+    },
+    "A29-13222": {
+      "id": "A29-13222",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "e2e544880d7f6aa9f4c37aa816c08b78967a95caf75e1900cf4a8893e8996d3d",
+      "reviewedAt": "2026-11-18T09:44:04.316666+00:00",
+      "scope": [
+        "exact grid profile/education",
+        "full transcript and annotations",
+        "protocol3.1",
+        "cards/questions/follow-ups",
+        "summary/action support",
+        "quotes exact/standalone",
+        "dates/moods/conditions"
+      ],
+      "notes": [
+        "Moderate cushion does not erase pre-existing customer losses and uncertain overtime; anxious baseline and later scenarios grounded in actual household risk.",
+        "Steady adaptability appears in supervised materials-list trial; high electrical skill and occasional current AI use remain consistent.",
+        "2028 thinking-work changes separated from capable robots around 2031; expected major income loss supports alarmed fast mood.",
+        "Enrolment is explicit and conditional on fee funding and maintained wages/basic shifts, not inferred from enquiries.",
+        "Verified S4 funded-unit wording removes suggestion of self-funded study.",
+        "Verified S4 job-search step retains written pay covering essentials plus weakening-hours condition.",
+        "Scenario/headline quotes exact, standalone, distinct and relationship-clear."
+      ],
+      "blockers": []
+    },
+    "A29-13232": {
+      "id": "A29-13232",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "615167c18620ca0db3db6b91bc42196db05101c308e86817cb71cb9ad4e0382a",
+      "reviewedAt": "2026-11-18T09:44:45.719942+00:00",
+      "scope": [
+        "exact grid profile/education",
+        "full transcript and annotations",
+        "protocol3.1",
+        "cards/questions/follow-ups",
+        "summary/action support",
+        "quotes exact/standalone",
+        "dates/moods/conditions"
+      ],
+      "notes": [
+        "Typical pay, four-month cushion and some nearby employers support calm baseline, rather than erasing financial pressure.",
+        "Steady adaptability is shown by occasional checked messages and testing a diary tool on known work before adoption.",
+        "Near-term S1 wage security has explicit waiting repair demand; mood uneasy concerns colleagues/timings, not personal job-loss claims.",
+        "Fast AGI mood anxious follows possible income losses without asserting inevitable catastrophe.",
+        "Alarm-course enrolment is conditional on former-student check, practical usefulness and explicit 180 spare-spending budget, not emergency cash.",
+        "S4 calm concerns next few years while acknowledging long working life and eventual common robot endpoint.",
+        "Job search preserves real posted work, paid hours sufficient for rent/bills and firm offer before leaving.",
+        "All quotes exact, standalone, distinct; no unresolved named relationships.",
+        "Verified precision edit to S3 quote and transcript explicitly names electrician course brochure; quote exact and standalone."
+      ],
+      "blockers": []
+    },
+    "A29-13311": {
+      "id": "A29-13311",
+      "decision": "APPROVE",
+      "sha256": "6414d98e45a702d9879e74a7165717dd4c491efbb8aaffd8699903d78ff0a564",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Repository validator and supplemental audit pass.",
+      "profile": "Age27/lead/master licence/technical diploma/ten-month savings/higher pay/many contractors match early/high/strong/progressive/resistant. Never uses AI, paper notebook, slow supported practical learning, union preference and community choir coherent.",
+      "conditions": "S4 step revised to explicitly retain demonstrated equipment, employer-paid fees and maintained wages, matching transcript/do; S3 also preserves all conditions. Mere course-evidence waiting not tagged retrain in fast scenario. Applications after actual cuts require posted affordable guaranteed-hours written contracts, current vacancies not future guarantee.",
+      "mood": "Calm plateau from high pay/reserve/options; uneasy steady from office staff/workload concern while own income secure. Anxious fast and five-year scenarios from possible own wage loss; uneasy decade from explicit near-term security but long working life ahead.",
+      "quotes": "Exact distinct standalone grammatical sentences, no unexplained named person/place in displayed quotes. Ages35 at2034 and40 at2039 correct.",
+      "semantic": "Protecting current reserves is not tagged new saving. Union meetings are actual collective action; conditional classes do not make resistant persona an eager technology adopter."
+    },
+    "A29-13233": {
+      "id": "A29-13233",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "36d9986aa0b536d3460859b44469dd2c3059a90b50475b839675ab04ca43e0cb",
+      "reviewedAt": "2026-11-18T09:46:30.488097+00:00",
+      "scope": [
+        "exact grid profile/education",
+        "full transcript and annotations",
+        "protocol3.1",
+        "cards/questions/follow-ups",
+        "summary/action support",
+        "quotes exact/standalone",
+        "dates/moods/conditions"
+      ],
+      "notes": [
+        "Highly skilled technical lead, age27, typical pay/two-month reserve, partnered childless household and daily AI use consistent.",
+        "Baseline bills covered support calm; S1 possible own paid-hour pressure correctly anxious despite enthusiasm.",
+        "Fast AGI preserves low thinking exposure and later robot-hour risk; paid learning only on an adopted system with agreed work time.",
+        "Vacancy searches/applications preserve real posted jobs and sufficient pay/paid hours.",
+        "Longer horizons permit capped150 side-income test after saving and employment/local checks, not assumed income or automation immunity.",
+        "Explicit sideline stop rule requires actual receipts to exceed costs; emergency savings untouched.",
+        "Verified S1 quote and transcript now identify AI trial/tool, replacing unresolved thing.",
+        "All quotes exact, distinct, standalone and relationship-clear after fix."
+      ],
+      "blockers": []
+    },
+    "A29-13312": {
+      "id": "A29-13312",
+      "decision": "APPROVE",
+      "sha256": "a228649f6781c310dc14555f0bb31a92bef91c9fb34a4d3f0cb44c98e0334dc4",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Repository and supplemental validators pass; final changed annotations independently reread and all requested fixes verified.",
+      "profile": "Age27/high standing/diploma/master licence/high pay/nine-month reserve/many local firms/progressive/steady. Occasional AI after colleagues test; union training committee and public funding request coherent.",
+      "mood": "Calm baseline secure reserve/pay; uneasy steady from office colleagues despite own secure earnings; anxious fast/five-year possible personal paid-hour loss; uneasy decade explicit near-term security and normal pace, no retirement guarantee.",
+      "otherSupport": "Fifteen-hundred learning fund separate from nine-month emergency reserve; course supervision/actual employment evidence conditions present. Partner library wage not assumed immune. S3 service-day training requires maintained wages and same total hours.",
+      "quotes": "All six exact standalone distinct sentences, no unclear named persons/places in displayed quotes. Ages32 at2031/35 at2034/40 at2039 correct.",
+      "resolvedConditions": [
+        "Preserve maintained hourly pay in S2 do and change-job step.",
+        "Preserve paid-time condition in S4 planning-trial do and learn-ai step.",
+        "Remove S0 learn-ai tag/step: routine continuation/checking is not new learning.",
+        "Use up to twelve hundred rather than below twelve hundred to preserve inclusive course-price cap."
+      ]
     }
   }
 }
