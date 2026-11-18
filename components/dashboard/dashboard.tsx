@@ -11,6 +11,7 @@ import { DashIcon, hasDashIcon } from "./icons";
 import { MoodRadar } from "./mood-radar";
 import { JobSidebar } from "@/components/workers/job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
+import { ScenarioGuidePill } from "@/components/workers/scenario-guide";
 import { GROUP_ICON } from "@/components/workers/group-icons";
 import { StatsBand, type Stat } from "@/components/ui/stats-band";
 import { ACTION_LEVELS, ACTION_PHRASE, WHO_PHRASE, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
@@ -395,7 +396,9 @@ export function Dashboard({
 
   // Shareable address bar.
   useEffect(() => {
-    const q = new URLSearchParams({ s: scenario, ...(allOn ? {} : { jobs: jobs.join(",") }) }).toString();
+    // ?guide= picks the scenario guide's layout for comparison; keep it while the page rewrites the address.
+    const guide = new URLSearchParams(window.location.search).get("guide");
+    const q = new URLSearchParams({ s: scenario, ...(allOn ? {} : { jobs: jobs.join(",") }), ...(guide ? { guide } : {}) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
   }, [scenario, jobs, allOn]);
 
@@ -521,12 +524,15 @@ export function Dashboard({
       </section>
 
       <section className="dialbar db-block">
-        <span className="label" id="db-dial">
-          AI scenario{" "}
-          <HelpTip>
-            <strong>{sc.name}.</strong> {sc.description}
-          </HelpTip>
-        </span>
+        <div className="sg-dialhead">
+          <span className="label" id="db-dial">
+            AI scenario{" "}
+            <HelpTip>
+              <strong>{sc.name}.</strong> {sc.description}
+            </HelpTip>
+          </span>
+          <ScenarioGuidePill current={scenario} onPick={setScenario} />
+        </div>
         <AmountSlider stops={STOPS} value={CODES.indexOf(scenario)} onChange={(i) => setScenario(CODES[i])} labelledBy="db-dial" showHeader={false} />
       </section>
 

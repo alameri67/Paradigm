@@ -11,6 +11,7 @@ import { Avatar, SHORT_SECTOR } from "./avatar";
 import { JobSidebar } from "./job-sidebar";
 import { HelpTip } from "@/components/ui/help-tip";
 import { JobPatterns } from "./job-patterns";
+import { ScenarioGuidePill } from "./scenario-guide";
 import { GROUP_ICON } from "./group-icons";
 import { Bullets, toPoints } from "./bullets";
 import { DashIcon } from "@/components/dashboard/icons";
@@ -277,7 +278,8 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   // Shareable address bar.
   useEffect(() => {
-    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "glass" ? { card } : {}) }).toString();
+    const guide = new URLSearchParams(window.location.search).get("guide");
+    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "glass" ? { card } : {}), ...(guide ? { guide } : {}) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
   }, [job, levels, scenario, card]);
 
@@ -419,12 +421,15 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
         </div>
 
         <div className="dialbar">
-          <span className="label" id="ws-dial">
-            AI scenario{" "}
-            <HelpTip>
-              <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
-            </HelpTip>
-          </span>
+          <div className="sg-dialhead">
+            <span className="label" id="ws-dial">
+              AI scenario{" "}
+              <HelpTip>
+                <strong>{scenarioOf(scenario).name}.</strong> {scenarioOf(scenario).description}
+              </HelpTip>
+            </span>
+            <ScenarioGuidePill current={scenario} onPick={setScenario} />
+          </div>
           <AmountSlider
             stops={STOPS}
             value={CODES.indexOf(scenario)}
