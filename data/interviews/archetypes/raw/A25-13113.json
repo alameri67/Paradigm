@@ -103,21 +103,16 @@
       ],
       "actions": [
         "keep-going",
-        "save-more",
-        "learn-ai"
+        "save-more"
       ],
       "steps": [
         {
-          "text": "Keep handling late customer chats and checking refund cases",
+          "text": "Keep late chats, refund checks and existing AI duplicate-complaint checks while shifts stay full",
           "tag": "keep-going"
         },
         {
           "text": "Transfer a small fixed amount on each payday",
           "tag": "save-more"
-        },
-        {
-          "text": "Use AI to find duplicate complaints before coaching new agents",
-          "tag": "learn-ai"
         }
       ]
     },
@@ -188,7 +183,7 @@
       "do": [
         "Collect **wrong replies** without customer details and ask for a trial.",
         "Apply for a **quality testing** shift if one opens after rollout.",
-        "Offer one nearby shop **spreadsheet help** if regular hours fall."
+        "Offer one **shop spreadsheet help** after hours fall, only without late chats; stop if too tired for careful record checks."
       ],
       "feel": [
         "**Energised** by testing and anxious about lost wages."
@@ -199,21 +194,25 @@
         "Her proposed side work is deliberately **small** because tiredness could hurt her main job."
       ],
       "actions": [
-        "learn-ai",
+        "wait-and-see",
         "change-job",
         "side-income"
       ],
       "steps": [
         {
           "text": "Collect anonymised AI reply errors and request a trial",
-          "tag": "learn-ai"
+          "tag": "wait-and-see"
         },
         {
           "text": "Apply for a quality testing shift after rollout if one opens",
           "tag": "change-job"
         },
         {
-          "text": "Offer one local shop evening spreadsheet help if hours fall",
+          "text": "Offer one local shop evening spreadsheet work if hours fall only on nights without late chats",
+          "tag": "side-income"
+        },
+        {
+          "text": "Stop side spreadsheet work if fatigue prevents careful customer record checks",
           "tag": "side-income"
         }
       ]
