@@ -29,8 +29,8 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted only after content review and a protocol 3.1 validator pass. **2,559 of 7,776 done.** Unreviewed drafts are not counted.
-(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 13:49 Asia/Dubai.)
+Counted only after content review and a protocol 3.1 validator pass. **2,583 of 7,776 done.** Unreviewed drafts are not counted.
+(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 13:56 Asia/Dubai.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
@@ -42,11 +42,11 @@ Counted only after content review and a protocol 3.1 validator pass. **2,559 of 
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
 | A08 | 57/243 | not written yet |
-| A09 | 56/243 | not written yet |
+| A09 | 64/243 | not written yet |
 | A10 | 56/243 | not written yet |
 | A11 | 55/243 | not written yet |
 | A12 | 55/243 | not written yet |
-| A13 | 56/243 | not written yet |
+| A13 | 64/243 | not written yet |
 | A14 | 63/243 | not written yet |
 | A15 | 60/243 | not written yet |
 | A16 | 44/243 | not written yet |
@@ -62,7 +62,7 @@ Counted only after content review and a protocol 3.1 validator pass. **2,559 of 
 | A26 | 57/243 | not written yet |
 | A27 | 57/243 | not written yet |
 | A28 | 57/243 | not written yet |
-| A29 | 58/243 | not written yet |
+| A29 | 66/243 | not written yet |
 | A30 | 54/243 | not written yet |
 | A31 | 60/243 | not written yet |
 | A32 | 59/243 | not written yet |
@@ -77,7 +77,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A05`–`A32` (5,217 people remain by the table above).
+1. Finish the interviews for `A05`–`A32` (5,193 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. A02 and A03 are complete; redo A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -128,11 +128,11 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
   "A07": ["A07-111","A07-112","A07-113","A07-121","A07-122","A07-123"],
   "A08": ["A08-111","A08-112","A08-113","A08-121","A08-122","A08-123"],
-  "A09": ["A09-111","A09-112","A09-113","A09-121","A09-122","A09-123"],
+  "A09": ["A09-111","A09-112","A09-113","A09-121","A09-122","A09-123","A09-131"],
   "A10": ["A10-111","A10-112","A10-113","A10-121","A10-122","A10-123"],
   "A11": ["A11-111","A11-112","A11-113","A11-121","A11-122","A11-123"],
   "A12": ["A12-111","A12-112","A12-113","A12-121","A12-122","A12-123"],
-  "A13": ["A13-111","A13-112","A13-113","A13-121","A13-122"],
+  "A13": ["A13-111","A13-112","A13-113","A13-121","A13-122","A13-123","A13-131"],
   "A14": ["A14-111","A14-112","A14-113","A14-121","A14-122","A14-123"],
   "A15": ["A15-111","A15-112","A15-113","A15-121","A15-122","A15-123"],
   "A16": ["A16-111","A16-112","A16-113","A16-121"],
@@ -148,7 +148,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A26": ["A26-111","A26-112","A26-113","A26-121","A26-122","A26-123"],
   "A27": ["A27-111","A27-112","A27-113","A27-121","A27-122","A27-123"],
   "A28": ["A28-111","A28-112","A28-113","A28-121","A28-122","A28-123"],
-  "A29": ["A29-111","A29-112","A29-113","A29-121","A29-122","A29-123"],
+  "A29": ["A29-111","A29-112","A29-113","A29-121","A29-122","A29-123","A29-131"],
   "A30": ["A30-111","A30-112","A30-113","A30-121","A30-122","A30-123"],
   "A31": ["A31-111","A31-112","A31-113","A31-121","A31-122","A31-123"],
   "A32": ["A32-111","A32-112","A32-113","A32-121","A32-122","A32-123"]
@@ -246,16 +246,20 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
 
 Current session resumed from pushed `e16eeb2` on 18 November 2026. The prior `/tmp/paradigm-repass/parallel/` runtime and previous 24 unpushed files were unavailable. Fresh validation confirmed the initial 2,334 passing interviews (A02 181, A03 163, A04 160). No unavailable work was counted. The initial tree was clean; no worktree was created.
 
-Latest reviewed total: **2,559/7,776**. A02 is **243/243**, with its insights regenerated from scratch and validated against all 243 interviews. Current interview focus: **A05, 70/243**. Passing insights: A01, A02, A03.
+Latest reviewed total: **2,583/7,776**. A02 is **243/243**, with its insights regenerated from scratch and validated against all 243 interviews. Current interview focus: **A05, 70/243**. Passing insights: A01, A02, A03.
 
 Use bounded, disjoint TWO-ID sequential invocations: gpt-6-sol medium drafting; gpt-6-luna medium read-only review. The parent runs actual validators, supplemental exact-card/question/profile/quote/bullet checks and content review. Fresh review sessions reduce carry-over between files. Original passing files and accepted new files are protected by hashes. Helpers remain outside the checkout at `/tmp/paradigm-repass-current/`.
 
-Reviewed additions in this session (225): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333, A03-22232, A03-22233, A03-22311, A03-22312, A03-22313, A03-22321, A03-22322, A03-22323, A03-22331, A03-22332, A03-22333, A03-23111, A03-23112, A03-23113, A03-23121, A03-23122, A03-23123, A03-23131, A03-23132, A03-23133, A03-23211, A03-23212, A03-23213, A03-23221, A03-23222, A03-23223, A03-23231, A03-23232, A03-23233, A03-23311, A03-23312, A03-23313, A03-23321, A03-23322, A03-23323, A03-23331, A03-23332, A03-23333, A03-31111, A03-32222, A03-32223, A03-32231, A03-32232, A03-32233, A03-32311, A03-32312, A03-32313, A03-32321, A03-32322, A03-32323, A03-32331, A03-32332, A03-32333, A03-33111, A03-33112, A03-33113, A03-33121, A03-33122, A03-33123, A03-33131, A03-33132, A03-33133, A03-33211, A03-33212, A03-33213, A03-33221, A03-33222, A03-33223, A03-33231, A03-33232, A03-33233, A03-33311, A03-33312, A03-33313, A03-33321, A03-33322, A03-33323, A03-33331, A03-33332, A03-33333, A04-22222, A04-22223, A04-22231, A04-22232, A04-22233, A04-22311, A04-22312, A04-22313, A04-22321, A04-22322, A04-22323, A04-22331, A04-22332, A04-22333, A04-23111, A04-23112, A04-23113, A04-23121, A04-23122, A04-23123, A04-23131, A04-23132, A04-23133, A04-23211, A04-23212, A04-23213, A04-23221, A04-23222, A04-23223, A04-23231, A04-23232, A04-23233, A04-23311, A04-23312, A04-23313, A04-23321, A04-23322, A04-23323, A04-23331, A04-23332, A04-23333, A04-32221, A04-32222, A04-32223, A04-32231, A04-32232, A04-32233, A04-32311, A04-32312, A04-32313, A04-32321, A04-32322, A04-32323, A04-32331, A04-32332, A04-32333, A04-33111, A04-33112, A04-33113, A04-33121, A04-33122, A04-33123, A04-33131, A04-33132, A04-33133, A04-33211, A04-33212, A04-33213, A04-33221, A04-33222, A04-33223, A04-33231, A04-33232, A04-33233, A04-33311, A04-33312, A04-33313, A04-33321, A04-33322, A04-33323, A04-33331, A04-33332, A04-33333.
+Reviewed additions in this session (249): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333, A03-22232, A03-22233, A03-22311, A03-22312, A03-22313, A03-22321, A03-22322, A03-22323, A03-22331, A03-22332, A03-22333, A03-23111, A03-23112, A03-23113, A03-23121, A03-23122, A03-23123, A03-23131, A03-23132, A03-23133, A03-23211, A03-23212, A03-23213, A03-23221, A03-23222, A03-23223, A03-23231, A03-23232, A03-23233, A03-23311, A03-23312, A03-23313, A03-23321, A03-23322, A03-23323, A03-23331, A03-23332, A03-23333, A03-31111, A03-32222, A03-32223, A03-32231, A03-32232, A03-32233, A03-32311, A03-32312, A03-32313, A03-32321, A03-32322, A03-32323, A03-32331, A03-32332, A03-32333, A03-33111, A03-33112, A03-33113, A03-33121, A03-33122, A03-33123, A03-33131, A03-33132, A03-33133, A03-33211, A03-33212, A03-33213, A03-33221, A03-33222, A03-33223, A03-33231, A03-33232, A03-33233, A03-33311, A03-33312, A03-33313, A03-33321, A03-33322, A03-33323, A03-33331, A03-33332, A03-33333, A04-22222, A04-22223, A04-22231, A04-22232, A04-22233, A04-22311, A04-22312, A04-22313, A04-22321, A04-22322, A04-22323, A04-22331, A04-22332, A04-22333, A04-23111, A04-23112, A04-23113, A04-23121, A04-23122, A04-23123, A04-23131, A04-23132, A04-23133, A04-23211, A04-23212, A04-23213, A04-23221, A04-23222, A04-23223, A04-23231, A04-23232, A04-23233, A04-23311, A04-23312, A04-23313, A04-23321, A04-23322, A04-23323, A04-23331, A04-23332, A04-23333, A04-32221, A04-32222, A04-32223, A04-32231, A04-32232, A04-32233, A04-32311, A04-32312, A04-32313, A04-32321, A04-32322, A04-32323, A04-32331, A04-32332, A04-32333, A04-33111, A04-33112, A04-33113, A04-33121, A04-33122, A04-33123, A04-33131, A04-33132, A04-33133, A04-33211, A04-33212, A04-33213, A04-33221, A04-33222, A04-33223, A04-33231, A04-33232, A04-33233, A04-33311, A04-33312, A04-33313, A04-33321, A04-33322, A04-33323, A04-33331, A04-33332, A04-33333, A09-13113, A09-13121, A09-13122, A09-13123, A09-13131, A09-13132, A09-13133, A09-13211, A13-12333, A13-13121, A13-13122, A13-13123, A13-13131, A13-13132, A13-13133, A13-13211, A29-13113, A29-13121, A29-13122, A29-13123, A29-13131, A29-13132, A29-13133, A29-13213.
 
 Current exact reservations (inspect files and live agents before reusing; a reservation may already be complete):
 
+- draft_a03_2: A05-13133, A05-13233.
+- draft_a03_1: A05-13311, A05-13312.
+- draft_a03_fast4: A05-13313, A05-13321.
+- draft_a03_3: A05-13322, A05-13323.
 
-Structurally passing but not yet accepted at this checkpoint (NOT included in reviewed counts; any uncommitted files may be unavailable after a disconnect): none.
+Structurally passing but not yet accepted at this checkpoint (NOT included in reviewed counts; any uncommitted files may be unavailable after a disconnect): A05-13133, A05-13233, A05-13311, A05-13312, A05-13313, A05-13321, A05-13322.
 
 A02 insights use one supported private-thought group per person per scenario, backed by exact source THINK excerpts. The first grouping draft was rejected for unsupported memberships and rebuilt; do not reuse old provisional matrices. Root-checked evidence is `/tmp/paradigm-repass-current/insights/root-checked-thought-evidence.jsonl`. Current source/metadata, accepted hashes, review decisions, reservations and checkpoint helpers are in the same scratch directory. If scratch is missing, rebuild from actual files and validators; never count unavailable/unreviewed work.
 

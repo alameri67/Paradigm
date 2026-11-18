@@ -1,0 +1,80 @@
+{
+  "state": "ACTIVE",
+  "coordinatorBranch": "claude/repass-3.1",
+  "integrations": [
+    {
+      "session": 2,
+      "sourceCommit": "898b12a6243acd7dc1e4bdd5400cefb4f78c50fa",
+      "ids": [
+        "A09-13113",
+        "A09-13121",
+        "A09-13122",
+        "A09-13123",
+        "A09-13131",
+        "A09-13132",
+        "A09-13133",
+        "A09-13211"
+      ],
+      "coordinatorAcceptedHashes": {
+        "A09-13113": "d8cd2e3afac8e9c60115ff6a559d0fca4b561d234ad45f4d44b64974c52bf165",
+        "A09-13121": "d92f8a6cdb3b3851f071bedd950506ca967e35329ac399e57d7952c7f76b5549",
+        "A09-13122": "54e824fddc5a749a2c5a6a7b963999c1d1b0500d8311ca3ccbd354d8ca223523",
+        "A09-13123": "353a668f5774b58188337ad9d2fc44f7af658b9ba98d13a53df19397119b2998",
+        "A09-13131": "40c9bd333fdd4d0a326da207748b87e8406524a0e41a1f340e7adb8d60b8ec81",
+        "A09-13132": "74c5a7aa09cef97d97a9123944ad600c57253d2ad9270e66ca3d6a68637306ab",
+        "A09-13133": "b3ebca323e0b486402feecea90edf21fd6cb907a23e3b49829e6c4ff4ddfe18a",
+        "A09-13211": "b097fcc693f58079119a04b8db5267699c9341d2c8596712c06b1027975eadfe"
+      }
+    },
+    {
+      "session": 3,
+      "sourceCommit": "66aaafa31b8fb19a9d22ed6523c9bff3e0a6b37c",
+      "ids": [
+        "A13-12333",
+        "A13-13121",
+        "A13-13122",
+        "A13-13123",
+        "A13-13131",
+        "A13-13132",
+        "A13-13133",
+        "A13-13211"
+      ],
+      "coordinatorAcceptedHashes": {
+        "A13-12333": "53a1b4c8620b0b0ea8b2a237baddb426f820d9bafafd4b2f061715f2968a62fe",
+        "A13-13121": "60abb8739b0219dd4ef5d8d196849209912513d9c5a90121f6edffb6531ef0cf",
+        "A13-13122": "0e14dc6585d99bb753706ee2a0c97827175018191654286c912e188f95586527",
+        "A13-13123": "23a4af2bf1eb49899ebabc17a8f7a4b629c6c39d9babe21ac111b3ff0da8602a",
+        "A13-13131": "c6322fbbc65cf33dfeda06533c323a3d78dbbb201a7fb16a071af9f66fd359c9",
+        "A13-13132": "6748b7836136fd8a9c42d1ac3ee500746d23856c6d7179e8155d5a1f828f2e53",
+        "A13-13133": "db5dfb751b07c4218a3fa2e6d52e26faff66bf84ee9e4191fef41337069b73dd",
+        "A13-13211": "ab004b91f3f6c676128f65c953d7c761ab4ae4894ffe74902433a61c03f3a689"
+      }
+    },
+    {
+      "session": 7,
+      "sourceCommit": "5adfe425bf0451e95998bb07354986c104762ca6",
+      "ids": [
+        "A29-13113",
+        "A29-13121",
+        "A29-13122",
+        "A29-13123",
+        "A29-13131",
+        "A29-13132",
+        "A29-13133",
+        "A29-13213"
+      ],
+      "coordinatorAcceptedHashes": {
+        "A29-13113": "708feece45aba88485b4c725a7322752a5839213dbd46e62693961897a526aed",
+        "A29-13121": "ad1269f57d4a3e12d1714806c8d7b54467f88561b165acbb9678324cd4340479",
+        "A29-13122": "d79e1709497294dafe1e69d4efaca52546ce199ef9b2a59892c0275747c5c7b4",
+        "A29-13123": "eeaebdc4c8d0b8d937923531e8a44ef874fce261d95d9948b1933e008a14dca8",
+        "A29-13131": "df40275b178df235742b4f03ca5a34223c65485d248f3fc33c7935adb43626d7",
+        "A29-13132": "1d6deec23adcb11253aef61bdb652b5dbcde5f218702a53a04078b8e75723490",
+        "A29-13133": "5a4c78861690d69469f08582b7e6360555dbfc03e40541eaaed491392d11a6bd",
+        "A29-13213": "de9c869f0bd2e1f22938e9a6ccecd106746a3717266e3bd949206c24c5a6aac7"
+      }
+    }
+  ],
+  "review": "Parent ran unchanged actual repository validator on all24 before and after merge, exact profile/card/question/quote/bullet audits; inspected summaries/actions/quotes and worker SHA-bound full semantic reviews. Additional independent paired spot reviews caught training conditions, continuing AI use, contextual quote and housing/work fallback defects; corrected before acceptance. All protected baseline and accepted hashes unchanged. Separate interviewer card and Say turns are valid protocol; 13-turn shape is not an alternation failure.",
+  "nextIntegration": "Fetch worker heads explicitly and compare only commits beyond integrated sourceCommit; never duplicate accepted IDs."
+}
