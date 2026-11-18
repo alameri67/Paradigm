@@ -765,7 +765,7 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .db-end-kpis{background:var(--plate);border-radius:12px;padding:2px 0}
 /* Least vs most worried: each end on its own tinted plate, in its mood colour. */
 .db-ends-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:16px}
-.db-ends-row>.db-end{container:end/inline-size;padding:20px 22px;border-radius:18px;gap:18px;background:color-mix(in srgb,var(--end-accent) 8%,#fff);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--end-accent) 38%,#fff)}
+.db-ends-row>.db-end{padding:20px 22px;border-radius:18px;gap:18px;background:color-mix(in srgb,var(--end-accent) 8%,#fff);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--end-accent) 38%,#fff)}
 .db-end-head{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:3px solid var(--end-accent,var(--fg))}
 .db-end-ico{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--plate);color:var(--end-accent)}
 .db-end-titles{display:flex;flex-direction:column;gap:2px;min-width:0}
@@ -781,7 +781,7 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .db-who dd{margin:0}
 .db-who-val{font-size:15px;line-height:19px;text-wrap:balance;font-weight:650;letter-spacing:-.01em;color:var(--fg);margin-top:2px}
 .db-who-sub{font-size:13px;line-height:18px;font-weight:400;color:var(--fg2)}
-@container end (max-width: 380px){
+@container end (max-width: 540px){
   .db-who{grid-template-columns:repeat(2,minmax(0,1fr))}
   .db-who-col:nth-child(odd){border-left:0}
   .db-who-col:nth-child(n+3){border-top:1px solid var(--muted-2)}
@@ -809,3 +809,50 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 /* Lists inside a flex column lose their markers; keep them as list items so the bullets show. */
 .bullets{list-style:disc}
 .bullets li{display:list-item}
+
+/* Least vs most worried: everything lines up, inside each card and across the two.
+   1. The two cards share their rows (head, story, who, what they'll do, quote), so each section starts at the same height in both.
+   2. Inside "Who they are" and "What they'll do", the tiles in a row share their rows too, so a two-line title
+      pushes its neighbours' values, captions and bars down with it.
+   3. Each section's spare height goes to one row (under the values, above the captions), so counts, captions
+      and bars sit at the same height in both cards even when their words wrap differently. */
+.db-ends-row>.db-end{display:grid;grid-template-rows:subgrid;grid-row:span 5;row-gap:0;align-content:start}
+.db-ends-row>.db-end>.db-end-head{grid-row:1}
+.db-ends-row>.db-end>.db-end-story{grid-row:2;margin-top:18px}
+/* The narrow-card query lives here: a container (layout containment) on the card itself would stop it sharing rows. */
+.db-ends-row>.db-end>.db-end-who{grid-row:3;margin-top:18px;container:end/inline-size}
+.db-ends-row>.db-end>.db-end-do{grid-row:4;margin-top:18px}
+.db-ends-row>.db-end>.db-end-quote{grid-row:5;margin-top:18px;align-self:start}
+/* The who grid fills its section, and the spare height goes under the values, so the counts sit on one line in both cards. */
+.db-end-who>.db-who{flex:1;grid-template-rows:auto 1fr auto}
+.db-who-col{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:3px;align-content:start}
+.db-who-col>dt{grid-row:1;align-self:start}
+.db-who-col>.db-who-val{grid-row:2}
+.db-who-col>.db-who-sub{grid-row:3}
+.db-end-kpis .sb-stat{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:.35rem;align-content:start}
+.db-end-kpis .sb-icon{grid-row:1}
+.db-end-kpis .sb-figure{grid-row:2}
+.db-end-kpis .sb-label{grid-row:3;min-height:calc(2 * 1.3em)}
+.db-end-kpis .sb-caption{grid-row:4;align-self:end}
+.db-end-kpis :is(.sb-detail,.sb-context){align-self:end}
+.db-end-kpis .sb-visual{grid-row:5}
+/* The band fills its section, and each row of tiles gives its spare height to the captions' row,
+   so the captions and bars sit at the same height in both cards. */
+.db-end-do>.db-end-kpis{flex:1;display:flex;flex-direction:column}
+.db-end-kpis .sb-inner{flex:1}
+/* Always two by two: four narrow columns would wrap the longest titles onto four lines. */
+.db-end-kpis .sb-stats{flex:1;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto 1fr auto auto auto auto 1fr auto}
+.db-end-kpis.sb-band[data-layout="divided"] .sb-stat+.sb-stat{border-left:0}
+.db-end-kpis.sb-band[data-layout="divided"] .sb-stat:nth-child(2n){border-left:1px solid var(--sb-border)}
+.db-end-kpis.sb-band[data-layout="divided"] .sb-stat:nth-child(n+3){border-top:1px solid var(--sb-border)}
+@container end (max-width: 540px){.db-end-who>.db-who{grid-template-rows:auto 1fr auto auto 1fr auto}}
+/* Narrow cards: slightly smaller titles and side padding, and room for three lines, which the longest titles need. */
+@container (max-width: 360px){
+  .db-end-kpis .sb-label{font-size:.875rem;min-height:calc(3 * 1.3em)}
+  .db-end-kpis.sb-band[data-layout="divided"] .sb-stat{padding-inline:.875rem}
+}
+.db-ends-row{align-content:start}
+/* Where the who values and counts wrap (four columns, or a very narrow two by two), each keeps room for two lines,
+   so a row of them matches the same row in the other card. */
+@container end (min-width: 541px){.db-who-col>.db-who-val{min-height:calc(2 * 19px)}.db-who-col>.db-who-sub{min-height:calc(2 * 18px)}}
+@container end (max-width: 380px){.db-who-col>.db-who-val{min-height:calc(2 * 19px)}.db-who-col>.db-who-sub{min-height:calc(2 * 18px)}}
