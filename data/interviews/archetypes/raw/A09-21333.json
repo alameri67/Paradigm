@@ -1,0 +1,547 @@
+{
+  "id": "A09-21333",
+  "archetype": "A09",
+  "job": "Software developer",
+  "sector": "Information",
+  "name": "Victor Bauer",
+  "levels": {
+    "lifeStage": "mid",
+    "standing": "low",
+    "cushion": "strong",
+    "outlook": "traditional",
+    "adaptability": "adaptive"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "I'm from the independent Work Futures Panel. We have no ties to AI companies, employers, unions, parties or government, and we sell nothing. Your answers are confidential, so say what you'd tell others and what you really think. What does a working day look like?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm Victor, 43, a junior developer at a tech company after a two-year college diploma. I maintain the software that checks ingredient labels for food manufacturers, and I like catching a wrong allergen word before thousands of packets are printed. I use AI every day to draft parser tests, though the senior developer still reviews the hard cases. At home my partner works at a pharmacy, and our two school-age children remind me why the mortgage comes before a new kitchen."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say AI saves me time on draft tests, but a packet label still has to match the ingredients on the line. I use an assistant every day to spot odd words, then compare the result with the approved recipe."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Under a plateau, I think my junior coding job is safe enough. My wage is high for a junior, my partner has a steady job at a pharmacy, we have ten months of expenses saved, and there are plenty of software firms close enough to reach."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep checking food-label imports and sending difficult cases to the senior developer. In the first year I'd continue using AI on sample labels, and transfer another 180 from my pay into savings each month while both wages hold."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm, with the usual worry that a label error can hurt somebody. AI staying modest would not change how we pay the mortgage."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What error made you change your test set?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A sample label once lost the word 'peanut' when two ingredient fields were merged. I found it before print because the approved recipe still had the word in bold; now that case is in every release test."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why keep an old packet at home?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Our two children know why we keep the packet from that batch in a drawer. The old peanut packet reminds us that a clean screen is not the same as a safe label."
+        }
+      ],
+      "say": [
+        "I'd use **AI draft tests** but check labels against approved recipes.",
+        "I'd say **ingredient words** matter more than a clean-looking screen."
+      ],
+      "think": [
+        "I expect **my junior job** to stay under small changes.",
+        "I have **ten months saved**, higher pay and many local software options."
+      ],
+      "do": [
+        "Keep checking **label imports** and refer hard cases to a senior developer.",
+        "Use **AI on sample labels** as part of the current release check.",
+        "Save **180 monthly** while both wages hold."
+      ],
+      "feel": [
+        "**Calm** about income, careful about food-label errors."
+      ],
+      "mood": "calm",
+      "quote": "The old peanut packet reminds us that a clean screen is not the same as a safe label.",
+      "fieldNote": [
+        "**Ten months saved** and two regular wages support calm about work and mortgage payments.",
+        "His daily AI use is bounded by an **approved recipe check** after a missing-peanut case."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Check food-label imports against approved recipes and ask senior about hard cases",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use AI draft tests on sample labels before each release",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save 180 monthly while both wages hold",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say AI can write code, check ingredients and answer manufacturers, so junior jobs are on the line. I would rather measure wrong labels in a trial than cheer about more labels per hour."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I might be cut if the firm leaves one experienced developer to approve AI output. My savings give us time, and I am quick to learn a new tool, but I cannot assume every nearby company will be hiring juniors after the same change."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd run a two-month trial on old ingredient changes, tracking missed allergens and how long people spend correcting AI output. If the error rate falls, I'd learn the new approval workflow with the senior developer; in the first year we'd hold off ordering a larger kitchen until we see what happens to staffing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, although the trial interests me. I want the result to make labels safer, even if it raises hard questions about who gets paid to check them."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Which mistake must the trial catch?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The peanut case should be in the trial, because it looks like a tiny field merge until someone with an allergy reads the packet. If AI misses it, I'd publish the result inside the team."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would a new checking role need to include?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would ask the manager for a paid role in final label checks before taking a new title. A badge on my screen doesn't pay the mortgage."
+        }
+      ],
+      "say": [
+        "I'd call for a **two-month trial** counting missed allergens and correction time.",
+        "I'd say **junior coding posts** could shrink as label checks move to software."
+      ],
+      "think": [
+        "I could lose **my junior seat** despite learning tools quickly.",
+        "I have **search time**, but nearby companies may reduce junior hiring too."
+      ],
+      "do": [
+        "Run a **two-month label trial** on old ingredient changes.",
+        "Learn **new approval checks** only if the trial lowers allergen errors.",
+        "Delay the **larger kitchen order** until junior staffing is clearer."
+      ],
+      "feel": [
+        "**Anxious** about job cuts, though interested in the test."
+      ],
+      "mood": "anxious",
+      "quote": "A badge on my screen doesn't pay the mortgage.",
+      "fieldNote": [
+        "**High thinking exposure** makes junior coding vulnerable despite daily AI use and strong savings.",
+        "He tests **allergen mistakes**, then treats a new approval title as real only if it is paid."
+      ],
+      "actions": [
+        "learn-ai",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Trial AI label checks on old ingredient changes for two months",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Learn new approval workflow with senior only if trial reduces allergen errors",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Delay ordering larger family kitchen until junior staffing is clear",
+          "tag": "cut-spending"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say full thinking AI by 2028 could write and check our label code at once, while robots that handle factory work arrive around 2031. A family with an allergy still needs a clear person to call when a packet is wrong."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I think my junior developer wage could be cut quickly. Ten months of savings and my partner's pharmacy pay keep us from a sudden mortgage crisis, but if the whole industry buys cheap code, local software jobs may thin. A new software job may be harder than the number of local firms suggests."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep checking food labels while collecting peanut-case evidence without customer names and ask three food plants whether they have paid label-audit posts. If cut in the first year after 2028, I'd apply only to real openings whose wage with my partner's pay covers mortgage and school costs; if none exist, I'd look at other paid work while keeping the children in their current school until we have firm figures."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Alarmed. I could pay bills for a while, but I expect the coding seat I just learned to fill might vanish."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would factory label checking stay safe once robots arrive?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A plant auditor checks ingredients and printed packets on site. Robots may take more of that hands-on checking around 2031, so I would ask about actual openings and the training required, not claim it is a safe lifelong trade."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would your family defer while you search?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My partner and I would put the mortgage, school costs and any new wage on one page. We would not buy the larger kitchen while we are deciding which job pays next."
+        }
+      ],
+      "say": [
+        "I'd say **2028 thinking AI** reaches label code before 2031 factory robots.",
+        "I'd ask who answers families after a **wrong allergy label**."
+      ],
+      "think": [
+        "I expect **my junior wage** could disappear quickly.",
+        "I have **ten months saved**, but software vacancies may thin across firms."
+      ],
+      "do": [
+        "Keep **checking labels** while collecting safe peanut-case evidence and asking three plants about paid audit posts.",
+        "After a cut, apply only to **real plant openings** whose household wages cover mortgage and school costs.",
+        "Delay the **larger kitchen** and keep school stable until actual wages are clear."
+      ],
+      "feel": [
+        "**Alarmed** about losing code income despite the household cushion."
+      ],
+      "mood": "alarmed",
+      "quote": "A new software job may be harder than the number of local firms suggests.",
+      "fieldNote": [
+        "**2028 thinking AI** threatens junior coding; around 2031 robots may also reach factory checking.",
+        "His **plant-audit fallback** needs actual paid openings and enough combined income for mortgage and school costs."
+      ],
+      "actions": [
+        "keep-going",
+        "change-job",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Keep checking food labels while collecting peanut-case evidence without customer names",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply after cut to vacant paid plant-audit posts if combined wages cover mortgage and school costs",
+          "tag": "change-job"
+        },
+        {
+          "text": "Delay kitchen expansion until actual replacement wages are known",
+          "tag": "cut-spending"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say five years until 2031 gives us time to learn which factory checks really need people. Robots follow around 2034, but thinking AI reaches our label code in 2031."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I could learn how a plant checks ingredients on the line, if someone is willing to supervise and pay for the training. My junior code work could still shrink. An audit certificate is not job security by itself."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd ask the quality manager to let me observe one label run each quarter if my software manager releases the time. I'd take a food-safety course only if my employer funds it and offers a paid plant-audit rotation; in the first year after 2031 I'd apply for plant posts only if paid vacancies still exist and the household wage covers mortgage and school costs."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious about losing the coding post, but I can check the plant path without resigning. I would want to see actual work, not a training brochure."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you do on a plant visit?"
+        },
+        {
+          "speaker": "persona",
+          "text": "On the line I'd compare the ingredient sheet with a printed packet and ask who stops the run if they differ. I would not touch production controls before being trained and authorised."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would your partner ask about the rotation?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My partner would ask whether the rotation keeps my salary and gives a named supervisor. If it does not, I would keep my software wage and ask other plants about real vacancies."
+        }
+      ],
+      "say": [
+        "I'd say **2031 thinking AI** reaches code before 2034 factory robots.",
+        "I'd ask for **paid plant-audit duties** behind any training offer."
+      ],
+      "think": [
+        "I might learn **factory label checks** if a firm supervises and pays me.",
+        "I still face **junior code cuts** even with five years."
+      ],
+      "do": [
+        "Observe **quarterly label runs** only if both quality and software managers agree.",
+        "Take **funded food-safety training** only with an offered paid plant rotation.",
+        "After 2031, apply only to **paid plant vacancies** covering mortgage and school costs with partner wages."
+      ],
+      "feel": [
+        "**Anxious** about coding income, with time to test plant work."
+      ],
+      "mood": "anxious",
+      "quote": "An audit certificate is not job security by itself.",
+      "fieldNote": [
+        "**Five years** allow supervised observation while his current wage continues.",
+        "Plant training requires **funded rotation**, and later work needs real vacancies and wages covering family bills."
+      ],
+      "actions": [
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Observe label runs quarterly only if quality and software managers agree",
+          "tag": "retrain"
+        },
+        {
+          "text": "Take funded food-safety course only with offered paid plant-audit rotation",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply after 2031 only to paid plant vacancies covering mortgage and school costs with partner wages",
+          "tag": "change-job"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years to 2036 gives companies time to keep a record of which labels failed and who fixed them. Thinking AI reaches our code in 2036, with hands-on factory robots around 2039."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "At 53 I could be paid to check labels on site, or I could be looking for work. For the next few years our two wages and ten-month cushion feel secure, but no one can promise a plant will still want a human checker after 2039."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep a record of ingredient errors I caught, including the peanut case, without names or private recipes. We'd save 180 monthly while both wages hold, and I would take funded food-safety training only if a paid plant rotation is offered; in the first year after 2036 I'd switch only for a signed plant or software role covering mortgage and school costs with my partner's wage."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm about the next few years, curious about how plant work changes. I can keep learning without gambling the mortgage on a guess."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would be in your record?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My record would show the field merge that dropped 'peanut' and the test that caught it. A future employer can judge my label checks without seeing a customer's recipe."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you tell your children about future training?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Our children may want to work with machines one day. I'd suggest a paid apprenticeship with real supervision if one exists, then let them decide what they want to learn."
+        }
+      ],
+      "say": [
+        "I'd say **2036 thinking AI** reaches code before 2039 plant robots.",
+        "I'd ask firms to keep **records of label faults** and fixes."
+      ],
+      "think": [
+        "I feel secure now with **two wages** and ten months saved.",
+        "I cannot assume **human plant checks** will still pay after 2039."
+      ],
+      "do": [
+        "Keep a **safe ingredient-error record** while checking labels.",
+        "Save **180 monthly** while both wages hold.",
+        "Take **funded food-safety training** only with a paid rotation; switch later only for signed bill-covering work."
+      ],
+      "feel": [
+        "**Calm** about current money, attentive to later paid demand."
+      ],
+      "mood": "calm",
+      "quote": "A future employer can judge my label checks without seeing a customer's recipe.",
+      "fieldNote": [
+        "**Strong wages and savings** support current calm, while future plant audit income remains uncertain.",
+        "His training and later move require **paid roles** and wages covering mortgage and school costs."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more",
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Keep checking label imports and recording ingredient errors without private recipes",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save 180 monthly while both wages hold",
+          "tag": "save-more"
+        },
+        {
+          "text": "Take funded food-safety course only if paid plant rotation offered",
+          "tag": "retrain"
+        },
+        {
+          "text": "Switch after 2036 only for signed plant or software role covering household mortgage and school costs",
+          "tag": "change-job"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028 worries me most because both coding and checking could cheapen before I have a paid alternative. A notice period, real plant-audit vacancies and training linked to paid supervised work would help us use savings wisely."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "You didn't ask who answers when a printed packet harms someone. A manufacturer cannot send a corrected code file to a family with an allergic child; a person must explain and fix the label."
+    }
+  ],
+  "headlineQuote": "A manufacturer cannot send a corrected code file to a family with an allergic child; a person must explain and fix the label.",
+  "portrait": [
+    "Victor, **43**, is a junior food-label developer with a two-year diploma who tests ingredient words against approved recipes.",
+    "His **higher pay**, partner's pharmacy wage, ten-month cushion and many nearby software firms support a mortgage and two children.",
+    "He uses AI **daily** for tests but caught a missing peanut word before printing.",
+    "Steady disruption makes him **anxious** about junior cuts; 2028 AGI alarms him despite strong savings.",
+    "With more time, he seeks **paid plant-audit learning**, funding and signed jobs covering family bills."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** could remove both junior coding and checking work before he finds a paid alternative."
+  ],
+  "whatWouldHelp": [
+    "A **notice period**, real plant-audit vacancies and funded supervised training would help."
+  ]
+}
