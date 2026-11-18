@@ -13,7 +13,7 @@
   "startedAt": "2026-11-18T09:32:25.600883+00:00",
   "jobs": {
     "A09": {
-      "reviewedCount": 216,
+      "reviewedCount": 228,
       "reviewedIds": [
         "A09-11111",
         "A09-11112",
@@ -230,11 +230,7 @@
         "A09-32323",
         "A09-32331",
         "A09-32332",
-        "A09-32333"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "eligible at 200 reviewed; from-scratch indexed private-THINK evidence and insight draft in progress",
-      "remainingGaps": [
+        "A09-32333",
         "A09-33111",
         "A09-33112",
         "A09-33113",
@@ -246,7 +242,11 @@
         "A09-33133",
         "A09-33211",
         "A09-33212",
-        "A09-33213",
+        "A09-33213"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "eligible at 200 reviewed; from-scratch indexed private-THINK evidence and insight draft in progress",
+      "remainingGaps": [
         "A09-33221",
         "A09-33222",
         "A09-33223",
@@ -1167,19 +1167,68 @@
         "A09-33111",
         "A09-33112"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author3_next5": {
       "ids": [
         "A09-33113",
         "A09-33121"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author4_next5": {
       "ids": [
         "A09-33122",
         "A09-33123"
+      ],
+      "state": "accepted"
+    },
+    "author1_next8": {
+      "ids": [
+        "A09-33131",
+        "A09-33132"
+      ],
+      "state": "accepted"
+    },
+    "author3_next6": {
+      "ids": [
+        "A09-33133",
+        "A09-33211"
+      ],
+      "state": "accepted"
+    },
+    "author4_next6": {
+      "ids": [
+        "A09-33212",
+        "A09-33213"
+      ],
+      "state": "accepted"
+    },
+    "author3_next7": {
+      "ids": [
+        "A09-33221",
+        "A09-33222"
+      ],
+      "state": "review"
+    },
+    "author4_next7": {
+      "ids": [
+        "A09-33223",
+        "A09-33231"
+      ],
+      "state": "review"
+    },
+    "author3_next8": {
+      "ids": [
+        "A09-33232",
+        "A09-33233"
+      ],
+      "state": "drafting"
+    },
+    "author4_next8": {
+      "ids": [
+        "A09-33311",
+        "A09-33312"
       ],
       "state": "drafting"
     }
@@ -2172,6 +2221,78 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "ef0335e9be2f72dfcab35fbc954e0acf820e6c5d0c05ece50c4deb0e6406745e"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33111",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "8e776321b5161f80f3e43213fa702e63897d8f049cc3879f5056461f97d1fcd3"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33112",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "49975f70611fd61adc21faee6e7baa0fdc9351396f49ad5406e181cc398496c3"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33113",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "85ed90f17925efb6fa44dbd56572426b9bafe70c7b6346ab16f9b08017481250"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33121",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "b3c275e3cb6c5b0c8f938ea2cf41617f70dda48cf530afac6599db25fd615327"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33122",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "675ed6cd57e77637e07a51fcad6548aab6e39c1b5b179a5e98c876e8d2161c58"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33123",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "50554a09cc56521cf488d707b6123c885c5f1348bc4531c2a3fd783132ff7ac6"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33133",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "de242e3bcbc4f1f963f5dd082778044f9f6fff262b686d5e4512f7f24fa599f7"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33211",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "105482ba1f36ad34b2d862081466133c5d068f71ff64f84364791d0b9f84feaf"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "cd2646e825844cd4f7e665d68055c0717b9cbc18b9838297ca0b571ad18dfa30"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33213",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "33e213e261d9fe3543cc8514f607906f0b43b79299f7d5b3bf4a8606e028b881"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33131",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "0c84909188925e64c39b5e53803337d95dad2c4d00b565d04d55be93f3ec8994"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-33132",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "448d184316e13eadd6a921e6a55c0c0c6e2e8e01a698f31dda75b011e4ba49a1"
     }
   ],
   "latestCheckpointCommit": "eaa8ab7649521ac9c38934475b749dc9ee7e87c7",
@@ -2816,6 +2937,54 @@
       ],
       "review": "Root and coordinator full review: Wendy ten booking mistakes, four-week invented-case class and post-2031 coding-loss cost-covered continuation repaired; Erik S1 automate trial/no staffing decision and S2 extension consumption cut retagged. Node/audit pass both.",
       "at": "2026-11-18T12:00:13.424616+00:00"
+    },
+    {
+      "ids": [
+        "A09-33111",
+        "A09-33112"
+      ],
+      "review": "Root and coordinator full review: both S0 safe-car deferrals tagged as spending cuts; Dana S1/S3 Rafi usual paid routes, S3 coding-loss and no caller data in outside tools repaired; Karl S3 unpaid on-call burden retained. Node/audit pass both.",
+      "at": "2026-11-18T12:03:07.577513+00:00"
+    },
+    {
+      "ids": [
+        "A09-33113",
+        "A09-33121"
+      ],
+      "review": "Reviewer1 and coordinator full review: both S0 subscription consumption cuts tagged separately, Sara S4 and Aaron S4 keep-or-seek fallback, Aaron S1 conservative sewing income and S3 funded supervised blocked-gate/unknown-street practice repaired; proactive enquiry retagged change-job. Node/audit pass.",
+      "at": "2026-11-18T12:04:16.130807+00:00"
+    },
+    {
+      "ids": [
+        "A09-33122",
+        "A09-33123"
+      ],
+      "review": "Reviewer2 and coordinator full review: Beth S1 fake patient scheduling data and standalone grown-children headline repaired; Ivan S1 fake garage trial and S3 qualified inspector supervision in training step repaired. Node/audit pass both.",
+      "at": "2026-11-18T12:04:53.971923+00:00"
+    },
+    {
+      "ids": [
+        "A09-33133",
+        "A09-33211"
+      ],
+      "review": "Coordinator full source/profile/annotation read plus reviewer1 literal review; repaired S0 spending, post-2028 acceptance, arrears contacts and keep-or-seek fallback; node and audit pass.",
+      "at": "2026-11-18T12:08:28.838711+00:00"
+    },
+    {
+      "ids": [
+        "A09-33212",
+        "A09-33213"
+      ],
+      "review": "Coordinator full current file read plus reviewer2 literal review; corrected trained and qualified dispatcher gates, unsupported spending delay gate, and no-access learning fallback; node and audit pass.",
+      "at": "2026-11-18T12:09:25.396853+00:00"
+    },
+    {
+      "ids": [
+        "A09-33131",
+        "A09-33132"
+      ],
+      "review": "Root full literal-source review and coordinator full-read; repaired S0 consumption cuts, Priya baseline anxiety and bounded free two-Saturday inspection with combined wage, Yusuf booked-income and station-supplied operator-approved rehearsal gates; actual node/audit pass.",
+      "at": "2026-11-18T12:10:24.752255+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -3202,9 +3371,21 @@
     "A09-32323": "cd8650a93f01d9ddc8fa302cd9d40660b8dd5c563c2d15bd1dfbfd476591cbe6",
     "A09-32331": "457daa39b57411af7c0dfd0d24d118676dc02f1c2ad255f0d653540cf25ef14d",
     "A09-32321": "65e525c1cbf6e5dc6246c7f2f8efe679f40150d29e92d9d2bda8a89bfb8b8a67",
-    "A09-32322": "ef0335e9be2f72dfcab35fbc954e0acf820e6c5d0c05ece50c4deb0e6406745e"
+    "A09-32322": "ef0335e9be2f72dfcab35fbc954e0acf820e6c5d0c05ece50c4deb0e6406745e",
+    "A09-33111": "8e776321b5161f80f3e43213fa702e63897d8f049cc3879f5056461f97d1fcd3",
+    "A09-33112": "49975f70611fd61adc21faee6e7baa0fdc9351396f49ad5406e181cc398496c3",
+    "A09-33113": "85ed90f17925efb6fa44dbd56572426b9bafe70c7b6346ab16f9b08017481250",
+    "A09-33121": "b3c275e3cb6c5b0c8f938ea2cf41617f70dda48cf530afac6599db25fd615327",
+    "A09-33122": "675ed6cd57e77637e07a51fcad6548aab6e39c1b5b179a5e98c876e8d2161c58",
+    "A09-33123": "50554a09cc56521cf488d707b6123c885c5f1348bc4531c2a3fd783132ff7ac6",
+    "A09-33133": "de242e3bcbc4f1f963f5dd082778044f9f6fff262b686d5e4512f7f24fa599f7",
+    "A09-33211": "105482ba1f36ad34b2d862081466133c5d068f71ff64f84364791d0b9f84feaf",
+    "A09-33212": "cd2646e825844cd4f7e665d68055c0717b9cbc18b9838297ca0b571ad18dfa30",
+    "A09-33213": "33e213e261d9fe3543cc8514f607906f0b43b79299f7d5b3bf4a8606e028b881",
+    "A09-33131": "0c84909188925e64c39b5e53803337d95dad2c4d00b565d04d55be93f3ec8994",
+    "A09-33132": "448d184316e13eadd6a921e6a55c0c0c6e2e8e01a698f31dda75b011e4ba49a1"
   },
-  "updatedAt": "2026-11-18T12:00:13.424660+00:00",
+  "updatedAt": "2026-11-18T12:10:46.085599+00:00",
   "acceptedRepairHistory": [
     {
       "id": "A09-13113",
