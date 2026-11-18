@@ -13,7 +13,7 @@
   "claimedAt": "2026-11-18T09:32:48.041838+00:00",
   "jobs": {
     "A13": {
-      "reviewedCount": 141,
+      "reviewedCount": 187,
       "reviewedIds": [
         "A13-11111",
         "A13-11112",
@@ -155,10 +155,7 @@
         "A13-23113",
         "A13-23121",
         "A13-23122",
-        "A13-23123"
-      ],
-      "insightsValidated": false,
-      "remainingGaps": [
+        "A13-23123",
         "A13-23131",
         "A13-23132",
         "A13-23133",
@@ -203,10 +200,13 @@
         "A13-31313",
         "A13-31321",
         "A13-31322",
+        "A13-31332",
+        "A13-31333"
+      ],
+      "insightsValidated": false,
+      "remainingGaps": [
         "A13-31323",
         "A13-31331",
-        "A13-31332",
-        "A13-31333",
         "A13-32111",
         "A13-32112",
         "A13-32113",
@@ -1032,35 +1032,27 @@
   "reservations": {
     "author1": {
       "ids": [
-        "A13-23221",
-        "A13-23222"
+        "A13-32122",
+        "A13-32123"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:35:46.625627+00:00"
+      "reservedAt": "2026-11-18T12:37:51.006992+00:00"
     },
     "author2": {
       "ids": [
-        "A13-23131",
-        "A13-23132"
+        "A13-32111",
+        "A13-32112"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:29:36.833153+00:00"
+      "reservedAt": "2026-11-18T12:34:50.292859+00:00"
     },
     "author3": {
       "ids": [
-        "A13-23212",
-        "A13-23213"
+        "A13-32113",
+        "A13-32121"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:35:21.064524+00:00"
-    },
-    "author4": {
-      "ids": [
-        "A13-23133",
-        "A13-23211"
-      ],
-      "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:33:46.995446+00:00"
+      "reservedAt": "2026-11-18T12:36:34.296498+00:00"
     },
     "author1_rewrite": {
       "ids": [
@@ -1069,6 +1061,14 @@
       ],
       "state": "ACCEPTED",
       "reservedAt": "2026-11-18T09:50:12.451676+00:00"
+    },
+    "author_fresh4": {
+      "ids": [
+        "A13-31323",
+        "A13-31331"
+      ],
+      "state": "DRAFTING",
+      "reservedAt": "2026-11-18T12:29:45.328939+00:00"
     }
   },
   "validationResults": [
@@ -1229,6 +1229,341 @@
       "canonicalTotal": 243,
       "remainingCanonicalGaps": 199,
       "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-1100-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "time": "2026-11-18T11:50:04.557063+00:00",
+      "exitCode": 1,
+      "passingReviewed": 147,
+      "passingUnreviewedExcluded": [
+        "A13-23221",
+        "A13-23222",
+        "A13-23223",
+        "A13-23231",
+        "A13-23232",
+        "A13-23233",
+        "A13-23311"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 96,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-1100-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "time": "2026-11-18T11:50:04.557063+00:00",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "passingUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-1100-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "time": "2026-11-18T11:50:04.557063+00:00",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "passingUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-1100-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "time": "2026-11-18T11:50:04.557063+00:00",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "passingUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-1100-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "time": "2026-11-18T11:52:24.130566+00:00",
+      "exitCode": 1,
+      "passingReviewed": 149,
+      "passingUnreviewedExcluded": [
+        "A13-23231",
+        "A13-23232",
+        "A13-23233",
+        "A13-23311",
+        "A13-23312"
+      ],
+      "invalidUnreviewedExcluded": [
+        "A13-23223"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 94,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-202611181152241305660000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "time": "2026-11-18T11:52:24.130566+00:00",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A14-13123",
+        "A14-13222"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-202611181152241305660000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "time": "2026-11-18T11:52:24.130566+00:00",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A15-13213"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-202611181152241305660000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "time": "2026-11-18T11:52:24.130566+00:00",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A16-12233",
+        "A16-12311"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-202611181152241305660000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "time": "2026-11-18T12:09:46.851822+00:00",
+      "exitCode": 0,
+      "passingReviewed": 165,
+      "passingUnreviewedExcluded": [
+        "A13-31121",
+        "A13-31122",
+        "A13-31123"
+      ],
+      "invalidUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 78,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-202611181209468518220000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "time": "2026-11-18T12:09:46.851822+00:00",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A14-13123",
+        "A14-13222"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-202611181209468518220000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "time": "2026-11-18T12:09:46.851822+00:00",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A15-13213"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-202611181209468518220000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "time": "2026-11-18T12:09:46.851822+00:00",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A16-12233",
+        "A16-12311"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-202611181209468518220000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "time": "2026-11-18T12:31:32.771626+00:00",
+      "exitCode": 0,
+      "passingReviewed": 181,
+      "passingUnreviewedExcluded": [
+        "A13-31312",
+        "A13-31313",
+        "A13-31321",
+        "A13-31322"
+      ],
+      "invalidUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 62,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-202611181231327716260000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "time": "2026-11-18T12:31:32.771626+00:00",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A14-13123",
+        "A14-13222"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-202611181231327716260000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "time": "2026-11-18T12:31:32.771626+00:00",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A15-13213"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-202611181231327716260000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "time": "2026-11-18T12:31:32.771626+00:00",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A16-12233",
+        "A16-12311"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-202611181231327716260000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "time": "2026-11-18T12:37:14.241023+00:00",
+      "exitCode": 0,
+      "passingReviewed": 185,
+      "passingUnreviewedExcluded": [
+        "A13-31312",
+        "A13-31313",
+        "A13-31323",
+        "A13-31331",
+        "A13-32111"
+      ],
+      "invalidUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 58,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-202611181237142410230000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "time": "2026-11-18T12:37:14.241023+00:00",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A14-13123",
+        "A14-13222"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-202611181237142410230000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "time": "2026-11-18T12:37:14.241023+00:00",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A15-13213"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-202611181237142410230000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "time": "2026-11-18T12:37:14.241023+00:00",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A16-12233",
+        "A16-12311"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-202611181237142410230000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "time": "2026-11-18T12:38:09.424432+00:00",
+      "exitCode": 0,
+      "passingReviewed": 187,
+      "passingUnreviewedExcluded": [
+        "A13-31323",
+        "A13-31331",
+        "A13-32111"
+      ],
+      "invalidUnreviewedExcluded": [],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 56,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-202611181238094244320000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "time": "2026-11-18T12:38:09.424432+00:00",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A14-13123",
+        "A14-13222"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-202611181238094244320000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "time": "2026-11-18T12:38:09.424432+00:00",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A15-13213"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-202611181238094244320000-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "time": "2026-11-18T12:38:09.424432+00:00",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "passingUnreviewedExcluded": [],
+      "invalidUnreviewedExcluded": [
+        "A16-12233",
+        "A16-12311"
+      ],
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-202611181238094244320000-validation.txt"
     }
   ],
   "preservedHashes": {
@@ -1488,8 +1823,8 @@
     "A13-21123": "63b831268e5c27f7ecf26fd6bfcd3c07c5ff80d3313c78a415df6fb2115b8d07",
     "A13-21131": "a2665df004bc6356d3082ae6ebe8c94247dac472771c0b69e9bd91888cbf2d18",
     "A13-21132": "8b0e1a97da747aeab9f9e3562ad2009f0392eac9c6f8e78ec74e7bce0aea774c",
-    "A13-21111": "1c9d9c1b7aa1f3d3c38bac46ea89e986b119323d5be951ab6b1ac6a0cd2cec42",
-    "A13-21112": "8b490492cdfda9ec9b730f7e94bd7f7dbb223e66e03764c3e45e3473dd6637f0",
+    "A13-21111": "d2d356ee97d12d05ab6c659210db24842b52c9fe68937bf06a9ba7b3bfb1d2fd",
+    "A13-21112": "8bc151b240e3b820a49bd30698e73bc5191be317da916fbb270458d34c58a611",
     "A13-21133": "aa9328eb0de393fbe2457648f2ec57ca98c386569307394c7630135d0516fba3",
     "A13-21211": "8e0aadcbde0ed3a872ed96577cf128c7dfae515e1a24937ff8c6eaff8ab5aeed",
     "A13-21212": "727da367fcd8c4fbcb2b6af3cfde3c6ab87a9a02efbdb1194bd6ecd98581a3da",
@@ -1506,8 +1841,8 @@
     "A13-21321": "5f37984d1bfd7e32396780c821bbab1020ea50446c3a667d9483c2d1b88b53c5",
     "A13-21331": "1563664aa79c583f809aba03c1d97ca05daac0bfb886172eb3febdcbcf0b1843",
     "A13-21332": "18827a813845dd472aec4a3ec1dbb3ba01f295547d71b7c6c0fc1aaed87237d9",
-    "A13-21322": "85b37d9be34a5bd5d4db512b1b72de561ea226317146dd5b9672d4dd02631e16",
-    "A13-21323": "6bf558499d82c7fd501e7d56b1498daeb412dbe4c1a71526e4419d7f262e1368",
+    "A13-21322": "711943d21f4d0b485ac1d77cfd82979d0a71454befa784571d5936779f6624e9",
+    "A13-21323": "5f92af8b7a149e9df55ef3d81f088e9a29a7cf683c17656997aa20599bb03d03",
     "A13-21333": "15ca869bbd9c0740b60faaea3e1d2edb414774e6a1f61edf72889473bb805e9b",
     "A13-22111": "7e479fe3e2c99e49436addfeac2b0296a0e6b996a1ed0f7aa9b971e1155de837",
     "A13-22112": "c971825560e16b4517c569450318353ffee399c5b872cae8b43847efcb04a6c0",
@@ -1523,7 +1858,7 @@
     "A13-22213": "bf71b4b049f2bed75453d7ea7552d39e2f8b6e55518f904cd4cebaec3c719008",
     "A13-22221": "ebb69c2d4f76879145d0adf73107a128dc0e10e61fa141e220c373a37fb7866e",
     "A13-22222": "a20359e82982b8ab20b0cb5a9a6d68c7918bf6ec43caf2f984d34dbfade68a5e",
-    "A13-22223": "27faf6364a26595af9ba65387e7578bff5c3f56dee0b2689ab293d7e116416ba",
+    "A13-22223": "7ca30771737c8af87370ef1736f467fbde6e2243b3c5959fa1821fe3246d3624",
     "A13-22231": "14acc6bda140bd013a1f67e20d1bc8b11b76fd911fb715102d01d5a8c5f3c07f",
     "A13-22232": "0b61d198b843ddc31bb4cd20eba1c2b23e2895046afadd506b9e8b600e28dd70",
     "A13-22233": "aa565d3346450e3e666fc1871a514545ade9fd2b368e4182eecec49ef9edabb3",
@@ -1541,9 +1876,55 @@
     "A13-23122": "2bc1e1ee0fd02f0d5390a136f24e4c7c99f39e520d3fae3b5c9679e24d0351f5",
     "A13-23123": "4974b0d9c814327f07bd41d0b606fa2fa34966afce71cfe851389c7f53b00aa7",
     "A13-23113": "3efd6954730d1dab230abd446232aabd9a1aeaef6b659f625b3654a6c3167e8d",
-    "A13-23121": "771e2062e9ebdb1b4cba9c707bcda0e1cd73ce9be77bdf05743e0a50a3de2fea"
+    "A13-23121": "771e2062e9ebdb1b4cba9c707bcda0e1cd73ce9be77bdf05743e0a50a3de2fea",
+    "A13-23131": "bf1fdaf25d1a4a3f45d29c4007f1a72177f02081ec28aea204130b1484cfd654",
+    "A13-23132": "1d205f2df73bba2b06bdeec28e21553aec039eeed51f6f8dbd15ad1cf9f6213a",
+    "A13-23212": "149070bbacb298e2e6c72592f8c988e6b0bbc62131a61302177f807935e57b2a",
+    "A13-23213": "fb4a6e877ae3bdd43a3dcb6e3aeedea7c21a7328141d47247db212144d5ecf3e",
+    "A13-23133": "478386c631dfb03d4e7fd205410f25e7d9497496ed12490290a22839c49409b5",
+    "A13-23211": "e40e3e154ef8bc46f0b9d217dd956e2dde7e61f84b962e3dc44e76e8d8dd4d5f",
+    "A13-23221": "3b357e704a278c92067612f62945eb3622492e160c5a0a709267b54b6bbe0d09",
+    "A13-23222": "e79fb281ed556094a32ec1b106fad10d66b1ad530147d6a357694bc031316fac",
+    "A13-23223": "17cc21aed35e70e2f530d17760774b208f9e88bb52a7f900c6df6b41aa661e9c",
+    "A13-23231": "2c63a515e385364e4b2ee555c011946833b132b9c662c06a3272a1d934ac1578",
+    "A13-23232": "730a9195a3589a398344af2f2d0ebb38d5b75e99268e607a39845118d8ea6cec",
+    "A13-23233": "ca9d9bfac326c7e3d342972e79d211ddeccb27e6305bcb9e6029699d759f24df",
+    "A13-23311": "9e0fa51fedf4f9b0dd9d285957b2a73a051adc33e254345ccc38a645c51df66f",
+    "A13-23312": "2b8dc87c7cb65be045ce539f6fe55f8b4479e2436f8dc5f99f1ecf8bf402cca6",
+    "A13-23331": "f9fca064041696b922e9dc781f0b8c7c4976d6c6117524fbfc4e3d5e8be5f7a8",
+    "A13-23332": "8cef071f2d1c5e302896da8c8f1723dde7429da0e70d358f19ef520f6361108e",
+    "A13-23313": "d0473f6348d7c3f68822b221c65df02aa828631d5df33f1ff7d44a5f9eae8af3",
+    "A13-23321": "bec92e605b235af3e320b027980f83c44f3dc906f7ba782cfe6c7de5ba51d56b",
+    "A13-23322": "e686d0bad3967177abd2588ac2144fd896ec005f079dc69cc5d482aecc8420e1",
+    "A13-23323": "dac39b8b68b66d7edd219880c394999fdb0c0fd6911e1188667145fedae290ff",
+    "A13-23333": "6b66c2a0efe018fd34dd2b05729a8f7c97277f41a2b5d93f97e5dd8e0d7d252b",
+    "A13-31111": "085e34d17989992eb03cf84bfff129a6c32b601f96763cb55a86c0e32531a6e0",
+    "A13-31112": "ee52db1e47cd3c8cd0d6990fda3f263a1f43dce60134876cde815ee98002877f",
+    "A13-31113": "36924d8bb373e89b9dff8c8ad67caa3faa12eb90da4fa52dc9dfdab1bd4b0428",
+    "A13-31121": "617d6756d6e3a812d50da2821d8c5deb8d5e86550de92753d8a6cdb95a8bf396",
+    "A13-31122": "9c0cc7889fea755f63fcb3415a2f6a9a1f5918d38c579a79dd3d3afcc11b6484",
+    "A13-31123": "2fa2f2ea59247717b780525fbd6a587a98979d360b4915e545c6a624b7ff0c03",
+    "A13-31131": "37506dfa7c8da92ef98ad11fb93c2cec099f9130522e0757a3bf0161e02ebfd9",
+    "A13-31132": "3fbc5ef745b479f6fcd81455be49e7c02ae130944984a52f470665449cb035eb",
+    "A13-31133": "b515f52f6203b8310dd1761c60d485660db49798e8478b7e3a256e8bd6ab8f5f",
+    "A13-31211": "8e227179875213d3b92ff97af589128d3b5c80b46de6db4b7d4ed0749aff7dc8",
+    "A13-31212": "d571186fb21c5e45462ab647eeb921448bd76c3ad07b90e0ead50d17ce261efa",
+    "A13-31213": "a1053472a35eb46a0ca187b9d487c414096646382523341081ee356f9cad53c8",
+    "A13-31221": "65d6f1a0c5eb03fbe21cbccb190d5d032c575ed13a5046636e6fcc2dd099bf53",
+    "A13-31222": "0f0305f91553499045407036d4758e49e97e21608f0192287b07dcee7adb450c",
+    "A13-31223": "a4297d74cd07fb4d9e4674c547bbc31e8b4b0be42642cb52de1fc09d5efe592b",
+    "A13-31231": "f661ca4cabce03594c7041e1bd2f428d71151e260795ee78a14befcb768478f5",
+    "A13-31232": "9870ea229be7511ce91e26eb3fc3e8d764f260e507addb3692d06a26d1bc927b",
+    "A13-31233": "e0284c77f25d0a98a3e746d8474b1cea898d98d519cc39b69a642756bfdaa791",
+    "A13-31311": "3c2af1bba37ef83ccd61612addc48eb7a8f69e8aaf0c9029f15ba5e6075494c2",
+    "A13-31321": "d1cfc959e07958f5cc981d78b4f080e8967c1b4614ee533523865f436f897163",
+    "A13-31322": "a07a2aacd7d3fad7c2bade782e1b225a49856b23e2b1f2ac74814886ed964044",
+    "A13-31332": "f18990b748746e8e44111c70559e375881f7d814bb6dc6ff486ba8b8d849c8db",
+    "A13-31333": "37653ac3f1d12d06366e08e2857eae6a7e773fbaabea80ac18e607922efe7483",
+    "A13-31312": "c2b27fdb837fd38c60df7f65dc5b2a75bb352ff92335a2f2d2d877e159111157",
+    "A13-31313": "f75b87d7fbbf0e8846610fb6d88b9247522fc9c1507fc54f06a7fdfc8247df1a"
   },
-  "latestCheckpointCommit": "f7853d2c15264131c8717fb3c7f3c46bae1224d7",
+  "latestCheckpointCommit": "627a9bccef19be455cd9df6ad8fe0551ee2a67d1",
   "semanticReview": [
     "Existing coordinator-accepted protocol 3.1 interviews independently passed repository validator and are hash-protected.",
     "New files require full transcript/profile review, repository validation and supplemental exact-card/question/quote/bullet audit before acceptance.",
@@ -1558,9 +1939,17 @@
     "A13 milestone: all81 early-life IDs and all27 midlife low-standing IDs plus all9 experienced thin-cushion IDs reviewed. Four experienced moderate-cushion IDs reviewed next. Count121/243 A13, range288/972. Whole-job actual validators confirmed all reviewed IDs pass; unreviewed drafting files and legacy invalid gaps remain excluded.",
     "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging.",
     "2026-11-18 11:37 UTC: Root rejected draft A13-23132 as too structurally similar to paired23131 beyond grid constraints (MBA loan, dinner cut, project deposit, physical course/pickup pathway, incremental loan/savings amounts). Entirely fresh independent rewrite required; unreviewed draft excluded. A13 now141 reviewed; all81 early and60 midlife accepted, other owned jobs remain initial reviewed counts.",
-    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging."
+    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging.",
+    "2026-11-18 11:39 UTC: Root full read unaccepted Tomas A13-23133 and rejected repeated source structure from prior author4 pair; author4 interrupted and exact reserved23133/23211 transferred to author_fresh4 in fresh context, instructed not to read existing raw drafts. No accepted or initially protected files changed. Full independent re-interviews required before acceptance.",
+    "2026-11-18 11:49 UTC: Fetched coordinator8200109 and own89f3cd3; read full handoff diff. Ownership unchanged. Compared current accepted raw SHA256 to actual coordinator blobs; differing versions remain documented and own-branch reviewed sources preserved, no merge. Final insights must bind actual source hashes.",
+    "Checkpoint root actual validators: all316 reviewed interviews pass;223 initially passing hashes intact;93 new reviewed source hashes match current accepted manifest. Whole-job exit1 only unreviewed draft23223 while correction in progress and five recorded preexisting A14-A16 failures; none counted. Updated /tmp supplemental audit enforces both protocol closing questions; all89 new accepted at that check passed and each laterpair validated. Initial baseline untouched. A13 now149 reviewed; all insights still pending, rebuild from scratch at200 reviewed per handoff and update final243.",
+    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging.",
+    "2026-11-18T12:10Z checkpoint: Root full semantic review and actual validators accepted all81 A13 midlife profiles; all81 early-life remain accepted, plus3 late-life=165/243 A13. Total332/972 reviewed;223 initial protected hashes intact and109 new accepted hashes match. Final root whole-job A13 validator exit0 includes3 passing UNREVIEWED drafts excluded from counts/staging. A14-A16 known five failed gaps remain uncounted; no raw writes in those jobs. Retirement availability at53/60/63/68 checked individually, no age-funded entitlement; new pension enquiries not forced routine tags, private THINK grounded, stage/gate corrections recorded. Same ACTIVE owner; all four insights remain pending until minimum200 reviewed per job, then final243 matching source evidence required.",
+    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging.",
+    "2026-11-18T12:34:12.362826+00:00: Root reread full protocol. Omar/Wendy pair withheld after full read: overlapping decision arcs, unsupported privateTHINK item and missing household offer gates; Wendy requested fresh interview. Root adapted ephemeral credential helper using existing GH_TOKEN without saving token, fetched coordinator3468040 and ownfa6e821, ownership unchanged; no blocker. Root quote-only A13-22223 source+quote clarification recorded exact old/new hashes, matches coordinator current bytes; initially protected223 intact.",
+    "Session-3 checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging."
   ],
-  "updatedAt": "2026-11-18T11:36:56.925237+00:00",
+  "updatedAt": "2026-11-18T12:38:18.901293+00:00",
   "acceptanceRecords": [
     {
       "ids": [
@@ -2163,9 +2552,332 @@
       "parentReview": "Root fully read both profiles, all persona answers and followups, annotations and closing. Fresh1 source-assertion caught concurrent correction and rechecked current exact hashes, confirms S1 application versus acceptance stages fixed. Applications follow viable advertised pay/hours; leaving waits for signed affordable offer and relocation for family agreement. Gareth trial approvals and apprenticeship wage/safety/cover gates checked; private THINK S4 retains continued wages. Nora private S0 now faithful to private answer; school pickup, funded paid-hour hygiene learning, physical bridge dates and combined confirmed wages preserved. Literal standalone inspection quote corrected. Actual repository and supplemental validators pass; initial hashes unchanged.",
       "validator": "node scripts/validate-archetype-interviews.mjs A13-23113 A13-23121",
       "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23131",
+        "A13-23132"
+      ],
+      "time": "2026-11-18T11:43:16.862738+00:00",
+      "hashes": {
+        "A13-23131": "bf1fdaf25d1a4a3f45d29c4007f1a72177f02081ec28aea204130b1484cfd654",
+        "A13-23132": "1d205f2df73bba2b06bdeec28e21553aec039eeed51f6f8dbd15ad1cf9f6213a"
+      },
+      "parentReview": "Root fully read Emeka and wholly fresh independent Lena rewrite, including exact profiles, every persona answer/followup, all summaries/steps and closing. Rejected prior paired-template Lena; new clothing allocation/car/repairs story distinct from Emeka utility bills/MBA debt/driving route. Fresh2 exact source-bound final report clean at accepted hashes. Private THINK corrected to private-answer salary/cash gates; asking/enrolling/completing and proposal/use stages precise, paid demonstration not silently paid learning, rent requires steady profitable orders plus mortgage cash. Literal standalone quotes and timeline/children validated. Actual repository plus supplemental validators pass; protected hashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23131 A13-23132",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23212",
+        "A13-23213"
+      ],
+      "time": "2026-11-18T11:43:17.084329+00:00",
+      "hashes": {
+        "A13-23212": "149070bbacb298e2e6c72592f8c988e6b0bbc62131a61302177f807935e57b2a",
+        "A13-23213": "fb4a6e877ae3bdd43a3dcb6e3aeedea7c21a7328141d47247db212144d5ecf3e"
+      },
+      "parentReview": "Root fully read Carlos and Jade exact profiles, all persona answers and followups, annotations and closing. Fresh1 source-bound report clean on all material findings before final root-only Carlos verb/clear child-cost wording adjustment; root inspected final correction, no facts/gates changed. Routine forecast checks and unchanged saving transfers keep-going, actual extra saving save-more; staying same role keep-going. Quotes name cafe owner/strawberry crates; Carlos forty saving retains both wages/full library hours/paid bills/no unexpected child costs. Jade closing restored fixed protocol questions and explicit fast-AGI choice grounded biggestWorry. Professional course fee and paid hours, approval/cover/authority/wage gates and AGI/robots dates checked. Actual repository and supplemental validators pass; protected hashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23212 A13-23213",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23133",
+        "A13-23211"
+      ],
+      "time": "2026-11-18T11:45:45.048842+00:00",
+      "hashes": {
+        "A13-23133": "478386c631dfb03d4e7fd205410f25e7d9497496ed12490290a22839c49409b5",
+        "A13-23211": "e40e3e154ef8bc46f0b9d217dd956e2dde7e61f84b962e3dc44e76e8d8dd4d5f"
+      },
+      "parentReview": "Root fully read ENTIRELY FRESH context rewrites, exact profiles, all persona answers/followups, annotations and closing; old Tomas patterned draft rejected and excluded. Fresh1 exact source-bound review independently adjudicated; root inspected all corrections. Tomas3400 net-extra-housing/travel signed-offer relocation gate, initially alone/family agreement, apprenticeship3700 household budget with wife1000 or funded shortfall and accepted-place/signedterms, cash22200 target and pre/post-AGI either-wage/majorrepair overpayment stop preserved. Bianca existing1200 transfers keep-going,4700 signedoffer wagefloor, housing completed-sale/approvedloan/20000accessible/700costcut-afterfees/schoolarea gates, unawarded policy benefits excluded. Distinct arithmetic, household histories, beliefs and choices; no protected hashes changed. Actual repository and updated supplemental validators pass.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23133 A13-23211",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23221",
+        "A13-23222"
+      ],
+      "time": "2026-11-18T11:51:27.135980+00:00",
+      "hashes": {
+        "A13-23221": "3b357e704a278c92067612f62945eb3622492e160c5a0a709267b54b6bbe0d09",
+        "A13-23222": "e79fb281ed556094a32ec1b106fad10d66b1ad530147d6a357694bc031316fac"
+      },
+      "parentReview": "Root fully read both profiles, all persona answers/followups, annotations and closing; final changed fields independently inspected against exact source. Fresh2 three source-asserted stage/linkage findings corrected: Rafael screen learning only after successful test/offered paid instruction/auditor source clarity; S4 approved course retains actual paid site visits/named supervisor/funded fee+hours/pickup, last root edit restored explicit approval. Zoe first asks Harun to teach; learning requires his agreement and childcare, extra repair income requires surplus bookings and net receipts after parts covering time without shifting existing work. Private THINK source leaks removed; S4 literal quote identifies partners bicycle shop; stale sound-training/venue closing replaced with actual current repair and job needs. Winter trip-deposit source chronology reread; ages and AGI/robots timeline coherent. Actual repository and updated supplemental validators pass; all223 initial protected hashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23221 A13-23222",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23223",
+        "A13-23231"
+      ],
+      "time": "2026-11-18T11:55:13.115763+00:00",
+      "hashes": {
+        "A13-23223": "17cc21aed35e70e2f530d17760774b208f9e88bb52a7f900c6df6b41aa661e9c",
+        "A13-23231": "2c63a515e385364e4b2ee555c011946833b132b9c662c06a3272a1d934ac1578"
+      },
+      "parentReview": "Root fully read exact profiles, all persona answers and followups, annotations and closing for both corrected interviews. Fresh1 source-bound findings independently adjudicated: Adam child age after2028 corrected, downsizing retains viable access to paid work alongside consent/mortgage clearance/cash; Hana private THINK mortgage conditionality from actualprivate answer, aunt grocery help requires ownpostended AND spouses hoursfall. Root S1 supplier appeal ten WORKING days retained; AdamS0 household income already patchy and mortgage depends both professionalwages => anxiousclassification while voicedunease retained. Hana resistant evidence/legal appeal path does not invent AI adoption or guaranteedpost. Distinct biography/choices, paidrole/actualoffer/AGIrobot/age/quote checks complete. Actual repository+updatedsupp pass, allinitialhashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23223 A13-23231",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23232",
+        "A13-23233"
+      ],
+      "time": "2026-11-18T11:55:38.357665+00:00",
+      "hashes": {
+        "A13-23232": "730a9195a3589a398344af2f2d0ebb38d5b75e99268e607a39845118d8ea6cec",
+        "A13-23233": "ca9d9bfac326c7e3d342972e79d211ddeccb27e6305bcb9e6029699d759f24df"
+      },
+      "parentReview": "Root fully read exact profiles, all persona answers/followups, all annotations and closing. Fresh2 source-bound findings independently adjudicated: OmarS3 banquet setup learning retains lead supervision with approvedcover/fullsalary; WendyS0 existing daily ledger-AI comparisons keep-going notnewlearning. Root OmarS2 only possible ownloss despite expectedofficecuts=>anxiousclassification, voicedalarm retained; S4 fifty mortgage gate requires no unexpected school expense and protects3monthcash. Wendy literal S2 quote clarifies patient leftwaiting, no endorsement ofdelay. Sourcecourse fees vs paidworkinghours, actualvacancies/offer/pay/travel/childcare/authority, independentcontexts, ages2031/2036 and thinking/robotexposure checked. Actual repository+supp pass, protectedhashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23232 A13-23233",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23311",
+        "A13-23312"
+      ],
+      "time": "2026-11-18T11:57:14.742277+00:00",
+      "hashes": {
+        "A13-23311": "9e0fa51fedf4f9b0dd9d285957b2a73a051adc33e254345ccc38a645c51df66f",
+        "A13-23312": "2b8dc87c7cb65be045ce539f6fe55f8b4479e2436f8dc5f99f1ecf8bf402cca6"
+      },
+      "parentReview": "Root fully read exact profiles, all persona answers/followups, summaries, tags/steps and closing. Fresh1 independent full source-bound review adjudicated; Erik commercial financial advice purchases remain in factualDo but removed forced seek-support tags (not government/family/community); new quarterlyspending review not existingroutinekeepgoing, removed forcedtag. Cashmath3200gap/210000reserve, written8000householdshortweekgate and60000cashfloor+wifeagreement beforemortgagepayoff coherent; careerpause self-funded notpaidleave. Fatima paid12hourlearningonlyapproval/clearedrecords, capped28200sixmonthsearch with wageassumption/review,4000coopstake+600audit onlynewsurplus/protected122400/no assumedjobdividends,12000educationallocation essentialspriority allchecked. Ownexpectedjobloss with no immediatecashdistress remainsanxious per individualreasoning. Actual repository+updatedsupp pass;223initialhashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23311 A13-23312",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23331",
+        "A13-23332"
+      ],
+      "time": "2026-11-18T12:01:09.386095+00:00",
+      "hashes": {
+        "A13-23331": "f9fca064041696b922e9dc781f0b8c7c4976d6c6117524fbfc4e3d5e8be5f7a8",
+        "A13-23332": "8cef071f2d1c5e302896da8c8f1723dde7429da0e70d358f19ef520f6361108e"
+      },
+      "parentReview": "Root fully read exact profiles, every persona answer/followup, annotations and closing for Karl/Sara. Fresh1 independent full review no definite required findings on currenthashes; root inspected Karl corrections: solo director evidence request kept inDo not forcedcollectiveaction, actualcouncilstepretained; S2 THINK fromprivateanswer nottechnicianfollowup, netpay/oncall terms faithful without importedmortgagefloor. Sara routineAI/radio checks keep-going, paidpilot requiresdirectorpaidtime/plannersretained, superviseddepotlearningrequirescover/leadagreement, actualapplications/offers/pay/travel/rota/stopload authority and collectedtailoringcash gates checked. Children ages, highstandingindependencefromadaptability, AGIthinking/robotsdates, fullsentenceliteralquotes coherent. Actual repository andsupp pass;initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23331 A13-23332",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23313",
+        "A13-23321"
+      ],
+      "time": "2026-11-18T12:02:34.350839+00:00",
+      "hashes": {
+        "A13-23313": "d0473f6348d7c3f68822b221c65df02aa828631d5df33f1ff7d44a5f9eae8af3",
+        "A13-23321": "bec92e605b235af3e320b027980f83c44f3dc906f7ba782cfe6c7de5ba51d56b"
+      },
+      "parentReview": "Root fully read both exact profiles, every persona answer/followup, summaries/steps and closing. Fresh2 independent full source-bound two findings fixed and root inspected finalfields: Uma phone line stays open without invented staffingdecision closure trigger; Marco can request meetings before consent, holding them requires director+union agreement. Marco certificates verify practical-test results as well as attendance, paid pilot approvals/humanchecks retained, joint union submission/co-sign consent and director publication gates, privatebothincomeshold preserved. Uma applications preservepay+hours,600stopsifTompaidhrsfall/protects13monthcash,2036downsizing onlyconsidered ifnoadequatejob/youngerfinishesschool/bothagree/realsalefundsmortgage+replacement; currentpriceestimates notgatedasactualmove. Literalquotes/chronology/tags/cash/AGIrobotstimelinechecked. Actualrepository+updatedsupp pass,initialhashes unchanged.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23313 A13-23321",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23322",
+        "A13-23323"
+      ],
+      "time": "2026-11-18T12:06:29.423194+00:00",
+      "hashes": {
+        "A13-23322": "e686d0bad3967177abd2588ac2144fd896ec005f079dc69cc5d482aecc8420e1",
+        "A13-23323": "dac39b8b68b66d7edd219880c394999fdb0c0fd6911e1188667145fedae290ff"
+      },
+      "parentReview": "Root fully read both exact profiles, all persona answers/followups, annotations and closing; final ColinS4 pension-source rewritten access/netincome at53 reread in full. Fresh1 source-bound full review finding no-retirement/paid-work-search fallback corrected and root inspected finalfields. Colin existing250 educationtransfer keep-going, retirement onlyconsidered with actualavailablepension/fundedbridge/clearedmortgage/Leilaagreement/familycosts; unavailablemoney => keepsearchingpaidwork. Dana sideventure requireswrittenemployerpermission+liabilityinsurance beforeoffer, realbookedpayingvenues andyearmortgagecash, S3postedrole writtenpay/workablehours+care/paidsitespractice. Headlineconcrete, cash/approval/pension/AGIrobot/ages and privatethoughtsource checked; no guaranteed pension/customer/work income. Actualrepository+updatedsupp pass;initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23322 A13-23323",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-23333",
+        "A13-31111"
+      ],
+      "time": "2026-11-18T12:06:29.640372+00:00",
+      "hashes": {
+        "A13-23333": "6b66c2a0efe018fd34dd2b05729a8f7c97277f41a2b5d93f97e5dd8e0d7d252b",
+        "A13-31111": "085e34d17989992eb03cf84bfff129a6c32b601f96763cb55a86c0e32531a6e0"
+      },
+      "parentReview": "Root fully read exact CROSSING profiles and all persona answers/followups, annotations andclosing; Aaron43MBAexpertstrong versus Beth58junior/belowaveragebachelorsthin/grownchildren, distinctpersonalhistories. Fresh2 exactsource findings adjudicated; Beth quote now namesgrownchildren, Aaronleisureboatsalecosts cut-spending only afterownership/costsactuallyend notbusinesssellorexit, Beth individualfreeunionpensionadvice seek-support notcollectiveactivity. Aaron newweeklyautomationalreadyclearedrecords/paidtime/draftlimits, household7000offerfloor, boatproceedsnotpresumed,3000demandtestabove84000floor,20000laundrystake+800checknewsurplus/protected168000/limitedloss/nojobdividends,15000educationceiling checked. Beth2850minus2800=50,1200thinreserve, support/nopensionassumptions,63/68ages and65unfundedexistinghope/noearlyretirement,4800savingprojectionconditional; expressedpanic2028 coherent without fundedhousingpath. Actual+supp pass;initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-23333 A13-31111",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31112",
+        "A13-31113"
+      ],
+      "time": "2026-11-18T12:08:40.633307+00:00",
+      "hashes": {
+        "A13-31112": "ee52db1e47cd3c8cd0d6990fda3f263a1f43dce60134876cde815ee98002877f",
+        "A13-31113": "36924d8bb373e89b9dff8c8ad67caa3faa12eb90da4fa52dc9dfdab1bd4b0428"
+      },
+      "parentReview": "Root fully read exact late58 junior/below-average bachelor-degree/thin profiles, all persona answers/followups, summaries/tags/steps and closing. Fresh1 independent source-bound findings corrected and root inspected: Ivan retirement gate includes verified income PLUS savings, biggestWorry has no invented rent-only threshold from total-expense weeks; Priya duplicated sentence removed preserving literal quote. Root removed forced keep-going new retirement enquiries but kept factual Do, genuine current-work routines unchanged; Ivan requesting inspection mornings is separate from attending only with queue cover/supervisor marking. Funded fees plus paid learning hours, actual posted net pay/travel/shifts, irregular partner income and no assumed pension/family cash/physical job checked. Thin reserve, age58/junior standing/few jobs and expected office-work loss support voiced alarm without a funded fallback; longer dates create no entitlement. Actual repository and updated supplemental pass; initial hashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31112 A13-31113",
+      "supplemental": "PASS",
+      "recordCorrection": "Restored full root review note after shell-quoting truncation; acceptance/hashes/counts/reservation verified, no mutation repeated."
+    },
+    {
+      "ids": [
+        "A13-31121",
+        "A13-31122"
+      ],
+      "time": "2026-11-18T12:14:33.455583+00:00",
+      "hashes": {
+        "A13-31121": "617d6756d6e3a812d50da2821d8c5deb8d5e86550de92753d8a6cdb95a8bf396",
+        "A13-31122": "9c0cc7889fea755f63fcb3415a2f6a9a1f5918d38c579a79dd3d3afcc11b6484"
+      },
+      "parentReview": "Root fully read both exact late58 junior/below-average thin profiles, every persona answer/followup, annotations and closing. Fresh2 independent full source-bound findings corrected and root inspected final fields: YusufS4 search only if actual pension PLUS Rina confirmed pay falls short, health/bus constraints retained; family loan discussion after consulting Rina, acceptance only consent/repayment. FreyaS1 paid learning requires successful pilot result approved by BOTH access manager and director with trained-clerk instruction, rollout separately approved; family help can be asked before consent and only relied on if offered, public eligibility separate. FreyaS4 keeps explicit full-paid-work search if pension/part-time route fails. Private THINK natural wording corrected without new facts; stage/fee/approval/pay/ages60,63,68/robot dates and actual pension unknowns checked. Actual repository plus supplemental pass;223 initial hashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31121 A13-31122",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31123",
+        "A13-31131"
+      ],
+      "time": "2026-11-18T12:16:33.917354+00:00",
+      "hashes": {
+        "A13-31123": "2fa2f2ea59247717b780525fbd6a587a98979d360b4915e545c6a624b7ff0c03",
+        "A13-31131": "37506dfa7c8da92ef98ad11fb93c2cec099f9130522e0757a3bf0161e02ebfd9"
+      },
+      "parentReview": "Root fully read exact late58/junior/below-average thin profiles, all persona answers/followups, annotations and closing. Fresh1 source-bound full review findings fixed: GarethS2 accepting bench repair requires willing supervisor alongside health/bus/postedpay/Clareactualearnings, NoraS4 cost-reducing housing move retains deposittransfer/bus/one-year cost savings/partneragreement without invented pension-covering-rent prerequisite. Root removed Gareth forced retire-early tag where no baseline date moved forward; factual funded conditional stopping remains. Nora family grocery request precedes consent, relying only if daughter agrees; private THINK pension insufficiency concerns household costs, not unsupported rent-only threshold. Nora audit+demonstrated test-account reversal before live use retained. Root clarified GarethS4 search branch uses pension plus Clare wages, matching private household gate and final step. Actual repository+supplemental pass; initial hashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31123 A13-31131",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31132",
+        "A13-31133"
+      ],
+      "time": "2026-11-18T12:17:47.283536+00:00",
+      "hashes": {
+        "A13-31132": "3fbc5ef745b479f6fcd81455be49e7c02ae130944984a52f470665449cb035eb",
+        "A13-31133": "b515f52f6203b8310dd1761c60d485660db49798e8478b7e3a256e8bd6ab8f5f"
+      },
+      "parentReview": "Root fully read both exact late58 junior/below-average bachelor/thin profiles, all persona answers/followups, annotations and closing. Fresh2 independent full source-bound review plus final corrected-field verification clean before root final wording adjustment. Victor learning request requires paid hours/available supervisor/cleared examples/no personal fees, asking employers precedes signed2500net-extra-travel resignation gate, scheduled280car-loan cash freed only after actual charge-free clearance and unchanged finances,150existingtransfer routine. Daria interview explanation practice change-job not learn-ai; initial plant test permission/prepaid costs/refunds/60total/10fee/new100surplus/protected2200; repeating requires checking profit after every cost and separately agreeing another capped batch from actual money/no borrowing/reserve. Root removed added positive-profit prerequisite from repeat step (check net profit, not require profitability), matching unchanged actual source/Do. No assumed family housing/customer/pension/67early-retirement income. Cashmath/ages/pensionaccess/realoffers/bus/consent checked; actualrepository+supp pass,initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31132 A13-31133",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31211",
+        "A13-31212"
+      ],
+      "time": "2026-11-18T12:19:52.953686+00:00",
+      "hashes": {
+        "A13-31211": "8e227179875213d3b92ff97af589128d3b5c80b46de6db4b7d4ed0749aff7dc8",
+        "A13-31212": "d571186fb21c5e45462ab647eeb921448bd76c3ad07b90e0ead50d17ce261efa"
+      },
+      "parentReview": "Root fully read Emeka/Lena exact late58 junior/below-average bachelor MODERATE cushion profiles, all persona answers/followups, annotations and closing. Fresh1 independent full review no Emeka findings; Lena source-bound quote-context findings corrected and root inspected finalfields. S2 now explicitly food-carton allergen label, S3 stopped food-packaging batch for missing allergen warning, headline missing allergen on food package, all actual persona sentences literal and standalone. S4 sixty saving requires BOTH FULL wages and paid bills, cancelled labshift stops transfer. Emeka old route knowledge does not imply budget competence, paid supervised routewalks/realpostedauthority/physicalduties gates; Lena proofreading skill does not imply budgets/stamina competence, paid lead-supervised linework/fullsalary and actual batch-hold vacancy gates. New pension enquiries not forced routine tags, no assumed age68 eligibility; retirement income PLUS savings compared with actual bills. Actualrepository+updatedsupp pass;initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31211 A13-31212",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31213",
+        "A13-31221"
+      ],
+      "time": "2026-11-18T12:23:10.350540+00:00",
+      "hashes": {
+        "A13-31213": "a1053472a35eb46a0ca187b9d487c414096646382523341081ee356f9cad53c8",
+        "A13-31221": "65d6f1a0c5eb03fbe21cbccb190d5d032c575ed13a5046636e6fcc2dd099bf53"
+      },
+      "parentReview": "Root fully read exact late58 junior/below-average bachelor/moderate profiles, all persona answers/followups, summaries/steps and closing. Fresh2 independent full current-source review no remaining material findings after root-requested corrections; root inspected final fields. TomasS4 THINK now actual private eligibility/amounts belief, not Do pension+partner-income combination. BiancaS0 THINK now actual private junior network-report learning gap, not job-steady belief imported from FEEL; S3 saving85 stops if Joel bookings fall, even if essential bills remain covered; S2 public eligibility enquiry no imported landlord-shortfall condition. Source approval/humanchecks, actualpostedduties/wages/offers, partner receipts, paid bills/cashfloor, pension access/net income and ages60/63/68 checked, no adult-child regular mortgage funds or AGI-safe desks assumed. Actualrepository+supp pass;initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31213 A13-31221",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31222",
+        "A13-31223"
+      ],
+      "time": "2026-11-18T12:25:27.230661+00:00",
+      "hashes": {
+        "A13-31222": "0f0305f91553499045407036d4758e49e97e21608f0192287b07dcee7adb450c",
+        "A13-31223": "a4297d74cd07fb4d9e4674c547bbc31e8b4b0be42642cb52de1fc09d5efe592b"
+      },
+      "parentReview": "Root fully read Carlos/Jade exact late58 junior/below-average bachelor/moderate profiles, all persona answers/followups, annotations and closing. Fresh1 independent full source-bound review no Carlos finding, Jade application-versus-enrolment corrected and root inspected finalfields. Jade applies for funded certificate only with paid learning hours, qualified supervised live practice and bus fit; no accepted place invented. Later seeks posted PAID SITE CHECKS with written pay/shifts plus Marta actual earnings covering mortgage/bills; training supervision not silently imposed on all later jobs. Carlos pottery studio is commercial wage/profit only after prepaid demand/costs/rent/wage covered, insurer-required kiln learning affordable fee/supervision/no lost wholesaler pay, accessible pension plus real studio income before stopping. Private THINK, stages, fees vs hours, pension/net income, actual household math, ages and AGI/robot exposure checked. Actualrepository+supp pass;initialhashes intact.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31222 A13-31223",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31231",
+        "A13-31232"
+      ],
+      "time": "2026-11-18T12:29:38.884160+00:00",
+      "hashes": {
+        "A13-31231": "f661ca4cabce03594c7041e1bd2f428d71151e260795ee78a14befcb768478f5",
+        "A13-31232": "9870ea229be7511ce91e26eb3fc3e8d764f260e507addb3692d06a26d1bc927b"
+      },
+      "parentReview": "Root full semantic reading of both actual interviews plus independent fresh2 source-bound review report_31231_31232.json CLEAN. Rechecked final Rafael S3 explicit400 chargefree/wife agreement/13800 accessible gates and stop conditions; Zoe S2 support after wage loss independent of failed move; Zoe S3 request quote separated from agreeing written employer/partner/5600net gates. Household cash arithmetic, moderate cushion, late58 junior/belowaverage profile, AI frequencies, exact private THINK, stages/robots, actual70-to68 conditional retirement, quotes and action tags coherent. Root actual validator plus supplemental PASS.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31231 A13-31232",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31233",
+        "A13-31311"
+      ],
+      "time": "2026-11-18T12:29:39.151181+00:00",
+      "hashes": {
+        "A13-31233": "e0284c77f25d0a98a3e746d8474b1cea898d98d519cc39b69a642756bfdaa791",
+        "A13-31311": "3c2af1bba37ef83ccd61612addc48eb7a8f69e8aaf0c9029f15ba5e6075494c2"
+      },
+      "parentReview": "Root full actual source semantic reading of both plus independent fresh1 report_31233_31311.json. Adam S0 Do and step correction rechecked: ten appointments comparison AND installer confirms failure cause before changing rule. Hana unchanged. Profile/cushion boundary, dailyAI versus neverAI, household pay and savings, qualified paid supervised installation learning, union grievance observation fullsalary/cover gates, exposed thinking fallbacks and2031/2034/2039robots, uncertain pension, exact private THINK, moods, tags, standalone quotes coherent. Root actual validator plus supplemental PASS.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31233 A13-31311",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31321",
+        "A13-31322"
+      ],
+      "time": "2026-11-18T12:34:50.169255+00:00",
+      "hashes": {
+        "A13-31321": "d1cfc959e07958f5cc981d78b4f080e8967c1b4614ee533523865f436f897163",
+        "A13-31322": "a07a2aacd7d3fad7c2bade782e1b225a49856b23e2b1f2ac74814886ed964044"
+      },
+      "parentReview": "Root fully read both source interviews and annotations; independent fresh2 report_31321_31322.json CLEAN at final hashes. Erik S1 manual signoff persists; evidence gates considering AI and deputy-led live observation precedes personal use, corrected and root reinspected. Fatima S4 keeping posted paid complaint role independent of pension shortfall; other paid search requires no post and insufficient pension, keep-going added, final targets reinspected. Distinct retail-floor versus privacy/appeal plans, actual small partner pension versus exposed library wage, own pension unverified, highpay does not imply management skill. Exact private THINK, conditional net household pay/standing/specialist supervision/paidtime, stages/robots, calibrated moods and literal standalone quotes reviewed. Root actual validator and supplemental PASS.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31321 A13-31322",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31332",
+        "A13-31333"
+      ],
+      "time": "2026-11-18T12:36:34.183317+00:00",
+      "hashes": {
+        "A13-31332": "f18990b748746e8e44111c70559e375881f7d814bb6dc6ff486ba8b8d849c8db",
+        "A13-31333": "37653ac3f1d12d06366e08e2857eae6a7e773fbaabea80ac18e607922efe7483"
+      },
+      "parentReview": "Root fully read Colin and Dana complete actual transcripts/profiles/annotations, plus independent fresh1 report_31332_31333.json CLEAN. Root final targeted source checks: Colin quality-role wage covers loan AND ordinary bills after travel, manageable duties, course fees and paid working hours, qualified supervision and fullsalary/cover, S4 application no invented retirement-insufficient gate. Dana scoreboard score/timer/graphic control exposed2031 AGI; only carrying/installing physical display later2034, exact private source and THINK inspected after correction. S4 own work/pension uncertainty calibrated anxious despite voiced unease. Distinct apprenticeship/plant path versus actually offered second-job scoreboard shifts with permission/supervision/transport; late58 lowstanding highpay/strongcushion, private evidence, literal standalone quotes and action tags coherent. Root actual validator and supplemental PASS.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31332 A13-31333",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-31312",
+        "A13-31313"
+      ],
+      "time": "2026-11-18T12:37:50.884024+00:00",
+      "hashes": {
+        "A13-31312": "c2b27fdb837fd38c60df7f65dc5b2a75bb352ff92335a2f2d2d877e159111157",
+        "A13-31313": "f75b87d7fbbf0e8846610fb6d88b9247522fc9c1507fc54f06a7fdfc8247df1a"
+      },
+      "parentReview": "Root fully read both original pair and complete rewritten current pair; rejected original decision parallelism and required fresh Wendy interview. Fresh2 full independent review report_31312_31313_fresh.json CLEAN final hashes; original rejected report retained. Reworked Wendy distinct label/paid-hours/regulator/insulation decisions, no shared pilot-fund-review arc. Root checked final Omar S3 coreprivate only,2028 voice synthesis versus2031 microphone handling, S2/S3 combined actual Joan wage+named essential bill gates and uncertain retirement, S3/S4 moods anxious. Wendy full-year refusal log retained separately from changing checks after signed procedure; S3 internal anonymised evidence only with granted permission/public fallback,320saving stops if paid orders fall. Financial cushion, exact private THINK, staged thinking/physical exposure, supported tags and literal standalone quotes reviewed. Root actual validator and supplemental PASS.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-31312 A13-31313",
+      "supplemental": "PASS"
     }
   ],
-  "checkpointPreparedAt": "2026-11-18T11:36:45.914333+00:00",
+  "checkpointPreparedAt": "2026-11-18T12:38:09.862348+00:00",
   "reopened": [
     {
       "id": "A13-12333",
@@ -2657,6 +3369,47 @@
           "after": "Enroll in fee-funded sample training on paid time only if Malik covers two late childcare days"
         }
       ]
+    },
+    {
+      "ids": [
+        "A13-21111",
+        "A13-21112"
+      ],
+      "time": "2026-11-18T11:48:46.265326+00:00",
+      "before": {
+        "A13-21111": "1c9d9c1b7aa1f3d3c38bac46ea89e986b119323d5be951ab6b1ac6a0cd2cec42",
+        "A13-21112": "8b490492cdfda9ec9b730f7e94bd7f7dbb223e66e03764c3e45e3473dd6637f0"
+      },
+      "after": {
+        "A13-21111": "d2d356ee97d12d05ab6c659210db24842b52c9fe68937bf06a9ba7b3bfb1d2fd",
+        "A13-21112": "8bc151b240e3b820a49bd30698e73bc5191be317da916fbb270458d34c58a611"
+      },
+      "reason": "Root targeted exact-source semantic reread plus fresh1 full two-ID re-review:21111 S2 sister loan only if no affordable receiving job, S4 THINK now private-answer promotion concern;21112 S0 routine checked drafts keep-going not automate, freed20 debt repayment save-more and S3 first15 actual repair earnings debt payment captured. Coordinator21111 S1 commercial lender enquiry seek-support addition rejected: no government/family/community dependence. Transcripts unchanged; actual validator and updated supplemental pass; no initial protected files altered.",
+      "report": "/tmp/paradigm-session3-20261118-1331/reviewer_fresh1/report_21111_21112_recheck.json"
+    },
+    {
+      "ids": [
+        "A13-21322",
+        "A13-21323"
+      ],
+      "time": "2026-11-18T11:49:13.689439+00:00",
+      "before": {
+        "A13-21322": "85b37d9be34a5bd5d4db512b1b72de561ea226317146dd5b9672d4dd02631e16",
+        "A13-21323": "6bf558499d82c7fd501e7d56b1498daeb412dbe4c1a71526e4419d7f262e1368"
+      },
+      "after": {
+        "A13-21322": "711943d21f4d0b485ac1d77cfd82979d0a71454befa784571d5936779f6624e9",
+        "A13-21323": "5f92af8b7a149e9df55ef3d81f088e9a29a7cf683c17656997aa20599bb03d03"
+      },
+      "reason": "Root exact-source reread and fresh2 independent full two-ID re-review:21322 S2 mechanic checks for paid customer repairs and mechanic oversight during offered trial, S3 own-wheel practice before customer work;21323 S2 paid print-floor trial beside trained press worker, retaining approval/safety/pickup. Annotations only; transcripts unchanged. Actual repository and supplemental validators pass; no initial protected file altered.",
+      "report": "/tmp/paradigm-session3-20261118-1331/reviewer_fresh2/report_21322_21323_recheck.json"
+    },
+    {
+      "id": "A13-22223",
+      "time": "2026-11-18T12:33:22.745425+00:00",
+      "oldHash": "27faf6364a26595af9ba65387e7578bff5c3f56dee0b2689ab293d7e116416ba",
+      "newHash": "7ca30771737c8af87370ef1736f467fbde6e2243b3c5959fa1821fe3246d3624",
+      "reason": "Root reviewed exact coordinator diff3468040: S2 quote ambiguous tools now names AI tools in both actual persona answer and literal scenario quote. Only these two strings changed; improves standalone clarity, no facts or choices changed. Root actual validator and supplemental rechecked."
     }
   ],
   "freshRewriteEvidence": {
@@ -2671,45 +3424,45 @@
     {
       "lane": "author1",
       "ids": [
-        "A13-23221",
-        "A13-23222"
+        "A13-32122",
+        "A13-32123"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:35:46.625627+00:00"
+      "reservedAt": "2026-11-18T12:37:51.006992+00:00"
     },
     {
       "lane": "author2",
       "ids": [
-        "A13-23131",
-        "A13-23132"
+        "A13-32111",
+        "A13-32112"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:29:36.833153+00:00"
+      "reservedAt": "2026-11-18T12:34:50.292859+00:00"
     },
     {
       "lane": "author3",
       "ids": [
-        "A13-23212",
-        "A13-23213"
+        "A13-32113",
+        "A13-32121"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:35:21.064524+00:00"
+      "reservedAt": "2026-11-18T12:36:34.296498+00:00"
     },
     {
-      "lane": "author4",
+      "lane": "author_fresh4",
       "ids": [
-        "A13-23133",
-        "A13-23211"
+        "A13-31323",
+        "A13-31331"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T11:33:46.995446+00:00"
+      "reservedAt": "2026-11-18T12:29:45.328939+00:00"
     }
   ],
   "progress": {
-    "reviewedInterviews": 308,
+    "reviewedInterviews": 354,
     "canonicalInterviews": 972,
-    "remainingInterviews": 664,
-    "newReviewedInterviews": 85,
+    "remainingInterviews": 618,
+    "newReviewedInterviews": 131,
     "insightsCompleted": 0,
     "jobsCompleted": 0
   },
@@ -2718,8 +3471,8 @@
     "ownerContinuity": "Same Session 3 owner and thread; goal remains unfinished. No second independent writer may claim this active session.",
     "currentJob": "A13",
     "nextTwoIds": [
-      "A13-23223",
-      "A13-23231"
+      "A13-32131",
+      "A13-32132"
     ],
     "order": [
       "A13",
@@ -2733,50 +3486,32 @@
     "existingFailingFileRule": "Preexisting failing 3.1 files also require fresh independent re-interviews, not annotation-only repairs. Current failing IDs are recorded in preexistingInvalidFiles.",
     "pendingReviewWork": [
       {
-        "author": "author1",
         "ids": [
-          "A13-23221",
-          "A13-23222"
+          "A13-31323",
+          "A13-31331"
         ],
-        "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:35:46.625627+00:00",
-        "rootReadIds": [],
-        "reviewState": "Fresh bounded pair drafting; root and read-only review required."
+        "state": "Stable author_fresh4 pair actual+supp PASS, independent fresh1 full review running. Root fully read Marco31323; root Uma31331 full read pending."
       },
       {
-        "author": "author2",
         "ids": [
-          "A13-23131",
-          "A13-23132"
+          "A13-32111",
+          "A13-32112"
         ],
-        "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:29:36.833153+00:00",
-        "rootReadIds": [
-          "A13-23131"
-        ],
-        "reviewState": "Lena23132 rejected for paired-template duplication; entirely fresh rewrite required. Emeka23131 root read, corrected version pending final source verification; fresh2 alerted."
+        "state": "author2 drafting; Karl32111 stable root full read pending."
       },
       {
-        "author": "author3",
         "ids": [
-          "A13-23212",
-          "A13-23213"
+          "A13-32113",
+          "A13-32121"
         ],
-        "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:35:21.064524+00:00",
-        "rootReadIds": [],
-        "reviewState": "Fresh bounded pair drafting; root and read-only review required."
+        "state": "author3 fresh drafting; root not read."
       },
       {
-        "author": "author4",
         "ids": [
-          "A13-23133",
-          "A13-23211"
+          "A13-32122",
+          "A13-32123"
         ],
-        "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:33:46.995446+00:00",
-        "rootReadIds": [],
-        "reviewState": "Fresh bounded pair drafting; root and read-only review required."
+        "state": "author1 fresh drafting; root not read."
       }
     ],
     "reviewerPool": {
@@ -2789,6 +3524,44 @@
         "reviewer2"
       ],
       "concurrencyRule": "At most six simultaneous helper invocations: four bounded two-ID writers and two bounded two-ID reviewers; fresh reviewers verify every finding excerpt against its actual ID file."
+    },
+    "writerPool": {
+      "activeReusable": [
+        "author1",
+        "author2",
+        "author3",
+        "author_fresh4"
+      ],
+      "retiredIdle": [
+        "author4"
+      ],
+      "rule": "At most six concurrent bounded two-ID helper invocations including reviewers."
+    },
+    "acceptedRecheckRecords": [
+      {
+        "ids": [
+          "A13-21111",
+          "A13-21112"
+        ],
+        "resolvedAt": "2026-11-18T11:52:51.016492+00:00",
+        "state": "Root source-adjudicated, annotations amended and current acceptedHashes updated; actual+supp pass",
+        "amendmentRecord": "acceptedAmendments contains exact old/new hashes and reasons"
+      },
+      {
+        "ids": [
+          "A13-21322",
+          "A13-21323"
+        ],
+        "resolvedAt": "2026-11-18T11:52:51.016492+00:00",
+        "state": "Root source-adjudicated, annotations amended and current acceptedHashes updated; actual+supp pass",
+        "amendmentRecord": "acceptedAmendments contains exact old/new hashes and reasons"
+      }
+    ],
+    "insightMilestone": {
+      "trigger": "A13 at least200 reviewed passing interviews",
+      "prepare": "Before crossing200, stop assigning new draft pairs; let current pairs finish and root review all raw A13 files. Actual insight validator counts every protocol3.1 raw file, so no unreviewed draft may be included or counted in insight sources.",
+      "source": "Freeze exact reviewed IDs/raw SHA256 and exact PRIVATE core-THINK answers in /tmp; derive supported one-or-two group memberships with source-bound exact evidence, not Do/followups or old provisional matrices.",
+      "validation": "Root actual interview+insight validators plus independent semantic/numeric/source audit; update against final243 sources and stats. Keep helpers /tmp, only owned insight/stats/status data paths may be committed."
     }
   },
   "preexistingInvalidFiles": {
@@ -2804,17 +3577,17 @@
       "A16-12311"
     ]
   },
-  "lastCheckpointAt": "2026-11-18T11:36:45.914333+00:00",
+  "lastCheckpointAt": "2026-11-18T12:38:09.862348+00:00",
   "checkpointSummary": {
     "reviewedCounts": {
-      "A13": 141,
+      "A13": 187,
       "A14": 63,
       "A15": 60,
       "A16": 44
     },
     "protectedInitialFiles": 223,
-    "acceptedNewFiles": 85,
-    "remainingInterviews": 664,
+    "acceptedNewFiles": 131,
+    "remainingInterviews": 618,
     "pendingInsights": [
       "A13",
       "A14",
@@ -2822,53 +3595,110 @@
       "A16"
     ],
     "nextTwoIds": [
-      "A13-23223",
-      "A13-23231"
+      "A13-32131",
+      "A13-32132"
     ],
     "activeWriterReservations": [
       {
         "lane": "author1",
         "ids": [
-          "A13-23221",
-          "A13-23222"
+          "A13-32122",
+          "A13-32123"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:35:46.625627+00:00"
+        "reservedAt": "2026-11-18T12:37:51.006992+00:00"
       },
       {
         "lane": "author2",
         "ids": [
-          "A13-23131",
-          "A13-23132"
+          "A13-32111",
+          "A13-32112"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:29:36.833153+00:00"
+        "reservedAt": "2026-11-18T12:34:50.292859+00:00"
       },
       {
         "lane": "author3",
         "ids": [
-          "A13-23212",
-          "A13-23213"
+          "A13-32113",
+          "A13-32121"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:35:21.064524+00:00"
+        "reservedAt": "2026-11-18T12:36:34.296498+00:00"
       },
       {
-        "lane": "author4",
+        "lane": "author_fresh4",
         "ids": [
-          "A13-23133",
-          "A13-23211"
+          "A13-31323",
+          "A13-31331"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T11:33:46.995446+00:00"
+        "reservedAt": "2026-11-18T12:29:45.328939+00:00"
       }
     ]
   },
-  "coordinatorObservedAtResume": "30a0345955c54ac66b8e5614f9163615a29af618",
-  "coordinatorSourceDivergence": {
-    "observedAt": "2026-11-18T10:45:56.040130+00:00",
-    "refCommit": "30a0345955c54ac66b8e5614f9163615a29af618",
-    "differentAcceptedOwnedFiles": [
+  "coordinatorObservedAtResume": {
+    "time": "2026-11-18T11:46:40.974174+00:00",
+    "commit": "8200109049f4ae4e1f99b1b47c5b3c80abde1f7d",
+    "handoffChangeReview": "Read full30a0345..8200109 handoff diff; progress/integration lists only; ownership and protocol unchanged. No merge or raw overwrite.",
+    "matchingNewAcceptedIds": [
+      "A13-13122",
+      "A13-13123",
+      "A13-13221",
+      "A13-13222",
+      "A13-13213",
+      "A13-13232",
+      "A13-13233",
+      "A13-13223",
+      "A13-13231",
+      "A13-13312",
+      "A13-13313",
+      "A13-13321",
+      "A13-13322",
+      "A13-13323",
+      "A13-13331",
+      "A13-13311",
+      "A13-13332",
+      "A13-13333",
+      "A13-21113",
+      "A13-21121",
+      "A13-21122",
+      "A13-21123",
+      "A13-21131",
+      "A13-21132",
+      "A13-21133",
+      "A13-21211",
+      "A13-21212",
+      "A13-21213",
+      "A13-21221",
+      "A13-21222",
+      "A13-21223",
+      "A13-21231",
+      "A13-21232",
+      "A13-21233",
+      "A13-21311",
+      "A13-21312",
+      "A13-21313",
+      "A13-21321",
+      "A13-21331",
+      "A13-21332",
+      "A13-21323",
+      "A13-21333",
+      "A13-22111",
+      "A13-22112",
+      "A13-22113",
+      "A13-22121",
+      "A13-22122",
+      "A13-22132",
+      "A13-22133",
+      "A13-22123",
+      "A13-22131",
+      "A13-22211",
+      "A13-22212",
+      "A13-22213",
+      "A13-22221"
+    ],
+    "differingAcceptedSources": [
       {
         "id": "A13-13131",
         "workerHash": "66ca36942ba58645d972d3156f04459cad08c8decdf270d5841e6f4c10420dc1",
@@ -2903,34 +3733,309 @@
         "id": "A13-12333",
         "workerHash": "5aab3525489f30fabcd01349f0f60369efab008fa55338c306912c434bf66c92",
         "coordinatorHash": "53a1b4c8620b0b0ea8b2a237baddb426f820d9bafafd4b2f061715f2968a62fe"
+      },
+      {
+        "id": "A13-21111",
+        "workerHash": "1c9d9c1b7aa1f3d3c38bac46ea89e986b119323d5be951ab6b1ac6a0cd2cec42",
+        "coordinatorHash": "9ab2710b06a9f211a3346baa4fb01689a3d9d0d131335c8dade55bc98f6fd980"
+      },
+      {
+        "id": "A13-21112",
+        "workerHash": "8b490492cdfda9ec9b730f7e94bd7f7dbb223e66e03764c3e45e3473dd6637f0",
+        "coordinatorHash": "8bc151b240e3b820a49bd30698e73bc5191be317da916fbb270458d34c58a611"
+      },
+      {
+        "id": "A13-21322",
+        "workerHash": "85b37d9be34a5bd5d4db512b1b72de561ea226317146dd5b9672d4dd02631e16",
+        "coordinatorHash": "fa1a6d1cc930532be8deeac68ed141608d410d664159804aca9648e79f0199c8"
+      }
+    ],
+    "acceptedNotYetAtCoordinator": [
+      "A13-22222",
+      "A13-22223",
+      "A13-22231",
+      "A13-22232",
+      "A13-22233",
+      "A13-22311",
+      "A13-22312",
+      "A13-22313",
+      "A13-22321",
+      "A13-22322",
+      "A13-22323",
+      "A13-22331",
+      "A13-22332",
+      "A13-22333",
+      "A13-23111",
+      "A13-23112",
+      "A13-23122",
+      "A13-23123",
+      "A13-23113",
+      "A13-23121",
+      "A13-23131",
+      "A13-23132",
+      "A13-23212",
+      "A13-23213",
+      "A13-23133",
+      "A13-23211"
+    ]
+  },
+  "coordinatorSourceDivergence": {
+    "observedAt": "2026-11-18T12:32:08.368412+00:00",
+    "refCommit": "3468040cee3535529d48bd6e67534891b96515f9",
+    "differentAcceptedOwnedFiles": [
+      {
+        "id": "A13-12333",
+        "workerHash": "5aab3525489f30fabcd01349f0f60369efab008fa55338c306912c434bf66c92",
+        "coordinatorHash": "53a1b4c8620b0b0ea8b2a237baddb426f820d9bafafd4b2f061715f2968a62fe"
+      },
+      {
+        "id": "A13-13121",
+        "workerHash": "60cda1ad9d5cb9cd40a56530f9d02e20883c52a64b82e0a9a5a320f4ed091759",
+        "coordinatorHash": "60abb8739b0219dd4ef5d8d196849209912513d9c5a90121f6edffb6531ef0cf"
+      },
+      {
+        "id": "A13-13131",
+        "workerHash": "66ca36942ba58645d972d3156f04459cad08c8decdf270d5841e6f4c10420dc1",
+        "coordinatorHash": "c6322fbbc65cf33dfeda06533c323a3d78dbbb201a7fb16a071af9f66fd359c9"
+      },
+      {
+        "id": "A13-13132",
+        "workerHash": "563345e707e10dad4bc4889771fdec8eb891cfb2f0e6b0c7f48c41e91694c6a5",
+        "coordinatorHash": "6748b7836136fd8a9c42d1ac3ee500746d23856c6d7179e8155d5a1f828f2e53"
+      },
+      {
+        "id": "A13-13133",
+        "workerHash": "75c436dac4a373cfeb86bd2c9f6ff27bc9b9b0076621819ab0223f4acf533e78",
+        "coordinatorHash": "db5dfb751b07c4218a3fa2e6d52e26faff66bf84ee9e4191fef41337069b73dd"
+      },
+      {
+        "id": "A13-13211",
+        "workerHash": "50febd679ebce62da2ac030d2e9baa592d48e77108408aac588623f3d0867012",
+        "coordinatorHash": "ab004b91f3f6c676128f65c953d7c761ab4ae4894ffe74902433a61c03f3a689"
+      },
+      {
+        "id": "A13-13212",
+        "workerHash": "a4fb3df8fbd66d8f9a15378db24beced20659901a87cf2fe8b4412512edbecad",
+        "coordinatorHash": "dbed480ca48e100865f41f7c8c2ac670aeca21b8eccf9fb452b6b00483d067d3"
+      },
+      {
+        "id": "A13-21111",
+        "workerHash": "d2d356ee97d12d05ab6c659210db24842b52c9fe68937bf06a9ba7b3bfb1d2fd",
+        "coordinatorHash": "9ab2710b06a9f211a3346baa4fb01689a3d9d0d131335c8dade55bc98f6fd980"
+      },
+      {
+        "id": "A13-21322",
+        "workerHash": "711943d21f4d0b485ac1d77cfd82979d0a71454befa784571d5936779f6624e9",
+        "coordinatorHash": "fa1a6d1cc930532be8deeac68ed141608d410d664159804aca9648e79f0199c8"
+      },
+      {
+        "id": "A13-21323",
+        "workerHash": "5f92af8b7a149e9df55ef3d81f088e9a29a7cf683c17656997aa20599bb03d03",
+        "coordinatorHash": "6bf558499d82c7fd501e7d56b1498daeb412dbe4c1a71526e4419d7f262e1368"
       }
     ],
     "ownedNewFilesNotYetIntegrated": [
-      "A13-21113",
-      "A13-21121",
-      "A13-21122",
-      "A13-21123",
-      "A13-21131",
-      "A13-21132",
-      "A13-21111",
-      "A13-21112",
-      "A13-21133",
-      "A13-21211",
-      "A13-21212",
-      "A13-21213",
-      "A13-21221",
-      "A13-21222",
-      "A13-21223",
-      "A13-21231",
-      "A13-21232",
-      "A13-21233",
-      "A13-21311",
-      "A13-21312",
-      "A13-21313",
-      "A13-21321",
-      "A13-21331",
-      "A13-21332"
+      "A13-23131",
+      "A13-23132",
+      "A13-23133",
+      "A13-23211",
+      "A13-23212",
+      "A13-23213",
+      "A13-23221",
+      "A13-23222",
+      "A13-23223",
+      "A13-23231",
+      "A13-23232",
+      "A13-23233",
+      "A13-23311",
+      "A13-23312",
+      "A13-23313",
+      "A13-23321",
+      "A13-23322",
+      "A13-23323",
+      "A13-23331",
+      "A13-23332",
+      "A13-23333",
+      "A13-31111",
+      "A13-31112",
+      "A13-31113",
+      "A13-31121",
+      "A13-31122",
+      "A13-31123",
+      "A13-31131",
+      "A13-31132",
+      "A13-31133",
+      "A13-31211",
+      "A13-31212",
+      "A13-31213",
+      "A13-31221",
+      "A13-31222",
+      "A13-31223",
+      "A13-31231",
+      "A13-31232",
+      "A13-31233",
+      "A13-31311"
     ],
-    "handling": "Worker branch remains isolated with reviewed versions and original protected hashes. No merge, reset or coordinator edits. Later insights must explicitly check exact raw source hashes and flag canonical integration divergence; do not silently treat versions as equal. User-directed fresh A13-12333 remains in worker branch; coordinator preserved its prior counted version."
+    "sameAcceptedOwnedCount": 75,
+    "acceptedAbsentAtCoordinatorCount": 40,
+    "acceptedOldProtocolAtCoordinatorCount": 0,
+    "handling": "Worker branch remains isolated with reviewed versions and original protected hashes. No merge, reset or coordinator edits. Later insights must explicitly check exact raw source hashes and flag canonical integration divergence; do not silently treat versions as equal. User-directed fresh A13-12333 remains in worker branch; coordinator preserved its prior counted version.",
+    "policy": "Preserve own reviewed source hashes; never silently merge coordinator variants. Root source rechecks/amendments recorded separately. Insight evidence must bind actual source versions.",
+    "previousObservations": [
+      {
+        "observedAt": "2026-11-18T10:45:56.040130+00:00",
+        "refCommit": "30a0345955c54ac66b8e5614f9163615a29af618",
+        "differentAcceptedOwnedFiles": [
+          {
+            "id": "A13-13131",
+            "workerHash": "66ca36942ba58645d972d3156f04459cad08c8decdf270d5841e6f4c10420dc1",
+            "coordinatorHash": "c6322fbbc65cf33dfeda06533c323a3d78dbbb201a7fb16a071af9f66fd359c9"
+          },
+          {
+            "id": "A13-13132",
+            "workerHash": "563345e707e10dad4bc4889771fdec8eb891cfb2f0e6b0c7f48c41e91694c6a5",
+            "coordinatorHash": "6748b7836136fd8a9c42d1ac3ee500746d23856c6d7179e8155d5a1f828f2e53"
+          },
+          {
+            "id": "A13-13121",
+            "workerHash": "60cda1ad9d5cb9cd40a56530f9d02e20883c52a64b82e0a9a5a320f4ed091759",
+            "coordinatorHash": "60abb8739b0219dd4ef5d8d196849209912513d9c5a90121f6edffb6531ef0cf"
+          },
+          {
+            "id": "A13-13133",
+            "workerHash": "75c436dac4a373cfeb86bd2c9f6ff27bc9b9b0076621819ab0223f4acf533e78",
+            "coordinatorHash": "db5dfb751b07c4218a3fa2e6d52e26faff66bf84ee9e4191fef41337069b73dd"
+          },
+          {
+            "id": "A13-13211",
+            "workerHash": "50febd679ebce62da2ac030d2e9baa592d48e77108408aac588623f3d0867012",
+            "coordinatorHash": "ab004b91f3f6c676128f65c953d7c761ab4ae4894ffe74902433a61c03f3a689"
+          },
+          {
+            "id": "A13-13212",
+            "workerHash": "a4fb3df8fbd66d8f9a15378db24beced20659901a87cf2fe8b4412512edbecad",
+            "coordinatorHash": "dbed480ca48e100865f41f7c8c2ac670aeca21b8eccf9fb452b6b00483d067d3"
+          },
+          {
+            "id": "A13-12333",
+            "workerHash": "5aab3525489f30fabcd01349f0f60369efab008fa55338c306912c434bf66c92",
+            "coordinatorHash": "53a1b4c8620b0b0ea8b2a237baddb426f820d9bafafd4b2f061715f2968a62fe"
+          }
+        ],
+        "ownedNewFilesNotYetIntegrated": [
+          "A13-21113",
+          "A13-21121",
+          "A13-21122",
+          "A13-21123",
+          "A13-21131",
+          "A13-21132",
+          "A13-21111",
+          "A13-21112",
+          "A13-21133",
+          "A13-21211",
+          "A13-21212",
+          "A13-21213",
+          "A13-21221",
+          "A13-21222",
+          "A13-21223",
+          "A13-21231",
+          "A13-21232",
+          "A13-21233",
+          "A13-21311",
+          "A13-21312",
+          "A13-21313",
+          "A13-21321",
+          "A13-21331",
+          "A13-21332"
+        ],
+        "handling": "Worker branch remains isolated with reviewed versions and original protected hashes. No merge, reset or coordinator edits. Later insights must explicitly check exact raw source hashes and flag canonical integration divergence; do not silently treat versions as equal. User-directed fresh A13-12333 remains in worker branch; coordinator preserved its prior counted version."
+      },
+      {
+        "observedAt": "2026-11-18T11:52:51.016492+00:00",
+        "refCommit": "8200109049f4ae4e1f99b1b47c5b3c80abde1f7d",
+        "differentAcceptedOwnedFiles": [
+          {
+            "id": "A13-13131",
+            "workerHash": "66ca36942ba58645d972d3156f04459cad08c8decdf270d5841e6f4c10420dc1",
+            "coordinatorHash": "c6322fbbc65cf33dfeda06533c323a3d78dbbb201a7fb16a071af9f66fd359c9"
+          },
+          {
+            "id": "A13-13132",
+            "workerHash": "563345e707e10dad4bc4889771fdec8eb891cfb2f0e6b0c7f48c41e91694c6a5",
+            "coordinatorHash": "6748b7836136fd8a9c42d1ac3ee500746d23856c6d7179e8155d5a1f828f2e53"
+          },
+          {
+            "id": "A13-13121",
+            "workerHash": "60cda1ad9d5cb9cd40a56530f9d02e20883c52a64b82e0a9a5a320f4ed091759",
+            "coordinatorHash": "60abb8739b0219dd4ef5d8d196849209912513d9c5a90121f6edffb6531ef0cf"
+          },
+          {
+            "id": "A13-13133",
+            "workerHash": "75c436dac4a373cfeb86bd2c9f6ff27bc9b9b0076621819ab0223f4acf533e78",
+            "coordinatorHash": "db5dfb751b07c4218a3fa2e6d52e26faff66bf84ee9e4191fef41337069b73dd"
+          },
+          {
+            "id": "A13-13211",
+            "workerHash": "50febd679ebce62da2ac030d2e9baa592d48e77108408aac588623f3d0867012",
+            "coordinatorHash": "ab004b91f3f6c676128f65c953d7c761ab4ae4894ffe74902433a61c03f3a689"
+          },
+          {
+            "id": "A13-13212",
+            "workerHash": "a4fb3df8fbd66d8f9a15378db24beced20659901a87cf2fe8b4412512edbecad",
+            "coordinatorHash": "dbed480ca48e100865f41f7c8c2ac670aeca21b8eccf9fb452b6b00483d067d3"
+          },
+          {
+            "id": "A13-12333",
+            "workerHash": "5aab3525489f30fabcd01349f0f60369efab008fa55338c306912c434bf66c92",
+            "coordinatorHash": "53a1b4c8620b0b0ea8b2a237baddb426f820d9bafafd4b2f061715f2968a62fe"
+          },
+          {
+            "id": "A13-21111",
+            "workerHash": "d2d356ee97d12d05ab6c659210db24842b52c9fe68937bf06a9ba7b3bfb1d2fd",
+            "coordinatorHash": "9ab2710b06a9f211a3346baa4fb01689a3d9d0d131335c8dade55bc98f6fd980"
+          },
+          {
+            "id": "A13-21322",
+            "workerHash": "711943d21f4d0b485ac1d77cfd82979d0a71454befa784571d5936779f6624e9",
+            "coordinatorHash": "fa1a6d1cc930532be8deeac68ed141608d410d664159804aca9648e79f0199c8"
+          },
+          {
+            "id": "A13-21323",
+            "workerHash": "5f92af8b7a149e9df55ef3d81f088e9a29a7cf683c17656997aa20599bb03d03",
+            "coordinatorHash": "6bf558499d82c7fd501e7d56b1498daeb412dbe4c1a71526e4419d7f262e1368"
+          }
+        ],
+        "ownedNewFilesNotYetIntegrated": [
+          "A13-21113",
+          "A13-21121",
+          "A13-21122",
+          "A13-21123",
+          "A13-21131",
+          "A13-21132",
+          "A13-21111",
+          "A13-21112",
+          "A13-21133",
+          "A13-21211",
+          "A13-21212",
+          "A13-21213",
+          "A13-21221",
+          "A13-21222",
+          "A13-21223",
+          "A13-21231",
+          "A13-21232",
+          "A13-21233",
+          "A13-21311",
+          "A13-21312",
+          "A13-21313",
+          "A13-21321",
+          "A13-21331",
+          "A13-21332"
+        ],
+        "handling": "Worker branch remains isolated with reviewed versions and original protected hashes. No merge, reset or coordinator edits. Later insights must explicitly check exact raw source hashes and flag canonical integration divergence; do not silently treat versions as equal. User-directed fresh A13-12333 remains in worker branch; coordinator preserved its prior counted version.",
+        "sameAcceptedOwnedCount": 55,
+        "acceptedAbsentAtCoordinatorCount": 28,
+        "policy": "Preserve own reviewed source hashes; never silently merge coordinator variants. Root source rechecks/amendments recorded separately. Insight evidence must bind actual source versions."
+      }
+    ]
   }
 }
