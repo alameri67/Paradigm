@@ -125,11 +125,7 @@
         "A17-12323",
         "A17-12331",
         "A17-12332",
-        "A17-12333"
-      ],
-      "reviewedCount": 54,
-      "acceptedNewHashes": {},
-      "remainingGaps": [
+        "A17-12333",
         "A17-13111",
         "A17-13112",
         "A17-13113",
@@ -138,10 +134,27 @@
         "A17-13123",
         "A17-13131",
         "A17-13132",
-        "A17-13133",
-        "A17-13211",
         "A17-13212",
         "A17-13213",
+        "A17-13133",
+        "A17-13211"
+      ],
+      "reviewedCount": 66,
+      "acceptedNewHashes": {
+        "A17-13111": "ee4b32afac5315e01d2157e0aa0e4c944e02b7e5efd63dcbdd3406f7ce35e154",
+        "A17-13112": "5a54db50b0b6a97b91f6bc90fdad7796c2ccda08e834c0e08a165feea1dd720c",
+        "A17-13113": "8160977f7bbdeb5939ed7ef96ba32b564338039e829c264c253eeadd4c2e5ab2",
+        "A17-13121": "5090ee19b278794995759a854a477a82a8ffc44c6d8eded1394cb72b76561bee",
+        "A17-13122": "4e18a9d976e76da74871a1749bde93cda3c541a0250b34ea0cf640e3116becc2",
+        "A17-13123": "01aa2136f74c1f606447596f5d2d032bdd629e2bb165d73b426d8e0ceee3179b",
+        "A17-13131": "4ba1e2c2acdc405688e3c9111059a723d3a93bf2b9349eb0c2cce2bdeeed01a6",
+        "A17-13132": "998baaaa92a1c9fad02d168495acd5905076a60a6626f1577ce1ed5890b5d499",
+        "A17-13212": "3e3bbde2ed72ae617925425ac5fec1cd0ea147116f9a89dab283f9dfd78f66d9",
+        "A17-13213": "1df452f2cefaebef28038865df8ede9ce3579689c2147a4c08f02280b54d66a3",
+        "A17-13133": "97bf97d4d6f7395e085295f473fe6e9b493e80b6997102bbbda7ff10cc769767",
+        "A17-13211": "3d2914d1fa7abdec4deec7d499699f92a8b33f527d135c6ac345ceb8b2fe56dd"
+      },
+      "remainingGaps": [
         "A17-13221",
         "A17-13222",
         "A17-13223",
@@ -1262,8 +1275,121 @@
       "baselineReview": "Inherited reviewed status from coordinator handoff; independently validated and hash-protected locally."
     }
   },
-  "reservations": [],
-  "latestCheckpointCommit": null,
+  "reservations": [
+    {
+      "worker": "author1",
+      "ids": [
+        "A17-13111",
+        "A17-13112"
+      ],
+      "state": "accepted"
+    },
+    {
+      "worker": "author2",
+      "ids": [
+        "A17-13113",
+        "A17-13121"
+      ],
+      "state": "accepted"
+    },
+    {
+      "worker": "author3",
+      "ids": [
+        "A17-13122",
+        "A17-13123"
+      ],
+      "state": "accepted"
+    },
+    {
+      "worker": "author4",
+      "ids": [
+        "A17-13131",
+        "A17-13132"
+      ],
+      "state": "accepted"
+    },
+    {
+      "worker": "author1",
+      "ids": [
+        "A17-13133",
+        "A17-13211"
+      ],
+      "state": "accepted"
+    },
+    {
+      "worker": "author2",
+      "ids": [
+        "A17-13212",
+        "A17-13213"
+      ],
+      "state": "accepted"
+    },
+    {
+      "worker": "author4",
+      "ids": [
+        "A17-13221",
+        "A17-13222"
+      ],
+      "state": "author4 correcting"
+    },
+    {
+      "worker": "author3",
+      "ids": [
+        "A17-13223",
+        "A17-13231"
+      ],
+      "state": "reviewing"
+    },
+    {
+      "worker": "author1",
+      "ids": [
+        "A17-13232",
+        "A17-13233"
+      ],
+      "state": "reviewing"
+    },
+    {
+      "worker": "author2",
+      "ids": [
+        "A17-13311",
+        "A17-13312"
+      ],
+      "state": "reviewing"
+    },
+    {
+      "worker": "author4",
+      "ids": [
+        "A17-13313",
+        "A17-13321"
+      ],
+      "state": "reviewing"
+    },
+    {
+      "worker": "author3",
+      "ids": [
+        "A17-13322",
+        "A17-13323"
+      ],
+      "state": "drafting"
+    },
+    {
+      "worker": "author1",
+      "ids": [
+        "A17-13331",
+        "A17-13332"
+      ],
+      "state": "drafting"
+    },
+    {
+      "worker": "author2",
+      "ids": [
+        "A17-13333",
+        "A17-21111"
+      ],
+      "state": "drafting"
+    }
+  ],
+  "latestCheckpointCommit": "e964c63fb61b1e83362c0dd19b25d4cf6ad1182e",
   "validationCommands": [
     "node scripts/validate-archetype-interviews.mjs A17",
     "node scripts/validate-archetype-interviews.mjs A18",
@@ -1271,7 +1397,183 @@
     "node scripts/validate-archetype-interviews.mjs A20"
   ],
   "semanticReviewRecord": [
-    "No new drafts yet; preserve every initially passing file."
+    "No new drafts yet; preserve every initially passing file.",
+    {
+      "id": "A17-13111",
+      "verdict": "APPROVE",
+      "sha256": "4e78a3dabd028ee8f6e658e83328e085526ae15226c86fedb7985566351999bf",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript and exact profile reviewed. Resistant cellist remains anxious with thin current finances; conditional 2028 studio cut, income help, and free library room retained. Group teaching is continuing current work. Reviewer1 defects corrected and parent rechecked."
+    },
+    {
+      "id": "A17-13112",
+      "verdict": "APPROVE",
+      "sha256": "06188700b0cdf87fbd70ab021f59105f0ae6614acf54c7d677b602aa88f60593",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript and exact profile reviewed. Removed unsupported calendar learn-ai; preserved score checking by ear, demo-loss spending condition, advertised-vacancy condition for 2028 job search, offered class and conditional saving. Reviewer1 defects corrected and parent rechecked."
+    },
+    {
+      "id": "A17-13113",
+      "verdict": "APPROVE",
+      "sha256": "8160977f7bbdeb5939ed7ef96ba32b564338039e829c264c253eeadd4c2e5ab2",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript/profile reviewed by root and reviewer1. Corrected saving to during first year; removed unsupported learn-ai tags for existing use/teaching and used continuing-work tag; aligned studio cut with unconditional post-2028 transcript; thin-savings anxiety sustained across dates."
+    },
+    {
+      "id": "A17-13121",
+      "verdict": "APPROVE",
+      "sha256": "5090ee19b278794995759a854a477a82a8ffc44c6d8eded1394cb72b76561bee",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript/profile reviewed by root and reviewer1. Post-2028 hall work explicitly requires advertised vacancies and lost hours. Required AI learning clarified as conditional future adoption with trusted colleague, classes and recordings protected; consistent with current resistant profile. Funding and conditional savings retained."
+    },
+    {
+      "id": "A17-13111",
+      "verdict": "APPROVE",
+      "sha256": "ee4b32afac5315e01d2157e0aa0e4c944e02b7e5efd63dcbdd3406f7ce35e154",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript and exact profile reviewed. Resistant cellist remains anxious with thin current finances; conditional 2028 studio cut, income help, and free library room retained. Group teaching is continuing current work. Reviewer1 defects corrected and parent rechecked. Additional reviewer1 recheck resolved income-help inquiry/application distinction and continued-use tagging; exact original AGI condition retained.",
+      "previousAcceptedHash": "4e78a3dabd028ee8f6e658e83328e085526ae15226c86fedb7985566351999bf"
+    },
+    {
+      "id": "A17-13112",
+      "verdict": "APPROVE",
+      "sha256": "5a54db50b0b6a97b91f6bc90fdad7796c2ccda08e834c0e08a165feea1dd720c",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript and exact profile reviewed. Removed unsupported calendar learn-ai; preserved score checking by ear, demo-loss spending condition, advertised-vacancy condition for 2028 job search, offered class and conditional saving. Reviewer1 defects corrected and parent rechecked. Additional reviewer1 recheck resolved income-help inquiry/application distinction and continued-use tagging; exact original AGI condition retained.",
+      "previousAcceptedHash": "06188700b0cdf87fbd70ab021f59105f0ae6614acf54c7d677b602aa88f60593"
+    },
+    {
+      "id": "A17-13111",
+      "verdict": "APPROVE",
+      "sha256": "ee4b32afac5315e01d2157e0aa0e4c944e02b7e5efd63dcbdd3406f7ce35e154",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript and exact profile reviewed. Resistant cellist remains anxious with thin current finances; conditional 2028 studio cut, income help, and free library room retained. Group teaching is continuing current work. Reviewer1 defects corrected and parent rechecked. Additional reviewer1 recheck resolved income-help inquiry/application distinction and continued-use tagging; exact original AGI condition retained.",
+      "previousAcceptedHash": "4e78a3dabd028ee8f6e658e83328e085526ae15226c86fedb7985566351999bf"
+    },
+    {
+      "id": "A17-13112",
+      "verdict": "APPROVE",
+      "sha256": "5a54db50b0b6a97b91f6bc90fdad7796c2ccda08e834c0e08a165feea1dd720c",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Full transcript and exact profile reviewed. Removed unsupported calendar learn-ai; preserved score checking by ear, demo-loss spending condition, advertised-vacancy condition for 2028 job search, offered class and conditional saving. Reviewer1 defects corrected and parent rechecked. Additional reviewer1 recheck resolved income-help inquiry/application distinction and continued-use tagging; exact original AGI condition retained.",
+      "previousAcceptedHash": "06188700b0cdf87fbd70ab021f59105f0ae6614acf54c7d677b602aa88f60593"
+    },
+    {
+      "id": "A17-13122",
+      "verdict": "APPROVE",
+      "sha256": "4e18a9d976e76da74871a1749bde93cda3c541a0250b34ea0cf640e3116becc2",
+      "reviewers": [
+        "reviewer2",
+        "root"
+      ],
+      "semanticReview": "Root full transcript/profile and reviewer2 audit; corrected AI tool specificity and proof/room/enrollment gates; removed bookkeeping wait-and-see and unsupported retrain; retained workshop cancellation, insurance, ticket coverage and first post-2036 conditions. Full-sentence emotion bullets."
+    },
+    {
+      "id": "A17-13123",
+      "verdict": "APPROVE",
+      "sha256": "01aa2136f74c1f606447596f5d2d032bdd629e2bb165d73b426d8e0ceee3179b",
+      "reviewers": [
+        "reviewer2",
+        "root"
+      ],
+      "semanticReview": "Root full transcript/profile and reviewer2 audit; corrected punctuation and full-sentence emotions, rent/electricity gate for saving, explicit first-post2028 vacancy/income gates, certificate acceptance/funding/self qualification and customers for repairs, first-post2036 attendance gate."
+    },
+    {
+      "id": "A17-13131",
+      "verdict": "APPROVE",
+      "sha256": "4ba1e2c2acdc405688e3c9111059a723d3a93bf2b9349eb0c2cce2bdeeed01a6",
+      "reviewers": [
+        "reviewer2",
+        "root"
+      ],
+      "semanticReview": "Root full transcript/profile and reviewer2 audit; followup repetition removed with natural distinct 2-3 sentence answers; corrected 2028-to2031 arithmetic; paid-family/hall gates retained; continuation after2031 stated, no change-job for existing teaching."
+    },
+    {
+      "id": "A17-13132",
+      "verdict": "APPROVE",
+      "sha256": "998baaaa92a1c9fad02d168495acd5905076a60a6626f1577ce1ed5890b5d499",
+      "reviewers": [
+        "reviewer2",
+        "root"
+      ],
+      "semanticReview": "Root full transcript/profile and reviewer2 audit; natural genuine followup answers replace repeated questions, duplicate plateau quote removed, affordable-room and enrollment conditions retained, first-post2031 listening class explicitly conditional on room and teaching-time pay."
+    },
+    {
+      "id": "A17-13212",
+      "verdict": "APPROVE",
+      "sha256": "3e3bbde2ed72ae617925425ac5fec1cd0ea147116f9a89dab283f9dfd78f66d9",
+      "reviewers": [
+        "reviewer2",
+        "root"
+      ],
+      "semanticReview": "Root full profile/transcript and reviewer2 audit. Exact new AI learning and owned-sample checks clarified; student-covered hall costs, one-month bridge cap, registration fallback, first-post2031 room/time coverage and post2036 paid continuation retained. Reviewer withdrew invented exact-ten threshold and misattributed school-job finding."
+    },
+    {
+      "id": "A17-13213",
+      "verdict": "APPROVE",
+      "sha256": "1df452f2cefaebef28038865df8ede9ce3579689c2147a4c08f02280b54d66a3",
+      "reviewers": [
+        "reviewer2",
+        "root"
+      ],
+      "semanticReview": "Root full profile/transcript and reviewer2 audit. Preserved owned-track learning, lost-overdub and funded/enrolled class gates, post2028 booking-halving gate, and low-enrollment cancellation. Four strongest actual action tags retained in S4 within protocol cap; optional distant qualification discussion remains in transcript with funding/real-job requirements intact."
+    },
+    {
+      "id": "A17-13133",
+      "verdict": "APPROVE",
+      "sha256": "97bf97d4d6f7395e085295f473fe6e9b493e80b6997102bbbda7ff10cc769767",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Root full profile/transcript and reviewer1 audit. Clarified standalone class-test quote, exact paid enrollment/rent gates, written hall fee, studio cut and trainee start next term. Timeline, mood, action semantics and quote exactness independently checked."
+    },
+    {
+      "id": "A17-13211",
+      "verdict": "APPROVE",
+      "sha256": "3d2914d1fa7abdec4deec7d499699f92a8b33f527d135c6ac345ceb8b2fe56dd",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Root full profile/transcript and reviewer1 audit. Replaced unresolved quote referent with arts centre, retained post2028 lost-hours and two-month holiday-cut conditions and union help. Distinguishes 2028 loss expectations from conditional teaching cuts; no assumed pension entitlement."
+    }
   ],
-  "scratchDirectory": "/tmp/paradigm-s4-20261118-1332"
+  "scratchDirectory": "/tmp/paradigm-s4-20261118-1332",
+  "updatedAt": "2026-11-18T09:50:06.502703+00:00",
+  "validationResults": {
+    "baseline": "221 existing protocol3.1 interviews passed repository validator; hashes preserved.",
+    "acceptedNew": 12,
+    "checks": [
+      "Repository validator: one canonical ID per new file; zero errors.",
+      "Supplemental exact profile/card/core question/order/followup/answer length/bold/literal quote audit: zero errors.",
+      "Independent read-only review plus full parent content review and documented corrections."
+    ],
+    "protectedHashes": "All initial and accepted hashes rechecked before checkpoint."
+  },
+  "lastCheckpointPreparedAt": "2026-11-18T09:50:06.463905+00:00"
 }
