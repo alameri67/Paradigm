@@ -9490,7 +9490,7 @@
     "A25-33233": "755b05e3668f3c89b6daba046bfe76cde8d6fea92291b3b0d21ca9bd8cfb1360",
     "A25-33311": "506d4c513cdb0258cbbae7825f6bbbe6f9b022eed08aaf1a9c936655268e38c8"
   },
-  "updatedAt": "2026-11-18T13:05:04.482021+00:00",
+  "updatedAt": "2026-11-18T13:07:46.173307+00:00",
   "checkpointNote": "PAUSED at user request: A25 235 reviewed/8 gaps, A26-A28 57 each. All406 explicit reviewed sources pass actual validators; preserve local unreviewed drafts and source hashes. Prepare reviewed-only main integration; audited201 A25 insights retained on feature but stale and excluded from main.",
   "acceptanceAmendments": [
     {
@@ -9743,15 +9743,31 @@
         "reviewed": false
       }
     ],
-    "localDraftBackup": "/tmp/paradigm-s6-20261118-claim/pause-20261118/unreviewed-drafts.tar.gz",
+    "localDraftBackup": "/workspace/work/paradigm-session-6-pause/unreviewed-drafts.tar.gz",
     "backupSha256": "b85925d8b26e75a66d9fd73357a47de9f7e549696acf322c9e0a3b572101d716",
     "writersStopped": true,
     "resume": "Resume this exact branch and owner; verify protected hashes/status. A25 has235 reviewed and8 gaps. Fully review preserved unreviewed drafts before counting; finish all8 gaps, then refresh insights from audited201 to final243 and validate/audit. Only then start A26, followed byA27/A28. Do not take another range. Main integration includes reviewed raw sources/status only, not inherited coordinator changes or stale201 insights.",
     "mainIntegration": {
-      "state": "PREPARED",
+      "state": "PUSHED",
       "mainBase": "71cdb5e4f6cce6421b25bfa86facc830887dfee1",
       "scope": "Explicit406 reviewed raw files across owned A25-A28 and session6 status; inherited out-of-range changes excluded.",
-      "insightsExcluded": "A25 initial201 insights audited and retained on session branch, but stale against235 reviewed sources. Refresh required; excluded from main-ready integration."
+      "insightsExcluded": "A25 initial201 insights audited and retained on session branch, but stale against235 reviewed sources. Refresh required; excluded from main-ready integration.",
+      "mergeCommit": "617dfca3f1aba9abeaf4a9697959229deae07101",
+      "verifiedMainDescendant": "c4678a5c4de77779fc205fa459e36acfa2fa153c",
+      "reviewedRawFiles": 406,
+      "reviewedCounts": {
+        "A25": 235,
+        "A26": 57,
+        "A27": 57,
+        "A28": 57
+      },
+      "sourceCheckpoint": "5effb5242944c5c4acff66b595c83b6b7194a762",
+      "sourceHashVerification": "All406 merged raw files match protected initial/accepted SHA256 manifest and passed actual repository validators on main. Subsequent Session3/4 merges did not touch owned reviewed paths."
+    },
+    "reviewRuntimeBackup": {
+      "path": "/workspace/work/paradigm-session-6-pause/review-runtime.tar.gz",
+      "sha256": "f08839408b056de81184e89e6a8f1247b08d263a0813d71271bf55f14bc61111",
+      "restore": "Extract into /tmp to restore uniquely named review runtime, exact thought evidence, ledger and review helpers. Integration clone excluded."
     }
   }
 }
