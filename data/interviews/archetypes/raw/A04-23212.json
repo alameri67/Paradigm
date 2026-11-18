@@ -4,7 +4,6 @@
   "job": "Construction worker",
   "sector": "Construction",
   "name": "Liam Dubois",
-  "gender": "M",
   "levels": {
     "lifeStage": "mid",
     "standing": "high",
@@ -12,24 +11,24 @@
     "outlook": "progressive",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Liam. I'm a field researcher with the Work Futures Panel. We're an independent research group with no ties to AI companies, employers, unions, parties or government. Everything you tell me is confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I'm from the Work Futures Panel, an independent research group with no ties to AI firms, employers, unions, parties or government. This is confidential. What is an ordinary workday like?"
     },
     {
       "speaker": "persona",
-      "text": "I run a formwork crew, six of us, for a contractor called Marlowe Structures. Formwork is the timber and steel moulds you pour the concrete into, so we build the shape of every floor and column before the concrete goes in. Right now it's a nine-storey apartment block by the river, and we're on level six. My day is reading the drawings at seven, checking the props and the deck, getting the lads moving, and then praying the concrete truck turns up when it says it will."
+      "text": "I'm 43 and lead a building-site crew fitting window frames and facade panels. My vocational trade certificate got me started, and I am good at the awkward openings, though my pay is the ordinary trade rate. I like seeing a weatherproof seal at handover; late glass deliveries steal the daylight."
     },
     {
       "speaker": "interviewer",
-      "text": "What's the best part, and the worst?"
+      "text": "What is home like, and do you use AI tools?"
     },
     {
       "speaker": "persona",
-      "text": "Best part is pour day, when the pump starts and you watch the deck take the weight and nothing moves. That's your work holding up a building. Worst part is waiting, honestly. Waiting for steel, waiting for the crane, waiting for the engineer to sign off, while the clock runs and my lads get paid to stand around in the rain."
+      "text": "My partner works in care, and we have two school-age children and a mortgage. We've saved about three months of expenses, and there are some other construction jobs nearby. I use AI now and then to read a long specification, but I want a colleague to prove a new tool before I change the way we fit a frame; I attend our workplace union meetings."
     }
   ],
   "scenarios": {
@@ -37,11 +36,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture. It's called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd probably shrug and say, well, there you go. I've used one of those chatbots a couple of times to check a clause in the building code, and it was handy, but it was never going to pour a slab. I'd say it to the lads over lunch, nothing dramatic."
+          "text": "I'd tell the glazing crew a faster order sheet is pleasant, but someone still has to make a window fit a rough opening. Nobody should sell a small office saving as a reason to shorten our paid day."
         },
         {
           "speaker": "interviewer",
@@ -49,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be a little disappointed, if anything. I was hoping it might sort out the scheduling mess, the steel arriving late, the crane booked twice. If it does none of that, we're stuck with the same headaches forever."
+          "text": "I lead the facade fitting crew and earn the ordinary trade rate; my partner's care work is fairly regular. We have about three months of bills saved for our mortgage and two children, so this picture leaves me comfortable, provided site hours hold."
         },
         {
           "speaker": "interviewer",
@@ -57,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing changes. I'd finish the river block, move to whatever Marlowe wins next, keep paying the union dues and the mortgage. Maybe I'd keep using the chatbot for the boring paperwork, since it's there."
+          "text": "I'll finish the housing block's window frames and keep using AI now and then to read long specifications. At the next workplace union meeting I'll raise a written rule that a shortened delivery day still brings a minimum paid callout."
         },
         {
           "speaker": "interviewer",
@@ -65,45 +64,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Slightly bored by the whole thing, to be honest with you."
+          "text": "Calm about fitting work, with the normal attention I give the mortgage. The machine is useful for a page of notes, not for tightening a fixing."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you have wanted AI to fix, if it could?"
+          "text": "When did the drawing miss a real opening?"
         },
         {
           "speaker": "persona",
-          "text": "The crane. Every site I've worked on, the crane is fought over like the last biscuit. If something could book it properly so my crew isn't waiting two hours for a lift, I'd have kissed it."
+          "text": "The drawing gave us a clean rectangle, but the concrete opening leaned. I packed the window frame to the wall we had, then checked the seal before the panel went in."
         },
         {
           "speaker": "interviewer",
-          "text": "Who in your life talks about AI the most?"
+          "text": "What would you bring to the union meeting?"
         },
         {
           "speaker": "persona",
-          "text": "My son, Noah. He's fourteen and he uses it for homework, which his mum and I argue about. If it all turned out to be hype he'd be the one who was gutted, not me."
+          "text": "Last month a late glass delivery cut a shift short for two installers. I would bring that date and their lost hours to the union meeting so the paid-callout request is specific."
         }
       ],
-      "say": "Well, there you go. I'd tell the lads at lunch that the chatbot was handy for checking a building code clause, but it was never going to pour a slab.",
-      "think": "If anything I'd be a bit disappointed, because I hoped it might sort out the scheduling mess. Without that, we keep the late steel and double-booked crane forever.",
-      "do": "Finishes the river apartment block and moves to Marlowe's next job as usual. Keeps using the chatbot occasionally for paperwork and keeps paying the mortgage and union dues.",
-      "feel": "Calm and a little bored.",
+      "say": [
+        "**Window fitting** still needs measured openings and sound seals.",
+        "**Office savings** should not shorten the crew's paid day."
+      ],
+      "think": [
+        "Our **three-month reserve** and regular care income make mild change manageable.",
+        "The **mortgage and children** still make paid site hours important."
+      ],
+      "do": [
+        "**Finish** housing block window frames and check each seal.",
+        "**Raise** minimum paid callout at next workplace union meeting."
+      ],
+      "feel": [
+        "**Calm** about continued fitting work, attentive to paid hours."
+      ],
       "mood": "calm",
-      "quote": "Every site I've worked on, the crane is fought over like the last biscuit.",
-      "fieldNote": "Liam isn't threatened by AI as a tool; he wanted it to fix site logistics. His disappointment at a plateau is about waiting time, not money. He's a light user who sees it as a paperwork helper.",
+      "quote": "I packed the window frame to the wall we had, then checked the seal before the panel went in.",
+      "fieldNote": [
+        "His **high site skill** shows in correcting a leaning opening without treating the drawing as final.",
+        "He backs a **union callout rule** with a real lost-hours example, while his current work and moderate reserve support calm."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Finish housing block window frames and check seals",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Raise minimum paid callout at workplace union meeting",
+          "tag": "collective-action"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say the change needs to be shared out properly. If machines save the company money, some of that should come back to the workers, in training or shorter hours. I'd say that at the union meeting, and I'd say it to my foreman's face too."
+          "text": "I'd say AI might take over purchasing and checks before robots can hang a heavy window panel. The fitter should still sign off measurements and the crew should know why the rota changes."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Between us, I think I'd do fine. Formwork is messy, every job is different, and the clever bits are already in the engineer's office. The office lads would feel it more than me, I reckon."
+          "text": "My own fixing work looks safe in the near term, though faster ordering could tighten shifts around delivery times. My partner's care wage and three-month reserve cover a small interruption, but I would keep an eye on paid hours."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +143,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd use the AI stuff more once I saw the other crews using it, like the planning tools that tell you which props go where. I wouldn't jump first. If Marlowe offered a course I'd do it, as long as it's in work time and not my Saturday."
+          "text": "I'll compare two office-generated glass orders with the measured openings before the truck arrives. If a new AI ordering screen is adopted and a colleague has used it successfully, I'll learn the correction controls on paid time and log any delivery mistakes for the site lead."
         },
         {
           "speaker": "interviewer",
@@ -127,46 +151,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. A little curious which bits change first."
+          "text": "Uneasy about tighter rosters, not expecting my own income to fall yet. I can accept a proven tool and still insist that a person checks the measurements."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anyone on your crew who'd struggle?"
+          "text": "Which measurement could a digital order miss?"
         },
         {
           "speaker": "persona",
-          "text": "Pavel, my oldest. He's fifty-eight and he can build a stair-core shutter by eye faster than anyone I know, but he won't touch a phone. If the job became tablets and screens he'd walk, and we'd lose thirty years of know-how in a week."
+          "text": "I would measure the diagonal as well as the height and width. A rectangular computer sketch can miss a skewed concrete opening and send glass we cannot fit."
         },
         {
           "speaker": "interviewer",
-          "text": "You said the gains should come back to workers. What would that look like on your site?"
+          "text": "What would make you learn the new ordering screen?"
         },
         {
           "speaker": "persona",
-          "text": "A four-day week, for a start. If a machine saves us a day of setting out, give us the Friday. My daughter Camille has football on Fridays and I've seen her play maybe twice this year."
+          "text": "I would ask the colleague to show me one corrected order from an actual site, then practise the edit before the next delivery. If paid time is refused, I will keep sending my measurements to the office."
         }
       ],
-      "say": "If machines save the company money, some of it should come back to workers in training or shorter hours. I'd say it at the union meeting and to my foreman's face.",
-      "think": "Between us, I think I'd do fine, because formwork is messy and every job is different. The office side would feel it more than my crew.",
-      "do": "Starts using AI planning tools once other crews have proven them and takes a company course if it's in work time. Keeps running his crew as before.",
-      "feel": "Calm and a little curious about which parts change first.",
-      "mood": "calm",
-      "quote": "If a machine saves us a day of setting out, give us the Friday.",
-      "fieldNote": "Liam wants the gains turned into time, specifically time with his daughter. He'd adopt tools once proven, not first. His worry goes to an older crew member, Pavel, whose skills don't transfer to screens.",
+      "say": [
+        "**AI ordering** can help before robots handle heavy window panels.",
+        "A fitter should still **sign off measurements** and know about rota changes."
+      ],
+      "think": [
+        "My own **fitting wage** looks secure for now.",
+        "Tighter **delivery rosters** could create interruptions, cushioned by care income and three months saved."
+      ],
+      "do": [
+        "**Compare** two glass orders with measured housing block openings.",
+        "**Learn** adopted AI correction controls on paid time after colleague proves them."
+      ],
+      "feel": [
+        "**Uneasy** about rosters while current wages still feel safe."
+      ],
+      "mood": "uneasy",
+      "quote": "A rectangular computer sketch can miss a skewed concrete opening and send glass we cannot fit.",
+      "fieldNote": [
+        "His new **AI learning** requires an adopted screen, a proven colleague example and paid practice time.",
+        "The concern is **potential roster pressure**, while current window fitting and household income remain secure."
+      ],
       "actions": [
-        "learn-ai",
-        "keep-going"
+        "keep-going",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Compare two glass orders with measured housing block openings",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Learn adopted AI correction controls on paid time after colleague demonstration",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this can't be left to the market. The government has to step in, slow it down if it can, and look after people who lose work. I'd sign every petition and I'd say it loud."
+          "text": "I'd tell the crew thinking AI by 2028 can order panels and plan facade work, while capable robots around 2031 could put the windows in. We need staffing numbers before people are told to be grateful for a demonstration."
         },
         {
           "speaker": "interviewer",
@@ -174,7 +222,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it scares me. Formwork is hard to automate, but if a robot can do almost anything, then it can tie a prop and level a deck. Two years from now I'd be forty-five with a mortgage, a nurse's wage coming in and not much else."
+          "text": "I would be about 48 when robots can do the physical installation. A three-month reserve helps, but losing half my fitting hours would put our mortgage budget under pressure, and only some other local sites need facade crews."
         },
         {
           "speaker": "interviewer",
@@ -182,7 +230,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop every extra right away. We'd put the new car on hold and I'd move every spare bit of money into savings, aiming to get from about three months to six. I'd go to the union and push for a deal: if Marlowe brings in robots, it keeps a crew to run and fix them, and my lads get first go. I'd also look at what Sophie's hospital might need, porters, maintenance, anything with a body."
+          "text": "I'll bring the robot timetable question to the union safety group and ask for paid trial observers and written crew numbers. If the firm offers a funded, recognised facade-inspection course with wages during classes, I'll enrol; if my hours are cut, I'll apply only to posted local inspection or fitting jobs with pay covering the mortgage."
         },
         {
           "speaker": "interviewer",
@@ -190,48 +238,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Like the deck's moving under my feet. That's the worst feeling in my trade, and that's what this is."
+          "text": "Anxious about a possible hour cut, with time to ask for terms and train. I won't treat a trial invitation as an actual new job."
         },
         {
           "speaker": "interviewer",
-          "text": "Your partner's a nurse. Does that change how you see it?"
+          "text": "What would you tell your partner about the reserve?"
         },
         {
           "speaker": "persona",
-          "text": "It does. Sophie's job is caring for people, and I think that lasts longer than mine. That's the plan, really: her wage keeps the roof on while I work out what I'm for. I don't love that, but I'd swallow my pride."
+          "text": "I'd tell my partner the reserve is a bridge, not a replacement for a full wage. We would compare the mortgage payment with one income before deciding whether any course fee is affordable."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd move fast here, but you said you don't usually jump first. Which is it?"
+          "text": "What should a paid robot trial test?"
         },
         {
           "speaker": "persona",
-          "text": "Normally I wait and see what works. But with two years there's nothing to wait for. You don't stand there watching the formwork bow, you get under it with a prop."
+          "text": "The robot should fit a panel into an uneven opening with a trained worker able to stop it. Watching a sales film from the yard would not show what happens beside other trades."
         }
       ],
-      "say": "This can't be left to the market: the government has to step in and look after people who lose work. I'd sign every petition and say it loud.",
-      "think": "It scares me, because if a robot can do almost anything, it can tie a prop and level a deck. In two years I'd be forty-five with a mortgage and mainly a nurse's wage coming in.",
-      "do": "Puts the new car on hold and moves spare money into savings, aiming to go from about three to six months. Pushes the union for a deal where Marlowe keeps crews to run and fix any robots, and looks at hospital jobs near his partner's work.",
-      "feel": "Frightened, like the ground shifting under him.",
-      "mood": "alarmed",
-      "quote": "You don't stand there watching the formwork bow, you get under it with a prop.",
-      "fieldNote": "His usual wait-and-see habit flips when there's no time to wait. His plan leans on his partner's nursing job, and he admits it hurts his pride. He reaches for both union bargaining and government action at once.",
+      "say": [
+        "**2028 thinking AI** plans facade work before robots fit windows around 2031.",
+        "Workers need **crew numbers** and paid trials before shifts change."
+      ],
+      "think": [
+        "At about **48**, losing fitting hours could strain the mortgage.",
+        "Our **three-month reserve** and some local sites help, but cannot replace a wage."
+      ],
+      "do": [
+        "**Ask** union safety group for robot timetable, paid observers and crew figures.",
+        "**Enrol** in funded recognised facade-inspection course if class wages continue.",
+        "**Apply** after cuts to posted local fitting or inspection job covering mortgage."
+      ],
+      "feel": [
+        "**Anxious** about possible lost hours, with training and job options."
+      ],
+      "mood": "anxious",
+      "quote": "A three-month reserve helps, but losing half my fitting hours would put our mortgage budget under pressure, and only some other local sites need facade crews.",
+      "fieldNote": [
+        "His **training action** requires funding, a recognised course and class wages; observing a robot alone is not retraining.",
+        "A job move follows **actual hour cuts** and needs a posted local fitting or inspection vacancy with mortgage-covering pay."
+      ],
       "actions": [
-        "cut-spending",
-        "save-more",
         "collective-action",
-        "politics"
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Ask union safety group for timetable, paid observers and crew figures",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Enrol in funded recognised facade-inspection course if class wages continue",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply after cuts to posted local fitting or inspection job covering mortgage",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough time to do this right if we start now. Retraining money, a plan for every trade, and the companies paying their share. I'd say it in the union and I'd vote that way."
+          "text": "I'd say thinking AI by 2031 changes drawings and orders, then capable robots around 2034 may fit the panels. Five years should let us test a real opening and negotiate a paid transition, if the employer actually means it."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +315,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me, five years means I can watch the first sites try robots and see what actually works. I'm not going to guess. Once I see the machines on someone else's job, I'll know what to train for."
+          "text": "I would be about 51 when site robots do the installation. I'm skilled at awkward openings, but the mortgage still needs the ordinary carpenter wage; five years gives us more time to build a cash cushion from pay."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +323,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep saving, maybe two hundred a month. Around the second or third year, when the robots start turning up, I'd sign up for whatever course trains people to set up and look after them. Marlowe has a training budget, so I'd push to get on the first group. I'd also tell my crew to do the same."
+          "text": "I will ask the workplace union to seek a written five-year crew plan and funded inspection training with paid release. If a real place and those terms are secured, I'll enrol next intake; we'll also set aside thirty from each full paid week while my care-worker partner and I can cover bills."
         },
         {
           "speaker": "interviewer",
@@ -255,48 +331,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but it's the kind I can work with. It's like a job with a tight programme, not an impossible one."
+          "text": "Anxious about a possible later drop in fitting hours, but the longer period gives us room to organise. I want to see a working site trial before changing trades."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell your crew, concretely?"
+          "text": "What would a useful robot trial look like?"
         },
         {
           "speaker": "persona",
-          "text": "I'd get them in the site cabin and say, look, I don't know what's coming, but when the course list goes up, put your name down. Don't wait for me. Then I'd go and talk to Pavel on his own, because he'll need a different conversation."
+          "text": "I'd have the robot fit a window into a skewed opening, then test the seal for leaks. A perfect robot test frame would tell me only that the machine can repeat a perfect frame."
         },
         {
           "speaker": "interviewer",
-          "text": "What would that different conversation be?"
+          "text": "Where would the new weekly deposit come from?"
         },
         {
           "speaker": "persona",
-          "text": "Pavel's nine years off his pension in this picture. I'd tell him to hang on as long as he can and let the union fight for an early-retirement deal. He doesn't need to learn robots, he needs a bridge."
+          "text": "The thirty would come from future wages after our mortgage and children's costs, not from moving the existing reserve. If the site drops a full paid week, we would skip that deposit."
         }
       ],
-      "say": "Five years is enough time to do this right if we start now, with retraining money and companies paying their share. I'd say it in the union and vote that way.",
-      "think": "Five years lets me watch the first sites try robots and see what works before I commit. Once I see the machines on someone else's job, I'll know what to train for.",
-      "do": "Saves about 200 a month and, around year two or three, signs up for training in setting up and maintaining site robots. Pushes to get his crew onto Marlowe's first training groups and votes for retraining funds.",
-      "feel": "Anxious but in control, like a tight programme rather than an impossible one.",
+      "say": [
+        "**2031 thinking AI** changes plans before robots fit windows around 2034.",
+        "Workers should demand a **real site trial** and paid transition terms."
+      ],
+      "think": [
+        "At about **51**, I may still need the ordinary fitting wage.",
+        "Five years could build **new savings** from full paid weeks if household bills allow."
+      ],
+      "do": [
+        "**Ask** workplace union for crew plan and funded paid-release inspection course.",
+        "**Enrol** next intake if real place, funding and paid release secured.",
+        "**Deposit** thirty from each full paid week if household bills allow."
+      ],
+      "feel": [
+        "**Anxious** about future hours, with time to organise and save."
+      ],
       "mood": "anxious",
-      "quote": "He doesn't need to learn robots, he needs a bridge.",
-      "fieldNote": "The five-year window suits his style: watch, then act once proven. He thinks crew by crew and person by person, and plans different help for an older worker. His politics show up as support for retraining funds and company contributions.",
+      "quote": "A perfect robot test frame would tell me only that the machine can repeat a perfect frame.",
+      "fieldNote": [
+        "He tests site robots against **skewed openings** and needs written funded training with paid release before enrolling.",
+        "His **new deposits** use future full-week wages after household bills, not a transfer from the existing three-month reserve."
+      ],
       "actions": [
-        "save-more",
+        "collective-action",
         "retrain",
-        "politics",
-        "wait-and-see"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Ask workplace union for crew plan and funded paid-release course",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Enrol in inspection course if real place, funding and paid release secured",
+          "tag": "retrain"
+        },
+        {
+          "text": "Deposit thirty from full paid week if household bills allow",
+          "tag": "save-more"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got a decade, let's use it. A plan for every trade, paid for by the companies that profit. I'd probably post that, and get told I'm a dreamer by half my cousins."
+          "text": "I'd say thinking AI by 2036 may draw the facade and robots around 2039 may put windows in. Ten years is long enough to bargain for proper training and teach younger fitters why a measured opening matters."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +408,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me, ten years is a whole career's worth of time to adjust. I'd be fifty-three. I think I'd be all right, if I'm honest, as long as I don't fall asleep at the wheel."
+          "text": "I would be about 56 when robots can fit the panels, and I cannot assume the mortgage will be finished. Our three-month reserve and some nearby work give time, yet a later fall in wages is still possible."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +416,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd carry on as normal for the first few years and watch. When it was clear which way it was going, I'd retrain, maybe into site robotics or inspection. And I'd sit down with Noah about his options, because he'd be leaving school right into it."
+          "text": "I'll keep the facade safety ticket current and ask a younger fitter to measure a skewed opening with me on the next block. At the annual union meeting I'll propose a paid handover for apprentices; my partner and I will review the mortgage balance before deciding what further training we can afford."
         },
         {
           "speaker": "interviewer",
@@ -320,37 +424,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but more for Noah than for me. I'll have had my run."
+          "text": "Uneasy about the distant wage risk, with time to prepare. I don't need to declare the trade finished while there are windows to fit."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Noah?"
+          "text": "What would you show a younger fitter?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell him not to pick a job, pick a skill you can carry. Something with problem-solving and people. He keeps saying he wants to be a pilot, and I'd tell him to keep that dream but have a second one."
+          "text": "I'd let the younger fitter take the diagonal measurement and show how the panel can catch on one corner. A tablet can store a window opening's diagonal, but it does not place the tape on concrete."
         },
         {
           "speaker": "interviewer",
-          "text": "Anything you'd do with money, over ten years?"
+          "text": "How would the paid handover be arranged?"
         },
         {
           "speaker": "persona",
-          "text": "Get the mortgage down and save. We'd still do the holiday to Sophie's sister's place in summer, I'm not giving up on living. But I'd stop telling myself I'll start the savings next year."
+          "text": "The handover would put paid apprentice hours on the site rota, with a named fitter to sign off each frame. I'd bring an example from our housing block to the union meeting, not just ask for goodwill."
         }
       ],
-      "say": "We've got a decade, so let's use it, with a plan for every trade paid for by the companies that profit. Half my cousins would call me a dreamer for it.",
-      "think": "Ten years is a career's worth of time to adjust, and I'd be fifty-three when it lands. I think I'd be fine, as long as I don't fall asleep at the wheel.",
-      "do": "Carries on as normal for the first few years while watching how it goes, then retrains, possibly in site robotics or inspection. Talks with his son Noah about building skills he can carry into any job.",
-      "feel": "Uneasy, but more for his son than himself.",
+      "say": [
+        "**2036 thinking AI** changes drawings before robots fit panels around 2039.",
+        "A decade allows **paid apprentice handovers** and household review."
+      ],
+      "think": [
+        "At about **56**, the mortgage may still require site wages.",
+        "Our **moderate reserve** and some nearby firms help, but do not settle future income."
+      ],
+      "do": [
+        "**Keep** facade safety ticket current and teach diagonal measurement on site.",
+        "**Propose** paid apprentice handover at annual union meeting.",
+        "**Review** mortgage balance with partner before choosing further training."
+      ],
+      "feel": [
+        "**Uneasy** about later hours, with a practical handover window."
+      ],
       "mood": "uneasy",
-      "quote": "I'd tell him not to pick a job, pick a skill you can carry.",
-      "fieldNote": "With ten years his own fear eases and his son's future takes over. He'd still wait first and retrain later, true to his steady style. He refuses to give up family pleasures entirely, which gives his plans a balanced feel.",
+      "quote": "A tablet can store a window opening's diagonal, but it does not place the tape on concrete.",
+      "fieldNote": [
+        "His **site handover** is a real paid rota proposal to the union, not a claim that private coaching is collective action.",
+        "He reviews **mortgage figures** without claiming a course place or early retirement at age 56."
+      ],
       "actions": [
-        "wait-and-see",
-        "retrain",
-        "save-more",
-        "family-plans"
+        "keep-going",
+        "collective-action",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep facade safety ticket current and teach measured openings on site",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Propose paid apprentice handover at annual workplace union meeting",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Review mortgage balance with partner before choosing further training",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -361,7 +493,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. I can see myself adapting to most of it, but not that fast, not with a mortgage and two kids. What would help is a proper retraining wage, paid while you learn, so a man like me can spend six months on a course without the house going."
+      "text": "AGI by 2028 worries me most because site robots around 2031 could take fitting hours while we still have the mortgage. Written crew numbers, a paid site trial and funded inspection training would help."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +501,20 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the young ones coming into the trade. Every apprentice on my site is wondering if they've picked the wrong job. Somebody should be telling them the truth, whatever it is."
+      "text": "Ask who checks the seal after a robot installs a window on an uneven wall. A window can look straight from the street and still leak into a child's bedroom. The person who signs it off needs time to test it."
     }
   ],
-  "headlineQuote": "Every apprentice on my site is wondering if they've picked the wrong job.",
-  "portrait": "Liam Dubois is a 43-year-old formwork crew leader on a nine-storey riverside apartment block, married to a nurse, with two children and around three months saved. He uses chatbots now and then for building code questions and would pick up new tools once he'd seen them work on other crews. He's calm about a plateau and steady change, wanting any gains turned into a shorter week. The two-year AGI picture frightens him into fast saving and union action, leaning on his partner's job, while five or ten years let him watch first and then retrain into site robotics or inspection.",
-  "biggestWorry": "AGI by 2028 worries him most, because he can't adapt that fast with a mortgage and two children.",
-  "whatWouldHelp": "A retraining wage paid while you learn, so he could spend six months on a course without risking the house."
+  "headlineQuote": "A window can look straight from the street and still leak into a child's bedroom.",
+  "portrait": [
+    "**Liam**, 43, leads facade installation with a vocational trade certificate and strong site skill at ordinary trade pay.",
+    "His care-worker partner, two children and **mortgage** share a three-month reserve, with some nearby construction alternatives.",
+    "He uses **AI now and then**, waits for proof on real sites and brings paid-hour questions to his workplace union.",
+    "Fast site robots make him **anxious** about fitting wages; more time supports funded training, new saving and paid apprentice handovers."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** could bring window-fitting robots around 2031 while the mortgage still needs his wage."
+  ],
+  "whatWouldHelp": [
+    "**Written crew numbers**, a paid site trial and funded inspection training would let him plan before hours fall."
+  ]
 }

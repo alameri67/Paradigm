@@ -1,0 +1,589 @@
+{
+  "id": "A30-11223",
+  "archetype": "A30",
+  "job": "Police officer",
+  "sector": "Government",
+  "name": "Iris Moreau",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "moderate",
+    "outlook": "centre",
+    "adaptability": "adaptive"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for making time, Iris. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm on the bike team, so I cover the river path, the parks and the university campus on a mountain bike. Days it's stolen bikes, people sleeping rough under the bridges, the odd flasher in the park. Nights it's students who've had too much and fights near the student bars. I love being on the bike, you see everything and people actually talk to you. What wears me down is nights, and getting hurt: a man bit my arm last spring when we were arresting him and I was off for three weeks."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "How do you fit studying or anything else around that?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm studying for the detective exam, the one you sit to become an investigator. I use an AI app every day to quiz me on the law while I'm on the exercise bike, and to turn my notes into flashcards. I also use it to plan meals around nights, which sounds silly but it's the only way I eat properly. I share a flat with two nurses, so the fridge is a timetable."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "persona",
+          "text": "Mostly hype. Huh. Honestly I'd be a bit disappointed, I like my tools."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's a decent set of tools and we should use them, but it was never going to replace a person on a bike in a park at two in the morning. I'd probably share something like that on the force's internal forum. I'm not big on public posting in uniform."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, AI isn't my worry here. My worry is whether I last on nights, after the bite and a couple of other knocks, and our flat lease ends in March because the landlord's selling. Rent for a new place will be more, and I've only got about three months saved. So life's a bit wobbly, AI or no AI."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd sit the detective exam in the spring, because a day-shift investigator post would get me off nights. I'd start flat-hunting in January, with a spreadsheet and an AI search helper, and I'd probably move a bit further from the centre. And I'd keep using my study apps the way I do now."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A bit uneasy. Not scared of the future, more tired of the present. I'd feel like I was holding a lot of plates."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You mentioned getting hurt. How much does that weigh on you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "More than I say at work. After the bite I had blood tests for three months to make sure I hadn't caught anything, and that waiting was horrible. I'm still on the bike and I still love it, but I'm thinking about how many more years of nights my body has in it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who would you blame if things got harder in this picture?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Nobody in particular, really. Landlords selling up is just the market, and the night shifts are the job. I'd blame the force a bit for not having enough people to cover nights fairly, but that's about money, not villains."
+        }
+      ],
+      "say": [
+        "AI is **decent tools**, but can't replace an officer on a bike.",
+        "She'd post on the **internal forum**, not publicly."
+      ],
+      "think": [
+        "Her real worry is whether she **lasts on nights**.",
+        "Her **flat lease** ends in March and rent will rise.",
+        "With about **three months** saved, life feels wobbly."
+      ],
+      "do": [
+        "Sit the **detective exam** in spring to reach day shifts.",
+        "Start **flat-hunting** in January, a bit further out.",
+        "Keep using her **study apps** as she does now."
+      ],
+      "feel": [
+        "**Uneasy**, more tired of the present than scared of the future.",
+        "Like holding **a lot of plates** at once."
+      ],
+      "mood": "uneasy",
+      "quote": "After the bite I had blood tests for three months to make sure I hadn't caught anything, and that waiting was horrible.",
+      "fieldNote": [
+        "AI barely registers; **injury, nights and housing** drive her mood.",
+        "Uses AI **daily** for study and life admin, matter-of-factly.",
+        "Blames **nobody in particular**, typical of her pragmatic outlook."
+      ],
+      "actions": [
+        "retrain",
+        "move",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Sit the detective exam in spring to get off nights",
+          "tag": "retrain"
+        },
+        {
+          "text": "Find a cheaper flat further out before the March lease ends",
+          "tag": "move"
+        },
+        {
+          "text": "Keep riding bike patrol on the river path and campus",
+          "tag": "keep-going"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "persona",
+          "text": "Writing, checking, planning. Okay, that's a lot of what detectives do. Interesting."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's going to make police work faster and we should get good at it early. At work I'd be the one showing people how to get the drafting tool to write a decent statement summary. I'd be careful not to sound like I'm selling something."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I think it's good for me. The paperwork side of investigation shrinks, but someone has to tell the tools what to look for and check their work, and that's exactly what I already do with my study apps. The detective route still works, it just changes shape. And with fewer hours on forms, maybe the force can afford more people on days."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd sit the detective exam as planned and tell the panel I'm the one who can run the new tools. I'd set up the AI drafting tool for my bike team's reports and write a one-page guide for the others. And I'd take any course the force offered on using AI in investigations."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Pretty good, actually. Curious, a bit excited. It feels like a door opening rather than closing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who on your team might not see it as a door opening?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My sergeant, probably. He's brilliant on the street but he hates screens. I'd worry that new targets make him look bad when he's the one who taught me how to calm a drunk down without a fight."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Does any of it touch your flatmates or family?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My flatmates are nurses, so not much, that's hands-on work. My dad's an insurance assessor, and I'd be more worried for him. I'd tell my dad to learn the new systems before his firm decides who's needed."
+        }
+      ],
+      "say": [
+        "AI will make police work **faster**; get good at it early.",
+        "She'd show colleagues how to get **decent summaries** from the tool."
+      ],
+      "think": [
+        "The change is **good for her** and fits her skills.",
+        "Detective work changes shape: **directing and checking** the tools.",
+        "Saved form hours might fund **more day staff**."
+      ],
+      "do": [
+        "Sit the **detective exam**, pitching her AI skills.",
+        "Set up the **drafting tool** for her bike team and write a guide.",
+        "Take every **AI investigation** course offered."
+      ],
+      "feel": [
+        "**Curious** and a bit excited.",
+        "Like a **door opening** rather than closing."
+      ],
+      "mood": "calm",
+      "quote": "Someone has to tell the tools what to look for and check their work, and that's exactly what I already do with my study apps.",
+      "fieldNote": [
+        "Sees Steady Disruption as an **opportunity** fitting her adaptive habits.",
+        "Moves first and wants to **teach** others, not just use the tools.",
+        "Concern goes to her **sergeant** and her father's desk job."
+      ],
+      "actions": [
+        "retrain",
+        "automate",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Sit the detective exam and pitch her AI skills to the panel",
+          "tag": "retrain"
+        },
+        {
+          "text": "Set up AI report drafting for the bike team with a one-page guide",
+          "tag": "automate"
+        },
+        {
+          "text": "Sign up for the force's AI in investigations course",
+          "tag": "learn-ai"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "persona",
+          "text": "2028. That's... that's before I'd even finish detective training. Okay."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we need rules and we need them now, about who's accountable when AI makes a call in a case. I'd say it plainly at work and on the forum. I wouldn't say stop it, because I don't think you can."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, it kills the detective plan. If AI can do almost any thinking work by 2028, investigation is the first thing it takes, and I'd be a trainee investigator just as the job vanished. The funny part is the bike patrol, the bit I wanted to leave, is the bit that lasts, because the robots don't come till 2031. My body's got to hold out on nights longer than I wanted."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd drop the detective exam and stay on the bike team. I'd save hard, cut the gym and eating out, and aim for six months by 2028. And I'd get a qualification as a cycling instructor in the evenings, because teaching kids to ride is hands-on and people-facing, a possible side income or a way out."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious. I'm usually the one who's excited about new tech, and this one feels like it runs past me. I'd feel a bit foolish for planning so carefully."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "The three-year gap before robots: what does that mean for you exactly?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It means 2028 to 2031 I'm on the bike, doing nights, saving everything. Around 2031, I either supervise whatever robots they bring in or I'm teaching cycling and looking for something else. I'd use AI the whole way to plan it, which is a bit ironic."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd feel foolish. Why?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Because I did everything right: study, apps, the exam. And the exam would be for a job a machine does better by the time I pass it. It's like revising hard for a test that gets cancelled the morning of."
+        }
+      ],
+      "say": [
+        "We need **accountability rules** for AI decisions in cases, now.",
+        "She wouldn't say **stop it**, because she doesn't think it can be stopped."
+      ],
+      "think": [
+        "Fast AGI **kills the detective plan** before she qualifies.",
+        "Bike patrol, which she wanted to leave, **lasts till 2031**.",
+        "Her body must handle **nights** longer than planned."
+      ],
+      "do": [
+        "Drop the detective exam and stay on the **bike team**.",
+        "Cut gym and eating out to save **six months** by 2028.",
+        "Qualify as a **cycling instructor** in the evenings."
+      ],
+      "feel": [
+        "**Anxious**, as tech she likes runs past her.",
+        "A bit **foolish** for planning so carefully."
+      ],
+      "mood": "anxious",
+      "quote": "The exam would be for a job a machine does better by the time I pass it. It's like revising hard for a test that gets cancelled the morning of.",
+      "fieldNote": [
+        "The **thinking-first order** reverses her plan from desk back to bike.",
+        "Even an adaptive person feels **outpaced** at two years.",
+        "Turns to a **hands-on side skill** as a hedge for 2031."
+      ],
+      "actions": [
+        "change-job",
+        "save-more",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Withdraw from the detective exam and stay on bike patrol",
+          "tag": "change-job"
+        },
+        {
+          "text": "Cut the gym and meals out to reach six months saved",
+          "tag": "save-more"
+        },
+        {
+          "text": "Train as a cycling instructor for children on weekday evenings",
+          "tag": "side-income"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "persona",
+          "text": "Five years, robots by 2034. That's better. That's a career stage, not a cliff."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say five years is enough to plan for, so let's be honest about which police jobs change and fund the training. I'd volunteer for anything the force set up on it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I'd still do the detective route, but differently. A person still has to stand in the witness box, so I'd aim to be the investigator who checks the AI's work and takes it to court. Around 2031 that's what the job becomes, and by 2034 I'd be well placed for whatever comes next."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd sit the exam this spring and get into investigation by 2028. I'd take every course on AI in evidence and court work. And I'd keep three months of savings and add a bit, but I wouldn't live on rice and beans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, but curious. It feels like a hard climb I can actually see the top of."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said a person still stands in the witness box. Are you sure that lasts?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Not sure, no. But changing the courts takes years, and juries trusting machines takes longer. I'd bet on it lasting past 2034, but I'd keep checking that bet every year."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What happens to the flat-hunting and the nights in this version?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Same as now: move in March, somewhere further out. Get off nights by about 2028 when I'm in investigation. My body gets a break, which is honestly half the reason I'm doing this."
+        }
+      ],
+      "say": [
+        "Five years is enough to **plan for**; fund the training.",
+        "She'd **volunteer** for any force planning group.",
+        "Be honest about **which police jobs** change."
+      ],
+      "think": [
+        "She'd become the investigator who **runs and checks** the AI.",
+        "A person still has to stand in **the witness box**.",
+        "By 2034 she'd be **well placed** for what's next."
+      ],
+      "do": [
+        "Sit the exam and reach **investigation by 2028**.",
+        "Take every course on **AI in evidence** and court work.",
+        "Keep **three months** saved and add a little."
+      ],
+      "feel": [
+        "**Uneasy** but curious.",
+        "A **hard climb** with the top in sight."
+      ],
+      "mood": "uneasy",
+      "quote": "A person still has to stand in the witness box, so I'd aim to be the investigator who checks the AI's work and takes it to court.",
+      "fieldNote": [
+        "Five years lets her **reshape** rather than abandon the detective plan.",
+        "Admits her bet on **court roles** is uncertain and needs checking.",
+        "Getting **off nights** is half her motive."
+      ],
+      "actions": [
+        "retrain",
+        "learn-ai",
+        "move"
+      ],
+      "steps": [
+        {
+          "text": "Sit the detective exam this spring",
+          "tag": "retrain"
+        },
+        {
+          "text": "Take the force's courses on AI evidence and court work",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Move to a cheaper flat further out in March",
+          "tag": "move"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "persona",
+          "text": "Ten years. That's plenty. I'd be a proper detective by then."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is a gift, so there's no excuse for not training people properly. I'd tell my team to start learning the tools now, gently, not in a panic."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Honestly, I think it's fine for me, even good. I'd have eight years as an investigator by 2036, I'd know how the tools work, and I'd be the kind of person they keep to supervise them. The robots around 2039 matter less for me because I'd be off the bike by then anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd follow the plan: exam this spring, investigator in a couple of years. I'd start putting fifty a month into an index fund, because if AI makes firms richer I'd like a slice. And I'd keep learning every tool as it comes out."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm. A little excited, even. Ten years is long enough to turn a threat into a plan."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Is there any part of that you'd still worry about?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The nights between now and then, honestly. AI won't fix my shoulder or my sleep. If anything goes wrong for me in the next few years, it'll be an injury, not a robot."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you tell your dad in this version?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell my dad he's got time to change before his firm does, and to let me show him the tools. He'd grumble, then he'd ring me every evening with questions."
+        }
+      ],
+      "say": [
+        "Ten years is **a gift**; there's no excuse for poor training.",
+        "She'd urge her team to **start learning** calmly, not in panic."
+      ],
+      "think": [
+        "The change looks **good for her** by 2036.",
+        "Eight years as an investigator makes her the one **kept to supervise**.",
+        "Robots in 2039 matter less; she'll be **off the bike**."
+      ],
+      "do": [
+        "Follow the plan: **exam this spring**, investigator soon after.",
+        "Put **fifty a month** into an index fund.",
+        "Keep learning **every new tool**."
+      ],
+      "feel": [
+        "**Calm**, even a little excited.",
+        "Her remaining worry is **injury**, not robots."
+      ],
+      "mood": "calm",
+      "quote": "AI won't fix my shoulder or my sleep. If anything goes wrong for me in the next few years, it'll be an injury, not a robot.",
+      "fieldNote": [
+        "A decade turns **threat into plan**, in her own words.",
+        "Her real risk remains **physical**: injury and night shifts.",
+        "Wants a **slice** of AI's gains through a small index fund."
+      ],
+      "actions": [
+        "retrain",
+        "invest",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Sit the detective exam this spring",
+          "tag": "retrain"
+        },
+        {
+          "text": "Put fifty a month into an index fund",
+          "tag": "invest"
+        },
+        {
+          "text": "Learn each new investigation tool as it launches",
+          "tag": "learn-ai"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028, because it cancels the plan I've been working on and keeps me on nights longer than my body wants. What would help is the force being honest early about which jobs it's keeping, and paying for courses in hands-on or people-facing work, not just more screens."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "You didn't ask about the body. Everyone talks about thinking work, but policing is also knees and shoulders and sleep. If the machines take the desk jobs first, the people left on the street are the ones getting hurt."
+    }
+  ],
+  "headlineQuote": "If the machines take the desk jobs first, the people left on the street are the ones getting hurt.",
+  "portrait": [
+    "A **27-year-old bike patrol officer** covering the river path, parks and campus.",
+    "Shares a flat with two nurses, faces a **lease ending** in March, and carries a recent injury.",
+    "Uses AI **daily** for study and life admin; studying for the **detective exam**.",
+    "Pragmatic and unpolitical; sees slow change as an **opportunity**, fast AGI as cancelling her plan.",
+    "Her steady worry is **nights and injury**, which outlasts every scenario."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, which cancels her detective plan and keeps her on **nights**."
+  ],
+  "whatWouldHelp": [
+    "**Early honesty** about kept roles and paid courses in **hands-on** or people work."
+  ]
+}

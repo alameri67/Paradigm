@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time, Tomas. I'm a field researcher with the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions, political parties or government, and we're not selling anything. Everything you tell me stays confidential, so feel free to tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "Thanks for your time, Tomas. I'm a field researcher with the Work Futures Panel, an independent group that isn't linked to any company, union, party or government. What you tell me is confidential. Could you describe a normal day at work for me?"
     },
     {
       "speaker": "persona",
-      "text": "I work on the press line at a washing machine factory, the big one by the motorway junction. We take rolls of steel, and the presses stamp out the side panels and the drum parts, bang, bang, all day. I load the coils, set the press for each model, check the first panels with a gauge and keep things moving, and there's a robot arm that moves the panels between presses already. I like the crew and the feeling of a good, fast run. What wears me out is the noise, and the night shifts every third week."
+      "text": "I work at Riverside Drinks, the bottling plant on the north side, the one that makes juice and fizzy drinks for the supermarkets. I run the filler and the labeller on line four. That means I set it up for each product, keep an eye on the fill levels, clear jams when a bottle falls, and swap the label reels. On a good day we do about forty thousand bottles. I've been there six years."
     },
     {
       "speaker": "interviewer",
-      "text": "And outside the factory, what's your life like?"
+      "text": "What do you like, and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "I live with my girlfriend Ana, she teaches seven-year-olds. We rent a nice place near the river, and I own a small studio flat across town that I bought with money my grandad left me, which I rent out to a student. I've got about a year of expenses saved. We're talking about getting married, maybe next summer, if we can agree on the guest list."
+      "text": "I like the team on line four, we've got a good crew and we have a laugh. The pay is better than most places, especially with overtime in summer. What wears me out is the changeovers, when we switch from orange to cola and have to clean everything. My fiancée Ana and I are getting married next September, so right now my head is full of seating plans. I've used an AI app for that, actually, it's not bad."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, well, there you go, all that noise and it's a better spellchecker. I'd probably joke about it in the group chat with the lads from football. Nothing serious."
+          "text": "I'd say it's what most of us expected, a useful tool but not a big deal. I might joke about it with the guys on the line. I don't really post stuff online, except photos."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Between us, it'd be good news. I like my job well enough, the pay's good, and I've got a plan. I'd rather argue with Ana about the wedding guest list than about whether I still have a job."
+          "text": "For me, honestly, nothing. My job is on the floor, and the floor doesn't care about chatbots. It'd be good news."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on. Keep the studio rented, keep saving, set a date for the wedding and book the hall by the river. Maybe ask about the setter role on the press line, which pays a bit more."
+          "text": "Keep doing my shifts, take the summer overtime, and put it towards the wedding. Then start saving for a house with Ana. We've got about a year's costs saved already."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +68,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Pretty content, actually."
+          "text": "Calm. Happy, even. It means we can just get on with our lives."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use any AI tools yourself?"
+          "text": "You mentioned the wedding. Would anything change in your plans in this picture?"
         },
         {
           "speaker": "persona",
-          "text": "Now and then. I used one to check the rental contract for the studio, and Ana uses it to make worksheets. At work, not really, the robot arm's been there for years and it's not exactly clever."
+          "text": "No. Wedding in September, small house by 2028, maybe kids after. Same plan."
         },
         {
           "speaker": "interviewer",
-          "text": "What would make you go for the setter role?"
+          "text": "Would Riverside change at all?"
         },
         {
           "speaker": "persona",
-          "text": "Mostly the money and a bit less lifting. The setter, Hugo, is retiring next year. I've been watching how he does it, so I think I'd have a decent shot."
+          "text": "Maybe the planning office gets faster at scheduling changeovers. That would help me, actually, fewer surprise switches at the end of a shift."
         }
       ],
-      "say": "I'd joke that all that noise came down to a better spellchecker. I'd laugh about it in the football group chat and leave it there.",
-      "think": "Honestly, it'd be good news, because I like my job, the pay's good and I've got a plan. I'd rather argue with Ana about the guest list than about my job.",
-      "do": "Carries on as normal, keeps the studio rented and keeps saving. Sets a wedding date, books the hall and applies for the setter role when the current setter retires.",
-      "feel": "Calm and fairly content.",
+      "say": [
+        "AI would be a **useful tool**, not a big deal.",
+        "I'd joke about it with the **guys on the line**, not post online."
+      ],
+      "think": [
+        "My job is on the **floor**, and chatbots don't touch it.",
+        "A plateau would be **good news** for us."
+      ],
+      "do": [
+        "Work summer **overtime** and put it towards the wedding.",
+        "Start saving for a **house** with Ana afterwards.",
+        "Keep my shifts on **line four** as normal."
+      ],
+      "feel": [
+        "**Calm**, even **happy**, free to get on with life."
+      ],
       "mood": "calm",
-      "quote": "I'd rather argue with Ana about the wedding guest list than about whether I still have a job.",
-      "fieldNote": "Tomas is relaxed, sociable and comfortable, with a rental flat and a year's savings. He uses AI occasionally for practical things outside work. His ambitions are modest and well within reach.",
+      "quote": "My job is on the floor, and the floor doesn't care about chatbots.",
+      "fieldNote": [
+        "His life is organised around the **wedding** next September.",
+        "He sees the plateau as **permission** to keep his plans.",
+        "He uses AI casually, for the **seating plan**, but not at work."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Work summer overtime at Riverside to pay for the wedding",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Marry Ana next September and save for a small house",
+          "tag": "family-plans"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it makes sense, companies have to keep up or they lose to the ones that do. But I'd also say the government needs to help people retrain, because not everyone can switch overnight. Middle of the road, like always."
+          "text": "I'd say change happens, you adapt. People said the same about computers. I'd say that at work if anyone got worked up."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +145,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be a bit worried. They'd automate the coil loading and the gauge checks first, that's half of what I do. But if there's a few years, I'd probably move with it."
+          "text": "Privately, I think I'm OK for a while, but Ana's not. She books appointments and answers the phone at a dental practice, which is exactly the list on the card. If her job shrinks, our house plan slows down."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +153,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd watch what the company does and what the other plants do. If they start using AI for the press settings, I'd make sure I learn it early, maybe practise at home with the tools. I wouldn't jump to anything else until I saw what was actually happening."
+          "text": "I'd keep my job, of course. I'd save harder, maybe put the overtime straight into savings instead of the wedding fund. And I'd tell Ana to start looking at what else she could do."
         },
         {
           "speaker": "interviewer",
@@ -126,46 +161,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. A bit like waiting for exam results."
+          "text": "Uneasy. Mostly for her."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you need to see before you'd act?"
+          "text": "Ana works on a dental reception desk. Does that change how you see this one?"
         },
         {
           "speaker": "persona",
-          "text": "A new machine on the floor, or a memo about it. I'm not going to retrain because of a headline, but I will if a crate turns up with a robot in it. That's how I've always been."
+          "text": "Totally. A robot isn't coming for my job, a computer is coming for my fiancée's job. That's the part I hadn't thought about before you read it out."
         },
         {
           "speaker": "interviewer",
-          "text": "Would it change your wedding plans?"
+          "text": "Would you use new tools at Riverside?"
         },
         {
           "speaker": "persona",
-          "text": "No, I don't think so. Steady change is just life. We'd still book the hall, maybe spend a bit less on the band."
+          "text": "Once the others on the line were using it, yes. When they put in the new touchscreen on the labeller, I watched Kasia for a week and then I was fine. Same with this."
         }
       ],
-      "say": "I'd say it makes sense for companies to keep up, but the government needs to help people retrain because not everyone can switch overnight.",
-      "think": "I'd be a bit worried, because coil loading and gauge checks are half my job and easy to automate. But with a few years, I'd probably move with it.",
-      "do": "Watches what his company and other plants do, and learns any new AI press-setting tools early, practising at home. Waits for real changes on the floor before making any bigger moves.",
-      "feel": "Uneasy, like waiting for exam results.",
+      "say": [
+        "Change happens and **you adapt**, like with computers.",
+        "I'd calm people down at work if they got **worked up**."
+      ],
+      "think": [
+        "I'm OK for a while, but **Ana's** reception job is on the card's list.",
+        "If her job shrinks, our **house plan** slows down."
+      ],
+      "do": [
+        "Put summer **overtime** into savings, not the wedding fund.",
+        "Encourage Ana to look at **other work**.",
+        "Learn new line tools after **colleagues** try them."
+      ],
+      "feel": [
+        "**Uneasy**, mostly for Ana."
+      ],
       "mood": "uneasy",
-      "quote": "I'm not going to retrain because of a headline, but I will if a crate turns up with a robot in it.",
-      "fieldNote": "Tomas waits for proof before acting, and he has a clear trigger in a new machine arriving. He sees both sides on who should adapt, companies and government. The wedding goes ahead in this picture, only a little cheaper.",
+      "quote": "A robot isn't coming for my job, a computer is coming for my fiancée's job.",
+      "fieldNote": [
+        "The scenario hits his **fiancée's desk job** before his own.",
+        "He's surprised by this; it **reframes** the risk for him.",
+        "He learns new tools by **watching colleagues** first."
+      ],
       "actions": [
-        "learn-ai",
-        "wait-and-see"
+        "save-more",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Move summer overtime pay from the wedding fund into savings",
+          "tag": "save-more"
+        },
+        {
+          "text": "Learn the new line software after colleagues try it",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say nobody was ready for this and that's a failure all round, the companies for rushing it and the government for sleeping. I'd say we need emergency help for workers, now. I'd probably say it more angrily than I normally talk."
+          "text": "I'd say it's way too fast and the government needs a plan, now. People can't just be thrown out. I'd probably share stuff about that online for once."
         },
         {
           "speaker": "interviewer",
@@ -173,7 +238,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I'd think the press line goes first. Robots already move the panels, so it'd be a short step to robots doing everything. In two years I'd be out, and so would every other press operator nearby."
+          "text": "Honestly, I think Ana's job goes in 2028 and mine goes around 2031, when the robots come. A bottling line is about as robot-friendly as it gets. We'd be thirty-one with no jobs."
         },
         {
           "speaker": "interviewer",
@@ -181,7 +246,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd save everything I could and cut back hard, no new car, nothing. I'd talk to Ana about pushing the wedding back, because I don't want to spend our savings on a party if I don't have a job. The studio rent would become really important."
+          "text": "I'd start an evening course as an industrial electrician next year. Somebody has to wire and install all these robots, at least for a few years. We'd shrink the wedding and put the house on hold."
         },
         {
           "speaker": "interviewer",
@@ -189,48 +254,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd feel a bit sick about it, honestly."
+          "text": "Scared. My stomach goes tight just thinking about it."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Ana that night?"
+          "text": "What would happen to the wedding?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell her we should wait a year on the wedding, and I'd feel awful saying it. She'd say a wedding doesn't need a job, and I'd say no, but the band does. We'd laugh, but it'd be a sad laugh."
+          "text": "We'd still get married. But small, maybe forty people, not a hundred and twenty. The rest of the money stays in the bank."
         },
         {
           "speaker": "interviewer",
-          "text": "Two years isn't long. Is there any training you'd try?"
+          "text": "Why electrical work and not something else?"
         },
         {
           "speaker": "persona",
-          "text": "I'd look, but I'd be guessing. If AI can do almost anything, then I'd just be picking which job dies second. I'd rather keep the money safe and wait to see what's left."
+          "text": "My uncle Rui is an electrician, and he's never been out of work. Plants will need electricians while they install robots. It's the most sensible thing I can think of that uses my hands."
         }
       ],
-      "say": "I'd say nobody was ready and that's a failure all round, by companies rushing it and governments sleeping. Workers need emergency help now.",
-      "think": "I think the press line would go first, because robots already move the panels between presses. Within two years I'd be out, and so would every other press operator nearby.",
-      "do": "Saves everything and cuts back hard, including dropping plans for a new car. Asks Ana to postpone the wedding and relies more on rent from the studio.",
-      "feel": "Alarmed and a bit sick about it.",
+      "say": [
+        "It's **too fast**, and the government needs a plan now.",
+        "People can't just be **thrown out**, and I'd post about it for once."
+      ],
+      "think": [
+        "Ana's job goes in **2028** and mine around **2031**.",
+        "A **bottling line** is about as robot-friendly as it gets."
+      ],
+      "do": [
+        "Start an evening course as an **industrial electrician** next year.",
+        "Cut the wedding to about **forty guests** and save the rest.",
+        "Put the **house** on hold."
+      ],
+      "feel": [
+        "**Scared**, with a tight stomach."
+      ],
       "mood": "alarmed",
-      "quote": "She'd say a wedding doesn't need a job, and I'd say no, but the band does.",
-      "fieldNote": "Fast AGI hits Tomas where it matters most to him, the wedding. He becomes angrier than his centrist manner usually allows. The rental studio becomes his lifeline, and he chooses to hold cash rather than gamble on training.",
+      "quote": "A bottling line is about as robot-friendly as it gets.",
+      "fieldNote": [
+        "Both household jobs are at risk, Ana's **first** and his **second**.",
+        "His uncle, an electrician, makes **electrical work** feel like a safe bet.",
+        "Even so, the **wedding** still happens, just smaller."
+      ],
       "actions": [
-        "save-more",
-        "cut-spending",
+        "retrain",
         "family-plans",
-        "wait-and-see"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Start an evening industrial electrician course next year",
+          "tag": "retrain"
+        },
+        {
+          "text": "Shrink the wedding to about forty guests",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Put the house purchase on hold",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Keep the leftover wedding money in savings",
+          "tag": "save-more"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got time, so let's be sensible. The companies should give notice, and the government should fund training for people who need it. I wouldn't be shouting, I'd be planning."
+          "text": "I'd say there's a bit of time but not much, so people should start planning now. Companies should have to help with retraining. I'd say that if it came up."
         },
         {
           "speaker": "interviewer",
@@ -238,7 +340,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years is enough to do something. I'd think about which jobs need hands in odd places, like fitting heat pumps in old houses. Robots might get there in the end, but every house is a mess in its own way."
+          "text": "Privately, I'd have until about 2034 on the line, so around eight years. Ana's job goes earlier, maybe 2031. That's enough time to sort things out, but not enough to relax."
         },
         {
           "speaker": "interviewer",
@@ -246,7 +348,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year I'd start an evening course in heating and heat pump installation, two nights a week. I'd keep working the presses for the money. We'd still get married, but maybe a smaller do, and I'd keep the studio as backup."
+          "text": "Do the wedding as planned, but cheaper. Look at the electrician course in a year or two, once I've seen whether it works out for people. And keep saving."
         },
         {
           "speaker": "interviewer",
@@ -254,47 +356,82 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. But it's the kind where you get on with it."
+          "text": "Anxious. It's a slower worry, but it's there."
         },
         {
           "speaker": "interviewer",
-          "text": "You said robots might get there in the end. Why train for it, then?"
+          "text": "Would you still do the electrician course?"
         },
         {
           "speaker": "persona",
-          "text": "Because it buys me years. If the factory goes in five, maybe houses go in eight or ten. Three extra years of wages is three extra years of not touching the savings."
+          "text": "Yes, but not straight away. I'd see if the first people from Riverside who did the electrician course got jobs, and then I'd start. If they did, I'd start in 2028."
         },
         {
           "speaker": "interviewer",
-          "text": "What does five years give you that two didn't?"
+          "text": "And the house?"
         },
         {
           "speaker": "persona",
-          "text": "Time to try before I jump. I could do some weekend jobs with a friend who installs boilers and see if I actually like it, before I quit the factory. With two years, I'd have had to guess."
+          "text": "Smaller than we wanted. Something we could pay with one wage, just in case."
         }
       ],
-      "say": "I'd say we have time, so let's be sensible: companies should give notice and the government should fund training for those who need it.",
-      "think": "Five years is enough to move into work that needs hands in awkward places, like fitting heat pumps in old houses. I think robots would get there later than they get to the factory.",
-      "do": "Starts a two-nights-a-week heating and heat pump installation course in the first year while still working the presses. Gets married with a smaller wedding and keeps the studio as a backup.",
-      "feel": "Anxious, but in a get-on-with-it way.",
+      "say": [
+        "There's some **time** but not much, so people should plan now.",
+        "Companies should have to **help with retraining**."
+      ],
+      "think": [
+        "I'd have about **eight years** on the line, until 2034.",
+        "Ana's job goes earlier, maybe **2031**.",
+        "That's enough to sort things out, but **not to relax**."
+      ],
+      "do": [
+        "Hold the wedding as planned, but **cheaper**.",
+        "Start the **electrician course** in 2028 if others find work.",
+        "Buy a **smaller house** that one wage can pay for."
+      ],
+      "feel": [
+        "**Anxious**, a slower but real worry."
+      ],
       "mood": "anxious",
-      "quote": "Three extra years of wages is three extra years of not touching the savings.",
-      "fieldNote": "Tomas uses the extra time to test a new trade before leaving, which is classic steady behaviour. He's realistic that it only buys a few years. The wedding survives, scaled down.",
+      "quote": "I'd see if the first people from Riverside who did the electrician course got jobs, and then I'd start.",
+      "fieldNote": [
+        "More time brings back his habit of **waiting for proof**.",
+        "His **house plan** is resized to one wage as insurance.",
+        "He gives Ana's earlier risk equal weight in his **household** plans."
+      ],
       "actions": [
         "retrain",
-        "save-more",
-        "family-plans"
+        "family-plans",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Start the electrician course in 2028 if Riverside colleagues find work",
+          "tag": "retrain"
+        },
+        {
+          "text": "Buy a smaller house that one wage can cover",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Keep saving each month after the wedding",
+          "tag": "save-more"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough for most people to sort themselves out if they start early. I'd tell the younger guys at the plant to pick something now. And I'd say the government should help with the cost of training."
+          "text": "I'd say ten years is plenty of time to get ready. No need to panic. I'd say people should start learning new things slowly."
         },
         {
           "speaker": "interviewer",
@@ -302,7 +439,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, ten years feels fine for me. I'd be thirty-seven, married, maybe a kid. I'd have time to change trade and build something."
+          "text": "Privately, robots on my line around 2039 means I'd be forty. Ana's job would go around 2036. That's a long time from now."
         },
         {
           "speaker": "interviewer",
@@ -310,7 +447,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the heating course in the first two years and switch jobs around year three. I'd keep saving and maybe buy a second small flat to rent out, because people will still need somewhere to live. We'd get married next summer as planned."
+          "text": "Keep doing my job. Get married, buy the house, start a family. Around 2030 I'd think about the electrician course."
         },
         {
           "speaker": "interviewer",
@@ -318,37 +455,67 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but more hopeful than worried."
+          "text": "Uneasy, but only a little."
         },
         {
           "speaker": "interviewer",
-          "text": "Why buy another flat, if the economy might change so much?"
+          "text": "Would you change your plans for children?"
         },
         {
           "speaker": "persona",
-          "text": "Because I don't trust anything else. Shares go up and down, but a flat is four walls and a roof, and even a robot can't take that away from you. It might be wrong, but it feels solid to me."
+          "text": "No. If we waited for the world to be safe, nobody would have kids."
         },
         {
           "speaker": "interviewer",
-          "text": "Would anyone at work struggle with the ten-year version?"
+          "text": "What would you tell Ana?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, the older guys who are fifty-five now. They'd be sixty-five when it lands, so they might just make it to retirement. It's the ones in their forties I'd worry about, with kids and mortgages."
+          "text": "I'd tell her to start thinking about what she'd like to do after reception, with no rush. Maybe dental nursing, which is more hands-on. We'd have time to work it out together."
         }
       ],
-      "say": "I'd say ten years is enough for most people to sort themselves out if they start early, and I'd tell younger colleagues to pick something now. The government should help pay for training.",
-      "think": "Ten years feels fine for me. I'd be thirty-seven, married and maybe with a kid, and I'd have time to change trade and build something.",
-      "do": "Takes the heating course in the first two years and switches jobs around year three. Keeps saving, buys a second small rental flat and marries next summer as planned.",
-      "feel": "Uneasy but more hopeful than worried.",
+      "say": [
+        "Ten years is **plenty of time** to get ready.",
+        "People should start **learning new things** slowly, without panic."
+      ],
+      "think": [
+        "Robots reach my line around **2039**, when I'm forty.",
+        "Ana's reception job would go around **2036**.",
+        "That all feels like **a long time** from now."
+      ],
+      "do": [
+        "Get married, buy the **house** and start a family.",
+        "Keep working on **line four** at Riverside.",
+        "Look at the **electrician course** around 2030."
+      ],
+      "feel": [
+        "Only slightly **uneasy**."
+      ],
       "mood": "uneasy",
-      "quote": "a flat is four walls and a roof, and even a robot can't take that away from you.",
-      "fieldNote": "With ten years, Tomas returns almost to his normal plans, adding a second rental flat as security. His faith in property is emotional rather than analytical, and he admits it. He thinks of colleagues in their forties with families as the ones most at risk.",
+      "quote": "If we waited for the world to be safe, nobody would have kids.",
+      "fieldNote": [
+        "The long runway lets him put **family** first without hesitation.",
+        "He'd suggest Ana move to more **hands-on** dental nursing.",
+        "His retraining plan is **deferred**, not dropped."
+      ],
       "actions": [
-        "retrain",
-        "change-job",
-        "invest",
-        "save-more"
+        "family-plans",
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Marry Ana, buy the house and start a family",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Keep working the filler and labeller on line four",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Look at the electrician course around 2030",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -359,7 +526,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because it hits everything at once: the job, the wedding, the plans. I can change trade, but not in eighteen months, and not while I'm getting married. What would help is the government paying people a wage while they retrain, so you can learn without spending all your savings."
+      "text": "AGI by 2028. Ana and I both go, one after the other, before we've even got a house. What would help is cheap evening courses for trades that are still needed, and some help with the mortgage if you lose your job."
     },
     {
       "speaker": "interviewer",
@@ -367,11 +534,22 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe how it changes the way people plan their lives, not just jobs. Me and Ana talk about kids, about a house. All that depends on knowing roughly what the next ten years look like."
+      "text": "Maybe about couples. Everyone asks about my job, but our plans depend on two jobs. My fiancée Ana's job at the dental practice goes first in almost all your pictures, and nobody thinks of receptionists."
     }
   ],
-  "headlineQuote": "I can change trade, but not in eighteen months, and not while I'm getting married.",
-  "portrait": "Tomas is a 27-year-old press operator at a washing machine factory, living with his teacher girlfriend Ana and owning a small rental studio bought with his grandfather's money. He's sociable, practical and centrist, using AI now and then for everyday tasks. He waits for real proof before acting, staying calm in the plateau but becoming alarmed by fast AGI, which would make him postpone his wedding. With five or ten years he plans to retrain as a heat pump installer and buy another rental flat, trusting bricks more than anything else.",
-  "biggestWorry": "AGI by 2028 worries him most because it would hit his job, wedding and plans all at once, with no time to change trade.",
-  "whatWouldHelp": "Government paying people a wage while they retrain, so they can learn without using up their savings."
+  "headlineQuote": "My fiancée Ana's job at the dental practice goes first in almost all your pictures, and nobody thinks of receptionists.",
+  "portrait": [
+    "Tomas, 27, runs the **filler and labeller** on a bottling line and is marrying Ana next September.",
+    "He's practical and adapts once others prove things work, using AI for **small tasks**.",
+    "He realises his fiancée's **reception job** is more exposed than his own.",
+    "He's calm in a plateau, uneasy in steady change and **alarmed** by AGI in 2028.",
+    "His plan is an **electrician course**, timed by how much warning there is."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because both he and Ana lose their jobs before buying a house."
+  ],
+  "whatWouldHelp": [
+    "Cheap **evening courses** for trades still in demand.",
+    "**Mortgage help** for people who lose their jobs."
+  ]
 }

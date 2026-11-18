@@ -11,24 +11,16 @@
     "outlook": "traditional",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Nikhil. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to any AI company, employer, union, party or government, and we're not selling anything. Everything you tell me stays confidential, so you can say what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I'm with the Work Futures Panel, an independent research group with no ties to employers, AI companies, unions, parties or government. Your answers stay confidential. Could you walk me through an ordinary shift?"
     },
     {
       "speaker": "persona",
-      "text": "I'm a dozer operator at a large open-pit coal mine. Most shifts I'm pushing overburden, that's the dirt and rock above the coal seam, or cleaning up around the shovels and building ramps. For the dangerous jobs near the high wall, I now run a remote-controlled dozer from a seat inside a converted shipping container at the edge of the pit, with screens and two joysticks. I like it, honestly, it's like a game where the stakes are real. What wears me out is the twelve-hour nights, at my age you feel them for two days."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "You like the remote seat. How did you end up doing that?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I asked. When they brought it in two years ago most of the older operators said no thanks, and I said yes please. I use AI every day, for managing our three rental units, for reading the machine fault codes, for planning my garden. Priya, my wife, runs the volunteer kitchen at our temple, our son Arjun's an engineer at the same coal company and our daughter Kavya's a dentist. I believe in hard work and family, and I think if you can see change coming, you should get in front of it."
+      "text": "I drive a shuttle car underground at a large copper mine, taking ore from the cutting face to the conveyor. I have a vocational certificate and I know the brake feel on that car better than the dashboard graph, though I am an ordinary operator rather than a shift lead. Night work brings higher pay. My wife Mara sells garden plants from home; our children are grown and our house is paid off. We have about fifteen months of expenses saved, and I hope to retire at 64. I use AI every day to compare brake fault notes, then inspect the car myself."
     }
   ],
   "scenarios": {
@@ -36,19 +28,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "I'm going to read you five pictures of the future, one at a time. The first is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say good, the tools are useful, and the hype was just salesmen being salesmen. I'd post something sensible on the operators' group about how to use what we've got. No sense crying about the future that didn't come."
+          "text": "I'd tell the crew a quicker fault log is useful if it leaves us more time to test the brakes. A shuttle car still needs a driver to hear a wheel scrape."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AI Plateau means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "It means I keep pushing dirt until sixty-three or so, keep the rentals, and retire comfortably. The coal itself has a time limit anyway, the mine's got maybe fifteen years left. So I've always planned for an ending."
+          "text": "I think my night pay will carry on, and Mara's plants give us a little extra in season. The house is paid for and fifteen months saved, so this picture barely moves our retirement plan."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep working the remote seat when they need me. Keep using the assistant for the rentals and the paperwork. I'd look at buying a fourth unit if the prices are right."
+          "text": "I'll keep the brake test before each night shift and use my AI note tool to sort recurring fault codes. In the first year I'll show the younger operators how to compare a suggested repair with the service book before signing off."
         },
         {
           "speaker": "interviewer",
@@ -64,55 +56,78 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A little flat, I like a bit of movement."
+          "text": "I feel settled. I like a tool that sorts the dull bits while my hands still make the safety call."
         },
         {
           "speaker": "interviewer",
-          "text": "You use AI daily. What does AI Plateau mean for your rental units and side plans?"
+          "text": "When did the fault tool group the wrong repair?"
         },
         {
           "speaker": "persona",
-          "text": "It does the tenant letters, reminds me about maintenance, checks the leases. I used to spend Sunday afternoons on that, now it's twenty minutes. That's enough for me in this picture."
+          "text": "The tool once grouped a dragging brake with a worn sensor because the notes used the same words. I drove the empty car a few metres and felt the brake pull."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything you'd do with your savings in this picture?"
+          "text": "Would the family plan change?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe the fourth unit. I'd rather own bricks than a pension fund I can't see. Priya says three's plenty, we'd argue about it nicely."
+          "text": "I'd tell Mara we can keep the annual visit to our grown children. I wouldn't spend the saved paperwork time shopping for more equipment."
         }
       ],
-      "say": "I'd say the tools are useful and the hype was just salesmen being salesmen, and I'd post on the operators' group about using what we've got. No sense crying about a future that didn't come.",
-      "think": "He expects to keep pushing dirt until about sixty-three, keep the rentals and retire comfortably. The coal mine has maybe fifteen years left anyway, so he has always planned for an ending.",
-      "do": "Keeps working the remote dozer seat when needed and uses the AI assistant for the rentals and paperwork. Considers buying a fourth rental unit if prices are right.",
-      "feel": "Calm and a little flat, since he likes a bit of movement.",
+      "say": [
+        "I would welcome **quicker fault logs** while drivers keep the brake test.",
+        "I would tell the crew a **wheel scrape** is still heard by the person driving."
+      ],
+      "think": [
+        "I expect my **night pay** and retirement plan to hold in this mild picture.",
+        "I think our **paid house** and fifteen months of savings give us plenty of room."
+      ],
+      "do": [
+        "**Keep testing** shuttle-car brakes before every night shift.",
+        "**Teach newer operators** to compare AI repair suggestions with the service book in the first year."
+      ],
+      "feel": [
+        "**Settled** about wages and pleased to spend less time sorting fault notes."
+      ],
       "mood": "calm",
-      "quote": "I'd rather own bricks than a pension fund I can't see.",
-      "fieldNote": "Nikhil is already running a remote dozer and asked for the job when others refused. His security is spread across savings and three rental units. He knows his coal mine has its own end date, so endings don't scare him.",
+      "quote": "A shuttle car still needs a driver to hear a wheel scrape.",
+      "fieldNote": [
+        "He uses **AI daily** but verifies faults through a brake test and the service book.",
+        "His **paid house**, savings and night premium make the plateau secure for his own household."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai",
-        "invest"
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep testing shuttle-car brakes before night shifts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Teach operators to check AI repair suggestions against service records",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say get in front of it, don't wait for the government or the union to save you. Learn the new machines, ask for the training. I'd tell the young ones in the crib room that the man who asks first gets the good seat."
+          "text": "I'd say the scheduling desk may change first, while our cars still need drivers. Give me the new schedule early and I will show which tunnel turns cannot take two cars at once."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think Steady Disruption means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "Between us, I think it's good for me. I'm already in the remote seat, so I'm the kind of operator they'll keep. I'd worry more about the guys who said no thanks two years ago."
+          "text": "I think the mine may reduce office hours and run shuttle trips closer together. My wage still looks safe, but a tight timetable can push a junior driver into a bad turn."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask to train on the full autonomous dozer system and become one of the people who supervise a fleet. On my days off I'd look at buying a used dozer, fitting it with an autonomy kit and doing farm dams and land clearing as a small contracting business. I've already priced it, about the cost of a small apartment."
+          "text": "I'll ask dispatch to let me try the route tool on last month's tunnel map this week. In the first year I'll mark unsafe passing points and give the corrected map to the night supervisor."
         },
         {
           "speaker": "interviewer",
@@ -128,56 +143,78 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, a bit excited. This is the picture I'd pick if I could."
+          "text": "I'm curious about the tool and uneasy about hurried traffic. I have driven these tunnels long enough to know a saved minute can disappear in a blocked bend."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you blame, if anyone, for jobs shrinking?"
+          "text": "What route call would make you stop?"
         },
         {
           "speaker": "persona",
-          "text": "Nobody, really. Businesses do what makes sense and the market decides. If a man won't learn, I'm sorry for him, but that's partly on him."
+          "text": "If the tool puts two cars into the east bend at once, I will stop and call the supervisor. The software has no bruises to show when a car meets a wall."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned the coal running out. Does that change your plans here?"
+          "text": "What would you tell a new driver?"
         },
         {
           "speaker": "persona",
-          "text": "It makes me hurry. If the coal runs out in fifteen years and the machines take more tasks anyway, I want my own little business going before I retire, so I'm not relying on one company."
+          "text": "I'd tell a new driver to make the stop call even if the screen says the route is clear. A driver's name is still on the machine after the schedule is forgotten."
         }
       ],
-      "say": "I'd say get in front of it and don't wait for the government or union to save you; learn the new machines and ask for training. The one who asks first gets the good seat.",
-      "think": "He thinks it's good for him, since he's already in the remote seat and is the kind of operator they'll keep. His worry is for those who turned down the remote work two years ago.",
-      "do": "Trains on the full autonomous dozer system to supervise a fleet. Prices a used dozer fitted with an autonomy kit to start a small farm dam and land-clearing contracting business on his days off.",
-      "feel": "Calm and a bit excited, the picture he'd choose if he could.",
-      "mood": "calm",
-      "quote": "I'd tell the young ones in the crib room that the man who asks first gets the good seat.",
-      "fieldNote": "His free-market views show in blaming no one and expecting people to learn. He would actually bring automation into his own small contracting business. Coal's limited life adds urgency to his plans.",
+      "say": [
+        "I would expect **scheduling software** to change before shuttle cars can drive themselves.",
+        "I would offer dispatch a **corrected tunnel map** with unsafe passing points marked."
+      ],
+      "think": [
+        "I expect my **wage** to hold while office hours and shuttle timing change.",
+        "I worry a **tighter timetable** could send a junior driver into a narrow bend."
+      ],
+      "do": [
+        "**Trial the route tool** this week against last month’s tunnel map.",
+        "**Mark unsafe passing points** and give the corrected map to the night supervisor."
+      ],
+      "feel": [
+        "**Curious** about planning tools and uneasy about rushed tunnel traffic."
+      ],
+      "mood": "uneasy",
+      "quote": "The software has no bruises to show when a car meets a wall.",
+      "fieldNote": [
+        "He welcomes **route trials** because he can compare software with known tunnel limits.",
+        "His **own pay feels safe**; his worry concerns the physical risk to newer drivers under faster schedules."
+      ],
       "actions": [
-        "retrain",
-        "automate",
-        "side-income",
-        "invest"
+        "learn-ai",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Test the route tool against last month’s tunnel map",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep driving night trips while marking unsafe passing points",
+          "tag": "keep-going"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's too fast, and people need to look after their families and stick together. I'd say the community, the temple, the families should carry each other through. I wouldn't say the government should take over, that never ends well."
+          "text": "I'd tell the crew thinking AI by 2028 could rewrite dispatch while capable shuttle robots follow around 2031. I want the mine to give us a real retirement bridge rather than hide the driver timetable."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2028 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think even the supervisor job goes, the AI can watch a fleet better than me. My contracting plan probably goes too, because a farmer will buy his own robot dozer. I'd be fine with the rentals and savings, but my clever plans would be worth less than I thought."
+          "text": "I would be 63 when robots arrive, a year short of my hoped-for finish. Our savings cover that gap, but losing night pay could mean drawing the pension earlier than planned."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +222,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First week, I'd talk to Priya and the kids and look at the numbers. I'd take a package at sixty if they offered one, and I'd shift some savings into companies that make the machines. I'd keep the rental units, because people still need roofs."
+          "text": "I'll ask for pension figures at 63 and 64 this month and put half of each night premium payment into the retirement account. In the first year after thinking AI arrives, I'll take supervised remote-car instruction if the mine pays for it and keeps my night wage during training."
         },
         {
           "speaker": "interviewer",
@@ -193,55 +230,89 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like getting to the station early and the train's already left."
+          "text": "I feel anxious about the missing year, although I have a route through it. I would rather learn a control room than ask my grown children to carry us."
         },
         {
           "speaker": "interviewer",
-          "text": "With full AGI in two years, does even the fleet supervisor job last?"
+          "text": "Which household purchase would wait?"
         },
         {
           "speaker": "persona",
-          "text": "Probably not for long. Maybe a year or two of setting things up, then the AI watches the AI. I'd still go for it, because a year of good pay is a year of good pay."
+          "text": "Mara and I would postpone the new greenhouse until the retirement estimate arrives. Her plant sales are seasonal, and we should not build a plan on spring orders alone."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Arjun, who works for the same company?"
+          "text": "What would make remote training worthwhile?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell him to think about what humans will still want from humans. Engineering might be safe longer, or might not. I'd tell him we'd help with money if he needs to retrain, that's what family does."
+          "text": "I would ask whether the remote-car course includes a real brake stop under supervision. If it is just videos, I will keep driving and save the course time for paid shifts."
         }
       ],
-      "say": "I'd say it's too fast and people should look after their families and stick together, with community, temple and families carrying each other. I wouldn't say the government should take over.",
-      "think": "He believes even the fleet supervisor job goes and his contracting plan too, since farmers would buy their own robot dozers. He'd be fine on rentals and savings, but his clever plans would be worth less than he thought.",
-      "do": "Talks through the numbers with his wife and children in the first week and takes a package at sixty if offered. Shifts some savings into machine-making companies and keeps the rental units.",
-      "feel": "Uneasy, like arriving early at the station only to find the train already gone.",
-      "mood": "uneasy",
-      "quote": "Like getting to the station early and the train's already left.",
-      "fieldNote": "Two years defeats his strategy of getting in front of change. His fallback is property and family rather than the state. He offers to fund his son's retraining, showing his family-first values.",
+      "say": [
+        "I would separate **2028 dispatch AI** from capable shuttle robots around 2031.",
+        "I would ask for a **retirement bridge** with the driver timetable stated openly."
+      ],
+      "think": [
+        "I think at **63**, robots could cut my last year of night pay before planned retirement.",
+        "I think our **fifteen-month cushion** can cover a gap, but I want to protect pension timing."
+      ],
+      "do": [
+        "**Request pension figures** at 63 and 64 and save half of each night premium payment.",
+        "**Take supervised remote-car training** after thinking AI arrives only if the mine pays and maintains my night wage.",
+        "**Postpone the greenhouse** until Mara and I have the retirement estimate."
+      ],
+      "feel": [
+        "**Anxious** about a lost earning year, with enough savings and training options to act."
+      ],
+      "mood": "anxious",
+      "quote": "I would rather learn a control room than ask my grown children to carry us.",
+      "fieldNote": [
+        "His **2031 age** is 63, one year before his planned retirement at 64.",
+        "Training needs **mine funding**, maintained night pay and real supervised brake work; the household postpones a greenhouse pending pension figures."
+      ],
       "actions": [
-        "retire-early",
-        "invest",
-        "seek-support"
+        "save-more",
+        "retrain",
+        "cut-spending",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Save half of each night premium payment for retirement",
+          "tag": "save-more"
+        },
+        {
+          "text": "Take remote-car training if mine funded with maintained night wages and supervised brake work",
+          "tag": "retrain"
+        },
+        {
+          "text": "Postpone the greenhouse until retirement figures arrive",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Request written pension figures for ages 63 and 64",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is plenty for anyone who's willing to work. Learn, save, plan. And look after your own."
+          "text": "I'd say thinking AI by 2031 changes dispatch, while capable shuttle robots arrive around 2034. By then I hope to have finished at 64, so the robot date may miss my last working year."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2031 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "Five years is enough for me to get the remote and fleet jobs, earn well, and build the contracting business a bit before it's swallowed. I'd retire around sixty-three with more than I'd planned. Honestly it's a good picture for me."
+          "text": "I would be 63 when thinking AI arrives and 66 when robots do. That looks manageable if the pension estimate holds, but I will not retire on a guess about Mara's seasonal sales."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +320,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, train on the autonomous fleet system and move into supervising. Buy the used dozer and the autonomy kit, start the contracting on weekends. Put a bit of savings into the machine makers."
+          "text": "I'll keep night driving and ask the retirement office for an updated statement each year. In the first year after thinking AI arrives, I'll set a retirement date only if the written pension covers our regular bills without relying on spring plant orders."
         },
         {
           "speaker": "interviewer",
@@ -257,56 +328,78 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Busy and calm."
+          "text": "I feel calm about the robot timing and careful about the sums. A long career should end on real figures, not a cheerful estimate."
         },
         {
           "speaker": "interviewer",
-          "text": "How is five years different for you, compared with two?"
+          "text": "What if the pension estimate falls short?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, in this one. Five years is enough to make back the money and some more, before every farmer has his own robot. Then I'd sell the dozer and the client list to someone younger."
+          "text": "If the pension falls short, I'd work another season at this mine or apply to one of the nearby mines. There are options, but I would want a posted shift before changing plans."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you go ahead with the contracting business in this picture?"
+          "text": "When would you tell your wife a retirement date?"
         },
         {
           "speaker": "persona",
-          "text": "Two years, the train's gone. Five years, I'm on it and I've got a good seat. That's the whole difference."
+          "text": "I'd tell Mara the date only after we have checked the pension and the house costs together. Our grown children can visit without being asked to solve a gap in our income."
         }
       ],
-      "say": "I'd say five years is plenty for anyone willing to work: learn, save, plan and look after your own.",
-      "think": "He thinks five years is enough to get the remote and fleet jobs, earn well and build his contracting business before it's swallowed. He'd retire around sixty-three with more than planned, so it's a good picture for him.",
-      "do": "Trains on the autonomous fleet system and moves into supervising in year one. Buys a used dozer with an autonomy kit to start weekend contracting, and invests some savings in machine makers.",
-      "feel": "Busy and calm.",
+      "say": [
+        "I would expect **2034 shuttle robots** after my planned retirement at 64.",
+        "I would ask for a **written pension** before putting a date on the family calendar."
+      ],
+      "think": [
+        "I think at **63** when thinking AI arrives, I can still work toward a planned finish.",
+        "I will not count **seasonal plant sales** as guaranteed pension income."
+      ],
+      "do": [
+        "**Keep night driving** and request updated pension statements each year.",
+        "**Set a retirement date** after thinking AI arrives only if the written pension covers regular bills."
+      ],
+      "feel": [
+        "**Calm** about robot timing, while careful with retirement sums."
+      ],
       "mood": "calm",
-      "quote": "Then I'd sell the dozer and the client list to someone younger.",
-      "fieldNote": "Five years is enough for his adaptability and appetite for risk to pay off. He plans an exit from his own business, treating it like an investment. His train metaphor carries through from the fast picture.",
+      "quote": "A long career should end on real figures, not a cheerful estimate.",
+      "fieldNote": [
+        "At **2034 robot arrival** he would be 66, beyond his hoped-for retirement at 64.",
+        "He still requires **written pension adequacy** and will work longer if necessary rather than rely on seasonal sales."
+      ],
       "actions": [
-        "retrain",
-        "automate",
-        "side-income",
-        "invest"
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep driving night shuttle trips and seeking annual pension statements",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Set retirement date only if written pension covers regular bills",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years, no excuses. Anyone who isn't ready by then didn't try. I'd say it kindly, but I'd say it."
+          "text": "I'd say thinking AI by 2036 and capable shuttle robots around 2039 are dates for the younger drivers. I should be retired by then if the pension pays what the statement says."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2036 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "I'd be retired with the rentals and maybe the contracting business sold. It doesn't threaten me. If anything it's interesting to watch."
+          "text": "I would be 68 when thinking AI arrives and 71 when robots come. The house and savings give us space, but I still want the pension confirmed rather than assumed."
         },
         {
           "speaker": "interviewer",
@@ -314,7 +407,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep working, train on the new systems as they come, build the contracting business over a few years. Retire around sixty-three. Keep the rentals and maybe buy one more."
+          "text": "I'll keep the present night shifts and save the premium until I retire. In the first year after thinking AI arrives, if I have retired as planned, I'll review the household budget with Mara and keep the emergency reserve untouched."
         },
         {
           "speaker": "interviewer",
@@ -322,36 +415,59 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Comfortable."
+          "text": "I feel calm about our own wages in this picture. I feel a responsibility to teach young drivers how to stop a car when a route screen is wrong."
         },
         {
           "speaker": "interviewer",
-          "text": "By 2036 you'd be sixty-eight. What does this one look like for you?"
+          "text": "What if you are still working at 68?"
         },
         {
           "speaker": "persona",
-          "text": "I'd want them to have a strong family, a faith, and a skill people still pay for. The machines will do the work, but someone has to decide what's worth doing. I'd want them to be the deciders."
+          "text": "If I am still working at 68 because the pension fell short, I'd check a nearby mine's posted shifts before touching the reserve. I would not move for a rumour when our house is paid off."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want for your grandchildren?"
+          "text": "What would you pass to a younger driver?"
         },
         {
           "speaker": "persona",
-          "text": "Priya says I should slow down by then. Maybe I will. Maybe I'll just fly drones over the garden, she can't stop me."
+          "text": "I would tell the new drivers the mine's route map will change, but a tight bend remains tight. A tight tunnel bend remains tight when a route map changes. I can hand the new drivers my notes before I leave."
         }
       ],
-      "say": "I'd say ten years means no excuses, and anyone who isn't ready by then didn't try. I'd say it kindly, but I'd say it.",
-      "think": "He expects to be retired with the rentals and perhaps the contracting business sold, so it doesn't threaten him. If anything it's interesting to watch.",
-      "do": "Keeps working and trains on new systems as they arrive, building the contracting business over a few years. Retires around sixty-three, keeps the rentals and may buy one more.",
-      "feel": "Calm and comfortable.",
+      "say": [
+        "I would see **2036 AI** and 2039 robots as mostly after my planned retirement.",
+        "I would pass **tunnel notes** to younger drivers before leaving the shuttle car."
+      ],
+      "think": [
+        "I think at **68** and then 71, I expect to be retired if the written pension holds.",
+        "I think our **paid house** and savings give room, but I will protect the emergency reserve."
+      ],
+      "do": [
+        "**Keep driving** night shifts and saving the premium until retirement.",
+        "**Review the budget** with Mara after thinking AI arrives if retired as planned."
+      ],
+      "feel": [
+        "**Calm** about household security, with an obligation to teach safer route judgment."
+      ],
       "mood": "calm",
-      "quote": "The machines will do the work, but someone has to decide what's worth doing.",
-      "fieldNote": "With ten years he sees AGI as interesting to watch from a comfortable retirement. He is firm but not harsh about personal responsibility. His hopes for his grandchildren mix faith, family and judgment.",
+      "quote": "A tight tunnel bend remains tight when a route map changes.",
+      "fieldNote": [
+        "His **2036 and 2039 ages** are 68 and 71, well after the hoped-for finish at 64.",
+        "He would seek **posted nearby work** only if pension figures fail and protect the emergency reserve meanwhile."
+      ],
       "actions": [
-        "retrain",
-        "side-income",
-        "invest"
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep driving night shifts and saving premium pay until retirement",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Review household pension budget after 2036 if retired as planned",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -362,7 +478,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because it beats even the people who try to get ahead, and it would hit Arjun's generation hard. What would help is time, honestly, and a community that sticks together, with families and the temple helping each other more than waiting on the government."
+      "text": "AGI by 2028 worries me most because capable shuttle robots around 2031 could take my final year of night work. Written pension figures and paid practical remote-car training would help me bridge that year without leaning on our grown children."
     },
     {
       "speaker": "interviewer",
@@ -370,11 +486,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about coal. Our mine has a closing date AGI or not, so some of us have been planning for the end for years. Maybe that's why I'm not as scared as you'd expect."
+      "text": "You didn't ask whether I enjoy teaching the new drivers. I do, but A safe stop in the mine tunnel teaches more than a coloured warning on a screen. I would rather demonstrate that stop than point at a warning."
     }
   ],
-  "headlineQuote": "It's like a game where the stakes are real.",
-  "portrait": "Nikhil Santos is a 58-year-old dozer operator at a large open-pit coal mine who volunteered for the remote-controlled dozer when older colleagues refused. He uses AI daily, owns three rental units and believes in hard work, family and getting in front of change. In the slower pictures he plans to supervise an autonomous fleet and start his own small contracting business with a robot dozer. The two-year AGI picture leaves him financially secure but uneasy that even early movers get beaten. With five or ten years he is calm and comfortable, leaning on property, family and his temple community.",
-  "biggestWorry": "AGI by 2028 worries him most, because it beats even people who try to get ahead and would hit his son's generation hard.",
-  "whatWouldHelp": "Time, and a community that sticks together, with families and the temple helping each other rather than waiting on government."
+  "headlineQuote": "A safe stop in the mine tunnel teaches more than a coloured warning on a screen.",
+  "portrait": [
+    "**Nikhil Santos**, 58, drives underground shuttle cars at a large copper mine after vocational training.",
+    "His **night premium** brings higher pay, while a paid house and fifteen months of savings support retirement hopes.",
+    "He uses **AI daily** for fault notes and route trials, then checks brakes and tunnel bends himself.",
+    "He wants to retire at **64**, making 2031 robots at age 63 more disruptive than later robot dates.",
+    "He considers **paid supervised training** only if night wages continue, and avoids asking grown children to finance a gap."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** worries him most because 2031 robot arrival could take his final year of night pay."
+  ],
+  "whatWouldHelp": [
+    "**Written pension figures** and paid supervised training would help him bridge the year before retirement."
+  ]
 }

@@ -11,24 +11,24 @@
     "outlook": "traditional",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and we're not selling anything. Everything you tell me is confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I’m a senior field researcher with the independent Work Futures Panel. We have no ties to AI companies, employers, unions, political parties or government, and we don’t sell anything or campaign for a side. What you say is confidential, and I’d like both your public view and your private one."
     },
     {
       "speaker": "persona",
-      "text": "I'm lead framer for a big housebuilder on a new estate on the edge of town, three hundred homes going up in phases. My gang of five puts up the timber frames, walls, floors and roof trusses, and we can do a house shell in about four days if the weather's kind. I'm on site at quarter to seven, check the deliveries against the plot sheets, then it's nail gun and tape all day, and I keep an eye on the young lads. The best part is driving past a street we built a year ago and seeing kids on bikes; the worst is the rain, and the site office changing the plot order every week."
+      "text": "I’m Umar Young, twenty-seven. I lead a carpentry crew on building sites and live alone in a rented flat. I’ve kept a few months of expenses aside; my mother taught me not to spend next month’s wages before they arrive."
     },
     {
       "speaker": "interviewer",
-      "text": "Tell me a bit about life outside work."
+      "text": "Walk me through an ordinary workday. What do you enjoy and what wears you down?"
     },
     {
       "speaker": "persona",
-      "text": "I'm engaged to Hafsa, we're getting married next summer, and we're saving for that and a deposit. Most weekends I'm at my parents' for lunch, and Friday I go to the mosque with my dad, who was a bricklayer for thirty-five years. I don't use any of that AI stuff, I've got an old phone for calls and the cricket scores and that's about it."
+      "text": "I arrive before the crew, check the drawings and make sure the timber is stacked where we can work safely. I like teaching a new hand how to fit a frame properly instead of hiding a bad gap with trim. I don’t enjoy rushing to finish paperwork at the end, and the noise can leave me with a headache."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture. We call it AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau: Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say what my dad says: you can't build a house on a computer. Probably at lunch with the lads, maybe to my uncles at a family dinner. I don't do the online thing."
+          "text": "I’d say I’m not against a tool that catches a wrong count on a materials sheet. I’d still put a tape on the wall and check the timber before the crew cuts anything."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means life goes on, and that's how I like it. I get married, we save up for a house, maybe on one of the estates I built. Work's work, there's always houses to put up."
+          "text": "I don’t think a small change will touch the main work I do. My savings would cover a short gap between sites, and there are a couple of builders nearby where I could ask for hours."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Exactly what I'm doing. Keep framing, keep saving, about three months put by and growing. Next year I'd take on another apprentice, because my boss asked and it's the right thing, passing it on."
+          "text": "I’d keep leading the crew and compare any computer count with the signed paper order. I’d continue saving after payday instead of buying a new car just because the account looks healthy."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +68,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like a dry week on site."
+          "text": "I feel calm about a tool that can be checked. I still keep a reserve because even a good trade has quiet weeks between contracts."
         },
         {
           "speaker": "interviewer",
-          "text": "Why does taking on an apprentice matter to you?"
+          "text": "What would make you trust a materials count?"
         },
         {
           "speaker": "persona",
-          "text": "Because someone did it for me. Old Brian took me on at seventeen when I'd left college with nothing much, and he taught me everything, never once shouted. You pay that back by doing it for the next lad."
+          "text": "I’d check the first few orders against the delivery and write down anything missing. If the list keeps matching, I’d be willing to use it for the routine count."
         },
         {
           "speaker": "interviewer",
-          "text": "Would anything bother you, even in this one?"
+          "text": "What work would you still insist on checking in person?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe the office getting more computer systems and less sense. They already send plot changes by app and I have to get the young lads to read it to me. But that's a moan, not a worry."
+          "text": "I’d measure the opening and check the wall for movement myself. A plan can’t show me what happened after the surveyor left the site."
         }
       ],
-      "say": "I'd say what my dad says, that you can't build a house on a computer, at lunch with the lads or to my uncles at family dinners. I don't do online.",
-      "think": "It means life goes on the way I like it: I get married and we save for a house, maybe on an estate I built. There are always houses to put up.",
-      "do": "Keeps framing and saving towards about three months and more. Takes on another apprentice next year because his boss asked and it's the right thing to pass the trade on.",
-      "feel": "Calm, like a dry week on site.",
+      "say": [
+        "I’m open to a tool that catches a **wrong materials count**.",
+        "I still measure the wall before the crew **cuts timber**."
+      ],
+      "think": [
+        "I don’t expect a small change to affect my **main site work**.",
+        "I can cover a short gap with **my savings** and nearby employers."
+      ],
+      "do": [
+        "Keep leading the **crew** and compare computer counts with signed orders.",
+        "Continue saving after each **payday**.",
+        "Record any missing timber on the **delivery slip**."
+      ],
+      "feel": [
+        "I feel **calm** about a tool I can check."
+      ],
       "mood": "calm",
-      "quote": "They already send plot changes by app and I have to get the young lads to read it to me.",
-      "fieldNote": "Rooted in family, faith and passing on the trade. Technology is a minor irritation that he leans on the young lads to handle. He speaks warmly of the man who trained him.",
+      "quote": "A plan can’t show me what happened after the surveyor left the site.",
+      "fieldNote": [
+        "Umar values **direct inspection** and will test a count before trusting it.",
+        "He has a modest reserve and nearby contacts, so routine change feels **manageable**."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "learn-ai",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading the carpentry crew on active jobs",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Compare the computer count with early materials deliveries",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Continue saving part of each payday",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption: Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say people should be ready to graft and learn, same as always, and the firms should train their own people instead of waiting on government. That's how my dad's generation did it. I wouldn't want people sitting at home on benefits because of a computer."
+          "text": "I’d say the office can use a schedule tool, but the crew needs to know whether the delivery date is real. I don’t want five people standing around because a screen forgot that another trade is still in the way."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +149,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be a bit worried, because there's already talk of factory-built frames, whole walls made by machines and craned in. If that takes off, a gang like mine putting up frames by hand looks slow. I'm good, but I'm good at the old way."
+          "text": "I handle some planning and records as crew lead, so I expect those tasks to change. I’m not eager to learn a new system, but I could do it if the foreman shows me how it helps on the site."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +157,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep my head down and keep working, and see what actually happens on our estate. If the firm started using factory frames, I'd try to move to the crew that stands them up, because that's still framing. I wouldn't go off on courses unless they paid for it and showed me it was worth it."
+          "text": "I’d ask the foreman to demonstrate the schedule tool using a job we already understand. I’d keep the crew’s carpentry work steady and check the roster before making a large purchase."
         },
         {
           "speaker": "interviewer",
@@ -126,46 +165,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. It's a thing at the back of my head when I'm on the roof."
+          "text": "I feel uneasy because my paperwork could change, but I have time to learn if someone teaches me. I wouldn’t call every new screen progress until it proves useful."
         },
         {
           "speaker": "interviewer",
-          "text": "You said firms should train their own people. Would yours?"
+          "text": "What would you need to see during that demonstration?"
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I don't know. They'd train the managers, probably, not us. The big housebuilders care about how many plots a week, not who's swinging the hammer."
+          "text": "I’d want to see it handle a change in delivery and leave time for our measurements. If the foreman can show the old and new schedule side by side, I’ll understand what the tool actually does."
         },
         {
           "speaker": "interviewer",
-          "text": "What would Hafsa say if you told her this?"
+          "text": "Does this card say that office changes cause fewer construction sites to open?"
         },
         {
           "speaker": "persona",
-          "text": "She'd say stop worrying about things that haven't happened, and she'd be right. She works in a school office and she's more sensible than me. But she'd also ask about the deposit, so I'd keep it quiet till I knew more."
+          "text": "No, I wouldn’t claim that. I’d look at the contractor’s booked work and local openings rather than blame AI for something the card doesn’t say."
         }
       ],
-      "say": "I'd say people should graft and learn like always, and firms should train their own people instead of waiting on government. I wouldn't want people on benefits because of a computer.",
-      "think": "Off the record I'd be a bit worried about factory-built wall frames craned in, which would make a hand-framing gang look slow. I'm good, but I'm good at the old way.",
-      "do": "Keeps his head down and waits to see what happens on the estate, moving to the crew that stands up factory frames if they arrive. Avoids courses unless the firm pays and shows they are worthwhile.",
-      "feel": "Uneasy, a thought at the back of his head when he's on the roof.",
+      "say": [
+        "I’d want the schedule to show a **real delivery date**.",
+        "I don’t want the crew waiting because another trade is **still working**."
+      ],
+      "think": [
+        "I handle some planning and records, and I expect **those tasks to change**.",
+        "I can learn a system if the foreman shows how it helps **on site**."
+      ],
+      "do": [
+        "Ask the **foreman** to demonstrate the schedule tool on a familiar job.",
+        "Keep the crew’s **carpentry work** steady.",
+        "Check my roster before making a large **purchase**."
+      ],
+      "feel": [
+        "I feel **uneasy**, but I can learn with a practical demonstration."
+      ],
       "mood": "uneasy",
-      "quote": "I'm good, but I'm good at the old way.",
-      "fieldNote": "He sees a specific threat in factory frames and expects his employer to train managers, not framers. His instinct is to wait and stay close to what he knows. Keeps his worries from his fiancée until he's sure.",
+      "quote": "I wouldn’t call every new screen progress until it proves useful.",
+      "fieldNote": [
+        "Umar needs a **hands-on demonstration** before adopting a new system.",
+        "He avoids attributing fewer starts to AI without **evidence from the contractor**, and waits for the real roster."
+      ],
       "actions": [
+        "learn-ai",
         "keep-going",
         "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Learn the schedule tool from the foreman on a familiar job",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep leading carpentry work on active sites",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for the roster before making a large purchase",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028: Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's madness and somebody should have stopped it, the big tech companies running ahead with no thought for working families. I'd still say people should work if they can, but if there's no work, there's no work. I'd talk about it at the mosque and with family, that's where I'd say it."
+          "text": "I’d tell the crew to listen for what the contractor actually says about the next jobs. We should keep the paper records straight and not pass around a rumor as if someone had already been dismissed."
         },
         {
           "speaker": "interviewer",
@@ -173,7 +246,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be scared for the wedding and the deposit. Two years and I'm out, at twenty-nine, newly married, with a skill nobody needs. Three months of savings is nothing against that."
+          "text": "AGI could take the planning and records in my lead role by 2028. Robots reach the hands-on work in 2031, so I can’t tell myself carpentry will stay safe just because I’m good at it."
         },
         {
           "speaker": "interviewer",
@@ -181,7 +254,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First, Hafsa and I would cut the wedding down, smaller hall, fewer guests, and keep the money. I'd stop eating out and cancel the gym. If it came to it, we'd live with my parents for a while, they've got the room, and that's what family is for. I'd take every bit of overtime I could get in those two years."
+          "text": "Now I’d keep working and add to the savings I already have. In 2029 I’d ask for the contractor’s confirmed schedule and contact nearby builders if my hours had fallen."
         },
         {
           "speaker": "interviewer",
@@ -189,48 +262,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Like a frame going over in the wind before it's braced. Nothing you can do but get out of the way."
+          "text": "Two years is short enough to make me anxious about pay, though my savings buy some time. I know what I can cut, but I can’t guarantee a builder has an opening."
         },
         {
           "speaker": "interviewer",
-          "text": "What would your dad say?"
+          "text": "Could applying to another builder protect you from the 2031 robot date?"
         },
         {
           "speaker": "persona",
-          "text": "He'd say \"we'll manage, we always have\", and he'd mean it. He'd also be angry, because he believes in a man working with his hands. I think it'd hurt him more than me, to see that go."
+          "text": "I’d treat it as a way to get paid while there is work, not protection from the same change. If a local builder has a real job in 2029, I’d call and ask what hours they offer."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you think about learning something new?"
+          "text": "What would you cut first if your hours dropped?"
         },
         {
           "speaker": "persona",
-          "text": "What would I learn in two years that a robot can't do better? I'm not built for an office. I'd sooner put my effort into keeping my family steady and see what's left."
+          "text": "I’d stop putting money toward a newer car and keep rent, food and transport covered. I’m single, so I can make a spending change without first moving children or a partner."
         }
       ],
-      "say": "I'd say it's madness that the big tech companies ran ahead with no thought for working families. People should work if they can, but if there's no work there's no work, and I'd say it at the mosque and with family.",
-      "think": "Privately I'd be scared for the wedding and the deposit: out at twenty-nine, newly married, with a skill nobody needs. Three months of savings is nothing against that.",
-      "do": "Cuts the wedding down to a smaller hall and fewer guests and keeps the money, and stops eating out and cancels the gym. Takes all the overtime he can and moves in with his parents if needed.",
-      "feel": "Scared and powerless, like a frame going over in the wind before it's braced.",
-      "mood": "alarmed",
-      "quote": "I think it'd hurt him more than me, to see that go.",
-      "fieldNote": "His worry runs through his family: the wedding, his parents' spare room, his father's pride in hand work. He blames tech companies but still frames the answer as family, not government. Retraining feels pointless to him in two years.",
+      "say": [
+        "I’d ask what the contractor says about **confirmed jobs**.",
+        "I’d keep records straight and avoid repeating **dismissal rumors**."
+      ],
+      "think": [
+        "I expect AGI to take records and planning in **my lead role** by 2028.",
+        "I can’t say carpentry stays safe when **robots arrive in 2031**."
+      ],
+      "do": [
+        "Keep working and add to my current **savings**.",
+        "Ask for the confirmed **schedule** in 2029.",
+        "Contact **local builders** if my hours have fallen."
+      ],
+      "feel": [
+        "I feel **anxious about pay**, though my savings buy some time."
+      ],
+      "mood": "anxious",
+      "quote": "I can’t tell myself carpentry will stay safe just because I’m good at it.",
+      "fieldNote": [
+        "Umar sees the robot date as relevant even with strong **craft skill**.",
+        "He would use savings and reduce purchases rather than claim a **guaranteed vacancy**."
+      ],
       "actions": [
-        "family-plans",
-        "cut-spending",
+        "keep-going",
         "save-more",
-        "seek-support"
+        "change-job",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading the current crew while there is work",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Add to my current savings before hours fall",
+          "tag": "save-more"
+        },
+        {
+          "text": "Contact nearby builders if my hours fall in 2029",
+          "tag": "change-job"
+        },
+        {
+          "text": "Stop saving toward a newer car if pay drops",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031: Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got a few years, so the firms and the colleges should get apprenticeships ready for whatever's next. Not handouts, proper training. I'd say that to anyone who asked."
+          "text": "I’d say five years is enough time for managers to tell crews what is changing and explain new steps. I’d rather hear a plain answer at the toolbox meeting than a notice after a shift has disappeared."
         },
         {
           "speaker": "interviewer",
@@ -238,7 +348,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd still be worried, maybe even more, because by 2031 I'd hope to have a mortgage and maybe a baby on the way. It'd come right when we'd need my wage most. I don't really have a plan B, and I'm not sure five years gives me one."
+          "text": "AGI can take the planning and record side by 2031, then robots reach the carpentry around 2034. I have more time than in the fast picture, but there’s no promise that other local work will be waiting."
         },
         {
           "speaker": "interviewer",
@@ -246,7 +356,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd go ahead with the wedding, but smaller, and put more of the money to savings, maybe getting to six months by 2029. I'd hold off on buying a house until it's clearer, even if renting feels like throwing money away. And I'd keep framing, because that's what I know, and be the last one they let go if I can."
+          "text": "I’d have the foreman show me the system before it becomes part of every job. In 2032 I’d check my hours and savings, and then contact builders nearby if my current crew was smaller."
         },
         {
           "speaker": "interviewer",
@@ -254,47 +364,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Worried, all the time, in the back of my head. More of a grind than a shock."
+          "text": "Five years gives me some breathing room, and I’m still anxious about both parts of the job. I’d use the extra time carefully instead of treating it as a promise."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd hold off on the house. How does that sit with you?"
+          "text": "How does five years of warning differ from two for you?"
         },
         {
           "speaker": "persona",
-          "text": "Badly. I always pictured carrying Hafsa over the doorstep of a house I'd framed myself. Putting that off because of robots feels wrong, like being cheated."
+          "text": "I get more paydays to save and more time to watch what the contractor actually changes. I’d rather learn from someone on my site than borrow money for a course before I know what is useful."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything the extra time lets you do that two years didn't?"
+          "text": "Would construction office planning protect you after AGI arrives?"
         },
         {
           "speaker": "persona",
-          "text": "Save, mostly, and get the wedding done properly. Maybe I'd ask my brother about helping at his tyre shop on Saturdays, just to have something else. I don't know if robots fix tyres too, probably."
+          "text": "No, I can’t call planning safe if AGI can do the thinking work. I’d learn enough to handle the current tools and keep asking which jobs a real builder needs filled."
         }
       ],
-      "say": "I'd say we've got a few years, so firms and colleges should get apprenticeships ready for what's next: proper training, not handouts. I'd say it to anyone who asked.",
-      "think": "Off the record I'd be maybe more worried, because by 2031 I'd hope to have a mortgage and a baby on the way. It lands when we'd need my wage most, and I don't have a plan B.",
-      "do": "Holds a smaller wedding and saves the difference, aiming for six months of savings by 2029. Delays buying a house, keeps framing and thinks about Saturdays at his brother's tyre shop.",
-      "feel": "A constant background worry, more of a grind than a shock.",
-      "mood": "alarmed",
-      "quote": "I always pictured carrying Hafsa over the doorstep of a house I'd framed myself.",
-      "fieldNote": "More time doesn't calm him, because it moves the blow to when family responsibilities peak. Delaying the house feels like being cheated. His only side idea is family-based, and he doubts even that.",
+      "say": [
+        "I’d want managers to explain changes at the **toolbox meeting**.",
+        "I’d rather hear a plain answer before a shift **disappears**."
+      ],
+      "think": [
+        "I expect AGI to take planning and records by **2031**.",
+        "I have more time, but I can’t assume **another job will wait**."
+      ],
+      "do": [
+        "Ask the **foreman** to show me the system before it is used widely.",
+        "Check my hours and savings in **2032**.",
+        "Contact **nearby builders** if my crew becomes smaller."
+      ],
+      "feel": [
+        "I feel **anxious but less rushed** than in the fast picture."
+      ],
+      "mood": "anxious",
+      "quote": "I’d rather learn from someone on my site than borrow money for a course before I know what is useful.",
+      "fieldNote": [
+        "Umar prefers **learning on site** to debt-funded training, and asks a foreman for direct guidance.",
+        "He recognizes that planning is exposed and will check for **real openings**."
+      ],
       "actions": [
-        "family-plans",
+        "learn-ai",
         "save-more",
-        "keep-going"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Learn the new system from the foreman on active jobs",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Continue saving during the additional warning years",
+          "tag": "save-more"
+        },
+        {
+          "text": "Contact nearby builders if the crew shrinks after 2031",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036: Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is plenty of warning, so there's no excuse. Firms should be training up the young lads into whatever's next, and families should be ready to look after each other. I'd tell the apprentices to keep their heads down and work hard."
+          "text": "I’d say ten years is a long runway, but crews should still prepare instead of assuming nothing will happen. I’d keep doing careful work and learn a tool after it has been tested on a real site."
         },
         {
           "speaker": "interviewer",
@@ -302,7 +445,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, it's a long way off and I'd probably not think about it much until it got close. That's me, I'm not one for planning ten years out. But I'd know it was coming, and that would sit there."
+          "text": "I could save more in ten years, but the thinking part of my lead job still changes in 2036. Robots reach carpentry around 2039, and I don’t know what kind of work nearby builders will still have."
         },
         {
           "speaker": "interviewer",
@@ -310,7 +453,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd get married as planned, save steady, and probably still buy a house, with a mortgage we could carry on Hafsa's wage if we had to. I'd keep framing and stay with the same firm, because they know me. If the work started thinning around 2033, I'd lean on family and the community at the mosque to find something."
+          "text": "I’d keep leading my crew, add to the reserve, and learn tools when the foreman has checked them. In 2037 I’d review the jobs in the area and call nearby builders if the contractor had reduced my hours."
         },
         {
           "speaker": "interviewer",
@@ -318,37 +461,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but it's a slow kind. It comes and goes."
+          "text": "Ten years gives me time to save and observe, which feels better than two. I’m still uneasy about the robot date because it reaches the craft work I rely on."
         },
         {
           "speaker": "interviewer",
-          "text": "Lean on the community how?"
+          "text": "What would you want to decide before 2036?"
         },
         {
           "speaker": "persona",
-          "text": "There's lots of men at the mosque who run businesses, shops, garages, a removals firm. When someone's out of work, people ask around and find them something. That's how it's always worked for us, and I'd trust it over the government."
+          "text": "I’d decide how much of my pay to save and whether I want to move to a place with more building work. I’m single, so I can make that choice for myself, but I’d want to visit first rather than move on a guess."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell your apprentice in this picture?"
+          "text": "Would you spend your savings on a long course?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell him to learn the trade properly anyway, because a trade teaches you to work hard and that never goes to waste. And to save a bit every week. And to marry someone sensible."
+          "text": "I’d take short training if it is tied to a job I can see. I wouldn’t spend my reserve on a course promising office work after AGI, since planning is part of what changes."
         }
       ],
-      "say": "I'd say ten years is plenty of warning, so there's no excuse: firms should train young lads for what's next and families should look after each other. I'd tell apprentices to work hard.",
-      "think": "Off the record it's far off and I'd not think about it much until it got close, because I don't plan ten years out. But knowing it was coming would sit there.",
-      "do": "Marries as planned, saves steadily and buys a house with a mortgage the couple could carry on Hafsa's wage. Keeps framing for the same firm and, if work thins around 2033, leans on family and the mosque community to find something.",
-      "feel": "Anxious in a slow way that comes and goes.",
+      "say": [
+        "I’d use the **long runway** to prepare rather than assume nothing will happen.",
+        "I’d learn a tool after someone tests it on a **real site**."
+      ],
+      "think": [
+        "I could build more savings before **2036**.",
+        "I don’t know what nearby builders will need after **robots arrive**."
+      ],
+      "do": [
+        "Keep leading my crew while **contracts continue**.",
+        "Add to my **reserve** and learn tested tools.",
+        "Review local jobs in 2037 and call builders if my **hours fall**."
+      ],
+      "feel": [
+        "I feel **uneasy** about the robot date, despite having time to prepare."
+      ],
       "mood": "anxious",
-      "quote": "When someone's out of work, people ask around and find them something.",
-      "fieldNote": "With a decade he keeps his life plans but builds in a safety margin and trusts community networks over the state. He admits he won't plan far ahead. His advice to apprentices is about character as much as skill.",
+      "quote": "I’d say ten years is a long runway, but crews should still prepare instead of assuming nothing will happen.",
+      "fieldNote": [
+        "Umar treats a decade as **useful warning**, not proof of safety, and plans to check in regularly.",
+        "He would consider moving only after checking **actual local work**."
+      ],
       "actions": [
         "keep-going",
         "save-more",
-        "family-plans",
-        "seek-support"
+        "learn-ai",
+        "move"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading the current crew while contracts continue",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Add to my reserve from current wages",
+          "tag": "save-more"
+        },
+        {
+          "text": "Learn tools after a foreman tests them on site",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Visit a busier area before deciding whether to move",
+          "tag": "move"
+        }
       ]
     }
   },
@@ -359,19 +535,28 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, with the wedding and everything. What would help is the firms keeping people on and retraining them, proper apprenticeships, and family sticking together. I don't want a cheque for doing nothing, I want to work."
+      "text": "The 2028 picture worries me most because two years is not much time to prepare for the office change and the 2031 robot date. Clear notice about the contractor’s work and a chance to learn tools during paid hours would help me decide what to do."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about pride. A man who builds houses can drive his kids past them one day. I don't know what you show your kids if a robot built everything."
+      "text": "I’d ask what jobs are actually available nearby when a contract ends. People can talk about adapting, but I need to know whether there is a builder with real hours before I move or retrain."
     }
   ],
-  "headlineQuote": "I don't want a cheque for doing nothing, I want to work.",
-  "portrait": "Umar is a 27-year-old lead framer on a large new-build estate, engaged to Hafsa with a wedding next summer, who spends Fridays at the mosque with his father, a retired bricklayer. He never uses AI and leans on the young lads to read the site app to him. Calm in the plateau, he grows uneasy at the thought of factory-built frames, and alarmed in the faster AGI pictures because they hit just as he's marrying and hoping to buy a house. He blames the tech companies but looks to family, the mosque community and employer apprenticeships rather than government handouts. More warning time mostly lets him save and trim the wedding; it doesn't give him a plan B.",
-  "biggestWorry": "AGI by 2028, because it would land around the wedding and leave him newly married with a skill nobody needs.",
-  "whatWouldHelp": "Firms keeping people on and retraining them through proper apprenticeships, and family sticking together, rather than a cheque for doing nothing."
+  "headlineQuote": "I’d ask what jobs are actually available nearby when a contract ends.",
+  "portrait": [
+    "Umar is a **27-year-old crew lead** with strong carpentry skills and a trade certificate.",
+    "He lives alone, earns typical pay, and has **a few months saved**.",
+    "He avoids unfamiliar technology but will learn a **proven tool** from a foreman on site.",
+    "Some local builders and a savings reserve give him options, though robots eventually threaten **his craft work**."
+  ],
+  "biggestWorry": [
+    "The **2028 AGI** picture worries Umar most because the short warning leaves little time before the robot date."
+  ],
+  "whatWouldHelp": [
+    "Clear notice about **contractor work** and paid training time would help Umar plan his next step."
+  ]
 }

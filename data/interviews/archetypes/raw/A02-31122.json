@@ -11,44 +11,63 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Good to meet you, Amira. I'm a field researcher with the Work Futures Panel, an independent group with no links to companies, unions, parties or government. Everything here is confidential. Could you describe a normal working day for me?"
+      "text": "I am with the independent Work Futures Panel. We have no ties to employers, AI firms or government, and your answers stay confidential. What is a normal working day like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I drive a grader at Mount Selwyn, the iron ore mine up on the plateau. My job is keeping the haul roads smooth, so the big trucks don't wreck their tyres, which cost more than my house. I start at six with a pre-start check, then I'm up and down the same eight kilometres of road all day, cutting the ruts, spreading the gravel, and the water cart comes behind me. It's satisfying when a road is perfect. The tiring part is the concentration, because a 200-tonne truck coming the other way doesn't brake for you."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "How did you come to the mine?"
-    },
-    {
-      "speaker": "persona",
-      "text": "Viktor and I had a café on Market Street for fifteen years. When the mine had its big downturn a few years back, half the town stopped buying coffee and we went under. We still owe the bank for the coffee machine and the fit-out, so there's not much left over, maybe a couple of weeks of bills in savings. Viktor drives a delivery van now and I came here at fifty-four, which is three, nearly four years ago. I'm still not quick on the grader, but I'm careful."
+      "text": "I am 58 and a junior grader driver at a large mine. I smooth the haul roads after the heavy trucks have cut ruts, and I still ask the senior driver to check my line on difficult corners. I like leaving a road safer than I found it, but my lower pay and changing shifts make each week’s bills feel close."
     }
   ],
   "scenarios": {
     "S0": {
+      "say": [
+        "I would accept a **quicker log** if a driver still checks the haul road.",
+        "I know **road ruts** need equipment and attention, not just saved form time."
+      ],
+      "think": [
+        "I am relieved by **limited AI**, while worrying about ordinary pay gaps.",
+        "I have only **two weeks** of essentials saved against missed shifts."
+      ],
+      "do": [
+        "**Keep** taking assigned grader shifts and checking road notes.",
+        "**Set aside** one percent of each full shift’s pay if groceries and travel are covered."
+      ],
+      "feel": [
+        "**Anxious** about irregular household income, with little fear of mild AI."
+      ],
+      "mood": "anxious",
+      "quote": "I need the roster to stay full more than I need a faster form.",
+      "fieldNote": [
+        "**Baseline bills** dominate her mild-scenario response because both mine and shop hours can vary.",
+        "**Learning pace** is steady: she accepts a log after a senior driver demonstrates it."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep driving assigned grader shifts and checking road notes",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save one percent of full-shift pay if essentials are covered",
+          "tag": "save-more"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture. It's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "AI Plateau. That would give me time, which is what I need most. Every month without changes is a month I get better on the grader and the café loan gets smaller."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "At the crew meeting I'd say good, let's get on with the roads. I'm not one for big speeches. To Viktor I'd say at least we know where we stand."
+          "text": "I would tell the grader crew that a quicker shift log would be handy, provided a driver still checks the road. I am learning to keep the haul route level, and a saved minute on forms will not fix a rut."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +75,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, AI was never the thing I lay awake about. Iron ore prices are, because the last downturn closed our café and half of Market Street with it. If the price drops again, the mine cuts the newest people first, and I'm nearly four years in and still the slowest grader on the plateau."
+          "text": "I would be glad if AI stayed small, but the household would still be tight. My partner has irregular shop hours, and we have about two weeks of essentials saved. A missed mine shift already means moving a bill to the next payday."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +83,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and keep paying the café loan, 300 a month, as planned. I'd ask the supervisor for time on the steeper ramps so I get better where it counts. In about a year I'd restart weekend catering, birthday cakes and funeral trays, just a little extra."
+          "text": "I would keep taking my grader shifts and check the log against my own road notes. In the first year I would set aside one percent of each full shift’s pay if groceries and travel are covered first."
         },
         {
           "speaker": "interviewer",
@@ -72,480 +91,384 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but steady with it. I've been through one downturn with no plan, and I won't do that again."
+          "text": "Anxious about pay, not about the small software change. I need the roster to stay full more than I need a faster form."
         },
         {
           "speaker": "interviewer",
-          "text": "How would you know a downturn was coming?"
+          "text": "Which bill moves?"
         },
         {
           "speaker": "persona",
-          "text": "When we had the café, the mine guys stopped buying the second cup of coffee six months before the layoffs. Now I watch the canteen instead. If the overtime dries up, I'll know."
+          "text": "The electricity bill usually gets a few days of grace; food and the bus fare do not. I would rather call early than let a balance become a surprise."
         },
         {
           "speaker": "interviewer",
-          "text": "What would a slowdown mean for Viktor's van job?"
+          "text": "Would you use the new log?"
         },
         {
           "speaker": "persona",
-          "text": "Viktor delivers for the building suppliers, and when the mine slows, nobody builds. So we'd both feel it at once, which is the thing I fear most. One wage we can live on, just. None we can't."
-        }
-      ],
-      "say": [
-        "Good, let's get on with **the roads**.",
-        "To Viktor I'd say at least we know **where we stand**."
-      ],
-      "think": [
-        "AI was never what kept me up; **iron ore prices** are, since the last downturn closed our café.",
-        "The mine cuts **the newest people** first in a downturn.",
-        "I'm nearly four years in and still **the slowest grader** on the plateau."
-      ],
-      "do": [
-        "Keeps paying **the café loan** at 300 a month as planned.",
-        "Asks for time on **the steeper ramps** to get better where it counts.",
-        "Restarts **weekend catering** in about a year for a little extra."
-      ],
-      "feel": [
-        "**Anxious but steady**, determined never again to face a downturn with no plan."
-      ],
-      "mood": "anxious",
-      "quote": "When we had the café, the mine guys stopped buying the second cup of coffee six months before the layoffs.",
-      "fieldNote": [
-        "Amira's worry in a plateau is **the iron ore price**, which already cost her a café.",
-        "She and Viktor both depend on the mine's fortunes, so a downturn would hit **both wages** at once.",
-        "She reads **the canteen's overtime** the way she once read coffee orders."
-      ],
-      "actions": [
-        "save-more",
-        "keep-going",
-        "side-income"
-      ],
-      "steps": [
-        {
-          "text": "Keep paying 300 a month off the old café loan",
-          "tag": "save-more"
-        },
-        {
-          "text": "Ask for time on the steeper haul road ramps",
-          "tag": "keep-going"
-        },
-        {
-          "text": "Restart weekend catering in about a year",
-          "tag": "side-income"
+          "text": "I would use it after the senior grader driver showed me one complete shift. I sometimes use AI to explain a manual page, but I check the page against the machine."
         }
       ]
     },
     "S1": {
-      "transcript": [
-        {
-          "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
-        },
-        {
-          "speaker": "persona",
-          "text": "Thinking tasks first, robots later. My grader's hands-on, so it waits. But the office that plans the haul roads and the people who book Viktor's deliveries are exactly that list."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "At the crew meeting I'd say the robots are slow in this one, so let's ask the company now what its plan is for the graders and get our names on any training. I'd say it calmly. Shouting never changed a date."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think it means for you?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Off the record, I think a computer that plans every haul road will also count every pass I make, and it'll notice I'm the slow one. And Viktor's company would use a program to plan the delivery routes, so they'd need four vans instead of five. That's both of us at risk at once, which is the thing I fear most."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd restart the weekend catering straight away, with the phone AI doing the orders and the prices, which is the part I'm worst at. I'd put my name down for the automated grader training once the first group reports back. And I'd put any catering money onto the café loan and skip the holiday to my sister's."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "How does it feel, picturing that?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Anxious, but busy. I'd sleep badly and then get up and work through my list."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "Why would the route planning matter so much for Viktor?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Viktor's the newest driver at the building suppliers, like I'm the newest grader. If a program makes the routes tighter, they keep four vans and lose the fifth, and the fifth is always the new man. We'd find out on the same Friday, knowing our luck."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "You said the computer would count your passes. Does that already happen?"
-        },
-        {
-          "speaker": "persona",
-          "text": "A bit. The new GPS on the grader already shows how long each section took me. He hasn't said anything yet, but my supervisor looks at the grader's tablet before he looks at the road."
-        }
-      ],
       "say": [
-        "The robots are **slow in this one**, so ask the company its plan for the graders now.",
-        "Get our names on **any training**, and say it calmly, because shouting never changed a date."
+        "I know **truck schedules** may change first while the grader still clears damaged roads.",
+        "I want **proper trials** before anyone uses a screen to cut driver hours."
       ],
       "think": [
-        "A computer that plans the haul roads will **count every pass** I make and notice I'm slow.",
-        "Viktor's company could plan routes by program and **lose a van**, and it's always the new man.",
-        "That puts **both of us** at risk at once."
+        "I worry about **office coworkers** whose planning tasks may shrink.",
+        "I could not absorb **even a small** grader-hours cut with two weeks saved."
       ],
       "do": [
-        "Restarts **weekend catering** straight away, with the phone AI handling orders and prices.",
-        "Puts her name down for **grader training** once the first group reports back.",
-        "Puts catering money on **the café loan** and skips the holiday to her sister's."
+        "**Inspect** a tested dispatch display with the senior driver.",
+        "**Practise** on paid training time if the mine offers it.",
+        "**Compare** each weekly grader roster with the payslip."
       ],
       "feel": [
-        "**Anxious but busy**; she'd sleep badly, then get up and work through her list."
+        "**Anxious** about lost pay despite willingness to learn a proven display."
       ],
       "mood": "anxious",
-      "quote": "My supervisor looks at the grader's tablet before he looks at the road.",
+      "quote": "I can learn a proven display, but I cannot learn my way out of a lost payday overnight.",
       "fieldNote": [
-        "Amira saw the card's thinking tasks reaching her through **route planning** and monitoring, not robots.",
-        "She fears **both wages** going on the same Friday, since she and Viktor are each the newest.",
-        "She already feels watched by **the grader's tablet**."
+        "**Small cuts** matter more than the overall pace because her cushion is so thin.",
+        "**Senior demonstration** is the proof she needs before adopting a new display.",
+        "**Pay records** connect technology worry to a concrete weekly household decision."
       ],
       "actions": [
-        "side-income",
-        "retrain",
-        "save-more",
-        "cut-spending"
-      ],
-      "steps": [
-        {
-          "text": "Restart weekend catering now, with the phone AI pricing the orders",
-          "tag": "side-income"
-        },
-        {
-          "text": "Sign up for automated grader training once the first group reports",
-          "tag": "retrain"
-        },
-        {
-          "text": "Put all catering money onto the café loan",
-          "tag": "save-more"
-        },
-        {
-          "text": "Skip this year's holiday to her sister's",
-          "tag": "cut-spending"
-        }
-      ]
-    },
-    "S2": {
-      "transcript": [
-        {
-          "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
-        },
-        {
-          "speaker": "persona",
-          "text": "2031 for the hands. That's the year Viktor's van and my grader go together."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "At the crew meeting I'd say we have three years before the machines can do our work, so let's find out the company's plan now and make our own. I'd say it calmly. I'm not one for shouting, and shouting wouldn't change the date."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think it means for you?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Privately, the thinking machines in 2028 don't touch my grader much, maybe the planning of which road to cut. But in 2031 the robots come for the grader and for Viktor's delivery van in the same year, and that's my nightmare, both at once. I'd be sixty-three, with the pension still a couple of years off and maybe still owing the bank."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd put every spare cent on the café loan, plus about two hundred a month from catering, to clear it before 2031. I'd restart the weekend catering straight away, and use the AI on my phone for the orders and prices, because by 2028 it'll be good at that. And I'd go to the council in the first year to ask what help there is for older workers, before we're desperate, not after."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "How does it feel, picturing that?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Scared, honestly, but with a list. I'd sleep badly, but I'd get up and do the list."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "Why go to the council before you need help?"
-        },
-        {
-          "speaker": "persona",
-          "text": "When the café closed, we waited until the bank letters came, and by then every office had a queue. I learned that the hard way. This time I'd want my name on whatever list there is while the queue is short."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "Would the catering be enough if both jobs went?"
-        },
-        {
-          "speaker": "persona",
-          "text": "No, not by itself. Birthday cakes and funeral trays won't pay a mortgage on a café that doesn't exist. But a hundred a week from the catering would keep the lights on while we work out the rest."
-        }
-      ],
-      "say": [
-        "We have **three years** before the machines can do our work.",
-        "Let's find out **the company's plan** now and make our own, because shouting won't change the date."
-      ],
-      "think": [
-        "The 2028 machines barely touch my grader, but in 2031 robots take the grader and **Viktor's van** together.",
-        "I'd be sixty-three, with the pension a couple of years off and maybe **still owing** the bank."
-      ],
-      "do": [
-        "Puts every spare cent and about **200 a month** from catering onto the café loan.",
-        "Restarts **weekend catering** at once, with the phone AI on orders and prices.",
-        "Goes to **the council** in year one to ask about help for older workers."
-      ],
-      "feel": [
-        "**Scared but organised**: she'd sleep badly, then get up and work through her list."
-      ],
-      "mood": "alarmed",
-      "quote": "Birthday cakes and funeral trays won't pay a mortgage on a café that doesn't exist.",
-      "fieldNote": [
-        "Amira saw that the three-year gap lands **both their jobs** in the same year, the outcome she fears most.",
-        "Her plan is to **clear the café loan** first and get on the council's list early.",
-        "The café taught her that **waiting for the letters** costs you."
-      ],
-      "actions": [
-        "save-more",
-        "side-income",
-        "seek-support"
-      ],
-      "steps": [
-        {
-          "text": "Put every spare cent and catering money on the café loan before 2031",
-          "tag": "save-more"
-        },
-        {
-          "text": "Restart weekend catering now, using the phone AI for orders and prices",
-          "tag": "side-income"
-        },
-        {
-          "text": "Ask the council in year one about help for older workers",
-          "tag": "seek-support"
-        }
-      ]
-    },
-    "S3": {
-      "transcript": [
-        {
-          "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
-        },
-        {
-          "speaker": "persona",
-          "text": "2034 for the robots. I'd be sixty-six. That's past the pension."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say at the crew meeting this is the sensible one, there's time to plan properly. Let the company say what it's doing and we'll do the same. Nothing dramatic."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think it means for you?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Honestly, I think I'd make it. The robot graders and the robot vans come in 2034, and I'd be retiring around then anyway. If I can clear the café loan in three years, I can face the robots with nothing owing, and that changes everything for me."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd put about two hundred a month of catering money onto the loan for three years. I'd take the automated grader course once the first group reports back, so I'm useful in the last years. After the loan's cleared, I'd start saving."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "How does it feel, picturing that?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Uneasy, but steady. It's a plan I can see the end of."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What about Viktor in this one?"
-        },
-        {
-          "speaker": "persona",
-          "text": "He'd be sixty-five in 2034, so he'd be right at the edge too. It would be close for both of us, but close is better than over. We'd make it if nothing else breaks."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "Would the thinking machines in 2031 change anything for you?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Maybe the catering. The AI would do the ordering and the pricing better than me. I'd let it, and spend my time on the pastries, which is the part people pay for."
-        }
-      ],
-      "say": [
-        "This is **the sensible one**, with time to plan properly.",
-        "Let the company say what it's doing and **we'll do the same**."
-      ],
-      "think": [
-        "I'd **make it**, because robot graders and vans come in 2034, around when I'd retire anyway.",
-        "If I clear the café loan in three years, I face the robots **with nothing owing**."
-      ],
-      "do": [
-        "Puts about **200 a month** of catering money onto the café loan for three years.",
-        "Takes **the automated grader course** once the first group reports back.",
-        "Starts **saving** once the loan is cleared."
-      ],
-      "feel": [
-        "**Uneasy but steady**, with a plan she can see the end of."
-      ],
-      "mood": "uneasy",
-      "quote": "If I can clear the café loan in three years, I can face the robots with nothing owing, and that changes everything for me.",
-      "fieldNote": [
-        "With robots due in 2034, she and Viktor reach retirement **right at the edge**.",
-        "Her steady approach shows in waiting for **the first group** before taking the course.",
-        "She'd let AI take **the business side** of catering and keep the baking."
-      ],
-      "actions": [
-        "save-more",
-        "side-income",
-        "learn-ai"
-      ],
-      "steps": [
-        {
-          "text": "Put about two hundred a month of catering money on the café loan",
-          "tag": "save-more"
-        },
-        {
-          "text": "Keep the weekend catering going, with AI doing orders and pricing",
-          "tag": "side-income"
-        },
-        {
-          "text": "Take the automated grader course once the first group reports back",
-          "tag": "learn-ai"
-        }
-      ]
-    },
-    "S4": {
-      "transcript": [
-        {
-          "speaker": "interviewer",
-          "text": "And the last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
-        },
-        {
-          "speaker": "persona",
-          "text": "Ten years and thirteen. I'd be retired well before."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say this one's fine for people my age and a warning for the young ones. At the crew meeting I'd tell the young ones to learn the new systems early. I'd say it kindly."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think it means for you?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Off the record, ten years means the robots arrive at my retirement party, not my job interview. My worry would be the town after we're gone. If the mine runs itself, who buys coffee?"
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd clear the café loan in the first three years, then save for retirement. I'd learn the new grader systems alongside the others when they come. And I'd keep the catering going for money and for something to do after I stop."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "How does it feel, picturing that?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Calm. It's the first picture where the timing works for us."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What would retirement look like?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Pastries on Saturdays, Viktor fixing the neighbours' cars, grandchildren on Sundays. Small things, but ours. Nothing owed to anybody."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "You said 'who buys coffee'. What do you mean?"
-        },
-        {
-          "speaker": "persona",
-          "text": "When the mine had a bad year, nobody bought coffee, and our café died. A mine that runs itself doesn't stop for a flat white. That's the town's worry, not mine, but I'd still feel it."
-        }
-      ],
-      "say": [
-        "This one's **fine** for people my age and a warning for the young ones.",
-        "The young ones should **learn the new systems** early."
-      ],
-      "think": [
-        "Ten years means robots arrive at **my retirement party**, not my job interview.",
-        "My worry would be **the town**: if the mine runs itself, who buys coffee?"
-      ],
-      "do": [
-        "Clears **the café loan** in the first three years, then saves for retirement.",
-        "Learns **new grader systems** alongside colleagues when they come.",
-        "Keeps **the catering** going for money and for something to do later."
-      ],
-      "feel": [
-        "**Calm**, because it's the first picture where **the timing works** for them."
-      ],
-      "mood": "calm",
-      "quote": "Ten years means the robots arrive at my retirement party, not my job interview.",
-      "fieldNote": [
-        "With the long timeline Amira expects to retire first and is **calm** for the first time in the AGI pictures.",
-        "Her concern turns to **the town's economy**, shaped by watching her café die in a downturn.",
-        "Her plan is the same steady **debt-then-savings** path."
-      ],
-      "actions": [
-        "save-more",
-        "side-income",
+        "learn-ai",
         "keep-going"
       ],
       "steps": [
         {
-          "text": "Clear the café loan in three years, then save for retirement",
-          "tag": "save-more"
+          "text": "Practise the tested dispatch display on paid time if offered",
+          "tag": "learn-ai"
         },
         {
-          "text": "Keep the weekend catering going into retirement",
-          "tag": "side-income"
-        },
-        {
-          "text": "Keep grading roads at Mount Selwyn and learn new systems with the crew",
+          "text": "Compare each grader roster with the weekly payslip",
           "tag": "keep-going"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would say AI may schedule the trucks, but our grader still has to clear the road after rain. I would want a proper trial before a planner cuts a driver because the screen looks tidy."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The office work will change first, which could affect people I know. Our hands-on grader shifts may last longer, yet slower robots could take some later. As a junior driver with two weeks saved, I cannot shrug off even a small cut."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I would ask the senior driver to show me any new dispatch display after it has been tested. In the first year I would practise on paid time if the mine offers training and keep a weekly list of the grader hours I actually get."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious. I can learn a proven display, but I cannot learn my way out of a lost payday overnight."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would the weekly list show?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would write each shift beside the payslip and ask payroll about any difference. My partner and I would use that number when planning the next week of groceries."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who in the office concerns you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The scheduler, my coworker Enzo, builds the morning road plan. I would ask him what the new system changes before repeating rumours at lunch."
+        }
+      ]
+    },
+    "S2": {
+      "say": [
+        "I separate **2028 planning** change from capable grader robots around 2031.",
+        "I want **remaining shifts** stated before the mine describes a smooth transition."
+      ],
+      "think": [
+        "I expect **junior graders** to lose shifts first, perhaps most of mine.",
+        "I cannot bridge a long gap with **two weeks** saved and few nearby mine jobs."
+      ],
+      "do": [
+        "**Request** written grader trial shift numbers from the supervisor now.",
+        "**Take** paid equipment-monitoring training after 2028 if offered a place.",
+        "**Apply** for local plant attendant work if grader hours fall."
+      ],
+      "feel": [
+        "**Alarmed** by expected major hour losses and sleepless worry about bills."
+      ],
+      "mood": "alarmed",
+      "quote": "I keep waking up with a number in my head: how many shifts until the electricity is unpaid?",
+      "fieldNote": [
+        "**Age 63** at capable robots gives no safe retirement assumption on lower wages.",
+        "**Expected roster priority** for senior drivers supports her fear of losing most shifts.",
+        "**Training place** must be paid and offered; she will not spend a two-week cushion on private fees."
+      ],
+      "actions": [
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Take paid equipment-monitoring training if offered a place",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for local plant attendant work if grader hours fall",
+          "tag": "change-job"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would tell the crew that AI changes planning by 2028, but capable grader robots are a later risk around 2031. We need the mine to say which driving shifts remain before it promises a smooth change."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would be 63 when those robots arrive. I expect junior graders to be first off the roster if machines keep the roads level, and I might lose most of my shifts. Two weeks of savings and few nearby mine openings would leave my partner carrying bills alone."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I would ask the supervisor now for a written estimate of grader shifts in the robot trial. In the first year after 2028 I would take a paid equipment-monitoring course if a place is offered, and apply for local plant attendant work if my grader hours fall."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Alarmed. I keep waking up with a number in my head: how many shifts until the electricity is unpaid?"
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you do without a course place?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would keep driving every shift offered and ask the supervisor again when places are posted. I would not pay a private fee from two weeks of savings."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does your partner say?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My partner would rather see the shift figures than hear me promise everything will be fine. We would list the next month of bills before deciding what can wait."
+        }
+      ]
+    },
+    "S3": {
+      "say": [
+        "I see **2031 planning** change before capable grader robots around 2034.",
+        "I want **shift numbers** early enough to make a household plan."
+      ],
+      "think": [
+        "I may be **66** at robot arrival and still need paid work.",
+        "I cannot assume a **pension** covers rent and medicine with my partner’s pay."
+      ],
+      "do": [
+        "**Request** a pension estimate and compare it with monthly essentials.",
+        "**Practise** monitoring on paid time after 2031 if the mine offers it.",
+        "**Keep** driving the grader while wages are needed."
+      ],
+      "feel": [
+        "**Anxious** about retirement income, with more time to check real figures."
+      ],
+      "mood": "anxious",
+      "quote": "I would not call retirement settled just because a birthday passed.",
+      "fieldNote": [
+        "**Pension uncertainty** keeps the 2034 robot date relevant at age 66.",
+        "**Paid practice** remains conditional on a mine offer, fitting her careful approach to new tools.",
+        "**Adult children** receive information, not a request to fund the household."
+      ],
+      "actions": [
+        "retrain",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Practise equipment monitoring on paid time if the mine offers it",
+          "tag": "retrain"
+        },
+        {
+          "text": "Keep driving the grader while household wages are needed",
+          "tag": "keep-going"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would say planning changes in 2031 and capable grader robots arrive around 2034, so we have time to ask for proper numbers. I would rather hear a difficult answer now than a pleasant one the week before a cut."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would be 66 by the robot date. I might qualify for a pension, but I do not know whether it would cover rent and medicine with my partner’s wages. If not, every grader shift would still matter."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I would request a pension estimate this year and put it beside our usual rent, food and medicine. In the first year after 2031 I would ask for paid monitoring practice on the new machines if the mine offers it, and keep taking grader shifts while the household needs the pay."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, but less hurried than with a 2031 robot date. There is time to find out whether the pension actually covers anything useful."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What if the pension is short?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would ask the local advice desk to check my figures and look for reachable paid work. I would not call retirement settled just because a birthday passed."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you ask your grown children?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would tell them our plan, but I would not count their wages as ours. They are trying to keep their own households going."
+        }
+      ]
+    },
+    "S4": {
+      "say": [
+        "I see **2036 planning** and 2039 grader robots as separate changes.",
+        "I want **older workers** shown what their pensions will actually pay."
+      ],
+      "think": [
+        "I may need **paid work** before robots arrive if rent outruns the pension.",
+        "I cannot assume my partner’s **shop hours** will last into our seventies."
+      ],
+      "do": [
+        "**Keep** available grader shifts while they pay bills.",
+        "**Seek** public retirement advice after 2036 about pension and rent.",
+        "**Look** for a bus-accessible part-time yard job if the income gap remains."
+      ],
+      "feel": [
+        "**Anxious** about retirement income, despite the distant robot date."
+      ],
+      "mood": "anxious",
+      "quote": "A possible mine shift far away is not worth paying for another home.",
+      "fieldNote": [
+        "**Age 68** at thinking AI and 71 at robots shifts her immediate concern to pension adequacy.",
+        "**Bus distance** sets a real limit on any part-time job search.",
+        "**Thin savings** mean extra preparation time does not automatically become financial security."
+      ],
+      "actions": [
+        "keep-going",
+        "seek-support",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Keep available grader shifts while they pay household bills",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Seek public retirement advice after 2036 about the pension gap",
+          "tag": "seek-support"
+        },
+        {
+          "text": "Look for bus-accessible yard work if income falls short",
+          "tag": "change-job"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would tell the crew that AI takes some planning in 2036, while capable grader robots arrive around 2039. I would be 71 by then, so what matters first is whether older workers can afford to stop."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "At 68 in 2036 I hope the pension is enough, but two weeks of savings today is a poor start. My partner might still have shop hours, or might not. If rent keeps climbing, I may need paid work before the robots ever touch a grader."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I would keep the shifts I am offered and review the pension estimate each year. In the first year after 2036 I would ask a public retirement adviser to check the gap between pension and rent, then look for a part-time job within bus distance if the gap remains."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious about money, though the machine date feels far away. More time helps only if our account grows."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Where would you look for part-time work?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would ask at the local depot about vehicle washing and yard jobs. I would need a bus route that still runs after the evening shift."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you move for another mine?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would stay near my partner and grown children. A possible mine shift far away is not worth paying for another home."
         }
       ]
     }
@@ -557,7 +480,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because the robots would take Viktor's van and my grader in the same year, before my pension, and we might still owe the bank. What would help is the government letting people over fifty-five freeze business debts if they lose their jobs to automation, and a bit of help to start something small, like my catering. Practical help, not speeches."
+      "text": "AGI by 2028 worries me most because capable grader robots around 2031 could take junior shifts before I can rely on a pension. A paid equipment-monitoring place and honest roster numbers would help. I would need another local job if most of my driving hours disappeared."
     },
     {
       "speaker": "interviewer",
@@ -565,23 +488,22 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the town. When the mine had a bad year, my café died. If the mine goes, every café, every hairdresser, every school goes with it. People forget that."
+      "text": "Ask how a worker gets to the next job. A training offer is no help if the bus stops before the shift ends."
     }
   ],
-  "headlineQuote": "When the mine had a bad year, my café died. If the mine goes, every café, every hairdresser, every school goes with it.",
+  "headlineQuote": "A training offer is no help if the bus stops before the shift ends.",
   "portrait": [
-    "Amira Ziegler, 58, grades **the haul roads** at the Mount Selwyn iron ore mine, after her café failed in a mining downturn.",
-    "She and Viktor, now a van driver, still **owe the bank** for the café and have about two weeks of savings.",
-    "In a plateau she's **anxious** about the iron ore price, which could cut both their jobs at once.",
-    "Steady change keeps her **anxious**, as AI route planning and grader tracking expose two newest workers.",
-    "AGI by 2028 **alarms** her; with five or ten years she has a debt-then-savings plan with real numbers."
+    "**Amira, 58**, is still learning to drive a grader on haul roads and checks difficult corners with a senior operator.",
+    "**Two weeks** of savings and irregular shop hours for her partner make ordinary bills a worry even under AI Plateau.",
+    "**Proven displays** interest her if a senior driver demonstrates them and the mine pays for practice.",
+    "**Fast AGI** alarms her because 2028 planning changes could lead to major junior-shift losses around 2031.",
+    "**Longer warning** gives her time to check pension figures, yet rent, medicine and bus access still shape her options."
   ],
   "biggestWorry": [
-    "**AGI by 2028**, because robots would take her grader and Viktor's van in the same year, before her pension.",
-    "They might **still owe** the bank then."
+    "**AGI by 2028** could remove most junior grader shifts around 2031 while she still needs wages."
   ],
   "whatWouldHelp": [
-    "Letting older workers who lose jobs to automation **freeze business debts**.",
-    "Help to start **something small**, like her catering."
+    "**Paid monitoring training** and written shift numbers would give her a clearer route through the change.",
+    "**Local reachable work** would matter if grader shifts fell before pension income covered bills."
   ]
 }

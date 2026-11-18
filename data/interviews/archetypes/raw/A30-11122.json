@@ -1,0 +1,588 @@
+{
+  "id": "A30-11122",
+  "archetype": "A30",
+  "job": "Police officer",
+  "sector": "Government",
+  "name": "Esther Chen",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "thin",
+    "outlook": "centre",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for meeting me, Esther. I'm with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or government. What you say is confidential, so you can tell me what you'd say in public and what you really think. Can you describe a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm a patrol constable at the Riverside station, covering the streets along the river and the Ferry Lane flats. About one day in four they put me on the front counter instead, dealing with people who walk in: lost wallets, someone reporting a stolen bike, someone who just wants to talk. I'm two and a half years in and still learning, especially the law bits. I have to look things up more than I'd like."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What's the part you enjoy?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The domestic calls, oddly, even though they're the hardest. You walk into a flat and someone's scared, and if you get it right, they trust you enough to talk. I'd like to move to the domestic abuse team one day. The front counter bores me, to be honest, it's mostly forms."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "And outside work?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I rent a studio flat on Cooper Street on my own. My mum lives across town; she cleans offices and her knees are bad, so I pay for her prescriptions and help with her bills. That leaves me with maybe two weeks of savings at any time. I use one of those AI chat apps now and then to check my emails sound right, nothing more."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "persona",
+          "text": "Okay. Not much changes. I'd be fine with that, I think."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's what I expected: a bit of help with forms, nothing big. At work I'd probably say I'm glad, because policing is about judgement and people. Online I'd stay out of it, I'm not much of a poster."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For me, my job's safe. The pressure is the same as now: the studio rent, helping my mum, and nothing left over. If my mum's knees get worse and she can't clean, her income drops and mine has to cover more."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep going and try to get on the domestic abuse awareness course next year, because that's the path I want. I'd set up a standing order of fifty a month into savings, even if it's small. Maybe I'd use the AI app a bit more for writing statements, once I've seen the others do it without getting in trouble."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm about work, a bit tired about money. That's normal for me."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said if your mum's knees get worse, you'd have to cover more. How much more?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Probably two or three hundred a month, if she had to stop working. I'd manage, but savings would be gone, and I'd stop going out at all. My brother lives abroad and sends a bit, but not much."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you say to your mum about all this AI talk?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell her straight. Nobody's built a robot that cleans under a desk properly, so office cleaners like my mum are safer than people think. She'd laugh. She worries more about her knees than about computers."
+        }
+      ],
+      "say": [
+        "AI is **a bit of help** with forms, nothing big.",
+        "Policing is about **judgement and people**, so I'm glad nothing major changed."
+      ],
+      "think": [
+        "My **job is safe**, but rent and helping my mum leave nothing over.",
+        "If **mum's knees** stop her cleaning, I'd cover two or three hundred more."
+      ],
+      "do": [
+        "Apply for the **domestic abuse awareness** course next year.",
+        "Set up a **fifty-a-month** standing order into savings.",
+        "Try the AI app for **statements** once colleagues use it safely."
+      ],
+      "feel": [
+        "**Calm about work**, tired about money, which is normal for her."
+      ],
+      "mood": "uneasy",
+      "quote": "Nobody's built a robot that cleans under a desk properly, so office cleaners like my mum are safer than people think.",
+      "fieldNote": [
+        "Her pressure is **family support** for her mother, not her own job.",
+        "Steady approach: uses AI **after others prove** it's safe.",
+        "Has a clear career goal: the **domestic abuse team**."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep patrolling Riverside and covering the front counter",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for the domestic abuse awareness course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Set up a fifty-a-month standing order into savings",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Thanks. This one's called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "persona",
+          "text": "That sounds about right for the next few years. The front counter would be the first thing to go."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's sensible if it gets more officers out of the station and into people's homes when they need us. I'd say the front counter could be a screen, honestly, and people would agree. I'd want the force to be clear and fair about who moves where."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, it's mixed. A quarter of my week is the counter, and that's forms and answering questions, which is what the card says goes. So I'd be pushed onto patrol full time, which is fine, but there'd be fewer new officers and more pressure on each of us. My job feels safe; it's the shape of it that changes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd take the training on the new systems once the first group has done it and said it's okay. I'd push for the domestic abuse course sooner, because the human side is where I want to be. And I'd keep the fifty a month going, maybe a hundred if overtime holds up."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy but okay. It's on my mind, not keeping me up."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who at the station would you worry about?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Linda, the civilian who runs the front counter full time. She's in her fifties and the counter is her whole job. If they put a screen in, I don't know where she goes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You use AI to check emails. Would you use it for statements if the force said yes?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Yes, once I've seen it done properly. A statement has to be the person's words, not tidied up. If the tool changed what a victim said, I'd stop using it straight away."
+        }
+      ],
+      "say": [
+        "AI makes sense if it gets **officers into homes** when people need them.",
+        "The **front counter** could honestly be a screen, and the force should be fair."
+      ],
+      "think": [
+        "A quarter of my week is the **counter**, which is the kind of work AI takes.",
+        "My job feels safe, but there'd be **fewer new officers** and more pressure."
+      ],
+      "do": [
+        "Take the **systems training** after the first group says it's fine.",
+        "Push for the **domestic abuse course** sooner.",
+        "Raise savings to **a hundred a month** if overtime holds."
+      ],
+      "feel": [
+        "**Uneasy but okay**, on her mind but not keeping her up."
+      ],
+      "mood": "uneasy",
+      "quote": "A statement has to be the person's words, not tidied up.",
+      "fieldNote": [
+        "She sees the **front counter** part of her week going but expects to stay employed.",
+        "Her concern for the **civilian counter worker** is specific and personal.",
+        "Draws a clear line: a tool that **changes a victim's words** is out."
+      ],
+      "actions": [
+        "learn-ai",
+        "retrain",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Take the new systems training after the first group",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Push for an earlier place on the domestic abuse course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Raise savings to a hundred a month if overtime holds",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Now the faster ones. This one's called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "persona",
+          "text": "Two years. That's quick. I'd be twenty-nine."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the government should slow it down for public services and think about people first. At work I'd say police still need to be people, especially at domestics. I'd probably share one or two things online, the sensible ones."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Truthfully, if AI can do any thinking work by 2028, then the reports, the counter, the planning, the case files all go. What's left is going into homes and calming things down, which robots can't do until around 2031, and maybe not well even then. I'd probably keep a job, but there'd be far fewer of us, and I'm junior and not the strongest on the law."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd apply for the domestic abuse team straight away, not next year. I'd cut back hard, no meals out, cheaper phone, and save every bit of overtime. I'd talk to my mum and brother about a plan for her bills if my pay dropped, and maybe I'd move in with her to save the studio rent."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, but I can still see a way through. Narrow, though."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does the three-year gap between thinking AI and robots mean for your work?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It means the paperwork side goes in 2028 and I'm left with the hands-on side till 2031. For me that's actually the part I love, the domestics. But it also means three years of everyone fighting over fewer patrol jobs."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If you moved in with your mum, what would that be like?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Cramped. She's got a two-bed with a tiny kitchen and she watches TV loud. Moving in with my mum would save eight hundred a month, and I'd be there for her knees. I'd do it without a fuss."
+        }
+      ],
+      "say": [
+        "Government should **slow it down** for public services.",
+        "Police still need to be **people**, especially at domestics.",
+        "I'd share **one or two** sensible posts online."
+      ],
+      "think": [
+        "The **paperwork side** goes by 2028; only the hands-on part is left.",
+        "I'd likely keep a job, but as a **junior** in a smaller force I'm at risk."
+      ],
+      "do": [
+        "Apply for the **domestic abuse team** straight away.",
+        "Cut meals out and phone costs, and **save all overtime**.",
+        "Consider moving in with her mum to save **eight hundred** a month."
+      ],
+      "feel": [
+        "**Anxious**, but still seeing a narrow way through."
+      ],
+      "mood": "anxious",
+      "quote": "Moving in with my mum would save eight hundred a month, and I'd be there for her knees.",
+      "fieldNote": [
+        "She thinks the **hands-on core** she loves is also what lasts longest.",
+        "Willing to move in with **her mother** to cut costs without fuss.",
+        "Risk comes from **competition** for fewer patrol jobs as a junior."
+      ],
+      "actions": [
+        "change-job",
+        "cut-spending",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Apply now for the domestic abuse team",
+          "tag": "change-job"
+        },
+        {
+          "text": "Cut meals out and switch to a cheaper phone",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Give up the Cooper Street studio and move in with her mum",
+          "tag": "family-plans"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Same end point, a bit slower. This one's called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "persona",
+          "text": "2031. Five years. That's enough to get where I want to be, I think."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we've got time to plan it properly, so the force should start training people now. At work I'd tell the younger ones to pick a specialism. Online, probably nothing much."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, five years is enough to get onto the domestic abuse team and be good at it by the time AGI arrives. That work is about trust in a kitchen at two in the morning, which I think lasts longest. Robots come around 2034, and I don't see a robot doing that well."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd do the domestic abuse course in the next year and apply for the team the year after. I'd start using the AI tools for my statements once the force signs them off, so I'm not behind. And I'd try to keep a hundred a month in savings, more in the years Mum is okay."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Fairly settled. Some unease, but mostly it feels like a plan."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said a domestic abuse post lasts longest. What if it doesn't?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Then I'd look at social work or a refuge charity, because it's the same skill. I've talked to the refuge workers on Ferry Lane, and they're always short. It wouldn't pay more, but it would be work."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How would your mum's situation change things?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If she stops working, I'd have less to save and I'd need the overtime. That's the bit I can't plan for. My mum's knees decide more about my money than AI does."
+        }
+      ],
+      "say": [
+        "We have time, so the force should **start training** people now.",
+        "Younger officers should **pick a specialism** early."
+      ],
+      "think": [
+        "Five years gets me onto the **domestic abuse team** before AGI arrives.",
+        "That work is about **trust**, which I think lasts longest."
+      ],
+      "do": [
+        "Do the **domestic abuse course** within a year, then apply for the team.",
+        "Use AI tools for **statements** once the force signs them off.",
+        "Keep saving **a hundred a month**, more when her mum is well."
+      ],
+      "feel": [
+        "**Fairly settled**, with some unease."
+      ],
+      "mood": "uneasy",
+      "quote": "My mum's knees decide more about my money than AI does.",
+      "fieldNote": [
+        "With five years, she feels she can **reach a safe niche** in time.",
+        "Backup plan is **refuge or social work**, using the same skills.",
+        "Her real money risk is **her mother's health**, not technology."
+      ],
+      "actions": [
+        "retrain",
+        "learn-ai",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Take the domestic abuse course and apply for the team",
+          "tag": "retrain"
+        },
+        {
+          "text": "Use force-approved AI tools to draft statements",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep a hundred a month in savings for her mum's bills",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "And the slowest. This one's called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "persona",
+          "text": "2036. Ten years. I'd be thirty-seven and hopefully a specialist by then."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's time to do this well, so let's not panic. At work I'd say the people side of policing will matter more, not less. It would be a background topic."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Honestly, ten years feels fine for me. I'd have time to get onto the domestic abuse team, get good, and see how it goes. The money is still thin, though, and the only thing I really can't plan is my mum."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep going as I am, do the course, apply for the team in a couple of years. I'd learn the AI tools at a normal pace with everyone else. And I'd keep saving small amounts, maybe look for a cheaper studio when my lease ends."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Mostly calm, a bit of background worry."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you do anything differently with ten years compared with five?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Probably I'd relax more, which might be a mistake. With five years I'd push. With ten I'd let it slide a bit, I know myself."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you want your life to look like in 2036?"
+        },
+        {
+          "speaker": "persona",
+          "text": "On the domestic abuse team, my mum looked after, maybe a partner, a flat that isn't a studio. Nothing fancy. Just room to breathe."
+        }
+      ],
+      "say": [
+        "There's time to do this **well**, so let's not panic.",
+        "The **people side** of policing will matter more, not less."
+      ],
+      "think": [
+        "Ten years feels **fine**; I'd become a specialist and see how it goes.",
+        "Money is still **thin**, and I can't plan for my mum's health."
+      ],
+      "do": [
+        "Do the course and apply for the **domestic abuse team** in two years.",
+        "Learn the **AI tools** at a normal pace.",
+        "Look for a **cheaper studio** when the lease ends."
+      ],
+      "feel": [
+        "**Mostly calm**, with background worry."
+      ],
+      "mood": "uneasy",
+      "quote": "With five years I'd push. With ten I'd let it slide a bit, I know myself.",
+      "fieldNote": [
+        "Ten years makes her **relax**, which she sees as a risk.",
+        "Her goals are modest: **room to breathe**, mum looked after.",
+        "Still uneasy because of **thin savings** and family duties."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Keep patrolling Riverside while learning the new tools",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for the domestic abuse team within two years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Move to a cheaper studio when the Cooper Street lease ends",
+          "tag": "cut-spending"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028. Two years wouldn't be enough for me to get onto the domestic abuse team, and I'd be one of many juniors fighting for fewer jobs. What would help is the force putting people into specialist training early, and some kind of support for families like mine where one person is holding up two households."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Maybe what victims want. A woman who's been hurt at home doesn't want to tell a screen. If the force forgets that, people will just stop calling."
+    }
+  ],
+  "headlineQuote": "A woman who's been hurt at home doesn't want to tell a screen.",
+  "portrait": [
+    "A **27-year-old patrol constable** at Riverside who also covers the front counter one day in four.",
+    "Lives alone in a **studio** and pays toward her mother's bills, leaving about two weeks of savings.",
+    "Uses AI **now and then**, waiting until colleagues show a tool is safe.",
+    "Aims for the **domestic abuse team**, which she believes lasts longest as AI spreads.",
+    "Moves from **uneasy to anxious** in the fast case, ready to move in with her mum."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, as she'd be a junior competing for fewer jobs before reaching her specialism."
+  ],
+  "whatWouldHelp": [
+    "Early **specialist training** from the force.",
+    "Support for people holding up **two households**."
+  ]
+}

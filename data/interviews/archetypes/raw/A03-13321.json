@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Marco. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and we're not selling anything. Everything you say stays confidential, so you can tell me what you'd say in public and also what you really think. To start, can you walk me through a normal working day?"
+      "text": "I’m a senior field researcher with the independent Work Futures Panel. We have no ties to employers, AI firms, unions, parties or government, and we don’t sell anything or campaign. Your answers are confidential. What does a normal day at work look like?"
     },
     {
       "speaker": "persona",
-      "text": "I do live-line work on the suburban network, which means working on lines while the power's still on, from a bucket truck with insulated tools. We do it so a whole street of houses doesn't lose power while we change a fuse or a cutout. A normal day is two or three jobs around the ring road suburbs, a sandwich in the truck, and back at the depot by four. I like that it's exact, every move has a reason. What wears me out is traffic, honestly, more than the work."
+      "text": "I’m Marco Tanaka, 27, a senior lineworker and acting lead for a crew. We meet at the old stone substation, review the printed switching order and travel to the repair; I carry a grease pencil to mark which fittings we’ve checked."
     },
     {
       "speaker": "interviewer",
-      "text": "Who's in the bucket with you?"
+      "text": "What do you enjoy about the job, and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "Usually Benny, he's been my partner for four years. We barely talk up there, we don't need to, I hold, he cuts, that kind of thing. On weekends I go fishing at the reservoir or work on an old motorbike I've been rebuilding for two years, and I've paid most of my flat off, so life's pretty settled."
+      "text": "I like that the crew can see what it fixed, and I like making a safe call under pressure. I earn higher pay than the job average and have more than six months of expenses saved, though long night shifts still take a toll."
     }
   ],
   "scenarios": {
@@ -36,11 +36,7 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture. It's called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\""
-        },
-        {
-          "speaker": "persona",
-          "text": "Good. That's what I'd expect, really."
+          "text": "AI Plateau: Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +44,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say I'm not surprised, most new stuff gets oversold. At the depot I'd say something like, told you, the bucket truck isn't going anywhere. I don't post online, so nothing there."
+          "text": "I’d say software may make the outage report quicker, but it cannot look at a coupling and decide whether it should be replaced. I’d want a worker to check the equipment before the job is closed."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means my life stays how I like it. Same jobs, same partner, same reservoir on Sundays. I've had the same pair of rubber gloves tested every month for years, and nobody's going to replace that with a chatbot."
+          "text": "I don’t expect the small office change to affect my pay or the climbing work. I have a solid reserve and nearby employers, so a slow month would be inconvenient rather than a crisis."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing different. Keep working, keep paying off the flat, I'd like it clear in about three years. Maybe finally finish the motorbike."
+          "text": "I’d compare each new report with the crew’s grease-pencil marks until we knew it captured the actual replacements. I’d keep my normal shifts and add to my savings from the overtime pay."
         },
         {
           "speaker": "interviewer",
@@ -72,46 +68,67 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like a Sunday at the reservoir."
+          "text": "I feel calm because routine reporting is a small part of the job. I still won’t close a work order if a person hasn’t checked the equipment."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use any AI tools yourself, even a little?"
+          "text": "What would you do if a report showed the wrong fitting?"
         },
         {
           "speaker": "persona",
-          "text": "No. My phone has some assistant thing on it and I turned it off. I don't need a machine guessing what I want to say."
+          "text": "I’d keep the job open and ask the crew to match the part number to the tag on the pole. I’d correct the report after the field check, not guess from the office."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything about this picture that worries you?"
+          "text": "Would you use your savings to buy a personal AI subscription for work?"
         },
         {
           "speaker": "persona",
-          "text": "Not really. Maybe the company finds some other new thing to spend money on that doesn't work. But that happens every year anyway."
+          "text": "No, my employer should provide work tools and decide whether they meet its rules. I’d leave my savings for household costs and future choices."
         }
       ],
-      "say": "He'd say he's not surprised because most new things are oversold, and tell the depot the bucket truck isn't going anywhere. He doesn't post online.",
-      "think": "His life stays exactly as he likes it, with the same jobs, partner and Sunday fishing. Nothing about his monthly-tested gloves gets replaced by a chatbot.",
-      "do": "Keeps working as normal and keeps paying off his flat, aiming to clear it in about three years. Plans to finally finish rebuilding his motorbike.",
-      "feel": "Calm, like a Sunday at the reservoir.",
+      "say": [
+        "I’d say software can speed reports, but it cannot inspect a **coupling**.",
+        "I’d want a worker to check equipment before **closing the job**."
+      ],
+      "think": [
+        "I don’t expect a small office change to affect **my climbing work**.",
+        "A slow month would be inconvenient, not a crisis, with **my reserve**."
+      ],
+      "do": [
+        "Compare each report with the crew’s **grease-pencil marks**.",
+        "Keep **normal shifts** and add overtime pay to savings.",
+        "Leave **work tools** for the employer to provide."
+      ],
+      "feel": [
+        "I feel **calm**, because reporting is a small part of my job."
+      ],
       "mood": "calm",
-      "quote": "I've had the same pair of rubber gloves tested every month for years, and nobody's going to replace that with a chatbot.",
-      "fieldNote": "Marco is settled and quietly sure of himself. He has switched off the AI assistant on his phone and sees no reason to use any of it. His satisfaction comes from routine and exactness, and he barely needs to talk to his bucket partner.",
+      "quote": "I still won’t close a work order if a person hasn’t checked the equipment.",
+      "fieldNote": [
+        "Marco relies on **field inspection** rather than accepting a polished report that might miss a fault at a site.",
+        "Higher wages and **substantial savings** make this scenario financially manageable."
+      ],
       "actions": [
         "keep-going",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Compare new reports with crew marks before closing work orders",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Add overtime pay to the savings balance",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust.\""
-        },
-        {
-          "speaker": "persona",
-          "text": "Hmm. That's more realistic. I don't love it."
+          "text": "Steady Disruption: Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +136,7 @@
         },
         {
           "speaker": "persona",
-          "text": "At work I'd say we'll see, they always bring in new stuff and half of it doesn't stick. To friends I'd say my job's hands-on so I'm probably okay. I wouldn't make a big deal of it."
+          "text": "I’d say route planning can be faster without letting a program decide the safe approach to a pole. I’d ask for the old map to stay available until crews have checked the new route system in real conditions."
         },
         {
           "speaker": "interviewer",
@@ -127,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think the company would start pushing tablets and tracking and new procedures, and I'd hate that. I'd still have a job, but it would feel less like mine. I don't mind change at the edges, I mind someone rewriting the steps I know by heart."
+          "text": "Some of my lead paperwork and planning can be automated, and I could lose those hours. I have good savings and plenty of utilities nearby, but I prefer to see written terms before trusting that the field role stays the same."
         },
         {
           "speaker": "interviewer",
@@ -135,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep doing what I'm doing and see what actually changes before I do anything. If they made the new training compulsory, I'd do it, but I wouldn't volunteer. I'd keep paying off the flat so if things go sideways I've got no rent. That's my safety net."
+          "text": "I’d ask a senior dispatcher to show me the route system and compare it with several completed jobs. I’d keep my field practice current and check the company’s actual staffing plan before looking elsewhere."
         },
         {
           "speaker": "interviewer",
@@ -143,47 +160,72 @@
         },
         {
           "speaker": "persona",
-          "text": "A bit uneasy. Like someone moving the furniture around in your house."
+          "text": "I’m uneasy because part of my lead work is thinking work, but I have money and local choices. I don’t want to be the last person to hear that my hours have been changed."
         },
         {
           "speaker": "interviewer",
-          "text": "If they changed the steps, what would that look like on a normal job?"
+          "text": "What would count as enough proof that the route system works?"
         },
         {
           "speaker": "persona",
-          "text": "Say they bring in a system that tells you the order to do things on a live line. I've got my own order, I check, double-check, then move. If a screen tells me to skip a step to save time, I'd ignore it, and that's when you get in trouble with management."
+          "text": "I’d want it to match the road access and equipment on a real storm call, not just a tidy demonstration. I’d ask another crew lead to review the route before making it our normal process."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you worry about at the depot?"
+          "text": "Would you apply for other work before the company announces any changes?"
         },
         {
           "speaker": "persona",
-          "text": "The planners and the stores guys, probably. Benny would be fine, he's good with phones. Me, I'd be fine too, just grumpy."
+          "text": "No, I’d wait for written changes and compare actual jobs if my hours were affected. I can afford to be careful, but I wouldn’t assume my savings replace a wage forever."
         }
       ],
-      "say": "He'd tell the depot they'll see, because half of new things don't stick, and tell friends his hands-on job is probably okay. He wouldn't make a big deal of it.",
-      "think": "The company would push tablets, tracking and new procedures, making the job feel less like his. He minds someone rewriting steps he knows by heart.",
-      "do": "Keeps working as he is and waits to see what changes, doing compulsory training only if required. Keeps paying down his flat so he'd have no rent if things go wrong.",
-      "feel": "A bit uneasy, like someone moving the furniture in his house.",
+      "say": [
+        "I’d say route planning can speed up, but crews still choose the **safe approach**.",
+        "I’d keep the old map until we test the **new route system**."
+      ],
+      "think": [
+        "I think some **lead paperwork and planning** could be automated.",
+        "I want **written terms** before trusting my field role to remain unchanged."
+      ],
+      "do": [
+        "Compare route suggestions with **completed jobs** after dispatcher training.",
+        "Keep **field practice** current and review written staffing changes.",
+        "Wait for an actual **hours change** before applying elsewhere."
+      ],
+      "feel": [
+        "I feel **uneasy**, because lead work may shrink but I have choices."
+      ],
       "mood": "uneasy",
-      "quote": "I don't mind change at the edges, I mind someone rewriting the steps I know by heart.",
-      "fieldNote": "Marco's worry is about control of his own routine, not losing his job. He is clear he would not volunteer for training. His paid-down flat is his real safety net and he mentions it as his main plan.",
+      "quote": "I don’t want to be the last person to hear that my hours have been changed.",
+      "fieldNote": [
+        "He recognizes **planning exposure** and wants direct notice of any reduced hours.",
+        "Savings and local options let him **wait for written facts** instead of rushing."
+      ],
       "actions": [
         "keep-going",
         "wait-and-see",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Compare route suggestions against completed field jobs",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for written hours and staffing changes before applying elsewhere",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Continue adding overtime pay to savings",
+          "tag": "save-more"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare.\""
-        },
-        {
-          "speaker": "persona",
-          "text": "Two years? No. That's crazy."
+          "text": "AGI by 2028: Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "interviewer",
@@ -191,7 +233,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say I don't believe it, probably, at least at first. At the depot I'd say show me a robot that can do live-line work in the rain. I'd keep it quiet with friends, I'm not the type to make speeches."
+          "text": "I’d say planning, permits and diagnosis will be taken over by 2028, while robots are expected around 2031. I’d ask the company to set out what it can offer crews during that three-year gap, not promise us a permanent safe job."
         },
         {
           "speaker": "interviewer",
@@ -199,7 +241,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, if it really happened, I'd be in trouble. I don't know anything else, I've done lines since I was nineteen. I'd have a flat with no mortgage and nothing to do between waking up and the reservoir."
+          "text": "I expect my lead paperwork to go and my field role to face a real threat when robots arrive. I have a strong reserve and nearby utilities to search, but I can’t say what pay those openings would offer."
         },
         {
           "speaker": "interviewer",
@@ -207,7 +249,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop spending on the motorbike and anything extra, and throw everything at the flat so it's fully paid. That's step one. Then I'd wait and see if they really lay us off, because the company would need people at first to watch the robots. I wouldn't know what else to do, honestly."
+          "text": "I’d complete an electrical inspection qualification during the next two years, but I’d confirm the credential with employers first. In 2029 I’d apply to actual openings and check how much planning and diagnosis the job still requires."
         },
         {
           "speaker": "interviewer",
@@ -215,47 +257,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Bad. Like the bucket jerks and you don't know why."
+          "text": "I’m anxious because I think my current work will change, even with a few months of warning. I have time and savings to search, but not a guarantee that another job pays the same."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd wait and see. Is that because you think it won't happen, or because you don't know what else to do?"
+          "text": "What would you want to know before paying for that qualification?"
         },
         {
           "speaker": "persona",
-          "text": "Both, I suppose. I keep thinking it won't, but if it does, I wouldn't know where to start. I'm not going to become a computer guy at twenty-eight."
+          "text": "I’d want a written list of employers that recognize it and a real vacancy with its wage range. I’d check the practical assessment myself before giving up overtime for the course."
         },
         {
           "speaker": "interviewer",
-          "text": "What does having only two years take away from you?"
+          "text": "Could inspection be a safe long-term job after full AGI?"
         },
         {
           "speaker": "persona",
-          "text": "Any chance to get used to it. Two years is nothing. I'd still be finishing the flat payments when the robots turned up at the depot."
+          "text": "No, inspection uses records and diagnosis, so I can’t call it protected after 2028. I’d use it as a possibility to investigate and keep preparing for the robot date."
         }
       ],
-      "say": "He'd say he doesn't believe it at first and challenge anyone to show him a robot doing live-line work in the rain. He'd keep quiet with friends.",
-      "think": "If it happened he'd be in real trouble, since lines are all he's done since nineteen. He pictures a paid-off flat and nothing to fill his days.",
-      "do": "Stops spending on the motorbike and extras and puts everything into paying off the flat. Then waits to see whether layoffs actually come, unsure what else he would do.",
-      "feel": "Bad, like a bucket jerking with no explanation.",
-      "mood": "alarmed",
-      "quote": "I'd have a flat with no mortgage and nothing to do between waking up and the reservoir.",
-      "fieldNote": "Marco's first reaction is disbelief, and his plan beyond paying off the flat is to wait. He admits he wouldn't know where to start and rules out retraining. The strong savings protect his home, but not his sense of purpose, which is what really shakes him.",
+      "say": [
+        "I’d say permits and diagnosis are **taken over by 2028**.",
+        "I’d ask what crews can do during the **three-year gap**."
+      ],
+      "think": [
+        "I expect **lead paperwork to go** and field work to face robots later.",
+        "My reserve lets me search, but it cannot promise **the same pay**."
+      ],
+      "do": [
+        "Complete an **electrical inspection qualification** after checking employer recognition.",
+        "Apply to actual openings in **2029** and review the duties.",
+        "Confirm a **wage range** before giving up overtime for training."
+      ],
+      "feel": [
+        "I feel **anxious about my role**, with savings but no equal-pay guarantee."
+      ],
+      "mood": "anxious",
+      "quote": "I have a strong reserve and nearby utilities to search, but I can’t say what pay those openings would offer.",
+      "fieldNote": [
+        "Marco expects **lead and field work** to face risk but has resources to search locally.",
+        "He conditions training on **verified recognition** and a real wage range from an employer."
+      ],
       "actions": [
-        "cut-spending",
-        "save-more",
+        "retrain",
+        "change-job",
         "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Complete an electrical inspection qualification after checking recognition",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply to real inspection openings in 2029",
+          "tag": "change-job"
+        },
+        {
+          "text": "Wait for written wage details before accepting a move",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast.\""
-        },
-        {
-          "speaker": "persona",
-          "text": "Five years. Still not long."
+          "text": "AGI by 2031: Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "interviewer",
@@ -263,7 +330,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say I'll believe it when I see it. Maybe at the depot I'd start asking the managers what the plan is. I still wouldn't say much online."
+          "text": "I’d say five years is enough time to check a route system and decide what training is worth doing. It doesn’t protect permits or diagnosis after 2031, and robots are still expected to reach the lines in 2034."
         },
         {
           "speaker": "interviewer",
@@ -271,7 +338,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, five years means the flat's paid off for sure, that's something. But I'd still have nothing to do after. Five years sounds long until you realise that's just two more motorbike rebuilds."
+          "text": "I can use the time to review my options without rushing from one job to another. I still expect my lead duties to shrink, and any inspection job needs checking because AGI can do the diagnosis."
         },
         {
           "speaker": "interviewer",
@@ -279,7 +346,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd pay off the flat early and keep saving the extra. I'd keep working, of course. Maybe in the last year or two I'd look at what jobs are left, but I'd wait until I could see it was really coming. I might ask the union what they're doing, but I wouldn't lead anything."
+          "text": "I’d ask employers which practical qualifications they recognize and compare their posted field duties. In 2032 I’d apply for jobs that make sense on pay and travel, but I’d keep my savings for the transition instead of spending them too soon."
         },
         {
           "speaker": "interviewer",
@@ -287,47 +354,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Still pretty worried. Less of a shock, but the same feeling underneath."
+          "text": "I’m anxious, but the five years let me build a plan and ask direct questions. I would not sell myself on a job title before I knew what work it contains."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you do with your days, if the work stopped?"
+          "text": "What would make you move to another utility?"
         },
         {
           "speaker": "persona",
-          "text": "I don't know. Fishing, the motorbike, maybe help my dad with his garden. But that's not a life at twenty-eight or thirty-two, that's retirement."
+          "text": "I’d need a written offer with duties and wages that cover the travel or housing cost. I’d want to speak with the crew lead there before leaving a job I know."
         },
         {
           "speaker": "interviewer",
-          "text": "What does the extra three years buy you, compared with two?"
+          "text": "Would you take a course just because the company offered it?"
         },
         {
           "speaker": "persona",
-          "text": "The flat, basically. With two years it's close, with five it's done. It doesn't buy me a new job, because I'd still be waiting."
+          "text": "I’d take it if it gave a recognized qualification and practical assessment, not just a screen badge. I’m cautious about new methods, but I can change my mind when I see they work."
         }
       ],
-      "say": "He'd say he'll believe it when he sees it, though he might start asking managers what the plan is. He still wouldn't say much online.",
-      "think": "Five years guarantees the flat is paid off, but he'd still have nothing to do afterwards. It feels like just two more motorbike rebuilds.",
-      "do": "Pays off his flat early and saves the extra while working as usual. Waits until the change is clearly coming before looking at other jobs, and might ask the union what it's doing without leading anything.",
-      "feel": "Still worried, less shocked, with the same feeling underneath.",
-      "mood": "alarmed",
-      "quote": "Five years sounds long until you realise that's just two more motorbike rebuilds.",
-      "fieldNote": "The extra time mainly buys Marco a paid-off home, not a new path. He is honest that he would still wait rather than act. His fear is about empty days and losing his place in the world, not about money.",
+      "say": [
+        "I’d say five years lets me check training, but **diagnosis remains exposed**.",
+        "I expect robots to reach line work in **2034**."
+      ],
+      "think": [
+        "I can review my options without **rushing between jobs**.",
+        "I expect **lead duties to shrink**, and inspection needs scrutiny too."
+      ],
+      "do": [
+        "Compare employers’ **qualifications and field duties**.",
+        "Apply for suitable jobs in **2032** after checking pay and travel.",
+        "Keep savings available for a **job transition** rather than spend too early."
+      ],
+      "feel": [
+        "I feel **anxious**, but can plan without rushing between jobs."
+      ],
+      "mood": "anxious",
+      "quote": "I would not sell myself on a job title before I knew what work it contains.",
+      "fieldNote": [
+        "He treats the five-year warning as time to **check real work** and written terms before changing roles.",
+        "His caution about **unproven methods** leaves room to change when he sees clear evidence."
+      ],
       "actions": [
-        "save-more",
-        "keep-going",
-        "wait-and-see"
+        "change-job",
+        "wait-and-see",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Compare employer qualifications and field duties",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Apply to suitable utility jobs in 2032 after checking pay",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep adding to savings while preparing for a transition",
+          "tag": "save-more"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans.\""
-        },
-        {
-          "speaker": "persona",
-          "text": "Ten years. That's a long time."
+          "text": "AGI by 2036: Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "interviewer",
@@ -335,7 +427,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say a lot can change in ten years, so let's not get carried away. At the depot I'd probably joke I'll retire before the robots learn to climb. Online, nothing."
+          "text": "I’d say ten years gives us time to check what qualifications employers actually value and to plan the change in stages. I still expect AGI to take planning by 2036 and robots to reach physical work in 2039."
         },
         {
           "speaker": "interviewer",
@@ -343,7 +435,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means I'd get some good years of the job I like. I'd be thirty-seven, and that's still young enough to do something else, but I don't know what. Ten years is enough time to finish everything I've started and still not have a plan."
+          "text": "I have time to keep my income, build my reserve and move only if the next role makes sense. I would not assume linework stays protected forever, and I would not trust an office job to stay safe after AGI."
         },
         {
           "speaker": "interviewer",
@@ -351,7 +443,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and finish the flat, then save hard for a few years. Maybe at some point I'd think about some other hands-on work, like fixing machines, if anything's still left for people. I'd watch what other guys do first. I'm not going to rush off."
+          "text": "I’d complete a practical inspection course in sections and continue adding money to savings until I had a year of expenses. In 2037 I’d compare actual utility jobs and apply when the duties and wages were clear."
         },
         {
           "speaker": "interviewer",
@@ -359,36 +451,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Worried, but it's farther off. Easier to push to the back of my mind."
+          "text": "I feel uneasy because I have time and money to make a plan, but the job will still change eventually. A decade lets me be deliberate; it doesn’t make the robot date disappear."
         },
         {
           "speaker": "interviewer",
-          "text": "You keep saying you'd watch what others do first. Is that a plan, or a way to put it off?"
+          "text": "What would you change in your routine this year?"
         },
         {
           "speaker": "persona",
-          "text": "Probably a way to put it off, if I'm honest. I know myself, I'm slow to move. But I've also seen people jump at every new thing and get burned."
+          "text": "I’d set aside one evening each week for the course and keep my savings contribution automatic. I’d ask my supervisor for a yearly update about the route system and expected crew needs."
         },
         {
           "speaker": "interviewer",
-          "text": "What does the extra five years change for you, compared with five?"
+          "text": "Could any new desk job be permanently safe after AGI?"
         },
         {
           "speaker": "persona",
-          "text": "Mostly it gives me more money in the bank and more years of a job I like. It doesn't change who I am. I'd still be the guy waiting."
+          "text": "No, planning and diagnosis are thinking tasks, so I wouldn’t call a desk role protected. I’d look at actual openings and keep preparing for robots to affect physical work in 2039."
         }
       ],
-      "say": "He'd say a lot can change in ten years and joke at the depot that he'll retire before the robots learn to climb. He'd say nothing online.",
-      "think": "He'd get good years of a job he likes, and at 37 he'd still be young enough to change, but he has no idea what to. Ten years might pass without a plan.",
-      "do": "Keeps working, finishes paying off the flat and saves hard for a few years. Considers other hands-on work like fixing machines at some point, but only after watching what others do first.",
-      "feel": "Worried but further off, easier to push to the back of his mind.",
-      "mood": "anxious",
-      "quote": "Ten years is enough time to finish everything I've started and still not have a plan.",
-      "fieldNote": "When I asked whether watching others was a plan or a delay, Marco admitted it was a delay. He is self-aware about being slow to move and points to people who got burned by rushing. More time means more money and more years of work he likes, but no change in how he'd respond.",
+      "say": [
+        "I’d say ten years gives time to **plan in stages**.",
+        "I expect planning to change by 2036 and robots in **2039**."
+      ],
+      "think": [
+        "I can keep earning and **build my reserve** before changing roles.",
+        "I won’t assume **line work** or an office job stays safe forever."
+      ],
+      "do": [
+        "Complete a practical **inspection course** in sections.",
+        "Add savings until I have **a year of expenses**.",
+        "Compare utility jobs in **2037** and apply when duties are clear."
+      ],
+      "feel": [
+        "I feel **uneasy**, because I can prepare but the job still changes."
+      ],
+      "mood": "uneasy",
+      "quote": "A decade lets me be deliberate; it doesn’t make the robot date disappear.",
+      "fieldNote": [
+        "The long horizon lets him **prepare without rushing**, but he still expects physical work to change.",
+        "He wants **verified qualifications and vacancies**, not a title he cannot trust."
+      ],
       "actions": [
-        "keep-going",
+        "retrain",
         "save-more",
-        "wait-and-see"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Complete a practical electrical inspection course in sections",
+          "tag": "retrain"
+        },
+        {
+          "text": "Add savings until a year of expenses is covered",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply to actual utility openings in 2037 after checking duties",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -399,19 +520,28 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. In the others at least I'd finish the flat and have more time to get used to it. I can handle not having a job for a while, what I can't handle is not knowing what I'm for. What would help is the company keeping people on to work alongside the robots, even fewer of us, so the ones who know the lines aren't just thrown away."
+      "text": "AGI by 2028 worries me most because there is little time before robots arrive in 2031. A recognized qualification, written pay information and enough time to compare real openings would help me decide without gambling my reserve."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe what people like me would do with the time. Everyone talks about money, but I've got money. It's the days I'd worry about."
+      "text": "Ask who is responsible when an automated permit leaves out an instruction. I want a qualified person to check it before the crew touches the line, and I want that rule written down."
     }
   ],
-  "headlineQuote": "I can handle not having a job for a while, what I can't handle is not knowing what I'm for.",
-  "portrait": "Marco Tanaka is a 27-year-old live-line worker on a suburban network who works from a bucket truck with his partner Benny and spends weekends fishing or rebuilding an old motorbike. He has nearly paid off his flat, never uses AI tools and has switched off the assistant on his phone. He is calm in the plateau, uneasy that steady disruption would rewrite the steps he knows by heart, and alarmed by AGI in two or five years. Even with ten years he admits he would mostly wait and watch others, because his deepest fear is not money but empty days without purpose.",
-  "biggestWorry": "AGI by 2028 worries him most, because he would have no time to finish his flat or get used to it, and he fears not knowing what he's for.",
-  "whatWouldHelp": "The company keeping some experienced lineworkers on to work alongside the robots, so the people who know the lines aren't thrown away."
+  "headlineQuote": "I want a qualified person to check it before the crew touches the line, and I want that rule written down.",
+  "portrait": [
+    "Marco is a **senior lineworker** who values careful work and visible results.",
+    "He earns **higher pay** and has more than six months of expenses saved.",
+    "He avoids unproven technology and wants **written duties** before changing employers.",
+    "His reserve and local utility market give him time to assess jobs, though he expects **robots** to reach physical work."
+  ],
+  "biggestWorry": [
+    "AGI by **2028** leaves little time before robots arrive in 2031."
+  ],
+  "whatWouldHelp": [
+    "A **recognized qualification**, written pay information and time to compare openings would help."
+  ]
 }

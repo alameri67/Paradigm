@@ -11,36 +11,62 @@
     "outlook": "progressive",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Victor. I'm a field researcher with the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, can you walk me through a normal working day?"
+      "text": "I’m with the Work Futures Panel, an independent research group with no ties to employers, unions, political parties or AI companies. Your answers are confidential. Victor, what fills an ordinary shift?"
     },
     {
       "speaker": "persona",
-      "text": "I'm on a transmission crew, the big steel towers that carry the high-voltage lines across country. We work out of a base near the North Ridge substation, but half the month we're on the road, staying in cheap hotels near whatever stretch needs work. A normal day is a safety briefing at six, then climbing a tower, replacing insulators or spacers, or helping the helicopter team string new conductor. I love the height and the views, and the feeling that a whole city's lights go through the wire you're fixing. What wears me out is being away from the kids for a week at a time."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "And at home? How do you fit the job and the family together?"
-    },
-    {
-      "speaker": "persona",
-      "text": "My wife Samira teaches maths at a secondary school, so she's the steady one at home. We've got Yusuf, who's eleven, and Amina, who's eight. Mortgage on a three-bedroom on the edge of town, maybe five months saved if we're careful. I use AI every day, honestly: to plan routes, check the weather windows for climbing, summarise the job specs, even to help Yusuf with his homework over video call from the hotel. I'm a union rep for our crew and I'm left-leaning, but I don't think the answer is to fight the technology. It's who owns it."
+      "text": "I search the fault archive with AI before I leave home, check the signed map at the depot and then spend the day with our crew isolating and fixing lines. I like the detective part of a hidden fault and showing a younger worker how to confirm a clue. I dislike a plan that counts driving time but misses the awkward bracket at the pole."
     }
   ],
   "scenarios": {
     "S0": {
+      "say": [
+        "I would describe **AI archive search** as useful for finding old faults.",
+        "I would say the **signed map** and crew still govern physical repairs."
+      ],
+      "think": [
+        "I expect **regular field pay** to continue and can absorb a small surprise.",
+        "Our **five-month cushion** gives the household room without changing school plans."
+      ],
+      "do": [
+        "Keep the usual **line rota** and search the archive before fault calls.",
+        "Show a newer worker how to **verify AI results** against signed maps."
+      ],
+      "feel": [
+        "I feel **relaxed** about a small tool that saves time."
+      ],
+      "mood": "calm",
+      "quote": "The signed map, not the AI answer, is what we use to isolate the line.",
+      "fieldNote": [
+        "Victor uses **AI daily** to search old faults and teaches a newer worker to check the signed map.",
+        "His **five-month cushion** and regular wages let him welcome modest time savings without immediate household worry."
+      ],
+      "actions": [
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Continue paid line repairs and verify AI archive searches against signed maps",
+          "tag": "keep-going"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the first picture. It's called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, okay, it was a bubble, but the tools are still useful, so let's keep the good bits. I'd probably post something about how the useful stuff was always the boring stuff, scheduling and paperwork."
+          "text": "I would tell my crew the AI search I use each morning can find a past fault in seconds, but it cannot hang a new crossarm. I still compare every suggested location with the signed map."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +74,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Really, I'd be a little disappointed. I like these tools, and I'd hoped they'd take some of the travel and the inspection grind off us. But my job is safe, and I'd keep using the AI for what it's good at."
+          "text": "I do not expect our field work or my pay to shrink in this picture. We have around five months of expenses saved and a mortgage we can cover from regular wages, so I can enjoy a small time saving."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +82,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing much changes. I'd keep using AI for planning and reports, and maybe show the older guys on the crew how to use it for their timesheets. Keep saving, keep the mortgage ticking down."
+          "text": "I would keep the usual line rota and use the archive search before fault calls. In the first year I would show the newer lineworker how to verify an AI result against the original map, then leave the repair method to the crew."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +90,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Slightly let down, the way you feel when a big match ends nil-nil."
+          "text": "I feel relaxed. If the tool stays small, I get home ten minutes sooner without having to rethink the children's school week."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd show the older guys how to use it. Who's that?"
+          "text": "When did the archive search help?"
         },
         {
           "speaker": "persona",
-          "text": "Mostly Frank, who's been on towers for thirty years and hates screens. Last month I set up voice notes so he could do his job report by talking into his phone, and he loved it. That's the kind of small win I'd still want in this picture."
+          "text": "On the hill road last week it found a note about a weak crossarm hidden under an old job number. We checked the map, brought the right bracket and finished before dark."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you have hoped AI would do that it doesn't do here?"
+          "text": "What would you tell the newer worker about mistakes?"
         },
         {
           "speaker": "persona",
-          "text": "Fly drones along the lines and spot the cracked insulators before we climb, so we only go up where we need to. That would mean fewer nights away. In this picture, we're still climbing every tower to look."
+          "text": "I would show how a search can pull up the wrong span with a similar number. The signed map, not the AI answer, is what we use to isolate the line."
         }
-      ],
-      "say": "It was a bubble, but the tools are still useful, so keep the good bits. The useful stuff was always the boring stuff, like scheduling and paperwork.",
-      "think": "He'd be a little disappointed, because he hoped AI would cut the travel and the inspection grind. His job is safe, and he'd keep using the tools for what they're good at.",
-      "do": "Keeps using AI daily for route planning, weather windows and reports. Helps older crew members like Frank use voice notes for job reports, and keeps saving and paying the mortgage.",
-      "feel": "Calm, slightly let down, like a big match that ends nil-nil.",
-      "mood": "calm",
-      "quote": "Last month I set up voice notes so he could do his job report by talking into his phone, and he loved it.",
-      "fieldNote": "Victor is the rare lineworker who is disappointed when AI fizzles. He sees technology as a way to spend fewer nights away from his kids. His progressive views focus on ownership of technology rather than opposing it.",
-      "actions": [
-        "keep-going",
-        "learn-ai"
       ]
     },
     "S1": {
+      "say": [
+        "I would ask for **crew-tested plans** and a record of missing parts.",
+        "I would request **redeployment talks** before buying roles disappear."
+      ],
+      "think": [
+        "I expect **office cuts** first and continued line repairs for my crew.",
+        "Faster schedules might remove **paid safety time** even if the field job survives."
+      ],
+      "do": [
+        "Join the paid **planning pilot** and log predicted versus actual parts.",
+        "Bring **monthly error sheets** and redeployment concerns to the union safety committee."
+      ],
+      "feel": [
+        "I feel **energised by testing** and uneasy for office colleagues."
+      ],
+      "mood": "uneasy",
+      "quote": "Field tests should include who carries the displaced work.",
+      "fieldNote": [
+        "Victor volunteers for an **early planning pilot** and defines field measurements that could reveal hidden correction time.",
+        "He connects **office displacement** with crew workload and raises redeployment through the union rather than rejecting a useful tool."
+      ],
+      "actions": [
+        "learn-ai",
+        "collective-action",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Test AI buying plans against real pole parts on paid shifts",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Share monthly error sheets and redeployment concerns with the union safety committee",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Continue paid line repairs during the pilot",
+          "tag": "keep-going"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is where unions matter most. The tech's coming, so let's bargain over it: retraining, no forced redundancies, and a share of the savings for the crews. I'd be bringing a proposal to the branch, not a protest."
+          "text": "I would tell the depot I want to test the new buying and scheduling tools with real line crews. If a plan misses a crossarm, the error should appear on the record before anyone claims a time saving."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +170,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think it could be good for me. If drones and AI do the inspection, the company needs people who can fly them, read the data and decide which tower to climb. I'd want to be that person. But I'd worry for the guys who can't make the jump."
+          "text": "Office buying and planning jobs could be cut first. My crew should still have field repairs, but a manager could use faster schedules to squeeze out the paid time we need for safe checks."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +178,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd sign up for a drone pilot licence in the first few months, and I'd pay for it myself if I had to, it's around nine hundred. I'd volunteer for every pilot project the company runs. And I'd write up a proposal for the union on how to share the work out fairly."
+          "text": "I would volunteer for the first paid planning pilot and log the predicted part, the actual part and the crew minutes at each site. In its first year I would share a monthly error sheet with the union safety committee and ask the manager for paid correction time."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +186,84 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, a bit excited even. Though there's guilt in it, because I know Frank won't feel the same."
+          "text": "I feel energised by the chance to make the system honest. I also feel uneasy for the office colleagues whose jobs may disappear while everyone celebrates a faster ticket."
         },
         {
           "speaker": "interviewer",
-          "text": "Nine hundred is a fair amount for your family. Would Samira agree?"
+          "text": "What would a useful error sheet look like?"
         },
         {
           "speaker": "persona",
-          "text": "She'd ask me to show her the numbers, because she's a maths teacher. If I could show her it led to a better-paid role with fewer nights away, she'd agree. If I couldn't, she'd tell me to get the company to pay, and she'd be right."
+          "text": "It would show the work order, the pole number, the missing item and the hours the crew spent fixing the plan. A single total saying efficiency improved would hide the extra drive."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd worry about the guys who can't make the jump. What would you do for them?"
+          "text": "Would you slow the pilot for those colleagues?"
         },
         {
           "speaker": "persona",
-          "text": "Push for the company to keep some climbing crews and give people like Frank a decent early pension deal if they want it. And pair people up, so younger ones learn the drone side and older ones teach the hands-on side. Nobody should be dumped."
+          "text": "I would not block a tool that works, but I would ask the union and company to talk about redeployment before buying roles vanish. Field tests should include who carries the displaced work."
         }
-      ],
-      "say": "This is where unions matter most: the tech is coming, so bargain over retraining, no forced redundancies and a share of the savings. He'd bring the branch a proposal, not a protest.",
-      "think": "It could be good for him, because the company will need people who fly drones, read the data and decide which tower to climb. He worries for colleagues who can't make that jump.",
-      "do": "Gets a drone pilot licence within months, about nine hundred, and volunteers for every company pilot project. Writes a union proposal on sharing work fairly, including pairing young and old crew members.",
-      "feel": "Calm and a bit excited, with some guilt about colleagues like Frank.",
-      "mood": "calm",
-      "quote": "The tech's coming, so let's bargain over it: retraining, no forced redundancies, and a share of the savings for the crews.",
-      "fieldNote": "He moves first and sees opportunity, but frames it collectively rather than as a personal race. His wife acts as the check on his spending. His guilt about older colleagues was genuine and specific.",
-      "actions": [
-        "retrain",
-        "learn-ai",
-        "collective-action"
       ]
     },
     "S2": {
+      "say": [
+        "I would separate **2028 planning AI** from line robots around 2031.",
+        "I would seek **union access** to robot trial failures."
+      ],
+      "think": [
+        "At **48**, robots could reduce my physical repair work despite daily AI use.",
+        "Our **five-month reserve** buys search time, not years without wages."
+      ],
+      "do": [
+        "Keep paid **line shifts** in 2029 and ask about funded commissioning posts.",
+        "Take linked **paid training** and apply if a regular field vacancy appears."
+      ],
+      "feel": [
+        "I feel **excited and worried** about the three-year robot deadline."
+      ],
+      "mood": "anxious",
+      "quote": "My daily AI use helps me read data, but it does not guarantee I will be needed when a robot can fit a conductor in bad weather.",
+      "fieldNote": [
+        "Victor looks for a **commissioning apprenticeship** that uses field safety skill rather than relying on AI literacy alone.",
+        "He treats **five months of savings** as search time and requires a written, regularly paid role before moving."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "change-job",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Continue paid line repair shifts through 2029",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Take company-paid commissioning training if tied to a funded field post",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for a regular paid field commissioning vacancy if advertised",
+          "tag": "change-job"
+        },
+        {
+          "text": "Ask the union for access to robot field trial failures",
+          "tag": "collective-action"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we need to slow the rollout and make sure the gains are shared, fast. Public ownership of the robots that run the grid, a basic income, retraining that's paid. I'd say it calmly, but I'd say it everywhere."
+          "text": "I would tell colleagues that full AI in 2028 can plan our work, while line-capable robots arrive around 2031. I would ask for union access to every robot field trial, including the failures."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +271,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, two years scares me, even though I like this stuff. If the drones and robots can do the whole job, then the drone pilot job I was planning for goes too, maybe in a year after the climbers. Being early doesn't help much if the whole ladder disappears."
+          "text": "I would be 45 at the first date and 48 when robots reach physical repairs. Five months saved lets us search for options, but it would not carry a mortgage and two children through years without my wage."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +279,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd still get the drone licence fast, because it might buy me a year or two. I'd save everything I could, cancel our summer trip to see Samira's family, and push the union to negotiate phased redundancy with proper payouts. I'd also start asking around about jobs in grid safety oversight, because someone has to answer for the machines."
+          "text": "Now I would ask the company about a paid robot commissioning apprenticeship for experienced lineworkers. In 2029 I would keep line shifts, take that training if tied to a funded field post and apply for the post if regular pay is offered."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +287,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. I'd still feel like I had some moves, but fewer than I'd like."
+          "text": "I feel excited and worried at once. My daily AI use helps me read data, but it does not guarantee I will be needed when a robot can fit a conductor in bad weather."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Yusuf and Amina?"
+          "text": "What would you want the commissioning training to cover?"
         },
         {
           "speaker": "persona",
-          "text": "Yusuf's already asked me if AI will do everything. I'd tell him that the world is changing fast, that his dad's going to have to learn new things, and that's okay. Amina's eight, she'd just want to know if we're still getting a puppy."
+          "text": "It should include isolating a line, inspecting a robot-made joint and stopping a trial when a crew sees a fault. I would also want the workers, not just a vendor, to record failures."
         },
         {
           "speaker": "interviewer",
-          "text": "Cancelling the trip to Samira's family is a big one. Why that first?"
+          "text": "What would you tell your partner tonight?"
         },
         {
           "speaker": "persona",
-          "text": "Because it's the biggest chunk, about two thousand with flights. It'd hurt, her mum's not young. But I'd rather explain that than miss a mortgage payment. We'd do a long video call instead and promise them the next year."
+          "text": "I would say my field wage should continue in 2028, and we have some savings if a trial changes the rota. I would not call a commissioning post certain until there is a written offer."
         }
-      ],
-      "say": "We need to slow the rollout and share the gains fast: public ownership of grid robots, a basic income and paid retraining. He'd say it calmly but everywhere.",
-      "think": "Two years scares him even though he likes the technology, because the drone pilot role he planned for would vanish soon after the climbers. Being early doesn't help if the whole ladder goes.",
-      "do": "Gets the drone licence quickly to buy a year or two and saves hard, cancelling a two-thousand family trip. Pushes the union for phased redundancy with proper payouts and looks for grid safety oversight roles.",
-      "feel": "Anxious, still feeling he has some moves, but fewer than he'd like.",
-      "mood": "anxious",
-      "quote": "Being early doesn't help much if the whole ladder disappears.",
-      "fieldNote": "Even this adaptive, tech-friendly worker loses his confidence when the timeline is two years. He still looks for a role, in oversight, but knows it's thin cover. Cancelling the family trip clearly cost him emotionally.",
-      "actions": [
-        "retrain",
-        "save-more",
-        "cut-spending",
-        "collective-action"
       ]
     },
     "S3": {
+      "say": [
+        "I would ask for a **field fault dataset** from robot trials.",
+        "I would distinguish **2031 thinking AI** from line robots around 2034."
+      ],
+      "think": [
+        "At **51**, I may still support a child and pay a mortgage.",
+        "A **desk commissioning title** could vanish when full AI writes reports."
+      ],
+      "do": [
+        "Keep paid **repair shifts** in 2032 and test robots on de-energised spans.",
+        "Apply for a **posted field commissioning role** with on-site duties."
+      ],
+      "feel": [
+        "I feel **more patient** with time to judge real site work."
+      ],
+      "mood": "uneasy",
+      "quote": "A desk title full AI can erase would be a poor trade for a paid line shift.",
+      "fieldNote": [
+        "Victor wants **unusual fault records** from real sites, including inspection steps hidden by a simple repair time.",
+        "He shares **trial evidence** with the union and checks that any new post keeps paid field duties after full AI."
+      ],
+      "actions": [
+        "keep-going",
+        "collective-action",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Continue paid line shifts through 2032 and test de-energised robot spans",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Share robot fault records with the union safety group",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Apply for a posted commissioning role with paid field duties",
+          "tag": "change-job"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough time to do it right, if we start now. I'd say the robots running the grid should be publicly owned, so the savings come back as lower bills or shorter hours. I'd be on a union working group about it."
+          "text": "I would say five years gives us time to build a proper fault dataset from robot pilots. Full thinking AI arrives in 2031, and robots doing the physical repair follow around 2034."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +367,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years, I think I could land somewhere useful. Robot fleets for the grid will need people to check their work, certify them, investigate when something goes wrong. That's a mix of hands-on knowledge and tech, which is exactly me. I'd be 48."
+          "text": "I would be 48 at the thinking date and 51 when the robots arrive. Our older child might be leaving school, but I do not know that the mortgage or a younger child's costs will be gone."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +375,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Drone licence this year, then a two-year part-time diploma in grid automation or safety. I'd also try to get onto the team that tests robots in the company, even unpaid hours at first. And save an extra three hundred a month, which means fewer takeaways on the road."
+          "text": "Now I would ask for a paid place on the robot field-testing crew and keep recording unusual line faults. In 2032 I would keep repair shifts, test robots on de-energised spans and apply for a posted commissioning post only if it still includes field work after AI writes the reports."
         },
         {
           "speaker": "interviewer",
@@ -256,47 +383,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but more hopeful than not. It feels like a race I could win."
+          "text": "I feel more patient than in the fast picture. A desk title full AI can erase would be a poor trade for a paid line shift."
         },
         {
           "speaker": "interviewer",
-          "text": "Isn't checking robot work the kind of thing AGI could do too?"
+          "text": "What would be an unusual fault worth recording?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, probably, in the end. But I think people will want a human to sign off on high-voltage work for a while after the robots can technically do it, because when a tower fails, the whole region goes dark. That's my bet. I could be wrong."
+          "text": "A cracked bracket behind the old pumping shed looked normal from the road but moved when we tested it. I would want a robot trial to record that inspection step, not just the final repair time."
         },
         {
           "speaker": "interviewer",
-          "text": "What does the extra three years change at home?"
+          "text": "Would you share the fault dataset outside your crew?"
         },
         {
           "speaker": "persona",
-          "text": "Yusuf would be sixteen and Amina thirteen, so I could be away less or more without it mattering so much. And Samira's job feels safer than mine for a bit, people still want a teacher in the room. That gives us one steady income while I change lanes."
+          "text": "Yes, with the union safety group and the company trial team, provided the records omit customers' addresses. Other crews should be able to check whether a robot misses the same fault."
         }
-      ],
-      "say": "Five years is enough to do it right if we start now, with publicly owned grid robots so savings come back as lower bills or shorter hours. He'd join a union working group.",
-      "think": "He thinks he can land in a role checking, certifying and investigating robot fleets, which mixes hands-on knowledge with tech. He admits AGI could eventually do that too.",
-      "do": "Gets the drone licence this year, then does a two-year part-time diploma in grid automation or safety. Tries to join the company's robot testing team and saves an extra three hundred a month.",
-      "feel": "Uneasy but more hopeful than not, like a race he could win.",
-      "mood": "uneasy",
-      "quote": "When a tower fails, the whole region goes dark. That's my bet. I could be wrong.",
-      "fieldNote": "With five years, Victor's adaptability returns as a real advantage. He was honest that his bet on human sign-off could be wrong. His wife's teaching job is his family's anchor during the change.",
-      "actions": [
-        "retrain",
-        "save-more",
-        "collective-action"
       ]
     },
     "S4": {
+      "say": [
+        "I would ask for published **robot fault results** across difficult repairs.",
+        "I would explain **2036 planning AI** precedes field robots around 2039."
+      ],
+      "think": [
+        "At **56**, I cannot assume grown children mean a paid mortgage or funded retirement.",
+        "My **five-month reserve** should remain for family needs, not a personal robot purchase."
+      ],
+      "do": [
+        "Keep paid **line work** in 2037 and check annual crew-hour figures.",
+        "Review **trial results** with the union and apply for a posted field testing vacancy if pay is clear."
+      ],
+      "feel": [
+        "I feel **steady now** and conscious the physical job could change later."
+      ],
+      "mood": "uneasy",
+      "quote": "The company owns the line equipment, and I have no reason to buy a robot.",
+      "fieldNote": [
+        "Victor expects **paid physical repairs** through the near term and asks for public evidence on difficult robot jobs.",
+        "He protects the **existing reserve** and tests a funded field vacancy rather than assuming his retirement or purchasing equipment himself."
+      ],
+      "actions": [
+        "keep-going",
+        "collective-action",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Continue paid line repair shifts through 2037",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Compare annual robot fault results with union colleagues",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Apply for a posted field testing vacancy if regular pay is clear",
+          "tag": "change-job"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a real chance to build a fairer system, and it'd be a scandal to waste it. I'd want the union, the government and the companies all at one table from year one."
+          "text": "I would tell the depot a decade is enough to trial robots on difficult repairs and publish the results. Full AI changes planning in 2036, while line-capable robots come around 2039."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +463,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years feels workable. I could ride the transition all the way: climber, drone pilot, robot supervisor, then maybe teaching or safety. I'd be 53, the kids grown. My worry is less me and more my town, and the guys who won't move."
+          "text": "I would be 53 for thinking AI and 56 for field robots. The children may be adults, but I would still check the mortgage balance and retirement options before deciding I can stop working."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +471,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd take the drone licence and the diploma at a slower pace, one thing a year. I'd put a bit into a pension top-up and maybe some savings in index funds, which I've never done. And I'd help set up a union programme so every lineworker gets paid time to retrain, not just the keen ones."
+          "text": "Now I would keep the repair rota and ask for yearly robot fault and crew-hour figures. In 2037 I would continue paid line work, apply for a posted field testing vacancy if its wage and duties are clear and ask the union to compare the trial results across crews."
         },
         {
           "speaker": "interviewer",
@@ -320,59 +479,56 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but in a way I can use. It feels like weather you can see coming over the hills."
+          "text": "I feel steady about the next few years, because I expect the physical work and regular pay to continue. A long runway gives me choices, though the robot date could still change the job at 56."
         },
         {
           "speaker": "interviewer",
-          "text": "Index funds are new for you. Why now?"
+          "text": "Would you invest in new equipment yourself?"
         },
         {
           "speaker": "persona",
-          "text": "Because if robots do most of the work, the people who own a slice of the companies do better than the people who don't. It feels a bit against my politics, honestly. But I'd rather my kids have a slice than nothing."
+          "text": "The company owns the line equipment, and I have no reason to buy a robot. I would keep our five-month reserve for the family rather than gamble it on a machine."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there a moment in that decade you picture clearly?"
+          "text": "What would you tell a new apprentice?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe the day I take Frank's grandson out to show him how we used to climb, while a robot's doing the actual tower. I'd want him to know people did this once, and did it well."
+          "text": "I would tell a new apprentice to learn isolation and fault finding, and to read trial results with care. A trade deserves evidence about its future, not a promise that one tool will save it."
         }
-      ],
-      "say": "Ten years is a real chance to build a fairer system, and wasting it would be a scandal. The union, the government and the companies should all be at one table from year one.",
-      "think": "Ten years feels workable, riding the change from climber to drone pilot to robot supervisor and then teaching or safety. His worry is more for his town and colleagues who won't move.",
-      "do": "Takes the drone licence and diploma at one step a year and starts a pension top-up and index fund savings for the first time. Helps set up a union programme for paid retraining time for every lineworker.",
-      "feel": "Uneasy in a usable way, like weather he can see coming over the hills.",
-      "mood": "uneasy",
-      "quote": "It feels a bit against my politics, honestly. But I'd rather my kids have a slice than nothing.",
-      "fieldNote": "Victor sees a decade as enough to move step by step through several roles. He admitted investing in shares sits uneasily with his politics. His thoughts kept returning to colleagues and his town rather than himself.",
-      "actions": [
-        "retrain",
-        "invest",
-        "collective-action"
       ]
     }
   },
   "closing": [
     {
       "speaker": "interviewer",
-      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+      "text": "Which picture worries you most, and what would actually help?"
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because even being early and keen doesn't help when there's no time. What would help is a basic income that kicks in fast, public ownership of the grid robots so the savings go back to people, and paid retraining time that counts as work."
+      "text": "AGI by 2028 worries me most because robots could reach physical repairs around 2031 while my children still depend on wages. A paid commissioning apprenticeship tied to a regular field job, union access to trial failures and a written offer would help me use our savings wisely."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I did not ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe ask about the travel. People think of the job, but for us the job is also nights away from family. If robots took the travel and left us the thinking, I'd sign up tomorrow."
+      "text": "Ask who records the repairs a robot fails to finish. If human rescue work disappears from the trial record, a company could cut crews before the machines are ready."
     }
   ],
-  "headlineQuote": "If robots took the travel and left us the thinking, I'd sign up tomorrow.",
-  "portrait": "Victor Ibrahim is a 43-year-old transmission lineworker who climbs high-voltage towers and spends half the month on the road, with a maths-teacher wife, two kids and about five months saved. He uses AI daily and sees it as a way to spend fewer nights away, and as a union rep he wants to bargain over technology rather than fight it. Steady change looks like an opportunity to become a drone pilot, but fast AGI scares him because the whole ladder he planned to climb would disappear. With five or ten years he regains his footing and plans a step-by-step move into robot oversight, while worrying most for older colleagues and his town.",
-  "biggestWorry": "AGI by 2028 worries him most, because being early and keen wouldn't help when there's no time to move into a new role.",
-  "whatWouldHelp": "A basic income that starts fast, public ownership of grid robots so savings return to people, and paid retraining time that counts as work."
+  "headlineQuote": "If human rescue work disappears from the trial record, a company could cut crews before the machines are ready.",
+  "portrait": [
+    "Victor is a **43-year-old lineworker** with an apprenticeship, a partner, two school-age children and a mortgage.",
+    "He uses **AI daily** to find old faults, then verifies locations against signed maps.",
+    "His **five-month cushion** and typical pay give time to test field options without leaving wages abruptly.",
+    "Across the scenarios he seeks **robot fault evidence**, union access and funded commissioning work with real site duties."
+  ],
+  "biggestWorry": [
+    "The **2028 picture** gives him only three years before robots could take on physical line repairs."
+  ],
+  "whatWouldHelp": [
+    "A paid **commissioning apprenticeship**, regular field vacancy and union access to trial failures would help him decide."
+  ]
 }

@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for joining me, Maya. I'm a field researcher with the Work Futures Panel, an independent research group. We aren't linked to any AI company, employer, union, party or government, and everything you say is confidential. Could you start by describing a normal working day?"
+      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or government. Everything you say stays confidential, and your name won't be attached to any of it. To start, could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "Okay. I fly in and fly out, two weeks on site and one week home, to the Sandstone Ridge gold mine, which is a big open pit about two hours' flight from the city. Right now I drive the water cart, a truck with a giant tank that sprays the haul roads so the dust stays down, and I'm training on the excavator a few shifts a week. Day starts at five-thirty in the camp mess with porridge and bad coffee, then twelve hours on the roads."
+      "text": "I fly in and fly out to a lithium mine way out in the desert, two weeks on and one week off. On site I run a grader, keeping the haul roads smooth so the big trucks don't wreck their tyres, and some days I'm on the water cart spraying the roads to keep the dust down. I'm a year in and still not great at getting a clean finish on the corners, so my supervisor, Dana, follows me in the light vehicle and points. I like the quiet out there, and the stars at night from the camp."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
+      "text": "And your life back home?"
     },
     {
       "speaker": "persona",
-      "text": "I like the money and the sunrise over the pit, which never gets old. The excavator training is fun, but I'm slow and the trainer, Joanne, makes me redo the same bench three times. What wears me out is being away, my partner Luca runs a little café in the city and I miss half of everything, his birthday, his mum's operation, all of it."
+      "text": "I share a flat in the city with my sister Inès, who's at university. I'm single. Because I spend half my life at camp with meals paid, I save a lot, probably over a year of pay now, and I've got a small investment flat my parents helped me buy that I rent out. Lithium mines are hiring all over the region, so there's always another camp if this one doesn't work out."
     }
   ],
   "scenarios": {
@@ -36,11 +36,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say fair enough, it was a lot of talk. At camp people would make jokes about it at dinner. I'd probably send Luca a meme and that'd be it."
+          "text": "That's the safest one for me, I think. Roads still need fixing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I'm not surprised, and I'd mean it. On site there's always talk about the next big thing, and it usually turns out to be a new form to fill in. I'd probably joke about it in the camp mess."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means I keep doing what I'm doing, which is fine. Two or three more years of flying in and out, finish the excavator ticket, keep saving. Then I'd like to find something closer to home."
+          "text": "Privately, I'd think my job is safe for years, as long as lithium prices hold. The real risk is the price, because when it dropped two years ago a few mines shut down overnight. That's what I keep an eye on."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing new. Keep sending most of my pay into our savings, we've got about a year of costs put away, and finish the excavator training. Maybe start looking at mines that are a drive from the city instead of a flight."
+          "text": "I'd keep doing my swings and finish my grader training properly. I'd keep saving and put a bit more into my investment flat, maybe new kitchen so I can charge more rent. I'd use the chatbot to plan my week off, like I do now."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. It's the plan I already had."
+          "text": "Calm. Honestly, pretty good about it."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use AI tools at all?"
+          "text": "What happened when the lithium price dropped?"
         },
         {
           "speaker": "persona",
-          "text": "Now and then. I used one to plan our holiday and to help Luca write the new café menu, which came out a bit too fancy. Nobody at site uses them much, apart from the engineers."
+          "text": "A camp two hours from ours closed, and some of those workers came to us. When the lithium price fell two years ago, a whole mine near our camp shut in a week, and nobody blamed a robot."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned saving. What's it for?"
+          "text": "Would that kind of drop worry you now?"
         },
         {
           "speaker": "persona",
-          "text": "Partly just safety, partly a second café for Luca one day, or a flat of our own. We're careful. He grew up with parents who lost a restaurant, so we both get nervous without a cushion."
+          "text": "A bit, but there's always another mine, and I have savings. I'd take a few weeks off and find another camp."
         }
       ],
-      "say": "I'd say fair enough, it was a lot of talk. People at camp would joke about it at dinner and I'd send my partner a meme.",
-      "think": "It means I keep doing what I'm doing, which is fine. A few more years of flying in and out, finish the excavator ticket, keep saving, then find something closer to home.",
-      "do": "Keeps sending most of her pay into savings, which already cover about a year of costs, and finishes her excavator training. Starts looking at mines within driving distance of the city.",
-      "feel": "Calm, because it matches the plan she already had.",
+      "say": [
+        "I'd say I'm **not surprised**, because the big thing is usually a new form.",
+        "I'd **joke about it** in the camp mess."
+      ],
+      "think": [
+        "Her job is **safe for years** if lithium prices hold.",
+        "The **lithium price** is the real risk, not AI."
+      ],
+      "do": [
+        "Finish her **grader training** properly.",
+        "Put new money into the **investment flat**, maybe a new kitchen.",
+        "Keep using the **chatbot** to plan her weeks off."
+      ],
+      "feel": [
+        "**Calm** and pretty good about it."
+      ],
       "mood": "calm",
-      "quote": "He grew up with parents who lost a restaurant, so we both get nervous without a cushion.",
-      "fieldNote": "Maya is organised and careful, shaped by being away from home two weeks out of three. Her real goal is to be closer to her partner. Savings feel like protection for both of them, partly because of his family's history.",
+      "quote": "When the lithium price fell two years ago, a whole mine near our camp shut in a week, and nobody blamed a robot.",
+      "fieldNote": [
+        "She's seen a **mine close** from a price drop, so she judges risk by price.",
+        "Her **savings and rental flat** give strong security.",
+        "She uses AI **now and then**, for personal planning."
+      ],
       "actions": [
         "keep-going",
+        "invest",
         "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Finish her grader training at the lithium mine",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put a new kitchen in the rental flat to raise rent",
+          "tag": "invest"
+        },
+        {
+          "text": "Keep saving most of each swing's pay",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's sensible to get ahead of it and not panic. Some jobs go, some appear, that's always been the deal. I'd say the company should train people, but I wouldn't be marching about it."
+          "text": "Okay. That's a bit more serious, but it sounds manageable."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say at work it's probably going to change the office side first, like scheduling and supply orders, and we'll see the robots later. With friends I'd say I'm fine, I work with my hands. I wouldn't say much online."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +158,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, it might actually be good for me. If a lot of the trucks and the water cart go driverless, the work moves to the remote operations centre, and that's in the city, ten minutes from the café. The catch is that I'm junior, and every senior operator would want those seats too."
+          "text": "Privately, I think it changes how I'm managed. Software will plan the road work and track every pass I make with the grader. Software that tracks every pass of my grader would know I'm slow on the corners before Dana (my supervisor) ever says it."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd watch for six months to see whether the driverless trucks actually work on our roads, because dust and rain mess everything up. Once it's clear they work, I'd put my hand up for the remote centre and do whatever training they offer. I'd use AI a bit more for studying the systems, the way the engineers do."
+          "text": "I'd ask for more training so I'm not the slowest. I'd try out any new tools the mine brings in, once the others have tested them. And I'd keep my savings steady, maybe hold off on the kitchen."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +174,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but in a hopeful way. A bit like waiting for exam results."
+          "text": "A bit uneasy. Not scared, just watchful."
         },
         {
           "speaker": "interviewer",
-          "text": "What if you didn't get one of those seats?"
+          "text": "Would you try AI tools at work to get ahead?"
         },
         {
           "speaker": "persona",
-          "text": "Then I'd have finished the excavator ticket and I'd keep flying in for a few more years. There are lots of mines and they're always short. It's not a disaster, it's just not home."
+          "text": "Once they're proven, yes. I'm not the first to try things, but I'm not the last. If the crew says the new app works, I'll use it."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you worry about at camp?"
+          "text": "Who would you worry about at the camp?"
         },
         {
           "speaker": "persona",
-          "text": "Some of the older drivers who've done this twenty years and have nothing else. Like Bruno, who's been on the same truck forever and has two kids at a private school. People like him are going to fight over the city seats too."
+          "text": "The cooks and the cleaners, maybe. If robots take over camp cleaning, those jobs are gone. And the dispatch people."
         }
       ],
-      "say": "I'd say it's sensible to get ahead of it without panicking, because jobs have always come and gone. The company should train people, but I wouldn't march about it.",
-      "think": "It might be good for me if driving work moves to the remote centre in the city near home. The catch is that I'm junior and senior operators will want those seats.",
-      "do": "Watches for about six months to see if driverless trucks work in dust and rain, then applies for the remote operations centre and takes the training. Uses AI tools more to study the systems.",
-      "feel": "Uneasy but hopeful, like waiting for exam results.",
+      "say": [
+        "The **office side** changes first, and robots come later.",
+        "I'd tell friends I'm **fine** because I work with my hands."
+      ],
+      "think": [
+        "Software will **track every pass** of her grader.",
+        "She expects to be **managed more closely**, not replaced yet."
+      ],
+      "do": [
+        "Ask for more **training** so she's not the slowest.",
+        "Try new **work tools** once others have tested them.",
+        "Hold off on the **kitchen** for now."
+      ],
+      "feel": [
+        "**Uneasy** but watchful, not scared."
+      ],
       "mood": "uneasy",
-      "quote": "The work moves to the remote operations centre, and that's in the city, ten minutes from the café.",
-      "fieldNote": "For Maya, automation could end the fly-in, fly-out life she dislikes. Her steadiness shows in waiting six months for proof before applying. She is realistic that seniority will count against her.",
+      "quote": "Software that tracks every pass of my grader would know I'm slow on the corners before Dana (my supervisor) ever says it.",
+      "fieldNote": [
+        "She sees AI arriving as **management software**, not robots.",
+        "She'd adopt tools **once proven**, true to her steady style.",
+        "She worries about **camp staff** more than herself."
+      ],
       "actions": [
-        "wait-and-see",
+        "retrain",
         "learn-ai",
-        "change-job"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Ask Dana for extra grader training on corner finishing",
+          "tag": "retrain"
+        },
+        {
+          "text": "Use the mine's new road-planning app once the crew trusts it",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Hold off renovating the rental flat's kitchen",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is way too fast and someone, the government or the big companies, should've put the brakes on. At camp I think everyone would be in shock. I'd try to stay level, because panicking at a mine site isn't safe."
+          "text": "Two years, then robots three years after. That's quick."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's going to be a mess for a while, and the government should help people switch. I'd say that to Inès and to anyone at the camp. I'd still not post much."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +260,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think the remote centre plan dies too. If AI can do almost anything, it doesn't need a junior watching screens. I'd be thinking about the café, whether people would still pay a person to make their coffee."
+          "text": "Privately, the grader is hands-on, so I'd have until about 2031. But road grading is simple for a robot, a set path and a set finish. Grading a haul road is a straight line and a flat finish, which is about the easiest thing in the mine to hand to a robot."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +268,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop flying in as soon as the work started to go, maybe within the first year, and go home. I'd work in the café with Luca and we'd cut back hard, no second café, no holiday. We'd live off savings and the café while we worked out what's next."
+          "text": "Right away I'd stop any big spending and keep the investment flat as a backup. I'd look for a job with more variety, like a mechanic's offsider, so I'm learning a trade before 2031. And I'd keep saving every swing."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +276,90 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. I'd at least be home, which is weird to say."
+          "text": "Anxious. I'd need to keep busy so I didn't think about it."
         },
         {
           "speaker": "interviewer",
-          "text": "With two years' notice, what would you do before it arrives?"
+          "text": "Would you stay in FIFO work?"
         },
         {
           "speaker": "persona",
-          "text": "Keep earning the big money for as long as it lasted, because that's what gives us a cushion. I wouldn't start a long course, two years isn't enough to finish anything that matters. Mostly I'd save and spend more of my weeks off in the café learning how it really runs."
+          "text": "Maybe not. If I'm retraining, I'd want to be home more. But the money's so good I'd stay as long as I can."
         },
         {
           "speaker": "interviewer",
-          "text": "Would people still want a person making their coffee?"
+          "text": "What would you tell Inès?"
         },
         {
           "speaker": "persona",
-          "text": "I think some would, the regulars who come in for Luca as much as the coffee. Mrs Okafor comes every morning just to complain about her neighbour. A robot can't nod at that properly, not for a while anyway."
+          "text": "To finish university, but pick something that needs people in person. She's studying business, so I'd worry for her more than for me."
         }
       ],
-      "say": "I'd say it's way too fast and the government or big companies should have put the brakes on. At camp I'd try to stay level, because panic on a mine site isn't safe.",
-      "think": "The remote centre plan dies too, because AI wouldn't need a junior watching screens. I'd be wondering whether people would still pay a person to make their coffee.",
-      "do": "Earns the high wage as long as it lasts, then stops flying in within about a year and works in her partner's café. Cuts out the second café plan and holidays, and lives off savings and café income.",
-      "feel": "Anxious, with an odd relief at finally being home.",
+      "say": [
+        "It'll be a **mess** for a while, and the **government** should help people switch.",
+        "I'd tell Inès and the camp but **not post** online."
+      ],
+      "think": [
+        "She has until **about 2031** because grading is hands-on.",
+        "Road grading is **simple for a robot**, so it goes early."
+      ],
+      "do": [
+        "Stop **big spending** and keep the investment flat as backup.",
+        "Move toward a **mechanic's offsider** role to learn a trade.",
+        "Keep **saving** every swing."
+      ],
+      "feel": [
+        "**Anxious**, needing to stay busy to stop thinking."
+      ],
       "mood": "anxious",
-      "quote": "Mrs Okafor comes every morning just to complain about her neighbour.",
-      "fieldNote": "Even in the worst picture she finds a small upside: being home. Her fallback is her partner's café and the human contact regulars come for. She would not start a long course with only two years' notice.",
+      "quote": "Grading a haul road is a straight line and a flat finish, which is about the easiest thing in the mine to hand to a robot.",
+      "fieldNote": [
+        "She sees her grader job as an **easy target** for robots.",
+        "She worries more for **Inès**, a business student, than for herself.",
+        "Her **savings** let her plan a trade change calmly."
+      ],
       "actions": [
-        "change-job",
         "cut-spending",
-        "seek-support",
-        "save-more"
+        "change-job",
+        "save-more",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Stop big spending and keep the rental flat as backup",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Apply for a mechanic's offsider job on site",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep saving every swing's pay",
+          "tag": "save-more"
+        },
+        {
+          "text": "Tell Inès to choose a course that needs in-person work",
+          "tag": "family-plans"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is fast but enough to make a plan, if people actually start now. At work I'd tell the younger ones to get their tickets and save. I'd be the sensible one, I think."
+          "text": "Five years and then eight for the robots. A bit more time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we have time to get ready, and companies should pay for people to retrain. At the camp I'd say it's something to plan for, not panic about."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +367,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd get maybe three years out of the remote centre if I got in, and then it would go. But that's three years living at home with good pay, and that matters to me more than it would to some people."
+          "text": "Privately, I'd think the grader goes around 2034. That gives me years to learn a trade. By 2034 I'd want a real trade ticket in my pocket, not just a grader I'm still slow on the corners with."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +375,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year I'd finish the excavator ticket and apply for the remote centre as soon as they'd shown it works. I'd do a short business course at night so I could help run the café properly. We'd keep saving, and maybe buy the café's building if the owner sells."
+          "text": "I'd start a heavy-duty mechanic apprenticeship in a couple of years, while still doing FIFO for the money. I'd keep the flat and maybe buy another one. I'd use AI tools a bit more to help study."
         },
         {
           "speaker": "interviewer",
@@ -256,48 +383,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Like I can see the cliff, but I've got a decent map."
+          "text": "Anxious, but I'd have a plan."
         },
         {
           "speaker": "interviewer",
-          "text": "How does five years compare with two for you?"
+          "text": "Why another flat?"
         },
         {
           "speaker": "persona",
-          "text": "Two years means I go straight from camp to the café with no plan. Five means I can get a few years at home in the remote job, learn the business side, and get the café on a solid footing before the end. It's the difference between being pushed and stepping."
+          "text": "Because rent comes in whether I have a job or not. It's my backup if mining goes bad."
         },
         {
           "speaker": "interviewer",
-          "text": "Buying the building sounds like a big risk. Why?"
+          "text": "Is there anything that would stop you?"
         },
         {
           "speaker": "persona",
-          "text": "Because rent is the thing that kills cafés, Luca's parents lost theirs that way. If people still want a place to sit and talk, owning the walls is safer than owning a fancy machine. I'd want to see the numbers first, though."
+          "text": "Being comfortable. FIFO money is easy to get used to. I'd have to push myself."
         }
       ],
-      "say": "I'd say five years is fast but enough to plan if people start now. I'd tell the younger ones at work to get their tickets and save.",
-      "think": "I'd get maybe three years in the remote centre before it goes. Three years at home with good pay matters a lot to me.",
-      "do": "Finishes her excavator ticket and applies for the remote centre once it's proven. Takes a night business course to help run the café, keeps saving, and considers buying the café's building.",
-      "feel": "Uneasy, seeing the cliff ahead but with a decent map.",
-      "mood": "uneasy",
-      "quote": "It's the difference between being pushed and stepping.",
-      "fieldNote": "The extra three years turn a forced move into a planned one for her. She values time at home almost as much as income. Her caution about rent comes straight from her partner's family history.",
+      "say": [
+        "We have **time** to get ready, and companies should **pay for retraining**.",
+        "It's something to **plan for**, not panic about."
+      ],
+      "think": [
+        "The **grader job** at the lithium mine goes around 2034.",
+        "She wants a **real trade ticket** by then, not just a grader licence."
+      ],
+      "do": [
+        "Start a **heavy-duty mechanic apprenticeship** within two years.",
+        "Buy a **second investment flat** as backup income.",
+        "Use **AI tools** more to help with study."
+      ],
+      "feel": [
+        "**Anxious**, but with a plan."
+      ],
+      "mood": "anxious",
+      "quote": "By 2034 I'd want a real trade ticket in my pocket, not just a grader I'm still slow on the corners with.",
+      "fieldNote": [
+        "She sees **rental income** as her backup against job loss.",
+        "She worries **FIFO comfort** could stall her.",
+        "Her plan mixes **retraining and investing**, which fits her steady style."
+      ],
       "actions": [
-        "change-job",
         "retrain",
-        "save-more",
-        "invest"
+        "invest",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Start a heavy-duty mechanic apprenticeship within two years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Buy a second rental flat as backup income",
+          "tag": "invest"
+        },
+        {
+          "text": "Use AI study tools to prepare for the apprenticeship exams",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough to sort it out properly if everyone's sensible. I'd tell people at camp not to waste it. Online I probably wouldn't say much."
+          "text": "Ten years. That's a long time to get ready."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's the version we can handle, if we start now. At the camp I'd say it's time to think about the future, not just next swing. I'd keep it simple."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +469,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I think I'd be fine. I'd have time to get into the remote centre, save a lot, and help build up the café. I'd be thirty-seven, with a business and some money."
+          "text": "Privately, I think I'm fine. Ten years is enough for me to finish a trade, buy a second flat and still be under 40 when robots grade the haul roads."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +477,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one would look almost normal: finish the excavator ticket, keep flying in, keep saving. Luca and I would probably finally get married, we've been putting it off because of the roster. I'd start the business course in a year or two once I'd seen how things were moving."
+          "text": "Keep doing FIFO for a few more years, then start an apprenticeship around 2030. I'd keep saving and investing. I might also buy my own place to live, not just to rent."
         },
         {
           "speaker": "interviewer",
@@ -321,36 +485,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but only just. Mostly it feels manageable."
+          "text": "Mostly calm. A little uneasy, but fine."
         },
         {
           "speaker": "interviewer",
-          "text": "Why would the wedding happen in this picture and not the others?"
+          "text": "Would you move back from FIFO?"
         },
         {
           "speaker": "persona",
-          "text": "Because there's room to breathe. In the fast ones you don't spend money on a party, you keep it. In this one I'd think, life's going on, let's do the thing we keep saying we'll do."
+          "text": "Probably, in a few years. I'd want a normal life, maybe a family."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything that still bothers you about the ten-year version?"
+          "text": "What still bothers you?"
         },
         {
           "speaker": "persona",
-          "text": "That I'd probably wait too long, because I always wait for proof. By the time it's obvious, the good seats are taken. Joanne says I need to be quicker on the excavator, and maybe that's true about life too."
+          "text": "Not knowing what jobs will be safe. A trade feels safe now, but I can't be sure."
         }
       ],
-      "say": "I'd say ten years is enough to sort things out properly if everyone's sensible. I'd tell people at camp not to waste it.",
-      "think": "I think I'd be fine, with time to get into the remote centre, save and build up the café. At thirty-seven I'd have a business and some money.",
-      "do": "Keeps the year nearly normal, finishing the excavator ticket, flying in and saving. Finally marries her partner, and plans a business course in a year or two once she's seen how things are moving.",
-      "feel": "Mostly manageable, with only slight unease.",
+      "say": [
+        "It's the version we **can handle** if we start now.",
+        "I'd tell the camp it's time to think about the **future**, not just next swing."
+      ],
+      "think": [
+        "She feels **fine**, with time for a trade and a second flat.",
+        "She's **unsure** which trades will stay safe."
+      ],
+      "do": [
+        "Keep doing **FIFO** for a few more years.",
+        "Start an **apprenticeship** around 2030.",
+        "Buy her **own home** to live in."
+      ],
+      "feel": [
+        "**Mostly calm**, with a little unease."
+      ],
       "mood": "uneasy",
-      "quote": "In the fast ones you don't spend money on a party, you keep it.",
-      "fieldNote": "The long runway is the only picture where she'd spend money on a wedding. She names her own habit of waiting for proof as her main risk. Her plans stay grounded in the café and home life.",
+      "quote": "Ten years is enough for me to finish a trade, buy a second flat and still be under 40 when robots grade the haul roads.",
+      "fieldNote": [
+        "Ten years lets her **delay** change comfortably.",
+        "She'd likely **leave FIFO** for a normal life.",
+        "Her remaining unease is **not knowing** which trades will last."
+      ],
       "actions": [
         "keep-going",
-        "save-more",
-        "family-plans"
+        "retrain",
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Keep working FIFO swings at the lithium mine for a few years",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Start a trade apprenticeship around 2030",
+          "tag": "retrain"
+        },
+        {
+          "text": "Buy her own home in the city",
+          "tag": "invest"
+        }
       ]
     }
   },
@@ -361,7 +555,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because I'd go from camp to the café with no plan and no time to learn the business. What would help is the company giving people like me a clear timetable, and some kind of grant for small businesses so the café could survive the first rough years."
+      "text": "The two-year one, because grading is too easy to automate and I wouldn't have a trade yet. What would help is the company paying for apprenticeships while we work. I've got a year of pay saved, but what I really need is a trade nobody can automate by 2031."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +563,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe what it's like to be a woman out here. It's better than it was, but there's still stuff. If robots take the trucks, the camps get smaller and a lot of that goes too, which I didn't expect to think was a good thing until just now."
+      "text": "Maybe ask about FIFO. The money is good, but it makes it hard to plan a normal life. That affects how I'd react to any of this."
     }
   ],
-  "headlineQuote": "If robots take the trucks, the camps get smaller and a lot of that goes too, which I didn't expect to think was a good thing until just now.",
-  "portrait": "Maya Moreau is a 27-year-old water cart driver and trainee excavator operator who flies in and out to a large gold mine, two weeks on and one week home. Her partner Luca runs a café in the city, and they have about a year of costs saved, partly with an eye on a second café. She uses AI now and then and waits for proof before changing course. In the steady and slower AGI pictures she sees automation as a way to work from the city and be home; in the two-year picture she would fall back on the café, anxious but glad to be home.",
-  "biggestWorry": "AGI by 2028, because she would go straight from the mine camp to the café with no plan and no time to learn the business.",
-  "whatWouldHelp": "A clear timetable from the company and grants for small businesses so the café could survive the first rough years."
+  "headlineQuote": "I've got a year of pay saved, but what I really need is a trade nobody can automate by 2031.",
+  "portrait": [
+    "Maya is a **27-year-old** FIFO grader operator at a remote lithium mine.",
+    "She shares a flat with her sister Inès and has **over a year saved** plus a rental flat.",
+    "She tries tools **once proven** and uses AI now and then for planning.",
+    "She sees grading as **easy to automate**, so plans a trade.",
+    "She's **calm** in the plateau and **anxious** in the faster AGI pictures."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because grading would go before she had a trade."
+  ],
+  "whatWouldHelp": [
+    "The company **paying for apprenticeships** while she keeps working."
+  ]
 }

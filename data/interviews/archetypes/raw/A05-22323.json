@@ -11,32 +11,24 @@
     "outlook": "centre",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We aren't tied to any company, union, party or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Is that all right?"
+      "text": "I am with the Work Futures Panel, independent of employers, AI firms, unions, parties and government. Your answers are confidential. What do you do on a normal factory day?"
     },
     {
       "speaker": "persona",
-      "text": "Yes, fine. I'm curious what you'll ask, to be honest. I've been reading about this stuff for a while."
+      "text": "I run a robot welding cell for farm-trailer frames. The arm lays the long seams; I clamp steel in a jig, check the bead, and mend awkward corners by hand. I have a vocational certificate and know the settings well enough to spot a bad clamp before the robot runs. I enjoy the first clean seam on a new trailer model."
     },
     {
       "speaker": "interviewer",
-      "text": "Could you walk me through a normal working day?"
+      "text": "What else matters around that shift?"
     },
     {
       "speaker": "persona",
-      "text": "I run a robot welding cell at a company that builds farm trailers. The robot does the long welds on the chassis, and I load the steel into the jig, the frame that holds it, start the program, watch the weld quality and touch up anything the robot misses by hand. When we change trailer models, I adjust the robot's path, and these days I use an AI assistant on my phone to help me work out the settings before I try them. Seven to four, with a half hour where everyone stands in the yard with coffee. I like the moment when a new program runs perfectly. I don't like the fumes, even with the extraction, or the paperwork."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "Do you do anything outside work?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I've got a 3D printer in the garage and I make replacement parts for old motorbikes, knobs, clips, covers, that kind of thing. I sell them online, maybe 150 a month, more in spring. Hana says it's the only hobby she's seen that pays for itself."
+      "text": "My partner Hana and I have two children in school and a mortgage. My welding-cell pay is good, and we have about nine months of expenses saved; Hana works, but I budget the house on my known wage rather than guessing what she might earn next month. I use AI every day for manuals and setup notes, then test every suggestion safely. On weekends I print replacement plastic clips for old motorbikes and sell a few online."
     }
   ],
   "scenarios": {
@@ -44,11 +36,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say well, it was overhyped, but the tools are still useful. I'd keep telling the lads at work to try the assistant for the welding settings, because it saves me a good half hour on a changeover."
+          "text": "I would tell the welders AI remains a decent manual search, not a magic torch. The jig still has to hold the frame square before the robot starts."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately I'd be a little disappointed. I'd hoped it would go further. But practically, nothing changes for us, and that's fine for the mortgage."
+          "text": "The cell needs an operator and my wage looks sound if AI stays modest. Nine months saved lets us absorb a quiet spell, and there are other factories nearby. I would still like a better tool for finding a faulty seam, but I do not need it to pay the mortgage."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on with the job, keep using the AI for setups, keep growing the motorbike parts thing. Maybe buy a second printer, around 600, so I can keep up in spring. Keep saving as normal."
+          "text": "I would keep setting the welding cell, checking the seams and selling printed motorbike clips on weekends. If spring orders cover the printer’s parts and postage, I would buy a second printer from those profits to fill more paid orders."
         },
         {
           "speaker": "interviewer",
@@ -72,48 +64,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A bit flat, maybe, like a film that never got to the exciting part."
+          "text": "I feel calm about work and the mortgage. A slower technology story would be a little dull, but a sound weld is enough excitement on some mornings."
         },
         {
           "speaker": "interviewer",
-          "text": "What do your workmates think of you using AI?"
+          "text": "Would the new printer have paying work?"
         },
         {
           "speaker": "persona",
-          "text": "Most of them think the assistant is cheating. Old Marek says if you need a phone to weld, you can't weld, and he's half right. But he still asks me to check his settings on it."
+          "text": "I would order it only after I have enough spring clip orders to keep the first printer busy for several weekends. A spare machine on a shelf earns nothing. I can show Hana the actual invoices before buying it."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you put more into the side business?"
+          "text": "Does the AI assistant make you faster on the cell already?"
         },
         {
           "speaker": "persona",
-          "text": "Probably more printers, if the side thing keeps growing. But I wouldn't leave the factory for it, the factory pays well and it's steady."
+          "text": "It helps me find a manual page, but I still check the fixture and the weld test myself. I cannot send a trailer frame out because a chat box called it sound. The cell log has measured results for that reason."
         }
       ],
-      "say": "It was overhyped, but the tools are still useful. I'd keep telling the lads to try the assistant for welding settings, because it saves me half an hour on a changeover.",
-      "think": "I'd be a bit disappointed, because I'd hoped it would go further. But practically nothing changes, and that's fine for the mortgage.",
-      "do": "Keeps using AI for setups and grows his motorbike parts business, buying a second 3D printer for about 600. Keeps saving as normal.",
-      "feel": "Calm and slightly flat, like a film that never got to the exciting part.",
+      "say": [
+        "I would **tell** welders AI search helps with manuals while the jig and weld still need checks.",
+        "I would **not** confuse faster notes with a tested trailer frame."
+      ],
+      "think": [
+        "My **welding-cell** wage is secure and nine months saved covers ordinary gaps.",
+        "A **second** printer is attractive only if paying clip orders justify it."
+      ],
+      "do": [
+        "**Keep** setting the welding cell and checking trailer-frame seams.",
+        "**Continue** selling printed motorbike clips on weekends.",
+        "**Buy** a second printer only from profit after enough paid orders cover its use."
+      ],
+      "feel": [
+        "**Calm** about wages, with a little boredom if AI stops improving."
+      ],
       "mood": "calm",
-      "quote": "Old Marek says if you need a phone to weld, you can't weld, and he's half right.",
-      "fieldNote": "Yusuf already uses AI daily and runs a small online side business, so even a plateau feels slightly flat to him. He's affectionate about sceptical colleagues like Marek and doesn't preach. The factory remains his anchor for steady pay.",
+      "quote": "A spare machine on a shelf earns nothing.",
+      "fieldNote": [
+        "**Yusuf** already runs a robot cell and uses AI daily, but tests physical welds and fixtures himself.",
+        "His **strong** reserve and higher pay make the plateau safe; a second printer is a conditional business purchase.",
+        "The **purchase** depends on actual paid clip orders and profit, not an assumed household income from Hana."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai",
         "side-income",
         "invest"
+      ],
+      "steps": [
+        {
+          "text": "Keep setting the welding cell and testing trailer-frame seams",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Continue selling printed motorbike clips on weekends",
+          "tag": "side-income"
+        },
+        {
+          "text": "Buy second printer from profit only after paid clip orders justify it",
+          "tag": "invest"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is when you want to be the one who knows how the new stuff works. Learn it early, that's the advice I'd give anyone. And the company should pay for people to learn, that's just sense."
+          "text": "I would tell the shop that planning software may pick weld paths before a robot can load an odd trailer frame. I would ask for paid training before the manager expects one operator to cover two cells."
         },
         {
           "speaker": "interviewer",
@@ -121,7 +142,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I think I'd be fine, maybe better off. I already program the robot cell, so I'd be the obvious person to run two cells, or train others. The ones I'd worry about are the hand welders on the small batches."
+          "text": "I could probably run a newer cell, since I already handle one, but a program that writes its own path makes my setup skill less rare. I do not think my whole wage disappears in this milder picture, yet the roster could tighten. I also think of the hand welders on short runs."
         },
         {
           "speaker": "interviewer",
@@ -129,7 +150,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask the boss straight away to put me on the robot manufacturer's programming course, the five-day one. I'd offer to train the others afterwards. And I'd use the AI to write up proper setup guides for each trailer model, so the knowledge isn't just in my head."
+          "text": "I would learn the new AI weld-path checker on scrap test pieces if the plant approves it and a supervisor signs off the safety procedure. I would request a paid supplier course for two-cell operation and take it if offered with a supervised place and written hours and wage at least matching mine. I would keep the current cell and clip sales while the roster is decided."
         },
         {
           "speaker": "interviewer",
@@ -137,47 +158,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, and a bit excited, I'll admit."
+          "text": "I feel anxious about a possible cut in my own hours. I am keen to learn, but the written pay line matters more than being first to touch a screen."
         },
         {
           "speaker": "interviewer",
-          "text": "Does it worry you that writing guides could make you easier to replace?"
+          "text": "Would you share the setup notes with hand welders?"
         },
         {
           "speaker": "persona",
-          "text": "A bit, yes. If I write down everything I know, the company needs me less, but if I don't, I'm the bottleneck and they'll replace me anyway. I'd rather be the one who wrote the guide."
+          "text": "Yes, I would show them the safe test routine and what the checker gets wrong. A written guide can help the night shift too. But I would not promise them two cells create two new jobs."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you worry about?"
+          "text": "What if the supplier course is not offered?"
         },
         {
           "speaker": "persona",
-          "text": "Marek and the two hand welders. They're good, better than me with a torch. I'd tell the boss to keep them on the special orders, the custom trailers, because the robot's no good at one-offs."
+          "text": "I would stay on the present cell and check posted welding-cell roles at nearby plants. I would apply only if the wage and shift cover our mortgage and school pickup. I would not leave a good wage for a trial I have merely requested."
         }
       ],
-      "say": "This is when you want to be the one who knows how the new stuff works, so learn it early. The company should pay for people to learn, that's just sense.",
-      "think": "I think I'd be fine, maybe better off, since I already program the robot cell and could run two or train others. I'd worry about the hand welders on small batches.",
-      "do": "Asks his boss straight away for the robot maker's five-day programming course and offers to train others. Uses AI to write setup guides for each trailer model.",
-      "feel": "Calm, and a bit excited.",
-      "mood": "calm",
-      "quote": "If I write down everything I know, the company needs me less, but if I don't, I'm the bottleneck and they'll replace me anyway.",
-      "fieldNote": "Yusuf sees steady change as a promotion path and moves first. He thinks hard about the trade-off of writing down his know-how and chooses openness. He looks out for the skilled hand welders, suggesting a practical role for them on one-offs.",
+      "say": [
+        "I would **ask** for paid training before one operator covers two robot cells.",
+        "I would **explain** that AI weld-path planning changes before full hands-on automation."
+      ],
+      "think": [
+        "My **setup** skill may be less rare, and my own roster could tighten.",
+        "**Hand** welders on short trailer runs may face an even earlier squeeze."
+      ],
+      "do": [
+        "**Practise** a new AI weld-path checker only on approved scrap tests with safety sign-off.",
+        "**Take** paid supervised supplier training if offered with written current wages and hours.",
+        "**Keep** operating the current cell while checking any new roster."
+      ],
+      "feel": [
+        "**Anxious** about possible hours loss, though interested in the technology."
+      ],
+      "mood": "anxious",
+      "quote": "I would not leave a good wage for a trial I have merely requested.",
+      "fieldNote": [
+        "**Yusuf** already knows a robot cell, but new path planning still poses a real skill and staffing change.",
+        "He would **actually** practise a new AI checker only on approved scrap tests with safety supervision.",
+        "The **requested** supplier course becomes training only if a paid supervised place and written wage and hours are offered."
+      ],
       "actions": [
-        "retrain",
         "learn-ai",
-        "automate"
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Practise new AI weld-path checker only on approved scrap tests with safety sign-off",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Take paid supplier course only if offered supervised with current wages and hours",
+          "tag": "retrain"
+        },
+        {
+          "text": "Check posted nearby welding jobs if no course with mortgage-covering pay and school-compatible shifts",
+          "tag": "change-job"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's here, and the sensible thing is to work out quickly how people keep an income while it settles. Government and companies both need to move faster than they've ever moved. Arguing about who's to blame won't help."
+          "text": "I would tell the shop that AGI in 2028 can write weld programs, while capable robots that load, inspect and rework frames follow around 2031. Our present arm already welds, but it still needs human hands at the jig."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +236,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, if AI can do anything, it can program a welding robot better than me. My edge is gone within a year. I'd be one of the last out, maybe, but out."
+          "text": "I expect the plant to need far fewer cell operators when robots handle the whole frame around 2031. I have nine months saved, but that does not replace my high wage for years, and my printed clips could face robot competition too. I would be awake thinking about the mortgage and the children’s school costs."
         },
         {
           "speaker": "interviewer",
@@ -193,7 +244,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stay at the factory as long as I'm useful, running the changeover. At the same time I'd put about 8,000 of savings into a small robot arm and a better printer for the garage, to make parts on a bigger scale. If robots are going to do the work, I'd rather own one. And we'd cut back at home, no holiday, until we see how it goes."
+          "text": "This month I would list the mortgage and my confirmed factory pay, stop buying printer filament for unbooked clip designs, and move part of each newly paid shift into emergency savings. I would apply for posted local robot-maintenance roles only if paid safety instruction is provided and the wage covers our bills. I would keep the present cell until an actual offer arrives."
         },
         {
           "speaker": "interviewer",
@@ -201,48 +252,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Excited and scared together, which is a strange mix at three in the morning."
+          "text": "I feel alarmed about losing most of the factory wage. A nine-month cushion buys a search, but I would still be awake counting how long it lasts."
         },
         {
           "speaker": "interviewer",
-          "text": "Would the motorbike parts business survive?"
+          "text": "Why would a maintenance role survive capable robots?"
         },
         {
           "speaker": "persona",
-          "text": "Probably, if people still have money. That's the thing I don't know. If everyone's out of work, nobody's restoring old motorbikes. So it's a gamble, but a small one."
+          "text": "It might only buy time during installation and early faults. I would check the contract length and the posted pay before moving. A short project would not carry our mortgage unless another confirmed wage followed it."
         },
         {
           "speaker": "interviewer",
-          "text": "How much does two years of warning help you?"
+          "text": "Would you buy a robot for the garage now?"
         },
         {
           "speaker": "persona",
-          "text": "Two years is enough to set something up, not enough to see if it works before everything changes. With two years I'd be building the boat while the water's already coming in."
+          "text": "No. I would only buy one after a customer pays for a safe job it can do, and I have checked space and insurance. I know how quickly an exciting machine becomes an expensive object in the corner."
         }
       ],
-      "say": "It's here, so we need to work out quickly how people keep an income while it settles. Government and companies need to move faster than ever, and arguing about blame won't help.",
-      "think": "If AI can do anything, it can program a welding robot better than me, so my edge is gone within a year. I'd be one of the last out, but out.",
-      "do": "Stays to run the changeover at the factory while putting about 8,000 of savings into a small robot arm and a better printer for the garage business. Cuts back at home and skips the holiday.",
-      "feel": "Anxious, with excitement and fear mixed together in the middle of the night.",
-      "mood": "anxious",
-      "quote": "With two years I'd be building the boat while the water's already coming in.",
-      "fieldNote": "Yusuf's answer to fast AGI is to own a robot rather than compete with one. He's clear-eyed that his side business depends on other people still having money. The mix of excitement and fear is honest and fits his adaptable, pragmatic temperament.",
+      "say": [
+        "I would **tell** coworkers 2028 program writing differs from around-2031 robot loading and rework.",
+        "The **present** welding arm still needs an operator at the trailer jig."
+      ],
+      "think": [
+        "I **expect** far fewer cell-operator hours when capable robots handle the full frame.",
+        "**Nine** months saved will not replace my higher wage over a long gap."
+      ],
+      "do": [
+        "**Stop** buying printer stock for clip designs with no orders.",
+        "**Transfer** part of new factory wages into emergency savings.",
+        "Apply for **posted local maintenance** with paid safety training and adequate wages; change only with mortgage-covering contract or confirmed follow-on wages."
+      ],
+      "feel": [
+        "**Alarmed** by expected wage loss, awake counting mortgage months."
+      ],
+      "mood": "alarmed",
+      "quote": "A nine-month cushion buys a search, but I would still be awake counting how long it lasts.",
+      "fieldNote": [
+        "**Yusuf** distinguishes the existing robot arm from future capable robots that could load and rework frames.",
+        "He **expects** a major wage loss around 2031 and treats his nine-month reserve as a time limit, not a solution.",
+        "**Maintenance** is only a bridge if a posted safe role, adequate wage and workable contract exist."
+      ],
       "actions": [
-        "automate",
-        "invest",
-        "side-income",
-        "cut-spending"
+        "cut-spending",
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Stop buying printer filament for unbooked clip designs",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Transfer part of newly paid factory shifts into emergency savings",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply for posted local robot-maintenance work only with paid safety instruction and bill-covering wage",
+          "tag": "change-job"
+        },
+        {
+          "text": "Accept maintenance work only if contract covers mortgage or another confirmed wage follows",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is a fair warning. Use it. Train people, set up some kind of income support, and let companies change at a pace that doesn't wreck towns."
+          "text": "I would tell operators five years is time to learn how to maintain a full cell and test a small business without betting the house. AGI writes paths by 2031, but capable frame-handling robots arrive around 2034."
         },
         {
           "speaker": "interviewer",
@@ -250,7 +334,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd think this is enough time to build the side business properly. Three or four years of the factory paying the mortgage, while the garage grows into something real."
+          "text": "At 51 when those robots reach the jig, I may lose the old operator role. My clip orders give me a customer list, not a replacement wage. I want the factory paying the mortgage while I learn whether a safe repair service can earn its own fees."
         },
         {
           "speaker": "interviewer",
@@ -258,7 +342,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year I'd do the robot programming course, get as much as I can from the factory, and grow the parts business to maybe 500 a month. By year three I'd rent a small unit on the industrial estate and buy a robot arm for finishing. I'd keep at least six months of savings untouched the whole way."
+          "text": "I would enroll in a certified robotics-maintenance course next year if the fee fits after bills and the evening schedule fits school pickup. I would ask the plant for paid supervised practice on a new cell if offered, then apply for a posted maintenance role only if the wage covers our mortgage. For the side business, I would accept paid repair bookings only after a customer deposit and documented safety checks."
         },
         {
           "speaker": "interviewer",
@@ -266,48 +350,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but I feel like I'd have the wheel."
+          "text": "I feel anxious about the old role shrinking, but five years lets me test one repair job at a time. I can keep our reserve while the orders are still small."
         },
         {
           "speaker": "interviewer",
-          "text": "What would Hana think of that?"
+          "text": "What is the first repair you would take?"
         },
         {
           "speaker": "persona",
-          "text": "Hana's careful. She'd want me to keep the factory job until the business makes as much as my wage. She'd say a hobby that pays for itself isn't the same as a job that pays for the house. She's right."
+          "text": "A stopped cell with a documented sensor fault, isolated power and a shop willing to supervise access. I would not buy a robot arm just to advertise a repair service. One paid safe job tells me more than ten plans."
         },
         {
           "speaker": "interviewer",
-          "text": "How does five years feel compared with two?"
+          "text": "What if the college course is not recognised by local employers?"
         },
         {
           "speaker": "persona",
-          "text": "With two years I'm grabbing at it. With five I can test it, fail a bit, fix it. That's how I like to work, actually, small steps you can check."
+          "text": "I would keep the welding-cell job and check posted operator vacancies at nearby factories. I would apply only where pay covers the mortgage and the shift fits our children’s pickup. I would not spend the course fee to collect an unrecognised badge."
         }
       ],
-      "say": "Five years is a fair warning, so use it: train people, set up income support and let companies change at a pace that doesn't wreck towns.",
-      "think": "This is enough time to build the side business properly. The factory pays the mortgage for three or four years while the garage grows into something real.",
-      "do": "Takes the robot programming course and grows the parts business towards 500 a month in the first year. Rents a small unit and buys a finishing robot arm by year three, keeping six months of savings untouched.",
-      "feel": "Uneasy, but in control.",
-      "mood": "uneasy",
-      "quote": "She'd say a hobby that pays for itself isn't the same as a job that pays for the house.",
-      "fieldNote": "Five years lets Yusuf work the way he likes, in small checkable steps. His wife's caution acts as a brake he respects. The plan is concrete, with numbers, dates and a fallback cushion.",
+      "say": [
+        "I would **ask** for recognised maintenance training and paid safe cell practice.",
+        "The **five-year** gap permits testing demand before capable robots take full frames."
+      ],
+      "think": [
+        "My **operator** role may shrink around 2034 at age 51.",
+        "A **clip** customer list does not yet provide a mortgage-sized repair wage."
+      ],
+      "do": [
+        "**Take** recognised affordable maintenance training with school pickup and paid supervised plant practice if offered.",
+        "**Take** deposited repair bookings only after documented power isolation and safety checks.",
+        "**Apply** for posted mortgage-covering maintenance work after training; if course unrecognised, seek posted bill-covering operator work with school-compatible shifts."
+      ],
+      "feel": [
+        "**Anxious** about losing the old role, with time to test paid repairs."
+      ],
+      "mood": "anxious",
+      "quote": "I would not buy a robot arm just to advertise a repair service.",
+      "fieldNote": [
+        "**Yusuf** is willing to move early but insists on a locally recognised course and safe supervised practice.",
+        "His **small** clip business provides contacts, not assured income for robot maintenance.",
+        "A **rejected** certificate leads to an independent posted operator search with mortgage and pickup terms."
+      ],
       "actions": [
         "retrain",
         "side-income",
-        "invest",
-        "automate"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Take recognised affordable maintenance course with pickup and paid supervised plant practice if offered",
+          "tag": "retrain"
+        },
+        {
+          "text": "Take deposited robot repair bookings only after documented isolation and safety checks",
+          "tag": "side-income"
+        },
+        {
+          "text": "Apply for posted maintenance role after course only if wage covers mortgage",
+          "tag": "change-job"
+        },
+        {
+          "text": "Seek posted operator work if course unrecognised and pay covers mortgage and school pickup fits",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a real chance, if we use it. Get young people learning the right things, help older workers move, and don't pretend it's not coming."
+          "text": "I would tell younger welders that a decade is enough to train and compare wages, if employers actually post the jobs. I would ask for a real apprenticeship rota rather than a robot photograph on the noticeboard."
         },
         {
           "speaker": "interviewer",
@@ -315,7 +432,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I think we'd come out of this fine. Ten years is enough to have the business running on its own, the mortgage mostly paid, and the kids through school. I'd be fifty-three and doing something I chose."
+          "text": "I would be 53 when AGI writes paths in 2036 and 56 when capable robots reach full frame work around 2039. I might be in maintenance by then, or still on a cell if the factory keeps people. The mortgage does not become optional because I enjoy new machinery."
         },
         {
           "speaker": "interviewer",
@@ -323,7 +440,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stay at the factory for five or six years, learning everything about the new robots as they come in. Meanwhile I'd grow the parts business step by step and move it into a unit around year five. I'd put a bit into an index fund every month too, a couple of hundred, so we're not betting everything on one thing."
+          "text": "I would keep the welding-cell wage now and take a locally accepted maintenance course if tuition and school pickup fit. I would accept only deposited weekend repair work with safe access, then save part of each new repair payment after materials. In the first year after 2036 I would apply for a posted local maintenance job only if its wage and shifts cover our mortgage; I would not resign before a written offer."
         },
         {
           "speaker": "interviewer",
@@ -331,37 +448,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. A bit nervous about the end, but calm."
+          "text": "I feel uneasy about where live factory roles end, but our income is sound in the near term. I can test a service before I rent a workshop."
         },
         {
           "speaker": "interviewer",
-          "text": "Would the kids get involved?"
+          "text": "Would you rent a repair unit with ten years to build it?"
         },
         {
           "speaker": "persona",
-          "text": "Emil already helps with the printer. I'd want him to know how to make things, not just how to ask a machine to make them. Zofia's into drawing, so maybe she'd do the designs."
+          "text": "Only after repeat paid repair jobs cover rent, insurance and our family bills without using the nine-month reserve. A garage bench is enough for small safe work. I would show Hana the numbers before signing a lease."
         },
         {
           "speaker": "interviewer",
-          "text": "What still worries you in this one?"
+          "text": "What would you tell your children about robots?"
         },
         {
           "speaker": "persona",
-          "text": "That nobody has money to buy anything at the end. That's not something I can fix from my garage. That one's for the people in charge."
+          "text": "I would let them see how I check a weld and ask how the robot made its decision. I do not want them to think a screen is either magic or a cheat. They can choose their own work when they are older."
         }
       ],
-      "say": "Ten years is a real chance if we use it: get young people learning the right things, help older workers move and don't pretend it's not coming.",
-      "think": "I think we'd come out fine, with the business running on its own, the mortgage mostly paid and the kids through school. At fifty-three I'd be doing something I chose.",
-      "do": "Stays at the factory for five or six years learning the new robots while growing the parts business, moving it to a unit around year five. Puts a couple of hundred a month into an index fund to spread the risk.",
-      "feel": "Mostly calm, a bit nervous about the end.",
-      "mood": "calm",
-      "quote": "I'd want him to know how to make things, not just how to ask a machine to make them.",
-      "fieldNote": "With a decade Yusuf is genuinely calm and sees the change working in his favour. His remaining worry is whether anyone will have money to spend, which he sees as beyond his control. The family-business picture with his children is a hopeful touch.",
+      "say": [
+        "I would **ask** for posted apprenticeships and real wage terms before factory change.",
+        "**Younger** welders should learn how to test a robot’s work, not only press start."
+      ],
+      "think": [
+        "At 53 **when** thinking AGI arrives I might still run the welding cell.",
+        "At 56 **near** capable robots, maintenance needs a real paid opening to protect the mortgage."
+      ],
+      "do": [
+        "**Keep** earning on the current welding cell while checking accepted maintenance training.",
+        "**Take** deposited safe repair jobs and save from newly paid work after costs.",
+        "**Apply** for posted maintenance work after 2036 only if pay and shift cover our mortgage."
+      ],
+      "feel": [
+        "**Uneasy** about distant roles, while current income and savings feel sound."
+      ],
+      "mood": "uneasy",
+      "quote": "The mortgage does not become optional because I enjoy new machinery.",
+      "fieldNote": [
+        "**Yusuf’s** technical curiosity stays tied to a good present wage and nine months of household savings.",
+        "He **makes** maintenance study depend on local acceptance, tuition and pickup; later applications depend on posted wage and shifts.",
+        "**Repair** work requires deposits, safe access and actual net pay before new saving or a workshop lease."
+      ],
       "actions": [
+        "retrain",
         "side-income",
-        "invest",
-        "learn-ai",
-        "keep-going"
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Take locally accepted maintenance course only if tuition and school pickup fit",
+          "tag": "retrain"
+        },
+        {
+          "text": "Take deposited weekend robot repairs only with safe access",
+          "tag": "side-income"
+        },
+        {
+          "text": "Save part of new repair payments after materials",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply for posted maintenance work only if wage and shift cover mortgage",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -372,19 +523,29 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because I couldn't test anything before it all moved. What would help is cheap loans for small businesses to buy their own robots, and some income support so people have money to spend. Without customers, all the robots in the world don't help."
+      "text": "The two-year AGI picture worries me most because capable robots could take most welding-cell hours around 2031 before my repair work is a real wage. A paid safe maintenance route and a posted local role with bill-covering pay would help."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I did not ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe ask who owns the robots. Everyone asks if the robots will take our jobs, nobody asks whose robots they'll be. That's the question I'd want answered."
+      "text": "Ask who checks the jig before a trailer frame is welded. A robot can lay a perfect seam on a crooked frame, and the customer will still get a crooked trailer."
     }
   ],
-  "headlineQuote": "Everyone asks if the robots will take our jobs, nobody asks whose robots they'll be.",
-  "portrait": "Yusuf Kowalski is 43, runs a robot welding cell at a farm-trailer maker, and sells 3D-printed motorbike parts from his garage on the side. He's curious, pragmatic and uses AI every day, married to Hana, a careful partner who keeps him grounded, with two children. He's calm through a plateau and steady change, seeing himself as the one who learns first. Two-year AGI makes him anxious and he responds by buying his own robot arm, while five and ten years let him grow the side business step by step, ending mostly calm but worried about whether customers will still have money.",
-  "biggestWorry": "AGI by 2028 worries him most, because he couldn't test anything before everything moved.",
-  "whatWouldHelp": "Cheap loans for small businesses to buy their own robots and income support so people still have money to spend."
+  "headlineQuote": "A robot can lay a perfect seam on a crooked frame, and the customer will still get a crooked trailer.",
+  "portrait": [
+    "**Yusuf** Kowalski, 43, runs a farm-trailer welding cell and holds a vocational certificate.",
+    "He and **partner** Hana have two school-age children, a mortgage, higher operator pay and about nine months of expenses saved.",
+    "He **uses** AI daily for manuals, prints motorbike clips on weekends and tests every physical weld or paid repair.",
+    "He is **curious** about new tools but requires recognised training, paid safe practice and posted mortgage-covering roles before leaving wages.",
+    "**Fast** AGI alarms him because program writing changes in 2028 and capable robots may remove most cell shifts around 2031."
+  ],
+  "biggestWorry": [
+    "The 2028 **AGI** scenario may cut most cell hours when capable robots reach full frame work around 2031."
+  ],
+  "whatWouldHelp": [
+    "**Paid** safe maintenance training and a posted local role with mortgage-covering wages would help."
+  ]
 }

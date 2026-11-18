@@ -1,0 +1,542 @@
+{
+  "id": "A21-11132",
+  "archetype": "A21",
+  "job": "Accountant",
+  "sector": "Professional, scientific and technical services",
+  "name": "Erik Jensen",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "thin",
+    "outlook": "traditional",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for making time, Erik. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Could you start by telling me a bit about yourself?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Erik, 27. I'm a junior at Tidewell Accountants, a firm of twelve in a harbour town, and a lot of our clients are boat owners, the fish market, guest houses and the boatyard. I live with my girlfriend Maren, who works early shifts at the bakery on Quay Street, in a rented flat with a view of the car park. We've got about three weeks of money saved, which isn't much when the boiler's older than me."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Walk me through a normal working day. What do you do, what do you like, and what wears you out?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I prepare accounts and tax returns, mostly for the guest houses and the fishing boats, which have odd seasonal income. The day is bank reconciliations, sorting out fuel and repair costs, and drafting accounts for Karen, my manager, to review. I use a chat tool now and then, mostly to double-check how a tax rule works before I ask Karen and look daft. I like the harbour clients, they're practical people. What wears me out is the summer rush when the guest houses bring in shoeboxes, and I'm still slower than I should be."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The first picture is called AI Plateau. Here is the card. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I'm not surprised. A lot of the AI talk always sounded like salesmen talking. At work I'd say we can keep using it for the small stuff and get on with the job. At the football club, where I'm treasurer, I'd say it's one less thing to worry about."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, the job feels safe in that picture, but money doesn't. My pay's low, the harbour economy goes up and down with the tourists, and there are only two other firms within an hour. If Maren's bakery cut her shifts in winter, like it did last year, we'd be scraping by."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep going and focus on passing my next exam paper in spring, which brings a pay step. I'd ask Karen if I can take on the boatyard's accounts, because that's a bigger client and good experience. And I'd put £60 a month aside, starting with what I save by making my own lunches."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, but nothing more. Same worries as always, just no new ones."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What happened last winter with Maren's shifts?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The bakery went from six days to four over January and February, because the tourists vanish. We lost about £300 a month. We got through by putting the shopping on a card and skipping my mate's stag weekend."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Do you think AI saves you much time now?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A bit. It saves me asking Karen silly questions, maybe twice a week. But it doesn't sort a shoebox of guest house receipts, I still do that by hand."
+        }
+      ],
+      "say": [
+        "It always sounded like **salesmen talking**.",
+        "Use it for the **small stuff** and get on with the job."
+      ],
+      "think": [
+        "My **job feels safe**, but money doesn't.",
+        "Maren's **winter shifts** and a seasonal harbour keep us scraping by."
+      ],
+      "do": [
+        "Pass my next **exam paper** in spring for a pay step.",
+        "Ask Karen for the **boatyard's accounts** to gain experience.",
+        "Save **£60 a month** by making my own lunches."
+      ],
+      "feel": [
+        "**Uneasy**; the **same worries** as always, but no new ones."
+      ],
+      "mood": "uneasy",
+      "quote": "A lot of the AI talk always sounded like salesmen talking.",
+      "fieldNote": [
+        "Job feels safe, but the **seasonal harbour economy** drives his money worry.",
+        "Uses AI to **avoid looking daft** in front of his manager.",
+        "Thrift is **practical**: packed lunches, skipped stag weekend."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep preparing guest house and fishing boat accounts at Tidewell",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Pass the next professional exam paper in spring",
+          "tag": "retrain"
+        },
+        {
+          "text": "Pack lunches and save £60 a month",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The second picture is called Steady Disruption. Here is the card. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say firms that adapt will do well, and the rest will have to catch up. At work I'd say let's learn it properly once we see it working at other firms. With the lads I'd say there's always work for people who are willing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, I think a lot of my desk tasks get swallowed, the reconciliations and the first drafts. If Tidewell needs fewer juniors, I'm not the fastest, so I'd be worried. The harbour clients like a face, though, and that might keep me."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "Once I'd seen it working at a couple of other firms, I'd use the tools every day and learn to check them properly. I'd ask Karen if I could focus on the fishing boats, because the seasonal stuff is fiddly and the skippers want a person. And I'd talk to my uncle, who runs a small building firm, about doing his books on the side."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious. Not panicking, but I'd be watching for news at work."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why wait to see it at other firms?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Because I've seen people jump on things too early and look foolish. Karen, my manager, once bought a scanner that couldn't read handwriting, and the guest house owners all write by hand. I'd rather be the second one through the door."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you take government help if your hours were cut?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd rather not. I'd go to my uncle for work first, or take extra shifts somewhere. Help from the government should be for people who can't work."
+        }
+      ],
+      "say": [
+        "I'd say firms that **adapt** will do well, and the rest will catch up.",
+        "I'd tell my mates there's always work for people who are **willing**."
+      ],
+      "think": [
+        "Many of my **desk tasks** get swallowed.",
+        "I'm not the fastest, so I'd **worry** if Tidewell cut juniors."
+      ],
+      "do": [
+        "Use the **tools daily** once proven at other firms.",
+        "Ask Karen to focus on **fishing boats**, where skippers want a person.",
+        "Do my **uncle's books** on the side."
+      ],
+      "feel": [
+        "**Anxious**; I'd be **watching for news** at work."
+      ],
+      "mood": "anxious",
+      "quote": "Karen, my manager, once bought a scanner that couldn't read handwriting, and the guest house owners all write by hand.",
+      "fieldNote": [
+        "Adopts tools **once proven** elsewhere, wary of looking foolish.",
+        "Prefers **family work** to government help.",
+        "Sees **face-to-face** fishing clients, whose skippers want a person, as his best protection."
+      ],
+      "actions": [
+        "learn-ai",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Use the firm's AI tools daily once other firms prove them",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Do the bookkeeping for his uncle's building firm",
+          "tag": "side-income"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The third picture is called AGI by 2028. Here is the card. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's arrived too fast, and the government should get out of the way of businesses that want to keep people on. At work I'd say we'll have to be practical. With the lads I'd say learn a trade."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Honestly, my job's gone by 2029, it's all thinking work and the AI does that. The harbour work, the boats, the building trade, they've got until about 2031 before robots. So I'd want to get my hands dirty fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "Starting now, I'd ask my uncle to take me on as an apprentice in his building firm, even on lower pay, and do his books in the evenings. I'd cut back hard, no holidays, cancel the gym, sell the car if I could walk to the yard. Once it arrived, I'd work every hour on the sites and save."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Alarmed. I'd lie awake thinking about the boiler and the rent."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Can you afford an apprentice wage?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Not really, it's about two thirds of what I earn now. Maren's bakery wage would carry more of the rent. We'd have to cut everything for a year."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you say to Maren?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell her I'm going to work for my uncle and it'll be hard for a year. She'd say it herself: my girlfriend Maren has been getting up at four for years, so I can manage a building site. She's tougher than me."
+        }
+      ],
+      "say": [
+        "I'd say government should **step aside** for employers who keep staff on.",
+        "I'd tell my mates: **learn a trade**."
+      ],
+      "think": [
+        "My job's **gone by 2029**; it's all thinking work.",
+        "Hands-on harbour and building work last until **about 2031**."
+      ],
+      "do": [
+        "Start as an **apprentice** in my uncle's building firm.",
+        "Cut **holidays and the gym**, and sell the car.",
+        "Work every hour on site and **save**."
+      ],
+      "feel": [
+        "**Alarmed**; I'd lie awake about the **boiler and rent**."
+      ],
+      "mood": "alarmed",
+      "quote": "My girlfriend Maren has been getting up at four for years, so I can manage a building site.",
+      "fieldNote": [
+        "Uses the **robot gap**: moves into building work for three more years.",
+        "Leans on **family** first, rejecting government help.",
+        "Household would rely on his partner's **bakery wage** for a year."
+      ],
+      "actions": [
+        "change-job",
+        "cut-spending",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Start an apprenticeship at his uncle's building firm",
+          "tag": "change-job"
+        },
+        {
+          "text": "Cancel the gym and sell the car",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Work extra site hours and bank the overtime",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fourth picture is called AGI by 2031. Here is the card. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say five years is a fair warning, so people should get on with it. At work I'd tell Karen we should focus on the clients who want a person. With the lads I'd say learn a trade, or get good at the new tools."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, five years gives me time to qualify and earn more, then switch. My desk work ends by 2031, but I could learn building with my uncle on weekends first. Robots come around 2034, so I'd have some years on site."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "First year, pass my exams. By year two, I'd start working weekends with my uncle. We'd save £100 a month and put off the wedding talk until things settle."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, but I'd have a plan."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Putting off the wedding talk, how would Maren feel?"
+        },
+        {
+          "speaker": "persona",
+          "text": "She'd be disappointed. Maren, my girlfriend, has got a wedding dress picked out on her phone. But she'd see it's sensible. We'd rather have a small wedding when we know where we stand."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you use AI tools more in this picture?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Yes, once they're proven, I'd use them every day to get my work done faster. It'd free up time to learn the trade. But I'd still check what they say."
+        }
+      ],
+      "say": [
+        "I'd say five years is **fair warning**, so get on with it.",
+        "I'd tell Karen to focus on the **clients** who want a person."
+      ],
+      "think": [
+        "I can **qualify**, earn more, then switch.",
+        "Desk work ends by 2031, but robots only reach building sites around **2034**."
+      ],
+      "do": [
+        "Pass my **exams** in year one.",
+        "Work **weekends** with my uncle by year two.",
+        "Save **£100 a month** and put off wedding talk."
+      ],
+      "feel": [
+        "**Anxious**, but with **a plan**."
+      ],
+      "mood": "anxious",
+      "quote": "Maren, my girlfriend, has got a wedding dress picked out on her phone.",
+      "fieldNote": [
+        "Five years lets him **qualify first**, then learn building.",
+        "Postpones **wedding plans**, though his partner would be disappointed.",
+        "Would adopt AI daily **once proven**, using the time saved to learn the trade."
+      ],
+      "actions": [
+        "retrain",
+        "side-income",
+        "save-more",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Pass the accountancy exams in year one",
+          "tag": "retrain"
+        },
+        {
+          "text": "Work weekends on his uncle's building sites from year two",
+          "tag": "side-income"
+        },
+        {
+          "text": "Save £100 a month",
+          "tag": "save-more"
+        },
+        {
+          "text": "Put wedding planning on hold until work settles",
+          "tag": "family-plans"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fifth picture is called AGI by 2036. Here is the card. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is plenty of time to sort yourself out. At work I'd say the firm should plan who moves where. With the lads I'd say learn a trade, but there's no rush."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Honestly, ten years feels manageable. I'd be 37, qualified, maybe married, and I could build up the boat and building clients who know me. My accounting job still goes in 2036, but by then I could switch to building or run the books for local trades."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "First year, pass my exams. Over the next few years I'd use AI tools daily, take over my uncle's books properly, and save £150 a month. By 2032, I'd decide whether to go into building full-time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, a bit. It's there, but it's far enough off."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would ten years change your plans with Maren?"
+        },
+        {
+          "speaker": "persona",
+          "text": "We'd get married in a couple of years, like we planned. With ten years we'd want to buy a small house too, maybe by 2031. Kids after that."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you want for your kids?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A trade, or something with people, and to be willing to work. My uncle laid bricks for thirty years and never once expected anyone to hand him a living."
+        }
+      ],
+      "say": [
+        "I'd say ten years is **plenty of time** to sort yourself out.",
+        "I'd say the firm should **plan** who moves where, calmly."
+      ],
+      "think": [
+        "Ten years feels **manageable** at 37, qualified, maybe married.",
+        "I could switch to **building** or local trades' books by 2036."
+      ],
+      "do": [
+        "Pass my **exams** in year one.",
+        "Use **AI tools daily** and take over my uncle's books.",
+        "Save **£150 a month** and decide on building by 2032."
+      ],
+      "feel": [
+        "**Uneasy**; it's there but **far enough** off."
+      ],
+      "mood": "uneasy",
+      "quote": "My uncle laid bricks for thirty years and never once expected anyone to hand him a living.",
+      "fieldNote": [
+        "A decade lets him plan a **gradual switch** to building or trades' books.",
+        "Plans **marriage and a house** around 2031.",
+        "Values **self-reliance**, holding up his bricklayer uncle as the model."
+      ],
+      "actions": [
+        "learn-ai",
+        "side-income",
+        "save-more",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Use proven AI tools daily on harbour clients' accounts",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Take over the books for his uncle's building firm",
+          "tag": "side-income"
+        },
+        {
+          "text": "Save £150 a month toward a house",
+          "tag": "save-more"
+        },
+        {
+          "text": "Marry Maren and aim to buy a house by 2031",
+          "tag": "family-plans"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028 worries me most, because there's no time and no money. What would help is proper apprenticeships for adults, with tax breaks for firms like my uncle's so they can take people on. Family will help, but small firms need a reason to hire."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "You didn't ask about the harbour. When the fishing's bad, the whole town feels it, and AI won't change that. A guest house owner with an empty winter needs a person on the phone, not a chatbot."
+    }
+  ],
+  "headlineQuote": "A guest house owner with an empty winter needs a person on the phone, not a chatbot.",
+  "portrait": [
+    "Erik is a 27-year-old **junior** in a harbour town, doing **guest house** and fishing boat accounts.",
+    "He rents with Maren, a **baker**, and has about three weeks saved against seasonal swings.",
+    "Traditional and steady, he uses **AI now and then** and prefers family to government help.",
+    "He's uneasy in mild scenarios, **alarmed** at AGI by 2028, and eyes his **uncle's building** firm."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, with no time and no **money**."
+  ],
+  "whatWouldHelp": [
+    "**Adult apprenticeships**, with tax breaks for small firms to hire."
+  ]
+}

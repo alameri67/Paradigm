@@ -11,36 +11,59 @@
     "outlook": "progressive",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Dana. I'm a field researcher with the Work Futures Panel. We're an independent research group with no ties to AI companies, employers, unions or parties. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I’m with the Work Futures Panel, an independent research group with no employer or political ties. What you say is confidential. Dana, what is an ordinary workday like for you?"
     },
     {
       "speaker": "persona",
-      "text": "Sure. I'm out of the Millbrook depot, which covers the hill country north of the river, mostly overhead lines on wooden poles. We're in the yard by seven, the foreman hands out the job sheets, and my crew of four loads the bucket truck and heads out. Most days it's swapping rotten poles, changing crossarms, hanging a new transformer for a farm that's added a cold store."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you out?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I like the crew, and I like the moment you close the switch and a whole valley gets its lights back. What wears me out is the call-outs, three in the morning in sleet, and then the pay slip, because Millbrook rates are well under what the city crews get for the same work. Since the company got sold to that investment fund, it's been overtime instead of hiring, and my knees know it."
+      "text": "I meet the crew at the depot before daylight, check the isolation sheet, then spend most of the day replacing fittings or tracing a fault along a line. I like finding the break before the weather closes in. Paperwork after a long shift wears me down, and I still check the map myself when dispatch sends a route."
     }
   ],
   "scenarios": {
     "S0": {
+      "say": [
+        "I would tell the crew **line repairs** still need skilled hands in bad weather.",
+        "I would say cleaner **dispatch sheets** help only if somebody checks the road conditions."
+      ],
+      "think": [
+        "I still need **overtime** because our savings cover less than one month of bills.",
+        "I worry the **mortgage** more than the software, even in a quiet future."
+      ],
+      "do": [
+        "Keep taking **storm callouts** while the company still offers them.",
+        "Put the next **overtime balance** toward mortgage arrears this winter."
+      ],
+      "feel": [
+        "Relief about the **trade**, mixed with a private money worry."
+      ],
+      "mood": "anxious",
+      "quote": "Our dispatch sheets may get tidier, but a storm call still means wet gloves and a live wire.",
+      "fieldNote": [
+        "Dana treats the **physical repair** as secure in this picture and resists trusting a route sheet without checking roads herself.",
+        "Her public assurance sits beside a **thin cushion**; a school coat already depended on overtime arriving."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep taking line crew storm callouts through winter",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Pay the next overtime balance against mortgage arrears",
+          "tag": "save-more"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
-        },
-        {
-          "speaker": "persona",
-          "text": "Ha. That one I can believe."
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +71,7 @@
         },
         {
           "speaker": "persona",
-          "text": "At work I'd say I told you so. The office people have been waving around these apps for two years and I still climb the same pole with the same hooks. Online I don't post much, but I'd probably share something from the union page about how the real problem was never robots, it was wages."
+          "text": "I would tell the crew the pole still needs a person on it. Our dispatch sheets may get tidier, but a storm call still means wet gloves and a live wire."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +79,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it means my life stays as tight as it is now. We've got maybe two weeks of bills in the bank, and that's after Marco's bus-driving money. Nothing radical changing isn't the same as things being good."
+          "text": "Privately, I cannot call the mortgage safe. We have less than a month set aside, and I count on every overtime call to cover the children's school costs."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +87,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep doing my job and keep going to the union meetings, because the contract is up next spring and Millbrook needs to close the gap with the city rates. I'd volunteer for the bargaining committee this time instead of just sitting at the back. Beyond that, same routine."
+          "text": "I would stay on the line crew and keep taking the callouts I can manage. This winter I would put the small overtime balance toward the mortgage arrears before buying anything for the house."
         },
         {
           "speaker": "interviewer",
@@ -72,46 +95,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Relieved, mostly. A bit flat, because relief doesn't pay the mortgage."
+          "text": "I feel relieved that the trade is still wanted, then annoyed at myself for counting pennies during a supposedly easy future. The children hear me say work is fine; my partner hears the sums."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned the gap with the city rates. How big is it, roughly?"
+          "text": "When was the last time those sums changed what you did?"
         },
         {
           "speaker": "persona",
-          "text": "About four an hour, last time we compared slips at the regional meeting. Over a year that's a car payment. Gus, who I eat lunch with in the truck, says he's been hearing \"next contract\" since before I was an apprentice."
+          "text": "Last month my younger child wanted a new coat for a school trip. I patched the zip on the old one and waited for the next overtime payment."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell your kids about AI, in this picture?"
+          "text": "Would you change your work habits for the small AI tools?"
         },
         {
           "speaker": "persona",
-          "text": "Lucia's twelve and she uses it for homework, which I don't love. I'd tell her it's a calculator with a big mouth. Learn to fix things, because the wind will always knock lines down and somebody has to go put them back."
+          "text": "I would let dispatch print the new route sheet, but I would check it against the street map. I have seen a road closed that the screen still showed open."
         }
-      ],
-      "say": "I'd say I told you so at work, because I still climb the same pole with the same hooks. Online I'd share the union line that the real problem was always wages, not robots.",
-      "think": "Privately she thinks nothing changing just means staying as tight as she is now, with about two weeks of bills saved. Nothing radical happening isn't the same as things being good.",
-      "do": "Keeps working her depot routine and joins the bargaining committee for next spring's contract instead of sitting at the back. Pushes to close the roughly four-an-hour gap with city crews.",
-      "feel": "Relieved, but flat, because relief doesn't pay the mortgage.",
-      "mood": "calm",
-      "quote": "I'd tell her it's a calculator with a big mouth. Learn to fix things, because the wind will always knock lines down and somebody has to go put them back.",
-      "fieldNote": "Dana treats this picture as the default and turns straight to pay, which is what really occupies her. Her calm about AI sits on top of a constant money squeeze. The union is her main tool for change, and she is ready to step up in it.",
-      "actions": [
-        "keep-going",
-        "collective-action"
       ]
     },
     "S1": {
+      "say": [
+        "I would ask for **union oversight** when software changes repair times and crew sizes.",
+        "I would remind colleagues that a **parts error** can strand a crew at an open site."
+      ],
+      "think": [
+        "I expect our **hands-on work** to continue, but dispatch cuts could disrupt our repairs.",
+        "I fear lost **callouts** because the mortgage leaves little room for missing pay."
+      ],
+      "do": [
+        "Attend the **December safety meeting** and raise software driven staffing targets.",
+        "Record **wrong orders** and crew delays during the first year of the dispatch change."
+      ],
+      "feel": [
+        "I feel **angry** about unsafe targets and uneasy about overtime."
+      ],
+      "mood": "anxious",
+      "quote": "I would not cheer a machine that turns a three-person repair into a two-person target.",
+      "fieldNote": [
+        "Dana worries about the link between **office automation** and field safety, although her own climbing work remains necessary.",
+        "She frames the December meeting as a **staffing safeguard**, while her mortgage makes any lost callout personally costly."
+      ],
+      "actions": [
+        "keep-going",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Continue line repairs on the current crew roster",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Attend the December union safety meeting on repair staffing",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Record wrong orders and crew delays and bring them to the union steward",
+          "tag": "collective-action"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust."
-        },
-        {
-          "speaker": "persona",
-          "text": "Okay. That's the one the managers would love."
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say the same thing at work and online: the machines don't climb, people do, and the company had better not use this as an excuse to cut crews. I'd be loud about that at the union meeting. Every change I've seen in eighteen years got sold as safety and turned out to be headcount."
+          "text": "I would tell colleagues that faster scheduling is fine if our union gets a say in safe staffing. I would not cheer a machine that turns a three-person repair into a two-person target."
         },
         {
           "speaker": "interviewer",
@@ -127,7 +174,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Between us, I think the patrol work goes first. Right now one of us drives the lines after a storm looking for damage, and a drone with one of these programs could do that faster. That's not my whole job, but it's the easy overtime, and the easy overtime is what keeps us afloat in winter."
+          "text": "The writing and buying happen back at the office, but our crew depends on their decisions. If the company cuts dispatch staff, a bad parts order could leave us waiting beside an open trench."
         },
         {
           "speaker": "interviewer",
@@ -135,7 +182,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd cut the extras right away. The kids' climbing club, the streaming, the second car insurance if Marco can share mine. I'd push the union to get it in writing that any drone or software work comes with retraining and no layoffs, and I'd wait and see what the company actually rolls out before doing anything bigger."
+          "text": "I would keep my place on the crew and go to the next union safety meeting in December. In the first year of any new dispatch system I would write down delays from wrong orders and bring them to the steward."
         },
         {
           "speaker": "interviewer",
@@ -143,47 +190,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. It's the feeling when the foreman says \"we need to talk about the roster\" and you know before he opens his mouth."
+          "text": "I would be cross, mostly. My own hours might survive, yet the mortgage makes a missed callout sting and I do not like a desk deciding a job is quicker than it is."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd learn nothing new unless you had to. If the company offered a course on the drone software, would you take it?"
+          "text": "What exactly would you write down?"
         },
         {
           "speaker": "persona",
-          "text": "If it's paid time, yes, I'd sit in the room. I wouldn't go looking for it on my own phone at night. I'm not proud of that, but I've got enough on my plate between the kids and the call-outs."
+          "text": "The pole number, the part missing and how long the crew waited would go in my pocket notebook. I already mark faults there when the tablet battery dies."
         },
         {
           "speaker": "interviewer",
-          "text": "Which bill would get squeezed first if the overtime dried up?"
+          "text": "You said your hours might survive; why the meeting now?"
         },
         {
           "speaker": "persona",
-          "text": "The car loan, probably, because the bank on the main road is slower to chase than the mortgage people. Marco would hate that. Last time we were late he couldn't sleep for a week."
+          "text": "Because management can turn a saved hour into a smaller crew. If we wait until the roster changes, a safety complaint sounds like a pay complaint."
         }
-      ],
-      "say": "She'd say loudly that machines don't climb, people do, and the company had better not use AI to cut crews. Every change she's seen in eighteen years got sold as safety and turned out to be headcount.",
-      "think": "She expects drones and software to take the storm patrol work first, which is the easy overtime that keeps the family afloat in winter. It's not her whole job, but it's the margin.",
-      "do": "Cuts the kids' climbing club, streaming and the second car insurance straight away. Pushes the union for written no-layoff and retraining terms, and waits to see what the company actually rolls out.",
-      "feel": "Uneasy, like when the foreman says he needs to talk about the roster.",
-      "mood": "uneasy",
-      "quote": "Every change I've seen in eighteen years got sold as safety and turned out to be headcount.",
-      "fieldNote": "Her fear isn't losing the job but losing the overtime that bridges the gap in her pay. She'd take paid training but not learn on her own time, which she admits with some discomfort. She blames management choices rather than the technology itself.",
-      "actions": [
-        "cut-spending",
-        "collective-action",
-        "wait-and-see"
       ]
     },
     "S2": {
+      "say": [
+        "I would say **2028 AI** leaves immediate pole repairs with people, but robot crews may follow around 2031.",
+        "I would demand a **staffing promise** before the company changes field work."
+      ],
+      "think": [
+        "I expect office cuts first and a possible **crew reduction** when robots arrive around my age 48.",
+        "I have **few local alternatives** and almost no cash if line hours fall."
+      ],
+      "do": [
+        "Ask the **union steward** for contract dates now and continue paid line shifts.",
+        "Seek a **staffing agreement** after 2028 and cancel weekend trips to hold cash."
+      ],
+      "feel": [
+        "Fear about the **rota**, alongside resolve to keep working while repairs need people."
+      ],
+      "mood": "anxious",
+      "quote": "I would still catch the six o’clock van for line repairs before robots arrive around 2031, because the bills do not pause.",
+      "fieldNote": [
+        "Dana separates the **2028 thinking change** from physical robots around 2031, and expects to remain on paid repairs initially.",
+        "Her limited savings turn a possible later **crew reduction** into immediate household cuts; she rejects unpaid speculative retraining."
+      ],
+      "actions": [
+        "keep-going",
+        "collective-action",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Keep accepting paid line shifts through the first AI year",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Ask the union steward for contract dates and staffing talks",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Cancel family weekend trips to protect mortgage cash",
+          "tag": "cut-spending"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare."
-        },
-        {
-          "speaker": "persona",
-          "text": "Two years. Wow. Okay."
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "interviewer",
@@ -191,7 +262,7 @@
         },
         {
           "speaker": "persona",
-          "text": "At work I'd say we need the union, the government, everybody, right now, because nobody's ready. Online I'd probably share every petition going. I'd be saying the grid is public infrastructure and it shouldn't be handed to a robot company because some fund wants a better quarter."
+          "text": "I would say to the crew that full thinking AI in 2028 will not climb the pole that week. I would also say we need a written promise on staffing before robots reach our work around 2031."
         },
         {
           "speaker": "interviewer",
@@ -199,7 +270,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be scared stiff. I'm average at this job, I'm not the one they keep for the tricky stuff, and there are maybe two other employers within an hour's drive who hire lineworkers. If robots can hang a transformer, a woman with a vocational certificate and two weeks of savings is the first one out the gate."
+          "text": "I would be 45 when the thinking system arrives and 48 when those robots arrive. The office could lose people first, then the company could decide fewer line crews are needed; there are few other crews nearby."
         },
         {
           "speaker": "interviewer",
@@ -207,7 +278,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First month, I'd sit down with Marco and the bank and see what we can stop paying. I'd cancel everything that isn't food, heat or the house. I'd be at every union meeting pushing for a fight over severance and job guarantees, and I'd be writing to our representative about income support, because there's no way families like ours get through this alone."
+          "text": "Now I would ask our union steward for the contract dates and keep accepting paid line shifts. In the first year after 2028 I would join the steward in asking the company for a staffing and safety agreement, and cut our weekend trips to keep cash for the mortgage."
         },
         {
           "speaker": "interviewer",
@@ -215,48 +286,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Sick. Like standing at the bottom of a pole you can't see the top of."
+          "text": "I would be scared enough to watch the rota every Friday. I would still catch the six o’clock van for line repairs before robots arrive around 2031, because the bills do not pause."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Lucia and Tommy, that first week?"
+          "text": "What would you tell the children at home?"
         },
         {
           "speaker": "persona",
-          "text": "I'd try not to scare them. I'd say Mum's work is changing and we're all going to be careful with money for a while. Tommy's nine, he'd ask if we're moving, and I honestly wouldn't know what to tell him."
+          "text": "I would tell them our family may skip the summer trip, not that I have already lost my job. My partner and I would look at the mortgage letter after they go to bed."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd lean on the union and the government. What if neither moves fast enough?"
+          "text": "Would you try to train for another trade?"
         },
         {
           "speaker": "persona",
-          "text": "Then I don't know. My mother has a spare room two towns over, and that's the honest last resort. I'd rather fight for something than wait for it, but I can't fight for two years on two weeks of savings."
+          "text": "I might if there were paid time and a real vacancy, but I would not leave a wage for a course brochure. I am slow with new equipment and I need someone to show me on a live job."
         }
-      ],
-      "say": "She'd say the union and government need to act right now because nobody's ready, and share every petition. She'd argue the grid is public infrastructure and shouldn't be handed to robot firms for a fund's quarterly results.",
-      "think": "Privately she's scared stiff: she's average at the job, has a vocational certificate and two weeks of savings, and only two other lineworker employers within an hour. She expects to be first out the gate.",
-      "do": "Sits down with Marco and the bank in the first month and cancels everything except food, heat and the house. Attends every union meeting pushing for severance and job guarantees, and writes to her representative about income support.",
-      "feel": "Sick, like standing at the bottom of a pole she can't see the top of.",
-      "mood": "alarmed",
-      "quote": "I'd rather fight for something than wait for it, but I can't fight for two years on two weeks of savings.",
-      "fieldNote": "This is where her thin savings and few local options collide. She still reaches for collective action and public support first, but admits her fallback is her mother's spare room. She is clear-eyed that being average makes her vulnerable.",
-      "actions": [
-        "cut-spending",
-        "collective-action",
-        "politics",
-        "seek-support"
       ]
     },
     "S3": {
+      "say": [
+        "I would argue that **five years** allows a written plan for field staffing.",
+        "I would distinguish **2031 thinking AI** from hands-on robots around 2034."
+      ],
+      "think": [
+        "I will be **51** at the robot date, with a mortgage and uncertain retirement prospects.",
+        "I would consider a **maintenance post** only with confirmed pay and a real vacancy."
+      ],
+      "do": [
+        "Put **robot staffing** on the next union bargaining list.",
+        "Stay on paid **repairs** in 2031 and inspect paid maintenance training tied to a post."
+      ],
+      "feel": [
+        "I feel **less cornered** with time, but wary of vague promises."
+      ],
+      "mood": "anxious",
+      "quote": "A slide at a staff meeting would not cover our mortgage.",
+      "fieldNote": [
+        "Dana uses the longer runway to seek **contract terms** and proof of a paid path, rather than starting an unpaid course.",
+        "At 51 in the robot year, she still expects a **mortgage** and refuses to assume retirement or a protected line crew."
+      ],
+      "actions": [
+        "keep-going",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Keep working paid line repairs in the first 2031 AI year",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put robot staffing and paid training terms on the union bargaining list",
+          "tag": "collective-action"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast."
-        },
-        {
-          "speaker": "persona",
-          "text": "Five years. That's a bit of breathing room, I suppose."
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "interviewer",
@@ -264,7 +353,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say the same thing as with the fast one, but I'd say it with a plan. Five years is one contract and a bit, so I'd be telling the crew this is the contract that matters. I'd want the union pushing for a law that says no robot work on live lines without a human crew."
+          "text": "I would tell the crew that five years is long enough to put terms in writing. Full thinking AI comes in 2031, but a robot taking a line repair would be nearer 2034."
         },
         {
           "speaker": "interviewer",
@@ -272,7 +361,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Truthfully, five years doesn't change where I end up, it changes how hard I land. I'm not going to become a programmer at 45. But five years is enough to clear the car loan and get a few months in the bank, if I'm strict."
+          "text": "I would be 48 at the first date and 51 at the second. My older child should be leaving school by then, but a mortgage does not disappear when a child grows up, and I cannot bank on retirement at 51."
         },
         {
           "speaker": "interviewer",
@@ -280,7 +369,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd start putting a fixed amount away every pay, even if it's small, maybe fifty a week, and pay the car off early. I'd put my name forward for union rep at Millbrook. And I'd sign every campaign for a fair transition, because a few years of warning means there's time to win something if enough of us push."
+          "text": "Now I would ask the steward to put robot staffing on the next bargaining list. In 2031 I would stay on the repair crew, ask to observe any field pilot on paid time, and ask what paid maintenance training actually leads to a post."
         },
         {
           "speaker": "interviewer",
@@ -288,47 +377,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but not frozen. It's like a storm warning a day out instead of an hour out."
+          "text": "I feel less cornered than in the fast version, though I still dislike being told the answer is simply to learn something new. Five years lets me ask for proof before I put our income at risk."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you're not going to become a programmer. Is there anything you would learn, with five years?"
+          "text": "What would count as proof for that training?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe the substation side, if the company paid for it. It's still hands-on but there's more switching and less climbing. My knees would thank me. But I'd want the union to make them pay for it, not me on weekends."
+          "text": "A named maintenance post, paid hours and someone from our crew who has done the course would count. A slide at a staff meeting would not cover our mortgage."
         },
         {
           "speaker": "interviewer",
-          "text": "Who on your crew would you worry about most?"
+          "text": "Could you picture leaving the line crew before 2034?"
         },
         {
           "speaker": "persona",
-          "text": "Gus. He's fifty-eight, he's done thirty-five years, and he can't use a smartphone without swearing at it. If they push him out at sixty-one with nothing, that would break my heart. At least I've got some years left to scramble."
+          "text": "Only for a definite company vacancy with comparable pay. I know the poles and the fault book; I would rather carry that knowledge into a maintenance role than start with no income."
         }
-      ],
-      "say": "She'd say the same thing as with the fast scenario but with a plan, telling the crew this is the contract that matters. She'd want the union pushing for a law requiring a human crew on live-line robot work.",
-      "think": "She thinks five years doesn't change where she ends up, only how hard she lands. It's enough time to clear the car loan and build a few months of savings if she's strict.",
-      "do": "Puts about fifty a week aside every pay and pays off the car loan early. Stands for union rep at Millbrook and backs campaigns for a fair transition, and would take substation training if the company paid.",
-      "feel": "Anxious but not frozen, like a storm warning a day out instead of an hour out.",
-      "mood": "anxious",
-      "quote": "Five years doesn't change where I end up, it changes how hard I land.",
-      "fieldNote": "The extra three years turns her fear into a savings plan and a bid to become union rep, but she still dreads the end point. She will only retrain on company time, which fits her resistance to new technology. Her worry for her older colleague Gus is strong and sincere.",
-      "actions": [
-        "save-more",
-        "collective-action",
-        "politics"
       ]
     },
     "S4": {
+      "say": [
+        "I would ask the company for **yearly staffing figures** across the decade.",
+        "I would point out **2036 AI** comes before robots around 2039."
+      ],
+      "think": [
+        "At **56**, I may still need a full wage despite grown children.",
+        "I could apply for a funded **maintenance vacancy**, but I cannot assume one exists."
+      ],
+      "do": [
+        "Keep working the **line crew** and make planned mortgage principal payments from overtime.",
+        "Review staffing figures with the **union** after 2036 and apply if a comparable maintenance post opens."
+      ],
+      "feel": [
+        "I feel **steadier** with time and sad for young apprentices."
+      ],
+      "mood": "uneasy",
+      "quote": "The children may be adults, but I cannot assume they cost nothing or that our mortgage is cleared; I might still need a full wage.",
+      "fieldNote": [
+        "Dana treats the decade as **paid working time**, not as an automatic path to retirement or an office post.",
+        "She wants **staffing figures** and a funded vacancy before moving, while keeping the old car and paying down mortgage principal."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more",
+        "collective-action",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Continue paid line crew shifts through the first 2036 AI year",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Pay a set overtime amount against mortgage principal monthly",
+          "tag": "save-more"
+        },
+        {
+          "text": "Review yearly field staffing figures with the union",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Apply for a funded internal maintenance post if comparable pay is offered",
+          "tag": "change-job"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans."
-        },
-        {
-          "speaker": "persona",
-          "text": "Ten years. My kids would be grown."
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "interviewer",
@@ -336,7 +454,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got a decade to do this properly, and if the company or the government wastes it, that's on them. I'd be saying it at work, at the school gate, everywhere. A decade is long enough to have a real plan for people like us."
+          "text": "I would tell the crew that ten years is time to make the company show its numbers. Full thinking AI in 2036 would change the office first; robots at the poles are a question for around 2039."
         },
         {
           "speaker": "interviewer",
@@ -344,7 +462,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, ten years is the first one where I can breathe a bit. Tommy would be nineteen. Lucia would be out of school. The mortgage would still be there, but the kids would be past the worst of it."
+          "text": "I would be 53 in 2036 and 56 in 2039. The children may be adults, but I cannot assume they cost nothing or that our mortgage is cleared; I might still need a full wage."
         },
         {
           "speaker": "interviewer",
@@ -352,7 +470,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd build up savings slowly and clear the car. I'd talk to Lucia properly about her studies, maybe push her towards nursing or something with people, not just a screen. I'd stay in the union and work on the transition clause, and I'd keep climbing, because a decade out I'd still be needed for most of it."
+          "text": "Now I would stay on the crew and ask the steward for yearly staffing figures, not a sudden promise in 2038. In the first year after 2036 I would review those figures with the union and apply for an internal maintenance post if one is funded at comparable pay."
         },
         {
           "speaker": "interviewer",
@@ -360,60 +478,56 @@
         },
         {
           "speaker": "persona",
-          "text": "Still uneasy underneath, but it feels like something you can plan for instead of something that happens to you."
+          "text": "I feel steadier because I can work through most of the decade. It still makes me sad to think a young apprentice might enter a trade with a shorter future than mine."
         },
         {
           "speaker": "interviewer",
-          "text": "You told me earlier you'd steer clear of new technology. With ten years, would that change?"
+          "text": "Why look at a maintenance post so late?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe a little. If the union ran a course I'd go with the others. I'm stubborn, I know that. But I'm not stupid, and ten years is a long time to be stubborn."
+          "text": "Because a real vacancy could let me use what I know about fault patterns without climbing every day. I will not count on the company creating one for me."
         },
         {
           "speaker": "interviewer",
-          "text": "What happens to your knees and your job at 53?"
+          "text": "What would you do with the extra years at home?"
         },
         {
           "speaker": "persona",
-          "text": "That's the part I don't like thinking about. At 53 I'm too young for a pension and too old to start over. If the robots come then, I'd want a bridge, some kind of income until retirement age, and I'd be fighting for that from now."
+          "text": "We would keep the old car running and make regular mortgage payments rather than buy another one. If overtime comes, I would put a set amount against the principal each month."
         }
-      ],
-      "say": "She'd say there's a decade to do this properly and if the company or government wastes it, that's on them. She'd say it at work, at the school gate and everywhere else.",
-      "think": "Privately ten years is the first picture where she can breathe, because the kids would be nearly grown. The mortgage would remain, but the family would be past the hardest stretch.",
-      "do": "Builds savings slowly, clears the car loan and talks with Lucia about studying for people-facing work like nursing. Stays active in the union on a transition clause and campaigns for an income bridge until pension age.",
-      "feel": "Still uneasy underneath, but it feels like something to plan for rather than something that happens to her.",
-      "mood": "uneasy",
-      "quote": "I'm stubborn, I know that. But I'm not stupid, and ten years is a long time to be stubborn.",
-      "fieldNote": "Time matters to her mainly through her children's ages, not her own career. She shows a small crack in her resistance to new tools when the timeline is long. The gap she fears is 53 to pension age, and her answer is still political.",
-      "actions": [
-        "save-more",
-        "collective-action",
-        "politics",
-        "family-plans"
       ]
     }
   },
   "closing": [
     {
       "speaker": "interviewer",
-      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+      "text": "Of the five pictures, which worries you most, and what would actually help you if it happened?"
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, no question. What would help is a guarantee that nobody gets thrown off the crew without a bridge, real money until you find something or reach pension age, and paid retraining on company time. And honestly, a decent rate at Millbrook now, so I'm not starting from two weeks of savings."
+      "text": "AGI by 2028 worries me most. I could keep working until about 2031, but three years is a short time to protect a mortgage and two children on less than a month of savings. A written staffing deal and paid training tied to a real vacancy would help."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I did not ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask who decides. Not me, not the crew, not the people who keep the lights on. Some board in a city I've never been to will decide whether a robot climbs my pole, and nobody asks us."
+      "text": "Ask who pays for the time while a lineworker learns a different job. I cannot feed my family with an invitation to study."
     }
   ],
-  "headlineQuote": "Some board in a city I've never been to will decide whether a robot climbs my pole, and nobody asks us.",
-  "portrait": "Dana Rossi is a 43-year-old lineworker at a rural depot whose pay trails the city crews, with two school-age kids, a bus-driver partner and about two weeks of savings. She sees the union as her lever on everything, from wages now to severance later. In the mild pictures her worry is overtime and pay, not robots. The two-year AGI picture leaves her scared and reaching for petitions, cuts and her mother's spare room, while five and ten years turn that fear into savings plans and a run for union rep. She resists new technology but admits ten years is a long time to stay stubborn.",
-  "biggestWorry": "AGI by 2028, because she'd be among the first out with two weeks of savings and few nearby employers.",
-  "whatWouldHelp": "A guaranteed income bridge until a new job or pension age, paid retraining on company time, and a fair rate at Millbrook now so she isn't starting from nothing."
+  "headlineQuote": "I cannot feed my family with an invitation to study.",
+  "portrait": [
+    "Dana is a **43-year-old lineworker** with an apprenticeship, a partner, two school-age children and a mortgage.",
+    "Her **thin savings** and lower pay make overtime essential even when AI barely changes the work.",
+    "She trusts her **hands-on repairs** more than new software and checks route sheets against the street map.",
+    "Across the scenarios, she seeks **union terms**, paid work and proof of a funded vacancy before changing roles."
+  ],
+  "biggestWorry": [
+    "The **2028 scenario** leaves only three years between thinking AI and robots reaching her physical work."
+  ],
+  "whatWouldHelp": [
+    "A written **staffing deal** and paid training tied to a real vacancy would protect income while she prepares."
+  ]
 }

@@ -11,24 +11,32 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Rosa. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to any AI company, employer, union, party or government, and we're not selling anything. Everything you say stays confidential and your name won't be attached to it. To start, could you walk me through a normal working day?"
+      "text": "Thanks for making time, Rosa. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to AI companies, employers, unions, political parties or government, and we don't sell anything. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Is that all right?"
     },
     {
       "speaker": "persona",
-      "text": "I work for Kowal and Sons, a small roofing and renovation firm, five of us plus old Mr Kowal who still comes out to point at things. Mostly I'm up on roofs, replacing rotten rafters, battens, fascia boards, sometimes building a dormer, that's the little box window that sticks out of a roof. I'm in the van by seven, we pick up timber from the merchant on Station Road and we're on the job by eight. I like being up high on a clear morning, you can see the whole town. I hate wet slate and the end of a February day when your fingers don't work."
+      "text": "Okay. I'm not really a tech person so I don't know how much help I'll be, but I'll answer honestly."
     },
     {
       "speaker": "interviewer",
-      "text": "How long have you been there, and how are things at home?"
+      "text": "To start, could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "Seven years, since my apprenticeship finished. I live with my boyfriend Dan, he drives a delivery van, so we're both out early and both worn out by nine at night. The pay's lower than the big roofing outfits in the city, but there aren't many roofing jobs in a town this size, so you don't leave a decent boss. We've got about two weeks' money saved, maybe. I don't use any of that AI stuff, I barely use my email."
+      "text": "I work for Gerry Doyle, who runs a small building firm doing repairs on old houses. Most days I'm fixing rotten sash windows, replacing floorboards or doing roof timbers, with Gerry and one other guy, Sam. I like the old houses, you open a wall and find newspaper from the 1950s. What wears me out is the dust and the lifting, and Gerry's van has no heating."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "How steady does the work feel right now?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Steady-ish, as long as Gerry keeps going. He's 64 and he talks about retiring every winter. I've got less than a month's money saved and my partner Dev works in a parcel warehouse on the edge of town. There's only one other small builder round here, and they've got their own family working for them."
     }
   ],
   "scenarios": {
@@ -40,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Sounds about right. Every year there's something that's going to change everything, and the rain still gets in the same way."
+          "text": "So no big change from AI. That's good, I suppose, nothing to learn."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I wouldn't say much, honestly. If someone brought it up at the merchant's I'd say I never thought a computer was going to fix a roof anyway. I'm not online much, Dan does the posting in our house."
+          "text": "I'd say I'm glad, to be honest. People were making a fuss about nothing. I don't use any of it and I don't need to."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means my job's fine, which is the main thing. I'd still be on low pay and still have a bad shoulder by forty, but that was always the deal. I'd rather have a known problem than an unknown one."
+          "text": "Off the record, AI isn't my worry anyway. My boss Gerry is 64 and keeps saying this is his last winter. When Gerry retires, I don't know who in this town would take me on. That's the thing that keeps me up, not computers."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing different. I'd keep going at Kowal's, try to put a bit by when the summer work's busy, and maybe ask for a small raise when Mr Kowal's son takes over properly. I'm not one for big changes."
+          "text": "I'd keep working for Gerry as long as he goes. I'd try to put a bit aside each week, maybe thirty, and stop buying lunch from the bakery. I'd probably ask Gerry if he's thought about selling the firm to someone who'd keep us on."
         },
         {
           "speaker": "interviewer",
@@ -72,46 +80,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A bit relieved, though I wasn't that worried in the first place."
+          "text": "A bit worried, the same worry I've had for a year. AI being hype doesn't change it."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd rather have a known problem than an unknown one. What's the known problem?"
+          "text": "What would you do if Gerry retired next spring?"
         },
         {
           "speaker": "persona",
-          "text": "Money, and my body. Roofers don't last, everyone knows that. Mr Kowal's knees are shot and he's seventy. That's my future and I've made my peace with it, mostly."
+          "text": "I'd ring round the bigger firms in the city, but that's an hour each way and I don't drive. Maybe I'd ask Sam if he wanted to carry on with me, but neither of us has money for a van. Honestly, I'd probably end up doing odd jobs for neighbours."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything AI might do here, even in the small way the card says?"
+          "text": "Have you talked to Gerry about it?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe the office side. Mrs Kowal does the quotes on paper with a calculator and it takes her a whole evening. If a computer did that faster, good for her. It wouldn't touch me."
+          "text": "Not really. I don't want to push him. He's been good to me, he took me on when I finished my apprenticeship and nobody else would."
         }
       ],
-      "say": "I wouldn't say much; if it came up at the timber merchant's I'd say I never thought a computer would fix a roof. Dan does the posting online in our house.",
-      "think": "Privately it means my job's fine, which is what matters most. I'd still have low pay and a bad shoulder by forty, but that was always the deal, and a known problem beats an unknown one.",
-      "do": "Keeps working at Kowal and Sons, tries to put money aside in the busy summer months, and asks for a small raise when the owner's son takes over.",
-      "feel": "Calm and a bit relieved, though she wasn't very worried to begin with.",
-      "mood": "calm",
-      "quote": "I'd rather have a known problem than an unknown one.",
-      "fieldNote": "Rosa is dry and low-key, and doesn't treat AI as part of her world at all. She has already accepted the physical cost of roofing as the price of a steady job. Her loyalty to a small local firm comes from having few other options in town.",
+      "say": [
+        "She's **glad** AI turned out to be a fuss about nothing.",
+        "She doesn't use any AI tools at work and **doesn't need** to."
+      ],
+      "think": [
+        "Her real worry is her boss **Gerry retiring**, not computers.",
+        "Few other **builders** in her town would be likely to take her on."
+      ],
+      "do": [
+        "Keep working for **Gerry** as long as he carries on.",
+        "Save about **thirty a week** by skipping bakery lunches.",
+        "Ask Gerry about **selling the firm** to someone who keeps the crew."
+      ],
+      "feel": [
+        "The **same worry** she's had for a year, unchanged by AI."
+      ],
+      "mood": "anxious",
+      "quote": "My boss Gerry is 64 and keeps saying this is his last winter. When Gerry retires, I don't know who in this town would take me on.",
+      "fieldNote": [
+        "Already **anxious** without AI: boss near retirement, thin savings, one other small builder in town.",
+        "Doesn't drive, which **narrows her options** to local work.",
+        "Loyal to Gerry and **avoids** raising the hard question with him."
+      ],
       "actions": [
         "keep-going",
-        "save-more"
+        "save-more",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep repairing windows and floors for Gerry's firm",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save thirty a week by skipping bakery lunches",
+          "tag": "save-more"
+        },
+        {
+          "text": "Wait to hear if Gerry will sell the firm before job hunting",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust."
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "Hm. That one I don't like as much. Some jobs shrink, it says. Which ones?"
+          "text": "Okay, so office stuff first, booking and ordering. Gerry does all that on a clipboard anyway."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +158,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say it depends on the job, and that people shouldn't panic. I'd say something like, they'll always need someone on a roof, which is what everyone in the trade says. I wouldn't get into politics about it, both sides just use these things to shout at each other."
+          "text": "I'd say it doesn't touch us much, we're too small. Nobody's sending a robot to fix a sash window in a terraced house. I'd say it's a big-company thing."
         },
         {
           "speaker": "interviewer",
@@ -127,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'm not sure we're as safe as we say. The big firms have drones now that survey a roof in ten minutes, and Mrs Kowal said one of them quoted half our price on a job last spring. If the quoting and the surveying go to machines, a small firm like ours either keeps up or gets undercut."
+          "text": "Privately, robots in a parcel warehouse are coming before robots on a roof, so my partner Dev's job worries me more than mine. Dev's bosses already talk about machines that sort parcels. If he loses hours, we can't cover the rent on my pay."
         },
         {
           "speaker": "interviewer",
@@ -135,7 +174,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait and see, honestly, and keep working. If Kowal's bought a drone or a tablet I'd let the younger lad, Marek, do it. I'd try to save a little more, maybe skip our holiday to the coast this year, just in case."
+          "text": "I'd keep my head down and keep working. I'd tell Dev to look around now, maybe the hospital porter jobs, while there's still time. And we'd cut back, no takeaways, cancel the TV package."
         },
         {
           "speaker": "interviewer",
@@ -143,47 +182,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not losing sleep, but it'd be in the back of my mind every time I saw a van from a bigger firm."
+          "text": "Worried for us as a household. I'm not panicking, but I'd be checking our bank app more."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd let Marek do the new stuff. Why not you?"
+          "text": "If Gerry wanted to try an app to do his quotes, would you help?"
         },
         {
           "speaker": "persona",
-          "text": "Because I'd be slow and I'd hate it, and he'd be fast and love it. That's not me being lazy, it's just being honest about what I'm good at. I'm good at timber and heights, not screens."
+          "text": "I'd leave it to Sam, he's better with phones. I'd carry on with my notebook. I know that's stubborn."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you and Dan say to each other about it?"
+          "text": "What would you cut first if Dev's hours dropped?"
         },
         {
           "speaker": "persona",
-          "text": "Dan would be more worried than me, because it's his van they'd replace first, isn't it, self-driving delivery. I'd tell him not to read the news before bed. We'd probably argue about whether to cancel the holiday."
+          "text": "The gym, then the takeaways, then visiting my sister in the city, because the train is expensive. We'd keep the rent and the electric paid no matter what. I've never missed rent and I'm not starting."
         }
       ],
-      "say": "I'd say it depends on the job and people shouldn't panic, and that they'll always need someone on a roof. I wouldn't get into politics, because both sides just use it to shout at each other.",
-      "think": "Privately I'm not sure we're as safe as we say, since big firms already use drones to survey roofs and undercut our quotes. A small firm like Kowal's either keeps up or gets undercut.",
-      "do": "Keeps working and waits to see what happens, leaving any new drone or tablet to a younger colleague. Saves a little more, possibly skipping this year's holiday to the coast.",
-      "feel": "Uneasy in the background, especially when she sees a bigger firm's van.",
-      "mood": "uneasy",
-      "quote": "I'm good at timber and heights, not screens.",
-      "fieldNote": "Rosa's public line is the trade's comfort phrase, but privately she has already seen drones undercut her firm. She is clear-eyed that she wouldn't learn the new tools herself. Her partner's delivery job feels more exposed to her than her own.",
+      "say": [
+        "The change won't touch **small firms** like Gerry's much.",
+        "Nobody's sending a robot to fix a **sash window** in a terraced house."
+      ],
+      "think": [
+        "Robots in **parcel warehouses** come before robots on roofs.",
+        "If Dev loses hours, her pay alone can't cover the **rent**."
+      ],
+      "do": [
+        "Keep working at Gerry's firm with her **head down**.",
+        "Tell Dev to apply for **hospital porter** jobs now.",
+        "Cancel the **TV package** and takeaways."
+      ],
+      "feel": [
+        "Worried for the **household**, checking the bank app more often."
+      ],
+      "mood": "anxious",
+      "quote": "Robots in a parcel warehouse are coming before robots on a roof, so my partner Dev's job worries me more than mine.",
+      "fieldNote": [
+        "Her own job looks safe, but Dev's **warehouse job** makes the household **anxious**.",
+        "Leaves any new tech to **Sam**, true to her resistance.",
+        "Pride in **never missing rent** drives her spending choices."
+      ],
       "actions": [
-        "wait-and-see",
         "keep-going",
-        "save-more"
+        "seek-support",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Keep working with Gerry and use her paper notebook",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Help Dev apply for hospital porter jobs",
+          "tag": "seek-support"
+        },
+        {
+          "text": "Cancel the TV package, gym and takeaways",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare."
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "Two years. Robots on roofs by 2028. I don't even know what to say to that."
+          "text": "Robots that can do hands-on work as well as people by 2031? That's not long."
         },
         {
           "speaker": "interviewer",
@@ -191,7 +260,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd probably not say anything at first, I'd just listen to everyone else. If I did say something, it'd be that the government and the companies both let this happen without a plan. I don't trust either lot, never have."
+          "text": "I'd say I don't believe it until I see it. People have been saying robots will build houses for years. I wouldn't want to scare anyone."
         },
         {
           "speaker": "interviewer",
@@ -199,7 +268,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Between us, I'd be finished, and so would Dan. We'd both be doing the exact jobs a robot and a self-driving van would do. Two weeks of savings, rent due on the first, and nothing in this town but a supermarket that'd have robots too."
+          "text": "Honestly, if it's true, I'm finished in this job by about 2031. I keep all my measurements in a paper notebook. By 2031 a robot won't need a notebook, or me. And Dev would probably go before me."
         },
         {
           "speaker": "interviewer",
@@ -207,7 +276,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop spending on anything but food and rent the same week. If Kowal's let me go, I'd ask my mum if Dan and I could move into her spare room, she's in a village about an hour away. I'd take any help that was going, benefits, food bank, whatever, and I'd look for any job that's still done by people, cleaning, care work, I don't care."
+          "text": "I'd carry on with Gerry for as long as there's work and save everything I can. I'd move in with Dev's parents to save on rent if things got bad. I'd look at care work or hospital cleaning, something with people, but I'd probably wait too long."
         },
         {
           "speaker": "interviewer",
@@ -215,48 +284,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Panicked. My stomach went when you said hands-on work. I keep thinking that was our safe bet."
+          "text": "Scared. I'd feel sick, like when you hear a bad noise from the roof."
         },
         {
           "speaker": "interviewer",
-          "text": "What happens to Kowal and Sons in this picture?"
+          "text": "You said you'd wait too long. Why?"
         },
         {
           "speaker": "persona",
-          "text": "Mr Kowal would sell up, I think, or shut it. He's seventy, he wouldn't buy robots. His son might try. Either way it wouldn't be five of us anymore."
+          "text": "Because that's what I do. I don't like change, and I'd tell myself it might not happen. Then it would happen."
         },
         {
           "speaker": "interviewer",
-          "text": "You said rent's due on the first. What's the first bill that goes unpaid?"
+          "text": "What would you say to Dev that night?"
         },
         {
           "speaker": "persona",
-          "text": "The car insurance, probably, because we'd stop driving. Then the phone. Rent we'd pay until we couldn't, and then we'd go to Mum's. I'd hate it, but I'd do it."
+          "text": "That we need to sit down with his mum and dad and be honest. They've got a spare room. I'd hate it, but it's better than being on the street."
         }
       ],
-      "say": "At first I'd say nothing and just listen. If I said anything it would be that the government and the companies both let this happen without a plan, because I don't trust either lot.",
-      "think": "Privately I'd be finished, and so would Dan, because our jobs are exactly what robots and self-driving vans would do. With two weeks of savings and few jobs in town, there'd be nothing to fall back on.",
-      "do": "Cuts spending to food and rent the same week and plans to move into her mum's spare room with Dan if she's let go. Takes any help on offer and looks for any job still done by people.",
-      "feel": "Panicked, because hands-on work was supposed to be the safe bet.",
-      "mood": "panicked",
-      "quote": "My stomach went when you said hands-on work. I keep thinking that was our safe bet.",
-      "fieldNote": "This picture breaks Rosa's main source of calm, the belief that hands-on work is safe. Her household has two exposed jobs and almost no savings, and she sees no options locally. She blames government and companies equally rather than taking a side.",
+      "say": [
+        "She'd say she won't **believe it** until she sees it.",
+        "She wouldn't want to **scare** anyone at work."
+      ],
+      "think": [
+        "She'd be **finished** in her carpentry job by about 2031.",
+        "Dev would probably lose his **warehouse job** even before she lost hers."
+      ],
+      "do": [
+        "Keep working for Gerry and **save everything** possible.",
+        "Move in with **Dev's parents** if money runs out.",
+        "Look at **care or hospital cleaning** work, though likely too late."
+      ],
+      "feel": [
+        "**Scared** and sick, like hearing a bad noise from the roof."
+      ],
+      "mood": "alarmed",
+      "quote": "I keep all my measurements in a paper notebook. By 2031 a robot won't need a notebook, or me.",
+      "fieldNote": [
+        "Public **disbelief** hides private certainty that both incomes go.",
+        "Admits she'd **wait too long**, which makes the outlook worse.",
+        "Falls back on **family**, Dev's parents' spare room, as the safety net."
+      ],
       "actions": [
-        "cut-spending",
+        "save-more",
         "seek-support",
-        "move",
-        "change-job"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Save every spare pound while Gerry still has work",
+          "tag": "save-more"
+        },
+        {
+          "text": "Move in with Dev's parents if the rent can't be paid",
+          "tag": "seek-support"
+        },
+        {
+          "text": "Hold off job hunting until robots actually reach old-house repairs",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast."
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "Five years. That's a bit better. Still fast. I'd be thirty-two."
+          "text": "So the same, but robots in 2034. Five years more or less of normal."
         },
         {
           "speaker": "interviewer",
@@ -264,7 +362,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say we'd better use the time, and that I hope the people in charge actually do something for once. I'd say it in a tired voice, because I'd be saying it about politicians who never do. I'd not be marching, I'm not the type."
+          "text": "I'd say there's time, and the government should sort out some sensible help. I'd say it calmly, I don't like people shouting about it either way."
         },
         {
           "speaker": "interviewer",
@@ -272,7 +370,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years means I'd probably get two or three more seasons on the roofs before it bites. That's something. But I know myself, I'd hope it went away rather than doing anything, because I'm bad at change."
+          "text": "Privately, five years would just give me more time to pretend it isn't happening, and I know that about myself. I'd keep working and keep telling myself next year. The end is still the same, I'd be 35 with no other trade."
         },
         {
           "speaker": "interviewer",
@@ -280,7 +378,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd start putting money aside properly, maybe a hundred a month in a separate account so I don't touch it. I'd cut the takeaways and Dan's gaming subscription. I'd keep going at Kowal's and wait to see if the robots actually show up round here before I did anything big."
+          "text": "I'd keep saving, aiming for two months' rent. I'd maybe ask Gerry to put me on the quotes side, so I learn a bit of the business. And I'd vote for whoever has a practical plan for retraining, not the shouting ones."
         },
         {
           "speaker": "interviewer",
@@ -288,48 +386,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed, honestly. Five years sounds like a lot until you think about how fast seven went."
+          "text": "Still worried. It's a slow worry, but it's there every day."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd wait to see if the robots show up round here. What would you need to see to act?"
+          "text": "What would make you start something new?"
         },
         {
           "speaker": "persona",
-          "text": "A robot on a roof in this town. Or Mr Kowal telling me he's thinking of buying one. Until then it's news, and news is mostly noise. I know that's probably too late."
+          "text": "If Gerry said he was closing up, that would push me. Or if Dev got laid off. Without a push, I'd stay put."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Mr Kowal's son if he asked you to learn to run one?"
+          "text": "Would quoting still matter by 2031?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say yes, because I'd need the job. I'd be terrible at it at first and I'd moan. But if it's that or nothing, I'd learn."
+          "text": "Probably not, now you say it, since the computers would do quotes. I just thought it'd make me more useful to Gerry. I don't have a better idea."
         }
       ],
-      "say": "I'd say we'd better use the time and hope the people in charge do something for once, though I'd say it tiredly. I wouldn't march, I'm not the type.",
-      "think": "Privately five years means two or three more seasons on the roofs before it bites. But I'd hope it went away rather than act, because I'm bad at change.",
-      "do": "Puts about a hundred a month into a separate savings account and cuts takeaways and subscriptions. Keeps working at Kowal's and waits to see robots locally before doing anything bigger.",
-      "feel": "Alarmed, because five years sounds long until she remembers how fast the last seven went.",
+      "say": [
+        "There's **time**, and the government should offer some **sensible help**.",
+        "She'd say it calmly, without **shouting** about it either way."
+      ],
+      "think": [
+        "Five years gives her more time to **pretend** it isn't happening.",
+        "The **end point** is the same: aged 35 with no other trade."
+      ],
+      "do": [
+        "Save toward **two months' rent**.",
+        "Ask Gerry to teach her the **quotes** side.",
+        "Vote for a **practical retraining** plan."
+      ],
+      "feel": [
+        "A **slow worry** that's there every day."
+      ],
       "mood": "alarmed",
-      "quote": "Five years sounds like a lot until you think about how fast seven went.",
-      "fieldNote": "Rosa knows her own pattern: she waits for proof on her doorstep and admits that may be too late. Still, she'd learn a new machine if the choice were that or nothing. The extra time eases her money panic only a little.",
+      "quote": "Five years would just give me more time to pretend it isn't happening, and I know that about myself.",
+      "fieldNote": [
+        "Extra time doesn't calm her because she **won't act** without a push.",
+        "Picks **quoting** as a skill, then sees AI would take that too.",
+        "Centre outlook shows in wanting **practical**, not loud, politics."
+      ],
       "actions": [
         "save-more",
-        "cut-spending",
-        "wait-and-see",
-        "keep-going"
+        "retrain",
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Save toward two months' rent",
+          "tag": "save-more"
+        },
+        {
+          "text": "Ask Gerry to teach her how he prices jobs",
+          "tag": "retrain"
+        },
+        {
+          "text": "Vote for the party with a practical retraining plan",
+          "tag": "politics"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+          "text": "The fifth picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "Ten years. Okay. I'd be thirty-seven. That's a long way off for me."
+          "text": "Ten years. 2039 for the robots. I'd be about 40."
         },
         {
           "speaker": "interviewer",
@@ -337,7 +464,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough time for the country to sort itself out, if it bothers. I'd say it to Dan, mainly, and maybe at Mum's on a Sunday. I'd tell people not to panic, because I think a lot of the talk would be overblown at the start."
+          "text": "I'd say that's a long way off and lots can change. I'd tell people not to panic. I'd probably say the same thing I'd say about the weather."
         },
         {
           "speaker": "interviewer",
@@ -345,7 +472,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years feels survivable. I'd get most of my roofing life in before it hits, and my shoulder probably wouldn't last much past thirty-seven anyway. The bit that scares me is what comes after, because I don't have a second thing I'm good at."
+          "text": "Off the record, this is the one I can live with. Old houses are crooked and every one is different. A robot would have to be very clever to fix a two-hundred-year-old window. I might get ten more years of the work I love."
         },
         {
           "speaker": "interviewer",
@@ -353,7 +480,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working at Kowal's and save steadily, try to get to three months' money. Maybe in year five or six I'd look at a forklift or crane licence, something with a machine, because I'd see which way it was going by then. I wouldn't do anything in the first year except save, honestly."
+          "text": "I'd keep working with Gerry, or whoever takes his firm on. I'd save slowly and try to get a driving licence so I could work further away. And I'd think about care work in my thirties, when I'm worn out from lifting anyway."
         },
         {
           "speaker": "interviewer",
@@ -361,36 +488,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. A slow, background anxious, but it's there."
+          "text": "Better. Still a bit uneasy, but it's far enough away to breathe."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you don't have a second thing you're good at. What would you want it to be, if you could pick?"
+          "text": "Why a driving licence now?"
         },
         {
           "speaker": "persona",
-          "text": "I like dogs. I've always said I'd do dog walking or work at a kennel. That's not a career, though, is it. Dan laughs at me for it."
+          "text": "Because I can only work where the bus goes, and that's the town. With a licence I could get to the city firms. I've put it off for years because lessons cost money."
         },
         {
           "speaker": "interviewer",
-          "text": "Compared with the two-year picture, what does the extra time change for you?"
+          "text": "What about money in the meantime?"
         },
         {
           "speaker": "persona",
-          "text": "Everything and nothing. With two years we're in Mum's spare room. With ten I've probably got a bit saved and I've had my roofing years. But I still end up looking for something to do at thirty-seven."
+          "text": "Same as now, tight. Gerry might go, Dev's warehouse might change. Ten years for robots doesn't fix that."
         }
       ],
-      "say": "I'd say ten years is enough time for the country to sort itself out if it bothers. I'd tell Dan and my family not to panic, because a lot of the early talk would be overblown.",
-      "think": "Privately ten years feels survivable, since I'd get most of my roofing years in before it hits. What scares me is after, because I don't have a second thing I'm good at.",
-      "do": "Keeps working at Kowal's and saves steadily towards three months of money. Waits until year five or six before considering a forklift or crane licence.",
-      "feel": "A slow, background anxiety that doesn't go away.",
+      "say": [
+        "Ten years is a **long way off** and lots can change.",
+        "People shouldn't **panic** about it, any more than about the weather."
+      ],
+      "think": [
+        "Old **crooked houses** may protect her work for ten more years.",
+        "This is the picture she **can live with**."
+      ],
+      "do": [
+        "Keep working for Gerry or whoever **takes over** his firm.",
+        "Get a **driving licence** to reach city firms.",
+        "Consider **care work** in her thirties."
+      ],
+      "feel": [
+        "**Better**, with room to breathe, though still a bit uneasy."
+      ],
       "mood": "anxious",
-      "quote": "I still end up looking for something to do at thirty-seven.",
-      "fieldNote": "For Rosa, ten years mainly protects her savings and her remaining roofing years, not her long-term future. She'd delay any retraining until the trend was obvious. Her half-joking wish to work with dogs shows how little she's pictured a second career.",
+      "quote": "Old houses are crooked and every one is different. A robot would have to be very clever to fix a two-hundred-year-old window.",
+      "fieldNote": [
+        "Finds hope in the odd shapes of **old houses**, which robots would struggle with.",
+        "Mood stays **anxious** because Gerry's retirement and Dev's job are unchanged.",
+        "A **driving licence** is her first concrete step to widen her options."
+      ],
       "actions": [
         "keep-going",
-        "save-more",
-        "wait-and-see"
+        "change-job",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep doing old-house repairs for Gerry or his successor",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Get a driving licence to reach building firms in the city",
+          "tag": "change-job"
+        },
+        {
+          "text": "Save a little each month for driving lessons",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -401,7 +558,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. Me and Dan both out at once with nothing saved, that's the nightmare. What would help is someone telling us exactly what jobs are still going to exist, in plain words, and a bit of money to tide us over while we found one. Not speeches, just that."
+      "text": "AGI by 2028, because the robots would come by 2031, and Dev and I would both be out with nothing saved. What would help is a sensible plan from the government, like free courses near home and help with rent while you switch. Something practical, not promises."
     },
     {
       "speaker": "interviewer",
@@ -409,11 +566,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe ask about small firms. Everyone talks about big companies, but Kowal's is five people and a van. If they go, nobody writes about it. There's thousands of firms like that."
+      "text": "Maybe ask the quiet ones. Nobody ever asks the people in the middle, who just want a steady job and a fair rent and don't shout about politics."
     }
   ],
-  "headlineQuote": "Kowal's is five people and a van. If they go, nobody writes about it.",
-  "portrait": "Rosa Petrov is a 27-year-old roofer at a five-person family roofing firm in a small town, living with her delivery-driver boyfriend Dan on about two weeks of savings. She doesn't use AI and says plainly she's good at timber and heights, not screens. She is calm about the plateau and quietly uneasy about drones undercutting her firm, then panics at AGI in two years because both her and Dan's jobs would go at once. With five or ten years she would save and wait for proof on her doorstep, knowing that may be too late.",
-  "biggestWorry": "AGI by 2028, because she and Dan would both lose their jobs at once with nothing saved.",
-  "whatWouldHelp": "A plain answer about which jobs will still exist and some money to tide them over while they find one, not speeches."
+  "headlineQuote": "Nobody ever asks the people in the middle, who just want a steady job and a fair rent and don't shout about politics.",
+  "portrait": [
+    "Rosa is a **27-year-old carpenter** repairing old houses for a small local builder.",
+    "Her boss Gerry is 64 and talks of **retiring**, and only one other small builder works locally.",
+    "She has **under a month** saved, doesn't drive, and her partner Dev works in a **warehouse**.",
+    "She never uses **AI**, keeps a paper notebook, and admits she waits too long to change.",
+    "Already **anxious**, she becomes **alarmed** in the faster AGI pictures."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because she and Dev would both be out of **work** with nothing saved."
+  ],
+  "whatWouldHelp": [
+    "**Free local courses** and help with rent while switching jobs."
+  ]
 }

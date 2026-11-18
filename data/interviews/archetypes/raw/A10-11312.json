@@ -1,0 +1,549 @@
+{
+  "id": "A10-11312",
+  "archetype": "A10",
+  "job": "Insurance clerk",
+  "sector": "Finance and insurance",
+  "name": "Zane Patel",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "strong",
+    "outlook": "progressive",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for making time, Zane. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, and your name never goes with your answers. To start, could you walk me through a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm on the home claims team at Riverside Mutual, which is owned by its members, so no shareholders, which I like. Most days it's water: burst pipes, leaking washing machines, a ceiling coming down after a storm. I log the claim, check the policy wording, book a plumber or a drying company, and chase the loss adjuster's report. The best bit is when someone's kitchen is ruined and you can actually say yes to them on the first call."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "And the harder parts?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The wording, mostly. I'm still mixing up which excess applies when, and Graham, who sits next to me and has done this twenty years, catches a lot of my mistakes. I use the chat assistant now and then to summarise a forty-page adjuster report, but I still read the bits that matter. I live with my partner Leila, who's a nurse on a children's ward, and we've got about ten months of costs saved because I lived with my parents till I was twenty-five."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Here's the first picture. It's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say good, honestly, and that it's a relief nobody had to find out the hard way. I'd probably post something about how the money went into hype instead of into people. At work I'd joke with Graham that he can't retire now, because nobody's coming to replace him."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For me, it means I keep learning the job the slow way, which is fine. The summary tool saves me maybe half an hour a day, and that's about it. Riverside's a mutual, owned by its members, so there's no share price pushing them to cut heads."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "Keep going, keep learning. I'd ask Graham to sit with me on the tricky storm claims once a week, and I'd sit the first insurance certificate exam next autumn. Leila and I would keep saving toward a deposit on a flat, same as now."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm, mostly. It's the world I've already planned for."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would the half hour a day go on?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Probably phoning people back instead of emailing. When someone's had sewage come up through the floor, an email saying your claim is being reviewed is the worst thing you can send. I'd use the time to talk to them."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Is there anything about that world that would still bother you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "House prices, more than AI. We've saved well, but flats near Leila's hospital keep going up faster than we save. That's a worry with or without robots."
+        }
+      ],
+      "say": [
+        "I'd say it's a **relief** that nobody had to find out the hard way.",
+        "I'd post that the money went into **hype** instead of into people."
+      ],
+      "think": [
+        "The summary tool saves me about **half an hour** a day, and that's all.",
+        "Riverside is a **mutual**, so there's no share price pushing them to cut heads."
+      ],
+      "do": [
+        "Ask Graham for a **weekly session** on tricky storm claims.",
+        "Sit the first **insurance certificate** exam next autumn.",
+        "Keep saving with Leila toward a **flat deposit**."
+      ],
+      "feel": [
+        "**Calm**, because this is the world he had already planned for."
+      ],
+      "mood": "calm",
+      "quote": "When someone's had sewage come up through the floor, an email saying your claim is being reviewed is the worst thing you can send.",
+      "fieldNote": [
+        "Zane's calm rests on **three things**: savings, a mutual employer and a patient mentor.",
+        "His real worry here is **house prices** near his partner's hospital, not technology.",
+        "He would spend saved time **phoning customers**, which says a lot about how he sees the job."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep handling burst-pipe and storm claims at Riverside Mutual",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Sit the first insurance certificate exam next autumn",
+          "tag": "retrain"
+        },
+        {
+          "text": "Keep saving with Leila for a flat deposit near the hospital",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we need rules on this, like a law that firms have to consult staff and fund retraining before they cut. I'd be in the union, and I'd say so at work. I'd also say, fairly, that some of the software is useful, because I've seen it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, the home claims desk shrinks, and juniors like me are the cheap bit to cut. Logging, checking wording, booking the plumber: a machine does that all day without mixing up the excess like I do. I'd guess half the team is gone in three years, and I'm not in the top half."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd watch what the first people who switch to the new system do, and copy what works. In the first year I'd ask to shadow the loss adjusters who go out to houses, because that's a job with a ladder and a moisture meter, not just a screen. I'd also put another hundred a month into savings and join the union properly, not just pay subs."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, sliding to worried. I'm not the type to panic, but I'm not the type to be first either, and in this one being late costs you."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does a loss adjuster actually do, for someone who doesn't know?"
+        },
+        {
+          "speaker": "persona",
+          "text": "They're the person the insurer sends to look at the damage and decide what it's really worth. They go into the loft, test the walls for damp, and argue with builders about the price. A loss adjuster's job is half detective work and half climbing about, and the climbing about is the part software can't do yet."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you wouldn't be first. What's the cost of waiting?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Graham says the first people to learn a new system become the ones who train everyone else, and they're the last to go. If I wait to see it work, the good seats are taken. So maybe I'd push myself to be second instead of last."
+        }
+      ],
+      "say": [
+        "I'd say we need **laws** making firms consult staff and fund **retraining** before cuts.",
+        "I'd also admit some of the **software is useful**, because I've used it."
+      ],
+      "think": [
+        "The home claims desk **shrinks**, and juniors like me are the cheap part to cut.",
+        "I'd guess **half the team** goes in three years, and I'm not in the top half."
+      ],
+      "do": [
+        "Ask to **shadow loss adjusters** on house visits in the first year.",
+        "Add another **hundred a month** to savings.",
+        "Join the **union** properly rather than just paying subs."
+      ],
+      "feel": [
+        "**Uneasy sliding to worried**, knowing that being late costs him."
+      ],
+      "mood": "anxious",
+      "quote": "A loss adjuster's job is half detective work and half climbing about, and the climbing about is the part software can't do yet.",
+      "fieldNote": [
+        "Zane holds a **balanced view**: he wants rules but admits the software works.",
+        "His plan picks the **hands-on part** of insurance: loss adjusting with a ladder and moisture meter.",
+        "He knows his **steady habit** of waiting could cost him, and decides to aim for second, not last."
+      ],
+      "actions": [
+        "change-job",
+        "save-more",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Ask to shadow loss adjusters on house visits",
+          "tag": "change-job"
+        },
+        {
+          "text": "Add another hundred a month to savings",
+          "tag": "save-more"
+        },
+        {
+          "text": "Join the union properly and go to branch meetings",
+          "tag": "collective-action"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say publicly that this needs an emergency response, like during a pandemic: income support, a pause on evictions, and a tax on the companies doing the replacing. I'd share union statements and turn up to things. I wouldn't pretend to have the answer, though."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I think the claims desk is gone by 2028, and probably most of the desk side of insurance with it. What buys me time is the hands-on side: someone still has to go into the flooded house until about 2031, when the robots come. After that I really don't know what I'd be."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd move fast for once. In the first six months I'd apply for a trainee loss adjuster job, even at another insurer, and take the driving and surveying courses that come with it. I'd keep the ten months of savings as they are and stop the flat plan, because buying a flat when nobody knows who'll have a wage feels mad. Leila's job is safer than mine, so we'd lean on that."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Frightened, properly. And a bit embarrassed that Leila's job, which pays less, suddenly looks like the solid one."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you tell your parents?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell them not to worry and then I'd ask if we could move back in for a year if things went badly. My mum would say yes before I finished the sentence. That's the safety net nobody counts."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd stop the flat plan. How does Leila feel about that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "She'd hate it. We've been looking at the same two-bed by the hospital for a year. I'd say we wait one year and see who still has a job, and she'd say that's what I always say."
+        }
+      ],
+      "say": [
+        "I'd call for an **emergency response**: income support, a pause on evictions, a tax on replacers.",
+        "I'd share **union statements** but admit I don't have the answer."
+      ],
+      "think": [
+        "The claims desk is **gone by 2028**, along with most desk jobs in insurance.",
+        "House visits buy time until about **2031**, and after that I don't know."
+      ],
+      "do": [
+        "Apply for a **trainee loss adjuster** job within six months, even at another insurer.",
+        "Pause the **flat purchase** and keep ten months of savings intact.",
+        "Lean on Leila's **nursing wage** as the steadier income."
+      ],
+      "feel": [
+        "**Frightened**, properly.",
+        "**Embarrassed** that his partner's lower-paid job now looks like the solid one."
+      ],
+      "mood": "alarmed",
+      "quote": "Buying a flat when nobody knows who'll have a wage feels mad.",
+      "fieldNote": [
+        "Under pressure, steady Zane says he would **move fast for once**.",
+        "He uses the **three-year robot gap** deliberately, aiming for hands-on loss adjusting.",
+        "His **parents' spare room** is the safety net he admits nobody counts."
+      ],
+      "actions": [
+        "change-job",
+        "retrain",
+        "family-plans",
+        "seek-support"
+      ],
+      "steps": [
+        {
+          "text": "Apply for trainee loss adjuster jobs within six months",
+          "tag": "change-job"
+        },
+        {
+          "text": "Take the surveying course that comes with adjuster training",
+          "tag": "retrain"
+        },
+        {
+          "text": "Put the two-bed flat purchase near the hospital on hold",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Ask his parents if they could move back in for a year",
+          "tag": "seek-support"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say five years is enough time to do this properly, and I'd be pushing the union to get a deal now. Things like guaranteed retraining for anyone whose job goes, paid for by the firm. Publicly I'd keep it calm and practical."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Realistically the desk work goes around 2030, and the house visits a few years after, maybe 2034. So I've got a kind of ladder: claims desk now, adjuster next, and then something else entirely. I'm not sure what the something else is, and that's the bit I keep turning over."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd stay at Riverside for a year and pass the insurance certificate, because a qualified adjuster gets hired faster. Then in 2028 I'd move to field adjusting. And we'd probably still buy the flat, but a smaller one, so the mortgage could be paid on Leila's wage alone."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious but organised. A plan with dates on it calms me down more than anything anyone could say."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why a mortgage Leila could pay alone?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Because the hospital will still need nurses longer than Riverside needs me. If I'm out of work for a year in between jobs, I don't want us choosing between the mortgage and food. It's a boring rule but it's the right one."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What's the something else, if you had to guess?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Maybe something with people, like the free advice centre where I volunteered once. Or a trade. My cousin's a plumber and he keeps saying robots won't be under sinks for a long time, and I don't know if he's right."
+        }
+      ],
+      "say": [
+        "I'd push the **union** for a deal on **guaranteed retraining** now.",
+        "Publicly I'd keep it **calm and practical**, since five years is enough to plan."
+      ],
+      "think": [
+        "Desk work goes around **2030**, and house visits maybe four years later.",
+        "I have a **ladder** of steps, but no idea what the **last rung** is."
+      ],
+      "do": [
+        "Stay at Riverside one year and pass the **insurance certificate**.",
+        "Move into **field adjusting** in 2028.",
+        "Buy a **smaller flat** whose mortgage Leila's wage alone can cover."
+      ],
+      "feel": [
+        "**Anxious but organised**, steadied by a plan with dates on it."
+      ],
+      "mood": "anxious",
+      "quote": "A plan with dates on it calms me down more than anything anyone could say.",
+      "fieldNote": [
+        "Five years turns Zane's fear into a **dated plan**, which suits his steady nature.",
+        "His **mortgage rule** shows careful household thinking: the nurse's wage must cover the basics.",
+        "He has no answer for **after 2034**, and openly says so."
+      ],
+      "actions": [
+        "retrain",
+        "change-job",
+        "family-plans",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Pass the insurance certificate during one more year at Riverside",
+          "tag": "retrain"
+        },
+        {
+          "text": "Move into field loss adjusting in 2028",
+          "tag": "change-job"
+        },
+        {
+          "text": "Buy a smaller flat with a mortgage Leila can cover alone",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Push the union for guaranteed retraining paid by the insurer",
+          "tag": "collective-action"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is a gift, and we'd be fools to waste it arguing. I'd want public money for retraining and a proper conversation about shorter working weeks. At work I'd tell people to pick their next thing early."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Ten years means I'd be 37 and properly qualified by the time thinking AI lands. That's a real difference. I could even become the person who checks what the AI decides on the big claims, because someone has to sign off a hundred-thousand fire claim."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd do the full insurance qualifications over three or four years, using the chat tools more as I go, once I see colleagues getting good results from them. We'd buy the flat by the hospital as planned. And I'd keep an eye out for the moment to move into adjusting or claims review."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, but in a normal way, the way everyone's uneasy about the future."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who decides a hundred-thousand fire claim now?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A senior handler called Marion and a manager above her. They read everything, call the fire brigade and the adjuster, and then put their names on it. I can't see a mutual letting a machine sign that off without a person checking, not for a while anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And if you're wrong about that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Then I've still got ten years of savings habits and a partner with a solid job. I'd retrain again. It wouldn't be the end of us."
+        }
+      ],
+      "say": [
+        "I'd say **ten years** is a gift we shouldn't waste arguing.",
+        "I'd push for **public retraining money** and shorter working weeks."
+      ],
+      "think": [
+        "I'd be **37** and fully qualified when thinking AI lands.",
+        "I could become the person who **checks the AI** on big claims."
+      ],
+      "do": [
+        "Complete the full **insurance qualifications** over three or four years.",
+        "Use **chat tools** more once colleagues show good results.",
+        "Buy the **flat by the hospital** as planned."
+      ],
+      "feel": [
+        "**Uneasy** in a **normal way**, like everyone is about the future."
+      ],
+      "mood": "uneasy",
+      "quote": "I could even become the person who checks what the AI decides on the big claims, because someone has to sign off a hundred-thousand fire claim.",
+      "fieldNote": [
+        "With a decade, Zane aims to become the **human sign-off** on large claims.",
+        "His AI use grows only **after colleagues prove it**, true to his steady habit.",
+        "He shrugs off being wrong because of **savings habits** and his partner's secure job."
+      ],
+      "actions": [
+        "retrain",
+        "learn-ai",
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Complete the full insurance qualifications over four years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Use the chat tools on adjuster reports once colleagues show results",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Buy the two-bed flat near Leila's hospital",
+          "tag": "invest"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028, because I'd have to move before I'm good at anything. What would help is retraining that's paid for, and a law that says firms consult staff before replacing them, so people like me aren't the last to hear. And a bit of time, honestly, which is the thing that picture doesn't give."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Maybe ask about the customers. Half the people who ring me have water coming through the ceiling and a toddler on their hip. If the firm saves money and those people wait longer on hold, that's not progress, whatever the spreadsheet says."
+    }
+  ],
+  "headlineQuote": "Half the people who ring me have water coming through the ceiling and a toddler on their hip.",
+  "portrait": [
+    "Zane is a **27-year-old home claims clerk** at a members' insurer, still learning policy wording.",
+    "He and his partner Leila, a **children's nurse**, have about **ten months** saved.",
+    "He backs **unions and rules** on AI, but admits the software he uses is useful.",
+    "His plan climbs from the desk into **hands-on loss adjusting**, buying time before robots.",
+    "He is **calm** if AI stalls and **alarmed** if AGI arrives within two years."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because he'd have to move before he's good at anything."
+  ],
+  "whatWouldHelp": [
+    "**Paid retraining** and a law making firms **consult staff** before replacing them."
+  ]
+}

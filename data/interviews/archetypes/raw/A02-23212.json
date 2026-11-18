@@ -11,24 +11,24 @@
     "outlook": "progressive",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm with the Work Futures Panel, an independent research group. We're not tied to any company, union, party or government, and nothing you say will be linked to your name. To start, could you walk me through a normal working day?"
+      "text": "The Work Futures Panel is an independent research group with no ties to employers, AI firms, unions, parties or government. What you tell me is confidential. Could you describe a normal shift?"
     },
     {
       "speaker": "persona",
-      "text": "I run a loader underground at the Kestrel gold mine, about 900 metres down. We go down in the cage at half six, I check the stope plan with my crew, then I'm mucking out the ore after each blast and taking it to the ore pass. I lead a crew of five, so half my day is the loader and half is making sure everyone's gas readings and ground checks are done. I love the quiet down there between blasts, and I hate the dust and the forty-minute wait for the cage at the end."
+      "text": "I am David Young, 43, a senior loader operator at a large mine. I check the road and machine, move ore, then brief the next crew about a sound or vibration they should watch; I do not rush a safety check to save a few minutes."
     },
     {
       "speaker": "interviewer",
-      "text": "Has the work changed much in the time you've been there?"
+      "text": "What do you like about the work, and what gets tiring?"
     },
     {
       "speaker": "persona",
-      "text": "A bit. Two years ago they started trialling tele-remote loading, where someone drives a loader from a chair on the surface while it works in an area people can't go. I've had a go at it and it's fine, slower than being in the seat but safer. I've also started using one of those AI chat apps now and then to tidy up my shift reports, because writing was never my strong point."
+      "text": "I like teaching newer operators and finishing a shift without a preventable fault. My partner Erin and I have two school-age children and a mortgage; our savings cover a few months, so we are careful but not at the edge."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say the hype people got it wrong and I'm not surprised. Underground is hard on machines, there's no signal, there's water everywhere. I'd say that to the lads at crib and probably leave it there."
+          "text": "I'd say the report helper is worth trying if it gives operators more time around the machine. A person still needs to look at the loader before signing the sheet."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me it means the steady plan holds. I keep the loader, I keep the crew, and the tele-remote stuff grows slowly the way it has been. I'm happy with that, honestly."
+          "text": "Most of my day is operating equipment, and the card says pay carries on much as it would have. I still keep an eye on staffing, because a mine can reorganize even when the technology is modest."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going as I am and keep using the chat app for reports since it saves me twenty minutes. I'd maybe put my name down for the tele-remote ticket anyway, because it's a useful thing to have. Money-wise nothing changes, we'd keep putting a bit aside each fortnight."
+          "text": "I'd keep my inspection walk and compare the tool's schedule with the board for a few weeks. I would leave our savings alone and talk with my partner Erin before changing anything at home."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +68,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Mostly relief that I can stop half-listening to every podcast about robots."
+          "text": "I feel mostly settled about my shifts, with a small question about how management uses saved time. Erin and I have a few months saved, so one changed week would not force a big decision."
         },
         {
           "speaker": "interviewer",
-          "text": "Why put your name down for tele-remote if nothing radical changes?"
+          "text": "What would you and your partner adjust first if a shift disappeared?"
         },
         {
           "speaker": "persona",
-          "text": "Because it's already here, hype or no hype. The company's spent money on it, and the people who know it get the better shifts. It's not a revolution, it's just the next bit of kit."
+          "text": "We would postpone replacing the living-room sofa before touching the mortgage or the children's school costs. I'd check the actual payslip first instead of guessing about a short shift."
         },
         {
           "speaker": "interviewer",
-          "text": "What would your partner say about this picture?"
+          "text": "How would you decide whether the new tool helped the crew?"
         },
         {
           "speaker": "persona",
-          "text": "Priya's a nurse, she'd laugh and say the hospital still runs on fax machines. She's never been worried about computers taking her job. She'd say, good, now stop worrying and fix the back gate."
+          "text": "I'd look at whether it catches the same maintenance warnings the crew finds. If it misses a fault, I would ask for a human sign-off before it is used on every shift."
         }
       ],
-      "say": "I'd tell the lads at crib that the hype people got it wrong and I'm not surprised. Underground is hard on machines, with no signal and water everywhere.",
-      "think": "For me it means the steady plan holds: I keep the loader and the crew while tele-remote grows slowly. Honestly I'm happy with that.",
-      "do": "Keeps working as before and keeps using the chat app to save twenty minutes on shift reports. Puts his name down for the tele-remote ticket anyway and keeps saving a bit each fortnight.",
-      "feel": "Calm, with relief at being able to stop worrying about robots.",
-      "mood": "calm",
-      "quote": "It's not a revolution, it's just the next bit of kit.",
-      "fieldNote": "David treats tele-remote as ordinary progress rather than a threat, and would pick up the ticket even in a quiet world. His partner's teasing about hospital fax machines shows a household that doesn't feel threatened by technology.",
+      "say": [
+        "The report helper is worth trying if it gives us more time around the **machine**.",
+        "A person still needs to look at the loader before signing the **sheet**."
+      ],
+      "think": [
+        "Most of my work is **operating equipment**, and the card leaves pay much as it is.",
+        "I watch for management changes to **staffing**, even when the tool is modest."
+      ],
+      "do": [
+        "Keep my **inspection walk** and compare the tool schedule with the board.",
+        "Leave our **savings** alone while we test it."
+      ],
+      "feel": [
+        "I feel **settled** about my shifts, with a small question about how saved time is used."
+      ],
+      "mood": "uneasy",
+      "quote": "A person still needs to look at the loader before signing the sheet.",
+      "fieldNote": [
+        "David anchors the conversation in **equipment checks**, not AI speculation.",
+        "His moderate savings make a short shift change manageable, but he watches **staffing** decisions.",
+        "He tests the tool against a real **maintenance board** before trusting its schedule."
+      ],
       "actions": [
         "keep-going",
-        "retrain"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep the loader inspection walk on every shift",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Compare the tool schedule with the board for several weeks",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say the company has to share the gains. If tele-remote and automation mean fewer people underground, then the people who stay should be trained up and paid properly, and the ones who go should get real help. I'd say that at union meetings, and I'd say it to the shift boss."
+          "text": "I'd tell the crew the software will handle more plans and checks, while the loader work changes more slowly. We should know how the targets were set before being judged against them."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +144,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately I think loaders are next in line. We already have tele-remote, so it's a short step to one person running three loaders from a chair. That probably means fewer crew leads, and I'm one of them."
+          "text": "I do shift handovers and maintenance planning as well as operating the loader, so some senior hours could go. My hands-on work is still most of the job, and there are a few other mines within reach."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +152,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd get the tele-remote ticket done in the first six months, while the company is still paying for it. I'd push our union branch to ask for a retraining agreement before the next pay deal. At home we'd hold off on the new car and put an extra 200 a fortnight into savings."
+          "text": "I'd try the new report screen after a trainer shows how it checks faults. I would ask the mine's safety committee to review any faster shift target and take a short maintenance course if the mine pays."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +160,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. I can see where it's going and I think I can get there, but I don't like that it's not my choice."
+          "text": "I am anxious about losing lead hours. Our savings could cover a short cut, not a lasting one."
         },
         {
           "speaker": "interviewer",
-          "text": "Who on your crew would you be worried about?"
+          "text": "Who at work would you want involved in setting the new targets?"
         },
         {
           "speaker": "persona",
-          "text": "Gary. He's 58, best ground man I've ever worked with, can read a rock face like a newspaper. He doesn't touch computers and he's too young to retire. I'd want the union to fight for him to finish his last years in the seat."
+          "text": "I'd bring the lead operators and the union steward into the target discussion. We know which checks are slow because they matter and which ones are just waiting on a form."
         },
         {
           "speaker": "interviewer",
-          "text": "You said it's not your choice. What would make it feel like your choice?"
+          "text": "What would you need to see before relying on a new screen?"
         },
         {
           "speaker": "persona",
-          "text": "If they asked us first. If the crew got told the plan a year ahead and got to pick who trains for what. It's the being told on a Monday that gets people."
+          "text": "I'd want a month of running the tool alongside the existing board before relying on it. The crew should be able to report errors without being blamed for the software."
         }
       ],
-      "say": "I'd say at union meetings and to the shift boss that the company has to share the gains. People who stay should be trained and paid properly, and people who go should get real help.",
-      "think": "I think loaders are next, because tele-remote is a short step from one person running three machines from a chair. That likely means fewer crew leads, and I'm one.",
-      "do": "Gets the tele-remote ticket within six months while the company pays. Pushes the union branch for a retraining agreement before the next pay deal, delays a new car and saves an extra 200 a fortnight.",
-      "feel": "Uneasy, confident he can adapt but unhappy that the choice isn't his.",
-      "mood": "uneasy",
-      "quote": "It's the being told on a Monday that gets people.",
-      "fieldNote": "David is ready to move with the change but wants it negotiated, not imposed. His worry for an older colleague who doesn't use computers was as strong as his worry for himself. He blamed process and consultation, not the technology.",
+      "say": [
+        "The software will take more **plans and checks**, while loader work changes more slowly.",
+        "Show us how the new **targets** were set."
+      ],
+      "think": [
+        "Some senior hours could go because I split time between **handovers** and equipment.",
+        "There are a few other mines within reach, but less planning may still trim **pay**."
+      ],
+      "do": [
+        "Try the **report screen** after a trainer shows its fault checks.",
+        "Ask the safety committee to review targets and take a paid **maintenance course**."
+      ],
+      "feel": [
+        "I am **anxious** about losing lead hours. Our savings could cover a short cut, not a lasting one."
+      ],
+      "mood": "anxious",
+      "quote": "The crew should be able to report errors without being blamed for the software.",
+      "fieldNote": [
+        "His job is mainly physical, but **handover planning** could shrink early.",
+        "David is willing to learn once the report tool has been **tested**.",
+        "He wants an **error process** that protects workers from blame for software faults."
+      ],
       "actions": [
-        "retrain",
+        "learn-ai",
         "collective-action",
-        "save-more"
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Practice the fault-check report screen with a trainer",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask the mine safety committee to review faster targets",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Take the mine-paid maintenance course",
+          "tag": "retrain"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this has to be stopped or slowed down by law. You can't let a handful of companies replace everybody in two years. I'd be signing petitions and writing to my local representative, and I'd say so online, which I don't usually do."
+          "text": "I'd tell people the schedules and reports change by 2028, but robots for the loader arrive around 2031. The mine should explain what work stays and who can transfer."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +241,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think even the tele-remote job disappears. If AI can drive the loader itself, there's no need for me in the chair either. My plan was to move with the change, and this outruns it."
+          "text": "My shift planning can be automated quickly, and I do not know whether the same crew keeps all its hours. The three-year gap gives the physical role time, but this is close enough that Erin and I would need a plan."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +249,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First month I'd sit down with Priya and work out how long we last on her pay alone, because nursing feels safer for a while. We'd cut the extras, the kids' football trips, the streaming, and put everything into the mortgage buffer. I'd join the union campaign for an income guarantee and I'd ask the mine about any job maintaining the robots."
+          "text": "I'd ask for the mine's written training list now and talk with our union representative about transfer rules. In 2029, I would take a paid maintenance course if it qualifies me for an open role, while keeping my operator shifts."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +257,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd be lying awake doing sums in my head."
+          "text": "I feel anxious, not helpless; we have a few months saved and some mines nearby, but I cannot count on a matching post. I would want a real course place before spending household money."
         },
         {
           "speaker": "interviewer",
-          "text": "What does two years actually give you to work with, compared with the other pictures?"
+          "text": "What would you ask your partner to look over with you?"
         },
         {
           "speaker": "persona",
-          "text": "Almost nothing. Two years is one pay deal and a bit. You can't retrain into anything in that time, you can only brace. With two years I'm not planning a career, I'm planning to keep the house."
+          "text": "I'd review the course dates, mortgage payments and children's school calendar with Erin. We would keep the emergency fund intact until the mine confirmed that training was paid."
         },
         {
           "speaker": "interviewer",
-          "text": "How many months could you last on Priya's pay?"
+          "text": "What would you do during 2029 if thinking AI arrived in 2028?"
         },
         {
           "speaker": "persona",
-          "text": "We worked it out once, just for fun. With my savings, maybe ten months before the mortgage bites, a bit more if we cut hard. After that we'd be asking her parents for help, which I'd hate."
+          "text": "If no place opened in 2029, I'd stay on the loader and ask to shadow the maintenance crew during a scheduled inspection. I would keep looking for a posted internal role rather than resigning first."
         }
       ],
-      "say": "I'd say this has to be slowed down by law, because a handful of companies can't replace everybody in two years. I'd sign petitions, write to my local representative and even post about it online.",
-      "think": "I think even the tele-remote job disappears if AI can drive the loader itself. My plan was to move with the change, and this outruns it.",
-      "do": "Works out with Priya how long they last on her nursing pay, about ten months with savings. Cuts the kids' football trips and streaming, joins the union income guarantee campaign and asks about maintaining the robots.",
-      "feel": "Alarmed, lying awake doing sums in his head.",
-      "mood": "alarmed",
-      "quote": "With two years I'm not planning a career, I'm planning to keep the house.",
-      "fieldNote": "David's steady approach depends on time, and two years removes it, which is why his mood jumps. He leans on his partner's job as the family's anchor. He'd go public online for the first time, a sign of how serious this feels to him.",
+      "say": [
+        "Schedules change by **2028**, but loader robots arrive around 2031.",
+        "Explain which jobs stay and who can **transfer**."
+      ],
+      "think": [
+        "My shift planning could be automated quickly, though loader work lasts **longer**.",
+        "I cannot count on finding a matching **post** nearby."
+      ],
+      "do": [
+        "Ask now for the mine's written **training list** and transfer rules.",
+        "Take a paid course in 2029 if it qualifies me for an **open role**."
+      ],
+      "feel": [
+        "I feel **anxious**, but have some time and a few nearby mines to check."
+      ],
+      "mood": "anxious",
+      "quote": "I would want a real course place before spending household money.",
+      "fieldNote": [
+        "He treats the 2028 date as a threat to **planning hours**, not instant robot replacement.",
+        "A paid course and confirmed **vacancy** are conditions for using household funds.",
+        "Nearby mines give some options, but he will not resign before securing a **post**."
+      ],
       "actions": [
-        "cut-spending",
-        "politics",
         "collective-action",
-        "seek-support"
+        "retrain",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Ask the union about the mine transfer rules",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Take a paid maintenance course for an open role",
+          "tag": "retrain"
+        },
+        {
+          "text": "Keep operating until the course and post are confirmed",
+          "tag": "keep-going"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say the same thing about laws, but with five years I'd say we can actually get them done. I'd be telling people to get organised now, while there's still work and money to organise with."
+          "text": "I'd say five years gives operators time to train before AGI in 2031, and loader robots come roughly three years later. I would ask the mine to publish the actual course places early."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +338,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years means I've got time to move sideways, maybe into maintenance or the control room, before it lands. I'd still lose the loader. But I wouldn't be starting from nothing."
+          "text": "The planning part of my lead role may go first, while the machine work continues for a while. By 2034, robots could handle that work too, so I would not treat inspection as a permanent refuge."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +346,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In year one I'd ask the mine to put me through an electrical apprenticeship for adults, and I'd do the tele-remote ticket alongside it. We'd lift savings from three months to six. I'd stay active in the union so there's a plan for Gary and the others who won't retrain."
+          "text": "I'd take the mine's paid maintenance course over the next few years and ask for a technician shadow shift. In 2032, I would apply for an inspection post if a real vacancy existed, while keeping my loader shifts until an offer was written."
         },
         {
           "speaker": "interviewer",
@@ -256,48 +354,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but in a busy way. Having a plan helps a lot."
+          "text": "Five years gives me room to prepare, though I still worry about the endpoint. My experience might help with inspections, but it cannot make those jobs safe from robots forever."
         },
         {
           "speaker": "interviewer",
-          "text": "Earlier you said even the robot jobs might go. Why would an electrical trade be safe?"
+          "text": "What course would be worth taking before 2031?"
         },
         {
           "speaker": "persona",
-          "text": "I don't know that it would be, honestly. But robots break, especially underground, and someone has to be there with a meter. It buys me time, and time is the whole game with this."
+          "text": "I'd take the maintenance course if it includes real equipment and a certificate the other mines accept. I would check that with the training lead before signing up."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell your kids in this picture?"
+          "text": "What would you do during 2032, the first year after AGI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "Owen's 13. I'd tell him to keep his options open, learn to fix things and to use the computer stuff. I'd tell him his dad's going back to school, and he'd find that hilarious."
+          "text": "In 2032, I'd ask the supervisor whether the inspection post had a named budget and a person leaving it. If not, I would stay in operations and apply at nearby mines too."
         }
       ],
-      "say": "I'd say we can actually get the laws done with five years. I'd tell people to organise now, while there's still work and money to organise with.",
-      "think": "Five years gives me time to move sideways into maintenance or the control room before it lands. I'd still lose the loader, but I wouldn't start from nothing.",
-      "do": "Asks the mine for an adult electrical apprenticeship in year one alongside the tele-remote ticket. Lifts savings from three to six months and stays active in the union for colleagues who won't retrain.",
-      "feel": "Anxious but busy, and steadied by having a plan.",
+      "say": [
+        "Five years gives operators time to train before **2031**.",
+        "Publish the actual **course places** early.",
+        "As lead, I would ask for a **worker-backed transition plan**."
+      ],
+      "think": [
+        "Planning may go first, while loader work continues for a **while**.",
+        "Robots could also take inspection work by 2034, so no path is **permanent**."
+      ],
+      "do": [
+        "Take the mine-paid **maintenance course** and request a technician shadow shift.",
+        "Apply in 2032 for an inspection post if a **vacancy** exists."
+      ],
+      "feel": [
+        "I have room to prepare, but remain **worried** about the endpoint."
+      ],
       "mood": "anxious",
-      "quote": "Robots break, especially underground, and someone has to be there with a meter.",
-      "fieldNote": "Five years is enough for David to retrain on purpose, and he chose an electrical trade over staying in the seat. He was honest that he doesn't know whether it would be safe either. He still carries his older colleague into his plans.",
+      "quote": "My experience might help with inspections, but it cannot make those jobs safe from robots forever.",
+      "fieldNote": [
+        "David sees the roughly three-year gap as time to build **transferable skills**.",
+        "He questions whether inspection work survives the later **robot arrival**.",
+        "A named **vacancy** and recognized course make the move concrete."
+      ],
       "actions": [
         "retrain",
-        "save-more",
-        "collective-action",
-        "politics"
+        "change-job",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Complete the mine-paid maintenance course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for a posted inspection vacancy in 2032",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep operating until an offer is in writing",
+          "tag": "keep-going"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough to do this fairly, so let's see the companies and government actually do it. Free retraining, help with mortgages, the lot. I'd keep making that case at the union."
+          "text": "I'd tell the crew a decade gives us time to prepare if the mine shares dates instead of waiting for a crisis. Thinking work changes in 2036, with robots reaching the loader around 2039."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +436,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Ten years puts me at 53. That's a full new career if I start now, or a quiet slide if I don't. I think I'd start now."
+          "text": "I'll be 53 when AGI arrives and 56 when the robots follow, so I still need a wage. I could qualify for inspections, but I expect those jobs to change too if robots get good enough."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +444,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the electrical apprenticeship over three or four years at night and on days off, and keep the loader until then. We'd aim to get the mortgage down by a third. I'd also help set up a training fund through the union so the older ones can get something too."
+          "text": "I'd start the paid maintenance course while keeping my loader shifts and save part of each overtime cheque. In 2037, I would apply for an inspection post only if the mine still had a funded position."
         },
         {
           "speaker": "interviewer",
@@ -321,59 +452,102 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy but mostly hopeful. It feels like a job I can do."
+          "text": "The warning feels more manageable, but it does not settle the question of income after 2039. Our savings can bridge a short gap, not years without wages."
         },
         {
           "speaker": "interviewer",
-          "text": "Does the extra time make you want to wait and see first?"
+          "text": "What would you want your children to know about work by then?"
         },
         {
           "speaker": "persona",
-          "text": "A bit, yeah, that's my nature, I like to see it work for someone else first. But with this I think waiting is the trap. The ones who start in year one get the good spots."
+          "text": "By 2037, our children will be young adults, and Erin and I would help them compare trade training that works across several industries. I would not steer them toward the mine just because I know it."
         },
         {
           "speaker": "interviewer",
-          "text": "What's the hardest part of starting now?"
+          "text": "What would you do during 2037, the first year after AGI arrived?"
         },
         {
           "speaker": "persona",
-          "text": "Being tired. Twelve-hour shifts underground and then study at night with two kids. Priya's done night shifts for years, so she'd tell me to stop whinging."
+          "text": "I'd ask the mine for its staffing plan before deciding whether to move closer to another site. Some similar jobs are nearby, so I would compare offers before uprooting the family."
         }
       ],
-      "say": "I'd say ten years is enough to do this fairly, so the companies and government should actually do it. That means free retraining and help with mortgages, and I'd keep making that case at the union.",
-      "think": "At 53 it's a whole new career if I start now, or a quiet slide if I don't. I think I'd start now.",
-      "do": "Studies an electrical apprenticeship at night over three or four years while keeping the loader. Aims to cut the mortgage by a third and helps set up a union training fund for older workers.",
-      "feel": "Uneasy but mostly hopeful, as if it's a job he can do.",
+      "say": [
+        "A decade gives us time to prepare if the mine shares **dates** early.",
+        "Thinking work changes in 2036, with loader robots around **2039**."
+      ],
+      "think": [
+        "At 53 and 56, I still need a steady **wage**.",
+        "Inspection work may change too if robots become good enough, so no job is **guaranteed**."
+      ],
+      "do": [
+        "Start the paid **maintenance course** while keeping loader shifts.",
+        "Save part of each overtime cheque and apply in 2037 for a **funded post**."
+      ],
+      "feel": [
+        "The warning is more manageable, but income after **2039** remains unsettled."
+      ],
       "mood": "uneasy",
-      "quote": "But with this I think waiting is the trap. The ones who start in year one get the good spots.",
-      "fieldNote": "David admits his instinct is to wait for proof, but he overrides it when the stakes are this high. The decade lets him plan a full career change. His humour about his partner's night shifts suggests a household that copes together.",
+      "quote": "Our savings can bridge a short gap, not years without wages.",
+      "fieldNote": [
+        "The decade lets him qualify while keeping **current earnings**.",
+        "He expects his children to be young adults by **2037** and supports broader training.",
+        "He would compare **local offers** before moving the family."
+      ],
       "actions": [
         "retrain",
         "save-more",
-        "collective-action"
+        "change-job",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Complete the maintenance course while operating the loader",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save part of each overtime cheque",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply for a funded inspection post in 2037",
+          "tag": "change-job"
+        },
+        {
+          "text": "Help the children compare cross-industry trade courses",
+          "tag": "family-plans"
+        }
       ]
     }
   },
   "closing": [
     {
       "speaker": "interviewer",
-      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+      "text": "Of the five pictures, which one worries you most, and what would actually help if it happened?"
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. Any plan I can make needs time, and that one doesn't give you any. What would help is free adult training paid by the companies doing the replacing, and some protection on mortgages so families aren't losing houses while they retrain."
+      "text": "The two-year version worries me most because the mine may change planning and shifts before I can prepare. Paid training, a clear transfer process and dates for any staffing change would help me and my family plan."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I did not ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe what it's like for the people who stay. Even in the good versions, someone's left down there alone with the robots, and mining is a job you do with your mates. I'd miss that more than the pay."
+      "text": "I would want the mine to say which courses lead to real jobs, and let crews question the plan before it is final. I can learn a proven tool, but I do not want workers blamed for choices made by software."
     }
   ],
-  "headlineQuote": "Even in the good versions, someone's left down there alone with the robots, and mining is a job you do with your mates.",
-  "portrait": "David Young is a 43-year-old loader operator and crew lead at the Kestrel underground gold mine, married to a nurse, with two kids and a mortgage. He uses AI now and then for shift reports and has already tried tele-remote loading, so he sees change as something to move with once it's proven. He wants the change negotiated through the union and the law, and worries as much about an older colleague as himself. Two years of warning leaves him lying awake doing sums, while five or ten years lets him plan an electrical apprenticeship and a slow move out of the loader seat.",
-  "biggestWorry": "The two-year AGI picture, because every plan he could make needs time and that one gives none.",
-  "whatWouldHelp": "Free adult training paid for by the companies doing the replacing, and protection on mortgages so families keep their homes while they retrain."
+  "headlineQuote": "I can learn a proven tool, but I do not want workers blamed for choices made by software.",
+  "portrait": [
+    "David is a 43-year-old senior mine operator with a **technical diploma**.",
+    "He is careful with new technology and learns after it is **proven**.",
+    "His partner and two children share a mortgage and a **moderate savings cushion**.",
+    "He values worker voice and will pursue training only when it leads to a **real job**."
+  ],
+  "biggestWorry": [
+    "The **two-year AGI** picture worries him because planning and shift decisions change before the household can prepare."
+  ],
+  "whatWouldHelp": [
+    "Paid training, clear **transfer rules** and early staffing dates would help David plan."
+  ]
 }

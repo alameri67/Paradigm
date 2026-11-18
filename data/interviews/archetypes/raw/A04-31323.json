@@ -11,24 +11,16 @@
     "outlook": "centre",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time, Wei. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I'm a senior field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions, parties or government. We don't sell or campaign for anything. Your answers are confidential. What is an ordinary workday like?"
     },
     {
       "speaker": "persona",
-      "text": "I work for a firm that builds houses in a factory as big wall and floor panels, then we put them together on site like a giant flat-pack. I'm on the site crew, so when the lorry arrives at seven I'm guiding panels off the crane, lining them up, and fixing them down, and after that I'm on the inside finishing, doors, skirting, that kind of thing. A house goes up in four days, which still amazes me. I'm the new guy, and I'm slower with a nail gun than anyone, but I'm the one who reads the fixing schedules on my phone and spots when the factory's sent the wrong panel. The worst part is standing around when the crane's late and it's raining sideways."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What were you doing before?"
-    },
-    {
-      "speaker": "persona",
-      "text": "Twenty-five years in IT support for a logistics company, fixing laptops and printers and resetting passwords. I got bored, and honestly I could see the chatbots doing most of my job before long. I'd sold some shares I'd held for years, the house is paid off, so at fifty-six I thought, why not learn something with my hands while I still can. My wife Lin does bookkeeping from home and she thought I'd lost my mind."
+      "text": "I help build the timber stairs at the Ferry Quay apartments. I'm fifty-eight and the junior on the crew after years working in a furniture warehouse; I left school early and still need the lead joiner to check my more difficult cuts. My partner Mara teaches music lessons, and our grown daughter works in another town. This site pays well and we have eleven months of expenses saved. I use an AI assistant every day to turn rough stair notes into a cutting list, then put a square against the timber before any saw starts."
     }
   ],
   "scenarios": {
@@ -36,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "I'm going to read you five pictures of the future, one at a time. The first is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say, fair enough, it was overhyped, but the tools are still useful. I'd say that to the lads, and maybe post something about how I still use it every day for the boring bits."
+          "text": "I'd tell the crew the assistant already saves me time finding a drawing note, so a modest improvement would be welcome. I would keep the final checks with the person holding the timber."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be a bit disappointed, to be honest. I like this stuff, I use it every morning to check the fixing schedule and ask it why the engineer wants a certain bracket. If it stalls, I just carry on being slow with a nail gun and getting better."
+          "text": "My income seems safe in this picture; the Ferry Quay job has months to run and there are many builders in town. Mara's lessons fluctuate, but our eleven-month reserve means a slow term will not send us scrambling."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going, practise my hand skills, and maybe ask the firm about a spot in the factory where they program the cutting machines. I'd keep my shares where they are. Nothing dramatic."
+          "text": "I'll carry on with the stairs and use my assistant to sort the daily list. During the first year I'd keep our usual savings deposit and show lead joiner Pavel any AI answer that changes a dimension before I cut."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +56,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Fine. A little flat, maybe, like a film that ends early."
+          "text": "I feel comfortable with the tool and the work ahead. I am still learning the trade, so a good list is useful precisely because I know it can be wrong."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd be disappointed. What were you hoping for?"
+          "text": "When was the list wrong?"
         },
         {
           "speaker": "persona",
-          "text": "A site where the machine tells you exactly which panel goes where and checks your fixings with a camera, so we stop doing things twice. Last month we put up a whole gable end with the wrong window opening, and it took a day to fix. That's the kind of waste I'd love to see gone."
+          "text": "Last week it treated a landing measurement as a tread length, and Pavel spotted the mismatch on the drawing. We corrected the page before the saw touched a board."
         },
         {
           "speaker": "interviewer",
-          "text": "What do the others on the crew think of you checking things on your phone?"
+          "text": "Would you automate the cutting itself?"
         },
         {
           "speaker": "persona",
-          "text": "They teased me for about a month. Then I caught the wrong panel before it went up, saved us half a day, and now Darren, the crew leader, shouts across, Wei, ask your robot. I'll take that."
+          "text": "No, I don't own the site's machines and wouldn't change them on a phone suggestion. The square and the drawing still get the last word on a cut."
         }
       ],
-      "say": "I'd say it was overhyped but the tools are still useful. I'd tell the lads, and maybe post about how I still use it every day for the boring bits.",
-      "think": "Privately, I'd be a bit disappointed, because I like this stuff and use it every morning. If it stalls, I'll just keep getting better with a nail gun.",
-      "do": "Keeps working and practising his hand skills, and asks about a role in the factory programming the cutting machines. Leaves his shares where they are.",
-      "feel": "Fine but a little flat, like a film that ends early.",
+      "say": [
+        "I'd welcome **faster drawing notes** while leaving final checks with the worker.",
+        "I'd tell the crew an **AI list** still needs a square and drawing."
+      ],
+      "think": [
+        "My **site income** looks secure while Ferry Quay has work booked.",
+        "Our **eleven-month reserve** covers Mara's uneven lesson weeks."
+      ],
+      "do": [
+        "Keep building **timber stairs** and using the daily AI list.",
+        "Show Pavel any **changed dimension** before cutting timber."
+      ],
+      "feel": [
+        "**Comfortable** with modest change and careful about junior mistakes."
+      ],
       "mood": "calm",
-      "quote": "Then I caught the wrong panel before it went up, saved us half a day, and now Darren, the crew leader, shouts across, Wei, ask your robot.",
-      "fieldNote": "Wei is the only one on his crew who reads schedules on his phone, and he won the others over by catching a wrong panel. He'd be mildly disappointed if AI stalled, which is an unusual reaction for a construction worker. He left IT partly because he foresaw chatbots doing that work.",
+      "quote": "The square and the drawing still get the last word on a cut.",
+      "fieldNote": [
+        "Wei's daily AI use has a **recent measurement error** attached to it, which keeps checking central.",
+        "A booked project, higher pay and an **eleven-month reserve** support his calm response."
+      ],
       "actions": [
         "keep-going",
         "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep building stairs at the Ferry Quay apartments",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use the AI cutting list with drawing and square checks",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a big change, and people should get ahead of it rather than complain. I don't think it's anybody's fault, it's just how things go. I'd say retrain early, it's cheaper than retraining late."
+          "text": "I'd say planning software could cut wasted trips for the crew if its dates and quantities are right. I'd offer to test the ordering screen on one stair flight and show everyone what went wrong as well as what worked."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +127,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think it's good for me. My firm is half factory already, so the change would hit the factory first, and I'm one of the few on site who'd actually enjoy running new kit. At fifty-eight, being the guy who understands the machines is the best job security I've got."
+          "text": "I can see the office doing more with fewer people, and a badly handled change could leave us without the next contract. My own hands still build stairs, but as a late-entry junior I cannot treat the site roster as guaranteed."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask for a transfer to the factory, to work on the programs that cut the panels, within the year. I'd do an evening course on the cutting software, probably online, maybe a few hundred in fees. And I'd keep using the AI to check everything on site until they moved me."
+          "text": "I'll ask Pavel to let me compare one AI material order with the crate that arrives. In the first year I'll keep taking paid shifts and add the order results to my work notebook; if the next job slips a month, I'll send applications to two local joinery crews."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +143,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, and quite keen."
+          "text": "I feel interested in the experiment and uneasy about the contract book. Mara's lesson income is too uneven to make my wage optional, even with savings."
         },
         {
           "speaker": "interviewer",
-          "text": "Who on the crew would you worry about?"
+          "text": "What would you put in the notebook?"
         },
         {
           "speaker": "persona",
-          "text": "Darren, honestly. He's brilliant with his hands but he won't touch a tablet. If the job turns into checking a screen as much as swinging a hammer, he'll hate it, and he's got two kids at school."
+          "text": "The order date, the lengths requested, the actual crate and any hours spent putting it right. A green tick on a screen does not tell us whether the timber reached the stairs."
         },
         {
           "speaker": "interviewer",
-          "text": "You said it's nobody's fault. Would you say that to Darren?"
+          "text": "Why wait a month before applying?"
         },
         {
           "speaker": "persona",
-          "text": "Probably not in those words, no. I'd offer to show him the tablet stuff in the van at lunch. Saying it's nobody's fault doesn't pay his mortgage."
+          "text": "A week's delay is common on building sites, and the reserve covers that easily. A month without a new start would be a sign I should look while I'm still employed."
         }
       ],
-      "say": "I'd say it's a big change and people should get ahead of it instead of complaining. It's nobody's fault, and retraining early is cheaper than retraining late.",
-      "think": "Off the record, I think it's good for me. My firm is half factory already, and being the one who understands the machines is my best job security at fifty-eight.",
-      "do": "Asks for a transfer to the factory to program the panel-cutting machines within the year, and takes an online evening course in the cutting software for a few hundred. Keeps checking site work with AI meanwhile.",
-      "feel": "Calm and quite keen.",
-      "mood": "calm",
-      "quote": "At fifty-eight, being the guy who understands the machines is the best job security I've got.",
-      "fieldNote": "Wei sees understanding the machines as his job security, not a threat. His 'nobody's fault' line softened when he thought about Darren, the crew leader who won't touch a tablet and has kids at school. He'd offer practical help in the van rather than speeches.",
+      "say": [
+        "I'd offer a **one-flight order trial** and share both mistakes and gains.",
+        "I'd judge software by **delivered timber**, not screen ticks."
+      ],
+      "think": [
+        "Fewer office staff could leave the crew waiting for **new contracts**.",
+        "My **junior place** and Mara's uneven lessons make the roster important."
+      ],
+      "do": [
+        "Compare an **AI material order** with its delivered crate.",
+        "Keep **paid shifts** and record corrections in my notebook.",
+        "Apply to **local joinery crews** after a month-long project slip."
+      ],
+      "feel": [
+        "**Interested and uneasy** while the next contract remains uncertain."
+      ],
+      "mood": "anxious",
+      "quote": "A green tick on a screen does not tell us whether the timber reached the stairs.",
+      "fieldNote": [
+        "Wei volunteers a **measured order trial**, including the hours needed to correct an error.",
+        "His month-long trigger for applications distinguishes normal site delay from an **income threat**."
+      ],
       "actions": [
-        "retrain",
-        "change-job",
-        "learn-ai"
+        "learn-ai",
+        "keep-going",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Trial the AI ordering screen on a stair-flight material order",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep taking paid Ferry Quay shifts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply to two joinery crews if the next job slips a month",
+          "tag": "change-job"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we need a plan, quickly, and governments of any colour should sit down with the companies and sort out incomes for people. I'm not a big politics person, but two years is too fast for anybody to just shrug."
+          "text": "I'd say the 2028 thinking system might design the stairs before a person measures them, but the crew still has boards to fit until robots arrive around 2031. I want the firm to test any site robot in plain view, not behind a sales video."
         },
         {
           "speaker": "interviewer",
@@ -175,15 +220,15 @@
         },
         {
           "speaker": "persona",
-          "text": "Between us, I'd be all right. I've got the house, the savings, and I'd be sixty. But Lin's bookkeeping would be gone almost overnight, and my daughter Mia's in her second year studying accounting, which would be a wasted degree. That's what would keep me up."
+          "text": "I'll be sixty when drawings can be made by cheaper AI and sixty-three when robots could cut and fit stairs. Our savings can cover a search, but losing my higher site wage for years would change the retirement Mara and I are trying to build."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you actually do, starting now while you can see it coming, and in the first year after it arrives? Be as specific as you can."
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
         },
         {
           "speaker": "persona",
-          "text": "Right now, I'd put some of our savings into the companies making the robots, because if they're taking the work, I'd rather own a slice. I'd talk to Mia about switching courses this year, not next. And I'd try to get a job keeping the site robots running, because they'll need someone who knows what a house is supposed to look like."
+          "text": "This winter I'll test the digital stair checker with Pavel and put extra away after full paid months. In 2029 I'll keep taking stair shifts, then apply to local repair teams if the roster thins; I'd ask for their actual rates before I leave this job."
         },
         {
           "speaker": "interviewer",
@@ -191,47 +236,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Interested, too, which feels odd to admit."
+          "text": "I feel anxious about losing a substantial wage once hands-on robots arrive. I can use the time, but a screen skill alone will not protect my fitting hours after 2031."
         },
         {
           "speaker": "interviewer",
-          "text": "Why odd?"
+          "text": "What would the checker have to catch?"
         },
         {
           "speaker": "persona",
-          "text": "Because Lin would be losing her clients and I'd be sitting there reading about the robot specs with my tea. She'd catch me and say, you're enjoying this. And I'd have to admit, a little bit, yes."
+          "text": "It should spot a tread count that fails the building drawing and flag it before we order timber. Pavel and I would run it alongside our normal check on a paid job."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Mia about her course?"
+          "text": "Would you buy a robot for side work?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell her I'm not going to tell her what to do, but she should look at the course list with fresh eyes. Something with people or machines in it, not spreadsheets. And I'd tell her we'll pay for the extra year if she switches."
+          "text": "I would not put eleven months of living money into a machine whose repairs and customers I cannot predict. I'd rather apply for a wage-paying repair job than gamble the household reserve."
         }
       ],
-      "say": "I'd say we need a plan quickly, with governments of any colour sitting down with companies to sort out incomes. Two years is too fast for anyone to shrug.",
-      "think": "Between us, I'd be all right with the house and savings at sixty. But my wife's bookkeeping would vanish and my daughter's accounting degree would be wasted, and that would keep me up.",
-      "do": "Invests some savings in robot-making companies and urges his daughter to switch courses this year, offering to pay for an extra year. Tries for a job keeping the site robots running.",
-      "feel": "Uneasy, and oddly interested, which he finds hard to admit.",
-      "mood": "uneasy",
-      "quote": "She'd catch me and say, you're enjoying this. And I'd have to admit, a little bit, yes.",
-      "fieldNote": "His own job feels secondary; his wife's bookkeeping and his daughter's accounting degree are where the threat lands. He admits, with some guilt, that part of him finds the change exciting. His instinct is to own a slice of the companies doing the replacing.",
+      "say": [
+        "I'd separate **2028 stair design** from 2031 hands-on robots.",
+        "I'd demand a **visible site trial** before working with robots."
+      ],
+      "think": [
+        "At **sixty-three**, robots could take my paid stair fitting.",
+        "Our **reserve** covers a search but not years without my higher wage."
+      ],
+      "do": [
+        "Test the **stair checker** with Pavel and save extra.",
+        "Keep **paid stair shifts** in 2029 while offered.",
+        "Apply to **repair teams** if the roster thins."
+      ],
+      "feel": [
+        "**Anxious** about losing fitting income despite a usable search cushion."
+      ],
+      "mood": "anxious",
+      "quote": "I can use the time, but a screen skill alone will not protect my fitting hours after 2031.",
+      "fieldNote": [
+        "Wei does not mistake his **daily AI skill** for protection against later hands-on automation.",
+        "His refusal to buy a robot protects the **household reserve** despite his willingness to test site tools."
+      ],
       "actions": [
-        "invest",
-        "change-job",
-        "family-plans"
+        "learn-ai",
+        "save-more",
+        "keep-going",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Test the digital stair checker with Pavel on a paid job",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Save extra after full paid months",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep taking paid stair shifts in 2029",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply to local repair teams if site shifts thin",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough to prepare if you start now, and I'd tell people to start now. I'd probably bore everyone at the barbecue about it."
+          "text": "I'd tell the team five years is long enough to learn which digital checks help and to ask the builder for a clear equipment plan. I would keep a record of what our crew can do, not just what a demonstration claims."
         },
         {
           "speaker": "interviewer",
@@ -239,15 +318,15 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, five years is perfect for me. I'd get my move into the factory, learn the machines properly, and be the experienced guy when the robots arrive on site at sixty-three. Lin would have time to move into something else, maybe advising small firms on the new tools."
+          "text": "At sixty-three, thinking AI may change the design work and the flow of jobs; at sixty-six, robots might fit the stairs. Mara and I may have enough saved to ease off by then, but a retirement date needs our actual numbers."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you actually do, starting now while you can see it coming, and in the first year after it arrives? Be as specific as you can."
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
         },
         {
           "speaker": "persona",
-          "text": "I'd ask for the factory transfer this year and do the software course. In year two or three, I'd look for training on maintaining building robots, if anyone offers it. I'd put a slice of our savings into the robot companies over time, not all at once, and help Mia switch courses."
+          "text": "I'll keep testing useful drawing checks and take photos of completed stair flights, with Pavel's sign-off where possible. In 2032 I'd keep paid site shifts, ask nearby repair firms about real openings and review our savings with Mara before deciding whether I can reduce work in 2034."
         },
         {
           "speaker": "interviewer",
@@ -255,48 +334,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A bit excited, honestly."
+          "text": "I feel more curious than pressed in this version. The extra years give me room to build a record and learn where paid work remains."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Lin to do with five years?"
+          "text": "What would you show a repair firm?"
         },
         {
           "speaker": "persona",
-          "text": "Stop doing other people's books and start teaching them how to use the new tools, because she's patient and they trust her. She'd say she's too old for that. She said I was too old for building sites too."
+          "text": "I'd show stair photos, the job dates and the corrections I made after Pavel checked my work. I am a junior carpenter, so I need evidence beyond saying I worked here."
         },
         {
           "speaker": "interviewer",
-          "text": "You said 'a slice' of savings. How big a slice?"
+          "text": "Would you train on robot maintenance?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe a fifth of what we've got, spread over a few years. I don't know if it's a good bet, nobody does. But I'd rather be a bit wrong with a fifth than very wrong with all of it."
+          "text": "If a local paid course led to an actual maintenance opening, I'd enrol. I wouldn't sign up just because somebody says robots are the future."
         }
       ],
-      "say": "I'd say five years is enough to prepare if you start now, and I'd tell people to start now. I'd probably bore everyone at the barbecue about it.",
-      "think": "Honestly, five years is perfect: I'd move into the factory, learn the machines and be the experienced one when robots reach site at sixty-three. My wife would have time to change direction.",
-      "do": "Requests the factory transfer this year and does the software course, then seeks training in robot maintenance in years two or three. Puts about a fifth of savings into robot companies over a few years and helps his daughter switch courses.",
-      "feel": "Calm and honestly a bit excited.",
-      "mood": "calm",
-      "quote": "I'd rather be a bit wrong with a fifth than very wrong with all of it.",
-      "fieldNote": "With five years, Wei lays out a staged plan with numbers, including investing about a fifth of savings gradually. He admits nobody knows if it's a good bet. He pushes his wife to teach the new tools, echoing how others doubted his own late career change.",
+      "say": [
+        "I'd ask for an **equipment plan** and records from real crew work.",
+        "I'd use five years to test **useful digital checks**."
+      ],
+      "think": [
+        "At **sixty-six**, robots may reach my stair fitting.",
+        "I can reduce work only after Mara and I check **retirement figures**."
+      ],
+      "do": [
+        "Keep **stair photos** and Pavel's sign-offs.",
+        "Use **drawing checks** and keep paid site shifts in 2032.",
+        "Ask **repair firms** about openings before deciding on fewer hours."
+      ],
+      "feel": [
+        "More **curious than pressed**, with time to build proof of work."
+      ],
+      "mood": "uneasy",
+      "quote": "I am a junior carpenter, so I need evidence beyond saying I worked here.",
+      "fieldNote": [
+        "The longer lead time becomes a **portfolio of stair work** and conditional job enquiries.",
+        "His interest in robot maintenance training depends on a **paid course** with an actual opening."
+      ],
       "actions": [
-        "retrain",
+        "keep-going",
+        "learn-ai",
         "change-job",
-        "invest",
-        "family-plans"
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Keep a signed photo record of completed stair flights",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use drawing checks on paid stair jobs in 2032",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask local repair firms about real openings",
+          "tag": "change-job"
+        },
+        {
+          "text": "Enrol in robot maintenance training only if a paid course leads to a local opening",
+          "tag": "retrain"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a long time, so there's no reason for anyone to be caught out. I'd encourage the younger lads to pick up the tech side now."
+          "text": "I'd say a decade leaves plenty of time to keep working and see which site tools earn their place. I would tell younger carpenters to learn the drawings as well as the software that reads them."
         },
         {
           "speaker": "interviewer",
@@ -304,15 +416,15 @@
         },
         {
           "speaker": "persona",
-          "text": "For me, it's fine either way. I'd be sixty-eight and probably retired, or doing a couple of days a week training people on the machines because I'd enjoy it. The robots might even make the last part of my working life easier on my back."
+          "text": "I'll be sixty-eight when thinking AI arrives and seventy-one when site robots follow. I may still want paid light repair work then, because Mara's lessons and whatever we have saved by that date cannot be known exactly now."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you actually do, starting now while you can see it coming, and in the first year after it arrives? Be as specific as you can."
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going on site for a few years and get properly good with my hands, then move to the factory or a training role. I'd invest a bit at a time in the companies doing it. I'd use whatever new AI tools came along, same as now."
+          "text": "I'll keep building stairs while fit, use checked AI lists on current jobs and save extra from good months. In 2037 I'd take paid repair calls if needed and sit with Mara to compare our actual income with bills before ending my site work."
         },
         {
           "speaker": "interviewer",
@@ -320,37 +432,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Looking forward to it, if I'm honest."
+          "text": "I feel calm about the distant technology, and pleased that there is room to change course if a useful tool appears. My back and the present work schedule deserve attention well before 2039."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything in that picture that bothers you?"
+          "text": "Would you ask your grown daughter for help?"
         },
         {
           "speaker": "persona",
-          "text": "Darren, still, and the lads like him. Ten years is a long time if you start learning, and no time at all if you don't. I'd keep nagging him."
+          "text": "She has her own life and wages, and Mara and I want to meet our costs ourselves. We might talk through the numbers together, but I would not count her income."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned your back. Tell me about that."
+          "text": "What could cause an earlier shift to repairs?"
         },
         {
           "speaker": "persona",
-          "text": "After two years of lifting panels, my lower back tells me every morning I'm not thirty. If a robot holds the panel and I just guide it, I could do this till sixty-five. That would be a nice change."
+          "text": "If my back made full stair flights too hard, I would apply for paid small repairs while there are local openings. A lighter job would still have to pay something we can use."
         }
       ],
-      "say": "I'd say ten years is a long time, so nobody should be caught out. I'd encourage the younger lads to pick up the tech side now.",
-      "think": "For me it's fine either way: I'd be sixty-eight, retired or training people part-time on the machines. Robots might even make my last working years easier on my back.",
-      "do": "Keeps working on site for a few years to improve his hand skills, then moves to the factory or a training role. Invests gradually in the companies building the robots and keeps using new AI tools.",
-      "feel": "Calm, and looking forward to it.",
+      "say": [
+        "I'd keep **drawing skills** alongside the software that reads plans.",
+        "I'd use the **decade** to judge tools on actual site work."
+      ],
+      "think": [
+        "At **sixty-eight**, paid light repairs may still be needed.",
+        "At **seventy-one**, Mara's lesson income and savings decide whether I stop."
+      ],
+      "do": [
+        "Keep **stair work** and checked AI lists while fit.",
+        "Save extra from **good months** and take paid repairs in 2037 if needed.",
+        "Compare **income and bills** with Mara before leaving work."
+      ],
+      "feel": [
+        "**Calm and curious** about distant tools, attentive to current health and jobs."
+      ],
       "mood": "calm",
-      "quote": "Ten years is a long time if you start learning, and no time at all if you don't.",
-      "fieldNote": "Wei sees robots as a possible relief for his aching back that could extend his working life. His one lasting concern is Darren and workers who won't start learning. He treats ten years as plenty only for those who use it.",
+      "quote": "A lighter job would still have to pay something we can use.",
+      "fieldNote": [
+        "Wei combines a **long planning window** with continued paid work and savings, rather than assuming retirement.",
+        "He would shift to **small repairs** if his back required it and keeps his daughter's income outside the budget."
+      ],
       "actions": [
         "keep-going",
-        "invest",
         "learn-ai",
-        "change-job"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep taking paid stair work while physically able",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use checked AI cutting lists on current jobs",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Save extra after strong paid months",
+          "tag": "save-more"
+        }
       ]
     }
   },
@@ -361,7 +501,7 @@
     },
     {
       "speaker": "persona",
-      "text": "AGI by 2028, not for me, for Lin and Mia, because two years is no time to change direction. What would help is some kind of income for people while they retrain, and courses that actually exist before the jobs disappear, not after."
+      "text": "The fast 2028 picture worries me most because hands-on robots could reach stair work by sixty-three, before our retirement numbers are clear. A visible trial, honest rota dates and paid repair openings would help me use my savings without burning through them."
     },
     {
       "speaker": "interviewer",
@@ -369,11 +509,20 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask whether I'd enjoy it. I would, parts of it. That's not a popular thing to say on a building site."
+      "text": "You didn't ask who owns a wrong drawing after an AI system creates it. The worker cutting the timber needs a way to flag the error before anyone builds it into a stair."
     }
   ],
-  "headlineQuote": "I would, parts of it. That's not a popular thing to say on a building site.",
-  "portrait": "Wei Schmidt is a 58-year-old new member of a site crew that assembles factory-built house panels, after 25 years in IT support that he left partly because he saw chatbots coming for it. With a paid-off house and savings from shares, he worries less about himself than about his wife Lin's bookkeeping and his daughter Mia's accounting degree. He uses AI every day, won his crew over by catching a wrong panel, and sees understanding the machines as his best job security. Across the scenarios he plans transfers, courses and gradual investments, and admits, a little sheepishly, that he'd enjoy parts of the change.",
-  "biggestWorry": "AGI by 2028, because his wife and daughter would have no time to change direction.",
-  "whatWouldHelp": "Income support for people while they retrain, and courses that exist before the jobs disappear, not after."
+  "headlineQuote": "The worker cutting the timber needs a way to flag the error before anyone builds it into a stair.",
+  "portrait": [
+    "Wei is a **fifty-eight-year-old junior** carpenter who came from furniture warehousing.",
+    "He uses **AI every day**, checking stair lists against drawings and a square.",
+    "Higher site pay and an **eleven-month reserve** help cover Mara's uneven music-lesson income.",
+    "He seeks **real paid openings** and keeps retirement tied to household figures."
+  ],
+  "biggestWorry": [
+    "The **2028 path** could replace his stair fitting around 2031, before retirement is affordable."
+  ],
+  "whatWouldHelp": [
+    "He wants a **visible robot trial**, reliable rota dates and paid repair vacancies."
+  ]
 }

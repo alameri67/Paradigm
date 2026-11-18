@@ -1,0 +1,537 @@
+{
+  "id": "A19-11222",
+  "archetype": "A19",
+  "job": "Mechanic",
+  "sector": "Other services",
+  "name": "Carlos Patel",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "moderate",
+    "outlook": "centre",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, can you walk me through a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm a junior technician in the service department at a Norvik car dealership, it's on the main road out of town with the glass showroom at the front and us round the back. A lot of my day is warranty work and scheduled services, and the manufacturer's laptop tells you the steps in order. Mick, the workshop controller, hands out jobs on a screen and times every one of them. I like the clean bays and the proper tools, I don't love being timed like a pizza delivery."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "And outside work?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I live on my own in a small flat above a bakery, which smells great at five in the morning. I'm saving for a deposit, I've got about five months of costs put away and I'm trying not to touch it. I use an AI chat app now and then, to check a part number or help write an email to the landlord. I'm not first in the queue for new stuff, but I'll pick it up once it works."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Here's the first picture, called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's what I expected, useful in places, not a miracle. At work I'd say the manufacturer's laptop was already the clever bit anyway. I wouldn't post much, maybe a joke in the group chat."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For me it means steady. Dealerships need people to do warranty work, and Norvik keeps selling cars. If nothing changes, I keep doing oil and filters on new cars until I'm good enough to do the hard jobs."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep going, finish my level three manufacturer modules this year and keep saving about two hundred a month for the deposit. Maybe ask Mick to put me on more electrical jobs. That's about it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm, pretty much. A bit bored by the idea, but calm."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Is anything in your life worrying you, AI aside?"
+        },
+        {
+          "speaker": "persona",
+          "text": "House prices. I'm saving two hundred a month and the deposit keeps moving away from me. But that's normal, everyone my age is in the same boat."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does Mick's timer do to you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Makes me rush and then mess up. I took twenty minutes too long on a brake job last month and he wrote it up. It's fair, I'm slow, but I'd rather be slow and right."
+        }
+      ],
+      "say": [
+        "I'd call AI **useful in places**, not a miracle.",
+        "I'd say the **manufacturer's laptop** was already the clever part."
+      ],
+      "think": [
+        "**Warranty work** keeps dealership jobs steady.",
+        "I'd keep doing **routine services** until I'm skilled enough for harder jobs."
+      ],
+      "do": [
+        "Finish the **level three** manufacturer modules this year.",
+        "Save about **two hundred** a month towards a deposit and ask for electrical jobs."
+      ],
+      "feel": [
+        "Feels **calm**, if a little bored."
+      ],
+      "mood": "calm",
+      "quote": "If nothing changes, I keep doing oil and filters on new cars until I'm good enough to do the hard jobs.",
+      "fieldNote": [
+        "His only background worry is **house prices** outrunning his savings.",
+        "He's honest that he's **slow**, and resents being timed.",
+        "He trusts the **dealership** model to stay stable."
+      ],
+      "actions": [
+        "retrain",
+        "save-more",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Finish the level three manufacturer training modules this year",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save two hundred a month towards a house deposit",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep doing warranty work at the Norvik dealership",
+          "tag": "keep-going"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's a big shift but we'll manage, people always do. At work I'd point out the front desk is where it bites first, because booking and answering customers is exactly what it's good at. Online I'd stay quiet."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I think the service advisors are in trouble, Hannah especially, and Mick's job of timing us gets easier with software. Technicians are fine for a few years because someone still has to turn the spanners. The computer can book the car in, but someone still has to lie on the creeper and undo the bolts."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd start using the manufacturer's AI tool properly once a couple of the older techs say it works. I'd keep saving and maybe push the deposit plan back a year. I'd ask about the electric vehicle qualification Norvik offers."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy. I'm all right, but the people around me aren't, and that does something to the mood at work."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What happens to the mood at work?"
+        },
+        {
+          "speaker": "persona",
+          "text": "People get short-tempered, they start guarding their jobs. Last time Norvik changed systems, two advisors left within a month. I'd expect that again."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why push the deposit back if you think you're fine?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Because I'm fine now. I'd rather have more cushion before tying myself to a mortgage. That's just sense."
+        }
+      ],
+      "say": [
+        "I'd say it's a **big shift** but people manage.",
+        "I'd point out the **front desk** gets hit first, since booking is what AI does best."
+      ],
+      "think": [
+        "**Service advisors** like Hannah are in trouble, and Mick's role gets easier.",
+        "Technicians stay safe for a few years because someone still **turns the spanners**."
+      ],
+      "do": [
+        "Use the **manufacturer's AI tool** once older techs trust it.",
+        "Push the **deposit plan** back a year to build a bigger cushion.",
+        "Ask about Norvik's **electric vehicle** qualification."
+      ],
+      "feel": [
+        "Feels **uneasy**, because colleagues are struggling even if he is fine."
+      ],
+      "mood": "uneasy",
+      "quote": "The computer can book the car in, but someone still has to lie on the creeper and undo the bolts.",
+      "fieldNote": [
+        "He'd **wait for proof** from older techs before trying the tool.",
+        "Pushing back the **deposit** shows quiet caution despite saying he's fine.",
+        "He sees **front-desk** workers taking the first hit."
+      ],
+      "actions": [
+        "learn-ai",
+        "save-more",
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Use Norvik's AI diagnostic tool once senior techs trust it",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Push the house deposit plan back a year",
+          "tag": "save-more"
+        },
+        {
+          "text": "Ask Norvik about its electric vehicle qualification",
+          "tag": "retrain"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we're in trouble and need a plan from the government, quick. At work I'd tell people to save. I wouldn't panic in public, I'd try to be the calm one."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, I'd be shaken. Dealership thinking jobs go in 2028, and by 2031 Norvik could send robots to do services. Two years from now, a computer could know more about every car on the lot than the best tech in our workshop."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd drop the deposit plan and keep the money as a cushion. I'd look at retraining into something that robots won't do quickly, maybe electrical installation. And I'd ask my dad, who runs a small shop, if I could help there if I needed to."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Alarmed. I'd be lying in bed doing sums."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What sums?"
+        },
+        {
+          "speaker": "persona",
+          "text": "How many months five months of savings becomes if I stretch it. How cheap I can live. It'd be about eight months if I cut everything."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you tell your friends?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Save, don't buy anything big, and learn something with your hands that isn't on a production line. Then I'd go home and worry."
+        }
+      ],
+      "say": [
+        "I'd call for a **government plan**, quickly.",
+        "I'd tell coworkers to **save**, trying to be the **calm one**."
+      ],
+      "think": [
+        "Dealership **thinking jobs** go in 2028, and robots could do services by 2031.",
+        "A computer could soon **know more** than our best technician."
+      ],
+      "do": [
+        "Drop the **deposit plan** and keep the money as a cushion.",
+        "Look into retraining for **electrical installation**.",
+        "Ask his dad about helping at the **family shop** if needed."
+      ],
+      "feel": [
+        "Feels **alarmed**, lying awake **doing sums**."
+      ],
+      "mood": "alarmed",
+      "quote": "Two years from now, a computer could know more about every car on the lot than the best tech in our workshop.",
+      "fieldNote": [
+        "His **calm public face** hides private alarm.",
+        "He's worked out that savings could stretch to **eight months**.",
+        "His **dad's shop** is a fallback he'd use reluctantly."
+      ],
+      "actions": [
+        "save-more",
+        "retrain",
+        "seek-support"
+      ],
+      "steps": [
+        {
+          "text": "Drop the house deposit plan and keep the cash",
+          "tag": "save-more"
+        },
+        {
+          "text": "Look into an electrical installation course",
+          "tag": "retrain"
+        },
+        {
+          "text": "Ask his dad about helping in the family shop",
+          "tag": "seek-support"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we have time to adjust, so let's use it. At work I'd tell people to train. I'd stay pretty quiet online."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, five years plus three is decent. I'd have time to get good and save, but it's still my whole job at stake. Five years is enough time to finish my training, which is a strange thing to do for a job that might vanish."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd finish my manufacturer modules and the electric vehicle qualification, then start an evening electrical course. I'd keep saving for a deposit but more slowly. I'd look at which trades are hiring in 2030."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, but there's a plan. That helps."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why keep saving for a deposit at all?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Because I'd still need a home, robots or not. If I'm careful, I'd rather own than rent when work's uncertain."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Which trades?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Electrical, maybe heat pumps, things where every house is different. I'd look at what the robots are bad at."
+        }
+      ],
+      "say": [
+        "I'd say we **have time** and should use it.",
+        "I'd tell coworkers to **train** while staying quiet online."
+      ],
+      "think": [
+        "Five years plus three is **decent time**, but my whole job is still at stake.",
+        "Finishing training for a **job that might vanish** feels strange."
+      ],
+      "do": [
+        "Finish **manufacturer modules** and the electric vehicle qualification.",
+        "Start an **evening electrical** course.",
+        "Keep saving for a **deposit**, more slowly."
+      ],
+      "feel": [
+        "Feels **anxious**, but **having a plan** helps."
+      ],
+      "mood": "anxious",
+      "quote": "Five years is enough time to finish my training, which is a strange thing to do for a job that might vanish.",
+      "fieldNote": [
+        "He'd **plan steadily**, matching his cautious nature.",
+        "He thinks about **trades robots find hard**, like varied house work.",
+        "He still wants to **own a home** despite uncertainty."
+      ],
+      "actions": [
+        "retrain",
+        "change-job",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Finish the manufacturer modules and electric vehicle qualification",
+          "tag": "retrain"
+        },
+        {
+          "text": "Start an evening electrical installation course",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep saving for a deposit at a slower pace",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say a decade is enough to manage this properly. I'd talk about it at work, but calmly. It'd be the thing everyone discusses at lunch."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, ten years is good for me. I'd be forty when robots come, with skills and maybe a house. I could finish training, buy a flat and still have time to switch trades before the robots arrive."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd finish my training and qualifications, buy a flat in a few years and save steadily. Around 2032 I'd start moving into electrical work. I'd use AI more as it improves."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, but manageable. More planning than worry."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you still buy a flat?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Yes, in about three years. A decade gives time to pay some of it down."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you do differently at work?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Use the AI tools early and learn as much as possible from Mick and the older techs. Even if the job changes, knowing cars won't hurt."
+        }
+      ],
+      "say": [
+        "I'd say **a decade** is enough time to manage this properly.",
+        "It'd become the **lunchtime topic** everyone discusses."
+      ],
+      "think": [
+        "I'd be **forty** when robots arrive, with skills and maybe a house.",
+        "Ten years lets me **train, buy and switch** trades in time."
+      ],
+      "do": [
+        "Finish **training and qualifications** and buy a flat within three years.",
+        "Start moving into **electrical work** around 2032.",
+        "Use **AI tools** more as they improve."
+      ],
+      "feel": [
+        "Feels **anxious** but manageable, focused on **planning**."
+      ],
+      "mood": "anxious",
+      "quote": "I could finish training, buy a flat and still have time to switch trades before the robots arrive.",
+      "fieldNote": [
+        "The decade gives him a **clear sequence**: train, buy, switch.",
+        "He'd still expect to **leave the trade** eventually.",
+        "He'd use **AI** more as it proves itself."
+      ],
+      "actions": [
+        "invest",
+        "change-job",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Buy a small flat within about three years",
+          "tag": "invest"
+        },
+        {
+          "text": "Move into electrical work around 2032",
+          "tag": "change-job"
+        },
+        {
+          "text": "Use Norvik's AI tools as they improve",
+          "tag": "learn-ai"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028, because there's no time to switch trades or save. What would help is a proper government plan with paid retraining, and somewhere to live that doesn't eat half my wage."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Ask about housing. Whatever happens with AI, people my age still can't afford a flat, and that makes every change scarier."
+    }
+  ],
+  "headlineQuote": "Whatever happens with AI, people my age still can't afford a flat, and that makes every change scarier.",
+  "portrait": [
+    "Carlos is a **junior technician** at a car dealership's service department.",
+    "He lives alone and has about **five months** saved towards a deposit.",
+    "He adopts new tools **once proven**, using AI chat now and then.",
+    "He stays calm in slow scenarios but **lies awake** over fast AGI.",
+    "With time, he plans to **switch to electrical** work and still buy a flat."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, leaving no time to switch trades or save."
+  ],
+  "whatWouldHelp": [
+    "A **government plan** with paid retraining and **affordable housing**."
+  ]
+}

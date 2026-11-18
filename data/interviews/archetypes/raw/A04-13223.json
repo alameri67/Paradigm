@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government, and we're not selling anything. Everything you tell me is confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I’m a senior field researcher with the independent Work Futures Panel. We have no ties to AI companies, employers, unions, political parties or government, and we don’t sell anything or campaign for a side. What you say is confidential; I’m interested in both your public view and what you really think."
     },
     {
       "speaker": "persona",
-      "text": "I'm site lead for a small builder in a seaside town, we do house extensions, loft conversions and the odd custom home. Right now it's a two-storey timber extension on the back of a 1960s bungalow, with a big glass gable the owners are very excited about. I run three carpenters and coordinate the plumber, sparky and roofer, so half my day is on the tools and half is on my phone. I love the problem solving, like figuring out how to hang a beam where the old house has no proper support; what wears me out is clients changing their minds after the steel's been ordered."
+      "text": "I’m Maya Santos, twenty-seven, and I lead a carpentry crew on commercial building sites. My partner Ren and I rent a flat and don’t have children. I’ve saved a few months of expenses, mostly by keeping a close eye on bills."
     },
     {
       "speaker": "interviewer",
-      "text": "How much of that phone time involves AI tools?"
+      "text": "Could you describe an ordinary working day, including what you enjoy and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "Most of it, honestly. I use an AI assistant every day to draft quotes, sort the order lists, rewrite my angry emails into polite ones, and check span tables when I want a second opinion. I also run a little video channel on the side, short clips about carpentry tricks, and AI helps me edit those. My partner Leo is a chef, so between his hours and mine we basically communicate by voice notes."
+      "text": "I check the latest drawings, talk through the day’s cuts with the crew, and make sure the delivery is in the right place. I like solving a fitting problem without throwing away good timber. I’m tired of chasing paperwork after the site clears, but I like seeing the finished work at the end of a shift."
     }
   ],
   "scenarios": {
@@ -36,11 +36,15 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture. We call it AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau: Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a good tool, not a miracle, which is what I'd tell anyone now. I'd probably make a video about it, like \"five ways AI actually helps on a building site, and five ways it's useless\". That'd do well."
+          "text": "I’d say a tool that spots a missing item on the order list is worth trying. I still want a carpenter to compare the list with the wall, because the drawing doesn’t show every surprise in an old building."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +52,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately it means I keep my head start. I'm already faster at the office side than most site leads I know, so I'd keep winning on that. Building still needs builders, so no real change."
+          "text": "I don’t expect a small tool to change the fitting and cutting I do. I have a few months put aside and some nearby crews to ask, so a short pause between contracts would be uncomfortable but manageable."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +60,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep doing what I do, and keep growing the channel, maybe try to get it paying a few hundred a month. I'd keep saving, I've got about four months put away. Maybe in a couple of years I'd go out on my own with one of the lads."
+          "text": "I’d test the order checker on one job and keep leading my crew as usual. I’d continue transferring money into our emergency account after payday, even when work is steady."
         },
         {
           "speaker": "interviewer",
@@ -64,47 +68,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, pretty happy actually. It's the future I was planning for anyway."
+          "text": "I feel calm about trying a small checker because I can verify it. I’d keep watching the contract calendar, but this picture doesn’t give me a reason to expect lost work."
         },
         {
           "speaker": "interviewer",
-          "text": "Going out on your own, is that a real plan?"
+          "text": "How would you tell whether the checker made a useful difference?"
         },
         {
           "speaker": "persona",
-          "text": "It's a real idea, let's say. My boss Graham is sixty-one and keeps talking about winding down, and some of his clients already ask for me by name. If AI stays just a tool, I could run a small firm with less office help than he needs."
+          "text": "I’d compare the order with my own count before the supplier loads the truck. If we stop making a second trip for a box of fixings, that is a real saving."
         },
         {
           "speaker": "interviewer",
-          "text": "What's the risk in that for you?"
+          "text": "What would you still ask a person to verify?"
         },
         {
           "speaker": "persona",
-          "text": "Cash flow, mainly. Four months of savings doesn't go far if a client pays late. I'd want the channel bringing in something steady first."
+          "text": "I’d ask the site foreman to confirm the measurements after any change to the frame. A drawing can be right when it leaves the office and wrong for the wall we find."
         }
       ],
-      "say": "I'd say it's a good tool, not a miracle, and I'd make a video on five ways AI helps on site and five ways it's useless. That one would do well.",
-      "think": "Privately I keep my head start, since I'm already faster at the office side than most site leads. Building still needs builders, so nothing really changes.",
-      "do": "Keeps working and grows her carpentry video channel towards a few hundred a month. Keeps her four months of savings and considers going out on her own in a couple of years as her boss winds down.",
-      "feel": "Calm and fairly happy.",
+      "say": [
+        "I’d try a tool that finds a **missing order item**.",
+        "I still compare the list with the **actual wall** before we cut."
+      ],
+      "think": [
+        "I don’t expect this change to alter my **fitting and cutting** much.",
+        "I can handle a short pause with **my savings** and local contacts."
+      ],
+      "do": [
+        "Test the order checker on **one job** and keep leading my crew.",
+        "Transfer money into our **emergency account** after payday."
+      ],
+      "feel": [
+        "I feel **calm** about a small tool I can verify."
+      ],
       "mood": "calm",
-      "quote": "If AI stays just a tool, I could run a small firm with less office help than he needs.",
-      "fieldNote": "Already a heavy user who sees AI as her edge in admin. She thinks like a future business owner, with the side channel as a cushion. Her stated risk is cash flow, not technology.",
+      "quote": "I’d compare the order with my own count before the supplier loads the truck.",
+      "fieldNote": [
+        "Maya’s confidence comes from checking the tool against **physical counts**.",
+        "Her reserve and nearby employers make this mild case **manageable**, though a long contract gap would still use up savings."
+      ],
       "actions": [
+        "learn-ai",
         "keep-going",
-        "side-income",
-        "learn-ai"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Test the order checker against one job’s materials count",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep leading the carpentry crew on current work",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Transfer money into the emergency account after payday",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption: Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say adapt or get left behind, but nicely, because I know not everyone finds it easy. I'd make videos showing other tradespeople how to use the tools. I think firms and the government should help with training, that's just sensible."
+          "text": "I’d say quicker schedules could help us avoid waiting for a delivery, as long as someone checks the site sequence. I want the crew to know who confirmed the order before the truck leaves."
         },
         {
           "speaker": "interviewer",
@@ -112,7 +148,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think this is my best picture. A small firm that uses AI for planning and maybe a robot for the heavy cutting could take on bigger jobs with fewer people. That's me, if I move fast."
+          "text": "I do some planning and records as a lead, so that part could shrink. My hands-on tasks change more slowly here, but if my hours fall I have a few months saved and other crews in the area to contact."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +156,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd go out on my own within the year, probably taking over some of Graham's clients with his blessing. I'd buy a decent CNC cutting machine second-hand, around eight thousand, so we can pre-cut rafters in the workshop. I'd build the channel into proper training content for other builders and charge for it."
+          "text": "I’d learn the contractor’s schedule and ordering tools on a job I know well. I’d keep doing the fitting work and check my roster before adding a new monthly expense."
         },
         {
           "speaker": "interviewer",
@@ -128,48 +164,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, and honestly a bit excited. It's like the morning you get the keys to a new site."
+          "text": "I’m uneasy about the planning part of my job changing, but I still have options nearby. I can learn the new tools and use my savings if a contract ends."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd spend eight thousand with four months saved. Isn't that a big risk?"
+          "text": "What would you check first in the new schedule?"
         },
         {
           "speaker": "persona",
-          "text": "It is, and I'd probably take a small loan rather than empty my savings. I've done the sums with the AI and with an actual accountant friend, and it pays back in about two years if I keep busy. If I don't take some risk, someone else will grab Graham's clients."
+          "text": "I’d check whether the delivery leaves enough time for our site measurements and inspection. I’ve seen a neat plan fail because one trade finished late, so the order of work matters."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would get hurt in this picture, around you?"
+          "text": "Does this scenario say that faster planning means fewer sites will open?"
         },
         {
           "speaker": "persona",
-          "text": "Probably the older carpenters who don't want to learn the machines. My dad's mate Alan still cuts rafters by hand and he's brilliant, but he'll be slower and dearer than a firm like mine. I'd hire him for the tricky stuff if he'd come."
+          "text": "No, I can’t infer that from the card. I’d watch our actual hours and the local job listings; I don’t want to turn uncertainty into a prediction."
         }
       ],
-      "say": "I'd say adapt or get left behind, gently, because not everyone finds it easy, and I'd make videos teaching other trades the tools. Firms and government should help with training, which is just sensible.",
-      "think": "Off the record this is my best picture: a small firm using AI for planning and a machine for heavy cutting could take bigger jobs with fewer people. That's me, if I move fast.",
-      "do": "Goes out on her own within the year, taking over some of her boss's clients, and buys a second-hand CNC cutting machine for about 8,000 with a small loan. Turns her channel into paid training for other builders.",
-      "feel": "Calm and a bit excited about the opportunity.",
-      "mood": "calm",
-      "quote": "If I don't take some risk, someone else will grab Graham's clients.",
-      "fieldNote": "She sees steady disruption as her opening and is ready to borrow to grab it. The plan is concrete and costed, checked with both AI and a human accountant. She recognises older hand-tool carpenters as the losers and would hire them for tricky work.",
+      "say": [
+        "I’d welcome **quicker schedules** if someone checks the site sequence.",
+        "I want to know who confirmed the **materials order**."
+      ],
+      "think": [
+        "I do some planning and records, and I expect those **tasks could shrink**.",
+        "I can contact nearby crews and use **my savings** if hours fall."
+      ],
+      "do": [
+        "Learn the contractor’s schedule and ordering **tools** on a familiar job.",
+        "Keep doing **fitting work**.",
+        "Check my **roster** before adding a monthly expense."
+      ],
+      "feel": [
+        "I feel **uneasy**, with savings and other crews to contact."
+      ],
+      "mood": "uneasy",
+      "quote": "I don’t want to turn uncertainty into a prediction.",
+      "fieldNote": [
+        "Maya separates scenario facts from **unsupported assumptions** about site starts.",
+        "She separates current local openings from a claim about site starts, and tracks her **actual hours** before deciding."
+      ],
       "actions": [
-        "sell-or-exit",
-        "automate",
-        "invest",
-        "side-income"
+        "learn-ai",
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Learn the contractor’s schedule and ordering tools on a familiar job",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep doing carpentry fitting work on active sites",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for my roster before adding a monthly household expense",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028: Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a huge shock and people need help fast, some kind of income while things settle, paid for by the companies making a fortune. I'd also say don't freeze, start figuring out what you can do. I'd make a video on that, probably."
+          "text": "I’d tell the crew to get a clear account of booked jobs rather than repeat layoff rumors. The office work changes first in this picture, while robots for hands-on jobs follow around 2031."
         },
         {
           "speaker": "interviewer",
@@ -177,7 +245,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be properly worried for the first time. If robots can do the building and AI can do the quoting, my whole small-firm idea is a firm of one robot and nobody. Two years is not enough time to build something and also see it get replaced."
+          "text": "AGI could do the schedules and records in my lead role by 2028. Robots reach carpentry around 2031, so I can’t assume the fitting work stays available either."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +253,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd not go out on my own, too risky with that timing. I'd stay with Graham, earn steadily and put away more, maybe double the savings. I'd get on any robot-assisted project going and learn how to run the machines, because the last people needed might be the ones who set them up. And I'd push the channel hard while people are still curious about trades."
+          "text": "Now I’d keep working and preserve the savings I’ve built. In 2029 I’d check my roster and contact other local crews if my hours had been cut."
         },
         {
           "speaker": "interviewer",
@@ -193,47 +261,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. My brain wants to see the opportunity and my stomach says there isn't one."
+          "text": "Two years is a short time, and I’m anxious about the risk to both parts of my job. My savings help me respond, but they don’t create another contract."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you and Leo say to each other?"
+          "text": "Would a new crew be a lasting answer if robots arrive in 2031?"
         },
         {
           "speaker": "persona",
-          "text": "Leo would say \"robots can't cook like me\", and I'd say I used to think that about building. Then we'd probably talk about whether to stay in the town or move back to the city near my parents. We'd figure it out over too much wine."
+          "text": "I’d see it as a chance to earn during a gap, not a permanent safe place. If someone has work in 2029, I’d rather apply than spend my savings waiting at home."
         },
         {
           "speaker": "interviewer",
-          "text": "You're usually quick to adapt. Does that help here?"
+          "text": "What would you and Ren change first if your pay dropped in 2029?"
         },
         {
           "speaker": "persona",
-          "text": "Some, for the first year. I'd be one of the first to learn the machines, so I'd be useful longer. But I'm honest with myself that it's a head start in a race that ends."
+          "text": "We’d pause a planned holiday and use some savings for rent and groceries. We have no children, and delaying the trip is easier than taking on debt to keep it."
         }
       ],
-      "say": "I'd say it's a huge shock and people need fast income support paid for by the companies making a fortune, but also don't freeze and work out what you can do. I'd make a video on that.",
-      "think": "Privately I'd be properly worried for the first time: my small-firm idea becomes a firm of one robot and nobody. Two years isn't enough to build something and see it replaced.",
-      "do": "Drops the plan to go solo and stays employed, doubling her savings. Joins any robot-assisted project to learn to set up the machines and pushes her video channel while people are still curious about trades.",
-      "feel": "Anxious, with her mind hunting for an opportunity her gut says isn't there.",
+      "say": [
+        "I’d ask about **booked jobs** instead of repeating layoff rumors.",
+        "I’d tell the crew that hands-on robots follow around **2031**."
+      ],
+      "think": [
+        "I expect AGI to take schedules and records in **my lead role** in 2028.",
+        "I can’t assume fitting work stays available after **robots arrive**."
+      ],
+      "do": [
+        "Keep working and preserve my existing **savings**.",
+        "Check my **roster** in 2029 and contact other crews if hours fall.",
+        "Pause a planned **holiday** with Ren if pay drops."
+      ],
+      "feel": [
+        "I feel **anxious** because two years gives little time to prepare."
+      ],
       "mood": "anxious",
-      "quote": "My brain wants to see the opportunity and my stomach says there isn't one.",
-      "fieldNote": "Fast AGI is the first picture that dents her confidence; she reverses her business plan rather than doubling down. She still reaches for machine skills and the channel. She frames adaptability as a head start, not an escape.",
+      "quote": "I’d see it as a chance to earn during a gap, not a permanent safe place.",
+      "fieldNote": [
+        "Maya distinguishes an interim application from **lasting protection**.",
+        "She sees **planning and handwork** exposed and does not assume another crew will be safe in her own assessment."
+      ],
       "actions": [
-        "save-more",
-        "learn-ai",
-        "side-income"
+        "keep-going",
+        "change-job",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading my crew while the current contract lasts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Contact nearby crews if my hours are cut in 2029",
+          "tag": "change-job"
+        },
+        {
+          "text": "Pause the planned holiday if household pay falls",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031: Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough to get ahead of it if you start now. Learn the machines, plan your money, don't wait for someone to save you. Government should put something in place, but I wouldn't hang around waiting for it."
+          "text": "I’d say five years is enough time for the contractor to train people before changing the site routine. I want the crew to hear what is changing from a manager who can answer questions."
         },
         {
           "speaker": "interviewer",
@@ -241,7 +342,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years is enough to build a small firm and get a few years' profit out of it. If I'm the one buying the robots instead of the one replaced by them, I've got a chance. It's a gamble, but I like my odds better than staying an employee."
+          "text": "The records and planning could be done by AGI in 2031, then robots reach carpentry around 2034. I’d use the lead time to save and learn, but I know the later date reaches the work I’m best at."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +350,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd set up on my own in the first year, with a loan and a couple of Graham's clients. I'd buy into robotic tools early, the CNC and maybe one of those robot arms for framing, and run a lean crew. Around 2029 I'd look at selling the firm or merging with a bigger outfit, before the big companies bring in full robot crews and prices crash."
+          "text": "I’d practice the new planning system while there are experienced people on site to answer questions. In 2032 I’d review my hours and decide whether I need to contact another crew, instead of assuming the first change removes all my work."
         },
         {
           "speaker": "interviewer",
@@ -257,48 +358,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but kind of buzzing too. I sleep worse when I'm excited, so Leo would notice."
+          "text": "Five years feels less rushed than two, but I’m still anxious about whether my income holds up. I have enough savings to take a measured step, not to stop working for years."
         },
         {
           "speaker": "interviewer",
-          "text": "Selling around 2029. How did you land on that?"
+          "text": "What does the extra three years before robots let you do?"
         },
         {
           "speaker": "persona",
-          "text": "It's just reading the curve, there'll be a sweet spot where the business is worth something and before everyone can do it cheaper. I'm guessing at the date, honestly. I'd watch prices and jump when they start sliding."
+          "text": "I’d have more time to keep saving and try the tools during normal jobs. It also gives me time to speak with nearby contractors about what work they actually expect, though no one can promise openings."
         },
         {
           "speaker": "interviewer",
-          "text": "How does five years compare with two for you?"
+          "text": "Would office planning be a safe career after AGI arrives?"
         },
         {
           "speaker": "persona",
-          "text": "Totally different game. Two years, I hide and save. Five years, I play."
+          "text": "No, I can’t treat planning as a safe career when AGI can do thinking work. I’d learn it for the current job and keep checking what real employers need."
         }
       ],
-      "say": "I'd say five years is enough to get ahead if you start now: learn the machines, plan your money and don't wait to be saved. Government should act, but I wouldn't wait for it.",
-      "think": "Off the record, five years is enough to build a small firm and take a few years' profit. If I'm buying the robots instead of being replaced by them, I've got a chance I like better than staying an employee.",
-      "do": "Sets up on her own in the first year with a loan and some of her boss's clients, and buys robotic tools early, including a CNC machine and perhaps a framing robot arm. Aims to sell or merge the firm around 2029, before full robot crews make prices crash.",
-      "feel": "Uneasy but buzzing, energised by the gamble.",
-      "mood": "uneasy",
-      "quote": "Two years, I hide and save. Five years, I play.",
-      "fieldNote": "Five years flips her back into entrepreneur mode, with an exit planned before the market collapses. She's honest the sale date is a guess. Comfort with risk is the defining trait here.",
+      "say": [
+        "I’d want the contractor to train crews before changing **site routines**.",
+        "I want a manager to explain the changes and answer **questions**."
+      ],
+      "think": [
+        "I expect AGI to take records and planning by **2031**.",
+        "I can prepare, but robots reach the carpentry I’m **best at** in 2034."
+      ],
+      "do": [
+        "Practice the new planning **system** with experienced workers.",
+        "Continue saving during the additional **years** of work.",
+        "Contact another **crew** if my work begins to fall."
+      ],
+      "feel": [
+        "I feel **anxious but less rushed** than with a two-year warning."
+      ],
+      "mood": "anxious",
+      "quote": "I’d learn it for the current job and keep checking what real employers need.",
+      "fieldNote": [
+        "Maya uses the longer warning to learn **during normal work**, and wants an experienced worker available for questions.",
+        "She recognizes office planning is exposed and checks actual **employer demand**."
+      ],
       "actions": [
-        "invest",
-        "automate",
-        "sell-or-exit",
-        "side-income"
+        "learn-ai",
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Practice the new planning system with experienced workers",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Continue saving during the additional years of work",
+          "tag": "save-more"
+        },
+        {
+          "text": "Contact another crew if current work begins to fall after 2031",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036: Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a proper runway, so make the most of it. Learn the tools, build something, put money away. I'd tell the government to sort out a fair safety net in that time, because some people really can't adapt."
+          "text": "I’d say ten years gives us room to plan in stages, but we shouldn’t act like the dates are someone else’s problem. I’d keep learning tools that help our current work and save while the pay is steady."
         },
         {
           "speaker": "interviewer",
@@ -306,7 +439,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd feel fairly good about this one. Ten years is enough to build a firm, run it with machines and pocket the profits, and maybe end up owning a share of something bigger by the end. I'd be thirty-seven with options."
+          "text": "I could build a stronger cushion over ten years, but AGI still reaches planning in 2036 and robots reach carpentry in 2039. I don’t know what jobs will be open then, and I won’t assume office work is protected."
         },
         {
           "speaker": "interviewer",
@@ -314,7 +447,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd go out on my own in the first year, buy the CNC, grow to maybe six people by 2030, and keep adding machines as they get cheaper. I'd invest some of the profits in index funds and maybe a rental flat, so not everything depends on building. The channel would turn into a small training business for tradespeople learning the robots."
+          "text": "I’d keep my crew working and use the contractor’s tools when they prove useful. In 2037 I’d check my income and nearby openings, then call other crews if my hours had fallen."
         },
         {
           "speaker": "interviewer",
@@ -322,36 +455,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, really. More excited than worried."
+          "text": "Ten years gives me room to build savings, which is helpful. I’m still anxious about the later robot date because it reaches the hands-on work I rely on."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd be calm even though the end point is the same as the fast one?"
+          "text": "What decision would you and Ren want to make before 2036?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, because the end point isn't the scary bit, the speed is. With ten years I can own a piece of the change before it lands. If I end up with money in the right places, a world where robots do the work isn't bad for me."
+          "text": "We’d decide how much of our pay to save and whether a home purchase still makes sense. We have no children or wedding plan, so there is no family deadline pushing us into a rushed choice."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you worry about in this picture?"
+          "text": "Would you spend your savings on a long course?"
         },
         {
           "speaker": "persona",
-          "text": "My crew, if I had one, and people like Alan who won't change. I'd want to pay my people well while it lasts and help them train. But I'd be lying if I said I'd lose sleep over it."
+          "text": "I’d take short training if I can see a clear use on site. I wouldn’t empty the account for an office qualification when AGI is meant to handle thinking work."
         }
       ],
-      "say": "I'd say ten years is a proper runway to learn the tools, build something and save. Government should build a fair safety net in that time, because some people really can't adapt.",
-      "think": "Privately I'd feel fairly good: ten years is enough to build and run a firm with machines and maybe own a share of something bigger. I'd be thirty-seven with options.",
-      "do": "Starts her own firm in the first year, buys the CNC and grows to about six people by 2030, adding machines as they get cheaper. Invests profits in index funds and perhaps a rental flat, and turns the channel into a training business for trades learning robots.",
-      "feel": "Calm and more excited than worried.",
-      "mood": "calm",
-      "quote": "The end point isn't the scary bit, the speed is.",
-      "fieldNote": "With a decade, she expects to profit from the shift and says so plainly. Her answer to the same end point is to own a piece of it. She is candid that worry for others wouldn't cost her sleep.",
+      "say": [
+        "I’d use the decade to plan in **stages**.",
+        "I’d keep learning tools that help the current **site work**."
+      ],
+      "think": [
+        "I could build a stronger cushion before **2036**.",
+        "I won’t assume office work or carpentry remains **protected** after the dates."
+      ],
+      "do": [
+        "Keep my **crew** working while contracts continue.",
+        "Use contractor tools after they prove **useful**.",
+        "Check my income in 2037 and call other **crews** if hours fall."
+      ],
+      "feel": [
+        "I feel **anxious** about the later robot date because it reaches the work I rely on."
+      ],
+      "mood": "anxious",
+      "quote": "I’m still anxious about the later robot date because it reaches the hands-on work I rely on.",
+      "fieldNote": [
+        "Maya sees ten years as **planning time**, not a guarantee of work.",
+        "She and Ren decide how much to save without inventing a **family deadline** or assuming they will buy a home."
+      ],
       "actions": [
-        "invest",
-        "automate",
-        "side-income"
+        "keep-going",
+        "learn-ai",
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading the crew while building contracts continue",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use contractor tools that prove useful on site",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Save part of each payday toward a larger cushion",
+          "tag": "save-more"
+        },
+        {
+          "text": "Call nearby crews if hours fall after 2036",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -362,19 +529,28 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because I wouldn't have time to get on the right side of it. What would help is cheap loans for small firms to buy machines, and an income floor for people while they switch, so nobody's desperate. Desperate people make bad choices."
+      "text": "The 2028 picture worries me most because two years is not much time before the thinking work changes. Clear information about booked projects and hours would help Ren and me decide how much to save and whether to postpone a home purchase."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the clients. People still want to talk to someone who listens about their kitchen. I think that part lasts longer than people expect, even with AGI, but I could be wrong."
+      "text": "I’d ask whether workers can learn the new tools during paid hours. It is easier to keep adapting when training is part of a real job, not another bill after work."
     }
   ],
-  "headlineQuote": "People still want to talk to someone who listens about their kitchen.",
-  "portrait": "Maya is a 27-year-old site lead for a small seaside builder, running extensions and loft conversions, who uses AI every day and runs a carpentry video channel on the side. Pragmatic and comfortable with risk, she sees most change as a chance to start her own firm and own the machines. She is calm in the plateau and in steady disruption, ready to borrow to buy a CNC machine. Fast AGI is the one picture that makes her drop her plans and save; with five years she would build a firm and sell before prices crash, and with ten she feels calm and expects to come out ahead. She supports a safety net for others but is frank that her focus is getting on the right side of the change.",
-  "biggestWorry": "AGI by 2028, because she wouldn't have time to get on the right side of the change.",
-  "whatWouldHelp": "Cheap loans for small firms to buy machines, and an income floor so people aren't desperate while they switch."
+  "headlineQuote": "I’d ask whether workers can learn the new tools during paid hours.",
+  "portrait": [
+    "Maya is a **27-year-old crew lead** with a trade certificate and strong carpentry skills.",
+    "She lives with Ren, earns typical pay, and has **a few months saved**.",
+    "She uses AI daily and experiments early, while checking software against **site conditions**.",
+    "Nearby crews and savings give her options, but AGI and robots still expose **both task types**."
+  ],
+  "biggestWorry": [
+    "The **2028 AGI** picture worries Maya most because two years gives little time before thinking work changes."
+  ],
+  "whatWouldHelp": [
+    "Clear information about **booked projects and hours** would help Maya and Ren plan savings and a home purchase."
+  ]
 }

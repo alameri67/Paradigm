@@ -1,0 +1,549 @@
+{
+  "id": "A22-11132",
+  "archetype": "A22",
+  "job": "Journalist",
+  "sector": "Information",
+  "name": "Sam Zhang",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "thin",
+    "outlook": "traditional",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions, parties or government. Everything you say stays confidential. To start, could you walk me through a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm the junior crime and emergencies reporter at the Eastmoor Evening Post, the daily paper for the city and the towns around it. My day starts with the police and fire service press lines at seven, then court lists, then usually a crash, a fire or a missing person. I'm often outside a cordon in the rain, waiting for an officer to say something useful. I like being where things happen; I hate the late calls to families who've just lost someone."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What's home like?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm single and I live with my parents in the house I grew up in, on the east side. I pay them board, a bit of rent, and I'm meant to be saving for a deposit, but the pay's low and I've got under a month's worth put by. Sunday mornings I help run the youth group at our church."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Do you use AI at all?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Now and then. The newsroom uses a transcription tool for police press conferences, and once the others said it was reliable, I started using it. I check every quote against the recording, because one wrong word in a crime story is a disaster."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say good, because people still need someone standing at the cordon. At work I'd probably say the bosses wasted money on hype. At church I'd just say it's a relief."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I'm all right in this one. Crime and emergencies are always needed, and I'm the one they send out at night because I'm young. The pay is the problem, not the job."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd carry on, keep using the transcription tool, and push for a pay rise at my review in March. I'd keep paying board and try to save two hundred a month for a deposit. I'd ask my news editor, Steve, about doing the court reporting exam to move up."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Fairly steady. If AI fizzles out, I'm still the one standing at the police cordon at midnight, so my job is safe and my pay is still bad."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does a deposit mean to you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A flat of my own, so I can get married one day and not bring a wife home to my mum's spare room. My dad bought his first house at twenty-five; I'm twenty-seven and nowhere near."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would make you leave the paper?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Only money. If the fire service or police press office offered me a job, I'd think about it, because they pay a lot more. But I'd miss being the one who finds out first."
+        }
+      ],
+      "say": [
+        "I'd say people still need someone **at the cordon**.",
+        "I'd say the bosses **wasted money** on the hype."
+      ],
+      "think": [
+        "I'm all right here, because **crime and emergencies** always need covering.",
+        "The problem is **low pay**, not the job itself."
+      ],
+      "do": [
+        "Push for a **pay rise** at my March review.",
+        "Save **two hundred** a month for a deposit while paying board.",
+        "Ask Steve about the **court reporting exam**."
+      ],
+      "feel": [
+        "Fairly **steady**, frustrated only by **pay**."
+      ],
+      "mood": "uneasy",
+      "quote": "If AI fizzles out, I'm still the one standing at the police cordon at midnight, so my job is safe and my pay is still bad.",
+      "fieldNote": [
+        "He sees **on-scene reporting** as safe and the pay as the problem.",
+        "Living with **his parents** keeps his costs low and his savings plan alive.",
+        "A **deposit** is tied to his traditional hopes of marriage and a home."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more",
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Ask for a pay rise at the March review",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save two hundred a month toward a flat deposit",
+          "tag": "save-more"
+        },
+        {
+          "text": "Sit the court reporting exam with the news editor's backing",
+          "tag": "retrain"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it'll take the desk jobs first, and reporters on the ground will matter more. At work I'd say let's use it to cut the boring bits. At church I'd tell the young lads to learn a trade."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, a lot of my day is actually desk work: rewriting police appeals, court lists, overnight round-ups. If AI does that, the paper needs fewer juniors. I'd be safer than some, but not safe."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd learn the tools properly now that they're proven, so I can turn round the routine stuff fast and spend more time at scenes. I'd save harder, maybe three hundred a month, and push the deposit back. I'd also ask the fire service about their press office, just in case."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious. Not panicked, but I'd be checking job adverts at night."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who would you worry about at the paper?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Janet on the night desk, who does the police appeals and the weather. That's the work the card describes. She's got two teenagers."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You told the young lads to learn a trade. Would you take that advice yourself?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Maybe I should. I tell the boys at church youth group to learn a trade, and I'm the one with a degree and no deposit."
+        }
+      ],
+      "say": [
+        "I'd say AI takes **desk jobs** first and reporters on the ground matter more.",
+        "I'd tell the young lads at church to **learn a trade**."
+      ],
+      "think": [
+        "Much of my day is **desk work**: appeals, court lists, round-ups.",
+        "I'd be **safer than some**, but not safe."
+      ],
+      "do": [
+        "Learn the tools now that they're **proven**, and spend more time at scenes.",
+        "Save **three hundred** a month and push the deposit back.",
+        "Ask the **fire service** press office about openings."
+      ],
+      "feel": [
+        "**Anxious**, checking **job adverts** at night."
+      ],
+      "mood": "anxious",
+      "quote": "I tell the boys at church youth group to learn a trade, and I'm the one with a degree and no deposit.",
+      "fieldNote": [
+        "He notices more of his day is **desk work** than he first said.",
+        "He catches himself giving advice he **hasn't taken**.",
+        "He worries for **Janet** on the night desk and her teenagers."
+      ],
+      "actions": [
+        "learn-ai",
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Use the newsroom AI tools for police appeals and court lists",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Raise savings to three hundred a month",
+          "tag": "save-more"
+        },
+        {
+          "text": "Ask the fire service press office about vacancies",
+          "tag": "change-job"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is going too fast and companies shouldn't be allowed to throw people out overnight. I'm not usually for more rules, but I would be here. At church I'd say look after your neighbours."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I'd lose the job, maybe by 2029. AI could write up a fire from the press line and the police statement in seconds. Being at the cordon wouldn't be worth paying for."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd apply to join the fire service as a firefighter straight away, because I know the crews and the card says hands-on robots come three years later. I'd keep paying board and save everything else. I'd ask my uncle, who's a plumber, if I could labour for him on weekends."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Alarmed. I've spent three years writing about the Eastmoor fire crews, and with AGI by 2028 I'd be asking to join one."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "The card says robots doing hands-on work come about three years after AGI. Does that make firefighting a real option?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For a while, yes. It's physical, it's people, it's trust, so I think robots would take longer than 2031 for a lot of it. It's a proper job, with a pension, which my dad would respect."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would your parents say?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My mum would be scared of the fires. My dad would say at last, a real job. They'd let me stay at home as long as I needed, which I'm grateful for."
+        }
+      ],
+      "say": [
+        "I'd say companies shouldn't **throw people out** overnight.",
+        "I'd back **rules** here, though I'm not usually for them.",
+        "At church I'd say **look after** your neighbours."
+      ],
+      "think": [
+        "I'd **lose the job**, maybe by 2029.",
+        "AI could write up a fire from the **press line** in seconds.",
+        "Standing at the **cordon** wouldn't be worth paying for."
+      ],
+      "do": [
+        "Apply to the **fire service** as a firefighter straight away.",
+        "Save **everything** beyond my board.",
+        "Labour for my **uncle** at weekends."
+      ],
+      "feel": [
+        "**Alarmed**, though grateful for **family** support."
+      ],
+      "mood": "alarmed",
+      "quote": "I've spent three years writing about the Eastmoor fire crews, and with AGI by 2028 I'd be asking to join one.",
+      "fieldNote": [
+        "The **robot delay** makes firefighting a real move.",
+        "Fast AGI shifts his **free-market** views toward rules for once.",
+        "**Family** backing gives him room others lack."
+      ],
+      "actions": [
+        "change-job",
+        "save-more",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Apply to the fire service as a trainee firefighter",
+          "tag": "change-job"
+        },
+        {
+          "text": "Save everything beyond the board paid to his parents",
+          "tag": "save-more"
+        },
+        {
+          "text": "Labour for his uncle's plumbing firm on weekends",
+          "tag": "side-income"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's time to prepare, so let's not panic. I'd tell the youth group to think hard about trades. At work I'd say we should be honest with juniors about where this goes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Five years gives me a few more good years at the Post. I'd probably get to do bigger crime stories, even a trial. Then by 2031 I'd want to be out and into something solid."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd use the AI tools daily, so I'm useful and fast. In year two I'd apply to the fire service, once I've saved a bit more. I'd keep living with my parents and get the savings up to three months."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, but I can see a path. Five years is enough to report on one big murder trial and then go and do a job my dad would understand."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why wait until year two for the fire service?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Training takes months, and the pay at the start is low. I'd want some savings first, and I'd want to get the big trial on my CV. I think that's sensible, not cowardly."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who would you blame if it went badly?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The big tech firms, for rushing. And our own bosses, for not being straight with us. Not the government, mostly, because I don't expect much from them."
+        }
+      ],
+      "say": [
+        "I'd say there's **time to prepare**, so don't panic.",
+        "I'd tell the youth group to **think about trades**."
+      ],
+      "think": [
+        "Five years gives me a few **good years** at the Post.",
+        "By **2031** I'd want to be out and into something solid."
+      ],
+      "do": [
+        "Use the AI tools **daily** to stay fast and useful.",
+        "Apply to the **fire service** in year two.",
+        "Get savings to **three months** while living at home."
+      ],
+      "feel": [
+        "**Anxious**, but with a **path** in sight."
+      ],
+      "mood": "anxious",
+      "quote": "Five years is enough to report on one big murder trial and then go and do a job my dad would understand.",
+      "fieldNote": [
+        "He blames **tech firms and bosses**, not government.",
+        "He plans a **steady** move: savings first, then the fire service.",
+        "He wants one **big trial** on his record before leaving."
+      ],
+      "actions": [
+        "learn-ai",
+        "change-job",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Use the AI tools daily for routine crime copy",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Apply to the fire service in the second year",
+          "tag": "change-job"
+        },
+        {
+          "text": "Build three months of savings while living with his parents",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is plenty of time to sort this out properly, with apprenticeships, not handouts. I'd say the same at church."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Ten years means I could have a real career in news first. Maybe senior crime reporter by thirty-two. Then switch before 2036, if I need to."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep at the Post and work toward senior reporter. I'd save for a deposit and maybe buy a small flat in a few years. I'd keep the fire service in mind as a plan for later."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Mostly fine. With ten years I could buy a flat, get married and still change jobs before the robots learn to fight fires."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you want from the government in this one?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Apprenticeships for people my age and older. Not cash for sitting at home. Help people earn their way."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Anything still bothering you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The pay. Ten years at this wage won't buy much. But living with my parents helps a lot."
+        }
+      ],
+      "say": [
+        "I'd say ten years is enough to do it **properly**.",
+        "I'd want **apprenticeships**, not handouts.",
+        "I'd say the same thing to people at **church**."
+      ],
+      "think": [
+        "Ten years lets me build a **real career** in news first.",
+        "I could be **senior crime reporter** by thirty-two."
+      ],
+      "do": [
+        "Keep at the Post and work toward **senior reporter**.",
+        "Save for a **deposit** and buy a small flat.",
+        "Keep the **fire service** as a later plan."
+      ],
+      "feel": [
+        "Mostly **fine**, still annoyed by **pay**."
+      ],
+      "mood": "uneasy",
+      "quote": "With ten years I could buy a flat, get married and still change jobs before the robots learn to fight fires.",
+      "fieldNote": [
+        "With time, his plans return to **traditional milestones**: flat, marriage.",
+        "He wants **apprenticeships** for older workers, not cash support.",
+        "Living at **home** cushions his low pay."
+      ],
+      "actions": [
+        "keep-going",
+        "family-plans",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Work toward senior crime reporter at the Eastmoor Evening Post",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Buy a small flat with the saved deposit",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Keep saving two hundred a month while living at home",
+          "tag": "save-more"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028. I'd be out with almost no savings, and the fire service only takes so many. What would help is proper apprenticeships for adults, paid while you train, so you can earn your way into something new."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Maybe what happens to trust in crime news. When a computer writes up a fatal crash from a police press line, nobody checks whether the police got it right. That worries me as much as my own job."
+    }
+  ],
+  "headlineQuote": "When a computer writes up a fatal crash from a police press line, nobody checks whether the police got it right.",
+  "portrait": [
+    "Sam is a **27-year-old** junior crime reporter at a city daily, living with **his parents**.",
+    "He uses AI **once others prove it**, and checks every quote against the recording.",
+    "He feels safe at the **cordon** in mild scenarios, but faster AGI leads him to the **fire service**.",
+    "His **traditional** outlook shows in faith, family, and wanting apprenticeships, not handouts.",
+    "He blames **tech firms and bosses** for rushing, and wants trust in crime news protected."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, being out of work with almost no savings."
+  ],
+  "whatWouldHelp": [
+    "**Paid apprenticeships** for adults, so people can earn their way into new work."
+  ]
+}
