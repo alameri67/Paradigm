@@ -13,7 +13,7 @@
   "startedAt": "2026-11-18T09:32:25.600883+00:00",
   "jobs": {
     "A09": {
-      "reviewedCount": 80,
+      "reviewedCount": 96,
       "reviewedIds": [
         "A09-11111",
         "A09-11112",
@@ -94,11 +94,7 @@
         "A09-13322",
         "A09-13323",
         "A09-13331",
-        "A09-13332"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
-      "remainingGaps": [
+        "A09-13332",
         "A09-13333",
         "A09-21111",
         "A09-21112",
@@ -114,7 +110,11 @@
         "A09-21213",
         "A09-21221",
         "A09-21222",
-        "A09-21223",
+        "A09-21223"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
+      "remainingGaps": [
         "A09-21231",
         "A09-21232",
         "A09-21233",
@@ -1024,29 +1024,29 @@
   "reservations": {
     "author1": {
       "ids": [
-        "A09-13333",
-        "A09-21111"
+        "A09-21233",
+        "A09-21311"
       ],
-      "state": "review"
+      "state": "drafting"
     },
     "author2": {
       "ids": [
-        "A09-21123",
-        "A09-21131"
+        "A09-21312",
+        "A09-21313"
       ],
       "state": "drafting"
     },
     "author3": {
       "ids": [
-        "A09-21121",
-        "A09-21122"
+        "A09-21213",
+        "A09-21221"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author4": {
       "ids": [
-        "A09-21112",
-        "A09-21113"
+        "A09-21231",
+        "A09-21232"
       ],
       "state": "drafting"
     }
@@ -1223,9 +1223,105 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "1328e0b3c5c81ad6d473f5d4a880dc3457819f17ae911e6af34239fcb21e9cec"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21112",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f41cf83074bee7988b8da62be5597945b00c2f9fcc6c08387257b3b5117841d6"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21113",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "375ff3c241e7603e5d5c5b8b6e448f5ea45c9a6acf12398cf3554b39ec71ca8d"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-13333",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "c95106dcb315d50c06d62d58c4950ed61984e784bdfe0820bbddbf7c39e7b8bf"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21111",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "5d67fdea0c4b32284f9ef54e3f3ada04d410381ff8429193df38655a9c96bae5"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21121",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "9b9c5cebb48147ef98c1339b98a9d7b98cec9d8c866ccf56389b7df4bab15b9b"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21122",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "5d514693fb33af5419849c0c597cb1b2b41fcdb3b16ce2d4910a3211dfe775f4"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21123",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "db076cb4ead493d7a10ac3ed9a11f74df35eb87fd47bbc5edf7e05bda4d702e1"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21131",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ebe7333d88543f96620c8381a6c55edc099f806d5922c8af3c75b0a564e85c52"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21132",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "64f271a1a413d0a2a1ca015532db738a66a87da98c66466cc038c76252cce89a"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21133",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f212dd03d2b7ae30a0852911084b987086c4f71f653e1110e90b5c211b071f48"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21211",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "965d825df75a86f27e79b9f34682917b6ba253cb7f81ed55d1a35e5a1048afa2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "e1cb6756aa7381f8e28d0bef3583a40a8c27caa26f875f5935e8a1a5af7e8eff"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21222",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "1f0e0a83d8f4c748791bd76242e8b5e06b0ebb9485168976dbc58837f925270c"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21223",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f74952331c802755f30a9481282356f76c5de5f92152377c3fbee1e53ac28c84"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21213",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "068e7f08f746c015b67641851dca50662dea6a88eb9d9ed0134c770f7a7b3dd6"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21221",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "c7e8e92cd5223a8012f2069f498c05dae2cd3dbcc41bd08f82f96aaf33745d38"
     }
   ],
-  "latestCheckpointCommit": "49c52481ca2e82f4074846ddcd8e5d2a552cd40d",
+  "latestCheckpointCommit": "df1c71612a66e15658a6cfecdcb6fc69817227fc",
   "semanticReviewRecord": [
     "Startup: full remote handoff and protocol read; clean checkout; no existing session-2 branch or owner. No interviews drafted before pushed ownership claim.",
     {
@@ -1323,6 +1419,70 @@
       ],
       "review": "Parent full sources and final revisions plus independent read-only review; corrected conditional actual course enrollment, paid-time learning/manual fallback, account/audit vacancy breadth, consistent home purchase story, shadow request vs confirmed paid shift, employer fee-and-time or required vacancy plus protected savings gates. Final actual validators pass.",
       "at": "2026-11-18T09:58:09.619570+00:00"
+    },
+    {
+      "ids": [
+        "A09-21112",
+        "A09-21113"
+      ],
+      "review": "Parent full source and independent read-only review; verified midlife diploma/junior/thin-cushion families and baseline anxiety, differentiated reviewed learning from deposit-backed phone repairs, restored school-hours gate on job search and post-displacement gate on side income. Final actual validators pass.",
+      "at": "2026-11-18T10:01:01.985241+00:00"
+    },
+    {
+      "ids": [
+        "A09-13333",
+        "A09-21111"
+      ],
+      "review": "Parent full source review and source-corrected independent review; removed unsupported pickup investment tag, explicit conditional post-2036 business decision and loss stop, corrected public notice claim, income-support gates after dismissal, lender hardship distinct from routine repayment advice. Exact rich/adaptive vs midlife junior profiles and all final validators pass.",
+      "at": "2026-11-18T10:01:55.304727+00:00"
+    },
+    {
+      "ids": [
+        "A09-21121",
+        "A09-21122"
+      ],
+      "review": "Parent full sources/profile/annotations reviewed; independent read-only review raised warehouse fallback gates. Restored actual paid vacancy plus mortgage-and-childcare wage test, sister pickup request conditional on dismissal/schedule, and precise low-pay vs variable partner-hours wording. Individual baseline/scenario moods and all final actual checks pass.",
+      "at": "2026-11-18T10:02:43.886174+00:00"
+    },
+    {
+      "ids": [
+        "A09-21123",
+        "A09-21131"
+      ],
+      "review": "Parent full sources/profile/annotations and independent review of verified current excerpts; corrected apply-now vs acceptance-after-loss timing, concrete school-meal headline, mortgage bill wording, spare-cash savings in do, lender before-arrears gate. Rejected reviewer carry-over claim of Zoe income support absent from source. Panicked mood supported by explicit overwhelmed no-funded-bridge account. Actual final validators pass.",
+      "at": "2026-11-18T10:06:38.377099+00:00"
+    },
+    {
+      "ids": [
+        "A09-21132",
+        "A09-21133"
+      ],
+      "review": "Parent full sources and field notes reviewed; mechanical read-only profile/hash checks pass. Removed invented van-hour variation and duplicate trip/family tag, made property-manager practice actual worked-case learning, restricted support step to conditional family food assistance. Rejected unrelated reviewer school-kitchen carry-over claim. Final actual validators pass.",
+      "at": "2026-11-18T10:11:25.353553+00:00"
+    },
+    {
+      "ids": [
+        "A09-21211",
+        "A09-21212"
+      ],
+      "review": "Parent full sources and field notes reviewed with literal-grounded independent review; public summaries match public answers, twice-successful mentor test and paid-time gates preserved, desk lesson paid and childcare class distinct, Ana paid/free cross-training support stated, active vacancy comparisons tagged change-job, bank-only call untagged. Actual final validators pass.",
+      "at": "2026-11-18T10:11:42.135729+00:00"
+    },
+    {
+      "ids": [
+        "A09-21222",
+        "A09-21223"
+      ],
+      "review": "Parent full sources and field notes plus literal-grounded independent review. Bank-only enquiries remain documented but untagged; representative retrain steps instead capture actually stated required courses with four-month or food-plus-two-month financial floors. Continuing real new payday savings counts accumulation, unlike relabeling existing cash. Distinct stable vs seasonal household incomes support moods. Actual final checks pass.",
+      "at": "2026-11-18T10:14:17.767398+00:00"
+    },
+    {
+      "ids": [
+        "A09-21213",
+        "A09-21221"
+      ],
+      "review": "Parent full sources and Sol read-only semantic review; mapped existing AI checking to continuing work, clarified real junior-income risk under 2031 and anxious mood, removed unsupported move commitment and invented cheaper-room claim, retained only conditional family-room enquiry and joint decision. Actual final validators pass.",
+      "at": "2026-11-18T10:14:18.475707+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -1552,10 +1712,10 @@
   "acceptedNewHashes": {
     "A09-13133": "6ff61ca390957ad4c54c32e53e5830d34e00ca4e65a9f39e0f79da63521edbc9",
     "A09-13211": "b097fcc693f58079119a04b8db5267699c9341d2c8596712c06b1027975eadfe",
-    "A09-13113": "ded1732b75fcb0f6a8d2d5d8b9e9f6062941c903c536fce62b027fd9d2d3cbbc",
+    "A09-13113": "82a41626d6458419c17eb49a069c606ef871072ffa9c4efd58c23f60c9603366",
     "A09-13121": "d92f8a6cdb3b3851f071bedd950506ca967e35329ac399e57d7952c7f76b5549",
     "A09-13131": "40c9bd333fdd4d0a326da207748b87e8406524a0e41a1f340e7adb8d60b8ec81",
-    "A09-13132": "74c5a7aa09cef97d97a9123944ad600c57253d2ad9270e66ca3d6a68637306ab",
+    "A09-13132": "1eb2ab15523e4a2f2681e080eea010c212a62c7bdf7f8a14a3914208547815a3",
     "A09-13122": "54e824fddc5a749a2c5a6a7b963999c1d1b0500d8311ca3ccbd354d8ca223523",
     "A09-13123": "353a668f5774b58188337ad9d2fc44f7af658b9ba98d13a53df19397119b2998",
     "A09-13212": "dbdc518753de35f99893b908294b2e1c3c4d58594384e5c963cb47182e91ccac",
@@ -1565,15 +1725,143 @@
     "A09-13223": "efc221599386d2b06e02e0bece2799cbe2d106970f1e60ca1b755acca4a01797",
     "A09-13231": "e032be60d782e0d4050cca6387fff0b5a4213285a37472366a915f9f0cee75b7",
     "A09-13232": "ea8569ad56ffd10db990bdaae3c0405e937c2e34b7e84928e1eb8fe0a2516a43",
-    "A09-13233": "31896289f507de15e7789ffb66f2818059930dd2480f7da97ee3271caa508376",
+    "A09-13233": "a270fd28c66a642868e9f8d310b967e2255ab03cb33c1ba90c559a3717a44231",
     "A09-13313": "9154041212cbaf6b5740ad73c11c696cddd5f8ab814dcbabe281c7970ed051d0",
     "A09-13321": "3addb01e1dfe29a439fabff6b5b0c3039c4653ab7e076f9828dac5d5ea04d00a",
     "A09-13311": "c6ccd23194230b8f04d691c781962ff41de733e3bbc3845e1648422ec1cf4336",
     "A09-13312": "37288cd43f9638176cf09cba75968785d02bf231298f70c784b141eee4b3aca7",
     "A09-13322": "3fe07286fe0a98717247b4f53c978c89e9b3af4bee2bfeda9abb12dacb2b11f5",
     "A09-13323": "f60e7551553453fc24d4ff22cd264c48aef40ee595aacfcb1250b5f950cef2a8",
-    "A09-13331": "28ddd818c0c06ee4fd47b9ef3a417412a930375feb465206cc86a7f6577f0b4c",
-    "A09-13332": "1328e0b3c5c81ad6d473f5d4a880dc3457819f17ae911e6af34239fcb21e9cec"
+    "A09-13331": "966400ea0df9ec4346b67bf866c8dd902f5f9ce6e1dba2f92f5c064334b7aaf3",
+    "A09-13332": "26eb0004f278868ca32d40a8a1cdbaac0239cb5e5a8610e6acec1c7ac99c880c",
+    "A09-21112": "7df03ef3e01db25f955e8a2135c167a1de618febc83d3b966826d10a6a89e712",
+    "A09-21113": "b1e0306be5335de6fc46ce56372a87b0624f4b3f47cd0666b248b63736406b8c",
+    "A09-13333": "c95106dcb315d50c06d62d58c4950ed61984e784bdfe0820bbddbf7c39e7b8bf",
+    "A09-21111": "6b9c31625550dc6dbe69c273af1f47a19b7fe2e1c8c25804e1daa55597f7dac7",
+    "A09-21121": "7d9ee6233f80ba9726839f2d0735d1ff7e54a42b09ec861ca5c1053c03b0db11",
+    "A09-21122": "9da5747aebd8fd3f1ad7baf18b0e721aeff0c30a6acd279c33b1b90b0307bf28",
+    "A09-21123": "6155fd71d89873fe122b7c58011fbdc57d025a18dc6762effbcca5384c6234c3",
+    "A09-21131": "09d7d2c68e762d30d1c0222071e1b869c23abce6793be48cd99cbe39536b89ef",
+    "A09-21132": "64f271a1a413d0a2a1ca015532db738a66a87da98c66466cc038c76252cce89a",
+    "A09-21133": "f212dd03d2b7ae30a0852911084b987086c4f71f653e1110e90b5c211b071f48",
+    "A09-21211": "965d825df75a86f27e79b9f34682917b6ba253cb7f81ed55d1a35e5a1048afa2",
+    "A09-21212": "b18ccd1ea30b7650c3094200551cfeda3e28b1c83952760b352536af5ff67931",
+    "A09-21222": "1f0e0a83d8f4c748791bd76242e8b5e06b0ebb9485168976dbc58837f925270c",
+    "A09-21223": "f74952331c802755f30a9481282356f76c5de5f92152377c3fbee1e53ac28c84",
+    "A09-21213": "068e7f08f746c015b67641851dca50662dea6a88eb9d9ed0134c770f7a7b3dd6",
+    "A09-21221": "aed3835797ec5f779469d6e1ff2f4bf4d7393d2b678479317b08992ef6a0291e"
   },
-  "updatedAt": "2026-11-18T09:58:27.546425+00:00"
+  "updatedAt": "2026-11-18T10:14:43.523057+00:00",
+  "acceptedRepairHistory": [
+    {
+      "id": "A09-13113",
+      "oldHash": "ded1732b75fcb0f6a8d2d5d8b9e9f6062941c903c536fce62b027fd9d2d3cbbc",
+      "newHash": "82a41626d6458419c17eb49a069c606ef871072ffa9c4efd58c23f60c9603366",
+      "review": "Supplemental parent field-note source audit corrected any-saving vs savings-rate raise condition, developer pay-cut trigger vs lower new-role pay, and stale lease wording after consistent purchase-plan revision."
+    },
+    {
+      "id": "A09-13331",
+      "oldHash": "28ddd818c0c06ee4fd47b9ef3a417412a930375feb465206cc86a7f6577f0b4c",
+      "newHash": "966400ea0df9ec4346b67bf866c8dd902f5f9ce6e1dba2f92f5c064334b7aaf3",
+      "review": "Supplemental parent field-note source audit corrected any-saving vs savings-rate raise condition, developer pay-cut trigger vs lower new-role pay, and stale lease wording after consistent purchase-plan revision."
+    },
+    {
+      "id": "A09-13332",
+      "oldHash": "1328e0b3c5c81ad6d473f5d4a880dc3457819f17ae911e6af34239fcb21e9cec",
+      "newHash": "26eb0004f278868ca32d40a8a1cdbaac0239cb5e5a8610e6acec1c7ac99c880c",
+      "review": "Supplemental parent field-note source audit corrected any-saving vs savings-rate raise condition, developer pay-cut trigger vs lower new-role pay, and stale lease wording after consistent purchase-plan revision."
+    },
+    {
+      "id": "A09-13233",
+      "oldHash": "31896289f507de15e7789ffb66f2818059930dd2480f7da97ee3271caa508376",
+      "newHash": "a270fd28c66a642868e9f8d310b967e2255ab03cb33c1ba90c559a3717a44231",
+      "review": "Parent full field-note audit clarified that the two-recurring-customer gate applies to Saturday expansion, while a single paid trial remains possible earlier."
+    },
+    {
+      "id": "A09-13132",
+      "oldHash": "74c5a7aa09cef97d97a9123944ad600c57253d2ad9270e66ca3d6a68637306ab",
+      "newHash": "1eb2ab15523e4a2f2681e080eea010c212a62c7bdf7f8a14a3914208547815a3",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21111",
+      "oldHash": "5d67fdea0c4b32284f9ef54e3f3ada04d410381ff8429193df38655a9c96bae5",
+      "newHash": "6b9c31625550dc6dbe69c273af1f47a19b7fe2e1c8c25804e1daa55597f7dac7",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21113",
+      "oldHash": "375ff3c241e7603e5d5c5b8b6e448f5ea45c9a6acf12398cf3554b39ec71ca8d",
+      "newHash": "b1e0306be5335de6fc46ce56372a87b0624f4b3f47cd0666b248b63736406b8c",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21121",
+      "oldHash": "9b9c5cebb48147ef98c1339b98a9d7b98cec9d8c866ccf56389b7df4bab15b9b",
+      "newHash": "7d9ee6233f80ba9726839f2d0735d1ff7e54a42b09ec861ca5c1053c03b0db11",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21122",
+      "oldHash": "5d514693fb33af5419849c0c597cb1b2b41fcdb3b16ce2d4910a3211dfe775f4",
+      "newHash": "9da5747aebd8fd3f1ad7baf18b0e721aeff0c30a6acd279c33b1b90b0307bf28",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21123",
+      "oldHash": "db076cb4ead493d7a10ac3ed9a11f74df35eb87fd47bbc5edf7e05bda4d702e1",
+      "newHash": "6155fd71d89873fe122b7c58011fbdc57d025a18dc6762effbcca5384c6234c3",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21112",
+      "oldHash": "f41cf83074bee7988b8da62be5597945b00c2f9fcc6c08387257b3b5117841d6",
+      "newHash": "7df03ef3e01db25f955e8a2135c167a1de618febc83d3b966826d10a6a89e712",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21131",
+      "oldHash": "ebe7333d88543f96620c8381a6c55edc099f806d5922c8af3c75b0a564e85c52",
+      "newHash": "09d7d2c68e762d30d1c0222071e1b869c23abce6793be48cd99cbe39536b89ef",
+      "review": "Strict action taxonomy audit: seek-support follows protocol government/family/community meaning. Bank-only hardship requests remain documented in transcript/do but are not counted as this action. Retained explicit available government/employment-office or family assistance with original conditions."
+    },
+    {
+      "id": "A09-21212",
+      "oldHash": "e1cb6756aa7381f8e28d0bef3583a40a8c27caa26f875f5935e8a1a5af7e8eff",
+      "newHash": "b18ccd1ea30b7650c3094200551cfeda3e28b1c83952760b352536af5ff67931",
+      "review": "Post-review taxonomy check keeps income assistance explicitly conditional on dismissal; partner training enquiry remains described in do/source but is not itself counted as completed retraining in a step. Actual own course still supports retrain."
+    },
+    {
+      "id": "A09-21221",
+      "oldHash": "c7e8e92cd5223a8012f2069f498c05dae2cd3dbcc41bd08f82f96aaf33745d38",
+      "newHash": "aed3835797ec5f779469d6e1ff2f4bf4d7393d2b678479317b08992ef6a0291e",
+      "review": "Removed remaining bank-only support step after revision; actual conditional cousin-room assistance still supports seek-support, with lender question documented in do/source."
+    }
+  ],
+  "readOnlyReviews": {
+    "author2": {
+      "ids": [
+        "A09-21213",
+        "A09-21221"
+      ],
+      "state": "reported",
+      "role": "semantic review"
+    },
+    "reviewer1": {
+      "ids": [
+        "A09-21222",
+        "A09-21223"
+      ],
+      "state": "reported",
+      "role": "source-grounded review"
+    },
+    "reviewer2": {
+      "ids": [
+        "A09-21132",
+        "A09-21133"
+      ],
+      "state": "reported",
+      "role": "mechanical profile/hash checks"
+    }
+  }
 }
