@@ -11,32 +11,16 @@
     "outlook": "traditional",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time, Bilal. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for any company, union, party or government. Everything's confidential, so you can tell me what you'd say in public and what you really think. Could you start by walking me through a normal working day?"
+      "text": "I'm with the Work Futures Panel, an independent research group with no ties to employers, AI companies, unions, parties or government. Your answers stay confidential. Could you walk me through an ordinary shift?"
     },
     {
       "speaker": "persona",
-      "text": "I run a front-end loader at an open-pit lithium mine, a big one, the kind with a bucket that fills a haul truck in three passes. I'm the senior operator on my crew, and since last year I'm also the go-to person for the new autonomous haul trucks, because I volunteered for the training before anyone else. Half my shift I'm loading, and the other half I'm on the radio with the control room telling them why a driverless truck has stopped in front of my bucket."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What do you enjoy, and what wears you out?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I enjoy figuring things out. I use AI every day, on my phone in the crib hut, to read the truck fault codes, to plan my week, even to help my son with maths. What wears me out is the heat, it's forty-two degrees on the bench in summer, and people who complain about every change without trying it."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "Tell me about your family."
-    },
-    {
-      "speaker": "persona",
-      "text": "My wife Aiko is a part-time accountant, and we've got Yusuf, who's thirteen, and Sofia, who's ten. We've got a mortgage, more than six months saved, and some shares. My brother Karim and I also own a small excavator together that we hire out on weekends for house sites and drainage jobs. Friday is mosque, and Saturday is the excavator."
+      "text": "I lead an underground cutting crew at a large potash mine and operate the continuous miner, the machine that cuts ore from the face. I check the roof, guide the cutter and listen for a change in the motor load before a jam. My two-year technical diploma helps with the controls, but teaching an apprentice to notice loose ground takes time beside the machine. My wife Farah runs a small pharmacy, and our two children are in school. We carry a mortgage but have eleven months of expenses saved. I use AI every day to compare cutter vibration notes, then check the machine myself."
     }
   ],
   "scenarios": {
@@ -44,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a decent tool and that's fine. I'd tell the crew the people who panicked wasted their energy. Online I'd say what I always say: work hard, learn what helps, ignore the noise."
+          "text": "I'd tell the crew our cutter already makes more useful data than we read, so a quicker note tool is welcome. I would still make the person who checked the roof sign the shift book."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be a bit disappointed. I've bet a little on this stuff, in shares and in my own learning. But my job's safe, so I can't complain."
+          "text": "I think my lead wage is safe in this picture, and Farah's pharmacy can cover some bills if the mine has a short shutdown. The mortgage stays on my mind, but eleven months saved keeps it from running my day."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep doing what I do. Keep using AI for the boring bits, keep the excavator business going, keep investing a bit each month. Maybe Karim and I buy a second machine."
+          "text": "I'll keep the roof walk and have the apprentice mark motor changes in the shift book. In the first year I'll use my AI note tool to sort vibration readings, then compare every flagged change with the cutter's service record."
         },
         {
           "speaker": "interviewer",
@@ -72,48 +56,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A little flat."
+          "text": "I feel comfortable with a tool that clears the clutter. I don't want an apprentice learning to trust a coloured box before learning the sound of a jam."
         },
         {
           "speaker": "interviewer",
-          "text": "What would a second machine cost, and why buy it?"
+          "text": "When did the tool misread the cutter?"
         },
         {
           "speaker": "persona",
-          "text": "A small used excavator is about sixty thousand. Karim's turning work away most weekends, so it'd pay for itself in about three years. It's real work, real money, and nobody's going to automate a backyard drainage trench any time soon."
+          "text": "Once the software called a normal start-up vibration a fault, and I checked the service record before stopping the cutter. That sort of false alarm is why I still ask who made the call."
         },
         {
           "speaker": "interviewer",
-          "text": "Would your crew be relieved, in this picture?"
+          "text": "Would the household change its spending?"
         },
         {
           "speaker": "persona",
-          "text": "Most of them, yes. A few of the older guys, like Mick, have been grumbling about the driverless trucks for a year. In this picture the trucks stay a sideshow and Mick gets to retire grumbling, which is what he'd want."
+          "text": "I'd tell Farah our usual mortgage payment stays, and the children can keep their school trips. A small time saving doesn't call for a new machine purchase at home."
         }
       ],
-      "say": "Bilal would say AI is a decent tool and the people who panicked wasted their energy. Online he'd stick to his usual line: work hard, learn what helps and ignore the noise.",
-      "think": "Privately he'd be a bit disappointed, having bet a little on AI through shares and his own learning. His job stays safe, so he wouldn't complain.",
-      "do": "Keeps using AI for routine tasks and keeps investing each month. Considers spending about sixty thousand with his brother on a second excavator for their weekend hire business.",
-      "feel": "Calm, if a little flat.",
+      "say": [
+        "I would welcome **quicker notes** while keeping a named person responsible for the roof check.",
+        "I would tell apprentices to learn **motor sounds** before relying on coloured warnings."
+      ],
+      "think": [
+        "I expect my **lead wage** to stay safe with modest changes to notes.",
+        "I can manage a short shutdown with **eleven months saved** and Farah’s pharmacy income."
+      ],
+      "do": [
+        "**Keep the roof walk** and have apprentices record motor changes in the shift book.",
+        "**Compare AI vibration flags** with cutter service records during the first year."
+      ],
+      "feel": [
+        "**Comfortable** with quicker notes, while protective of hands-on learning."
+      ],
       "mood": "calm",
-      "quote": "Nobody's going to automate a backyard drainage trench any time soon.",
-      "fieldNote": "Bilal is an early adopter with traditional values and a business mind. He already co-owns a weekend excavator hire business with his brother. The plateau leaves him calm but slightly disappointed in his own bets.",
+      "quote": "I would still make the person who checked the roof sign the shift book.",
+      "fieldNote": [
+        "He uses **AI daily** but ties each roof decision to a named worker who saw the ground.",
+        "The **strong cushion** and second household income keep routine note automation from threatening his living."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai",
-        "invest",
-        "side-income"
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep checking the mine roof with apprentices before cutting",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Compare AI vibration flags with cutter service records",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is opportunity for anyone willing to learn. The company should offer training, but people need to take it themselves, nobody owes you a job. I'd say it at work and online."
+          "text": "I'd say planning, stores and shift reports will move to software first; robots will take longer to reach the cutting face. Give good operators access to the new data and let them challenge it."
         },
         {
           "speaker": "interviewer",
@@ -121,7 +127,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it's good for me. I'm already the guy who understands the driverless trucks, so I'd be in line for a supervisor or control room role. And the excavator business might grow, because new kinds of building work open up."
+          "text": "I think the mine may run fewer planning desks and ask my crew to cut more metres in a shift. My wage should hold, but a higher target could make someone skip a roof pause."
         },
         {
           "speaker": "interviewer",
@@ -129,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask for a formal role with the autonomous fleet in the first six months, and a pay rise to match. Karim and I would buy that second excavator. And I'd look at a short course in automation systems, online, so I understand the control side properly."
+          "text": "I'll ask for access to the planning tool and try it against three old cutting maps this month. In the first year I'll bring any false roof-clear marks to the foreman and propose a crew sign-off before the plan reaches the cutter."
         },
         {
           "speaker": "interviewer",
@@ -137,48 +143,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, even excited."
+          "text": "I am keen to see the tool, yet uneasy about a target becoming a reason to hurry underground. A saved minute is worthless if the roof comes down."
         },
         {
           "speaker": "interviewer",
-          "text": "Who do you think would struggle?"
+          "text": "What would make you stop a software plan?"
         },
         {
           "speaker": "persona",
-          "text": "Guys like Mick, who won't try. I'd help anyone who asks, I'd sit with them on a shift. But I won't carry people who refuse to learn, that's not fair on the ones who make the effort."
+          "text": "If the plan routes us beneath the old service tunnel, I would stop and check the support record. The cutter can wait while we find out whether the roof is sound."
         },
         {
           "speaker": "interviewer",
-          "text": "What would Aiko say?"
+          "text": "What would you teach a new operator?"
         },
         {
           "speaker": "persona",
-          "text": "She'd tell me not to buy every gadget I see. She's the careful one, she does the numbers. But she'd back the excavator, because she's seen the invoices."
+          "text": "I would teach the apprentice to compare the machine record and the face, not just copy my answer. I was trusted with a machine only after someone let me make a careful call."
         }
       ],
-      "say": "Bilal would call steady change an opportunity for anyone willing to learn. He'd say the company should offer training but people must take it themselves, because nobody is owed a job.",
-      "think": "Privately he sees it as good for him, since he already understands the driverless trucks and would be in line for a supervisor role. He thinks the excavator business could grow too.",
-      "do": "Asks for a formal role with the autonomous fleet and a pay rise within six months, and buys a second excavator with his brother. Takes a short online course in automation systems.",
-      "feel": "Calm and even excited.",
-      "mood": "calm",
-      "quote": "I won't carry people who refuse to learn, that's not fair on the ones who make the effort.",
-      "fieldNote": "Bilal sees steady change as opportunity and is clear that individuals must take responsibility. He offers help but draws a firm line at carrying people who won't try. His wife Aiko acts as the careful counterweight.",
+      "say": [
+        "I would expect **planning desks** to change before robots work at the cutting face.",
+        "I would give operators **data access** and a way to challenge a roof-clear mark."
+      ],
+      "think": [
+        "I expect my **wage** to hold, though faster metre targets may pressure roof checks.",
+        "I worry that **rushed pauses** could hurt a worker before any robot arrives."
+      ],
+      "do": [
+        "**Test the planning tool** this month against three previous cutting maps.",
+        "**Propose crew sign-off** for roof-clear marks during the first year."
+      ],
+      "feel": [
+        "**Keen** to test the tool, but uneasy about time pressure underground."
+      ],
+      "mood": "uneasy",
+      "quote": "A saved minute is worthless if the roof comes down.",
+      "fieldNote": [
+        "He welcomes **planning software** as data to test, not a replacement for roof checks.",
+        "His **income feels secure**; concern centres on higher targets and safety for the crew."
+      ],
       "actions": [
         "learn-ai",
-        "retrain",
-        "invest",
-        "side-income"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Test planning software against three old cutting maps",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep crew roof sign-off before the cutter follows a plan",
+          "tag": "keep-going"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a big shock, but the people who move fast will be all right. Families should stick together and help each other, and the government should keep out of the way of people building new businesses. I'd say that at the mosque and at work."
+          "text": "I'd tell the crew full thinking AI by 2028 could rewrite plans and stores orders, while capable cutting robots follow around 2031. We need a plan for apprentices before the machines can learn the whole face."
         },
         {
           "speaker": "interviewer",
@@ -186,7 +214,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it's the first one that worries me. If robots can do almost anything, then the control room and the excavator both get automated. My head start helps, but two years is quick even for me."
+          "text": "I think my lead post could be smaller once robots cut and check the roof as well as us. Our savings buy a year, not another career, and the mortgage would still come each month."
         },
         {
           "speaker": "interviewer",
@@ -194,7 +222,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd move fast. I'd shift some shares into the companies making the robots and the AI, because that's where the money goes. Karim and I would look at buying an automated excavator ourselves instead of hiring ourselves out, so we own the robot rather than compete with it. And I'd pay down the mortgage with some savings."
+          "text": "Starting this winter I'll use part of my bonus to take a certified machine-controls course with real equipment practice. In the first year after thinking AI arrives, I'll apply for a paid controls trainer post if one opens at a wage close to my current pay."
         },
         {
           "speaker": "interviewer",
@@ -202,48 +230,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Some worry, but I'd feel like I was doing something."
+          "text": "I feel anxious about losing the cutting roster, but I can start preparing now. I am more worried that apprentices will be told to learn a machine with no supervised hours."
         },
         {
           "speaker": "interviewer",
-          "text": "Owning the robot rather than competing with it. Can you afford that?"
+          "text": "How would you fund the controls course?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe, if we sold the old machine and borrowed a bit. Aiko would want the numbers first, and she'd be right. It's a risk, but sitting still is a bigger one."
+          "text": "I would tell Farah the course fee before I pay it, and keep our emergency fund untouched. Her pharmacy income is a backstop, not a reason to empty our own savings."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Yusuf the first night?"
+          "text": "What would make a trainer post real work?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell him the world's changing and we'll change with it. I'd tell him to work hard at school but also learn to build things and run things. And I'd tell him his faith and his family don't change, whatever machines do."
+          "text": "I'd ask the mine whether a trainer can stop a machine from the control room and walk to the face afterward. A job title without that authority would not suit me."
         }
       ],
-      "say": "Bilal would call it a big shock but say fast movers will be all right. He'd urge families to stick together and the government to stay out of the way of new businesses.",
-      "think": "Privately it's the first picture that worries him, since both the control room and the excavator work could be automated. His head start helps, but two years is quick even for him.",
-      "do": "Shifts some shares into robot and AI companies and plans with Karim to buy an automated excavator so they own the robot rather than compete with it. Pays down part of the mortgage with savings.",
-      "feel": "Uneasy, but steadied by acting.",
-      "mood": "uneasy",
-      "quote": "So we own the robot rather than compete with it.",
-      "fieldNote": "Bilal's instinct under pressure is to buy into the change rather than resist it. Even so, he admitted two years is fast for him. His message to his son anchors on faith and family amid change.",
+      "say": [
+        "I would distinguish **2028 planning AI** from capable cutting robots around 2031.",
+        "I would demand **supervised hours** for apprentices before equipment work shifts away from people."
+      ],
+      "think": [
+        "I could lose part of my **cutting roster** once robots cut and inspect the roof.",
+        "I think our **eleven-month cushion** buys time, but the mortgage still needs an income."
+      ],
+      "do": [
+        "**Fund certified controls training** from my bonus this winter, with real equipment practice.",
+        "**Apply** for a paid trainer post after thinking AI arrives if an opening offers near-current pay and real stop authority."
+      ],
+      "feel": [
+        "**Anxious** about his roster, with money to train and a conditional job path."
+      ],
+      "mood": "anxious",
+      "quote": "Our savings buy a year, not another career, and the mortgage would still come each month.",
+      "fieldNote": [
+        "He identifies **2031 cutting robots** as the direct threat; 2028 thinking AI changes plans and stores first.",
+        "His **trainer application** depends on an opening, near-current pay and meaningful control authority; the course fee comes from a bonus."
+      ],
       "actions": [
-        "invest",
-        "automate",
-        "save-more",
-        "side-income"
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Pay for certified controls training with bonus money and real equipment practice",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for an open paid trainer post if wage stays close and stop authority is granted",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is plenty if you move now. People should learn, start businesses and look after their families. I'd say the government should help with apprenticeships, not handouts."
+          "text": "I'd say full thinking AI by 2031 and capable robots around 2034 give us time to test new cutters properly. I would like the mine to publish separate pay rates for operators, maintainers and trainers before anyone applies."
         },
         {
           "speaker": "interviewer",
@@ -251,7 +301,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, five years is good for me. I'd get a few years supervising the autonomous fleet, and Karim and I could build up a business with automated machines. I'd be more worried for the guys who don't move."
+          "text": "I would be 51 when cutting robots arrive, and I could see myself teaching controls if the role is truly paid as skilled work. There are other mines nearby. I would not move my children for a mine trainer title without a written job offer."
         },
         {
           "speaker": "interviewer",
@@ -259,7 +309,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd get into the autonomous fleet role straight away and do the automation course in the first year. Karim and I would buy our first automated excavator by year two and bid for bigger jobs. I'd keep investing in the companies building the robots."
+          "text": "I'll spend a few Saturdays this year training apprentices on the current cutter and record what goes wrong in practice. In the first year after thinking AI arrives, I'll apply for a posted controls trainer role if the wage, supervised hours and stop authority are written down."
         },
         {
           "speaker": "interviewer",
@@ -267,48 +317,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, with a little worry for others."
+          "text": "I feel interested in the chance to teach, with some worry about the wage. Five years gives me time to test what a new role really entails."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you're worried for the guys who don't move. What about them?"
+          "text": "What would make you reject a trainer opening?"
         },
         {
           "speaker": "persona",
-          "text": "Guys like Mick, and some of the young ones who think it won't happen. I'd offer Mick work on our sites if he wanted it, a few days a week. He knows ground better than any machine, and I'd pay him for that."
+          "text": "If the posted wage is lower than our mortgage plan allows, I will stay on the cutting roster while it lasts. I can look at other nearby mines without moving the family."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you blame anyone if it went badly for the town?"
+          "text": "What would your wife need to see in an offer?"
         },
         {
           "speaker": "persona",
-          "text": "Not really. Markets change, and they always have. If anything, I'd blame people who waited for the government to save them instead of getting on with it."
+          "text": "I would show Farah the posted pay sheet and work hours before saying yes. Pharmacy shifts and school pickup need a real timetable, not a promise."
         }
       ],
-      "say": "Bilal would say five years is plenty if people move now, urging them to learn, start businesses and look after their families. He'd want government help for apprenticeships, not handouts.",
-      "think": "Privately he thinks five years is good for him, with years supervising the autonomous fleet and time to build a business with automated machines. He'd worry more for those who don't move.",
-      "do": "Takes the autonomous fleet role straight away and completes the automation course in the first year. Buys a first automated excavator with Karim by year two and keeps investing in robot companies.",
-      "feel": "Calm, with a little worry for others.",
-      "mood": "calm",
-      "quote": "He knows ground better than any machine, and I'd pay him for that.",
-      "fieldNote": "Five years plays to Bilal's strengths, and he plans to grow from employee to owner. He blames people who wait for government rather than markets or companies. His offer of work to Mick shows a personal loyalty beneath his tough line.",
+      "say": [
+        "I would use the **five-year window** to test cutters before capable robots arrive around 2034.",
+        "I would ask for **published pay** across operating, maintenance and trainer posts."
+      ],
+      "think": [
+        "I think at **51**, I could teach controls if the job pays for skilled work.",
+        "I would keep my **children settled** rather than move for an unoffered title."
+      ],
+      "do": [
+        "**Train apprentices** on the current cutter during several Saturdays this year.",
+        "**Apply** for a posted trainer role after thinking AI arrives only with written pay, supervised hours and stop authority."
+      ],
+      "feel": [
+        "**Interested** in teaching, with concern about whether a trainer wage will support the mortgage."
+      ],
+      "mood": "uneasy",
+      "quote": "I would not move my children for a mine trainer title without a written job offer.",
+      "fieldNote": [
+        "He calculates **2034 robot arrival** at 51 and sees teaching controls as a related role.",
+        "His **application** depends on a posted job with written pay, hours and stop authority; nearby mines provide another option."
+      ],
       "actions": [
-        "change-job",
-        "retrain",
-        "automate",
-        "invest"
+        "keep-going",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Train apprentices on the current cutting machine this year",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for a posted controls trainer role if pay and authority are written",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a gift. Anyone who plans can do well. I'd tell people at work and at the mosque to start learning, saving and building now."
+          "text": "I'd tell the crew the thinking work changes in 2036 and capable cutting robots arrive around 2039. A decade is enough for the mine to build a proper apprenticeship route instead of a quick online badge."
         },
         {
           "speaker": "interviewer",
@@ -316,7 +388,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years is great for me. I'd be fifty-three, the house paid, the business running with automated machines. I could see myself as a business owner with a few employees."
+          "text": "I would be 56 when robots arrive and could have most of the mortgage paid if we keep the current plan. I might reduce cutting shifts then, but only if Farah's shop and my retirement figures support it."
         },
         {
           "speaker": "interviewer",
@@ -324,7 +396,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd move onto the autonomous fleet early, then leave the mine around year five or six to run the business with Karim full-time. We'd buy automated machines over time and take on bigger contracts. I'd keep investing and pay the house off by year eight."
+          "text": "I'll keep leading the cutting shift and making scheduled mortgage payments, then review retirement figures with Farah each year. In the first year after thinking AI arrives, I'll compare a posted trainer role with my retirement estimate before deciding whether to reduce shifts."
         },
         {
           "speaker": "interviewer",
@@ -332,37 +404,59 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Hopeful."
+          "text": "I feel calm about our household with a decade to prepare. I would miss the cutting face, but I could still be useful teaching a new crew if a job exists."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want your business to look like?"
+          "text": "What would make you keep full shifts?"
         },
         {
           "speaker": "persona",
-          "text": "A few automated machines, a small crew of people who know ground, and contracts across the region. Maybe Yusuf joins us one day if he wants. Something that's ours, that the family built."
+          "text": "If the pharmacy has a bad year, I would keep full mine shifts while they're offered. I would not ask our children to trade school plans for my early exit."
         },
         {
           "speaker": "interviewer",
-          "text": "Anything that worries you about the end of the decade?"
+          "text": "What advice would you give the apprentices?"
         },
         {
           "speaker": "persona",
-          "text": "Young men with nothing to do. Work gives you discipline and pride, and if machines do everything, I worry some of them will lose their way. I'd want families and mosques and churches to keep that going."
+          "text": "I would tell the apprentices to keep learning the rock as well as the controls. A machine can change, but a careful worker can carry judgment to the next one."
         }
       ],
-      "say": "Bilal would call ten years a gift and say anyone who plans can do well. He'd tell people at work and at the mosque to start learning, saving and building now.",
-      "think": "Privately he thinks ten years is great for him, with the house paid by 53 and a business running on automated machines. He pictures himself as a business owner with a few employees.",
-      "do": "Moves onto the autonomous fleet early, then leaves the mine around year five or six to run the business full-time with Karim. Buys automated machines over time and pays the house off by year eight.",
-      "feel": "Calm and hopeful.",
+      "say": [
+        "I would use the **decade** to build practical apprenticeships before cutting robots around 2039.",
+        "I would keep **rock judgment** beside new controls for younger operators."
+      ],
+      "think": [
+        "I think at **56**, I might reduce shifts if the mortgage falls and the pharmacy stays sound.",
+        "I want **retirement figures** before deciding whether a trainer role is worth taking."
+      ],
+      "do": [
+        "**Keep leading** cutting shifts, make scheduled mortgage payments and review retirement figures with Farah each year.",
+        "**Compare a posted role** with retirement figures after thinking AI arrives before reducing cutting shifts."
+      ],
+      "feel": [
+        "**Calm** about household finances, with some sadness about leaving the cutting face."
+      ],
       "mood": "calm",
-      "quote": "Work gives you discipline and pride, and if machines do everything, I worry some of them will lose their way.",
-      "fieldNote": "Ten years lets Bilal picture a full move from miner to business owner. His worry is cultural rather than personal: young men losing the discipline of work. Faith and family remain his anchors.",
+      "quote": "A machine can change, but a careful worker can carry judgment to the next one.",
+      "fieldNote": [
+        "His **2039 age** is 56, so fewer shifts are possible if mortgage progress and pharmacy income hold.",
+        "He makes **no early retirement commitment** before seeing retirement figures and a posted trainer role."
+      ],
       "actions": [
-        "sell-or-exit",
-        "automate",
-        "invest",
-        "side-income"
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading cutting shifts and making scheduled mortgage payments",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Compare a posted trainer role with retirement figures after 2036",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -373,7 +467,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because even moving fast might not be fast enough. What would help is the government keeping out of the way of people who want to build businesses, and backing apprenticeships instead of handouts."
+      "text": "AGI by 2028 worries me most because capable cutting robots could arrive around 2031 before apprentices have supervised practice. A certified course with real machines and a paid trainer opening would help me prepare without spending our emergency fund."
     },
     {
       "speaker": "interviewer",
@@ -381,11 +475,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask who's going to own all these machines. I'd rather it was families and small businesses than just the big companies. That's the difference between a town that lives and one that dies."
+      "text": "You didn't ask who takes responsibility when a roof check comes from a remote control room. A remote roof check still needs a named operator who can stop the cutter. I would want that operator to walk to the face afterward."
     }
   ],
-  "headlineQuote": "I'd rather it was families and small businesses than just the big companies.",
-  "portrait": "Bilal Tanaka is a 43-year-old senior loader operator at an open-pit lithium mine and the go-to person for its new driverless trucks. He uses AI every day, invests in shares and co-owns a weekend excavator hire business with his brother, with an accountant wife, two kids and a mortgage. He holds traditional views on faith, family and work, and he sees automation as an opportunity for people who move. Even the two-year AGI picture leaves him only uneasy, as he plans to own the robots rather than compete with them. Over ten years he pictures leaving the mine to run a family business, while worrying about young men left without work.",
-  "biggestWorry": "AGI by 2028 worries him most, because even moving fast might not be fast enough.",
-  "whatWouldHelp": "The government staying out of the way of new businesses and backing apprenticeships rather than handouts."
+  "headlineQuote": "A remote roof check still needs a named operator who can stop the cutter.",
+  "portrait": [
+    "**Bilal Tanaka**, 43, leads an underground cutting crew at a large potash mine and holds a two-year technical diploma.",
+    "He uses **AI daily** for vibration notes but checks the roof and cutting machine himself before trusting a warning.",
+    "His **higher mine wage**, eleven months of savings and his wife’s pharmacy support two children and a mortgage.",
+    "He will fund **controls training** from a bonus and consider a trainer post only with written pay and authority.",
+    "He favours **practical apprenticeships** and household self-reliance while using new tools earlier than most colleagues."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** worries him most because cutting robots could arrive around 2031 before apprentices gain supervised hours."
+  ],
+  "whatWouldHelp": [
+    "A **certified practical course** and a paid trainer opening would let him prepare without spending emergency savings."
+  ]
 }

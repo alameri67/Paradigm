@@ -11,44 +11,58 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for meeting me, Vera. I work for the Work Futures Panel, an independent research group, and I'm a field researcher there. We're not connected to any company, union, party or government. What you say is confidential, so you can tell me both your public view and your private one. Could you describe a normal working day for me?"
+      "text": "I am with the independent Work Futures Panel. We have no ties to employers, AI firms or government, and your answers stay confidential. What is a normal working day like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I operate a dragline at an open-cut coal mine. If you've never seen one, it's a machine the size of a block of flats with a bucket you could park two cars in, and it strips the dirt and rock off the top of the coal seam. There are only six of us on site who can run it properly, and I'm the senior one, so I also train the new operators and sign off on their hours."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you down?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I like the rhythm. Drag, hoist, swing, dump, back again, sixty-odd seconds a cycle, and when you get it right the bucket lands where you want it like you're throwing a ball. What wears me down is people from head office who've never sat in the chair telling me how to do it faster. And the new monitoring screen they put in, which I mostly ignore."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "Tell me about life outside work."
-    },
-    {
-      "speaker": "persona",
-      "text": "My husband Arjun is an electrician with a contracting firm, and we've got Nina, thirteen, and Sam, ten. We've got a mortgage on our house and we also own a small flat in town that we rent out, which my father talked us into buying fifteen years ago. So we're comfortable, more than six months in the bank plus the flat."
+      "text": "I lead the loader crew at a large mine. I walk the bench before the first machine starts, check the maintenance sheet and spend much of the shift in a loader cab or helping another operator through a snag. I like seeing a new hand learn a difficult cut; I dislike being rushed by a schedule drawn by someone who has not seen the ground."
     }
   ],
   "scenarios": {
     "S0": {
+      "say": [
+        "I say **loader work** still needs a careful operator even if reports fill themselves in.",
+        "I would judge an **automatic report** against what the crew sees on the machine."
+      ],
+      "think": [
+        "I do not need **AI tools** to keep doing this job well today.",
+        "I feel our **savings cushion** can handle a bad quarter while the mortgage continues."
+      ],
+      "do": [
+        "**Lead** the loader crew and check the weekly maintenance sheet by hand.",
+        "**Make** the regular mortgage payment and leave emergency savings in place."
+      ],
+      "feel": [
+        "**Calm** about limited change, with normal care around family bills."
+      ],
+      "mood": "calm",
+      "quote": "I have worked this bench long enough to know where the ground gives trouble.",
+      "fieldNote": [
+        "**Experience** and a strong savings cushion make modest AI change feel manageable.",
+        "**Manual checking** is a point of professional pride, though she would read a useful fault report."
+      ],
+      "actions": [
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading loader shifts and checking maintenance sheets",
+          "tag": "keep-going"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say what I've been saying in the crib room for years: good, now can we get back to work. I don't get worked up about these things either way. The technology people overpromise, the doom people overreact, and the truth is usually boring."
+          "text": "I would tell the shift that our old loader still needs a careful operator, even if a report fills itself in. I have worked this bench long enough to know where the ground gives trouble."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +70,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it's what I expect anyway. I've never used one of those AI programs and I've never needed to. If it fizzles, my skills stay rare and my job stays solid until coal winds down, which is its own problem."
+          "text": "I do not use AI tools, and I would not start just to make a tidy report. My lead pay and our savings cover more than a few months, though the mortgage and two children keep me careful. A normal bad quarter worries me more than this card."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +78,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing different. Same shifts, same savings, same rent coming in from the flat. Maybe I'd finally retire that monitoring screen to the bottom drawer, figuratively speaking."
+          "text": "I would keep leading the loader crew and check the weekly maintenance sheet by hand. In the first year I would continue the regular mortgage payment and leave the emergency savings alone unless a real bill comes in."
         },
         {
           "speaker": "interviewer",
@@ -72,46 +86,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like reading the weather and finding it's the same as yesterday."
+          "text": "Calm, mostly. I would rather have ordinary work and ordinary bills than another grand promise."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned coal winding down. Does that worry you more than AI?"
+          "text": "How much cushion is there?"
         },
         {
           "speaker": "persona",
-          "text": "Honestly, yes. Everyone knows the coal won't last forever, whether it's the market or the government. That's a slow thing I can plan around, and I've been planning around it for years with the flat. AI is just noise on top of that."
+          "text": "We have more than eight months of basic costs set aside if we cut extras. I earned it by keeping steady shifts, and I do not want it used to chase a new machine."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you want to keep training, in this picture?"
+          "text": "Would the automatic report help the crew?"
         },
         {
           "speaker": "persona",
-          "text": "Rhys, a young guy who's just started on the dragline. He's careful, he listens, and he actually feels the machine rather than watching the screen. I'd want to get him to the point where he can run it alone before I'm done, because that's how I learnt it from old Bill."
+          "text": "If it gave the mechanic a clean list of faults, I would read it beside my own notes. I would still sign for the machine only after looking at it."
         }
-      ],
-      "say": "Vera would tell the crib room it's good news and time to get back to work. She'd say the technology people overpromise and the doom people overreact, and the truth is usually boring.",
-      "think": "Privately it's what she expected, since she's never used AI tools and never needed them. Her skills stay rare and her job solid until coal winds down, which she sees as the bigger issue.",
-      "do": "Carries on with the same shifts, savings and rental income from the flat. Keeps training new dragline operators and ignoring the monitoring screen.",
-      "feel": "Calm, like checking the weather and finding it's the same as yesterday.",
-      "mood": "calm",
-      "quote": "The technology people overpromise, the doom people overreact, and the truth is usually boring.",
-      "fieldNote": "Vera's pragmatism is almost a personality: she distrusts both hype and alarm. She sees the decline of coal as the real long-term threat, and she has been hedging it for years with the rental flat. Her pride is in feel and rhythm, passed down from an older operator.",
-      "actions": [
-        "keep-going",
-        "wait-and-see"
       ]
     },
     "S1": {
+      "say": [
+        "I expect **dispatch** to change before anyone can replace driving on the mine road.",
+        "I want **driver numbers** based on tested equipment and actual ground conditions."
+      ],
+      "think": [
+        "I see **office tasks** shrinking first and robot trials arriving later.",
+        "I trust my **lead role**, but I know a mine can cut shifts unexpectedly."
+      ],
+      "do": [
+        "**Keep** the current crew rota while dispatch changes.",
+        "**Record** closed ramps and repair delays against new dispatch plans.",
+        "**Wait** for a demonstrated machine before changing my own work plan."
+      ],
+      "feel": [
+        "**Uneasy** about shift decisions based on software without ground evidence."
+      ],
+      "mood": "uneasy",
+      "quote": "I would not resign over a rumour; we have a mortgage to pay.",
+      "fieldNote": [
+        "**Evidence threshold** is high; she wants dated road and repair facts before accepting a changed rota.",
+        "**Job security** feels reasonable now, but she knows her senior role does not make a shift immune."
+      ],
+      "actions": [
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep the current loader crew rota while dispatch changes",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for a demonstrated robot before changing the work plan",
+          "tag": "wait-and-see"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say let's see what actually works on site before we panic. Draglines are hard to automate, the ground changes every swing. I'd tell the new guys to keep learning the machine itself and not get distracted."
+          "text": "I would say dispatch may get quicker at booking trucks, but the road still has to be driven. I would ask that nobody removes a driver from a shift because a plan looks neat on a screen."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +158,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'm less sure. They already run autonomous trucks at a couple of the bigger mines, and some places are trialling a system that does the swing and dump on its own while the operator just watches. If that comes here, my job becomes babysitting a screen, which I'd hate."
+          "text": "The office may lose tasks first; I can see that. Robots spread more slowly, so my crew should still have work for a while, but I would watch any trial closely. My lead role is strong, yet a mine can reorganise a shift without asking me."
         },
         {
           "speaker": "interviewer",
@@ -127,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and keep my head down. I'd put a bit more aside each month, maybe five hundred extra, and talk with Arjun about paying the flat off faster. If the company forced the new system on us, I'd learn the minimum, but I'm not going to volunteer for courses."
+          "text": "Now I would keep the current crew rota and ask for the written trial schedule before agreeing to a new process. In the first year I would note any actual reduction in driving shifts and wait for a demonstrated machine before changing my own work plan."
         },
         {
           "speaker": "interviewer",
@@ -135,47 +174,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not scared, just a bad feeling about where it's going."
+          "text": "Uneasy, not frightened. I am more concerned about someone using tidy figures to make a rough shift look simple."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd learn the minimum. What does that look like in practice?"
+          "text": "What would you put on the record?"
         },
         {
           "speaker": "persona",
-          "text": "Doing the one-day training, signing the sheet, and then running it the way I know works until someone tells me I can't. That's what I did with the monitoring screen. I'm not proud of it, but I'm not going to pretend I'm excited."
+          "text": "I would list closed ramps and repair delays against the dispatch plan, with dates. I can explain a delay to management if the facts are written down."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you blame if it went badly?"
+          "text": "What happens if your shifts are cut?"
         },
         {
           "speaker": "persona",
-          "text": "I don't really go in for blaming. The company has to make money or there are no jobs at all, and the government can't stop technology. If anyone, I'd blame the people who rush things without testing them on real ground, because that's how people get hurt."
+          "text": "I would ask the mine for the reason and compare openings at the other pits nearby. I would not resign over a rumour; we have a mortgage to pay."
         }
-      ],
-      "say": "Vera would say to wait and see what actually works on site, pointing out that draglines are hard to automate because the ground changes every swing. She'd tell new operators to keep learning the machine itself.",
-      "think": "Privately she's less sure, knowing that some mines are trialling systems that swing and dump automatically. If it came to her site, she fears her job would turn into babysitting a screen.",
-      "do": "Puts about five hundred extra a month into savings and talks with Arjun about paying off the rental flat faster. Does only the minimum training if the company forces new systems on the crew.",
-      "feel": "Uneasy, with a bad feeling about the direction rather than real fear.",
-      "mood": "uneasy",
-      "quote": "I'm not proud of it, but I'm not going to pretend I'm excited.",
-      "fieldNote": "There's a clear say-think gap: publicly she reassures others that draglines are hard to automate, while privately she knows about trials that do just that. She resists by doing the minimum and saving more. She doesn't blame the company or government, only people who rush untested systems.",
-      "actions": [
-        "save-more",
-        "keep-going",
-        "wait-and-see"
       ]
     },
     "S2": {
+      "say": [
+        "I see **2028 thinking AI** changing reports before robots threaten loader shifts around 2031.",
+        "I want **trial dates** and expected shift changes given to the crew in writing."
+      ],
+      "think": [
+        "I doubt I could master **every system** in only two years.",
+        "I know **savings** would buy time if loader hours fell, but not a permanent replacement job."
+      ],
+      "do": [
+        "**List** mortgage balance and savings with my partner this month.",
+        "**Pay** extra shift income toward the mortgage after 2028, if it comes.",
+        "**Ask** the crew representative to seek published robot trial dates."
+      ],
+      "feel": [
+        "**Anxious** about possible lost shifts around 2031 and a short time to respond."
+      ],
+      "mood": "anxious",
+      "quote": "The savings buy us time, not another permanent job.",
+      "fieldNote": [
+        "**Resistance to tools** is candid; she does not promise rapid technical retraining.",
+        "**Strong savings** softens the shock but does not settle future wages or mortgage payments.",
+        "**Crew information** is her chosen collective response: dates, shift counts and safety responsibility."
+      ],
+      "actions": [
+        "save-more",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Pay extra shift income toward the mortgage if shifts pay extra",
+          "tag": "save-more"
+        },
+        {
+          "text": "Ask the crew representative to seek written robot trial dates",
+          "tag": "collective-action"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we need cool heads, not panic, and the government has to get some kind of support in place quickly. I'm not one for big protests, but I'd back a sensible plan from whoever has one. At work I'd tell the young ones to save every cent."
+          "text": "I would tell the crew the 2028 thinking system will take reports and scheduling before it takes a loader seat. A machine able to handle the ground around 2031 is the part I would take seriously."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +247,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be scared. If robots can do anything and it comes in two years, then the dragline runs itself and so does the rest of the mine, and Arjun's electrical work probably goes too. I've got no other skills on paper, just a diploma in heavy equipment."
+          "text": "I have never used AI and I would not pretend I can learn every new system in two years. My experience should matter during the gap, but by 2031 fewer human shifts are possible. The savings buy us time, not another permanent job."
         },
         {
           "speaker": "interviewer",
@@ -191,7 +255,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop all extra spending straight away, no new car, no renovations. We'd use savings to pay down the house, and we'd lean on the rent from the flat. If the redundancy offers came, I'd probably take mine early and treat it as an early retirement rather than trying to retrain at forty-four."
+          "text": "This month I would get the mortgage balance and our savings onto one sheet with my partner. In the first year after 2028 I would keep my loader shifts, put any extra shift pay into the mortgage, and ask the crew representative to demand the mine publish its robot trial dates."
         },
         {
           "speaker": "interviewer",
@@ -199,47 +263,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I don't usually lose sleep, but I would on this one."
+          "text": "Anxious for the crew and for our household income if machines take shifts around 2031. I can pay the bills for a time, but I do not like the short run-up."
         },
         {
           "speaker": "interviewer",
-          "text": "Two years is short. Is there anything you'd do in the first few months while it's coming?"
+          "text": "What would you ask the representative to demand?"
         },
         {
           "speaker": "persona",
-          "text": "Get our house closer to paid off, that's the main thing. I'm not going to suddenly become a computer person in six months, it's just not who I am. I'd use the time to make the money last, not to reinvent myself."
+          "text": "I want trial dates, the number of driving shifts at risk and who signs off safety. We need facts before a skilled operator is told her shift vanished."
         },
         {
           "speaker": "interviewer",
-          "text": "How would you talk to Nina and Sam about it?"
+          "text": "Why pay down the mortgage instead of taking a course?"
         },
         {
           "speaker": "persona",
-          "text": "I'd keep it simple, tell them we've got savings and the flat and we'll be okay. Nina's thirteen and she reads everything online, so she'd probably know more than me. I'd tell her not to believe the worst videos, and then I'd go and worry in private."
+          "text": "I would not choose a course before I know what jobs the mine will actually keep. Lower debt would give my family more room to decide later."
         }
-      ],
-      "say": "Vera would call for cool heads and quick government support, backing a sensible plan from whoever offers one. She'd tell young workers to save every cent.",
-      "think": "Privately she'd be scared, because the dragline, the mine and probably her husband's electrical work would all be automated at once. Her diploma in heavy equipment leaves her few options on paper.",
-      "do": "Stops all extra spending immediately and uses savings to pay down the house while leaning on rent from the flat. Takes an early redundancy offer and treats it as early retirement rather than retraining.",
-      "feel": "Alarmed and losing sleep, which is rare for her.",
-      "mood": "alarmed",
-      "quote": "I'd use the time to make the money last, not to reinvent myself.",
-      "fieldNote": "Even under the sharpest pressure, Vera's response is to protect what she has rather than change. The rental flat becomes the anchor of her plan. She shields her kids from her worry while admitting she'd lie awake.",
-      "actions": [
-        "cut-spending",
-        "save-more",
-        "retire-early"
       ]
     },
     "S3": {
+      "say": [
+        "I see **2031 plans** changing before the loader faces capable robots around 2034.",
+        "I want a **mine timetable** that shows what happens to lead shifts."
+      ],
+      "think": [
+        "I can lower **mortgage debt** with more warning if bonus pay continues.",
+        "I could seek **nearby pits** if our lead positions shrink, though I prefer my current crew."
+      ],
+      "do": [
+        "**Pay** an extra mortgage instalment from the annual bonus if it arrives.",
+        "**Check** posted lead shifts each month after 2031.",
+        "**Apply** to two nearby mines if my lead hours fall."
+      ],
+      "feel": [
+        "**Uneasy** about eventual crew cuts, with time and local options to respond."
+      ],
+      "mood": "uneasy",
+      "quote": "A better title with worse hours would not help our children.",
+      "fieldNote": [
+        "**Bonus dependence** makes her debt plan conditional rather than guaranteed.",
+        "**Local options** are real enough to investigate if shifts fall, but she values the known crew.",
+        "**Paid instruction** is the minimum she names before operating new equipment."
+      ],
+      "actions": [
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Pay one extra mortgage instalment if the annual bonus arrives",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply to two nearby mines if lead hours fall",
+          "tag": "change-job"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough time to work out a proper plan, so let's not waste it on shouting. I'd want the company and government to agree on redundancy terms and pensions early. I'd tell the crib room that the people who prepare will be fine."
+          "text": "I would tell the crew 2031 changes the reports and plans, while the loader faces those capable robots around 2034. That longer stretch is enough to make the mine show us a real timetable."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +336,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, five years helps. I'd be forty-eight, the house would be nearly paid, Nina would be finishing school. I still wouldn't retrain, but I could time my exit instead of having it timed for me."
+          "text": "Five years gives us time to reduce the mortgage, but I cannot assume the mine will keep every lead position. I could work at another nearby pit if ours cuts crews, though I would rather stay with people whose habits I know. I am not going to spend our savings on training without a clear job attached."
         },
         {
           "speaker": "interviewer",
@@ -255,7 +344,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and put more into the house each year, aiming to clear it by about year four. We'd think about buying a second small rental with the savings, if the prices made sense, so there's more income without me working. And I'd want a clear redundancy deal in writing for long-serving operators."
+          "text": "This year I would pay one extra mortgage instalment from the annual bonus if the bonus comes. In the first year after 2031 I would check the posted shifts each month; if my lead hours fall, I would apply to two nearby mines for equipment lead jobs."
         },
         {
           "speaker": "interviewer",
@@ -263,47 +352,72 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but it's an organised kind of anxious. I'd have a list."
+          "text": "Uneasy, with some control. The extra years mean I can wait for evidence without sitting idle on the mortgage."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd buy a second rental. What happens if robots take everyone's jobs and nobody can pay rent?"
+          "text": "How would you choose another mine?"
         },
         {
           "speaker": "persona",
-          "text": "That's a fair point, and I hadn't thought about it like that. Maybe it's a bad idea then. I'd probably just stick with paying off the house and keeping the cash, because cash is cash."
+          "text": "I would call a former coworker at the north pit about its roster, then read the actual job notice. A better title with worse hours would not help our children."
         },
         {
           "speaker": "interviewer",
-          "text": "What would the five years actually feel like day to day?"
+          "text": "Would you try the new equipment?"
         },
         {
           "speaker": "persona",
-          "text": "Probably mostly normal, honestly, until the last year or two. I'd keep running the dragline and training Rhys, even if I knew he might never get to do it for long. It's a strange thing, teaching someone a job you think will vanish."
+          "text": "I would watch a trial from the ground and ask the mechanic what failed. I would operate it only after proper paid instruction and a clear safety sign-off."
         }
-      ],
-      "say": "Vera would say five years is enough time for a proper plan and shouldn't be wasted on shouting. She'd want early agreement on redundancy terms and pensions, telling colleagues that those who prepare will be fine.",
-      "think": "Privately she thinks five years helps, because the house would be nearly paid and her daughter finishing school. She still wouldn't retrain but could time her own exit.",
-      "do": "Puts more into the house each year to clear it by about year four and keeps cash on hand. Pushes for a written redundancy deal for long-serving operators and drops the idea of a second rental after thinking it through.",
-      "feel": "Anxious in an organised way, with a list rather than panic.",
-      "mood": "anxious",
-      "quote": "It's a strange thing, teaching someone a job you think will vanish.",
-      "fieldNote": "When challenged about the second rental, Vera changed her mind on the spot, which shows her practical streak. Five years lets her plan an exit on her terms instead of retraining. Her quiet grief at training Rhys for a vanishing job was the most personal moment.",
-      "actions": [
-        "save-more",
-        "retire-early",
-        "keep-going"
       ]
     },
     "S4": {
+      "say": [
+        "I want **ten years** used for a proper mine fleet plan, not a last-minute announcement.",
+        "I separate **2036 reports** from the possible 2039 change to loader work."
+      ],
+      "think": [
+        "I could carry a **smaller mortgage** by age 56 if lead pay continues.",
+        "I cannot count on **retirement** before seeing the pension and mortgage figures."
+      ],
+      "do": [
+        "**Keep** supervising loader shifts on the current schedule.",
+        "**Review** the mortgage balance and savings with my partner each January.",
+        "**Compare** the mine fleet plan with our pension statement after 2036."
+      ],
+      "feel": [
+        "**Calm** about the near years, while watchful about eventual robot fleets."
+      ],
+      "mood": "calm",
+      "quote": "Ten years is time to do the sums rather than guess.",
+      "fieldNote": [
+        "**Future ages** are calculated correctly: 53 at thinking AI, 56 at capable robots.",
+        "**Senior pay** and strong savings allow a calm near-term response without assuming retirement.",
+        "**Pension figures** are required before she would accept fewer shifts."
+      ],
+      "actions": [
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep supervising loader shifts on the current schedule",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait for mine fleet and pension figures before reducing shifts",
+          "tag": "wait-and-see"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say a decade gives everyone time, so there's no need for drama. I'd want the mines and government to agree a timeline, so families can plan. I'd keep saying the same thing I always do: save, plan, don't panic."
+          "text": "I would say a decade gives the mine no excuse to spring a robot fleet on its operators. The thinking systems reach our reports by 2036, and the loader work has until roughly 2039 in this picture."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +425,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years means I'd be fifty-three, the house paid off, both kids done with school, and I'd have the flat. I'd probably just work until the dragline goes and then stop. That's not so different from what I'd planned anyway, with coal winding down."
+          "text": "I would be 53 in 2036 and 56 in 2039. I could have a much smaller mortgage by then if pay remains steady, and nearby mines give me choices. I still would not call retirement certain until I see the pension figure."
         },
         {
           "speaker": "interviewer",
@@ -319,7 +433,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep doing my job and keep saving. Pay the house off by year six or seven, keep the flat, and start talking with Arjun about stopping work in our early fifties. I'd keep training Rhys and the others while there's a dragline to train on."
+          "text": "I would keep supervising loaders and set a mortgage review with my partner every January. In the first year after 2036 I would ask for the mine fleet plan and compare it with our pension statement before accepting fewer shifts."
         },
         {
           "speaker": "interviewer",
@@ -327,36 +441,24 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but only a little. Mostly I'd feel like I'd been right to plan."
+          "text": "Mostly calm for the next few years, with a watchful eye on the far end. Ten years is time to do the sums rather than guess."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you do anything new in those ten years?"
+          "text": "What would be on the January sheet?"
         },
         {
           "speaker": "persona",
-          "text": "I've thought about it, maybe something with my hands, like woodwork. Not to earn, just to have something to do. But I'm not going to start a new career at fifty, I'd rather spend the time with my family."
+          "text": "I would write down the remaining mortgage, savings and the children’s school costs. If the balance is coming down, I would keep the same payment rather than chase a risky investment."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want for Rhys and the other young operators?"
+          "text": "What might change your mind about retiring?"
         },
         {
           "speaker": "persona",
-          "text": "Time to find something else while they're still young enough, and some help with it. I'd tell Rhys straight: learn the dragline because it's a good trade now, but have a backup by thirty. He's got time I won't need."
+          "text": "A confirmed pension and a paid-off mortgage would make fewer shifts possible. If either number is short, I would keep looking at lead work at nearby mines."
         }
-      ],
-      "say": "Vera would say a decade gives everyone time and there's no need for drama. She'd want mines and government to agree a timeline so families can plan, repeating her usual advice to save and not panic.",
-      "think": "Privately she'd be 53 with the house paid and the kids through school, plus the flat. She'd work until the dragline goes and then stop, which matches her existing plans for coal's decline.",
-      "do": "Keeps working and saving, aiming to clear the house by year six or seven while keeping the rental flat. Talks with Arjun about stopping work in their early fifties and keeps training younger operators.",
-      "feel": "Slightly uneasy, but mostly reassured that her years of planning were right.",
-      "mood": "uneasy",
-      "quote": "Learn the dragline because it's a good trade now, but have a backup by thirty.",
-      "fieldNote": "Ten years lines up neatly with Vera's existing plan to leave as coal winds down. She sees no need to change herself, only to keep saving and time her exit. Her advice to Rhys shows she does think about the young, even if she won't act politically.",
-      "actions": [
-        "keep-going",
-        "save-more",
-        "retire-early"
       ]
     }
   },
@@ -367,7 +469,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. Everything goes at once, mine and Arjun's, before we've paid off the house. What would help is a fair redundancy payment that counts the years we've put in, and some kind of basic support from the government for people too old to start again but too young to retire."
+      "text": "AGI by 2028 worries me most because the gap between changed scheduling and capable loader robots is short. Written trial dates and the number of shifts at risk would let us plan without guessing. Mortgage payments would be easier if the mine gave us facts early."
     },
     {
       "speaker": "interviewer",
@@ -375,11 +477,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask whether I'd want a robot to do this job. And the honest answer is part of me would, on a night shift in the rain at three in the morning. But not the whole job, never the whole job."
+      "text": "You did not ask who will teach the younger operators if crews shrink. My experience is useful only if there is time to pass it on before the roster is cut."
     }
   ],
-  "headlineQuote": "Part of me would, on a night shift in the rain at three in the morning. But not the whole job, never the whole job.",
-  "portrait": "Vera Patel is a 43-year-old senior dragline operator at an open-cut coal mine, one of only six people on site who can run the giant machine. She has an electrician husband, two kids, a mortgage and a rental flat her father talked her into buying. She's pragmatic, distrusts hype and alarm alike, and has never used an AI tool. Across the scenarios she protects what she has rather than changing herself, cutting spending, paying down the house and timing her own exit. The two-year AGI picture alarms her because her job and her husband's would go together, while ten years fits the plan she already had for coal's decline.",
-  "biggestWorry": "AGI by 2028 worries her most, because her job and her husband's would disappear at once before the house is paid off.",
-  "whatWouldHelp": "A fair redundancy payment that counts long service, and basic government support for people too old to start again but too young to retire."
+  "headlineQuote": "My experience is useful only if there is time to pass it on before the roster is cut.",
+  "portrait": [
+    "**Vera, 43**, leads loader operators at a large mine and trusts ground checks more than polished schedules.",
+    "**High pay** and over eight months of basic costs saved give her room to absorb short disruptions while supporting two children.",
+    "**Familiar methods** suit her; she never uses AI and demands evidence before accepting new equipment.",
+    "**Fast AGI** worries her because reports change by 2028 and capable loader robots may threaten shifts around 2031.",
+    "**Longer warning** lets her reduce mortgage debt and inspect nearby mine openings without assuming an early pension."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** leaves the shortest gap between changed scheduling and possible cuts to loader shifts."
+  ],
+  "whatWouldHelp": [
+    "**Written robot trial dates** and expected shift numbers would let the crew and her family plan."
+  ]
 }

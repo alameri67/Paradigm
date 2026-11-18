@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions or any party. Everything you tell me is confidential, so you can tell me what you'd say in public and, separately, what you really think."
+      "text": "Hello, thank you for agreeing to this. I'm a field researcher with the Work Futures Panel. We're independent, with no links to companies, unions, parties or government. Everything is confidential, so you can tell me both what you'd say out loud and what you really think. Is that okay?"
     },
     {
       "speaker": "persona",
-      "text": "Okay. I'm not much of a talker, so you might have to drag it out of me."
+      "text": "Yes, that's fine. I'm not much of a talker, but I'll try."
     },
     {
       "speaker": "interviewer",
-      "text": "Let's start simple. Walk me through a normal working day."
+      "text": "That's fine. What does a normal working day look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I'm on a blast-hole drill at the Marrow Creek coal mine, open cut. The engineers give us a pattern, a grid of holes, and I drill them to the right depth so the blast crew can load them with explosives. I'm still learning. Last month I drilled a whole row half a metre too shallow and had to go back. I like it because it's the same every day: line up, drill, log the depth, move. What wears me out is the noise through the earmuffs and the night roster."
+      "text": "I run a front-end loader at an open-cut coal mine, which means a big machine with a bucket on the front that loads coal and dirt into trucks. I'm on day shift this month, so I'm up at four, on the bus at five, and in the seat by six. I'm still the slowest loader on my crew, and the shift boss, Gary, times us, so I feel it. I like that it's simple: fill the truck, next truck, and nobody needs me to be clever."
     }
   ],
   "scenarios": {
@@ -36,11 +36,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\""
         },
         {
           "speaker": "persona",
-          "text": "I wouldn't say much, to be honest. Maybe, \"Well, that's that,\" if someone brought it up at lunch. I don't post about stuff online."
+          "text": "Good. That suits me. I don't use any of that AI stuff, so I'd be glad it went nowhere."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it at the bus stop, that all the fuss was for nothing. I don't post online much, so I'd just shrug and say back to work."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It'd mean I can keep doing what I'm doing. That suits me. I'm not someone who wants things to change every five minutes."
+          "text": "It means AI isn't my problem, but the mine still is. Nobody at the coal mine is scared of a chatbot. We're scared of the closure date the company keeps not telling us. There's talk it closes in eight or nine years, and I rent alone, so my pay is all there is."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Nothing different. Keep drilling, keep putting 300 a fortnight into the house fund. Nico and I want a deposit in about three years, so I'd just stick to that."
+          "text": "I'd keep turning up and try to get faster on the loader so Gary stops timing me. I'd keep putting a bit aside each fortnight, I've got about two months now and I'd like four. I'd probably skip the trip with my cousins at Easter to do it."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Relieved, maybe, though I wasn't that worried to begin with."
+          "text": "A bit uneasy, the same as always. Not because of AI, because coal."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you weren't worried to begin with. Is there anything at Marrow Creek that has changed because of new technology?"
+          "text": "How do you hear about the closure date?"
         },
         {
           "speaker": "persona",
-          "text": "The drills got GPS a couple of years back, before I started. The old guys say it used to be string lines and paint. Now the screen tells you where the hole goes, and I just have to not mess it up."
+          "text": "Rumours, mostly. Someone's brother works in the office, and he heard 2034, and then someone else heard 2032. The company says nothing's decided, which nobody believes."
         },
         {
           "speaker": "interviewer",
-          "text": "Does the GPS make you feel more or less secure in your job?"
+          "text": "If the closure came, where would you go?"
         },
         {
           "speaker": "persona",
-          "text": "Never really thought about it. More, I suppose, because it makes the job easier to learn. I'd be worse without it."
+          "text": "There are a couple of other mines within two hours, and the quarry near my mum's place. I'd try those first, I wouldn't want to leave the area."
         }
       ],
-      "say": "I wouldn't say much, maybe just that's that if someone brought it up at the lunch break. I don't post about things online.",
-      "think": "Privately it means I can keep doing what I'm doing, which suits me fine. I'm not someone who wants things to change every five minutes.",
-      "do": "Keeps drilling and keeps putting 300 a fortnight into the house deposit fund. Sticks to the plan of buying with her partner Nico in about three years.",
-      "feel": "Calm, maybe a little relieved.",
-      "mood": "calm",
-      "quote": "Now the screen tells you where the hole goes, and I just have to not mess it up.",
-      "fieldNote": "She is quiet and literal, and needed short prompts to open up. Routine is what she likes about the job, and this picture protects it. She has a clear money plan, a house deposit in three years, which anchors everything else.",
+      "say": [
+        "All the **AI fuss** was for nothing, so back to work.",
+        "She'd say it at the **bus stop**, not online, and shrug it off."
+      ],
+      "think": [
+        "AI isn't her problem, but the **coal mine closure** still is.",
+        "She rents alone, so **her pay** is all there is."
+      ],
+      "do": [
+        "Get **faster** on the loader so the shift boss stops timing her.",
+        "Grow savings from **two months** to four.",
+        "Skip the **Easter trip** with her cousins to save."
+      ],
+      "feel": [
+        "**Uneasy** as usual, about coal rather than AI."
+      ],
+      "mood": "uneasy",
+      "quote": "Nobody at the coal mine is scared of a chatbot. We're scared of the closure date the company keeps not telling us.",
+      "fieldNote": [
+        "Her steady background worry is the **closure rumour**, not technology.",
+        "She lives alone, so a **single income** carries all the risk.",
+        "She wants to **stay local**, near her mother, if the mine closes."
+      ],
       "actions": [
         "keep-going",
-        "save-more"
+        "save-more",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Get faster on the front-end loader so Gary stops timing her",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Grow savings from two months of costs to four",
+          "tag": "save-more"
+        },
+        {
+          "text": "Skip the Easter trip with her cousins",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\""
         },
         {
           "speaker": "persona",
-          "text": "Probably, \"We'll see.\" There's always talk about the next big thing coming to the mine, and most of it comes slower than people say."
+          "text": "Robots spreading slowly. Slowly to who, though? The trucks here already have collision sensors."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's not for me, I'll leave it to the young ones who like gadgets. I'd say it at work and leave it at that."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +158,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think the drills would be among the first to go automatic. There are already drills that run themselves at some mines, you just watch them from a screen. I'd be on the list, being junior."
+          "text": "If I'm honest, I'd worry the company picks the machine over me. I've never typed a single question into an AI, and I'm not keen to start because a robot wants my loader. A loader is one of those jobs that looks easy to automate, and I'm the slowest."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I'd wait and see what Marrow Creek actually did before I did anything. I'd bump the savings up to 400 a fortnight, just in case, and cut back on takeaway. I wouldn't start looking elsewhere until something was in writing."
+          "text": "I'd keep my head down and wait to see what the company actually does before I spend money on courses. I'd cut back, no new phone, no takeaway, and get savings to four months. If they offered training I'd go, but I wouldn't chase it."
         },
         {
           "speaker": "interviewer",
@@ -127,47 +174,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not losing sleep, but it'd be in the back of my head."
+          "text": "Worried, in my stomach. I don't sleep well before a shift as it is."
         },
         {
           "speaker": "interviewer",
-          "text": "If they offered you training to supervise a self-driving drill from a screen, would you take it?"
+          "text": "You said you'd go to training if offered. Would you, really?"
         },
         {
           "speaker": "persona",
-          "text": "I'd have to. But I'd hate it. I'm bad with computers. I can feel when the drill bit hits a soft patch through my seat, and a screen can't give me that."
+          "text": "Probably. I'd hate it, and I'd sit at the back, but I'd go. I'm stubborn, not stupid."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you blame if it cost you your job?"
+          "text": "Who would you talk to about it?"
         },
         {
           "speaker": "persona",
-          "text": "I don't know if blame is the word. Companies cut costs, that's what they do. I'd be annoyed, but I wouldn't be marching about it."
+          "text": "My mum. She worked in the canteen at the old power station until it shut, so she knows what it's like. She'd tell me to stop worrying and save."
         }
       ],
-      "say": "I'd say we'll see, because there's always talk of the next big thing at the mine, and most of it comes slower than people say.",
-      "think": "Privately I think drills would be among the first machines to go automatic, since self-running drills already exist. Being junior, I'd be on the list.",
-      "do": "Waits to see what the mine actually does before acting. Raises savings from 300 to 400 a fortnight, cuts back on takeaway, and won't look elsewhere until something is in writing.",
-      "feel": "Uneasy, a worry at the back of her head but not losing sleep.",
-      "mood": "uneasy",
-      "quote": "I can feel when the drill bit hits a soft patch through my seat, and a screen can't give me that.",
-      "fieldNote": "She knows automated drills exist and sees herself at risk, yet her instinct is to wait for something in writing. She would reluctantly take screen training. She doesn't really blame anyone, seeing cost-cutting as just what companies do.",
+      "say": [
+        "AI is **not for me**; let the young ones with gadgets handle it.",
+        "She'd say it once at work and **leave it** there."
+      ],
+      "think": [
+        "The company may **pick the machine** over the slowest operator.",
+        "A loader job looks **easy to automate**, which frightens her."
+      ],
+      "do": [
+        "**Wait and see** what the company does before paying for courses.",
+        "Cut takeaways and phone upgrades to reach **four months** of savings.",
+        "Attend company training if offered, but **not chase** it."
+      ],
+      "feel": [
+        "**Worried** in her stomach and sleeping badly before shifts."
+      ],
+      "mood": "anxious",
+      "quote": "I've never typed a single question into an AI, and I'm not keen to start because a robot wants my loader.",
+      "fieldNote": [
+        "She sees herself as the **most replaceable**: slowest operator in a job that looks automatable.",
+        "She resists AI but admits she'd **attend training** if offered.",
+        "Her **mother**, who lived through a power station closure, is her main support."
+      ],
       "actions": [
         "wait-and-see",
-        "save-more",
-        "cut-spending"
+        "cut-spending",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Wait to see the company's plans before paying for courses",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Stop takeaways and skip the new phone",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Build savings up to four months of costs",
+          "tag": "save-more"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Next one, AGI by 2028. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd probably say it's mad, it can't be real. Then I'd stop talking about it, because talking doesn't help."
+          "text": "Two years. That's before they even close the mine. That's scary."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Out loud I'd say someone in charge needs to sort this out, government or the company. I'm not political, but that's too fast for normal people."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +260,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Truthfully, I think I'd lose my job and the house plan would be gone. Nico's job too, probably, if robots can change tyres. Three years of saving for a deposit, and it'd turn into the money we live on while we work out what's next."
+          "text": "Off the record, I think the robots get my loader around 2031, and I don't know what I'd do. I'd fall back on family. My mum still has my old bedroom, and I can see myself sleeping in it again by thirty."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +268,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stop the house fund and keep it as an emergency fund. Cut the phone plan, the streaming, the weekends away. If it got bad we'd give up our rental and move back in with my parents for a bit, they've got the granny flat. I'd apply for whatever help the government put on."
+          "text": "I'd stop all spending that isn't rent and food, and get every dollar I can into savings before 2031. I'd ask about jobs at the quarry and the other mines, even though they'd be going the same way. And I'd talk to my mum about moving back in if it came to it."
         },
         {
           "speaker": "interviewer",
@@ -191,47 +276,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Scared, and a bit sick. I like knowing what's coming, and this is the opposite."
+          "text": "Sick, honestly. I don't have a plan, and I'm not someone who makes plans fast."
         },
         {
           "speaker": "interviewer",
-          "text": "What would your parents say?"
+          "text": "What would you look for if not mining?"
         },
         {
           "speaker": "persona",
-          "text": "Dad would say he told me to go to the post office like my aunt. Mum would make up the granny flat without saying anything. That's how they are."
+          "text": "I don't know. Something with my hands, maybe the council roads crew, or aged care. I've never thought about it because I thought mining was steady."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you try to retrain into something else in those two years?"
+          "text": "Is there anyone at the mine you'd turn to?"
         },
         {
           "speaker": "persona",
-          "text": "I wouldn't know what to pick. If AI can do almost anything, then picking a course is just guessing. I'd rather keep the money than spend it on guessing."
+          "text": "Gary, maybe, even though he times me. He's been through two layoffs, and he always knows which other site is hiring."
         }
       ],
-      "say": "I'd say it's mad and can't be real, then stop talking about it because talking doesn't help. She keeps her reactions out of public view.",
-      "think": "Privately I think I'd lose my job and the house plan would be gone, with my partner's job at risk too. Three years of deposit savings would become living money.",
-      "do": "Stops the house fund and treats it as an emergency fund, cutting the phone plan, streaming and weekends away. If it gets bad, moves into her parents' granny flat and applies for government help.",
-      "feel": "Scared and a bit sick, because she likes knowing what's coming.",
+      "say": [
+        "**Someone in charge** needs to sort this out.",
+        "This is **too fast** for normal people, even if she isn't political."
+      ],
+      "think": [
+        "Robots take her **loader** around 2031, and she has no plan.",
+        "She'd fall back on **family**, possibly moving home by thirty."
+      ],
+      "do": [
+        "Cut all spending except **rent and food**.",
+        "Ask about jobs at the **quarry** and nearby mines.",
+        "Talk to her mother about **moving back** home."
+      ],
+      "feel": [
+        "**Sick** and without a plan, and slow to make one."
+      ],
       "mood": "alarmed",
-      "quote": "Three years of saving for a deposit, and it'd turn into the money we live on while we work out what's next.",
-      "fieldNote": "The deposit fund turning into survival money was the concrete loss she kept returning to. She refuses to spend on retraining because she sees picking a course as guessing. Her parents are her fallback, described with quiet affection.",
+      "quote": "My mum still has my old bedroom, and I can see myself sleeping in it again by thirty.",
+      "fieldNote": [
+        "She expects to **lose the job** and has no alternative career in mind.",
+        "The **family home** is her real safety net.",
+        "She'd lean on her **shift boss** for leads despite resenting his timing."
+      ],
       "actions": [
         "cut-spending",
-        "family-plans",
+        "change-job",
         "seek-support"
+      ],
+      "steps": [
+        {
+          "text": "Cut every cost except rent and food",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Ask about jobs at the quarry and the nearby mines",
+          "tag": "change-job"
+        },
+        {
+          "text": "Talk to her mum about moving back into her old bedroom",
+          "tag": "seek-support"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\""
         },
         {
           "speaker": "persona",
-          "text": "Same, I wouldn't say much. Maybe that we've got a few years, so no point panicking yet."
+          "text": "Five years. That's about when the closure rumour lands anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the same, that someone needs to plan for towns like ours. Maybe I'd sign a petition if someone handed it to me."
         },
         {
           "speaker": "interviewer",
@@ -239,7 +362,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years is enough to get the deposit, but then what's the point of a mortgage if the job goes? I think I'd keep saving and just not buy. Sit on the money."
+          "text": "Privately, I still think I'm the first to go. Five years sounds like a lot until you remember I'm still the slowest loader operator on my crew. Having time doesn't help much if I don't use it, and I know myself."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +370,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep drilling and keep saving, 400 a fortnight. Put the house on hold until we see what the mine does. Maybe ask HR if there's a maintenance or blast crew opening, since those seem harder for a robot, but I wouldn't push it."
+          "text": "I'd try to get my haul truck ticket too, so I'm not just a loader. I'd keep saving and aim for six months by 2030. And I'd ask my mum's friend who manages the council roads crew if they'd take me on."
         },
         {
           "speaker": "interviewer",
@@ -255,47 +378,90 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. More than the slow one, less than the fast one."
+          "text": "Still alarmed. I lie awake doing sums."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd hold off on buying. How would Nico feel about that?"
+          "text": "What sums?"
         },
         {
           "speaker": "persona",
-          "text": "He'd be upset. He's been sending me listings every Sunday. I'd be the one saying no to every house he sends, and I'd hate being that person."
+          "text": "Rent is about a third of my pay. If I lose the mine wage and get a roads job, it's maybe two-thirds of the money, so the rent eats nearly half. That's where the panic starts."
         },
         {
           "speaker": "interviewer",
-          "text": "You said blast crew might be harder for a robot. What made you think that?"
+          "text": "Would you move somewhere cheaper?"
         },
         {
           "speaker": "persona",
-          "text": "The blast crew handle explosives, and people get nervous about machines doing that. But I'm only guessing. In five years they'd probably sort that too."
+          "text": "Only if I had to. My mum's here and she's getting older, so I'd rather move in with her than move away."
         }
       ],
-      "say": "I wouldn't say much, maybe that we have a few years so there's no point panicking yet. She prefers to keep her worries to herself.",
-      "think": "Privately five years is enough to save the deposit, but she doubts the point of a mortgage if the job could go. She'd keep saving and not buy.",
-      "do": "Keeps drilling and saving 400 a fortnight while putting the house purchase on hold. Might ask HR about a maintenance or blast crew opening, but wouldn't push hard.",
-      "feel": "Anxious, somewhere between the slow and fast pictures.",
-      "mood": "anxious",
-      "quote": "I'd be the one saying no to every house he sends, and I'd hate being that person.",
-      "fieldNote": "Her biggest cost here is relational: saying no to every house listing her partner sends. She floated a move to the blast crew but immediately doubted it. She stays cautious and holds cash rather than committing to anything.",
+      "say": [
+        "Someone needs to **plan for towns** like ours.",
+        "She'd **sign a petition** for the town if someone handed her one."
+      ],
+      "think": [
+        "She expects to be **first to go** as the slowest operator.",
+        "Having time **doesn't help** if she doesn't use it."
+      ],
+      "do": [
+        "Get a **haul truck ticket** to widen her options.",
+        "Save towards **six months** of costs by 2030.",
+        "Ask about a job on the **council roads** crew."
+      ],
+      "feel": [
+        "**Alarmed**, lying awake doing rent sums."
+      ],
+      "mood": "alarmed",
+      "quote": "Five years sounds like a lot until you remember I'm still the slowest loader operator on my crew.",
+      "fieldNote": [
+        "Five years doesn't calm her, because she **doubts herself** to use the time.",
+        "Her sums show a council job would leave **rent** eating half her pay.",
+        "Caring for her **ageing mother** ties her to the town."
+      ],
       "actions": [
+        "retrain",
         "save-more",
-        "family-plans",
-        "wait-and-see"
+        "change-job",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Get a haul truck ticket on top of the loader ticket",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save up to six months of costs by 2030",
+          "tag": "save-more"
+        },
+        {
+          "text": "Ask about a job on the council roads crew",
+          "tag": "change-job"
+        },
+        {
+          "text": "Sign a petition for a town jobs plan",
+          "tag": "collective-action"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Last one, AGI by 2036. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fifth and last picture is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a long time and a lot can change. That's what my dad says about everything, so I'd probably end up saying it too."
+          "text": "Ten years. That's long enough that it isn't next week's problem."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's a long way off and there's time to work it out. I wouldn't say much more than that."
         },
         {
           "speaker": "interviewer",
@@ -303,7 +469,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think I'd be fine for most of it. I'd be thirty-seven at the end. That's a long time to keep drilling and saving, and maybe by then I'd have figured out something else."
+          "text": "Really, I think I could manage. Ten years is enough time to learn a new job, even for someone like me who hates learning new things. And the coal mine probably closes first anyway, so I'd have to move on regardless."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +477,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going like normal for the first few years. We'd probably still buy the house, but a cheaper one so the mortgage is small. I'd keep the savings going and not do anything big until it was clearer."
+          "text": "I'd start looking at a trade around 2028 or 2029, probably plant mechanic, fixing machines instead of driving them. I'd save steadily, maybe buy a cheap unit near mum's place with a deposit. And I'd keep driving until the mine shuts."
         },
         {
           "speaker": "interviewer",
@@ -319,37 +485,66 @@
         },
         {
           "speaker": "persona",
-          "text": "A bit uneasy. Mostly okay."
+          "text": "Anxious still, because I'd have to change, and I hate change. But not up at night."
         },
         {
           "speaker": "interviewer",
-          "text": "You said maybe you'd have figured out something else. Any idea what?"
+          "text": "Why a mechanic, of all things?"
         },
         {
           "speaker": "persona",
-          "text": "Not really. Nico says I should do something with numbers since I log all the depths so neatly. I don't know. Something steady, anyway."
+          "text": "My dad fixed cars in our garage when I was little, and I used to hand him the spanners. Fixing things makes sense to me more than screens do."
         },
         {
           "speaker": "interviewer",
-          "text": "So in ten years, would you rather the change came early or late?"
+          "text": "Would robots not fix machines too, by 2039?"
         },
         {
           "speaker": "persona",
-          "text": "Late, definitely. I'd rather have ten good years drilling than five good years and five years worrying. Even if it ends the same."
+          "text": "Maybe. But by then I'd be thirty-nine with a unit paid down, and I'd deal with it then. I can't worry about everything."
         }
       ],
-      "say": "I'd say ten years is a long time and a lot can change. That's what my dad says about everything, so I'd probably end up saying it too.",
-      "think": "Privately she'd be fine for most of it and would be thirty-seven at the end. That's a long time to keep drilling and saving and maybe find something else.",
-      "do": "Carries on as normal for the first few years. Still buys a house with her partner but picks a cheaper one with a small mortgage, and keeps saving without making any big moves.",
-      "feel": "A bit uneasy but mostly okay.",
-      "mood": "uneasy",
-      "quote": "I'd rather have ten good years drilling than five good years and five years worrying.",
-      "fieldNote": "Ten years lets her plans go ahead in a smaller, safer form, a cheaper house. She has no clear idea of what she'd do next and doesn't pretend to. Her preference for late change over early warning sums up her outlook.",
+      "say": [
+        "It's a **long way off**, and there's time to work it out.",
+        "She wouldn't say much more than that out loud, keeping it **low-key**."
+      ],
+      "think": [
+        "Ten years is enough to **learn a new job**, even for her.",
+        "The **coal mine** probably closes first, forcing a move regardless."
+      ],
+      "do": [
+        "Start a **plant mechanic** trade around 2028 or 2029.",
+        "Save for a **unit deposit** near her mother's place.",
+        "Keep driving the loader until the **mine shuts**."
+      ],
+      "feel": [
+        "**Anxious** about having to change, but not losing sleep."
+      ],
+      "mood": "anxious",
+      "quote": "Ten years is enough time to learn a new job, even for someone like me who hates learning new things.",
+      "fieldNote": [
+        "Ten years lets her imagine a **trade**, plant mechanic, linked to memories of her father.",
+        "She expects the **job change** anyway, because of coal closure.",
+        "She **defers** the robot risk to later, saying she can't worry about everything."
+      ],
       "actions": [
-        "keep-going",
+        "retrain",
         "save-more",
-        "family-plans",
-        "wait-and-see"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Start a plant mechanic trade around 2028 or 2029",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save a deposit for a cheap unit near her mum",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep running the loader until the coal mine closes",
+          "tag": "keep-going"
+        }
       ]
     }
   },
@@ -360,7 +555,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The fast one. I'd want some steady money while we sort things out, from the government or the company, I don't mind which. And someone telling us straight what jobs will actually still be around, so I'm not guessing."
+      "text": "AGI by 2028. Two years, with robots three years later, is just not enough for someone like me. I picked the coal mine because it was steady, and now steady is the one thing nobody can promise. What would help is a straight answer on dates and someone paying for a trade while I'm still working."
     },
     {
       "speaker": "interviewer",
@@ -368,11 +563,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about Nico much. Everyone talks about my job, but if his goes too, there's no one in our house earning."
+      "text": "Maybe about women in mining. It took me years to get this job, and if the jobs go, the women will be the first ones nobody rehires."
     }
   ],
-  "headlineQuote": "Everyone talks about my job, but if his goes too, there's no one in our house earning.",
-  "portrait": "Carla Chen is 27 and drills blast holes at the Marrow Creek open-cut coal mine, still learning and still occasionally drilling a row too shallow. She lives with her partner Nico, who works at a tyre shop, and they've been saving 300 a fortnight towards a house deposit. She is quiet, practical, avoids risk and never uses AI, and doesn't really blame anyone for change. She stays calm in the plateau picture, moves to uneasy and then alarmed as change speeds up, and responds every time by saving, holding off on big decisions and waiting for something in writing.",
-  "biggestWorry": "AGI by 2028 worries her most, because both she and her partner could lose their income with the house deposit turning into living money.",
-  "whatWouldHelp": "Steady money from the government or the company while they sort things out, and straight information about which jobs will still exist."
+  "headlineQuote": "I picked the coal mine because it was steady, and now steady is the one thing nobody can promise.",
+  "portrait": [
+    "Carla is a **27-year-old loader operator** at an open-cut coal mine, living alone and renting.",
+    "She has about **two months saved**, never uses AI and dislikes change.",
+    "Her steady worry is the **closure rumour**, so she is uneasy even when AI fizzles.",
+    "In fast pictures she has **no plan** and would move back in with her mother.",
+    "Given ten years, she imagines becoming a **plant mechanic**, like her father."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because two years is too little for someone slow to change."
+  ],
+  "whatWouldHelp": [
+    "**Straight answers** on closure dates and paid **trade training** while still employed."
+  ]
 }

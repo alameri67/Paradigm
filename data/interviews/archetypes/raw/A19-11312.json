@@ -1,0 +1,549 @@
+{
+  "id": "A19-11312",
+  "archetype": "A19",
+  "job": "Mechanic",
+  "sector": "Other services",
+  "name": "Omar Alvarez",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "low",
+    "cushion": "strong",
+    "outlook": "progressive",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for talking with me, Omar. I'm with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions or parties. What you tell me is confidential, so feel free to say both what you'd say in public and what you really think. Could you start by describing a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I work in the service department at a big brand dealership on Harbour Road, fourteen bays, all the same make. Mornings are mostly booked services and software updates, afternoons are whatever the service advisors sell the customer on the phone. We're paid partly on flat-rate hours, so if a job's booked at one hour and I take ninety minutes, that's on me. I'm still slow, so I lose a bit, but the base pay at a dealership is better than most independents."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What do you like about it, and what wears you out?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I like the clean workshop and the fact that there's a proper union rep, Dev, who actually fights for us. What wears me out is the manufacturer laptop, the one you plug in to read faults, because half the time it tells you to replace a whole part when an older mechanic would just fix a wire. Lena, my partner, is a nurse on nights, so we pass each other in the kitchen most weeks."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The first picture is called AI Plateau. Here's the card: “Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.” If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's what I expected: some handy tricks, nothing that changes who fixes the car. I do use a chat assistant now and then to check a torque setting or tidy up a message to my manager, and that's about all it's good for. I'd probably say that at the break table."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Honestly, I'd be fine. Dealership work is steady, the bays are always full, and Lena's job is as safe as jobs get. The only thing that bugs me is that I'm still slow on flat-rate jobs, and that's my problem, not the AI's."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep my head down and get faster. I'd ask Dev to help me get on the manufacturer's level-two course next spring, which the dealership pays for. We'd keep putting six hundred a month towards a house deposit like we already do."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm. It's the most normal of the five, isn't it? I'd sleep fine."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Is any of your day routine screen work that even a modest AI could take over?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The job cards, maybe. We type up what we found and what we did, and the service advisors turn that into something the customer reads. If AI wrote that bit, I'd save ten minutes a job, which on flat rate is actually money in my pocket."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You mentioned the flat-rate pressure. Is that a worry already?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A small one. Last month I lost about four hours of pay because I overran on two timing chains. It's not keeping me up, but I know I need to get quicker before they notice."
+        }
+      ],
+      "say": [
+        "I'd say AI turned out to be **handy tricks**, not something that changes who fixes cars.",
+        "I'd admit I use a **chat assistant** for torque settings and tidying messages, and that's all."
+      ],
+      "think": [
+        "Dealership work is **steady** and my partner's nursing job is as safe as they come.",
+        "My real problem is being **slow on flat-rate** jobs, which costs me pay."
+      ],
+      "do": [
+        "Ask the union rep for a place on the **level-two course** next spring.",
+        "Keep putting **six hundred a month** towards a house deposit with his partner."
+      ],
+      "feel": [
+        "**Calm**, the most normal picture of the five."
+      ],
+      "mood": "calm",
+      "quote": "Last month I lost about four hours of pay because I overran on two timing chains.",
+      "fieldNote": [
+        "His only pre-existing pressure is **flat-rate pay**, where slow work costs him money.",
+        "He sees AI writing job cards as a **small win** that puts money in his pocket.",
+        "Leans on the **union rep** as his route to training."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep working booked services and software updates at the dealership",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Sign up for the manufacturer's level-two course next spring",
+          "tag": "retrain"
+        },
+        {
+          "text": "Put six hundred a month towards the house deposit",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The second picture is called Steady Disruption. Here's the card: “Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.” If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "At work I'd say the service advisors are first in line, and we should all back them. If AI is answering the phones and booking jobs, Dev and the union need to get in early on what happens to those people. Online I'd share stuff about a shorter week instead of fewer jobs."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I think I'm okay for a few years but not untouched. The manufacturer laptop already does half the diagnosis, and if it gets better, I think it goes one way. The dealership will say a junior plus a smart laptop is enough and stop hiring seniors, and then the pay ladder I'm climbing gets shorter."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd start using the chat assistant properly, every job, to check procedures, since it'd be proven by then and everyone else would be doing it. I'd keep the house deposit going but maybe slow it by a hundred a month to keep more cash handy. And I'd go to the union meetings instead of just reading the minutes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy. I can see it coming down the corridor towards the service desk, but not into the bays yet. It's on my mind on the drive in."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who at the dealership would you worry about most?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Carla on the service desk. She's been there twelve years and knows every regular by name, but most of her day is phones and bookings. If an AI does that, the dealership won't keep her out of loyalty."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd keep the deposit going. Would this change when you and Lena buy?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It might push us to buy sooner, honestly, while my wages look good to a bank. If my pay ladder gets shorter, a mortgage gets harder later. We'd talk about it over breakfast after her night shift."
+        }
+      ],
+      "say": [
+        "I'd say the **service advisors** are first in line and the union should back them early.",
+        "I'd share posts calling for a **shorter week** instead of fewer jobs."
+      ],
+      "think": [
+        "A junior plus a **smart laptop** could replace seniors, making my pay ladder shorter.",
+        "I'm okay for **a few years**, but not untouched."
+      ],
+      "do": [
+        "Use the **chat assistant** on every job to check procedures once it's proven.",
+        "Slow the deposit by **a hundred a month** to keep more cash to hand.",
+        "Attend **union meetings** in person instead of just reading the minutes."
+      ],
+      "feel": [
+        "**Uneasy**, watching change come down the corridor towards the service desk."
+      ],
+      "mood": "uneasy",
+      "quote": "The dealership will say a junior plus a smart laptop is enough and stop hiring seniors, and then the pay ladder I'm climbing gets shorter.",
+      "fieldNote": [
+        "His worry is not losing his job but a **shorter career ladder** with fewer senior posts.",
+        "Thinks first about a **colleague** on the service desk with twelve years in.",
+        "Considers **buying a home sooner** while his wages still look good to a bank."
+      ],
+      "actions": [
+        "learn-ai",
+        "collective-action",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Check every repair procedure with the chat assistant before starting",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Go to union meetings and back the service desk staff",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Talk with his partner about buying a house sooner",
+          "tag": "family-plans"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The third picture is called AGI by 2028. Here's the card: “Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.” If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is a public emergency and it needs a public answer: income support, retraining paid for properly, and limits on how fast companies can cut. I'd say it at work, I'd say it to my mates, and I'd go on the march if Dev's union called one."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, I think the dealership side of the trade goes first. Most of what a dealership does is diagnosis by laptop and software updates, which is thinking work, so 2028 hits us straight away. The hands-on bits last until about 2031, and then I'm thirty-one with a trade the robots do better."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd stop the house search straight away. A mortgage on a job with three years left is madness, so the house deposit stays as cash. I'd look at moving to an independent garage doing old cars, where the work is more hands and less laptop. And I'd sit down with Lena to plan for her wage being the main one for a while."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious. Not panicked, because Lena's job is solid and we've got the deposit money. But I'd be losing the thing I'd only just got decent at."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd keep the deposit as cash. What would that money be for, then?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A cushion while I retrain, and maybe the first year of something new. Nearly forty thousand is a lot of time if we're careful. I'd hate spending a house on rent and bills, though."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you say to Lena that first night?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell her it's her turn to carry us for a bit, and that I'm sorry. She'd laugh and say she's been carrying us for years on night-shift pay. Then we'd make a list on the fridge like we do for everything."
+        }
+      ],
+      "say": [
+        "I'd call it a **public emergency** needing income support and properly funded retraining.",
+        "I'd join a **union march** and argue for limits on how fast companies cut."
+      ],
+      "think": [
+        "Dealership work is **laptop diagnosis** and software updates, so it gets hit in 2028.",
+        "By 2031 I'd be **thirty-one** with a trade robots do better."
+      ],
+      "do": [
+        "Pause the **house search** and keep the deposit as a cash cushion.",
+        "Move to an **independent garage** doing older cars with more hands-on work.",
+        "Plan with his partner for **her wage** to be the main one."
+      ],
+      "feel": [
+        "**Anxious** but not panicked, because his partner's job and the deposit are solid.",
+        "**Sad** to lose a trade he'd only just got decent at."
+      ],
+      "mood": "anxious",
+      "quote": "A mortgage on a job with three years left is madness, so the house deposit stays as cash.",
+      "fieldNote": [
+        "He sees **dealership work** as more exposed than independent work because of laptop diagnosis.",
+        "His partner's **nursing income** is what keeps him from alarm.",
+        "A **forty-thousand deposit** becomes a retraining fund overnight."
+      ],
+      "actions": [
+        "family-plans",
+        "change-job",
+        "collective-action",
+        "seek-support"
+      ],
+      "steps": [
+        {
+          "text": "Pause the house search and hold the deposit as cash",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Apply to independent garages that work on older cars",
+          "tag": "change-job"
+        },
+        {
+          "text": "March with the union for income support and paid retraining",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Lean on his partner's nursing wage while he retrains",
+          "tag": "seek-support"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The fourth picture is called AGI by 2031. Here's the card: “Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.” If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we've been given five years' warning, so use it. I'd be pushing the union to negotiate retraining deals with the dealership group now, not when the robots are in the car park. I'd post about it, probably too much."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, five years changes it for me. AGI in 2031, robots around 2034, so I'd have seven or eight years of decent work, and I'd be thirty-four or thirty-five at the end. That's time to buy the house, get the level-two course, and work out a second trade before the first one goes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "We'd buy the house in the first year, a small one, while my payslips still look good. I'd do the level-two course and then start a part-time electrician course at night, because houses will still need wiring longer than cars need mechanics. I'd use the AI tools at work as much as the others do."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, still, but a calmer anxious. It's like having a five-year warranty on a car you know will die."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why electrician, specifically?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My uncle Rafa's an electrician and he's never short of work. Every old house is different, every fuse board is a mess, and I like that kind of puzzle. I'm not sure robots would handle a 1960s fuse board well by 2034, though honestly I don't know."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd buy the house in year one. Isn't that a risk if your job goes?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It is, a bit. But Lena's job isn't going anywhere, and we'd keep six months of payments in the bank. I'd rather own something before the banks get nervous about lending to mechanics."
+        }
+      ],
+      "say": [
+        "I'd say **five years' warning** must be used, not wasted.",
+        "I'd push the union to win **retraining deals** with the dealership group now."
+      ],
+      "think": [
+        "Five years gives me **seven or eight years** of decent work before robots arrive.",
+        "That's enough time for a house, a course and a **second trade**."
+      ],
+      "do": [
+        "Buy a **small house** in the first year while payslips look strong.",
+        "Start a **part-time electrician** course at night after the level-two course.",
+        "Use AI tools at work as much as **his colleagues** do."
+      ],
+      "feel": [
+        "A **calmer anxious**, like a five-year warranty on a car you know will die."
+      ],
+      "mood": "anxious",
+      "quote": "I'd rather own something before the banks get nervous about lending to mechanics.",
+      "fieldNote": [
+        "More time turns him from **defending** his job to building a **second trade**.",
+        "His uncle's **electrician work** gives him a concrete, family-tested fallback.",
+        "He openly admits **not knowing** how far robots will reach."
+      ],
+      "actions": [
+        "invest",
+        "retrain",
+        "learn-ai",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Buy a small house in year one with the deposit",
+          "tag": "invest"
+        },
+        {
+          "text": "Start a part-time electrician course at night",
+          "tag": "retrain"
+        },
+        {
+          "text": "Use the dealership's AI tools on every job",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Push the union to agree retraining deals with the dealership group",
+          "tag": "collective-action"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The last picture is called AGI by 2036. Here's the card: “Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.” If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is a gift if governments use it, and a scandal if they don't. I'd talk about it at union meetings as a planning problem, not a panic. People would probably find me boring about it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Off the record, I'd be fine for most of my thirties. Robots around 2039 means I'd be forty. I'd get properly good at this, maybe senior technician, and then shift sideways before the end."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd stay at the dealership and go for the level-two and then the master technician courses. We'd buy the house in a year or two, like we planned anyway. Around 2032 I'd start the electrician course, so I'd have both before 2039."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy. It's still there at the back of my mind, but it's far enough away that I'd get on with life."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you and Lena change any family plans with ten years?"
+        },
+        {
+          "speaker": "persona",
+          "text": "We'd probably have kids in this version, around thirty. Ten years of steady pay feels like enough to start. With two years' warning I don't think we would."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you tell a sixteen-year-old thinking about becoming a mechanic, in this picture?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell a sixteen-year-old to do it, but to learn the electrics and the computers too, and never stop at one trade. And to join the union on day one. That's what I wish someone had told me."
+        }
+      ],
+      "say": [
+        "I'd call **ten years** a gift if governments use it and a scandal if not.",
+        "I'd frame it at union meetings as a **planning problem**, not a panic."
+      ],
+      "think": [
+        "I'd be fine for **most of my thirties**, with robots arriving when I'm forty.",
+        "I'd aim for **senior technician**, then shift sideways before the end."
+      ],
+      "do": [
+        "Take the level-two and then **master technician** courses at the dealership.",
+        "Buy the **house** within a year or two as already planned.",
+        "Start the **electrician course** around 2032 to have both trades by 2039."
+      ],
+      "feel": [
+        "**Uneasy** at the back of his mind, but far enough away to get on with life."
+      ],
+      "mood": "uneasy",
+      "quote": "I'd tell a sixteen-year-old to do it, but to learn the electrics and the computers too, and never stop at one trade.",
+      "fieldNote": [
+        "Ten years of warning makes him **plan for children**, which two years would stop.",
+        "Sees the decade as time to reach **senior technician** first.",
+        "His advice to the young centres on **joining the union** and learning two trades."
+      ],
+      "actions": [
+        "retrain",
+        "invest",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Take the manufacturer's master technician course after level two",
+          "tag": "retrain"
+        },
+        {
+          "text": "Buy a house with his partner within two years",
+          "tag": "invest"
+        },
+        {
+          "text": "Plan to start a family around thirty",
+          "tag": "family-plans"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The two-year one, because there's no time to build a second trade. What would help is real wage support while you retrain, like full pay for a year, not a few hundred quid. And the union having a legal say over how fast the dealership cuts."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Maybe what happens to customers. A lot of the older people who come in want to talk to a person about why the bill is so high. Nobody in head office is thinking about who explains a repair bill to a pensioner when the whole dealership runs on software."
+    }
+  ],
+  "headlineQuote": "Nobody in head office is thinking about who explains a repair bill to a pensioner when the whole dealership runs on software.",
+  "portrait": [
+    "Omar is a **junior technician** at a fourteen-bay brand dealership, paid partly on flat-rate hours.",
+    "He lives with his partner Lena, a **night-shift nurse**, and they're saving a house deposit.",
+    "He uses a **chat assistant** now and then and adopts tools once colleagues do.",
+    "He moves from **calm** to anxious, worrying most about dealership work being laptop-heavy.",
+    "He trusts the **union rep** and wants public support and a second trade."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because there'd be no time to build a second trade."
+  ],
+  "whatWouldHelp": [
+    "**Full pay** for a year while retraining, not a small grant.",
+    "A **legal say** for the union over how fast the dealership cuts staff."
+  ]
+}

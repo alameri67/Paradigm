@@ -11,24 +11,24 @@
     "outlook": "progressive",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions or any party. Everything you tell me is confidential, so you can tell me what you'd say in public and, separately, what you really think."
+      "text": "Hi, thanks for talking with me. I'm a field researcher from the Work Futures Panel, an independent group with no links to any company, union, party or government. What you tell me is confidential, so feel free to tell me what you'd say in public and what you actually think. Sound okay?"
     },
     {
       "speaker": "persona",
-      "text": "Sounds good. I actually looked up the Panel before I came, read a couple of your reports with an AI summariser on the bus. So I know you're legit."
+      "text": "Sure, sounds good. I talk too much anyway, so you'll get plenty."
     },
     {
       "speaker": "interviewer",
-      "text": "Let's start simple. Walk me through a normal working day."
+      "text": "Great. Could you describe a normal working day for me?"
     },
     {
       "speaker": "persona",
-      "text": "I push dirt with a dozer at the Ironbark iron ore mine. Mostly I clean up around the shovels, build the safety bunds along the haul roads, which are the big dirt walls that stop trucks going over the edge, and rip the hard ground so the diggers can get in. I'm not great yet; my bunds come out wavy and the supervisor, Anika, makes me redo them. I love the GPS screen in the cab that shows the design in green and your blade in red. What wears me out is the dust, and twelve hours with my own thoughts."
+      "text": "I'm a trainee drill operator at a big iron ore mine, out in the flat red country three hours from the nearest city. I drive a blasthole drill, which is a rig that bores holes in rows so the blast crew can pack them with explosives. The drill already has a GPS screen that tells me where each hole goes, and I'm still slow at levelling the rig on rough ground, so my trainer, Wen, checks my log at the end of each shift. I like the problem-solving, but twelve hours of dust and a rattling cab leave me flattened by the last hole."
     }
   ],
   "scenarios": {
@@ -36,11 +36,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The first picture is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say, fair enough, I was wrong about how fast it'd go. I use AI every day, for study and for my budget, and I'd still say it's useful, just not magic."
+          "text": "Ha, that's basically how it looks to me already. I use AI tools every day, and they help, but they haven't changed the dirt."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say at the crib room, which is where we eat, that AI's handy but it's no miracle. Online I'd post something about how the hype was about selling software to bosses. People who knew me would laugh, because I'm the guy who's always showing them some new app."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly I'd be a bit disappointed. I've been getting ready for a big change, and part of me wants it to show up so the getting ready wasn't for nothing."
+          "text": "Honestly, it means my job's fine and I keep learning the drill. I ask a chatbot to explain the drill manual every week, and the drill still needs me to drive it. I'd still like to move up faster, because trainee pay is decent but not great, and rent in the mine town is silly."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep going on the dozer and finish my Certificate III in surface extraction, which is the proper qualification for my job. I'd keep using the AI tools to study, and keep my name on the list for the remote operations centre in the city in case a seat opens up."
+          "text": "I'd keep at the drill and aim to get my full drill ticket by mid-next year. I'd keep using the chatbot to study for it and to check my maths on hole depths. I'd keep putting about a fifth of each pay into savings, which is how I've got about four months put away now."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +72,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, a little flat. Like turning up to a party that got cancelled."
+          "text": "Pretty calm, actually. Nothing in that picture threatens me, and I like the job."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd be disappointed. Isn't stability good for someone two years into a job?"
+          "text": "You said rent is silly. How much pressure is that?"
         },
         {
           "speaker": "persona",
-          "text": "Yeah, it is, and my mum would say I'm mad. But I've watched the GPS on the dozer go from a gimmick to something I can't work without in two years. I'd rather be early than late."
+          "text": "It's a lot of my pay, but Noor, my girlfriend, teaches at the primary school, so we split it. If we were single we'd be in the camp dongas, the little portable rooms the company rents out. It's tight, not scary."
         },
         {
           "speaker": "interviewer",
-          "text": "What do you use AI for in your budget?"
+          "text": "Is there anything about the plateau that you'd be disappointed by?"
         },
         {
           "speaker": "persona",
-          "text": "I paste in my bank statement and ask where the money went. Turns out I was spending ninety a week on energy drinks. I'm down to about thirty now, and that went into savings."
+          "text": "A bit, yeah. I was looking forward to AI making the boring paperwork easier for everyone, like the pre-start sheets we fill in by hand. Plateau means the clipboard stays."
         }
       ],
-      "say": "I'd say I was wrong about how fast it would go. I use AI every day for study and budgeting, and I'd still say it's useful, just not magic.",
-      "think": "Privately I'd be a bit disappointed, because I've been getting ready for a big change. Part of me wants it to show up so the preparation wasn't wasted.",
-      "do": "Keeps running the dozer and finishes his Certificate III in surface extraction using AI tools to study. Keeps his name on the list for the remote operations centre in the city.",
-      "feel": "Calm and a little flat, like a cancelled party.",
+      "say": [
+        "AI is **handy**, but it's no miracle for mining.",
+        "The hype was mostly about **selling software** to mining bosses."
+      ],
+      "think": [
+        "My **job's fine**, and the drill still needs me in the seat.",
+        "I want to **move up faster** because trainee pay doesn't stretch far."
+      ],
+      "do": [
+        "Get his full **drill ticket** by the middle of next year.",
+        "Keep using a **chatbot** to study and check hole-depth maths.",
+        "Keep saving about **a fifth** of each pay."
+      ],
+      "feel": [
+        "**Calm**, with a little disappointment that the paperwork stays."
+      ],
       "mood": "calm",
-      "quote": "I've been getting ready for a big change, and part of me wants it to show up so the getting ready wasn't for nothing.",
-      "fieldNote": "He is the rare junior who would be let down by stability. His readiness for change comes from watching the GPS system on his dozer go from gimmick to essential. The energy drink story shows how casually AI already sits in his daily life.",
+      "quote": "I ask a chatbot to explain the drill manual every week, and the drill still needs me to drive it.",
+      "fieldNote": [
+        "Heavy **AI user** who still sees his hands-on job as safe in this picture.",
+        "Rent is split with his **teacher girlfriend**, which keeps pressure manageable.",
+        "Mild **disappointment** that AI won't remove the clipboard paperwork."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai"
+        "learn-ai",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Get the full blasthole drill ticket by mid-next year",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use a chatbot to study and check hole-depth sums",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Keep saving about a fifth of each pay",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is the moment for the union to bargain over who gets the gains. If a dozer runs itself, the mine saves a wage, and some of that should go to the workers who trained it, through retraining money or shorter shifts. I'd post that, and I'd get told I'm dreaming."
+          "text": "This is the one I think is most likely, honestly. The mine already has a few drills that run by themselves in the north pit."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's exciting, but the company has to bring the workers along, not just cut them. In the union meeting I'd ask what training they've got planned before they buy more autonomous rigs."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +158,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me personally, I think I'd be fine, maybe better off. I'm young, I'm into the tech, and I'd be one of the first to move to the remote centre. The people I worry about are the forty-five-year-olds on the crew who've never touched a tablet."
+          "text": "Privately, I'd see it as a chance to jump ahead. I'd rather be the guy who knows how the robot drill thinks than the guy it replaced. The self-driving drills still need people in the control room, and people to fix the sensors, and I learn tech faster than most of the crew."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +166,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd chase the remote operations job hard, ring the recruiter every month. I'd do a short course on autonomous mining systems, there's one online at the technical college. And I'd volunteer to be the guy on site who helps the old hands with the new screens."
+          "text": "I'd ask my supervisor straight away to put me on the autonomous drill team as a trainee. I'd start a part-time online diploma in mining automation, maybe two nights a week, and pay the fees from savings. And I'd push the union to get a training deal written into the next pay agreement."
         },
         {
           "speaker": "interviewer",
@@ -127,48 +174,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, honestly. Maybe even a bit excited, and guilty about being excited."
+          "text": "Mostly excited, with a nervous edge. I'm not worried about me so much as the guys who hate the screens."
         },
         {
           "speaker": "interviewer",
-          "text": "Why guilty?"
+          "text": "Who are those guys?"
         },
         {
           "speaker": "persona",
-          "text": "Because my gain is someone else's loss. Danny on my crew has three kids and still prints his roster on paper. If I get the remote seat, it's partly because he didn't."
+          "text": "Like Wen, my trainer. He's forty-nine and the best driller on site, but he types with one finger. If the drills run themselves, his feel for the rock doesn't count for much, and that's not fair."
         },
         {
           "speaker": "interviewer",
-          "text": "Would moving to the city for the remote centre bother you?"
+          "text": "If your diploma costs savings, how long until it pays off?"
         },
         {
           "speaker": "persona",
-          "text": "Not much. I'm single, I rent, and my flatmate Tomasz is a diesel fitter who'd find work anywhere. The only thing I'd miss is the stars at night shift."
+          "text": "Maybe two years. The fees are about two months of savings, so I'd be down to two months in the bank, which is lower than I like. But if I get onto the automation team, it's a step up in pay."
         }
       ],
-      "say": "I'd say this is the moment for the union to bargain over who gets the gains, through retraining money or shorter shifts. I'd post that and get told I'm dreaming.",
-      "think": "Privately I think I'd be fine, maybe better off, because I'm young and into the tech. I worry about the older workers on my crew who've never used a tablet.",
-      "do": "Chases the remote operations centre job, calling the recruiter monthly, and does an online course on autonomous mining systems. Volunteers to help older crew members with the new screens.",
-      "feel": "Calm and a bit excited, with guilt about the excitement.",
-      "mood": "calm",
-      "quote": "Danny on my crew has three kids and still prints his roster on paper.",
-      "fieldNote": "His politics and his self-interest pull in different directions, and he named that himself through guilt about Danny. He would happily move to the city for the remote centre. He sees himself as a bridge for older workers, not just a winner.",
+      "say": [
+        "The company must **bring workers along**, not just cut them.",
+        "The union should ask about **training plans** before more autonomous rigs arrive."
+      ],
+      "think": [
+        "This is a **chance to jump** ahead on the autonomous drills.",
+        "Older drillers like his **trainer** could lose out unfairly."
+      ],
+      "do": [
+        "Ask to join the **autonomous drill team** as a trainee straight away.",
+        "Start a part-time **automation diploma** online, two nights a week.",
+        "Push the union for a **training deal** in the next agreement."
+      ],
+      "feel": [
+        "**Excited**, with a nervous edge for colleagues who hate screens."
+      ],
+      "mood": "uneasy",
+      "quote": "I'd rather be the guy who knows how the robot drill thinks than the guy it replaced.",
+      "fieldNote": [
+        "He sees **steady disruption** as an opening, not a threat, for himself.",
+        "His concern goes to **older workers** like his trainer, whose rock sense loses value.",
+        "The diploma would cut savings to **two months**, a real risk he accepts."
+      ],
       "actions": [
         "learn-ai",
         "retrain",
-        "change-job",
         "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Ask the supervisor for a trainee spot on the autonomous drill team",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Start a part-time online diploma in mining automation",
+          "tag": "retrain"
+        },
+        {
+          "text": "Push the union for a training deal in the next agreement",
+          "tag": "collective-action"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Next one, AGI by 2028. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The third picture is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say the gains from this need to be shared, full stop. A tax on automated mining, paid back to the towns and the workers. I'd be loud about it, because if it isn't sorted in these two years, it never will be."
+          "text": "Okay, that's a different story. That one's not a chance to jump ahead, it's the floor falling out."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Out loud I'd say we need the government to tax the companies that use this and pay people while they retrain. I'd be posting about it, I'd be at the rally, all of it."
         },
         {
           "speaker": "interviewer",
@@ -176,7 +260,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, my plan breaks. The remote centre was my lifeboat, and in this picture the AI runs the remote centre too. I'd be good at the tech, but if the tech doesn't need anyone, being good at it doesn't matter."
+          "text": "Between us, I think the control-room jobs I was aiming for go first, because they're thinking work. Then my drill job goes around 2031 when the robots catch up. Two years isn't enough time to retrain a whole mining town, and nobody's going to try."
         },
         {
           "speaker": "interviewer",
@@ -184,7 +268,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First thing, I'd stop the car loan I was about to sign and bank everything. I'd still grab any job going near the automation, even a year of it, because a year of good pay is a cushion. And I'd get properly involved in the campaign for a share of the profits, not just posting."
+          "text": "I'd go straight to the union and the town council to push for a jobs plan before 2028, not after. I'd stop the diploma, because automation control would be gone, and switch to something hands-on and people-facing, maybe paramedic training. Noor and I would cut back hard and get our savings to six months."
         },
         {
           "speaker": "interviewer",
@@ -192,48 +276,90 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not panicking, but it's the first picture where I don't have an answer."
+          "text": "Angry more than scared. It feels like being handed the keys to a car that's about to be scrapped."
         },
         {
           "speaker": "interviewer",
-          "text": "You said a year of good pay is a cushion. A cushion for what, if there's no work after?"
+          "text": "You were excited a minute ago. What changed?"
         },
         {
           "speaker": "persona",
-          "text": "Good question, I don't know. I guess for whatever comes next, a payment from the government or a new kind of job no one's thought of. I'm betting on the world working out a deal, which is a weird bet for someone who reads the news."
+          "text": "In the slow one I'm faster than the machines change. In this one nobody is faster than the machines, not me, not the bosses. Being good with apps doesn't help if the app does the job."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you blame if it goes badly?"
+          "text": "What about Noor's teaching job?"
         },
         {
           "speaker": "persona",
-          "text": "Not the machines. The people who own them and the politicians who let them keep all of it. The tech is the same either way. Who gets the profit is a choice."
+          "text": "Teaching kids feels safer, but even she's using AI to plan lessons now. If she's okay, we'd live on her wage, maybe move closer to the city where there's more work for both of us."
         }
       ],
-      "say": "I'd say the gains need to be shared, through a tax on automated mining paid back to towns and workers. If it isn't sorted in these two years it never will be.",
-      "think": "Privately his plan breaks, because AI would run the remote centre that was his lifeboat. Being good at the tech doesn't matter if the tech doesn't need anyone.",
-      "do": "Drops a planned car loan and saves everything. Takes any job near the automation for even a year of good pay, and gets actively involved in the campaign for a profit share.",
-      "feel": "Anxious but not panicking, and for the first time without an answer.",
+      "say": [
+        "The government should **tax companies** using this and pay people to retrain.",
+        "I'd be at the **rally** and posting about it."
+      ],
+      "think": [
+        "The **control-room jobs** go first, then the drill job around 2031.",
+        "Being **good with apps** doesn't help if the app does the job."
+      ],
+      "do": [
+        "Push the union and **town council** for a jobs plan before 2028.",
+        "Drop the automation diploma and look at **paramedic training**.",
+        "Cut back hard and reach **six months** of savings."
+      ],
+      "feel": [
+        "**Angry** more than scared, like being handed keys to a car about to be scrapped."
+      ],
       "mood": "anxious",
-      "quote": "I'm betting on the world working out a deal, which is a weird bet for someone who reads the news.",
-      "fieldNote": "His confidence rested on being early to the tech, and he saw quickly that this picture removes that advantage. He is betting on a political deal and laughed at himself for it. Blame goes clearly to owners and politicians, not the machines.",
+      "quote": "Two years isn't enough time to retrain a whole mining town, and nobody's going to try.",
+      "fieldNote": [
+        "His usual edge, **tech skill**, stops counting when AI outpaces everyone.",
+        "He switched quickly to a **people-facing** career idea rather than freezing.",
+        "Partner's **teaching income** is his safety net and a possible reason to move."
+      ],
       "actions": [
-        "save-more",
-        "change-job",
         "collective-action",
-        "politics"
+        "retrain",
+        "save-more",
+        "move"
+      ],
+      "steps": [
+        {
+          "text": "Push the union and town council for a jobs plan before 2028",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Switch from the automation diploma to paramedic training",
+          "tag": "retrain"
+        },
+        {
+          "text": "Cut spending to get savings to six months",
+          "tag": "save-more"
+        },
+        {
+          "text": "Move closer to the city where both partners can find work",
+          "tag": "move"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fourth picture is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\""
         },
         {
           "speaker": "persona",
-          "text": "Same message, more time to make it happen. I'd say the next five years decide whether this is good or terrible, and that depends on policy, not on the robots."
+          "text": "Five years for the thinking stuff, robots around 2034. That's more like a proper plan window."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we've got time to do this well if the company and government actually start now. I'd still go to meetings, but less shouting and more planning."
         },
         {
           "speaker": "interviewer",
@@ -241,7 +367,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years changes my plan a lot. I'd get maybe three good years at the remote centre and use them. I think I'd come out with savings and skills, even if the skills have a shelf life."
+          "text": "Really, I'd have time for one serious bet. Five years is long enough to finish a diploma and short enough that the mine won't wait for me. I'd still be driving the drill into my early thirties, which buys savings."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +375,7 @@
         },
         {
           "speaker": "persona",
-          "text": "This year I'd finish the certificate and take the remote centre job if it came up, even if I had to move. I'd save hard, half my pay if I can, and look at a two-year diploma in something like mechatronics, which is the mix of mechanical and electronic engineering behind robots. And I'd be in the union campaign properly."
+          "text": "I'd finish the drill ticket next year, then start a two-year technical diploma in electrical or maintenance in 2027. I'd keep driving to pay for it and put the rest away. I'd ask the union to get paid study days for anyone who wants them."
         },
         {
           "speaker": "interviewer",
@@ -257,48 +383,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. It's tight, but tight in a way I can plan around."
+          "text": "Uneasy, but in a good-ish way. Like before a big exam you've started studying for."
         },
         {
           "speaker": "interviewer",
-          "text": "Half your pay is a lot. What would go?"
+          "text": "Would you still go for automation, or something else?"
         },
         {
           "speaker": "persona",
-          "text": "The car, the trip to see my cousins, eating out after shift. I'd live like a first-year apprentice on a dozer driver's pay and bank the difference. I did it for six months once, so I know I can."
+          "text": "Probably maintenance on the machines, at least to start. Robots still break, and the first ones will need people to fix them, even if that runs out eventually."
         },
         {
           "speaker": "interviewer",
-          "text": "In the two-year picture you said being good at the tech wouldn't matter. Why does it matter here?"
+          "text": "What would you tell your younger brother about this?"
         },
         {
           "speaker": "persona",
-          "text": "Because three years is time to turn it into money and a qualification. In two years I'd just be learning the screens when the screens disappear. Here I get to cash it in first."
+          "text": "Lukas, my brother, is nineteen and wants to be a driller like me. I'd tell him to go for a trade that's people work, like nursing, and use the mine as a summer job."
         }
       ],
-      "say": "I'd say the next five years decide whether this is good or terrible, and that depends on policy, not on the robots. Same message, more time to make it happen.",
-      "think": "Privately five years gives me about three good years at the remote centre. I'd come out with savings and skills, even if the skills have a shelf life.",
-      "do": "Finishes his certificate and moves for a remote centre job if one opens. Saves up to half his pay, looks at a two-year mechatronics diploma and joins the union campaign properly.",
-      "feel": "Uneasy but able to plan around it.",
+      "say": [
+        "There's time to do this well if they **start now**.",
+        "Union meetings should mean less shouting and more **planning** together."
+      ],
+      "think": [
+        "Five years allows **one serious bet** on a new skill.",
+        "Driving the drill into his thirties **buys savings** for the switch."
+      ],
+      "do": [
+        "Finish the **drill ticket** next year.",
+        "Start a two-year **technical diploma** in maintenance in 2027.",
+        "Ask the union for **paid study days**."
+      ],
+      "feel": [
+        "**Uneasy** but motivated, like before an exam he's started studying for."
+      ],
       "mood": "uneasy",
-      "quote": "I'd live like a first-year apprentice on a dozer driver's pay and bank the difference.",
-      "fieldNote": "He explained precisely why five years beats two for him: time to turn early skills into money and a qualification before they expire. The half-pay saving plan is ambitious but he has done it before. His politics stay steady across timelines.",
+      "quote": "Five years is long enough to finish a diploma and short enough that the mine won't wait for me.",
+      "fieldNote": [
+        "Five years turns him back into a **planner** with a single clear bet.",
+        "He'd steer his **younger brother** away from mining towards people-facing work.",
+        "He knows **maintenance work** only buys time, and says so."
+      ],
       "actions": [
-        "change-job",
-        "save-more",
         "retrain",
+        "save-more",
         "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Start a two-year maintenance diploma in 2027 while still drilling",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save the rest of the drill pay towards the study years",
+          "tag": "save-more"
+        },
+        {
+          "text": "Ask the union for paid study days for any worker",
+          "tag": "collective-action"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Last one, AGI by 2036. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The fifth and last picture is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\""
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough to do this right. Pay people to retrain, share the profits, and give towns like ours something to do next. I'd probably say it's a good thing if we get the politics right."
+          "text": "Ten years, robots around 2039. I'd be nearly forty, so that's half a career."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say there's no excuse for anyone being left behind with ten years' notice. If it goes badly, it's because the people at the top chose that."
         },
         {
           "speaker": "interviewer",
@@ -306,7 +469,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think I'd do well. Ten years is a whole career at my age. I'd ride the automation wave in mining, then move into something AI can't take, or that people still want a person for."
+          "text": "Honestly, I think about who gets the money. With ten years I'd want the people who dig the ore to own a slice of the robots. Otherwise the whole town just watches the profit fly out on the ore trains."
         },
         {
           "speaker": "interviewer",
@@ -314,7 +477,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First year, I'd finish the certificate and start the mechatronics diploma part-time. I'd take the remote centre job when it opens and put some savings into a broad index fund each month, because if the robots end up owning everything, I want a small slice of the robots."
+          "text": "I'd push the union to argue for a share scheme, where workers get shares in the automated fleet. I'd do the maintenance diploma, but slower, and save for a house deposit with Noor. And I'd use the AI tools to learn faster, like I already do."
         },
         {
           "speaker": "interviewer",
@@ -322,36 +485,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. Excited even, which I know sounds strange."
+          "text": "Fairly calm about me, uneasy about the town. Ten years is enough for me to land somewhere."
         },
         {
           "speaker": "interviewer",
-          "text": "A slice of the robots. Doesn't that sit oddly with your politics?"
+          "text": "Do you really think workers could own part of the robots?"
         },
         {
           "speaker": "persona",
-          "text": "A bit. I'd rather the slice was shared by everyone through a public fund. But until that exists, I'm not going to sit out on principle while my rent goes up."
+          "text": "Maybe not, but some countries have funds like that for oil, so why not robots. If nobody asks, it definitely won't happen."
         },
         {
           "speaker": "interviewer",
-          "text": "What do you think people will still want a person for?"
+          "text": "Does a house make sense in a mine town with ten years left?"
         },
         {
           "speaker": "persona",
-          "text": "Teaching, maybe, or looking after people. Tomasz says I'd be a good trainer because I like explaining things. Ten years is enough time to find out if he's right."
+          "text": "That's the question. Probably not here, we'd buy somewhere on the coast where Noor can teach, and I'd fly in and out."
         }
       ],
-      "say": "I'd say ten years is enough to do it right, with paid retraining, shared profits and something new for towns like ours. It's a good thing if we get the politics right.",
-      "think": "Privately he expects to do well, because ten years is a whole career at his age. He'd ride automation in mining, then move to work people still want a person for.",
-      "do": "Finishes his certificate and starts a part-time mechatronics diploma in the first year. Takes the remote centre job when it opens and puts savings monthly into a broad index fund.",
-      "feel": "Mostly calm and even excited.",
-      "mood": "calm",
-      "quote": "if the robots end up owning everything, I want a small slice of the robots.",
-      "fieldNote": "Ten years turns the picture almost into an opportunity for him. He admitted the index fund sits oddly with his politics and gave a straight answer about why he'd do it anyway. Teaching or training came up as a possible later path.",
+      "say": [
+        "With ten years' notice, there's **no excuse** for anyone left behind.",
+        "If it goes badly, the **people at the top** chose that."
+      ],
+      "think": [
+        "Workers who dig the ore should **own a slice** of the robots.",
+        "Ten years is enough for him to **land somewhere**, even if the town struggles."
+      ],
+      "do": [
+        "Push the union for a **share scheme** in the automated fleet.",
+        "Do the **maintenance diploma** at a slower pace.",
+        "Save a **house deposit** for somewhere on the coast."
+      ],
+      "feel": [
+        "**Calm** for himself, **uneasy** for the town."
+      ],
+      "mood": "uneasy",
+      "quote": "With ten years I'd want the people who dig the ore to own a slice of the robots.",
+      "fieldNote": [
+        "His focus shifts from his own job to **who owns** the machines.",
+        "He'd buy a house **away** from the mine town, a quiet vote of no confidence.",
+        "He expects to be fine himself but **worries for the town** losing its profit."
+      ],
       "actions": [
+        "collective-action",
         "retrain",
-        "change-job",
-        "invest"
+        "save-more",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Push the union to argue for worker shares in the fleet",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Do the maintenance diploma part-time over three years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save a house deposit with Noor",
+          "tag": "save-more"
+        },
+        {
+          "text": "Buy a home on the coast and fly in to the mine",
+          "tag": "family-plans"
+        }
       ]
     }
   },
@@ -362,7 +560,7 @@
     },
     {
       "speaker": "persona",
-      "text": "AGI by 2028. Not for me so much, but for Danny and the older guys, and for the town. What would help is a deal that shares the profits from automation, paid out as retraining money and income while people work out what's next."
+      "text": "AGI by 2028, because there's no time for anyone, not even someone who likes tech. What would help is the company and government paying for real retraining and some kind of income while you do it. Every new machine on the mine came with a promise that nobody would lose out, and somebody always did."
     },
     {
       "speaker": "interviewer",
@@ -370,11 +568,21 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe ask people what they'd be glad to stop doing. I wouldn't miss the dust, but I'd miss the crew, and nobody's automating the crew."
+      "text": "Maybe what people like me would actually be good at. I'm a trainee, but I'm good at teaching the older guys apps. Nobody's asked if that's a job."
     }
   ],
-  "headlineQuote": "I wouldn't miss the dust, but I'd miss the crew, and nobody's automating the crew.",
-  "portrait": "Bilal Varga is 27 and drives a dozer at the Ironbark iron ore mine, still redoing wavy safety bunds for his supervisor. He is single, rents with a flatmate, and has a few months saved after using AI to cut his spending. He uses AI every day, is studying for his certificate and has his name down for the remote operations centre. He stays calm in the plateau and steady pictures, gets anxious when AGI in two years wipes out his remote-centre plan, and grows calmer with five and ten years, while consistently arguing that the gains from automation should be shared.",
-  "biggestWorry": "AGI by 2028 worries him most, less for himself than for older crew members like Danny and for the town.",
-  "whatWouldHelp": "A deal that shares the profits from automation, paid out as retraining money and income while people work out what's next."
+  "headlineQuote": "Every new machine on the mine came with a promise that nobody would lose out, and somebody always did.",
+  "portrait": [
+    "Bilal is a **27-year-old trainee** blasthole drill operator at a remote iron ore mine.",
+    "He uses **AI tools daily**, rents with his teacher girlfriend Noor and has about four months saved.",
+    "He's **pro-union** and wants workers to share in automation profits.",
+    "In slow pictures he sees **opportunity**, aiming for the autonomous drill team or maintenance work.",
+    "In **AGI by 2028** his tech edge vanishes and he pivots towards paramedic training."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because nobody, even tech-savvy workers, has time to adjust."
+  ],
+  "whatWouldHelp": [
+    "**Paid retraining** from the company and government with an **income** while studying."
+  ]
 }

@@ -11,32 +11,16 @@
     "outlook": "progressive",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for talking with me, Tara. I'm a field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions or government. What you tell me is confidential. Could you start by describing a normal day at work?"
+      "text": "I'm a senior field researcher with the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions, parties or government, and we don't sell anything or campaign for any side. Your answers are confidential, so you can tell me what you'd say publicly and what you really think. What does a normal working day look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I run a loader underground at Kestrel Hill, a gold mine about half an hour from home. The proper name is an LHD, load-haul-dump, which is basically a low, long bucket loader built to fit in the tunnels. I muck out the rock after they fire the blasts and tram it to the ore pass, back and forth, ten or eleven hours, with my headlamp and the radio for company."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "How long have you been doing it?"
-    },
-    {
-      "speaker": "persona",
-      "text": "Just over a year. Before that I did twelve years in aged care, nights mostly, and my back and my bank account both gave up on it. My partner Ben's a plumber, and when a friend of his said the mine was taking on women and paying well, I went for it. We've got two kids, Ruby's fourteen and Sam's ten, and the mine money means we've got nearly a year's worth saved for the first time ever."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What do you enjoy, and what's hard?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I like that it's honest work you can see: the drawpoint's full, then it's empty. I'm still not great at it, my trainer Joe says I'm too gentle with the bucket. The hard bit is the dust and the noise, and some mornings you go in in the dark and come out in the dark."
+      "text": "I operate a small dozer at a large mine and level the ground where the haul trucks turn. I am 43, and I still ask a senior operator to look over the harder edges; reading the ground takes longer to learn than the levers. Our two children are in school, my partner Jules repairs bicycles, and there is a mortgage to pay. The mine pays me well enough that we have saved more than six months of expenses, though I remember the years when we had almost nothing left after payday."
     }
   ],
   "scenarios": {
@@ -44,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the one we call AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say good, because we've got bigger problems underground than robots, like ventilation and fatigue. I'd say that at the toolbox talk and probably on the union group chat. Maybe now they'll spend the money on things that actually keep us safe."
+          "text": "I'd tell my crew that a little office automation is fine if it doesn't excuse skipping a proper ground check. I use an AI tool now and then to put a technical term into ordinary words, but a more experienced operator still checks my dozer work."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me it means I get to keep learning this job properly. I'm only a year in, and I'd like to be the one Joe calls when there's a tricky drawpoint, not the new girl. So, honestly, relief with a bit of disappointment that nothing better comes of it."
+          "text": "Honestly, this sounds like the mine we've already got, and I expect my own shifts to hold. Jules has steady repair orders at the moment, and our savings are large enough to cover more than half a year of bills. I'd still want the union to watch any quiet change to staffing. A small software saving can hide a staffing cut."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on as I am. I'd keep putting the extra bit into savings and finish my health and safety rep training through the union, which I started in spring. Maybe book the family trip to the coast we keep putting off."
+          "text": "I'd keep the dozer shifts and walk the turning area before I start a cut. At our next union meeting I'd ask whether the office has changed the way it counts crew hours. In the first year I wouldn't move the children or take on another bill because of this picture."
         },
         {
           "speaker": "interviewer",
@@ -72,46 +56,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Tired, but calm."
+          "text": "I feel calm about our money and my work here. The part that nags me is how easily a small change gets hidden in a spreadsheet."
         },
         {
           "speaker": "interviewer",
-          "text": "You said a bit of disappointment. What would you have wanted AI to fix?"
+          "text": "What does a ground check catch?"
         },
         {
           "speaker": "persona",
-          "text": "If a computer could do the shift rosters so nobody ends up on four nights in a row, I'd kiss it. That's the kind of thing I'd want. Instead it'll be writing marketing emails."
+          "text": "Water can soften the edge overnight, and a wheel mark can tell you a truck came too close yesterday. I look for both before the first load comes around."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use AI yourself at all?"
+          "text": "Why involve the union for such a small change?"
         },
         {
           "speaker": "persona",
-          "text": "Now and then. I used one to help write my first safety report because I hadn't written anything formal since school. Ruby showed me how. I wouldn't trust it underground, mind."
+          "text": "We can ask one question now without turning it into a fight. It is harder to find the missing hours after the rota has already been rewritten."
         }
       ],
-      "say": "She'd say at the toolbox talk and on the union chat that underground has bigger problems than robots, like ventilation and fatigue. She'd hope the money goes to safety instead.",
-      "think": "She's relieved she can keep learning the job and stop being the new girl. She's slightly disappointed AI won't fix anything useful, like fair rosters.",
-      "do": "Keeps working and saving, finishes her union health and safety rep training started in spring, and books the long-postponed family trip to the coast.",
-      "feel": "Calm, tired, a little let down.",
+      "say": [
+        "I would say **minor office automation** must not replace a proper ground check.",
+        "I use an AI tool occasionally, while a **senior operator** still checks difficult dozer work."
+      ],
+      "think": [
+        "I expect **my shifts** and Jules’s repair orders to hold in this mild picture.",
+        "Our **six-month cushion** gives us room, though staffing changes still deserve scrutiny."
+      ],
+      "do": [
+        "Keep the **dozer shifts** and walk the truck turning area before each cut.",
+        "Ask at the next **union meeting** whether office changes affect crew hours."
+      ],
+      "feel": [
+        "**Calm** about family income, with a watchful eye on hidden roster changes."
+      ],
       "mood": "calm",
-      "quote": "If a computer could do the shift rosters so nobody ends up on four nights in a row, I'd kiss it.",
-      "fieldNote": "Tara views AI through a safety and fairness lens straight away. She'd have liked it to fix rosters, not marketing. She uses AI occasionally, learned from her daughter, but draws a firm line at trusting it underground.",
+      "quote": "A small software saving can hide a staffing cut.",
+      "fieldNote": [
+        "Tara’s savings and current work make her **financially calm** under a mild change.",
+        "Her union question comes from earlier lean years and concern that **small software savings** can hide staffing cuts."
+      ],
       "actions": [
         "keep-going",
-        "save-more"
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Keep driving the dozer and walk the turning area before cuts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Ask the union whether office changes alter crew hours",
+          "tag": "collective-action"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the one we call Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say the union needs a say in how it's rolled out, especially underground where a machine and a person can meet in a tunnel. I'd say that at the safety committee. Online I'd post about the rules we need before anything driverless goes in."
+          "text": "I'd say the mine's planners and buyers will feel this before my dozer does. The crew should see any new roster and have someone accountable for the route decisions, because the ground doesn't become dry just because a computer says it should."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +127,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, loaders are already half remote at some mines. You sit in a room on the surface with joysticks and screens. I could end up doing my job from a chair with a cup of tea, and I'm not sure that's bad."
+          "text": "I'm still junior, so I could be the person sent home if faster planning means one fewer shift. We have savings and other mines nearby, but the higher wage here pays our mortgage and gives the children a steady week. I have used AI enough to know a tidy answer can still be wrong."
         },
         {
           "speaker": "interviewer",
@@ -127,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd watch what the people who go first say about it. If the remote loader jobs turned out fine, I'd put my hand up for the training in the second or third intake, not the first. Meanwhile I'd keep the savings where they are and push hard as a safety rep for proper rules on mixed traffic."
+          "text": "I'd ask a senior operator to show me the updated digital route map after they have tested it on the ground. Then I'd use the map with my own walk around, and ask the union representative for the old and new shift counts. If my hours shrink in the first year, I'd apply to two other mines nearby before drawing on savings."
         },
         {
           "speaker": "interviewer",
@@ -135,47 +143,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. I can see a way through, but it depends on the company doing it fairly, and I've seen how they treat people when budgets are tight."
+          "text": "I feel curious about a better map but anxious about the junior roster. I can handle learning a tool; I cannot make a missing paid day harmless."
         },
         {
           "speaker": "interviewer",
-          "text": "Who at work would you worry about?"
+          "text": "What would you compare on the maps?"
         },
         {
           "speaker": "persona",
-          "text": "Joe, my trainer. He's fifty-eight and he's brilliant on a real machine, but he hates screens. I can see them offering him a remote job and him just retiring instead, and losing everything he knows."
+          "text": "I'd compare the drainage line and the turning radius with the marks I can see under my boots. A map that misses water is no help to a truck driver."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd wait for the second intake. Why not the first?"
+          "text": "When would you apply elsewhere?"
         },
         {
           "speaker": "persona",
-          "text": "Because the first lot always gets the bugs. I'm not a pioneer, I'm the second person across the bridge. But I'd be standing at the bridge with my boots on."
+          "text": "After the first real cut to my roster, not after a rumour. Jules and I would look at the travel time so a new mine didn't strand the children after school."
         }
       ],
-      "say": "She'd say the union must have a say in rollout, especially underground where machines and people share tunnels. She'd post online about the safety rules needed first.",
-      "think": "She knows loaders are already partly remote at some mines and thinks working from a surface chair might not be bad. Her worry is whether the company does it fairly.",
-      "do": "Watches how the first remote-operator trainees fare and volunteers for the second or third intake, keeps savings untouched, and pushes as a safety rep for rules on mixed traffic.",
-      "feel": "Uneasy but able to see a way through.",
-      "mood": "uneasy",
-      "quote": "I could end up doing my job from a chair with a cup of tea, and I'm not sure that's bad.",
-      "fieldNote": "Tara is neither scared nor eager, just watchful. Her description of herself as the second person across the bridge sums up her steady style. Her worry is more for older colleagues like her trainer than for herself.",
+      "say": [
+        "I would say **planners and buyers** feel the change before dozer operators.",
+        "I want visible **rosters and routes** for the crew."
+      ],
+      "think": [
+        "A junior operator could lose **a paid shift** if planning becomes leaner.",
+        "Nearby mines and savings help, but this **higher wage** supports the mortgage."
+      ],
+      "do": [
+        "Test the **digital route map** with a senior operator and a ground walk.",
+        "Request old and new **shift counts** through the union.",
+        "Apply to **two nearby mines** if my roster actually shrinks."
+      ],
+      "feel": [
+        "Curious about the map, but **anxious** about lost junior hours."
+      ],
+      "mood": "anxious",
+      "quote": "A map that misses water is no help to a truck driver.",
+      "fieldNote": [
+        "Tara will use a tool once an experienced operator has **tested it** against the actual ground.",
+        "Her first response to fewer hours is an **application**, made possible by plentiful nearby mines."
+      ],
       "actions": [
         "learn-ai",
         "collective-action",
-        "wait-and-see"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Test the AI route map with a senior operator and a ground walk",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Request old and new shift counts through the union",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Apply to two nearby mines if the roster shrinks",
+          "tag": "change-job"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the one we call AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is exactly why we need governments that plan, and that companies shouldn't be allowed to sack whole crews overnight. I'd go to rallies. I'd say we need a basic income or something like it, fast."
+          "text": "I'd tell the union that the thinking jobs change in 2028 but a dozer that works like a person comes around 2031. Three years of driving isn't a promise of a job after that. We need paid training places and a clear count of the equipment the mine plans to buy."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +220,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Two years is too quick for anyone to get it right, and when people rush underground, people get hurt. My job would go, and aged care, my old fallback, gets robots too in that picture. I think I'd be fine for money for a year or so, but not for what comes after."
+          "text": "Privately, I'm scared of losing the wage before the mortgage is small enough to carry on Jules's bicycle repair income. The children will still be at school in 2031, and more than six months saved will not pay for years without work. I'm willing to learn, but I'm junior at this job already and can't pretend to be a qualified fitter by next Tuesday."
         },
         {
           "speaker": "interviewer",
@@ -191,7 +228,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First month, sit down with Ben and work out what we've got: about eleven months of savings, plus his trade, which might last a bit longer. Stop the extension we've been planning on the house. Then I'd be in every union meeting about redundancy terms and writing to my local member about income support."
+          "text": "I'd go with the union representative to ask for a written robot purchase timetable and paid training slots. I'd keep the dozer shifts while they exist, and ask the maintenance lead whether a supervised inspection place is open. In 2029 I'd apply for one if the pay covers our basic bills, and I'd apply to nearby mines still hiring operators if it doesn't. Once capable robots arrive in 2031, I'd use whichever paid job I had secured rather than wait for my old seat."
         },
         {
           "speaker": "interviewer",
@@ -199,48 +236,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Clearly anxious, but not lost. We've got a cushion and we've got each other."
+          "text": "It feels frighteningly quick, but I do have people and savings to help me act. The hard part is trusting a training offer when no wage is written beside it."
         },
         {
           "speaker": "interviewer",
-          "text": "How would two years of warning change things compared to it arriving with none?"
+          "text": "Why inspection rather than another driving seat?"
         },
         {
           "speaker": "persona",
-          "text": "Barely. Two years is about one training course. I'd maybe finish my safety rep stuff and use it to get on a transition committee, because at least then I'd know what's coming before the notice goes up."
+          "text": "A driving seat at a second mine might disappear on the same timetable. Inspection could buy a different kind of paid experience, though robots may change that work too."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Ruby and Sam?"
+          "text": "What would you tell Jules tonight?"
         },
         {
           "speaker": "persona",
-          "text": "The truth, in small bits. Ruby would ask straight out, she's that kind of kid. I'd tell her Mum went down a mine at forty-two, so Mum can learn something else at forty-four."
+          "text": "I'd put the mortgage statement on the table and explain the two dates. Jules would ask what a trainee actually earns before we promised the children anything different."
         }
       ],
-      "say": "She'd say this is why governments must plan, that companies shouldn't sack crews overnight, and that something like a basic income is needed quickly.",
-      "think": "She thinks two years is too fast to do safely, and that both her job and her old aged-care fallback would go. Money would last a year, not longer.",
-      "do": "Reviews the eleven months of savings with her partner, cancels the planned house extension, attends union redundancy meetings, and writes to her local representative about income support.",
-      "feel": "Clearly anxious, but steadied by savings and her partner.",
+      "say": [
+        "I would explain **2028 AI** and **2031 dozers** as separate dates.",
+        "I would demand **paid training** and an equipment purchase count."
+      ],
+      "think": [
+        "Losing my higher wage could leave the **mortgage** beyond Jules’s repair income.",
+        "Six months of savings would not cover **years without work** while children remain in school."
+      ],
+      "do": [
+        "Ask through the union for a **robot timetable** and paid training slots.",
+        "Keep driving and ask about **supervised inspection** work.",
+        "Apply in 2029 for a paid place or **nearby operator jobs** if wages fail."
+      ],
+      "feel": [
+        "**Frightened** by the speed, while able to use savings and contacts."
+      ],
       "mood": "anxious",
-      "quote": "I'd tell her Mum went down a mine at forty-two, so Mum can learn something else at forty-four.",
-      "fieldNote": "Tara's instinct is to get inside the process, joining a transition committee so she knows first. Her fear isn't for money in year one but for what follows. Her line about learning something new at forty-four echoes her late move into mining and is her main source of confidence.",
+      "quote": "Three years of driving isn't a promise of a job after that.",
+      "fieldNote": [
+        "Tara understands the **three-year gap** as a chance to secure wages, not a permanent shelter.",
+        "Her willingness to retrain depends on **written pay** that can cover the family’s basic bills."
+      ],
       "actions": [
-        "cut-spending",
         "collective-action",
-        "politics",
-        "family-plans"
+        "keep-going",
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Ask the union for a robot purchase timetable and paid training slots",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Keep the dozer shifts while driving work exists",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply in 2029 for supervised inspection if pay covers basic bills",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply to nearby mines if the paid training wage is insufficient",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the one we call AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say we've got time to do this properly if we start now: training funds, safety rules, notice periods. I'd say it louder at the safety committee than anywhere else. I'd push for a fund paid for by the companies that profit."
+          "text": "I'd say five years gives the mine time to show a real plan and gives workers time to challenge it. The office can change under AGI in 2031, but our dozers become replaceable by capable robots around 2034. I'd want a place for drivers in every yearly review."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +318,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years is enough to see who's doing well out of it and copy them. That's my style. I'd let the early movers show the way, then follow quickly, so maybe year two I'd make a move."
+          "text": "I would be 48 when the thinking work changes and 51 when robots reach the dozer. The children will be older, but I won't count their education costs as zero; the mortgage might still be there too. With nearby mines and a good savings cushion, I can try a paid inspection path without selling the house in a rush."
         },
         {
           "speaker": "interviewer",
@@ -256,7 +326,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, keep working and saving, and ask HR what training they're planning for remote and maintenance roles. By year two, if the remote jobs look solid, I'd get the ticket. I'd also look at an enrolled nursing course part-time, as a backup, because I know care work and I think people will still want a human hand there for a while."
+          "text": "I'd ask the union to bargain for one paid inspection placement each year for junior operators, not just senior people. I would visit the maintenance shed and ask the lead what skills a trainee must show. If a paid placement appears, I'd enrol while keeping my current shifts where possible. In 2032 I'd check whether driver hours are falling and send applications to other mines if they are."
         },
         {
           "speaker": "interviewer",
@@ -264,48 +334,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy most days, anxious some nights. Five years is long enough to plan and short enough to keep you awake now and then."
+          "text": "I feel cautious but less pressed than in the fast picture. Five years lets me see whether the training actually leads to work before I put the mortgage at risk."
         },
         {
           "speaker": "interviewer",
-          "text": "You've got two backups there: remote operation and nursing. Which one is real?"
+          "text": "What would you ask the maintenance lead?"
         },
         {
           "speaker": "persona",
-          "text": "Both, honestly, and that's the point. One's the safe bet and one's the one I'd actually be proud of. Nursing's the proud one. I'd find out which one is still standing by 2030."
+          "text": "Whether a beginner can learn to inspect brakes and tyres under supervision, and what the first month's wage is. I'm happy to practise, but I won't call an unpaid visit a new career."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you cut, money-wise, to fund a course?"
+          "text": "Would Jules want you to leave the mine?"
         },
         {
           "speaker": "persona",
-          "text": "Not much, we'd manage. Probably the second car. Ben's van does for him, and I'd get the mine bus. And no new phone for me, which Ruby will find more upsetting than I will."
+          "text": "Jules would want the written offer on the kitchen table first. We can take some risk, but our children need the school week to stay predictable."
         }
       ],
-      "say": "She'd say there's time to do this properly with training funds, safety rules and notice periods. She'd push for a training fund paid by the companies that profit.",
-      "think": "She thinks five years lets her watch the early movers and follow quickly, probably making her own move in year two.",
-      "do": "Asks HR in year one about remote and maintenance training, gets a remote ticket by year two if the jobs look solid, and starts a part-time enrolled nursing course as a backup, selling the second car to help.",
-      "feel": "Mostly uneasy, with anxious nights.",
-      "mood": "uneasy",
-      "quote": "One's the safe bet and one's the one I'd actually be proud of.",
-      "fieldNote": "Five years suits Tara's steady style: enough time to watch others, then follow. Running two backup plans side by side is very her, one safe and one meaningful. The return of care work as the plan she'd be proud of was a surprise after she'd left it for her back and her bank balance.",
+      "say": [
+        "I would say **five years** permits a mine plan that workers can challenge.",
+        "I want **drivers included** in yearly robot reviews through 2034."
+      ],
+      "think": [
+        "At 51, I may have **children and mortgage** rather than a free household budget.",
+        "My savings and nearby mines make a **paid inspection path** possible."
+      ],
+      "do": [
+        "Ask the union for **paid junior placements** in inspection.",
+        "Visit maintenance and enrol if a **paid trainee place** appears.",
+        "Check 2032 driver hours and apply **elsewhere** if they fall."
+      ],
+      "feel": [
+        "**Cautious**, with enough time to test whether training leads to wages."
+      ],
+      "mood": "anxious",
+      "quote": "I won't call an unpaid visit a new career.",
+      "fieldNote": [
+        "Tara wants junior operators included because **senior-first training** would leave her behind.",
+        "Her risk tolerance has a clear boundary: a **written paid offer** must preserve the children’s routine."
+      ],
       "actions": [
-        "retrain",
-        "save-more",
         "collective-action",
-        "cut-spending"
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Ask the union to bargain for paid junior inspection placements",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Enrol in supervised inspection if a paid trainee place appears",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply to other mines in 2032 if driver hours fall",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Here's the one we call AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a gift if we use it, and a disgrace if we waste it. I'd say the companies should be made to fund retraining now, not in year nine. I'd probably post that last bit online."
+          "text": "I'd tell people a decade is long enough for the mine to publish milestones instead of rumours. Thinking AI arrives in 2036 and robots that can drive or grade as well as us around 2039. We should bargain early, while our current skills still have value."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +411,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, ten years and I'm fifty-three. I'd be one of the better loader drivers by then, and probably one of the last. I think I'd be all right, but I'd want to leave on my own terms and not get pushed."
+          "text": "At 53 in 2036 and 56 in 2039, I cannot assume I'll be retired. Our children should be grown and the school fees behind us, but I don't know what the mortgage balance or Jules's shop income will be. A decade lets me build inspection experience while I still draw a mine wage."
         },
         {
           "speaker": "interviewer",
@@ -321,7 +419,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep mining for the first few years and keep saving hard. I'd do the nursing course slowly, one unit at a time, over three or four years. And I'd make sure Ruby picks something for uni where a person is the point, not the process."
+          "text": "This year I'd ask the union to put robot purchasing and paid vacancies on its regular agenda. I'd use the mine's tested digital route system when a senior operator signs off on it, and save a fixed amount from each higher wage payment for a later job change. In 2037 I'd still drive the dozer and apply for a paid inspection shift if one opened. Before 2039 I'd compare those wages with other local mines rather than wait for the robot to take my machine."
         },
         {
           "speaker": "interviewer",
@@ -329,36 +427,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Fairly settled, with a bit of unease underneath. It feels like something I can get ahead of."
+          "text": "I feel prepared enough to work on a plan, not secure enough to forget it. A decade can be used well or quietly wasted."
         },
         {
           "speaker": "interviewer",
-          "text": "What does the extra time change compared with five years?"
+          "text": "How would you set the savings amount?"
         },
         {
           "speaker": "persona",
-          "text": "I wouldn't need the safe bet. With five years I'd grab the remote ticket just in case. With ten I'd go straight for the nursing, slowly, and enjoy it."
+          "text": "Jules and I would agree on an amount after the mortgage and ordinary bills, then automate that transfer on pay day. I won't use the children's current school money to make a retirement story sound tidy."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned Ruby choosing her studies. Have you talked to her about it?"
+          "text": "What if the mine never offers inspection shifts?"
         },
         {
           "speaker": "persona",
-          "text": "A bit. She wants to do marine biology, which I love. I'd just tell her to make sure she's the one in the boat, not the one typing up the data."
+          "text": "I'd apply to a nearby pit that does. There are several within reach, and I can compare actual wages without moving the family."
         }
       ],
-      "say": "She'd say ten years is a gift if used and a disgrace if wasted, and that companies should fund retraining now rather than late.",
-      "think": "She expects to be fifty-three and among the last loader drivers, and thinks she'd be fine as long as she leaves on her own terms.",
-      "do": "Keeps mining and saving for the first few years, takes a nursing course one unit at a time over three to four years, and guides her daughter towards studies where a person is the point.",
-      "feel": "Fairly settled, with mild unease underneath.",
+      "say": [
+        "I would ask the mine for **published milestones** before robots reach the dozers.",
+        "I would bargain while our **current skills** still carry value."
+      ],
+      "think": [
+        "At 56, I cannot assume **retirement** replaces my wages.",
+        "Grown children may cost less, while the **mortgage and shop income** remain uncertain."
+      ],
+      "do": [
+        "Put **robot purchases and vacancies** on the union agenda.",
+        "Use the tested route system and save a **fixed wage amount**.",
+        "Drive in 2037 and apply for **paid inspection shifts** before 2039."
+      ],
+      "feel": [
+        "**Prepared to plan**, without assuming lifelong job security."
+      ],
       "mood": "uneasy",
-      "quote": "I'd just tell her to make sure she's the one in the boat, not the one typing up the data.",
-      "fieldNote": "The extra time lets Tara drop her safety-net plan and go straight for the work she values. Her concern shifts to her daughter's choices. She remains firmly progressive about who should pay, but personally she sounds almost hopeful here.",
+      "quote": "A decade can be used well or quietly wasted.",
+      "fieldNote": [
+        "The ten-year runway lets Tara pair **tested technology** with a steady savings habit.",
+        "She treats retirement and Jules’s future shop income as **unknowns**, despite a strong current cushion."
+      ],
       "actions": [
-        "retrain",
+        "collective-action",
+        "learn-ai",
         "save-more",
-        "family-plans"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Put robot orders and paid vacancies on the union agenda",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Use the tested digital route system after senior signoff",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Transfer a fixed amount from each higher wage payment",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply for paid inspection shifts before 2039",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -369,7 +501,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one. Not because of me so much, but because rushing underground gets people hurt, and because everyone loses their backup at once. What would help is a training fund the companies pay into and real notice, at least a year, before any crew is cut."
+      "text": "The 2028 picture worries me most because the three-year gap is short for a junior operator to earn a new skill. Written trainee wages, a real place to practise, and a public purchase timetable would help. Our savings give us breathing room, but they aren't a wage forever."
     },
     {
       "speaker": "interviewer",
@@ -377,11 +509,20 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about safety, and that's what I think about most. Everyone talks about robots taking jobs, but nobody asks what happens when a robot loader meets a person in a tunnel that's two metres wide."
+      "text": "You didn't ask how junior people get picked for training. If only the longest-serving drivers get offered a place, the rest of us lose the very time we're supposed to use. A training list should show who got in and why."
     }
   ],
-  "headlineQuote": "Everyone talks about robots taking jobs, but nobody asks what happens when a robot loader meets a person in a tunnel that's two metres wide.",
-  "portrait": "Tara Evans is a 43-year-old former aged-care worker who now runs an underground loader at a gold mine, a year into the job and still learning. She's married to a plumber, has two kids and almost a year's savings, and is training as a union health and safety rep. She's progressive and steady: she uses AI now and then, waits for others to test new things, then follows quickly. She stays calm to uneasy in most scenarios, becomes anxious only with two-year AGI, and treats nursing as the backup she'd actually be proud of.",
-  "biggestWorry": "The two-year AGI picture, because rushing automation underground gets people hurt and everyone loses their backup at once.",
-  "whatWouldHelp": "A training fund paid for by the companies and at least a year's notice before any crew is cut."
+  "headlineQuote": "A training list should show who got in and why.",
+  "portrait": [
+    "Tara is a **43-year-old junior dozer operator** who checks difficult ground with senior colleagues.",
+    "Her **higher wage and savings** buffer risk, while two school-age children and a mortgage shape every training choice.",
+    "She tries new tools after **ground testing**, and uses union questions to demand visible rosters and fair placements.",
+    "She sees the **robot lag** as time for paid inspection experience rather than guaranteed mining work."
+  ],
+  "biggestWorry": [
+    "She worries most about **AGI by 2028**, with capable mining robots following around 2031."
+  ],
+  "whatWouldHelp": [
+    "**Written trainee wages**, supervised places and a public robot purchase timetable would let junior workers plan."
+  ]
 }

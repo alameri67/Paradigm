@@ -11,24 +11,32 @@
     "outlook": "traditional",
     "adaptability": "resistant"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thank you for agreeing to talk, Vera. I'm a field researcher with the Work Futures Panel. We're an independent group with no links to AI companies, employers, unions or political parties, and what you say is confidential. To begin, could you describe a normal working day?"
+      "text": "Good to meet you, Vera. I'm from the Work Futures Panel, an independent research group. We're not connected to any company, union, party or government, and your answers stay confidential. What does a normal working day look like?"
     },
     {
       "speaker": "persona",
-      "text": "I'm a roof bolter at the potash mine, underground, about a kilometre down. Potash is a salt they use in fertiliser. After the cutting machine goes through, I drive the bolter in and drill long steel bolts up into the roof so it doesn't come down on anyone. My father has worked at this mine for thirty-one years and my brother Karim is on the conveyors, so I grew up hearing about the place at dinner."
+      "text": "I drive a water cart at the Redgum bauxite mine. That's a big truck with a tank and sprayers, and I keep the haul roads wet so the dust stays down. I'm on a labour-hire contract, so technically I work for an agency, not the mine. Twelve hours, back and forth, refill at the standpipe, back and forth again."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you enjoy, and what's hard about it?"
+      "text": "What do you like about it, and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "I like knowing my work keeps people safe. When I put in a good row of bolts I think of my father walking under them. The hard part is I'm slow, still learning, and the shift boss checks my rows twice. I live at home and pay my parents board, and I help with my grandmother's medicine, so whatever's left at the end of the month is mostly a joke."
+      "text": "I like that it matters. If I don't water, the truck drivers can't see and somebody gets hurt. What wears me out is that nobody notices unless I miss a patch. And the contract gets renewed every three months, so I never quite relax."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Tell me about life outside work."
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm engaged to Tomas, he's a welder at a fabrication shop that does repairs for the mine. We're getting married in April at the church I grew up in. We're paying for most of it ourselves, so every spare dollar goes there. Savings, honestly, maybe two weeks."
     }
   ],
   "scenarios": {
@@ -36,11 +44,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "I'll read five pictures of the future and ask about each. The first is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Let me read you the first picture. It's called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
         },
         {
           "speaker": "persona",
-          "text": "I'd say I'm not surprised. Most of what people get excited about comes and goes. My father has seen three 'new systems' come into the mine and two of them went in the bin."
+          "text": "Good. I'd be happy with that one."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say I'm not surprised. People in cities get excited about every new gadget. Out here, work is still work. I'd say that after church, probably, to my uncle."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +64,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means things stay as they are, which is what I want. I'm not someone who likes change for its own sake. I want to get good at this, and maybe in a few years be married and still working here."
+          "text": "For me, nothing changes, and that's still hard. My contract gets reviewed in February. The agency already told us the mine wants fewer contractors next year because of costs. That has nothing to do with AI. It's just money."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +72,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Same as now. Go to work, pay board, help with Grandma's medicine. Try to put a little aside for a wedding one day, though there's no one to marry yet, my mother would like me to say that clearly."
+          "text": "I'd keep my head down, never be late, never miss a patch. I'd ask the agency if I can get a direct job with the mine, which is safer. And I'd cut the wedding guest list a bit, even though Mum won't like it."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +80,84 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Content, really."
+          "text": "Worried, honestly. The wedding, the contract in February, and Tomas's shop depends on the same mine."
         },
         {
           "speaker": "interviewer",
-          "text": "You said two of the three new systems went in the bin. What were they?"
+          "text": "You said Tomas's shop depends on the same mine. How much?"
         },
         {
           "speaker": "persona",
-          "text": "One was a tracking tag on your helmet that kept losing signal underground, everyone hated it. The other was some computer that was supposed to plan the cutting, and the old shift bosses just ignored it until it went away. The one that stayed was the new ventilation, because it actually worked."
+          "text": "Most of their work is mine repairs, maybe three quarters. If the bauxite mine cuts costs, my contract and my fiancé's welding work both go wrong at once."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use any AI tools yourself, on your phone or anything?"
+          "text": "What would you cut from the wedding first?"
         },
         {
           "speaker": "persona",
-          "text": "No. Karim talks to one on his phone like it's a friend, I think it's strange. If I want to know something I ask my father or I ask at the mine."
+          "text": "The band. My cousin plays guitar, he'd do it for free. The dress stays, I've already paid half. The church is free for members anyway."
         }
       ],
-      "say": "I'd say I'm not surprised, because most exciting new things come and go. My father has seen three new systems arrive at the mine and two were thrown out.",
-      "think": "I think it means things stay as they are, which is what I want. I'd like to get good at this job, maybe marry in a few years, and still work here.",
-      "do": "Carries on working, paying board to her parents and helping with her grandmother's medicine. Hopes to put a little aside towards a wedding one day.",
-      "feel": "Calm and content.",
-      "mood": "calm",
-      "quote": "My father has seen three 'new systems' come into the mine and two of them went in the bin.",
-      "fieldNote": "Her family history at the mine gives her a long view of technology that fails. She values continuity and doesn't use AI tools at all. Her money goes to family, which she sees as normal rather than a burden.",
+      "say": [
+        "I'd say **city people** get excited about every new gadget.",
+        "I'd tell my uncle after church that **work is still work** out here."
+      ],
+      "think": [
+        "My **contract review** in February worries me more than AI.",
+        "The mine wants **fewer contractors** next year because of costs."
+      ],
+      "do": [
+        "Ask the agency about a **direct job** with the mine.",
+        "Cut the **wedding band** and some guests to save money."
+      ],
+      "feel": [
+        "**Worried** about the wedding, the contract, and Tomas's shop all at once."
+      ],
+      "mood": "anxious",
+      "quote": "If the bauxite mine cuts costs, my contract and my fiancé's welding work both go wrong at once.",
+      "fieldNote": [
+        "Vera's anxiety comes from a **three-month contract** and a February review, not AI.",
+        "Her household has **one point of failure**: both incomes depend on the same mine.",
+        "She speaks with **traditional** frames: city people, church, family paying for the wedding."
+      ],
       "actions": [
+        "change-job",
+        "cut-spending",
         "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Ask the labour-hire agency about a direct job at the bauxite mine",
+          "tag": "change-job"
+        },
+        {
+          "text": "Replace the wedding band with her cousin on guitar",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Turn up early every shift before the February contract review",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust."
         },
         {
           "speaker": "persona",
-          "text": "I'd say the company has the right to run its business how it wants, that's how it works. But I'd also say a good company remembers the families who built it. I'd say that at home, not online, I don't do online."
+          "text": "Hm. I don't love the sound of that."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's the office people and the computer companies who wanted this, not us. I'd say working people should come first. I'd probably say it at the family lunch on Sunday."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +165,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I know they already have bolters that do most of it themselves at some mines, with one person watching. I'm the slow new one. If they need fewer bolter operators, I'm the one who goes, and it would shame me in front of my father."
+          "text": "Privately, I think a water cart is one of the easiest jobs to give a robot. Same roads, same sprayers, over and over. If the mine plans the routes with AI, they don't need me to decide where to spray. I'm the first one they'd test it on."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +173,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd work harder and cleaner than anyone, so they have no reason. I'd ask my father to speak to the people he knows. I'd stop buying anything that isn't needed. I wouldn't sign up for courses about computers, I'd rather wait and see if it really comes."
+          "text": "I'd stick to my job and do it perfectly. I wouldn't do computer courses, that's not me. I'd ask my pastor if the church knows of other work in town, just in case. And Tomas and I would push the wedding savings harder."
         },
         {
           "speaker": "interviewer",
@@ -126,48 +181,84 @@
         },
         {
           "speaker": "persona",
-          "text": "Worried, and embarrassed to be worried."
+          "text": "Anxious. Like waiting for the contract email, but all the time."
         },
         {
           "speaker": "interviewer",
-          "text": "You said it would shame you in front of your father. Why shame?"
+          "text": "You said you're the first they'd test a robot on. Do you think they already are?"
         },
         {
           "speaker": "persona",
-          "text": "Because he got me the start. He told the foreman I'd work hard. If I'm the first one let go, it says something about him too. That's how it feels, even if it's silly."
+          "text": "I don't know for sure. Last month a man from head office rode in my water cart with a laptop, asking about the routes, and nobody told me why. I've thought about it every day since."
         },
         {
           "speaker": "interviewer",
-          "text": "Some would ask the government for help in that position. Would you?"
+          "text": "Would you ever consider learning the new systems?"
         },
         {
           "speaker": "persona",
-          "text": "Not first. First family, then the community at our mosque, they help people find work. Government money is for people who truly can't. I'd rather take a cleaning job than sit and wait for a payment."
+          "text": "If a person showed me, in the truck, with my hands, maybe. Not on a phone, not with a chat thing. I don't trust it. My grandad learned everything by watching, and so did I."
         }
       ],
-      "say": "I'd say the company has the right to run its business as it wants, but a good company remembers the families who built it. I'd say that at home rather than online.",
-      "think": "I think bolters that mostly run themselves already exist, and as the slow new one I'd go first. It would shame me in front of my father, who got me the start.",
-      "do": "Works harder and cleaner so there's no reason to let her go and asks her father to speak to his contacts. Cuts all unneeded spending and waits to see if the change really comes rather than taking computer courses.",
-      "feel": "Worried, and embarrassed to be worried.",
+      "say": [
+        "I'd say **office people** and computer companies wanted this, not us.",
+        "I'd say **working people** should come first."
+      ],
+      "think": [
+        "A **water cart** is one of the easiest jobs to give a robot.",
+        "If AI plans the routes, I'm the **first one** they'd test."
+      ],
+      "do": [
+        "Do my job **perfectly** and skip computer courses.",
+        "Ask my **pastor** if the church knows other work in town."
+      ],
+      "feel": [
+        "**Anxious**, like waiting for the contract email all the time."
+      ],
       "mood": "anxious",
-      "quote": "If I'm the first one let go, it says something about him too.",
-      "fieldNote": "Her fear is tied to family honour more than money, because her father vouched for her. She defends the company's right to automate while expecting loyalty from it. She'd turn to family and her mosque community long before the government.",
+      "quote": "A man from head office rode in my water cart with a laptop, asking about the routes, and nobody told me why.",
+      "fieldNote": [
+        "Vera already sees **signs** of automation in her own cab and dwells on them.",
+        "She rejects **screen learning** but might accept hands-on teaching in the truck.",
+        "She turns to **church and family** networks rather than government help."
+      ],
       "actions": [
+        "seek-support",
         "keep-going",
-        "cut-spending",
-        "wait-and-see",
-        "seek-support"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Ask her pastor about other work in town",
+          "tag": "seek-support"
+        },
+        {
+          "text": "Keep every shift perfect and avoid any warnings",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Put Tomas's overtime pay straight into wedding savings",
+          "tag": "save-more"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "This next one is much faster. It's called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare."
         },
         {
           "speaker": "persona",
-          "text": "I'd say people shouldn't panic and families should stick together. I don't think the government can fix this with money, it'll just make everyone dependent. I'd want them to protect real jobs somehow, but I don't know how."
+          "text": "Two years? No. Please, no."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is wrong, and people should stop it. I'd say it to anybody who listened, at church, at work. I'd say politicians who let this happen should be voted out."
         },
         {
           "speaker": "interviewer",
@@ -175,7 +266,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In two years, my father, my brother and me, all three of us could be out of the mine together. That's the whole household income. And my grandmother's medicine doesn't stop because the robots came."
+          "text": "Off the record, I don't have a plan. AGI in 2028 means the routes and the agency's rosters are done by a computer. Then by 2031 my truck drives itself. Tomas's shop loses work too. We'd be newly married with nothing."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +274,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd take any extra shifts while they still exist and put everything aside. I'd look for any work that still needs a person, a shop, cleaning, the care home where my aunt works. The family would pool everything, we'd cut down to one car. If it came to it, I'd accept the government help, but I'd hate it."
+          "text": "I'd postpone the wedding, honestly, or make it tiny. I'd move back in with my parents. I'd vote for whoever promised to protect jobs at the mine. Beyond that, I really don't know."
         },
         {
           "speaker": "interviewer",
@@ -191,48 +282,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Frightened. I'd pray a lot. I'd be scared for my parents more than for me."
+          "text": "Panicked. I can feel my chest go tight just saying it."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd hate taking government help. What would make it easier?"
+          "text": "What would you tell your mum?"
         },
         {
           "speaker": "persona",
-          "text": "If it felt like it was paid back somehow. Like work for the town, fixing things, helping the old people. Then it's not a handout, it's a job by another name."
+          "text": "That the wedding is off for now. She'd cry, because she's been planning it since I was little. Telling my mum the wedding is off is the part I can't picture saying."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to your father the night it was announced?"
+          "text": "You said you don't have a plan. What would it take to make one?"
         },
         {
           "speaker": "persona",
-          "text": "I'd make him tea. He doesn't talk about feelings, so I'd ask him about the old days at the mine and let him tell the stories. Then after he went to bed I'd sit with my mother and we'd do the numbers."
+          "text": "Money and time, and I'd have neither. Maybe if the mine kept us on for a year while we figured it out. But I don't think they would."
         }
       ],
-      "say": "I'd say people shouldn't panic and families should stick together. I don't think government money fixes this, though I'd want real jobs protected somehow.",
-      "think": "I think my father, my brother and I could all be out of the mine together within two years, which is the whole household income. My grandmother's medicine won't stop because robots came.",
-      "do": "Takes extra shifts while they last and saves everything, then looks for any job that still needs a person, such as cleaning or care work. Pools money with the family, cuts to one car, and reluctantly accepts government help if needed.",
-      "feel": "Frightened, mostly for her parents, and praying a lot.",
-      "mood": "alarmed",
-      "quote": "Like work for the town, fixing things, helping the old people. Then it's not a handout, it's a job by another name.",
-      "fieldNote": "The scale of the threat is the family's, not just hers: three incomes from one mine. Her reluctance about government help softens if it comes as work for the town. The night-of scene with tea and stories was very specific and affecting.",
+      "say": [
+        "I'd say this is **wrong** and people should stop it.",
+        "Politicians who allow it should be **voted out**."
+      ],
+      "think": [
+        "By 2031 my **truck drives itself** and Tomas's shop loses work.",
+        "Tomas and I would be **newly married** with nothing to live on."
+      ],
+      "do": [
+        "**Postpone the wedding** or make it tiny.",
+        "Move back in with **my parents**.",
+        "Vote for whoever promises to **protect mine jobs**."
+      ],
+      "feel": [
+        "**Panicked**, with my chest going tight just saying it."
+      ],
+      "mood": "panicked",
+      "quote": "Telling my mum the wedding is off is the part I can't picture saying.",
+      "fieldNote": [
+        "Vera has **no plan** and says so; she lacks both money and time.",
+        "The **wedding** becomes the first casualty and the most painful one.",
+        "Her response is **political**: vote out those who allow it."
+      ],
       "actions": [
-        "save-more",
-        "change-job",
-        "seek-support",
-        "cut-spending"
+        "family-plans",
+        "move",
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Postpone the April wedding or shrink it to family only",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Move back in with her parents to save rent",
+          "tag": "move"
+        },
+        {
+          "text": "Vote for candidates who promise to protect mine jobs",
+          "tag": "politics"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Same idea, a bit slower. This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast."
         },
         {
           "speaker": "persona",
-          "text": "I'd say we have a few years, so families and the community should get ready together, and companies should keep apprenticeships going. That's what built this town."
+          "text": "Five years. That's still fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it again: this should be stopped or slowed down. Five years is not long for a town like ours. I'd join any group at church or in town that was writing to the government."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +368,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Five years. My father would be close to retiring anyway, so maybe that's lucky for him. For me, I'd be thirty-two and only know bolting. I don't know what I'd do. I don't have a plan, and I don't like that I don't."
+          "text": "Privately, five years means we'd be married, maybe with a baby. AGI in 2031, robots in 2034. I'd be 34 with a water cart licence and nothing else. That frightens me more than the two-year one in some ways, because there'd be a child."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +376,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and wait a year or two to see if it's really coming. If it is, I'd ask about an apprenticeship that still needs hands, maybe plumbing, my uncle is a plumber in the next town. And I'd save what I can for the family, not for me."
+          "text": "I'd go ahead with the wedding, but small. I'd ask the agency to train me on a different truck, something with more skill, if they would. Tomas might try to get work at a bigger fabrication shop in the city. We'd save harder."
         },
         {
           "speaker": "interviewer",
@@ -256,48 +384,84 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. It's like hearing a rock creak above you, you don't know when."
+          "text": "Alarmed. It doesn't go away, it just takes longer."
         },
         {
           "speaker": "interviewer",
-          "text": "A plumbing apprenticeship would mean a pay cut. Could you manage that?"
+          "text": "You said Tomas might go to the city. Would you go with him?"
         },
         {
           "speaker": "persona",
-          "text": "Only living at home. That's the good thing about living with my parents, they'd say 'stay, eat, learn.' My uncle would teach me, family looks after family. But robots doing hands-on work means plumbing too, eventually, doesn't it."
+          "text": "I'd want to stay near my parents and the church. But if that's where the work is, I'd go. A wife goes where the family needs to go."
         },
         {
           "speaker": "interviewer",
-          "text": "So why plumbing?"
+          "text": "Would you put off children?"
         },
         {
           "speaker": "persona",
-          "text": "Because it's in houses, under sinks, in old buildings. I think it's the last place they'd send a robot. And because I know my uncle. I'd rather learn from someone I trust than a computer course."
+          "text": "Probably. That's a hard thing to say. I always wanted to be young when I had kids, like my mum was, and robots at the mine would make me wait."
         }
       ],
-      "say": "I'd say we have a few years, so families and the community should get ready together and companies should keep apprenticeships going. That's what built this town.",
-      "think": "I think my father might be close enough to retirement to be lucky, but I'd be thirty-two and only know bolting. I don't have a plan, and I don't like that.",
-      "do": "Keeps working and waits a year or two to see if it's coming, then looks at a plumbing apprenticeship with her uncle while living at home. Saves what she can for the family.",
-      "feel": "Anxious, like hearing a rock creak above her without knowing when it will fall.",
-      "mood": "anxious",
-      "quote": "It's like hearing a rock creak above you, you don't know when.",
-      "fieldNote": "She wants an apprenticeship from someone she trusts, not a course, which fits her traditional outlook. Living at home makes a pay cut possible. She noticed herself that plumbing isn't safe forever either.",
+      "say": [
+        "I'd say **five years** isn't long for a town like ours.",
+        "I'd join a **church or town group** writing to the government."
+      ],
+      "think": [
+        "At **34** I'd have a water cart licence and nothing else.",
+        "A **baby** would make this scarier than the two-year picture."
+      ],
+      "do": [
+        "Have a **small wedding** and save harder.",
+        "Ask the agency to train me on a **more skilled truck**."
+      ],
+      "feel": [
+        "**Alarmed**: the fear doesn't go away, it just takes longer."
+      ],
+      "mood": "alarmed",
+      "quote": "I always wanted to be young when I had kids, like my mum was, and robots at the mine would make me wait.",
+      "fieldNote": [
+        "The extra time brings **children** into Vera's thinking, which raises the stakes.",
+        "She'd follow **Tomas** to the city, despite wanting to stay near family and church.",
+        "She'd join a **community letter-writing** group rather than a union."
+      ],
       "actions": [
-        "wait-and-see",
+        "family-plans",
         "retrain",
-        "seek-support",
-        "save-more"
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Hold a small church wedding in April and save the rest",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Ask the agency for training on a more skilled haul truck",
+          "tag": "retrain"
+        },
+        {
+          "text": "Join a church group writing to the government about mine jobs",
+          "tag": "politics"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "And the last one. It's called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans."
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough time for a family to plan, so plan. Don't wait for someone else to fix it. I'd say it to my cousins, the younger ones especially."
+          "text": "Ten years. That's a long time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is enough to protect people if leaders want to. I'd say communities like ours need support for apprenticeships and family businesses, not handouts."
         },
         {
           "speaker": "interviewer",
@@ -305,7 +469,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Ten years I can maybe accept. My father would be retired, my grandmother, I hope she's still with us, but who knows. I'd be thirty-seven, maybe married, maybe not. I'd have time to learn a trade from my uncle properly."
+          "text": "Honestly, ten years plus three is 2039. I'd be 40. The mine might still need some people. I might be in a different job by then anyway. It's still worrying, but I could breathe."
         },
         {
           "speaker": "interviewer",
@@ -313,7 +477,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd stay at the mine for now and only start the plumbing apprenticeship when I see the first robot bolter on our level. I'd save a little each month for a wedding, if there's a wedding. I'd keep doing what I do well until the day it isn't needed."
+          "text": "I'd get married in April as planned. I'd ask the agency to put me on more skilled trucks over the next few years. Tomas and I might try to start a small repair business together, him welding, me doing the books, though I'd need help with the computer side."
         },
         {
           "speaker": "interviewer",
@@ -321,37 +485,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, but I can pray about it and wait. That feels possible."
+          "text": "Anxious, but not scared out of my mind. More like a heavy thought in the back of my head."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd wait until you see a robot bolter on your level. Is that cutting it close?"
+          "text": "You said you'd need help with the computer side. Who would help?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe. But I've seen people jump early and lose everything. Better one sure step than three nervous ones. My father says that about bolting too."
+          "text": "Tomas's sister works at the bank. She'd show me. I'd learn it from a person, not from an app."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you blame if ten years went by and the town wasn't ready?"
+          "text": "What would your family say about you starting a business?"
         },
         {
           "speaker": "persona",
-          "text": "Not the company, they did what businesses do. The schools, maybe, for not teaching trades anymore. And families who didn't talk to each other about it."
+          "text": "Dad would be proud. Working for yourself is the best kind of work, my dad always said, and with ten years my fiancé Tomas and I could try it. Mum would worry about the money."
         }
       ],
-      "say": "I'd say ten years is enough for a family to plan, so plan and don't wait for someone else to fix it. I'd tell my younger cousins especially.",
-      "think": "I think I can maybe accept ten years, because my father would be retired and I'd have time to learn a trade from my uncle properly. I'd be thirty-seven, maybe married, maybe not.",
-      "do": "Stays at the mine and only starts a plumbing apprenticeship once she sees a robot bolter on her own level. Saves a little each month towards a possible wedding.",
-      "feel": "Uneasy, but able to pray about it and wait.",
-      "mood": "uneasy",
-      "quote": "Better one sure step than three nervous ones.",
-      "fieldNote": "The decade lets her stay true to her cautious nature, and she frames it with her father's bolting wisdom. She doesn't blame the company at all, pointing instead to schools and families. Faith gives her a way to sit with uncertainty.",
+      "say": [
+        "I'd say **ten years** is enough to protect people if leaders want to.",
+        "Communities need **apprenticeships** and family businesses, not handouts."
+      ],
+      "think": [
+        "Robots by 2039 means I'd be **40**, maybe already in a different job.",
+        "It's **still worrying**, but I could breathe."
+      ],
+      "do": [
+        "Get married in **April** as planned.",
+        "Start a small **repair business** with Tomas, him welding and me on the books."
+      ],
+      "feel": [
+        "**Anxious**, like a heavy thought at the back of my head."
+      ],
+      "mood": "anxious",
+      "quote": "Working for yourself is the best kind of work, my dad always said, and with ten years my fiancé Tomas and I could try it.",
+      "fieldNote": [
+        "The decade gives Vera room for a **family business**, which fits her values.",
+        "She'd learn computer bookkeeping only from **a person**, Tomas's sister.",
+        "Her worry stays **anxious** because her contract and savings are still thin."
+      ],
       "actions": [
-        "keep-going",
-        "wait-and-see",
         "family-plans",
-        "retrain"
+        "keep-going",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Get married in April as planned",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Ask the agency for more skilled truck work over the next years",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Start a small welding repair business with Tomas",
+          "tag": "side-income"
+        }
       ]
     }
   },
@@ -362,7 +554,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because it takes my father, my brother and me at the same time. What would help is apprenticeships that still pay a little, and companies that give the old families first chance at whatever work is left. Not a cheque in the post. Work."
+      "text": "AGI by 2028, without a doubt. The wedding, the job, Tomas's shop, all gone at once. What would help is the mine keeping local people on while we retrain, and help for small family businesses to start up."
     },
     {
       "speaker": "interviewer",
@@ -370,11 +562,22 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe what the mine means to the town. It's not only wages. It's the football team, the Christmas party, my father's friends. A robot doesn't buy raffle tickets."
+      "text": "You didn't ask about faith. A lot of people in our church would get through this together, sharing meals and lending money. That's what would keep me going, not an app."
     }
   ],
-  "headlineQuote": "A robot doesn't buy raffle tickets.",
-  "portrait": "Vera Rahman is a 27-year-old junior roof bolter a kilometre underground at a potash mine, where her father has worked for thirty-one years and her brother runs the conveyors. She lives at home, pays board, helps with her grandmother's medicine and has almost nothing saved. Cautious and traditional, she doesn't use AI tools, defends the company's right to run its business and would turn to family and her mosque community before the government. The two-year picture frightens her because it could take three family incomes at once, while with more time she'd wait for proof and then learn plumbing from her uncle.",
-  "biggestWorry": "The AGI by 2028 picture, because it could take her father's, her brother's and her own jobs at the same time.",
-  "whatWouldHelp": "Apprenticeships that still pay a little, and companies giving long-serving families first chance at whatever work is left, rather than a cheque in the post."
+  "headlineQuote": "A lot of people in our church would get through this together, sharing meals and lending money.",
+  "portrait": [
+    "Vera is a **water cart driver** on a three-month labour-hire contract at a bauxite mine.",
+    "She's engaged to Tomas, a welder whose shop also depends on **the same mine**.",
+    "She's already anxious about a **February contract review** before AI comes up.",
+    "She rejects **screen learning** and leans on church and family.",
+    "In the fast AGI picture she has **no plan** and would postpone her wedding."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, because her job, Tomas's shop and the wedding would all go at once."
+  ],
+  "whatWouldHelp": [
+    "The mine **keeping local people** on while they retrain.",
+    "Help for **small family businesses** to start up."
+  ]
 }

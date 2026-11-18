@@ -11,24 +11,24 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Wei. I'm with the Work Futures Panel, an independent research group. We don't work for any AI company, employer, union, party or government. Everything you say stays confidential, so feel free to tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I'm a senior field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions, political parties or government. We sell nothing and campaign for no side. Your answers are confidential. What is a usual shift like?"
     },
     {
       "speaker": "persona",
-      "text": "I run an electric rope shovel at an oil sands mine, the big machine that digs the sand and loads it into the haul trucks. The bucket takes about a hundred tonnes a pass, and it's four passes to fill a truck. I fly in for seven days and out for seven, and on shift it's twelve hours in the cab with a thermos and a lot of concentration. The skill is in loading the truck evenly and fast without banging the bucket on the box, and on a good day I'm the fastest on the crew. The cold in January and the camp food are what wear me down."
+      "text": "I operate the ore train at West Cut, a large mine, and lead the crew that loads the wagons below ground. I check couplings and brakes, then carry the ore along a narrow rail to the main lift. My two-year technical diploma helps when a fault light comes on, but the sound of a wheel often tells me first. I like an orderly train; the stale air and delays at the lift are tiring."
     },
     {
       "speaker": "interviewer",
-      "text": "What's life like on your weeks off?"
+      "text": "What are you planning around outside work?"
     },
     {
       "speaker": "persona",
-      "text": "My wife Lin does the books for a car dealership, so I cook on my off weeks to give her a break. Our daughter Mei is a civil engineer and our son Karl runs a bike shop, both grown and out of the house. I fish when I can. I use the AI chat thing now and then, mostly to check pension rules or to plan a fishing trip, once my son-in-law showed me it wasn't too hard."
+      "text": "I'm 58, with a partner, Lena, and grown children who have their own homes. I hope to stop full-time work at 65 if the figures allow it. My pay is ordinary for the role, and we have about four months of expenses saved, with some other mine jobs within reach. I use an AI assistant now and then to explain a manual, but I check its answer with the workshop book."
     }
   ],
   "scenarios": {
@@ -36,11 +36,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the first picture, called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say fine, good, one less thing to worry about. Some of it's useful, like the faster maintenance reports, and the rest was talk. I'm not one for posting, but I'd say that much at camp."
+          "text": "I'd tell the loading crew a faster report is welcome if it keeps the brake test visible. I would not make a grand speech about AI. An ordinary shift is worth more to me than a clever headline."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it means my plan stays my plan. I work to sixty-five in 2033, take the company pension, and fish. That's been the target for ten years."
+          "text": "The train still needs an operator, and four months of expenses gives us breathing room. The lift has caused more missed production than software ever has. I would keep checking the assistant against the book, because a neat answer can still be wrong."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Same as now. I'd keep running the shovel, keep saving my bit each month into the pension top-up, and maybe use the AI thing a little more for paperwork. Nothing worth spending money on."
+          "text": "I'd keep the train roster and sign the brake sheet myself each shift. I'd continue the monthly transfer into our retirement account at the current rate. In the first year I'd ask the workshop to show the crew which reports the new software actually saves time on."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +64,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Like a normal Monday at camp."
+          "text": "Calm. I can see the next few years of work and household bills clearly enough."
         },
         {
           "speaker": "interviewer",
-          "text": "You said some of it's useful. What's an example from your mine?"
+          "text": "What would you check on the brake sheet?"
         },
         {
           "speaker": "persona",
-          "text": "The maintenance crew uses it to sort out which shovel part is likely to fail next. Last spring it flagged a cracked boom weld on the shovel next to mine a week before anyone saw it. That's good, and it didn't cost anyone a job."
+          "text": "The stop distance and pressure reading must match what I felt on the test run. I would mark any mismatch before loading a wagon. A report can be short, but the measurement cannot be skipped."
         },
         {
           "speaker": "interviewer",
-          "text": "Anything you'd worry about in this picture?"
+          "text": "Would you use the AI assistant more?"
         },
         {
           "speaker": "persona",
-          "text": "Oil prices, mostly. That's what really decides whether this mine runs at full tilt or cuts a crew. AI or no AI, that's the thing I watch."
+          "text": "Only if a colleague shows me a useful example from our own equipment. I have no objection to it; I just do not trust a general answer over the workshop book. That is how I learned the current tool."
         }
       ],
-      "say": "Fine, good, one less thing to worry about. Some of it's useful, like faster maintenance reports, and the rest was talk.",
-      "think": "My plan stays my plan: I work to sixty-five in 2033, take the company pension and fish. That's been the target for ten years.",
-      "do": "Keeps running the shovel and saving his monthly pension top-up. Uses the AI program a bit more for paperwork and spends nothing extra.",
-      "feel": "Calm, like a normal Monday at camp.",
+      "say": [
+        "I would welcome **shorter reports** while keeping a visible brake test.",
+        "I would tell the crew an **ordinary shift** matters more than AI promises."
+      ],
+      "think": [
+        "The **train role** looks steady and four months saved gives our household room.",
+        "I would still verify **AI answers** against the workshop book before acting."
+      ],
+      "do": [
+        "Keep the **ore train roster** and sign the brake sheet each shift.",
+        "Continue **monthly retirement transfers** at our current rate during the first year."
+      ],
+      "feel": [
+        "**Calm** about work and money."
+      ],
       "mood": "calm",
-      "quote": "Last spring it flagged a cracked boom weld on the shovel next to mine a week before anyone saw it.",
-      "fieldNote": "Wei is a numbers person who has had the same retirement target for a decade. He sees useful sides to the technology and judges it by whether it costs jobs. Oil prices, not AI, are his long-standing worry.",
+      "quote": "A report can be short, but the measurement cannot be skipped.",
+      "fieldNote": [
+        "He weighs **software usefulness** against a specific safety check rather than dismissing it outright.",
+        "His **moderate reserve** supports a planned retirement without making him wealthy."
+      ],
       "actions": [
         "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Keep operating the West Cut ore train and signing brake sheets",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say change is coming and people should get ready, not panic. The company should offer training and the government should help those who get hit hardest. That's fair to everyone."
+          "text": "I'd say schedules and parts orders will change first, and the physical train may change later. I would ask to see a proven remote train on our rail before promising fewer drivers. The mine should show the crew the safety record."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +130,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think the shovel is one of the last machines they'll automate. The trucks I load will go driverless first, they're already doing it at the mine up the road. As long as I'm the one filling them, I've got work to 2033."
+          "text": "A control room could use fewer people to move ore, and my lead post might shrink. I can probably move to a nearby mine if necessary, but those places may test the same equipment. Four months of savings is a bridge, not a second career."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +138,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep running the shovel and put my hand up if they trial assisted digging, where the computer helps steer the bucket. I'd spend an evening or two on my off week learning the AI tools properly, since it's clearly not going away. And I'd keep the same savings plan."
+          "text": "I'd keep driving this year and spend one paid shift observing a remote train if West Cut offers a trial. I'd ask the supervisor for the trial's fault log before volunteering for any course. If my roster is cut, I'd apply for another ore train post at the two mines within driving distance."
         },
         {
           "speaker": "interviewer",
@@ -126,46 +146,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Pretty calm. A bit curious, actually."
+          "text": "Anxious. I still have choices, but I would count every change to my own shifts."
         },
         {
           "speaker": "interviewer",
-          "text": "Who on your crew would you worry about?"
+          "text": "What would the fault log need to show?"
         },
         {
           "speaker": "persona",
-          "text": "The truck drivers, especially the younger ones who just bought houses. Kirsty on my crew bought a place in town last year with a big mortgage. I'd tell her to get into the control room training early."
+          "text": "I would look for missed stops, brake faults and how quickly the controller responded. A clean demonstration is less useful than a month of messy runs. If those numbers are sound, I would try the console."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd try the assisted digging. Would that be hard for you?"
+          "text": "Would you train at the first opportunity?"
         },
         {
           "speaker": "persona",
-          "text": "A bit, at first, like any new machine. But I've learned three different shovel models in thirty years. If the guy next to me is getting good results with it, I'd want to know why."
+          "text": "I would wait for the first crew to finish the trial, then take a paid course if a post is available. I can learn a system that works; I dislike being the test case. There is still time in this picture."
         }
       ],
-      "say": "Change is coming and people should get ready, not panic. The company should offer training and the government should help those hit hardest.",
-      "think": "The shovel is one of the last machines they'll automate, while the trucks I load go driverless first. As long as I'm the one filling them, I've got work to 2033.",
-      "do": "Keeps running the shovel and volunteers for any trial of computer-assisted digging. Spends a couple of evenings learning AI tools properly and keeps his savings plan unchanged.",
-      "feel": "Fairly calm, and somewhat curious.",
-      "mood": "calm",
-      "quote": "If the guy next to me is getting good results with it, I'd want to know why.",
-      "fieldNote": "Wei reads the order of automation carefully and puts his shovel near the end of the line. He's willing to try new systems once peers show they work, which fits his steady habits. His concern goes to younger truck drivers with mortgages.",
+      "say": [
+        "I would ask for a **remote trial record** before anyone cuts train drivers.",
+        "I would distinguish **office planning** from physical rail work in this slower change."
+      ],
+      "think": [
+        "My **lead roster** could shrink, and nearby mines may face the same equipment shift.",
+        "Our **four-month reserve** gives time to apply, but it cannot replace years of wages."
+      ],
+      "do": [
+        "Observe a **paid train trial** this year if West Cut offers one.",
+        "Apply for **nearby rail posts** if my roster is cut."
+      ],
+      "feel": [
+        "**Anxious** about my own shifts, with some room to respond."
+      ],
+      "mood": "anxious",
+      "quote": "A clean demonstration is less useful than a month of messy runs.",
+      "fieldNote": [
+        "His **steady approach** requires a fault history before a control-room course.",
+        "He names **other mines** as a possible fallback without treating their vacancies as guaranteed."
+      ],
       "actions": [
-        "keep-going",
-        "learn-ai"
+        "wait-and-see",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Observe a paid remote train trial if West Cut offers one",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Apply for nearby ore train posts if West Cut cuts shifts",
+          "tag": "change-job"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say nobody's ready for this, not the company, not the government, not us. We'd need quick help for families, whatever it costs. I'd say it at camp and at the dinner table, but I wouldn't be marching."
+          "text": "I'd say AGI by 2028 could write the train schedule and order parts, while capable hands-on robots follow around 2031. I would ask the mine to publish both staffing dates. Saying everything changes at once would only muddle the crew."
         },
         {
           "speaker": "interviewer",
@@ -173,7 +217,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be sixty in 2028, which is the earliest the company pension lets me go, with a cut of about a fifth. So I have an exit door, it's just smaller than I wanted. With maybe four months in the bank, I'd take it and not wait around."
+          "text": "I would be 60 when the planning work changes and 63 when the robot date comes. If the train no longer needs me then, I would be two years short of the age I hoped to stop. Four months saved and some nearby mines give me options, but the pension figure might be much lower than we planned."
         },
         {
           "speaker": "interviewer",
@@ -181,7 +225,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first months I'd ask the pension office for exact numbers on going at sixty. We'd cut back hard, no new truck, no fishing lodge trip, and push savings toward six months. Then I'd retire the day I could rather than wait to be let go."
+          "text": "I'd ask the pension office this month for written figures at 63 and 65. I'd postpone replacing our car and put that monthly payment into a cash reserve. In the first year after 2028 I'd apply for a manual rail vacancy if one is posted, and take a paid console course only if it leads to a named job."
         },
         {
           "speaker": "interviewer",
@@ -189,47 +233,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. Not scared out of my mind, but the plan I spent ten years on gets cut by a fifth overnight."
+          "text": "Anxious, with a pencil and a plan. The numbers may be tight, but I have enough time to check them before acting."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Lin that night?"
+          "text": "What would decide whether you retire at 63?"
         },
         {
           "speaker": "persona",
-          "text": "I'd show her the pension sheet and say, here's the worst case and here's how we live on it. She's the bookkeeper, she'd find the holes in my maths in five minutes. Then we'd work out whether her job's safe, because the dealership might get hit too."
+          "text": "Lena and I would compare the written pension estimate with our monthly bills. If it misses by too much, I would keep looking for work. I will not declare an early retirement from a rough guess."
         },
         {
           "speaker": "interviewer",
-          "text": "What gets cut first?"
+          "text": "Why delay the car purchase?"
         },
         {
           "speaker": "persona",
-          "text": "The new truck I've been eyeing, then the boat upgrade. Probably the cabin trip with the grandkids too, which would hurt more than the truck. Food and the mortgage-free house we'd keep, thank God that's paid off."
+          "text": "The current car still runs and passes its inspection. A new payment would make a wage gap harder to cover. I can live with the worn seat for another year."
         }
       ],
-      "say": "Nobody's ready for this, not the company, not the government, not us. We'd need quick help for families, whatever it costs.",
-      "think": "I'd be sixty, the earliest the company pension lets me go, with a cut of about a fifth. I have an exit door, it's just smaller than I wanted, and with four months saved I'd take it.",
-      "do": "Asks the pension office for exact numbers on retiring at sixty. Cuts back hard on the new truck and trips, pushes savings toward six months, and retires as soon as he can rather than wait to be let go.",
-      "feel": "Anxious that ten years of planning gets cut by a fifth overnight, but not terrified.",
+      "say": [
+        "I would ask for **separate dates** for 2028 planning work and 2031 hands-on robots.",
+        "I would insist on **written staffing** information before telling the crew to retire or retrain."
+      ],
+      "think": [
+        "At **63**, I might lose the train wage two years before my hoped-for stop.",
+        "Our **four-month cushion** buys decisions, but a lower pension could still hurt."
+      ],
+      "do": [
+        "Postpone the **car replacement** and put its planned payment into cash savings.",
+        "Apply for a **manual rail vacancy** after 2028 if posted; train only for a named paid post."
+      ],
+      "feel": [
+        "**Anxious** about income, while still able to make a plan."
+      ],
       "mood": "anxious",
-      "quote": "I have an exit door, it's just smaller than I wanted.",
-      "fieldNote": "Wei's earliest pension age lands exactly in 2028, which gives him an option most workers wouldn't have. He handles the shock with spreadsheets and his wife's bookkeeping eye. The loss he feels most is not money but the cabin trip with his grandchildren.",
+      "quote": "I will not declare an early retirement from a rough guess.",
+      "fieldNote": [
+        "He checks **pension figures** instead of treating early retirement as an automatic answer.",
+        "His **course condition** requires a paid path to a named post.",
+        "The **car delay** is a clear spending cut tied to a reserve transfer."
+      ],
       "actions": [
-        "retire-early",
         "cut-spending",
-        "save-more"
+        "save-more",
+        "change-job",
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Postpone replacing the family car this year",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Put the planned car payment into cash savings each month",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply for a posted manual rail vacancy after 2028",
+          "tag": "change-job"
+        },
+        {
+          "text": "Take a paid console course if it leads to a named job",
+          "tag": "retrain"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough to plan if people start now. Companies should be upfront about their timelines so workers can make choices. I'd say that at the next town hall at camp."
+          "text": "I'd tell the crew that AGI by 2031 may take planning work when I am 63, with capable hands-on robots around 2034. That is after my hoped-for stop at 65. I would still want the mine to show how it plans to staff the train before then."
         },
         {
           "speaker": "interviewer",
@@ -237,7 +315,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, 2031 means I'd be sixty-three. I'd probably work until the shovel's automated, then go with a smaller cut than in the fast one. It's not perfect, but it's manageable."
+          "text": "Five years gives me time to build a bigger reserve and see whether my role shifts. I could finish at 65 if the train work lasts, but the planning part of leading may disappear at 63. I cannot count on two full years of lead pay without a roster promise."
         },
         {
           "speaker": "interviewer",
@@ -245,7 +323,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going as normal for the first couple of years and watch what the mine actually does. I'd boost savings by about two hundred a month so the gap to sixty-five is easier. If they offered training on the remote shovel, I'd take it once a few others had tried it."
+          "text": "I'd add one hundred to our savings transfer every month from now, if our bills stay stable. I'd request a written train staffing plan this year and keep my current shifts. In the first year after 2031 I'd take a regular operator post if my lead duties end and the wage still covers our bills."
         },
         {
           "speaker": "interviewer",
@@ -253,47 +331,75 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. There's a shadow on the plan, but the plan still works."
+          "text": "Uneasy. The robot date is later, but the earlier roster decision is still on my mind."
         },
         {
           "speaker": "interviewer",
-          "text": "How is it different from 2028 for you?"
+          "text": "Would a regular operator wage work?"
         },
         {
           "speaker": "persona",
-          "text": "In 2028 I go at sixty because I have to. In 2031 I go at sixty-three because I choose to. The money's better and so is the feeling."
+          "text": "I would need the exact offer before saying yes. Lena and I can compare it with our housing and food costs. I would not pretend a title matters more than the monthly figure."
         },
         {
           "speaker": "interviewer",
-          "text": "Would Mei or Karl be affected?"
+          "text": "What if the mine offers remote training?"
         },
         {
           "speaker": "persona",
-          "text": "Mei designs roads and bridges, and I honestly don't know if AI takes that. Karl fixes bikes, and I'd guess people will want a person for that a while longer. I'd ask them both, but they'd probably know more than me."
+          "text": "I would ask the first group how the console performed over several months. If it works and a paid post is attached, I would take the course. I do not need to be first onto the ore train console to become a capable operator."
         }
       ],
-      "say": "Five years is enough to plan if people start now. Companies should be upfront about their timelines so workers can make choices.",
-      "think": "I'd be sixty-three in 2031, so I'd work until the shovel's automated and then go with a smaller pension cut than in the fast one. It's not perfect, but it's manageable.",
-      "do": "Keeps going as normal for the first couple of years while watching what the mine does. Adds about two hundred a month to savings and would take remote shovel training once others had tried it.",
-      "feel": "Uneasy, with a shadow over a plan that still works.",
-      "mood": "uneasy",
-      "quote": "In 2028 I go at sixty because I have to. In 2031 I go at sixty-three because I choose to.",
-      "fieldNote": "Three extra years turn a forced exit into a choice for Wei, and he values that more than the extra money. He remains a careful watcher rather than an early mover. He's honest that he doesn't know what his children's work will look like.",
+      "say": [
+        "I would seek a **staffing plan** for 2031 before trusting the later 2034 robot date.",
+        "I would tell the crew **lead duties** may change before the train seat does."
+      ],
+      "think": [
+        "I could reach **65** in the train if the roster holds.",
+        "A cut in **lead pay** at 63 would still disturb our planned last working years."
+      ],
+      "do": [
+        "Add **one hundred monthly** to savings if household bills remain stable.",
+        "Request a **written roster** and take a bill-covering operator post if lead duties end."
+      ],
+      "feel": [
+        "**Uneasy** about lead pay, with a plausible path to retirement."
+      ],
+      "mood": "anxious",
+      "quote": "I do not need to be first onto the ore train console to become a capable operator.",
+      "fieldNote": [
+        "His **moderate savings** can grow over five years without assuming the company retains his role.",
+        "He tests a **lower-paid post** against actual household costs before accepting it."
+      ],
       "actions": [
         "save-more",
-        "wait-and-see",
-        "keep-going"
+        "keep-going",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Add one hundred monthly to savings if bills stay stable",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep operating the West Cut ore train this year",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Take a regular operator post if offered at bill-covering pay",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "The picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a decent warning, so people should use it. Get training, pay down debts, don't wait for someone else to fix it. And the government should have a plan ready for those it does hit."
+          "text": "I'd say a decade should be enough for the mine to train younger staff on whatever equipment comes. AGI by 2036 could take planning work, and capable hands-on robots follow around 2039. I would ask for a yearly equipment plan and actual course places."
         },
         {
           "speaker": "interviewer",
@@ -301,7 +407,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For me personally, I'm out in 2033 with my full pension, so it doesn't change much. The robots would arrive after I've hung up my hard hat. I'd mostly be curious to see what the mine looks like without us."
+          "text": "I would be 68 in 2036 and 71 around the robot date. If the pension figures work and my health holds, I hope to stop at 65. That puts my own train job outside those dates, although I would worry about my grown children finding steady work."
         },
         {
           "speaker": "interviewer",
@@ -309,7 +415,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep running the shovel and stick to the plan. Maybe I'd try the remote shovel if they trialled it before I left, just to say I'd done it. Otherwise it's the same savings, the same fishing trips."
+          "text": "I'd continue driving while I am fit and add one hundred a month to retirement savings this year if our budget allows. I'd ask for a written pension estimate at 65 and review it with Lena. In the first year after 2036, if I have retired, I'd help at the local workshop with basic brake checks twice a month."
         },
         {
           "speaker": "interviewer",
@@ -317,34 +423,59 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Almost relieved, to be honest."
+          "text": "Calm about my own income if the pension is adequate. I would still watch how the younger crew are treated."
         },
         {
           "speaker": "interviewer",
-          "text": "You said relieved. Relieved about what?"
+          "text": "What would you do if the pension estimate falls short?"
         },
         {
           "speaker": "persona",
-          "text": "That the timing works out for me. My dad lost his job at the steel mill at fifty-seven and never really got back on his feet. I always swore that wouldn't be me, and in this picture it isn't."
+          "text": "I would ask whether another year of work changes the figure enough. If not, Lena and I would look at our spending before making a decision. A later robot date does not pay our bills now."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you tell young people to start in mining in this picture?"
+          "text": "Why help at the workshop?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell them to go in with eyes open. Do a few years, make good money, but learn something on the side, maybe electrical or controls. Don't plan on a thirty-year career on a shovel like I had."
+          "text": "Young mechanics have good hands, but some have never seen a loaded ore wagon stop. I can show the brake check without pretending I know their new software. It would keep me useful without a full shift."
         }
       ],
-      "say": "Ten years is a decent warning, so people should use it to train and pay down debts instead of waiting for someone else to fix it. The government should have a plan for those it hits.",
-      "think": "I'm out in 2033 with my full pension, so it doesn't change much, and the robots arrive after I've hung up my hard hat. I'd mostly be curious to see the mine without us.",
-      "do": "Keeps running the shovel and sticks to his retirement plan. Might try a remote shovel trial before leaving, and keeps the same savings and fishing trips.",
-      "feel": "Calm, almost relieved that the timing works out.",
+      "say": [
+        "I would ask for **annual plans** and course places before the 2036 and 2039 changes.",
+        "I would tell younger workers to practice **real brake checks** as equipment changes."
+      ],
+      "think": [
+        "If I retire at **65**, both technology dates follow my own working years.",
+        "I still need the **pension estimate** to confirm our household income will be adequate."
+      ],
+      "do": [
+        "Add **one hundred monthly** to retirement savings this year if our budget allows.",
+        "Keep the **train role** until retirement and review the written pension estimate with Lena."
+      ],
+      "feel": [
+        "**Calm** about my own job if retirement figures hold."
+      ],
       "mood": "calm",
-      "quote": "My dad lost his job at the steel mill at fifty-seven and never really got back on his feet.",
-      "fieldNote": "With ten years Wei is safe, and the relief traces back to his father losing work late in life. His advice to young people is practical: earn well, but learn a second skill. He balances personal responsibility with a role for government, in keeping with his centre views.",
+      "quote": "A later robot date does not pay our bills now.",
+      "fieldNote": [
+        "His **calm mood** depends on sufficient pension income, which he will verify rather than assume.",
+        "His **workshop plan** uses existing brake knowledge after retirement without claiming new employment."
+      ],
       "actions": [
+        "save-more",
         "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Add one hundred monthly to retirement savings if affordable",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep operating the ore train until planned retirement if fit",
+          "tag": "keep-going"
+        }
       ]
     }
   },
@@ -355,7 +486,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The 2028 one, because it forces me out at sixty with a fifth cut off my pension. What would help is a top-up for people pushed out early by automation, so the pension isn't cut just because the machines came three years too soon."
+      "text": "AGI by 2028 worries me most. Planning work could change at 60 and the train seat could be at risk around 63, before I hope to stop at 65. A written roster, a paid path to another real post, and clear pension figures would help me choose."
     },
     {
       "speaker": "interviewer",
@@ -363,11 +494,20 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe how long it takes to become good at this. It took me eight years before I could load a truck in four clean passes every time. A robot might do it in a month, but there's a lot of quiet pride in those eight years, and nobody puts that on a spreadsheet."
+      "text": "You did not ask who signs the brake test when one person watches several trains. I can learn a console after it proves itself. I still want a named person responsible for the ore train's stopping distance."
     }
   ],
-  "headlineQuote": "It took me eight years before I could load a truck in four clean passes every time.",
-  "portrait": "Wei Bauer is a 58-year-old rope shovel operator at an oil sands mine who works seven days on, seven off, and has planned for a decade to retire at sixty-five with a company pension. He is pragmatic, a careful planner, and picks up new tools once others have shown they work. He is calm through the plateau and steady change, reasoning that shovels will be among the last machines automated. AGI by 2028 makes him anxious because he'd have to leave at sixty with a reduced pension, while five years leaves him uneasy and ten years leaves him calm.",
-  "biggestWorry": "AGI by 2028, because it would force him out at sixty with about a fifth cut from his pension.",
-  "whatWouldHelp": "A pension top-up for workers pushed out early by automation, so their pension isn't cut because the machines came too soon."
+  "headlineQuote": "I still want a named person responsible for the ore train's stopping distance.",
+  "portrait": [
+    "**Wei Bauer**, 58, leads an ore train loading crew at a large mine and notices mechanical faults early.",
+    "He has **typical pay**, about four months of expenses saved, a partner, grown children and some nearby mine options.",
+    "He uses **AI occasionally** for manuals, checks answers and adopts new tools after a real trial proves useful.",
+    "The **fastest AGI** timeline threatens his hoped-for stop at 65; longer timelines give more room for savings and pension checks."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** could threaten the train seat around 2031, two years before his hoped-for stop."
+  ],
+  "whatWouldHelp": [
+    "A **written roster**, paid access to a real alternative post and clear pension figures would support his decision."
+  ]
 }

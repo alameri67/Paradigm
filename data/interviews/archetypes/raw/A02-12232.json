@@ -11,24 +11,24 @@
     "outlook": "traditional",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time, Jamal. I'm with the Work Futures Panel, an independent research group. We're not connected to AI companies, employers, unions, parties or government, and everything you say here is confidential. What does a normal working day look like for you?"
+      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group with no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
     },
     {
       "speaker": "persona",
-      "text": "I run a bolting rig underground at a nickel mine. After they blast and muck out a new section of tunnel, the roof and walls are loose, so I drive in and drill holes and put in steel rock bolts and mesh to hold it all up. Nobody else goes in until I'm done. It's slow, careful work, maybe sixty or seventy bolts a shift."
+      "text": "I run a jumbo at an underground zinc and lead mine. A jumbo is a drill rig with two long arms; I drill the rock face at the end of a new tunnel, about forty-five holes, so the charge-up crew can load explosives and blast another four metres. Then we bolt and mesh the roof so it's safe, and do it all again."
     },
     {
       "speaker": "interviewer",
-      "text": "What do you like about it, and what wears you down?"
+      "text": "What do you like about it, and what wears you out?"
     },
     {
       "speaker": "persona",
-      "text": "I like knowing the lads are safe because of what I did. My shift boss, Gary, always says the bolter is the most important man nobody thanks. What wears me down is the rotating roster, days then nights, and missing things at home. I volunteer with the local fire brigade too, and I'm always swapping shifts to make the training nights."
+      "text": "I like that it takes skill to read the rock: you feel a soft patch through the controls before you see it. What wears me out is the heat at the bottom levels and the water dripping on you all shift. And driving forty minutes home at seven in the morning after nights."
     }
   ],
   "scenarios": {
@@ -36,19 +36,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Let's start with the one we call AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway."
+          "text": "The first picture is called AI Plateau. “Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "Right. That'd suit me fine, to be honest."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say good, now everyone can get back to real work. At the fire station we'd probably have a laugh about all the fuss. I don't post much online, maybe a meme at most."
+          "text": "I'd say good, let's get on with the job. At work nobody talks about AI much anyway; we talk about the ground and the bonus. If my cousin posted something about it in the family chat, I'd send a thumbs up and leave it."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd think it's mostly good news for me. Bolting underground is fiddly, every bit of ground's different, so I reckon it's one of the last jobs they'd take off a person anyway. I'd feel pretty settled."
+          "text": "Honestly, it means my life goes the way I planned. Zinc's steady, the mine has twelve years of ore in the plan, and a good jumbo operator always has work. I'd be fine."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +56,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working and keep saving for the house. Leila and I have about three months saved and we're getting married next year, so a deposit in two or three years is the plan. I'd also go for my shift supervisor ticket, since that's the next step up."
+          "text": "I'd keep drilling and keep sending my mum 400 a month, like I have since Dad died. Hana and I would keep saving for the wedding in 2028; we've got about three months of costs put away. And I'd sit my shotfirer's licence next year, the licence to handle and fire explosives, because that's the next step up underground."
         },
         {
           "speaker": "interviewer",
@@ -72,55 +64,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Settled."
+          "text": "Calm. It's the world I already know, and I know how to do well in it."
         },
         {
           "speaker": "interviewer",
-          "text": "Tell me about Leila and the wedding."
+          "text": "What does a normal weekend look like for you?"
         },
         {
           "speaker": "persona",
-          "text": "She works at the bank branch on the main street, and we met at a fire brigade fundraiser. Wedding's next October at her family's mosque, then a big lunch at the community hall. Her mum's already planning the food, which is a relief."
+          "text": "We drive up to my grandfather's place most Sundays, after church. He's got a vegetable patch and a bad hip, so I do the digging and he tells me I'm doing it wrong. That's my week, really: the mine, Hana, Mum and the old man."
         },
         {
           "speaker": "interviewer",
-          "text": "Do you use AI tools at all?"
+          "text": "Is there anything about money or work that does keep you up at night, AI or not?"
         },
         {
           "speaker": "persona",
-          "text": "Now and then. I used one to help with my brother's best-man speech, and it was alright, but I had to put the jokes back in. That's about it."
+          "text": "Not much, honestly. The rent's fine, the job's steady, and nobody at our mine has been laid off in the four years I've been there. If anything, it's the heat and the hours that might push me to change, not AI."
         }
       ],
-      "say": "I'd say good, now everyone can get back to real work. At the fire station we'd probably laugh about all the fuss.",
-      "think": "I think it's mostly good news, because underground bolting is fiddly and every patch of ground is different, so it'd be one of the last jobs automated anyway. I'd feel settled.",
-      "do": "Keeps working and saving for a house deposit with his fiancée, with about three months saved and a wedding next year. Studies for his shift supervisor ticket as the next step up.",
-      "feel": "Calm and settled.",
+      "say": [
+        "I'd say **good, let's get on** with the job.",
+        "At work people talk about the ground and **the bonus**, not AI, and online he'd just send a thumbs up."
+      ],
+      "think": [
+        "His life goes **as planned**, with twelve years of ore in the mine plan.",
+        "A good **jumbo operator** always has work, so he feels secure."
+      ],
+      "do": [
+        "Keep drilling and keep sending his mother **400 a month**.",
+        "Keep saving with Hana for their **2028 wedding** on top of three months' savings.",
+        "Sit his **shotfirer's licence** next year as the next step underground."
+      ],
+      "feel": [
+        "**Calm**, because it's the world he knows and knows how to do well in."
+      ],
       "mood": "calm",
-      "quote": "I used one to help with my brother's best-man speech, and it was alright, but I had to put the jokes back in.",
-      "fieldNote": "His pride comes from keeping his crew safe, and he believes the variety of underground ground protects his job. His life is built around a wedding next year and volunteering with the fire brigade. He uses AI casually and sees its limits.",
+      "quote": "Zinc's steady, the mine has twelve years of ore in the plan, and a good jumbo operator always has work.",
+      "fieldNote": [
+        "He supports his **widowed mother** every month, which shapes every money decision.",
+        "Weekends revolve around **church and his grandfather**, a picture of steady family duty.",
+        "His only real strain is **heat and hours**, not job security."
+      ],
       "actions": [
         "keep-going",
         "save-more",
         "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Keep drilling development headings on the jumbo",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Keep saving with Hana for the 2028 wedding",
+          "tag": "save-more"
+        },
+        {
+          "text": "Sit the shotfirer's licence for handling explosives next year",
+          "tag": "retrain"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust."
+          "text": "The next picture is called Steady Disruption. “Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "Yeah. That's probably closer to what's coming."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say a business has every right to bring in new gear, but it should train its own people first. That's how my dad got his trade, an apprenticeship paid by the company. I'd say that to Gary and at the pre-shift talk."
+          "text": "I'd say the mine's not an office, so we'll feel it last. The planning and the paperwork, sure, let the computer do that. But I'd tell people underground that a drill still needs someone who can read the rock."
         },
         {
           "speaker": "interviewer",
@@ -128,7 +142,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think bolting gets semi-automated, where the rig drills and puts the bolts in on its own and I just set it up and check it. Some mines already have that. I'd still have a job, but maybe fewer of us would."
+          "text": "Off the record, the jumbos already have a mode where they drill the pattern by themselves while you watch. Nobody uses it much yet because our ground's broken and wet and it keeps stopping. If robots spread slowly, I've got years, but I'd see it creeping in."
         },
         {
           "speaker": "interviewer",
@@ -136,7 +150,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd put my hand up for training on the automated bolter as soon as other crews had it running properly. I'd keep studying for the supervisor ticket, because supervisors will still be needed. And we'd keep saving, maybe a bit harder."
+          "text": "I'd still go for the shotfirer's licence, and I'd learn the automatic drilling mode properly instead of switching it off like the rest of the crew. If the company runs a course on the new planning software, I'd do it once a couple of the others have tried it. I'd keep the savings where they are."
         },
         {
           "speaker": "interviewer",
@@ -144,56 +158,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not losing sleep, but thinking about it."
+          "text": "Uneasy, a little. Not scared, but I'd notice every time the bosses said \"efficiency\" at a meeting."
         },
         {
           "speaker": "interviewer",
-          "text": "You said as soon as other crews had it running properly. Why not be first?"
+          "text": "Who do you think gets it wrong in this kind of change?"
         },
         {
           "speaker": "persona",
-          "text": "Because the first one always has problems, and I'd rather someone else find them. Once the night shift's had it a few months and it's not breaking down, I'm in. That's just how I am."
+          "text": "Head office, the people who've never been down a decline in their lives. They make the plan on a screen in the city and we find out it's wrong at the face. If AI makes the plans, it'll be the same problem with fewer people to blame."
         },
         {
           "speaker": "interviewer",
-          "text": "Would the wedding or the house change?"
+          "text": "What would you tell Hana about it?"
         },
         {
           "speaker": "persona",
-          "text": "Wedding stays, no question, that's family. The house might wait a year, depending on what the company says about jobs."
+          "text": "Hana would worry more than me; she's like that. I'd tell her the mine needs us for a long while yet, and that I'm getting my tickets so I'm not easy to replace. Her mother would probably tell her to marry a teacher."
         }
       ],
-      "say": "I'd say a business has every right to bring in new gear but should train its own people first. That's how my dad got his trade, through a company-paid apprenticeship.",
-      "think": "I think bolting becomes semi-automated, with me setting up and checking the rig. I'd still have a job, but fewer of us might.",
-      "do": "Trains on the automated bolter once other crews have it running reliably for a few months. Keeps studying for the supervisor ticket, keeps the wedding on track and saves harder, possibly delaying the house by a year.",
-      "feel": "Uneasy, thinking about it but not losing sleep.",
+      "say": [
+        "He'd say the mine **isn't an office**, so it will feel change last.",
+        "He'd tell the crew a drill still needs someone who can **read the rock**."
+      ],
+      "think": [
+        "The jumbos already have an **automatic drilling mode** that stops often in broken, wet ground.",
+        "With slow robots he has **years**, but he'd see automation creeping in."
+      ],
+      "do": [
+        "Still go for the **shotfirer's licence**.",
+        "Learn the **automatic drilling mode** properly instead of switching it off.",
+        "Take the **planning software** course once a couple of colleagues have tried it."
+      ],
+      "feel": [
+        "A little **uneasy**, noticing every time bosses say \"efficiency\" at meetings."
+      ],
       "mood": "uneasy",
-      "quote": "Because the first one always has problems, and I'd rather someone else find them.",
-      "fieldNote": "He supports the company's right to automate but expects it to train its own people, in line with his traditional, free-market views. His steady style shows in waiting until another shift has proved the new rig. Family commitments are fixed, while the house is flexible.",
+      "quote": "If AI makes the plans, it'll be the same problem with fewer people to blame.",
+      "fieldNote": [
+        "He blames **head office** planners who never go underground, not the technology itself.",
+        "He's **steady**: he'd learn new tools after a couple of colleagues go first.",
+        "His partner Hana is the **worrier**; he reassures her with his licences."
+      ],
       "actions": [
-        "learn-ai",
+        "keep-going",
         "retrain",
-        "save-more",
-        "family-plans"
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep drilling on his usual roster underground",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Sit the shotfirer's licence for handling explosives",
+          "tag": "retrain"
+        },
+        {
+          "text": "Learn the jumbo's automatic drilling mode properly",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Take the planning software course after colleagues try it",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Next one, AGI by 2028. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare."
+          "text": "The next picture is called AGI by 2028. “Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "Two years. Mate, that's before the wedding photos are framed."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say it's too fast for anybody to handle, and that the companies are moving before anyone's had a chance to adjust. I'm not one for big government, but I'd say someone has to slow this down. I'd say it at work and at the fire station."
+          "text": "I'd say it's a lot, too fast, and the companies should be made to train their own people, not just buy machines. I'd say that to the shift boss and I'd say it after church. I wouldn't be shouting about handouts, though; I'd want work."
         },
         {
           "speaker": "interviewer",
@@ -201,7 +240,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I think my job's gone, probably within a year of it arriving. If a robot can do anything a person can do, my bolting rig doesn't need me. And there'd be hundreds of miners in town looking for the same jobs."
+          "text": "Truthfully, the planning office and the engineers go first, in 2028. My job is hands-on, so I'd guess I've got until about 2031, maybe a bit longer underground because the ground's so rough. But three years goes fast when your mum's relying on 400 a month."
         },
         {
           "speaker": "interviewer",
@@ -209,7 +248,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First, Leila and I would cut back hard: smaller wedding, no honeymoon trip, no house for now. I'd get savings up from three months towards six. And I'd start looking outside mining straight away, maybe full-time with the fire service, since they'd still need people at fires for a while, I'd hope."
+          "text": "In the first year I'd get my shotfirer's licence and my ground-support ticket, so I can do the jobs around the drill, not just the drill. I'd push our savings from three months to six by cutting the car upgrade and eating out. And Hana and I would bring the wedding forward to next year, smaller, while I've still got steady pay."
         },
         {
           "speaker": "interviewer",
@@ -217,56 +256,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd be up at night going through it."
+          "text": "Tight in the chest. I'm not panicking, but it's the feeling when you hear the rock above you crack and you wait for the next sound."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to Leila's parents?"
+          "text": "Why bring the wedding forward instead of putting it off?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell them straight that the job's at risk, but I'm not afraid of hard work, and I'll provide for their daughter. Her dad would ask about the plan, he always does. I'd want to have one before I walked in."
+          "text": "Because I want to be married to her, and I want it done properly while we can afford it. If it all goes bad in 2031, I'd rather face it as a husband than a fiancé. My grandfather married on a miner's wage in a bad year; we'll manage."
         },
         {
           "speaker": "interviewer",
-          "text": "Does two years of warning help you at all?"
+          "text": "Who in the family would you have to let down first?"
         },
         {
           "speaker": "persona",
-          "text": "A bit. It gives me time to get my fire service application in early and get some savings together. But I'd be competing with a lot of other blokes who had the same idea."
+          "text": "Mum first; she'd still get her money, even if it's less. Then Hana and the wedding. My cousins would have to understand that the extras, the birthday money, the help with their cars, would stop for a while."
         }
       ],
-      "say": "I'd say it's too fast for anybody to handle and the companies are moving before anyone can adjust. I'm not one for big government, but someone has to slow it down.",
-      "think": "I think my job would be gone within a year of it arriving, because a robot could run my bolting rig. Hundreds of miners in town would be chasing the same jobs.",
-      "do": "Cuts back hard with his fiancée, shrinking the wedding, dropping the honeymoon and pausing the house. Builds savings from three towards six months and applies early for full-time work with the fire service.",
-      "feel": "Alarmed and lying awake going over it.",
-      "mood": "alarmed",
-      "quote": "I'd tell them straight that the job's at risk, but I'm not afraid of hard work, and I'll provide for their daughter.",
-      "fieldNote": "His sense of being a provider comes through strongly, especially facing his future in-laws. He reluctantly wants someone to slow things down despite distrusting big government. His escape route builds on his fire brigade volunteering.",
+      "say": [
+        "He'd say companies should **train their own people**, not just buy machines.",
+        "He'd say it to the shift boss and after church, asking for **work, not handouts**."
+      ],
+      "think": [
+        "Hands-on drilling gives him until **about 2031**, maybe longer in rough ground.",
+        "Three years goes fast with his **mother relying** on 400 a month."
+      ],
+      "do": [
+        "Get his **shotfirer's and ground-support** tickets in the first year.",
+        "Push savings from **three to six months** by skipping the car upgrade.",
+        "Bring the **wedding forward** to next year, smaller, while pay is steady."
+      ],
+      "feel": [
+        "**Tight in the chest**, like hearing rock crack overhead and waiting."
+      ],
+      "mood": "anxious",
+      "quote": "If it all goes bad in 2031, I'd rather face it as a husband than a fiancé.",
+      "fieldNote": [
+        "He responds to a short timeline by **marrying sooner**, not later, out of tradition and duty.",
+        "His priority order is clear: **mother first**, then Hana, then extended family.",
+        "He sees the **three-year robot gap** as a window for more underground licences."
+      ],
       "actions": [
-        "cut-spending",
-        "family-plans",
+        "retrain",
         "save-more",
-        "change-job"
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Get the shotfirer's and ground-support tickets this year",
+          "tag": "retrain"
+        },
+        {
+          "text": "Skip the car upgrade and build savings to six months",
+          "tag": "save-more"
+        },
+        {
+          "text": "Bring the wedding with Hana forward to next year",
+          "tag": "family-plans"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Now AGI by 2031. The same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast."
+          "text": "The next picture is called AGI by 2031. “Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "Five years. Okay, that's a bit more breathing room."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say five years is enough for companies and colleges to get proper apprenticeships going. I'd want people moved into new trades, not onto benefits. That's what I'd say at work."
+          "text": "I'd say five years is enough to get ready if people stop pretending. At the pub after shift I'd tell the younger lads to get every ticket they can now. And I'd say the government should back apprenticeships, not cheques."
         },
         {
           "speaker": "interviewer",
@@ -274,7 +334,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think I'd have a few years left bolting and then I'd need something else. Five years is enough to get a trade, if I start now. It wouldn't be easy, but it'd be doable."
+          "text": "Privately, five years and three more for the robots puts me around 2034, maybe longer underground. I'd be 35 with a few tickets and maybe a supervisor's job by then. It's tight, but I'd have a fair chance."
         },
         {
           "speaker": "interviewer",
@@ -282,7 +342,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year, I'd apply for a heavy diesel mechanic apprenticeship at the mine, or with the fire service if they're hiring. We'd still get married next year but keep the wedding modest. We'd keep saving and push the house back to when I'm qualified."
+          "text": "I'd do the licences over the next two years, the shotfirer's and the ground-support. Then I'd go for an underground supervisor role, because someone has to sign off that a heading is safe, robot or not. Hana and I would have the wedding in 2028 like we planned."
         },
         {
           "speaker": "interviewer",
@@ -290,56 +350,77 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but with a plan."
+          "text": "Uneasy, but steady. It's the kind of worry that makes you work harder, not the kind that stops you sleeping."
         },
         {
           "speaker": "interviewer",
-          "text": "Why diesel mechanic, out of everything?"
+          "text": "Couldn't AI do the supervisor's job too, by 2031?"
         },
         {
           "speaker": "persona",
-          "text": "I already fix my own ute and help my uncle with his tractor. And even with robots, I reckon someone has to service the machines for a while. It's a solid trade, like my dad's."
+          "text": "Maybe, but I think the law will still want a person to sign off underground safety for a long time. That's a guess; I'm not a lawyer. If I'm wrong, at least I'll have the experience to move into something else, like mine rescue."
         },
         {
           "speaker": "interviewer",
-          "text": "You said start now. What would you actually do this month?"
+          "text": "When would you start using the AI tools the mine brings in?"
         },
         {
           "speaker": "persona",
-          "text": "I'd go see the training coordinator, Sandra, and ask what's on offer. I'd probably use one of those AI apps to help me write the application, since I'm no good at that stuff. And I'd tell Leila the plan first, before anyone."
+          "text": "Probably once a few of the other operators have used it and it doesn't crash every shift. I'm not first in line, but I'm not last either. If it's good, I'll use it."
         }
       ],
-      "say": "I'd say five years is enough for companies and colleges to set up proper apprenticeships. I'd want people moved into new trades, not onto benefits.",
-      "think": "I think I'd have a few more years bolting and then need something else. Five years is enough to get a trade if I start now, though it wouldn't be easy.",
-      "do": "Applies for a heavy diesel mechanic apprenticeship at the mine or the fire service within the first year, using an AI app to write the application. Keeps the wedding modest, keeps saving and pushes the house purchase back until he's qualified.",
-      "feel": "Anxious but steadied by having a plan.",
-      "mood": "anxious",
-      "quote": "I'd probably use one of those AI apps to help me write the application, since I'm no good at that stuff.",
-      "fieldNote": "With five years he turns to a trade that echoes his father's, which fits his preference for apprenticeships over benefits. He's practical and immediate about first steps, naming the training coordinator. His fiancée is always the first person he'd tell.",
+      "say": [
+        "He'd say five years is enough **if people stop pretending**.",
+        "He'd urge young workers to get tickets, and back **apprenticeships, not cheques**."
+      ],
+      "think": [
+        "Robots three years after AGI put his drilling job around **2034**.",
+        "At 35 with tickets and maybe a **supervisor role**, he'd have a fair chance."
+      ],
+      "do": [
+        "Get the **shotfirer's and ground-support** licences over two years.",
+        "Aim for an **underground supervisor** role signing off on safe headings.",
+        "Keep the **2028 wedding** with Hana as planned."
+      ],
+      "feel": [
+        "**Uneasy but steady**, the kind of worry that makes him work harder."
+      ],
+      "mood": "uneasy",
+      "quote": "Someone has to sign off that a heading is safe, robot or not.",
+      "fieldNote": [
+        "He bets the **law** will keep a human signing off underground safety, and admits it's a guess.",
+        "His fallback idea is **mine rescue**, staying close to the work he knows.",
+        "He'd adopt AI tools **mid-pack**, once others prove they work."
+      ],
       "actions": [
         "retrain",
-        "save-more",
-        "family-plans",
-        "learn-ai"
+        "change-job",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Get shotfirer's and ground-support licences over two years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for an underground supervisor role signing off headings",
+          "tag": "change-job"
+        },
+        {
+          "text": "Keep the 2028 wedding with Hana as planned",
+          "tag": "family-plans"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "Last one, AGI by 2036. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans."
+          "text": "The last picture is called AGI by 2036. “Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.” If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "Ten years. I'd be thirty-seven, probably with a kid or two."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say ten years is a fair chance for everyone, so there's no excuse not to plan. I'd tell the younger lads to get a trade now. And I'd say families should look after each other, not wait for the government."
+          "text": "I'd say ten years is plenty, so anyone who's caught out has only themselves to blame. Maybe that's harsh, but that's how I was raised. I'd still help anyone who asked."
         },
         {
           "speaker": "interviewer",
@@ -347,7 +428,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I think ten years is alright for me. I can keep bolting for a good few years, get the supervisor ticket and a trade, and still buy a house. It's a worry, but it's a manageable one."
+          "text": "For me, robots underground around 2039 means I'd be 40 with nearly twenty years in. I'd have the tickets, maybe a supervisor's job, maybe a house. I'd be more worried about my knees than about AI."
         },
         {
           "speaker": "interviewer",
@@ -355,7 +436,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd do the supervisor ticket first, then start a part-time mechanic apprenticeship in about three years. We'd buy a house after the wedding, as planned, and probably start a family around 2029. I'd keep volunteering at the fire brigade."
+          "text": "I'd carry on as planned: licences in the next couple of years, the wedding in 2028, and a house deposit after that. I'd use the AI tools when the mine rolls them out properly. Around 2033 I'd sit down with Hana and look again."
         },
         {
           "speaker": "interviewer",
@@ -363,36 +444,67 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. It's there, but it's not keeping me up."
+          "text": "Uneasy, a little, because it's still the end of underground mining as I know it. But mostly fine; it's a long way off."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want your kids to hear from you about work?"
+          "text": "If you had a son in that world, what would you tell him?"
         },
         {
           "speaker": "persona",
-          "text": "That you do your job well and look after the people next to you. Doesn't matter if it's bolting or fixing machines. That's what my dad taught me, and it'd still be true."
+          "text": "I'd tell my son to learn a trade first and a screen second. My dad told me the same thing, without the screen part. Work with your hands, then you can always fall back on them."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything about ten years that worries you more than the shorter ones?"
+          "text": "What would it mean to you, if the job you know just ends around 2039?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe that I'd get comfortable. I could see myself saying next year, next year, and then it's 2034. Leila wouldn't let me, though, she's the organised one."
+          "text": "My dad used to say a man's job is to leave things better for his kids than he found them. If the mine goes to robots, I'd want to have built something by then: a house, a family, a name in the town. That doesn't need a jumbo."
         }
       ],
-      "say": "I'd say ten years gives everyone a fair chance, so there's no excuse not to plan. I'd tell younger workers to get a trade now and say families should look after each other rather than wait for government.",
-      "think": "I think ten years is alright for me, with time to get the supervisor ticket and a trade and still buy a house. It's a worry, but a manageable one.",
-      "do": "Gets his supervisor ticket first, then starts a part-time mechanic apprenticeship in about three years. Buys a house after the wedding as planned, aims to start a family around 2029 and keeps volunteering with the fire brigade.",
-      "feel": "Uneasy, but not losing sleep.",
+      "say": [
+        "He'd say **ten years is plenty**, so anyone caught out is mostly to blame.",
+        "He admits that sounds **harsh**, and he'd still help anyone who asked."
+      ],
+      "think": [
+        "Robots around **2039** come when he's 40 with nearly twenty years in.",
+        "By then his **knees** worry him more than AI."
+      ],
+      "do": [
+        "Get his **licences** in the next couple of years.",
+        "Marry Hana in **2028** and save for a house deposit afterwards.",
+        "Sit down with Hana **around 2033** to look at plans again."
+      ],
+      "feel": [
+        "A little **uneasy** at the end of underground mining as he knows it.",
+        "Mostly **fine**, because it's a long way off."
+      ],
       "mood": "uneasy",
-      "quote": "That you do your job well and look after the people next to you.",
-      "fieldNote": "With a decade, his family plans stay intact and his values come through clearly. He spots his own risk of getting comfortable and relies on his fiancée to keep him on track. His views on self-reliance and family support stay consistent.",
+      "quote": "A man's job is to leave things better for his kids than he found them.",
+      "fieldNote": [
+        "He judges people who are caught out after ten years, then **softens** it straight away.",
+        "His sense of worth rests on family and a **name in town**, not the jumbo itself.",
+        "He'd teach future children **trade first, screen second**, echoing his father."
+      ],
       "actions": [
+        "keep-going",
         "retrain",
-        "family-plans",
-        "keep-going"
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Keep drilling headings on the jumbo through the decade",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Get shotfirer's and ground-support licences within two years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Marry Hana in 2028 and then save for a house",
+          "tag": "family-plans"
+        }
       ]
     }
   },
@@ -403,7 +515,7 @@
     },
     {
       "speaker": "persona",
-      "text": "AGI by 2028. What would help is the company paying for apprenticeships for its own workers, and some breathing room on wages while you train. And a bit of honesty, tell us early so we can plan."
+      "text": "AGI by 2028, because I'd have three years to get married, look after Mum and find what comes after the jumbo. What would help is apprenticeships for new trades that pay while you learn, and companies having to give miners first shot at the new jobs. Not a cheque in the mail; I'd want to earn it."
     },
     {
       "speaker": "interviewer",
@@ -411,11 +523,22 @@
     },
     {
       "speaker": "persona",
-      "text": "Maybe about safety. If a robot does the bolting, nobody gets hurt under fresh ground anymore. I've seen a fall of ground once and I never want to see one again. So part of me would say good riddance to that part of the job."
+      "text": "You didn't ask about the crew. Underground, you trust the people around you with your life every shift. If robots come, I don't just lose a job; I lose the people I'd trust in a fire."
     }
   ],
-  "headlineQuote": "My shift boss, Gary, always says the bolter is the most important man nobody thanks.",
-  "portrait": "Jamal is a 27-year-old underground bolting rig operator at a nickel mine who makes freshly blasted tunnels safe, with about three months saved and a wedding to his fiancée Leila planned for next year. He's traditional and practical, believes companies can automate but should train their own people, and volunteers with the local fire brigade. He's calm in the plateau and uneasy under steady change, waiting for automated bolters to be proven before training. AGI in two years leaves him alarmed and focused on providing for Leila, while five and ten years let him plan a mechanic apprenticeship and keep his family plans.",
-  "biggestWorry": "AGI by 2028 worries him most, because he expects to lose his job within a year and face crowded competition for other work.",
-  "whatWouldHelp": "Company-paid apprenticeships for its own workers, some wage support while training, and honest early notice."
+  "headlineQuote": "If robots come, I don't just lose a job; I lose the people I'd trust in a fire.",
+  "portrait": [
+    "Jamal is 27 and runs a **jumbo drill** in an underground zinc and lead mine, drilling new tunnels.",
+    "He sends his widowed **mother 400 a month** and plans to marry his partner Hana in 2028.",
+    "He's traditional: he wants **work, not handouts**, and blames head office planners more than technology.",
+    "He's **steady** with change, adopting new tools once a couple of colleagues have proven them.",
+    "Fast AGI makes him **anxious** and pull the wedding forward; slower versions leave him uneasy but steady."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028**, leaving three years to marry, support his mother and find work after the jumbo."
+  ],
+  "whatWouldHelp": [
+    "**Paid apprenticeships** in new trades while he learns.",
+    "Companies giving **miners first shot** at the new jobs, rather than a cheque."
+  ]
 }

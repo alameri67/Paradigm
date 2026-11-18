@@ -11,32 +11,16 @@
     "outlook": "traditional",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thank you for seeing me, Tara. I'm a field researcher with the Work Futures Panel, an independent research group. We have no ties to companies, unions, parties or government. Everything is confidential, so you're free to tell me what you'd say in public and what you really think. Could you begin by describing a normal working day?"
+      "text": "I'm with the Work Futures Panel, an independent research group with no ties to employers, AI companies, unions, parties or government. Your answers stay confidential. Could you walk me through an ordinary shift?"
     },
     {
       "speaker": "persona",
-      "text": "I run a jumbo at an underground zinc and lead mine. A jumbo is a drill rig with two long arms that drills the face of a new tunnel, maybe sixty holes in a pattern, so the charge-up crew can blast it and we advance about four metres a round. I'm the senior jumbo operator, and for the last three years I've also been the mine's apprentice trainer, so I've usually got a nineteen-year-old in the cab with me."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What do you love about it, and what wears you down?"
-    },
-    {
-      "speaker": "persona",
-      "text": "I love the training part most. Watching a young one go from shaking hands to drilling a clean pattern on their own, that's like watching your own child ride a bike. What wears me down is the early starts, up at four, and the worry when a new apprentice is near the face for the first time."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "Tell me about your family."
-    },
-    {
-      "speaker": "persona",
-      "text": "My husband Daniel runs a small building firm, three workers, mostly house extensions and sheds. We've got Samuel, fifteen, and Ruth, twelve. We've a mortgage, but we've been careful, there's more than six months saved and Daniel owns his equipment outright. Sunday is church, I sing in the choir, and Sunday afternoon is lunch at my mother's."
+      "text": "I lead the crusher shift at a large bauxite mine, and I still run the control board when someone is off. The ore comes in on trucks, goes through the jaws and moves out on belts; I listen for a change in the motors before the warning light catches up. I have a two-year technical diploma and train new operators by having them walk the belts with me. My husband Omar repairs buses, and we have two school-age children and a mortgage. We have about ten months of expenses saved. I use an AI tool now and then for a parts list, once I've checked the fault myself."
     }
   ],
   "scenarios": {
@@ -44,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say good, it's a tool and that's all it should be. At church or at work, I'd say a person's hands and judgement still matter. Online I'd stay quiet, I don't argue with strangers."
+          "text": "I'd tell the crusher crew a faster parts list is fine, but we still have to hear a bearing fail. A small tool should earn its place beside the spanners."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it means life goes on as planned, which I'd be glad of. I use AI now and then to put together quiz questions for the apprentices, and it saves me an hour. If it stays as a helper like that, I'm happy."
+          "text": "I think my lead job and wage would hold. Omar's bus work and our savings give us room, but I would still watch overtime because the mortgage has years left."
         },
         {
           "speaker": "interviewer",
@@ -64,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going as I am. Keep training the apprentices, keep saving, and keep paying the mortgage down. Daniel's firm keeps ticking along, and we'd maybe finally redo the kitchen."
+          "text": "I'll keep the belt walk before every shift and check any suggested part number with the maintenance book. In the first year, I'll have new operators learn that check before they touch the ordering screen."
         },
         {
           "speaker": "interviewer",
@@ -72,46 +56,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Grateful, if I'm honest."
+          "text": "I feel settled about the mine, not excited by another screen. I like a tool when it saves a trip, not when it tells a trainee to stop looking."
         },
         {
           "speaker": "interviewer",
-          "text": "How did you start using AI for the quizzes?"
+          "text": "When did your ears catch a fault before a screen?"
         },
         {
           "speaker": "persona",
-          "text": "One of the apprentices, Kayla, showed me during a lunch break. I typed in the drill rig safety checklist and asked it for twenty questions, and most were good, though two were nonsense. I fixed those, and now I use it every intake."
+          "text": "Last month a bearing sounded dry while the temperature reading stayed normal. I stopped the belt and found the grease line blocked, which a neat form would not have heard."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want for the apprentices, in this picture?"
+          "text": "Would you change the family budget?"
         },
         {
           "speaker": "persona",
-          "text": "A full career, like I've had. I'd want them to finish their tickets, the licences that let them run the machines on their own, and have a trade that feeds a family. That's what an apprenticeship is meant to give you."
+          "text": "I'd tell Omar we're keeping our usual mortgage payment and the children's weekend sports. There's no reason to spend our cushion just because paperwork got quicker."
         }
       ],
-      "say": "Tara would say AI is a tool and that's all it should be. At church and at work she'd say a person's hands and judgement still matter.",
-      "think": "Privately she'd be glad life goes on as planned. She uses AI occasionally to write quizzes for apprentices and is happy for it to stay a helper.",
-      "do": "Keeps training apprentices, saving and paying down the mortgage as before. Plans to redo the kitchen while her husband's building firm keeps ticking along.",
-      "feel": "Calm and grateful.",
+      "say": [
+        "I would accept **faster parts lists** after operators check the fault and the part number.",
+        "I would tell trainees that **motor sounds** still matter beside a screen."
+      ],
+      "think": [
+        "I expect my **lead wage** to hold, with Omar’s bus work adding household security.",
+        "I would still watch **overtime** because the mortgage has several years left."
+      ],
+      "do": [
+        "**Keep walking** the belts before each shift and verify part numbers in the maintenance book.",
+        "**Teach new operators** the physical check before they use an ordering screen."
+      ],
+      "feel": [
+        "**Settled** about her job, with little patience for untested shortcuts."
+      ],
       "mood": "calm",
-      "quote": "I'd want them to finish their tickets, the licences that let them run the machines on their own, and have a trade that feeds a family.",
-      "fieldNote": "Tara's identity is tied to training the next generation of miners. She uses AI in a small, practical way after an apprentice showed her. The plateau feels like a blessing to her.",
+      "quote": "A small tool should earn its place beside the spanners.",
+      "fieldNote": [
+        "Her **authority** comes from detecting mechanical faults by sound and teaching that judgment on the belt walk.",
+        "A **ten-month cushion** and her husband’s bus repair income support a calm view of modest automation."
+      ],
       "actions": [
         "keep-going",
-        "save-more"
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep checking crusher belts before every shift",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Teach new operators to verify AI part suggestions against maintenance records",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is where apprenticeships matter more than ever. If jobs change, people need to learn, and the best way to learn is alongside someone who knows the work. I'd say it at the company's training meetings."
+          "text": "I'd say the office may change its ordering and planning before our crusher gets a robot. I'd let the mine try a system, but every shift lead should be able to reject a bad parts order."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +127,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I think I'd be all right. Jumbos are already being fitted with automatic drilling, where the rig drills the whole pattern itself, but someone still has to set it up and train people. As the trainer, I'd likely be busier."
+          "text": "I think fewer clerks may handle orders, and managers might expect a quicker turnaround from maintenance. My own post should remain, but rushed repairs can make the next shift dangerous."
         },
         {
           "speaker": "interviewer",
@@ -127,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait to see the first automatic jumbo on our site, then ask for training on it so I could teach it. I'd keep saving. And I'd suggest to Daniel that he takes on an apprentice himself, because the building trade will need people."
+          "text": "I'll ask the maintenance foreman to show me the new ordering screen after his team has tested it. In the first year I'll compare the suggested spares with three actual repair jobs before I use the screen on my shift."
         },
         {
           "speaker": "interviewer",
@@ -135,47 +143,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. A little worry for the operators who don't take to change."
+          "text": "I feel cautious rather than afraid for our income. I want proof from real breakdowns before the crew relies on a new display."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd wait to see the first automatic jumbo. Why not ask for training now?"
+          "text": "How would you test a new parts screen?"
         },
         {
           "speaker": "persona",
-          "text": "Because I've seen new systems arrive and get ripped out six months later. I don't want to teach the young ones something that doesn't last. Once it's working on our ground, I'll learn it properly."
+          "text": "If the screen lists the wrong bearing, I'd use the serial plate and the old maintenance book. The belt can wait; a failed bearing can damage the whole drive."
         },
         {
           "speaker": "interviewer",
-          "text": "Who at work would you worry about?"
+          "text": "Who might lose a chance to learn?"
         },
         {
           "speaker": "persona",
-          "text": "Ray, an older jumbo operator, he's fifty-nine and he's been drilling since he was sixteen. He'd hate an automatic rig, he'd feel like it was telling him he's not needed. I'd want to find a way to keep him useful, maybe helping me with the apprentices."
+          "text": "I would ask the foreman to keep an apprenticeship place in maintenance even if software makes ordering quicker. A young worker learns a lot by taking a gearbox apart."
         }
       ],
-      "say": "Tara would say steady change makes apprenticeships more important than ever, because people learn best alongside someone who knows the work. She'd raise it at the company's training meetings.",
-      "think": "Privately she expects to be fine, since automated jumbos still need someone to set them up and train people. As trainer, she thinks she'd be busier.",
-      "do": "Waits for the first automated jumbo to arrive on site, then asks for training so she can teach it. Keeps saving and suggests Daniel take on an apprentice at his building firm.",
-      "feel": "Mostly calm, with a little worry for operators who don't take to change.",
-      "mood": "calm",
-      "quote": "I don't want to teach the young ones something that doesn't last.",
-      "fieldNote": "Tara sees steady change through the lens of training, which makes her role more valuable rather than less. Her caution about new systems comes from responsibility to apprentices. She thinks of Ray, the older operator, with care.",
+      "say": [
+        "I would expect **ordering and planning** to change before hands-on crusher work.",
+        "I would insist each **shift lead** can reject a parts order that fails a physical check."
+      ],
+      "think": [
+        "I expect **fewer clerical tasks** and more pressure for fast maintenance turnaround.",
+        "I think my **lead post** holds, but rushed repairs could endanger the following shift."
+      ],
+      "do": [
+        "**Watch a tested screen** with the maintenance foreman before using it myself.",
+        "**Compare suggested parts** with three real repair jobs during the first year."
+      ],
+      "feel": [
+        "**Cautious** about repair quality, while her own household income feels safe."
+      ],
+      "mood": "uneasy",
+      "quote": "A young worker learns a lot by taking a gearbox apart.",
+      "fieldNote": [
+        "She accepts **proven technology** only after maintenance tests and serial numbers confirm suggested parts.",
+        "Her concern for **apprenticeship places** is rooted in practical learning, not an expected loss of her own wage."
+      ],
       "actions": [
-        "retrain",
-        "save-more",
-        "wait-and-see"
+        "wait-and-see",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Watch the maintenance foreman test the new ordering screen",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Compare AI part suggestions with three completed repair jobs",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a great shock, and we need to hold onto our families and our faith. I'd say the companies and government owe it to people to keep real work going where they can, not just pay people to stay home. At church I'd ask people to look out for each other."
+          "text": "I'd tell the team thinking AI by 2028 could reorder parts and shifts, while capable crusher robots follow around 2031. The company should offer paid apprenticeships in machine maintenance before it cuts operator rosters."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +214,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be frightened. If robots can do almost anything, they can drill and they can teach, and they can probably build an extension faster than Daniel. Both our incomes are hands-on, and both would be gone."
+          "text": "I think the first blow to us could be overtime, then fewer control-board posts once robots handle the physical checks. Ten months saved helps, and Omar can still earn, but I won't assume that makes our mortgage harmless."
         },
         {
           "speaker": "interviewer",
@@ -191,7 +222,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd cut the kitchen, cut every extra, and pay as much off the mortgage as we could. If I lost my job, I'd help Daniel with his firm while it lasted. I'd talk to my mother about moving in with us so we could rent her house out for income."
+          "text": "Starting now I'll put half my overtime pay toward the mortgage and ask the mine about its paid maintenance apprenticeship. In the first year after thinking AI arrives, I'll take an apprenticeship place only if it pays enough to keep our monthly mortgage covered."
         },
         {
           "speaker": "interviewer",
@@ -199,48 +230,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. I'd be praying a lot, and lying awake."
+          "text": "I feel anxious for my own hours and for the trainees I teach. A repair trade I know is more useful than a promise that somebody will look after us."
         },
         {
           "speaker": "interviewer",
-          "text": "You said not to pay people to stay home. If that's all that's on offer, would you take it?"
+          "text": "How would an apprenticeship fit the mortgage?"
         },
         {
           "speaker": "persona",
-          "text": "I would, for the children. But I'd feel ashamed, and I'd want to give something back, maybe through the church. I don't believe people are meant to be idle."
+          "text": "I would tell Omar exactly what an apprentice wage would be before changing the family budget. My husband's bus repair pay isn't a blank cheque for my training."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Samuel, who's about to choose his path?"
+          "text": "Would you take a different post at the crusher?"
         },
         {
           "speaker": "persona",
-          "text": "He wants to be an electrician. I'd tell him to keep at it, but to keep his head up and stay humble. Two years is too fast to change everything, so he should finish school and see."
+          "text": "I'd want to know whether the mine will still need people to isolate a belt and inspect a jam by hand. If such posts are offered, I would consider one at a wage we can live on."
         }
       ],
-      "say": "Tara would call it a great shock and urge people to hold onto family and faith. She'd say companies and government owe people real work where possible rather than payments to stay home.",
-      "think": "Privately she'd be frightened, since robots could drill, teach and build, and both her income and Daniel's are hands-on. Both would be gone.",
-      "do": "Cancels the kitchen renovation, cuts every extra and pays down the mortgage hard. Helps Daniel's firm if she loses her job and talks with her mother about moving in so they can rent out her house.",
-      "feel": "Alarmed, praying a lot and lying awake.",
-      "mood": "alarmed",
-      "quote": "I'd feel ashamed, and I'd want to give something back, maybe through the church.",
-      "fieldNote": "Tara's faith and belief in work shape her response, including discomfort at accepting payments for staying home. The family turns inward, with her mother moving in to free up rental income. Both incomes being hands-on makes this picture especially frightening.",
+      "say": [
+        "I would separate **2028 thinking changes** from capable crusher robots around 2031.",
+        "I would ask for **paid maintenance apprenticeships** before operator rosters are cut."
+      ],
+      "think": [
+        "I could lose **overtime** first and a control-board post once robots perform physical checks.",
+        "I think our **ten-month cushion** and Omar’s wage help, but the mortgage remains an obligation."
+      ],
+      "do": [
+        "**Pay extra** on the mortgage with half of each overtime payment starting now.",
+        "**Take a maintenance apprenticeship** after thinking AI arrives only if its wage covers our monthly mortgage."
+      ],
+      "feel": [
+        "**Anxious** about her own hours and the trainees’ next steps, with some household room to act."
+      ],
+      "mood": "anxious",
+      "quote": "My husband's bus repair pay isn't a blank cheque for my training.",
+      "fieldNote": [
+        "She sees **2028 paperwork changes** before possible hands-on crusher robot changes around 2031.",
+        "Her **apprenticeship choice** is conditional on pay that covers the mortgage; her husband’s wage is not treated as unlimited support."
+      ],
       "actions": [
-        "cut-spending",
         "save-more",
-        "seek-support",
-        "family-plans"
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Pay extra on the mortgage with half of each overtime payment",
+          "tag": "save-more"
+        },
+        {
+          "text": "Take a paid maintenance apprenticeship if its wage covers the mortgage",
+          "tag": "retrain"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is time to prepare, and people should start now. I'd want the companies and government to back apprenticeships in whatever trades will last. At church I'd say we help each other through."
+          "text": "I'd say thinking AI by 2031 and capable robots around 2034 give the mine time to run proper apprenticeships. I would rather see an experienced operator learn to repair a gearbox than be handed a glossy certificate."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +301,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, five years is better. I'd have a few more years training people on the new rigs, the mortgage would be close to done, and Samuel would be through his apprenticeship. I'd still worry about Daniel's firm."
+          "text": "I would be about 51 when robots arrive, and I could move into maintenance if there is a real opening. I won't leave a higher mine wage for an unposted job just because a manager says to be flexible."
         },
         {
           "speaker": "interviewer",
@@ -256,7 +309,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd ask for training on the automatic rigs straight away this time, so I'm the one teaching it for those five years. I'd help Daniel think about moving into maintenance and repairs, which might last longer. And I'd save hard, maybe an extra six hundred a month."
+          "text": "This year I'll spend one Saturday a month beside the maintenance foreman on my own time, learning the gearbox overhaul. In the first year after thinking AI arrives, I'll apply for the paid maintenance apprenticeship if a place is open and its wage meets our mortgage payment."
         },
         {
           "speaker": "interviewer",
@@ -264,47 +317,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but I'd feel like I had some control."
+          "text": "I feel more able to prepare than in the fast picture. Still, I know how quickly an employer can call a training promise off when production is down."
         },
         {
           "speaker": "interviewer",
-          "text": "Earlier you wanted to wait for proof. Why not this time?"
+          "text": "What would make the training real to you?"
         },
         {
           "speaker": "persona",
-          "text": "Because five years isn't long. If I wait a year to see if it works, I lose a fifth of the time. It's like a new drill pattern: if the engineer says the ground's changing, you change the pattern."
+          "text": "The foreman can show me a bearing fit and tell me when my hands are wrong. An online badge cannot teach a worker to fit a crusher gearbox."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to the apprentices, knowing it ends in five years?"
+          "text": "How would you talk about retraining with your children?"
         },
         {
           "speaker": "persona",
-          "text": "That's the hardest bit. I'd tell them the truth, that the job might not last, but the habits will: turning up, being careful, learning fast. I'd want them to have a backup trade, and I'd help them find one."
+          "text": "I'd tell our children they can choose a trade or college, but they should finish what they start. Watching me learn again might do more than a speech about work."
         }
       ],
-      "say": "Tara would say five years is time to prepare and people should start now. She'd want companies and government to back apprenticeships in trades that will last.",
-      "think": "Privately she thinks five years is better, with time to train people on new rigs, nearly finish the mortgage and see her son through his apprenticeship. She'd still worry about Daniel's firm.",
-      "do": "Asks for training on automated rigs straight away so she can teach it, and saves about six hundred extra a month. Helps Daniel consider moving his firm into maintenance and repairs.",
-      "feel": "Anxious, but with a sense of control.",
-      "mood": "anxious",
-      "quote": "If I wait a year to see if it works, I lose a fifth of the time.",
-      "fieldNote": "Tara drops her usual wait-for-proof habit because five years is too short to waste. She uses a drilling image to explain the switch. Being honest with apprentices about a job that may end is the hardest part for her.",
+      "say": [
+        "I would use the **five-year window** for real maintenance apprenticeships before robots might work the crusher around 2034.",
+        "I would ask the mine to teach **gearbox repair** beside skilled mechanics."
+      ],
+      "think": [
+        "I think at about **51**, I could move into maintenance if a paid opening actually exists.",
+        "I would keep my **higher wage** until an apprenticeship offer covers our mortgage."
+      ],
+      "do": [
+        "**Practice gearbox work** with the maintenance foreman one Saturday each month this year.",
+        "**Apply** for a paid apprenticeship after thinking AI arrives if a place opens and the wage covers our mortgage."
+      ],
+      "feel": [
+        "**More prepared**, while doubtful that an employer will always keep its training promises."
+      ],
+      "mood": "uneasy",
+      "quote": "An online badge cannot teach a worker to fit a crusher gearbox.",
+      "fieldNote": [
+        "She calculates **2034 robot arrival** at about age 51 and prefers a related trade to vague flexibility.",
+        "Her **application** depends on an open paid place and a mortgage-covering wage; Saturday practice alone is not a career move."
+      ],
       "actions": [
         "retrain",
-        "save-more",
-        "family-plans"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Practice gearbox repair monthly with the maintenance foreman",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for an open paid apprenticeship if its wage covers the mortgage",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fifth and last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is plenty of time to prepare, so nobody should be caught out. I'd want apprenticeships in every trade that lasts, and families to plan together. I'd say it at work and at church."
+          "text": "I'd tell the team 2036 changes the paperwork, while capable crusher robots come around 2039. A decade gives us time to pay off debts and teach the next crew a trade that lasts."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +388,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, ten years is mostly fine for me. I'd be fifty-three, the house paid, the kids grown. I'd train people on the new systems for most of it and then step back."
+          "text": "I would be 56 when robots arrive, and we could have most of the mortgage gone if our wages hold. I might choose fewer shifts then, but I wouldn't promise retirement until the figures are in front of us."
         },
         {
           "speaker": "interviewer",
@@ -320,7 +396,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait a couple of years to see what works, then learn the automatic rigs. I'd keep saving and paying the house off by about year seven. I'd help Daniel plan for the firm to wind down or change, and talk to the kids about trades that might last."
+          "text": "I'll keep leading the crusher shift and making our scheduled mortgage payments, then set an annual evening with Omar to review the pension estimate. In the first year after thinking AI arrives, I'll compare any offered maintenance role with the pension estimate before deciding whether to cut shifts."
         },
         {
           "speaker": "interviewer",
@@ -328,36 +404,59 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, mostly for the young ones."
+          "text": "I feel calm about our house with ten years to plan. I would still miss the noise and the crew if the crusher stopped needing operators."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want to leave behind?"
+          "text": "What if your husband’s pay falls?"
         },
         {
           "speaker": "persona",
-          "text": "The apprentices I've trained. If even a few of them carry on as good, careful people, in whatever work they do, that's enough. That's my legacy."
+          "text": "If Omar's workshop loses bus contracts, I will keep full shifts while they are available. I won't build a family plan on one person's good year."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything that frightens you about the end of the decade?"
+          "text": "What would you teach trainees before robots arrive?"
         },
         {
           "speaker": "persona",
-          "text": "That people forget how to work hard. If machines do everything, I worry the young ones won't know the pride of a hard day. I'd want the church and families to keep that alive somehow."
+          "text": "I'd tell the trainees to learn the machine's noises while they can, even if robots arrive later. Those sounds help a mechanic know where to start."
         }
       ],
-      "say": "Tara would say ten years is plenty of time to prepare and nobody should be caught out. She'd push for apprenticeships in every lasting trade and for families to plan together.",
-      "think": "Privately she thinks ten years is mostly fine, with the house paid and the kids grown by 53. She'd train people on new systems for most of it and then step back.",
-      "do": "Waits a couple of years to see what works, then learns the automated rigs, and aims to clear the house by year seven. Helps Daniel plan for the firm to wind down or change and talks with the kids about lasting trades.",
-      "feel": "Uneasy, mostly for the young ones.",
-      "mood": "uneasy",
-      "quote": "If machines do everything, I worry the young ones won't know the pride of a hard day.",
-      "fieldNote": "With ten years Tara returns to her watch-first habit. Her legacy is the apprentices she has trained. Her deepest fear is cultural rather than financial: a generation without the pride of work.",
+      "say": [
+        "I would use the **decade** before capable crusher robots around 2039 to teach repairs and reduce debt.",
+        "I would urge trainees to learn **machine sounds** before relying on automatic fault reports."
+      ],
+      "think": [
+        "I think at **56**, I might cut shifts if both incomes hold and the mortgage is nearly gone.",
+        "I will wait for **pension figures** before promising any retirement date."
+      ],
+      "do": [
+        "**Keep leading** crusher shifts, make scheduled mortgage payments and review the pension estimate yearly with Omar.",
+        "**Compare any offered role** with the pension estimate after thinking AI arrives before reducing shifts."
+      ],
+      "feel": [
+        "**Calm** about the house, with sadness at the possible loss of the crusher crew."
+      ],
+      "mood": "calm",
+      "quote": "I won't build a family plan on one person's good year.",
+      "fieldNote": [
+        "She treats **2039 robot arrival** at age 56 as a possible point for fewer shifts, conditional on both incomes.",
+        "Her **retirement choice** stays open until she reviews pension figures and any actual maintenance offer."
+      ],
       "actions": [
-        "retrain",
-        "save-more",
-        "family-plans"
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading crusher shifts and making scheduled mortgage payments",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Compare any offered maintenance role with pension figures after 2036",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -368,7 +467,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because both Daniel and I would lose our work at once. What would help is companies and government backing apprenticeships and real work, and churches and families having the support to look after people."
+      "text": "AGI by 2028 worries me most because the crusher could lose overtime before capable robots arrive around 2031. A paid maintenance apprenticeship with a mortgage-covering wage would help; I do not want a promise that sends the bill to my husband."
     },
     {
       "speaker": "interviewer",
@@ -376,11 +475,21 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about faith. Whatever happens with machines, I believe people are made for good work. That's what keeps me steady."
+      "text": "You didn't ask how a trainee learns a sound they have never heard. A skilled mechanic must stand beside a trainee when the gearbox comes apart. I would keep real machinery in the apprenticeship."
     }
   ],
-  "headlineQuote": "Whatever happens with machines, I believe people are made for good work.",
-  "portrait": "Tara Okafor is a 43-year-old senior jumbo operator at an underground zinc and lead mine and its apprentice trainer for the past three years. She has a builder husband, two teenagers, a mortgage and solid savings, and she sings in her church choir. She uses AI only now and then, for apprentice quizzes, and likes proof before she adopts anything new. In the milder pictures training makes her more needed, but the two-year AGI picture alarms her because both family incomes are hands-on. Her deepest hope is that the apprentices she trains carry on the pride of hard work.",
-  "biggestWorry": "AGI by 2028 worries her most, because she and her husband would lose their hands-on work at the same time.",
-  "whatWouldHelp": "Company and government backing for apprenticeships and real work, plus support for churches and families to look after people."
+  "headlineQuote": "A skilled mechanic must stand beside a trainee when the gearbox comes apart.",
+  "portrait": [
+    "**Tara Okafor**, 43, leads a crusher shift at a large bauxite mine and holds a two-year technical diploma.",
+    "She has **ten months saved**, a higher mine wage and a bus-mechanic husband, with two children and a mortgage.",
+    "She uses **AI occasionally** for parts suggestions after checking physical faults, and wants trainees to learn motor sounds.",
+    "She favours **paid apprenticeships** and practical work over vague promises of help if robots reduce operator posts.",
+    "Across the pictures, she protects the **mortgage** and considers fewer shifts only when household income and pension figures allow."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** worries her most because overtime could fall before capable crusher robots arrive around 2031."
+  ],
+  "whatWouldHelp": [
+    "A **paid maintenance apprenticeship** covering the mortgage would let her change roles without shifting the cost to Omar."
+  ]
 }
