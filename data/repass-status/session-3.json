@@ -13,7 +13,7 @@
   "claimedAt": "2026-11-18T09:32:48.041838+00:00",
   "jobs": {
     "A13": {
-      "reviewedCount": 79,
+      "reviewedCount": 81,
       "reviewedIds": [
         "A13-11111",
         "A13-11112",
@@ -93,12 +93,12 @@
         "A13-13321",
         "A13-13322",
         "A13-13323",
-        "A13-13331"
+        "A13-13331",
+        "A13-13332",
+        "A13-13333"
       ],
       "insightsValidated": false,
       "remainingGaps": [
-        "A13-13332",
-        "A13-13333",
         "A13-21111",
         "A13-21112",
         "A13-21113",
@@ -263,7 +263,8 @@
         "A13-33333"
       ],
       "reviewBasis": "Existing accepted coordinator files independently revalidated; hashes protected.",
-      "insightState": "not present; rebuild only after 200 reviewed passing interviews"
+      "insightState": "pending; fewer than 200 reviewed interviews; no insights generated",
+      "status": "IN_PROGRESS"
     },
     "A14": {
       "reviewedCount": 63,
@@ -516,7 +517,8 @@
         "A14-33333"
       ],
       "reviewBasis": "Existing accepted coordinator files independently revalidated; hashes protected.",
-      "insightState": "not present; rebuild only after 200 reviewed passing interviews"
+      "insightState": "pending; fewer than 200 reviewed interviews; no insights generated",
+      "status": "PRESERVED_BASELINE"
     },
     "A15": {
       "reviewedCount": 60,
@@ -769,7 +771,8 @@
         "A15-33333"
       ],
       "reviewBasis": "Existing accepted coordinator files independently revalidated; hashes protected.",
-      "insightState": "not present; rebuild only after 200 reviewed passing interviews"
+      "insightState": "pending; fewer than 200 reviewed interviews; no insights generated",
+      "status": "PRESERVED_BASELINE"
     },
     "A16": {
       "reviewedCount": 44,
@@ -1022,7 +1025,8 @@
         "A16-33333"
       ],
       "reviewBasis": "Existing accepted coordinator files independently revalidated; hashes protected.",
-      "insightState": "not present; rebuild only after 200 reviewed passing interviews"
+      "insightState": "pending; fewer than 200 reviewed interviews; no insights generated",
+      "status": "PRESERVED_BASELINE"
     }
   },
   "reservations": {
@@ -1047,7 +1051,7 @@
         "A13-13332",
         "A13-13333"
       ],
-      "state": "DRAFTING",
+      "state": "ACCEPTED",
       "reservedAt": "2026-11-18T09:57:20.563213+00:00"
     },
     "author4": {
@@ -1091,6 +1095,38 @@
       "valid": 44,
       "canonical": 243,
       "log": "/tmp/paradigm-session3-20261118-1331/A16-initial-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A13",
+      "exitCode": 0,
+      "passingReviewed": 81,
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 162,
+      "log": "/tmp/paradigm-session3-20261118-1331/A13-checkpoint-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A14",
+      "exitCode": 1,
+      "passingReviewed": 63,
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 180,
+      "log": "/tmp/paradigm-session3-20261118-1331/A14-checkpoint-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A15",
+      "exitCode": 1,
+      "passingReviewed": 60,
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 183,
+      "log": "/tmp/paradigm-session3-20261118-1331/A15-checkpoint-validation.txt"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A16",
+      "exitCode": 1,
+      "passingReviewed": 44,
+      "canonicalTotal": 243,
+      "remainingCanonicalGaps": 199,
+      "log": "/tmp/paradigm-session3-20261118-1331/A16-checkpoint-validation.txt"
     }
   ],
   "preservedHashes": {
@@ -1341,9 +1377,11 @@
     "A13-13323": "ea44899899c8856209edc7c248b8f3fb76cfc4b4493cbacfe60bfd1c56e7574d",
     "A13-13331": "0298fdac5b06203cded6063215e33bfcde18c0a961fbca1de3015eba6b887ab1",
     "A13-12333": "5aab3525489f30fabcd01349f0f60369efab008fa55338c306912c434bf66c92",
-    "A13-13311": "de29ad614436533c0552439133efaba232918715307c8d06115fb3384f4ffee4"
+    "A13-13311": "de29ad614436533c0552439133efaba232918715307c8d06115fb3384f4ffee4",
+    "A13-13332": "5d56660dfe64747d10d8a85a29ee46746f9fcb989bcebae14d9ad81de82c9899",
+    "A13-13333": "5deb2b3aa05339a4e8346abe542d22fba51aebd3d7ea4e7817eec0ae355af21a"
   },
-  "latestCheckpointCommit": "66aaafa",
+  "latestCheckpointCommit": "7d1803b",
   "semanticReview": [
     "Existing coordinator-accepted protocol 3.1 interviews independently passed repository validator and are hash-protected.",
     "New files require full transcript/profile review, repository validation and supplemental exact-card/question/quote/bullet audit before acceptance.",
@@ -1351,9 +1389,10 @@
     "First eight A13 additions accepted, with SHA256 manifests and per-pair parent review records; all 223 baseline hashes intact. New reservations remain unreviewed and excluded from counts.",
     "A13-12333 acceptance reopened after checkpoint provenance review: structural/content checks passed, but original draft reused failing baseline narrative. Excluded pending fresh re-interview.",
     "Root sentence audit amended FEEL grammar only in 13 accepted new interviews; old/new hashes and exact field changes recorded. All initial baseline hashes remain protected; counts unchanged.",
-    "All accepted new interviews have full-sentence FEEL annotations; root grammar amendments retain transcript emotions and have explicit old/new hash records. Fresh A13-12333 replacement is accepted; original repair was superseded without rewriting history."
+    "All accepted new interviews have full-sentence FEEL annotations; root grammar amendments retain transcript emotions and have explicit old/new hash records. Fresh A13-12333 replacement is accepted; original repair was superseded without rewriting history.",
+    "Early-life A13 block complete: all 81 canonical A13-1xxxx IDs reviewed/passing. Range totals 248/972; 724 interview gaps and all four insights remain. Actual whole-job validator passing IDs exactly equal reviewed manifests; legacy failing gaps in A14-A16 remain excluded. All 223 initially preserved hashes unchanged; branch diff contains only accepted A13 raw files and own status."
   ],
-  "updatedAt": "2026-11-18T10:04:37.606889+00:00",
+  "updatedAt": "2026-11-18T10:07:54.847477+00:00",
   "acceptanceRecords": [
     {
       "ids": [
@@ -1522,9 +1561,23 @@
       "parentReview": "Full fresh parent transcript/profile review and reviewer1 SHA-bound review. Tomas fully re-interviewed from scratch as food-distributor manager, replacing repaired insurer narrative; bachelor's/mid skill/high cushion/adaptive profile retained. Personal lower-pay risk supports anxious S3. Beth's fast-scenario alarm rests on serious larger-household-wage loss that Jo's income cannot replace; root retains alarmed despite reviewer suggestion, no new danger invented. Public voice, full-sentence feelings, requests versus guaranteed agreements and rent/food/reserve wage conditions corrected. Actual and supplemental checks pass.",
       "validator": "node scripts/validate-archetype-interviews.mjs A13-12333 A13-13311",
       "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-13332",
+        "A13-13333"
+      ],
+      "time": "2026-11-18T10:07:15.370891+00:00",
+      "hashes": {
+        "A13-13332": "5d56660dfe64747d10d8a85a29ee46746f9fcb989bcebae14d9ad81de82c9899",
+        "A13-13333": "5deb2b3aa05339a4e8346abe542d22fba51aebd3d7ea4e7817eec0ae355af21a"
+      },
+      "parentReview": "Full parent transcript/profile reviews and reviewer1 SHA-bound final early-life pair review. Distinct furniture purchasing versus hotel revenue roles, traditional work/family views and steady versus adaptive technology use. Corrected sentence splice, vague quote antecedents and full-sentence feelings; Daria preserves rent plus bicycle-shop salary floor. S3 calibrated anxious follows their own 2031 job exposure and uncertain next vacancies, while spoken unease remains. Initial-household cushions protect choice without guaranteeing work. Final actual and supplemental checks pass.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-13332 A13-13333",
+      "supplemental": "PASS"
     }
   ],
-  "checkpointPreparedAt": "2026-11-18T10:05:02.907403+00:00",
+  "checkpointPreparedAt": "2026-11-18T10:07:54.847477+00:00",
   "reopened": [
     {
       "id": "A13-12333",
@@ -1987,5 +2040,46 @@
     "replacementPersonaAnswers": 39,
     "unchangedFullPersonaAnswers": 0,
     "review": "Root read both complete narratives; insurer and hardware-store story replaced by distributor/cold-chain story."
+  },
+  "currentReservations": [],
+  "progress": {
+    "reviewedInterviews": 248,
+    "canonicalInterviews": 972,
+    "remainingInterviews": 724,
+    "newReviewedInterviews": 25,
+    "insightsCompleted": 0,
+    "jobsCompleted": 0
+  },
+  "continuation": {
+    "state": "ACTIVE_GOAL",
+    "ownerContinuity": "Same Session 3 owner and thread; goal remains unfinished. No second independent writer may claim this active session.",
+    "currentJob": "A13",
+    "nextTwoIds": [
+      "A13-21111",
+      "A13-21112"
+    ],
+    "order": [
+      "A13",
+      "A14",
+      "A15",
+      "A16"
+    ],
+    "scratch": "/tmp/paradigm-session3-20261118-1331",
+    "instructions": "Resume bounded two-ID drafting and read-only review using existing pool. Preserve all recorded hashes except documented explicit corrective amendments. Run actual validators plus semantic review; do not count drafts. At 200 reviewed rebuild insights from scratch; final 243 needed per job. Commit and push only exact owned branch every ~30 minutes.",
+    "checkpointReferencePolicy": "latestCheckpointCommit identifies latest interview-data checkpoint; a later status-only commit may publish its exact hash.",
+    "existingFailingFileRule": "Preexisting failing 3.1 files also require fresh independent re-interviews, not annotation-only repairs. Current failing IDs are recorded in preexistingInvalidFiles."
+  },
+  "preexistingInvalidFiles": {
+    "A14": [
+      "A14-13123",
+      "A14-13222"
+    ],
+    "A15": [
+      "A15-13213"
+    ],
+    "A16": [
+      "A16-12233",
+      "A16-12311"
+    ]
   }
 }
