@@ -29,13 +29,13 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,348 of 7,776 done.**
-(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 10:42 Asia/Dubai.)
+Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,366 of 7,776 done.**
+(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 10:55 Asia/Dubai.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 195/243 | STALE from main - must redo |
+| A02 | 213/243 | STALE from main - must redo |
 | A03 | 163/243 | STALE from main - must redo |
 | A04 | 160/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
@@ -81,7 +81,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,428 people remain by the table above).
+1. Finish the interviews for `A02`–`A32` (5,410 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -125,7 +125,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 ```json
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
-  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-133","A02-211","A02-212","A02-213","A02-221","A02-222","A02-223","A02-231","A02-232","A02-312","A02-313","A02-321","A02-322"],
+  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-133","A02-211","A02-212","A02-213","A02-221","A02-222","A02-223","A02-231","A02-232","A02-233","A02-311","A02-312","A02-313","A02-321","A02-322"],
   "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132","A03-133","A03-211","A03-212","A03-213","A03-221","A03-312","A03-313","A03-321"],
   "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131","A04-132","A04-133","A04-211","A04-212","A04-213","A04-221","A04-311","A04-312","A04-313","A04-321"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
@@ -252,17 +252,20 @@ Current session resumed from pushed `e16eeb2` on 18 November 2026. The prior `/t
 
 Use bounded disjoint TWO-ID sequential invocations: gpt-6-sol medium drafting; gpt-6-luna medium read-only review. Parent independently runs actual validators, supplemental exact-card/question/profile/quote/bullet checks and substantive review. Only reviewed passing files are counted here; in-flight drafts may exist and must be reviewed before counting. Passing baseline files are protected by SHA-256 hashes. Helpers remain outside checkout at `/tmp/paradigm-repass-current/`. Do not trust older queues.
 
-Latest reviewed count: **2,348/7,776**; A02 **195/243**.
+Latest reviewed count: **2,366/7,776**; A02 **213/243**.
 
-Reviewed additions in this session (14): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311.
+Reviewed additions in this session (32): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323.
 
 Current exact reservations (inspect actual files and agent state before reuse):
 
-- writer1: A02-23312, A02-23313.
-- writer2: A02-23321, A02-23322.
-- writer3: A02-23323, A02-23331.
+- writer1: A02-32333, A02-33111.
+- writer2: A02-33123, A02-33131.
+- writer3: A02-33112, A02-33113.
+- writer4: A02-33121, A02-33122.
 
-Next A02 gaps, excluding no reservations: A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333.
+A02 insights synthesis began from a reviewed-only 201-person snapshot under `/tmp/paradigm-repass-current/insights/`; final source membership/statistics must refresh before repository installation.
+
+Next A02 gaps (including pending reviews and reservations): A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333.
 
 All 32 interview validators were exercised through the full-file validator; only A01 insights pass in the baseline. A02-A04 insights remain stale and must be regenerated from current 3.1 interviews once each reaches 200 passes. A01 baseline remains unchanged and must be revalidated before final completion. Do not merge to main until all 7,776 interviews and all 32 insights pass. Commit and push approximately every 30 minutes and before yielding.
 

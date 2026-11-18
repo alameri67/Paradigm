@@ -11,24 +11,16 @@
     "outlook": "centre",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Yara. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to any AI company, employer, union, party or government, and we're not selling anything. Everything you tell me stays confidential, so you can say what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I work for the independent Work Futures Panel. We have no ties to AI firms, employers, unions or government, and your answers are confidential. Tell me about an ordinary shift."
     },
     {
       "speaker": "persona",
-      "text": "I run the primary crusher and the conveyors at a large open-pit lithium mine. The trucks tip ore into the crusher, it breaks the rock down, and my job is keeping it all flowing from the control panel and out on the walkways, watching for blockages, belt wander, bearings running hot. Twelve-hour shifts, four on, four off. I love the puzzle of it, when the whole system hums at full rate you feel like a conductor. What wears me out is the night shifts and the alarms, there's always an alarm."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "You mentioned the control panel. How do you use technology in your day?"
-    },
-    {
-      "speaker": "persona",
-      "text": "Constantly, I'm the one in the crew who's always fiddling. I use an AI assistant every day to write my handover notes and to look at the vibration data from the conveyor bearings, it spots patterns before I would. Last year I did a drone pilot licence on my own time, just because. Dev, my partner, teaches maths at the high school, our girls are grown, Mia's a vet and Zoe's a plumber. We've got savings, shares and a rental house, so I'm in a lucky spot and I know it."
+      "text": "I operate the blast-hole drill at Willow Shaft mine, lining up holes before the blasting crew takes over. I have a vocational certificate and enough years on the rig to know when a bit is pulling wrong. My partner and I have grown children and more than six months saved. I use AI every day to sort drilling notes, though I still check the measurements myself."
     }
   ],
   "scenarios": {
@@ -36,19 +28,19 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "I'm going to read you five pictures of the future, one at a time. The first is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say fair enough, it's a good tool, not a miracle. I'd probably post that on the mining forum I read, with some numbers about what it actually saved us. No drama."
+          "text": "I would tell the crew that a little help with reports is welcome. The drilling still needs a person at the controls, and I would keep checking the bit and the ground. I like tools that clear paperwork out of my way."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AI Plateau means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "It means I keep doing what I'm doing, just with a slightly better assistant. Honestly, I'd be a touch disappointed, I enjoy new toys. But my retirement plans don't change."
+          "text": "My wage looks safe, and we have savings and several other mines nearby. I would be glad if the AI summaries stayed useful without changing jobs. I might try one extra reporting feature, but only after comparing it with my own readings."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep working, keep using the tools for handovers and bearing data. I'd probably start doing some drone survey work on my days off for local farmers, checking fences and dams. Small money, but fun."
+          "text": "I would keep drilling the same pattern and test the app’s new measurement chart against the rig display for a month. If it matched, I would use it in handover notes. I would leave our retirement savings plan alone."
         },
         {
           "speaker": "interviewer",
@@ -64,55 +56,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, a little bored. Like a holiday where the weather's just fine."
+          "text": "Calm. A cleaner report is pleasant when the machine and pay stay familiar."
         },
         {
           "speaker": "interviewer",
-          "text": "You use AI daily. What would AI Plateau mean for that?"
+          "text": "What would count as a bad chart?"
         },
         {
           "speaker": "persona",
-          "text": "It saves me maybe forty minutes a shift on notes and catches one or two bearing problems a month. That's real, but it's not world-changing. I'd keep using it the same way."
+          "text": "If it rounded a hole depth up, the blast crew could read the wrong number. I would circle the difference on the original log. A smooth chart cannot drill a safe hole for me."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you do with that drone licence, in this picture?"
+          "text": "What do you enjoy about the app?"
         },
         {
           "speaker": "persona",
-          "text": "Fly it for farmers on my off days. Maybe I'd turn it into a little side business once I retire, aerial photos, stockpile measurements. I like having a project."
+          "text": "It puts repeated fault notes together so I can see a pattern. I still go back to the gauge before signing anything. That part saves me a little time at the end of shift."
         }
       ],
-      "say": "I'd say fair enough, it's a good tool, not a miracle, and I'd post on the mining forum with numbers on what it actually saved us. No drama.",
-      "think": "She thinks she keeps doing her job with a slightly better assistant, and her retirement plans don't change. She'd be a touch disappointed because she enjoys new tools.",
-      "do": "Keeps working and using AI for handovers and bearing data. Starts small drone survey jobs for local farmers on her days off, checking fences and dams.",
-      "feel": "Calm and a little bored, like a holiday where the weather's just fine.",
+      "say": [
+        "I would welcome **cleaner reports** while checking drilling measurements myself.",
+        "I would keep a person at the **rig controls**."
+      ],
+      "think": [
+        "My **wage** looks secure with substantial savings and several other mines nearby.",
+        "An AI chart is useful only when it matches the **rig display**."
+      ],
+      "do": [
+        "**Keep** operating Willow Shaft drill on current shifts.",
+        "**Test** the app’s new measurement chart against rig readings for one month."
+      ],
+      "feel": [
+        "**Calm** about work and household income."
+      ],
       "mood": "calm",
-      "quote": "Like a holiday where the weather's just fine.",
-      "fieldNote": "Yara is a tinkerer who measures what AI saves her, about forty minutes a shift. She already has a drone licence earned on her own time. Her money is secure with savings, shares and a rental house, and she knows she's lucky.",
+      "quote": "A smooth chart cannot drill a safe hole for me.",
+      "fieldNote": [
+        "She already uses **AI daily** but still checks physical measurements before signing.",
+        "Strong **savings** and local options make minor change comfortable.",
+        "Her actual new action is testing a **measurement feature**, not merely continuing existing app use."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai",
-        "side-income"
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep operating Willow Shaft drill on current shifts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Test new AI measurement chart against rig readings for one month",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say get on the front foot, learn the systems now. I'd tell the crew the people who know the software will be the last ones they let go. I'd say it without preaching, I hope."
+          "text": "I would say buying and planning will change before the drill bit does. I would volunteer for a trial that compares AI hole plans with the rock we actually meet. The blast crew should see every correction."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think Steady Disruption means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "For me it's probably good. The crusher's already half automated, the next step is a remote operations room running three crushers at once, and I'd want that job. I'd be one of the people running the machines, not one of the people replaced by them."
+          "text": "I could gain work checking plans, though office colleagues may lose hours. My drill seat looks secure while robots spread more slowly. I would watch for a manager using faster plans to demand a rushed blast sequence."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +136,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd put my hand up for the remote control room the day it's advertised. I'd keep learning, maybe a short course in process control at the technical college. And I'd grow the drone work on weekends, stockpile surveys for smaller quarries."
+          "text": "I would learn the AI planning screen with the surveyor over two weeks. I would mark three real drill patterns with any corrections and show the blast crew and manager. If the targets ignored those corrections, I would ask for a safety review before taking another pattern."
         },
         {
           "speaker": "interviewer",
@@ -128,56 +144,79 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, interested. Like the start of a new season."
+          "text": "Uneasy about the office team and safety, though I am not frightened for my own wage yet. I would rather test the system than argue about a promise."
         },
         {
           "speaker": "interviewer",
-          "text": "Who on your crew would struggle most with this?"
+          "text": "Which correction matters most?"
         },
         {
           "speaker": "persona",
-          "text": "Kenny on B crew, he's fifty-five and hates the computer, he still prints his roster. He's a brilliant fitter with his hands. I'd worry for him and I'd sit with him and show him the basics if he'd let me."
+          "text": "A hole beside fractured rock needs a different angle. I would show the surveyor the break line and put it on the shared plan. The drill bit cannot vote on where the crack runs."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you're in a lucky spot. Does that change how you'd talk about it?"
+          "text": "What if the manager wants faster work anyway?"
         },
         {
           "speaker": "persona",
-          "text": "A bit. I try not to tell people it's easy when it's easy for me. I've got a rental house and a partner on a steady wage, Kenny's got a mortgage and a wife who's sick. That's not the same starting line."
+          "text": "I would put the correction in writing and ask the blast lead to sign with me. We would need a reason to ignore the crack. I am willing to argue with numbers, but not with a hunch."
         }
       ],
-      "say": "I'd tell the crew to get on the front foot and learn the systems now, because the people who know the software will be the last let go. I'd try to say it without preaching.",
-      "think": "She thinks it's probably good for her, since a remote room running three crushers would be a job she wants. She sees herself running the machines, not being replaced by them.",
-      "do": "Applies for the remote control room the day it's advertised and takes a short process-control course at the technical college. Grows her weekend drone work into stockpile surveys for smaller quarries.",
-      "feel": "Calm and interested, like the start of a new season.",
-      "mood": "calm",
-      "quote": "Kenny's got a mortgage and a wife who's sick. That's not the same starting line.",
-      "fieldNote": "She is aware her security makes change easier for her than for colleagues like Kenny. Her plan is to move up into control and build a side business. She offers personal help rather than political answers, in keeping with her pragmatic centre views.",
+      "say": [
+        "I would volunteer to **test AI hole plans** against the rock before changing drilling targets.",
+        "I would share **corrections** with the blast crew and manager."
+      ],
+      "think": [
+        "My **drill wage** looks safe while hands-on robots spread slowly.",
+        "Office hours may shrink, and **rushed targets** could weaken blast safety."
+      ],
+      "do": [
+        "**Learn** the AI planning screen with the surveyor over two weeks.",
+        "**Mark** corrections on three real patterns and request safety review if targets ignore them."
+      ],
+      "feel": [
+        "**Uneasy** about office jobs and rushed drilling."
+      ],
+      "mood": "uneasy",
+      "quote": "The drill bit cannot vote on where the crack runs.",
+      "fieldNote": [
+        "She predicts **planning work** changes before hands-on drilling.",
+        "Her response is a **measured trial** with three patterns, shared with the blast crew.",
+        "She feels secure personally but sees **office hours** and safety as risks."
+      ],
       "actions": [
-        "change-job",
-        "retrain",
-        "side-income",
-        "learn-ai"
+        "learn-ai",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Learn AI hole planning screen with surveyor over two weeks",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask blast lead to join written safety objection if crack ignored",
+          "tag": "collective-action"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's going to be messy, and the government and companies need to agree on a plan fast. I wouldn't pretend I have the answer. I'd share whatever useful information I found, that's what I'm good for."
+          "text": "I would tell the crew that thinking AI by 2028 could write plans first, while capable robot drills follow around 2031. The mine still has to choose whether to buy them. I would want a live safety trial and a clear count of the posts at stake."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2028 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think even the control room goes, because if the AI can do any job, it can watch a crusher. So I'm out at sixty, comfortably, but out. The drone side business probably goes too, the drones will fly themselves."
+          "text": "I would be sixty when thinking AI arrives and sixty-three when robots become capable. If Willow Shaft bought robot drills then, I could lose my wage before our planned retirement. Our savings give us time, but I would not assume a new mine keeps hiring operators."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +224,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First month, I'd move some of the shares into the companies making the robots, if I can't beat them I'd like a slice. I'd take a package at sixty if offered. Then I'd look for whatever new work appears around the machines, setting them up, checking them, because there's always something at the edges."
+          "text": "I would postpone the new kitchen and keep the money in our account this year. I would ask for paid training on remote drill checks if Willow Shaft posted real positions, then take the place if those terms held. After 2028 I would keep drilling and compare AI plans with the face."
         },
         {
           "speaker": "interviewer",
@@ -193,55 +232,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not for my bills, more like a game I was good at just got rewritten without asking me."
+          "text": "Anxious. I have options, but I do not know whether a robot trial leaves enough paid seats for operators."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd be sixty when this lands. Does even the remote room survive full AGI?"
+          "text": "What would you want in the safety trial?"
         },
         {
           "speaker": "persona",
-          "text": "Honestly, probably not. There'll be a stage where the robots need people to supervise them, but with full AGI that stage might be short. I'd still try, I'd rather be in the room than outside it."
+          "text": "A person able to stop the robot drill when the ground breaks differently from the plan. I would record every false depth reading. I do not want a fast demonstration to count as proof."
         },
         {
           "speaker": "interviewer",
-          "text": "How would two years change the drone idea?"
+          "text": "Would nearby mines solve the wage problem?"
         },
         {
           "speaker": "persona",
-          "text": "It turns into a hobby. I'd buy a better drone and fly it over the lake for fun. Two years isn't long enough to build a business that the machines can't swallow."
+          "text": "They might buy the same machines. I would call them before applying, but I would not bank our retirement on an advertised vacancy. A job advert is not a promise of ten more years."
         }
       ],
-      "say": "I'd say it's going to be messy and government and companies need to agree on a plan fast. I wouldn't pretend to have the answer, but I'd share any useful information I found.",
-      "think": "She believes even the control room goes, because an AI that can do any job can watch a crusher, so she's out at sixty, comfortably. Her drone side business likely goes too, since drones will fly themselves.",
-      "do": "Moves some shares into robot-making companies in the first month and takes a package at sixty if offered. Looks for new work at the edges of the machines, such as setting them up and checking them.",
-      "feel": "Uneasy, not about bills but because a game she was good at got rewritten without asking her.",
-      "mood": "uneasy",
-      "quote": "A game I was good at just got rewritten without asking me.",
-      "fieldNote": "Two years removes the ladder her adaptability usually gives her. She stays practical, hedging by investing in robot makers and looking for edge work. Her drone side business shrinks to a hobby in this picture.",
+      "say": [
+        "I would separate **2028 thinking AI** from capable robot drills around 2031.",
+        "I would demand a **live safety trial** and a count of posts at risk."
+      ],
+      "think": [
+        "At **sixty-three** when robots become capable, I could lose wages before planned retirement.",
+        "Strong **savings** buy time, but nearby vacancies may not last."
+      ],
+      "do": [
+        "**Postpone** the new kitchen and retain its budget this year.",
+        "**Take** paid remote drill training if real positions are posted.",
+        "**Keep** drilling after 2028 while comparing AI plans with the face."
+      ],
+      "feel": [
+        "**Anxious** about whether robot trials leave enough paid operator work."
+      ],
+      "mood": "anxious",
+      "quote": "A job advert is not a promise of ten more years.",
+      "fieldNote": [
+        "She distinguishes the **2028 plan change** from capable robot drills around 2031.",
+        "Her **training** requires paid time and posted positions, while kitchen spending is delayed.",
+        "Savings cushion the risk without making future **operator wages** certain."
+      ],
       "actions": [
-        "invest",
-        "retire-early",
-        "change-job"
+        "cut-spending",
+        "retrain",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Postpone planned kitchen renovation this year",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Take paid remote drill training if real positions are posted",
+          "tag": "retrain"
+        },
+        {
+          "text": "Keep drilling and checking AI plans after 2028",
+          "tag": "keep-going"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough for a decent plan if people actually use it. Don't wait for someone else to fix it. Learn something, save something, talk to your family."
+          "text": "I would say five years to thinking AI and about eight to capable robot drills gives us time to learn and test properly. I would ask the mine to publish a trial calendar. Experienced operators should help write the stop rules."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2031 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "I'd get a few good years in the remote room, then go around sixty-two or sixty-three on my own terms. That's close to what I'd planned anyway. So for me it's fine."
+          "text": "I would be sixty-three when planning changes in 2031 and about sixty-six when robots become capable in 2034. We might be able to retire by then, but I would compare pension income with our bills first. If I stayed, a safety testing role would suit me."
         },
         {
           "speaker": "interviewer",
@@ -249,7 +318,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Year one, into the control room and the process course. I'd build up the drone survey work into something real, with a proper business name, while there's still demand. And I'd shift some money into the robot side of the market slowly, not all at once."
+          "text": "I would ask the mine for a paid safety-testing assignment next year if it opened one. I would take formal remote-drill instruction if that assignment required it and paid for it. I would also request pension projections at sixty-five and sixty-seven, then choose with my partner whether more shifts were needed."
         },
         {
           "speaker": "interviewer",
@@ -257,56 +326,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Busy, but calm."
+          "text": "Uneasy, but I can see several routes. Eight years lets us test the machine and the retirement figures without rushing either."
         },
         {
           "speaker": "interviewer",
-          "text": "Compared with two years, what does five give you?"
+          "text": "What would your stop rule say?"
         },
         {
           "speaker": "persona",
-          "text": "Five years means I can be ahead of the curve instead of under it. In two, I'm just watching. In five, I've got time to set up something useful before it gets swallowed."
+          "text": "Stop a robot drill if its measured depth differs from the physical gauge by more than the agreed margin. I would have the crew test that margin first. A stop button needs a rule people understand."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anything you'd tell Zoe, being a plumber?"
+          "text": "What if no safety assignment appears?"
         },
         {
           "speaker": "persona",
-          "text": "Zoe's tough, she'd figure it out. I'd tell her the robots will need plumbers to install them before they replace plumbers. And I'd tell her to put money away now, because her hands are her pension."
+          "text": "I would keep drilling and watch for roles at the other mines. I would not pay for remote training without a post to use it. The pension projection might let me leave work instead."
         }
       ],
-      "say": "I'd say five years is enough for a decent plan if people use it, and not to wait for someone else to fix it. Learn something, save something and talk to your family.",
-      "think": "She expects a few good years in the remote room and leaving around sixty-two or sixty-three on her own terms. That's close to her plan, so it's fine for her.",
-      "do": "Moves into the control room and takes the process course in year one. Builds the drone survey work into a proper business while demand lasts, and gradually shifts some money into robot-related shares.",
-      "feel": "Calm and busy.",
-      "mood": "calm",
-      "quote": "Five years means I can be ahead of the curve instead of under it.",
-      "fieldNote": "Five years is enough for her adaptability to work in her favour again. She plans the business with a clear sense it may be swallowed eventually. Her advice to her plumber daughter blends practicality with care.",
+      "say": [
+        "I would ask for a **trial calendar** before capable robot drills around 2034.",
+        "I would help write **stop rules** for safe drilling."
+      ],
+      "think": [
+        "At about **sixty-six** when robots become capable, retirement may be possible if pension income covers bills.",
+        "A paid **safety-testing role** would suit me if I continued working."
+      ],
+      "do": [
+        "**Seek** a paid mine safety-testing assignment if one opens next year.",
+        "**Take** funded remote-drill instruction if that assignment requires it.",
+        "**Compare** pension projections for ages sixty-five and sixty-seven with bills."
+      ],
+      "feel": [
+        "**Uneasy**, but able to test work and retirement options."
+      ],
+      "mood": "uneasy",
+      "quote": "A stop button needs a rule people understand.",
+      "fieldNote": [
+        "She is **sixty-three** at thinking AI and about sixty-six when capable robots arrive.",
+        "Remote instruction depends on a **paid assignment** and funding.",
+        "She treats retirement as a **budget test**, not a guaranteed escape."
+      ],
       "actions": [
         "change-job",
         "retrain",
-        "side-income",
-        "invest"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Apply for paid mine safety-testing assignment if one opens",
+          "tag": "change-job"
+        },
+        {
+          "text": "Take funded remote-drill instruction if paid assignment requires it",
+          "tag": "retrain"
+        },
+        {
+          "text": "Compare pension projections at sixty-five and sixty-seven with bills",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is a gift, so use it. I'd probably write something on the forum about how to plan for it, step by step. People like a checklist."
+          "text": "I would say a decade to thinking AI and roughly thirteen years to capable robot drills is a sensible time to publish training and safety plans. I would offer to help with early trials. The younger operators deserve a proper say in the rules."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2036 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "I'd be retired by then, probably running the drone business part-time until the robots take that too. It doesn't threaten me. It actually sounds interesting."
+          "text": "I would be sixty-eight when thinking AI arrives and about seventy-one when capable robots follow in 2039. Our savings make retirement before that plausible, though I would check the pension figures. I would probably care more about safe handover than holding my own drill seat."
         },
         {
           "speaker": "interviewer",
@@ -314,7 +412,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep working, move into the control room when it comes, learn everything. Build the drone business slowly over the decade. Retire around sixty-three and keep the business as a hobby that pays."
+          "text": "I would keep drilling for now and write down the ground checks I teach new operators. I would ask for updated pension figures this year and review them with my partner. If the mine set up a paid trial group, I would join for a short period while still employed."
         },
         {
           "speaker": "interviewer",
@@ -322,36 +420,61 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, curious. I'd quite like to see what happens."
+          "text": "Calm about our household, and interested in getting the handover right. I do not need a machine to prove I was useful."
         },
         {
           "speaker": "interviewer",
-          "text": "By 2036 you'd be sixty-eight. What does this one look like for you?"
+          "text": "What would you put in the handover?"
         },
         {
           "speaker": "persona",
-          "text": "Maybe, if it's fun. If they need someone to teach people to work alongside the robots, I'd do that till seventy. I hate the idea of sitting still."
+          "text": "Photographs of cracked faces beside the hole numbers and the corrections we made. I would have a junior operator check whether the notes make sense without me standing there. A good record should outlast the person who wrote it."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you keep working past your planned retirement, if it were interesting?"
+          "text": "Would you keep working until the robots arrived?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell the girls to stay curious. That's the only real advice I've got, the rest is luck."
+          "text": "I do not know yet. My partner and I would look at the pension statement and our plans for time together. I would not stay on the drill just to win an argument with a robot."
         }
       ],
-      "say": "I'd say ten years is a gift so use it, and I'd write a step-by-step planning checklist on the forum because people like a checklist.",
-      "think": "She expects to be retired by then and running her drone business part-time until robots take that too. It doesn't threaten her and actually sounds interesting.",
-      "do": "Keeps working and moves into the control room when it comes, learning everything she can. Builds the drone business slowly over the decade and retires around sixty-three, keeping the business as a paying hobby.",
-      "feel": "Calm and curious about what happens.",
+      "say": [
+        "I would ask for **training and safety plans** during the long runway.",
+        "I would give **younger operators** a voice in robot trial rules."
+      ],
+      "think": [
+        "At about **seventy-one** when robots become capable, retirement before then looks plausible if pension figures hold.",
+        "A careful **handover** matters more to me than keeping the drill seat."
+      ],
+      "do": [
+        "**Keep** drilling and record ground checks for new operators.",
+        "**Request** updated pension figures and review them with my partner.",
+        "**Join** a paid trial group briefly if the mine offers one while I am employed."
+      ],
+      "feel": [
+        "**Calm** about household income and interested in a safe handover."
+      ],
       "mood": "calm",
-      "quote": "I'd do that till seventy. I hate the idea of sitting still.",
-      "fieldNote": "With a decade she frames AGI as interesting rather than threatening. She'd happily work past retirement if the work were fun. Her advice to her daughters comes down to staying curious, and she credits the rest to luck.",
+      "quote": "A good record should outlast the person who wrote it.",
+      "fieldNote": [
+        "Her **savings** and age make retirement before 2039 plausible, subject to pension figures.",
+        "She wants to pass on **ground knowledge** through photos and corrected hole numbers.",
+        "A trial group is conditional on a **paid offer** while she remains employed."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai",
-        "side-income"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep drilling and record ground checks for new operators",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Request updated pension figures before choosing retirement date",
+          "tag": "wait-and-see"
+        }
       ]
     }
   },
@@ -362,7 +485,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, mostly for people like Kenny, not for me. What would help is good, honest information early, and training that starts before the jobs go, not after, with some help for people who aren't confident with computers."
+      "text": "AGI by 2028 worries me most because capable robot drills could arrive around 2031 before our planned retirement. Paid remote-drill instruction tied to actual posts and a proper safety trial would help. I would want pension figures too."
     },
     {
       "speaker": "interviewer",
@@ -370,11 +493,20 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask how many miners already use AI. More than you'd think. We're not all dinosaurs, some of us run the night shift on it."
+      "text": "Ask who can stop a drill when the ground disagrees with the plan. I have watched a bit pull toward a crack nobody mapped. I would trust a machine more if it let an operator stop and explain."
     }
   ],
-  "headlineQuote": "I'd be one of the people running the machines, not one of the people replaced by them.",
-  "portrait": "Yara Abbott is a 58-year-old crusher and conveyor operator at a large open-pit lithium mine who uses AI every day and earned a drone licence on her own time. With savings, shares and a rental house, she knows she is luckier than colleagues like Kenny, who has a mortgage and a sick wife. In the slower pictures she plans to move into the remote control room and grow a drone survey business. The two-year AGI picture leaves her financially fine but uneasy that the game she was good at gets rewritten. With five or ten years she is calm and curious, planning to stay ahead of the curve.",
-  "biggestWorry": "AGI by 2028 worries her most, mainly for less confident colleagues like Kenny rather than for herself.",
-  "whatWouldHelp": "Good, honest information early and training that starts before jobs go, with help for people who aren't confident with computers."
+  "headlineQuote": "I would trust a machine more if it let an operator stop and explain.",
+  "portrait": [
+    "Yara Abbott is a **58-year-old** blast-hole drill operator at Willow Shaft mine, with a vocational certificate and grown children.",
+    "She uses **AI daily** for drilling notes and tests new features against physical rig readings.",
+    "Strong **savings**, higher pay and local mines give her options, though fast robot availability could interrupt wages before retirement.",
+    "She wants **safety trials** with stop rules and hopes to pass ground knowledge to younger operators before leaving work."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** worries her most because capable robot drills could arrive around 2031 before planned retirement."
+  ],
+  "whatWouldHelp": [
+    "**Paid remote instruction** tied to actual posts, a proper safety trial and pension figures would help her decide what comes next."
+  ]
 }
