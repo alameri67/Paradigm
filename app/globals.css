@@ -708,7 +708,7 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 
 /* Ask AI: the composer's collapsed white pill at the top right, and the panel it opens. White, Inter, soft shadows.
    Its width leaves room for the centred Paradigm name: half the page, less half the name (2.4 x its font size), less 40px. */
-.ask-bar{position:fixed;z-index:60;top:calc(28px + env(safe-area-inset-top,0px));right:16px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;width:min(340px,calc(50vw - clamp(96px,12vw,154px) - 40px));height:48px;padding:6px;border-radius:30px;background:#fff;color:#111;box-shadow:0 0 0 1px rgb(0 0 0/.05),0 1px 2px rgb(0 0 0/.04),0 12px 28px -12px rgb(0 0 0/.16);transition:box-shadow .3s ease,opacity .2s ease}
+.ask-bar{position:fixed;z-index:60;top:calc(28px + env(safe-area-inset-top,0px));right:16px;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;width:min(340px,calc(50vw - clamp(96px,12vw,154px) - 40px));height:48px;padding:6px;border-radius:30px;background:#fff;color:#111;box-shadow:0 0 0 1px rgb(0 0 0/.05),0 1px 2px rgb(0 0 0/.04),0 12px 28px -12px rgb(0 0 0/.16);transition:box-shadow .3s ease,opacity .2s ease}
 .ask-bar:hover{box-shadow:0 0 0 1px rgb(0 0 0/.06),0 2px 4px rgb(0 0 0/.04),0 18px 36px -14px rgb(0 0 0/.22)}
 .ask-bar[data-hidden]{opacity:0;visibility:hidden}
 .ask-bar-btn{display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:999px;background:#111;color:#fff;transition:transform .2s ease}
@@ -718,7 +718,10 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .ask-bar-field input{position:relative;z-index:1;width:100%;height:100%;padding:0 4px;border:0;background:transparent;font-size:15px;outline:none;cursor:text}
 .ask-bar-ph{position:absolute;inset:0 0 0 4px;display:flex;align-items:center;overflow:hidden;pointer-events:none;font-size:15px;color:#9a9a96;white-space:nowrap}
 .ask-bar-ph span{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis}
-.ask-bar.is-icon{grid-template-columns:auto;width:auto}
+.ask-bar.is-icon{grid-template-columns:auto;width:auto;height:auto;padding:0;background:none;box-shadow:none}
+/* Collapsed: an "Ask AI" button in the liquid glass of the selected chips, on a solid white so the page doesn't show through. */
+.ask-bar-chip{background:var(--water-hi),#fff}
+.ask-bar-chip svg{color:var(--water-ring)}
 /* Too narrow for the plus: keep the placeholder and the mic. */
 @media (max-width:760px){.ask-bar{grid-template-columns:minmax(0,1fr) auto}.ask-bar-plus{display:none}.ask-bar-field input,.ask-bar-ph{padding-left:8px}}
 @media (max-width:640px){.ask-bar{top:calc(24px + env(safe-area-inset-top,0px));right:12px}}
@@ -809,3 +812,27 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 /* Lists inside a flex column lose their markers; keep them as list items so the bullets show. */
 .bullets{list-style:disc}
 .bullets li{display:list-item}
+
+/* Ask AI header buttons, the chat list and the "person isn't on screen" note. */
+.ask-head{align-items:center}
+.ask-head .ask-x{width:34px;height:34px}
+.ask-x.on{background:var(--water-hi),#fff;box-shadow:var(--water-shadow);color:var(--water-fg)}
+.ask-history{padding:12px 12px 20px}
+.ask-chats{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.ask-chat{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px;min-height:56px;padding:4px 4px 4px 0;border-radius:14px;transition:background 120ms var(--ease)}
+.ask-chat:hover,.ask-chat:focus-within{background:var(--muted)}
+.ask-chat.on,.ask-chat.on:hover{background:var(--water-hi),#fff;box-shadow:var(--water-shadow)}
+.ask-chat-open{display:flex;flex-direction:column;gap:2px;min-width:0;padding:8px 10px 8px 12px;border:0;background:none;text-align:left;border-radius:12px}
+.ask-chat-title{font-size:14px;line-height:20px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ask-chat.on .ask-chat-title{color:var(--water-fg)}
+.ask-chat-meta{font-size:12px;line-height:16px;color:var(--fg2)}
+.ask-chat-del{display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:999px;background:transparent;color:var(--fg2);opacity:0;transition:opacity 120ms var(--ease),background-color 120ms var(--ease),color 120ms var(--ease)}
+.ask-chat:hover .ask-chat-del,.ask-chat-del:focus-visible{opacity:1}
+.ask-chat-del:hover{background:var(--muted-2);color:var(--destructive)}
+@media (hover:none){.ask-chat-del{opacity:1}}
+.ask-chat-confirm{grid-column:1/-1;display:flex;align-items:center;gap:8px;padding:6px 6px 6px 12px;font-size:13px;line-height:18px}
+.ask-chat-confirm span{flex:1;font-weight:500}
+.ask-chat-confirm button{height:32px;padding:0 12px;border:0;border-radius:999px;font-size:13px;font-weight:500}
+.ask-chat-del-yes{background:var(--destructive);color:#fff!important}
+.ask-chat-del-no{background:var(--muted-2)}
+.ask-away{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:16px 20px calc(20px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--hair);font-size:14px;line-height:21px;color:var(--fg2)}

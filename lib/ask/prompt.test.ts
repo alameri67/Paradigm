@@ -62,7 +62,7 @@ describe("describeScreen", () => {
 
 describe("AskRequestSchema", () => {
   it("accepts the panel's request and rejects unknown models", () => {
-    const ok = { question: "Why?", model: "claude-sonnet-5-5", history: [], screen: summary, search: true, research: false };
+    const ok = { question: "Why?", model: "claude-sonnet-5-5", history: [], screen: summary };
     expect(AskRequestSchema.safeParse(ok).success).toBe(true);
     expect(AskRequestSchema.safeParse({ ...ok, model: "gpt-5" }).success).toBe(false);
     expect(AskRequestSchema.safeParse({ ...ok, question: "   " }).success).toBe(false);

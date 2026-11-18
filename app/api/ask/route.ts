@@ -37,7 +37,6 @@ export async function POST(req: Request) {
   }
   const parsed = AskRequestSchema.safeParse(body);
   if (!parsed.success) return fail("bad_request", 400, "The question couldn't be read.");
-  // search and research are accepted but not used yet.
   const { question, model, history, screen, mode } = parsed.data;
   const persona = mode === "persona" && !!screen.details;
 

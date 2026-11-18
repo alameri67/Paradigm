@@ -70,8 +70,5 @@ export const AskRequestSchema = z.object({
   screen: ScreenSchema,
   /** "ask" answers about the page; "persona" answers as the person on the details page. */
   mode: z.enum(["ask", "persona"]).optional(),
-  /** Sent along from the composer's toggles. The server doesn't use them yet. */
-  search: z.boolean().optional(),
-  research: z.boolean().optional(),
 });
 export type AskRequest = z.infer<typeof AskRequestSchema>;
