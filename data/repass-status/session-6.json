@@ -1,7 +1,7 @@
 {
   "session": 6,
   "ownerId": "s6-60b95d52-4b9c-4c03-af48-ef081e677277",
-  "state": "ACTIVE",
+  "state": "PAUSED",
   "branch": "claude/repass-3.1-s6-a25-a28",
   "assignedJobs": [
     "A25",
@@ -293,10 +293,7 @@
         "A25-33112",
         "A25-33113",
         "A25-33121",
-        "A25-33122"
-      ],
-      "reviewedCount": 221,
-      "remainingGaps": [
+        "A25-33122",
         "A25-33123",
         "A25-33131",
         "A25-33132",
@@ -310,7 +307,10 @@
         "A25-33231",
         "A25-33232",
         "A25-33233",
-        "A25-33311",
+        "A25-33311"
+      ],
+      "reviewedCount": 235,
+      "remainingGaps": [
         "A25-33312",
         "A25-33313",
         "A25-33321",
@@ -324,11 +324,11 @@
       "validationCommand": "node scripts/validate-archetype-interviews.mjs A25",
       "validationSummary": "57/57 files valid",
       "lastAcceptedValidation": {
-        "command": "node scripts/validate-archetype-interviews.mjs A25-33122",
+        "command": "node scripts/validate-archetype-interviews.mjs A25-33311",
         "result": "1/1 files valid",
         "supplemental": "no blocking errors"
       },
-      "phase": "Complete remaining 42 interviews; retain audited initial201 insights pending final243 refresh",
+      "phase": "PAUSED: 235 reviewed, 8 gaps; audited201 insights await final243 refresh",
       "insightsWork": {
         "sourceCount": 201,
         "sourceManifest": "/tmp/paradigm-s6-20261118-claim/A25-insights/frozen201/manifest.json",
@@ -7146,6 +7146,12 @@
         "command": "node scripts/validate-job-insights.mjs A25",
         "result": "insights match201interviews",
         "publishedStats": "PASS: independent source recomputation using repository Math.round convention;45/72=.63"
+      },
+      "pauseValidation": {
+        "at": "2026-11-18T13:05:03.600524+00:00",
+        "command": "node scripts/validate-archetype-interviews.mjs <explicit reviewed IDs>",
+        "result": "235/235 files valid",
+        "excluded": "All remaining gaps, including existing unreviewed drafts"
       }
     },
     "A26": {
@@ -7458,7 +7464,13 @@
       ],
       "insightsValidated": false,
       "validationCommand": "node scripts/validate-archetype-interviews.mjs A26",
-      "validationSummary": "57/59 files valid"
+      "validationSummary": "57/59 files valid",
+      "pauseValidation": {
+        "at": "2026-11-18T13:05:03.600524+00:00",
+        "command": "node scripts/validate-archetype-interviews.mjs <explicit reviewed IDs>",
+        "result": "57/57 files valid",
+        "excluded": "All remaining gaps, including existing unreviewed drafts"
+      }
     },
     "A27": {
       "initialPassingIds": [
@@ -7770,7 +7782,13 @@
       ],
       "insightsValidated": false,
       "validationCommand": "node scripts/validate-archetype-interviews.mjs A27",
-      "validationSummary": "57/58 files valid"
+      "validationSummary": "57/58 files valid",
+      "pauseValidation": {
+        "at": "2026-11-18T13:05:03.600524+00:00",
+        "command": "node scripts/validate-archetype-interviews.mjs <explicit reviewed IDs>",
+        "result": "57/57 files valid",
+        "excluded": "All remaining gaps, including existing unreviewed drafts"
+      }
     },
     "A28": {
       "initialPassingIds": [
@@ -8082,30 +8100,36 @@
       ],
       "insightsValidated": false,
       "validationCommand": "node scripts/validate-archetype-interviews.mjs A28",
-      "validationSummary": "57/59 files valid"
+      "validationSummary": "57/59 files valid",
+      "pauseValidation": {
+        "at": "2026-11-18T13:05:03.600524+00:00",
+        "command": "node scripts/validate-archetype-interviews.mjs <explicit reviewed IDs>",
+        "result": "57/57 files valid",
+        "excluded": "All remaining gaps, including existing unreviewed drafts"
+      }
     }
   },
   "reservations": {
     "author2": {
       "ids": [
-        "A25-33213",
-        "A25-33221"
+        "A25-33233",
+        "A25-33311"
       ],
-      "state": "drafting"
+      "state": "PAUSED_ACCEPTED"
     },
     "author3": {
       "ids": [
-        "A25-33123",
-        "A25-33131"
+        "A25-33321",
+        "A25-33322"
       ],
-      "state": "drafting"
+      "state": "PAUSED_UNREVIEWED"
     },
     "author4": {
       "ids": [
-        "A25-33132",
-        "A25-33133"
+        "A25-33323",
+        "A25-33331"
       ],
-      "state": "drafting"
+      "state": "PAUSED_UNREVIEWED"
     },
     "pending-2211": {
       "ids": [
@@ -8116,10 +8140,10 @@
     },
     "author1": {
       "ids": [
-        "A25-33211",
-        "A25-33212"
+        "A25-33312",
+        "A25-33313"
       ],
-      "state": "drafting"
+      "state": "PAUSED_UNREVIEWED"
     },
     "reviewer1": {
       "ids": [],
@@ -8396,7 +8420,7 @@
       "state": "accepted"
     }
   },
-  "latestCheckpointCommit": "55e5c9aad17d6c472bf3be8c9ba87a719764f0fd",
+  "latestCheckpointCommit": "2a0596f188ef1e27accc45d80190fc8c96b9e3f0",
   "semanticReview": [
     "Ownership claim only; no new interviews drafted or accepted.",
     {
@@ -9005,6 +9029,55 @@
         "A25-33122"
       ],
       "record": "Parent full exact profiles, all persona answers/followups and complete annotations reviewed. Erik: resistant housingrepair lead, lowpay/threeweeks and variableclinicspouseincome, workingcupboard postponement, television cut only lostday vs anyhoursfall search,2028MOSThours-END application separatewrittenafterbusbillcover acceptance and actuallymissedrent landlord request,2031busTIMES enquiry+writtenweeklybillcoveroffer without imported fare/hour conditions, actualpaidshiftinspection ifverifiedincomeinsufficientafter2036. Fatima: occasional AIsearch vs new approvedpaid checker errorlogging and conditionalaccuracy/paidtime appeal-controls learning, televisionforegonespend intoactualcarreserve, postedpaidstation-specific2028MOSThours-END application, no invented paidnotice entitlement, actualofferbeforeleavingS1, monthlyreopenedcounts and retestsaftereachupdate, taxi MONTHLY totals vs bestweek. Repairs reread; standalone literal quotes/moods supported, no assumedpension/familywages. Actual per-ID validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33123",
+        "A25-33131"
+      ],
+      "record": "Parent full exact profiles, all persona answers/followups and every annotation reviewed. Marco: daily water-sorter checks notnewlearning, boiler-hit three-week reserve, conditionaltwenty fullpaidweek saving, oneoffice trip only afterpostedpaidvacancy, actual four-person paidcorrectiontime request,2028paidCALLSEND+noopening+beforelaterent landlord enquiry approvaluncertain, postedpaid complaint application with weeklyrent/utilitiesafterfare, requiredcourse only afterpaidopening with employerfeeANDpaidattendance, fallback ifnoopening OR2031cuts plus shiftbus test, quarterlyverifiedincome. Uma: resistant heating lead/topfaultskill lowpay/submonth reserve, televisionfee toactualmortgagebill notsave-more, private manager loggederror request,2028rotaEND+noopening+pre-missedmortgage lender enquiry notguaranteed, first/lastbus, postedpaidtwo-day countertrial writtenwages/hours+nofee+no lostPAIDcalls, signedfullrole weeklymortgage/utilitiesafterfare, existingpaidcoachingnotretrain, twiceyearlyactualincome. Repaired exact fields/source read; all literal standalone quotes and moods supported. Actual per-ID validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33132",
+        "A25-33133"
+      ],
+      "record": "Parent full exact profiles, every persona answer/followup and all annotations reviewed. Colin: occasionalexistingAIchecksnotnewlearning, utilitybalance beforeanyreservesaving, monthlywrittenlaterota, actualhoursfall bakerycut/countercomparison,2028rowEND applyonlyadvertisedsufficientpaidHOURS separateaftertravelrent/utilities acceptance, conditionalpaidcoordinator shadow with quarterlypostedrota checks and noopeningcounterfallback, autumnjobs+utility-cleared/rentfoodcovered sparesaving. Dana: dailyexistingAI vs approvedpaidnewAIexceptionqueue practice, electricityfee notnewreserve, actualcuts lunch/boxofficecomparison,2028rowEND postedpaidVENUE-HOST-specific application and safe-standing/access enquiry, aftertravelfullweekrent/bills acceptance, quarterlypaid entranceobservation, four-errorguide, requiredcourse onlypostedrole+fundedfees+paidtime, noentranceopeningpaidcalls/boxofficerecheck, conditionalsparepay saving. All repaired fields reread; source-specific quotes, moods, family/retirement uncertainty supported. Actual per-ID validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33213",
+        "A25-33221"
+      ],
+      "record": "Parent full exact profiles, complete persona answers/followups and every annotation reviewed. Aaron: dailyapprovedsearch vs conditionalpaidnewaddresschecker/errorlogging, actualsharedpaidappealhours requests, TWO paid days lost triggers brief existingreserve use with written timetable ASKED before spending,2028MOSThours-END pharmacycounter application separateaftertravel fullweekbillcover acceptance, Leilafullhoursmonth saving and quarterlyassociation evidence, currentofferedshifts retained notinventednewjobsearch. Beth: resistant senior motorclaims worker/fivemonthreserve/steadyspousewage, original-record teachingnotretrain, shiftsfall insurancecomparison with signedfullweektermscoveringbillsafterbus,2028MOSThours-END museumvisitor application with realpaidvacancy notguaranteedbyhusbandrole, writtenafterfare acceptance and ANYclaimsSHIFTSstilloffered,2031actualduties enquiry without importedhardgate. Repaired standalone husbandrelationship and SAVED-month quote literals/source consistency, all repaired fields reread. Actual per-ID validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33211",
+        "A25-33212"
+      ],
+      "record": "Parent full exact profiles, every persona answer/followup and all annotations reviewed. Karl: resistant waterbilling lead, fourmonthreserve/typicalpay, ordinarymortgageunease, unionpaidreversal/cutnotice demands, possiblehoursrisknotcertainty, closure-gated postedmeter application with written afterbus householdpay includingLena coveringmortgage/essentials, signedpaidstart+safesiteinstruction, boundedreserve budgetedfallback, observationREFUSED actualvacancy/otherpaidworkfallback withoutmakingobservationhardgate, defersretirementuntilverifiedresourcescoverYEARSofbills. Sara: occasionalwordingAI vs newpaid closure-audit learning onlyifrealcase democatcheserror andpaidscans/photoscomparison, source2031leadcuts+postedpaidrefund-authorityreview trial/application, employerfundedrequiredtrainingFEESANDpaidstudyhours, noopeningfallback, signedaffordableaccessible smallerflat onlyonlowerCOMBINEDrent+bus bill notindividuallowercomponents. Parent tiny refusalwordingfix, all repaired fields and quote/source literals reread. Actual validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33222",
+        "A25-33223"
+      ],
+      "record": "Parent full exact profiles, every persona answer/followup and all annotations reviewed. Ivan: occasionalapprovedsummaries distinctfromnewAIexception-sorter approveddeidentifiedpaidcases, ASKnotobtainwrittenhours, after-owncuts posteddepot comparisons and signedexit,2028paidCALLSEND+MeijointreviewBEFOREexistingreserve use, postedpayhours/rentutilitiesafterfare+lastbus gates and uncertainlandlordrequestbeforelateifnoopening;2031correctionauthorityenquirysoft in source aswellassummary, actualnoopeningsearchNOW ratherthanwaiting2031. Priya: dailysummarywork vs actual new qualityrecords, twentyfive eachPAYDAY conditionalfullweeklyhoursnotweeklycontributions, actualfive-signergroup,2028MOSThours-END paidcinema cut, postedjuniorassessment application withfullweekwrittenrent/utilitiesafterfare, employerfeesANDpaidattendance requiredtwo-weekcourse onlypaidopening, sitevisit/signoffenquiries nothardauthorityrefusal, actualfirstbus/shift/fare fitbeforetrip, signedexit and postingfailure/2031fallback, existingpaidcoachingnotretrain. All repaired fields/source reread; literal standalone quotes and calibrated moods supported. Actual validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33231",
+        "A25-33232"
+      ],
+      "record": "Parent full exact profiles, all persona answers/followups and every annotation reviewed. YusufLopez: resistant internetfault lead/typicalpay/fourmonths, actualpaidhalf-hour coachingnotretrain, ownhourscut countercomparison plus afterbusfullweekrent/billcover MOVE gate and lifting ENQUIRY beforeaccept not inventedhardrefusal,2028rowEND boundedreserve search, postedvacancy BEFORE supervisedpaidbenchtrial and technician-led electricalchecks BEFORETOUCHING notbeforerequest, noopeningquarterlycounter fallback, currentcallsWHILEOFFERED notconditionalfutureshortfall. FreyaRossi: occasionalnotesAI vs FIRSTTEAM-TESTED newpaidAIalerttriagelearning, smallFIXEDpay reserve onlyrentfoodcovered,2028rowEND actualbranchapplication separateaftertravelfullweekbillcover acceptance, securityTRAINING enquiry beforetaking, postedopening+securityinduction beforepaidshadow, noopeningquarterlycashierfallback withboundedEXISTINGreserve, callswhilepaid, standalonelaterincomefigures/rentgapquote. Parent corrected tiny lifting-enquiry wording; all repaired source/annotations/quotes reread, moods supported. Actual validators/audits pass."
+    },
+    {
+      "ids": [
+        "A25-33233",
+        "A25-33311"
+      ],
+      "record": "Parent full exact profiles, all persona answers/followups and complete annotations reviewed. GarethYilmaz: dailyAIsearch vs conditionalnewpaidAIoutagematcher/errorlogging, offeredweekendpay+paidbills saving,2028MOSThours-END utilitydispatch application separatewrittenaftertravelfullweekbillcover acceptance, hypotheticalSofiaextramornings NOT committedsupport (removedunsupportedtag), sourcepaidcontrolobservation/savingfromactualcover, full standaloneweekend-coverPAY quote. NoraEvans: resistant seniortransportlead/higherlatepay/elevenmonthreserve/plentylocaljobs, sharedpaid-driver-check demand, threeS1missedreports andrequestpublishedcounts ratherthaninventedpublication, signedcomparableweeklyterms+travel/quietlessonmonth gate afterpremiumcut,2028MOSThours-END postedpaidclinicapplication separateaftertravelbillcover acceptance, actualjointunionQUARTERLYpublicationS3, actualyearlyincome/quietlessons notassumedpension/childwages. Parent tinyS1publication-request wordingfix, all repaired fields/sourcequotes reread. Actual validators/audits pass."
     }
   ],
   "initialPassingHashes": {
@@ -9401,10 +9474,24 @@
     "A25-32313": "911064262513a44e19b81f8c21866f63d0443788f04ce13fd50cc49584d27e24",
     "A25-32321": "5b00c2bdf339442c6189cdabd8028c5734cd125b97d6db8628ba9136b5c2c363",
     "A25-33121": "15c44066a15a2be47a6e5fb6dedf17e4e27e2d90828d1f5025a5e209c1518c17",
-    "A25-33122": "88fd076af11d5d5c01e7bcc096f6778314df186ec8d1c13751f8384100675e04"
+    "A25-33122": "88fd076af11d5d5c01e7bcc096f6778314df186ec8d1c13751f8384100675e04",
+    "A25-33123": "6813be2379dd2cbfe0a657f72da82517623fc559fe63d02236574abe4d1699ca",
+    "A25-33131": "79a417337fe250e7a933a896c065265f84c6457e107df023e7386890694a798f",
+    "A25-33132": "7ab0e73f61ef7752c639b6ba1f57422896ecd567ad6cef941e67f26b0eccd438",
+    "A25-33133": "7588f5839fa4a8ff1677d2ceb506e490fba3ad989f8a4b81dc2f5effa168f8f5",
+    "A25-33213": "fc2b33da75ada624d7ede9fe15f4c7451fe49cdd923ea0487c26bb4eb5570531",
+    "A25-33221": "3470a046aa21983f7976ebbb391ad2a82650a61c1ae8df839c7931bfc165295c",
+    "A25-33211": "478217c2e1550a6049b448fb6c0f226e8ca556dfdf0d2abc338b50d0bf4159f6",
+    "A25-33212": "9f946bb78a6a88598f44ac714b9f38019c78ffbe40a125141cc545a789a3042c",
+    "A25-33222": "ca8df46dda576df59dea26e08c98ac4739ce1a1a42a3b13f8980383a153317a6",
+    "A25-33223": "9c06084efcafa645a64de8c3837e02ede1a42cd343efbf49693aca5aebedb646",
+    "A25-33231": "be935be973a117eb08bcda0641dd101a4f69cfdadd06cae45a2a87210ecd7050",
+    "A25-33232": "a45e6786080000f650b0cae82fd75eb6a3cfe59af4ef2274ef7255caaea4ba72",
+    "A25-33233": "755b05e3668f3c89b6daba046bfe76cde8d6fea92291b3b0d21ca9bd8cfb1360",
+    "A25-33311": "506d4c513cdb0258cbbae7825f6bbbe6f9b022eed08aaf1a9c936655268e38c8"
   },
-  "updatedAt": "2026-11-18T12:46:29.887889+00:00",
-  "checkpointNote": "A25 221 reviewed passing interviews; 22 canonical gaps remain. Twelve additional parent-reviewed profiles since prior data checkpoint, including source-specific notice-pay, training/duties, income, safety, application/acceptance and fallback corrections. Initial201 audited insights retained pending final243 refresh; all unreviewed drafts excluded and initial passing hashes unchanged.",
+  "updatedAt": "2026-11-18T13:05:04.482021+00:00",
+  "checkpointNote": "PAUSED at user request: A25 235 reviewed/8 gaps, A26-A28 57 each. All406 explicit reviewed sources pass actual validators; preserve local unreviewed drafts and source hashes. Prepare reviewed-only main integration; audited201 A25 insights retained on feature but stale and excluded from main.",
   "acceptanceAmendments": [
     {
       "id": "A25-13221",
@@ -9477,10 +9564,9 @@
     }
   ],
   "draftsExcluded": [
-    "A25-33123",
-    "A25-33131",
-    "A25-33132",
-    "A25-33133",
+    "A25-33312",
+    "A25-33321",
+    "A25-33323",
     "A26-13113",
     "A26-13212",
     "A27-13113",
@@ -9619,5 +9705,42 @@
       "reason": "Parent source-confirmed amendment after reviewer: retain S3 monthly posted-work fallback if warehouse has no opening and S4 actual paid-work check gated by calls ending while wages needed. Source transcript unchanged. Reviewer cross-persona Victor allegation rejected after exact-file check; hypothetical S1 could-try tool willingness is not committed learning.",
       "at": "2026-11-18T12:28:20.242303+00:00"
     }
-  ]
+  ],
+  "pause": {
+    "requestedAt": "2026-11-18T13:05:03.600524+00:00",
+    "reason": "User requested pause due usage limits and explicitly authorized merging ready work to main, superseding prior wait-for-completion restriction.",
+    "newUnreviewedDrafts": [
+      {
+        "id": "A25-33312",
+        "path": "data/interviews/archetypes/raw/A25-33312.json",
+        "sha256": "8591f398797e4f4e124ca2159ce0abc127ca779d4b31c5300b4b2056080a5e03",
+        "bytes": 29817,
+        "reviewed": false
+      },
+      {
+        "id": "A25-33321",
+        "path": "data/interviews/archetypes/raw/A25-33321.json",
+        "sha256": "77df38eb47ab9c1e23c48d2cac4e4502dd8d63f7085f4b8e3f9ba312dec6f872",
+        "bytes": 30156,
+        "reviewed": false
+      },
+      {
+        "id": "A25-33323",
+        "path": "data/interviews/archetypes/raw/A25-33323.json",
+        "sha256": "3cd27fc115c2a47292915c6ff83698ca91dd7b14c2a036a1dc4f76557c4f6b73",
+        "bytes": 28134,
+        "reviewed": false
+      }
+    ],
+    "localDraftBackup": "/tmp/paradigm-s6-20261118-claim/pause-20261118/unreviewed-drafts.tar.gz",
+    "backupSha256": "b85925d8b26e75a66d9fd73357a47de9f7e549696acf322c9e0a3b572101d716",
+    "writersStopped": true,
+    "resume": "Resume this exact branch and owner; verify protected hashes/status. A25 has235 reviewed and8 gaps. Fully review preserved unreviewed drafts before counting; finish all8 gaps, then refresh insights from audited201 to final243 and validate/audit. Only then start A26, followed byA27/A28. Do not take another range. Main integration includes reviewed raw sources/status only, not inherited coordinator changes or stale201 insights.",
+    "mainIntegration": {
+      "state": "PREPARED",
+      "mainBase": "71cdb5e4f6cce6421b25bfa86facc830887dfee1",
+      "scope": "Explicit406 reviewed raw files across owned A25-A28 and session6 status; inherited out-of-range changes excluded.",
+      "insightsExcluded": "A25 initial201 insights audited and retained on session branch, but stale against235 reviewed sources. Refresh required; excluded from main-ready integration."
+    }
+  }
 }
