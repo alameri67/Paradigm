@@ -1,24 +1,20 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
-import { Mic, Plus, X } from "lucide-react";
+import { ArrowLeft, History, Plus, Sparkles, SquarePen, Trash2, X } from "lucide-react";
 import { AIComposer } from "@/components/ui/ai-composer";
 import { withBold } from "@/components/workers/bullets";
 import { ASK_MODELS, DEFAULT_MODEL, type AskErrorCode, type AskModelId } from "@/lib/ask/models";
 import { useScreen } from "@/lib/ask/screen-store";
 import { onPersonaChat } from "@/lib/ask/chat-store";
+import { getChats, getServerChats, newChatId, removeChat, setChats, subscribeChats, titleOf, upsertChat, whenOf, type ChatMode, type SavedChat, type SavedMessage } from "@/lib/ask/chat-history";
 
 /** Paradigm's defaults for the composer. */
 const PROMPTS = [
   "Why are lineworkers less worried than buyers?",
   "What do the most worried farmers do in AGI by 2028?",
   "Which group matters most for worry here?",
-];
-const DICTATION = [
-  "Why are the least worried people so calm about this?",
-  "What do family doctors plan to do if AGI comes in five years?",
-  "Does having savings change how worried people are?",
 ];
 /** Starter questions when chatting with the person on the details page. */
 const PERSONA_PROMPTS = ["What worries you most about AI?", "What will you do first?", "What would actually help you?"];
@@ -72,13 +68,26 @@ function Answer({ text }: { text: string }) {
   return <>{blocks}</>;
 }
 
-type Intent = "type" | "files" | "mic";
+/** A message as saved in history, and back. */
+function toSaved(m: Message): SavedMessage {
+  return m.role === "user"
+    ? { role: "user", text: m.text }
+    : { role: "assistant", text: m.text, ...(m.status === "stopped" ? { stopped: true } : {}), ...(m.error ? { error: m.error.message, setup: m.error.code === "not_connected" } : {}) };
+}
+function fromSaved(m: SavedMessage, id: number): Message {
+  return m.role === "user"
+    ? { id, role: "user", text: m.text }
+    : { id, role: "assistant", text: m.text, status: m.stopped ? "stopped" : "done", ...(m.error ? { error: { code: m.setup ? "not_connected" : "upstream", message: m.error } } : {}) };
+}
+
+type Intent = "type" | "files";
 
 /**
- * The composer's collapsed white pill, sitting at the top right: black plus, cycling placeholder, black mic.
+ * The composer's collapsed white pill, sitting at the top right: black plus and a cycling placeholder.
  * Clicking, focusing or typing in it opens the panel with the composer focused and the words carried over.
- * The plus opens the panel's file picker; the mic opens the panel and starts dictation.
- * On narrow screens, and once the page scrolls, it shrinks to just the mic in a white pill.
+ * The plus opens the panel's file picker.
+ * On narrow screens, and once the page scrolls, it shrinks to an "Ask AI" button in the liquid glass style
+ * of the selected chips on the details page.
  */
 function AskBar({
   hidden,
@@ -136,8 +145,9 @@ function AskBar({
   return (
     <div className={"ask-bar" + (iconOnly ? " is-icon" : "")} data-hidden={hidden || undefined}>
       {iconOnly ? (
-        <button ref={iconRef} type="button" className="ask-bar-btn" aria-label="Ask AI" aria-haspopup="dialog" onClick={() => open("")}>
-          <Mic size={18} strokeWidth={2.2} aria-hidden="true" />
+        <button ref={iconRef} type="button" className="lq-btn primary ask-bar-chip" aria-haspopup="dialog" onClick={() => open("")}>
+          <Sparkles size={16} strokeWidth={2} aria-hidden="true" />
+          Ask AI
         </button>
       ) : (
         <>
@@ -171,9 +181,6 @@ function AskBar({
               </div>
             )}
           </div>
-          <button type="button" className="ask-bar-btn" aria-label="Ask AI by voice" onClick={() => open("", "mic")}>
-            <Mic size={18} strokeWidth={2.2} aria-hidden="true" />
-          </button>
         </>
       )}
     </div>
@@ -183,6 +190,7 @@ function AskBar({
 /**
  * The Ask AI bar at the top right, and the panel it opens on the right-hand side.
  * Questions go to /api/ask with the chosen model and the facts the page has published.
+ * Chats are saved in this browser: the header starts a new one or opens the list to pick up or delete an old one.
  */
 export function AskAI() {
   const titleId = useId();
@@ -190,7 +198,13 @@ export function AskAI() {
   const [model, setModel] = useState<AskModelId>(DEFAULT_MODEL);
   const [messages, setMessages] = useState<Message[]>([]);
   // "ask": questions about the page. "persona": a chat with the person on the details page.
-  const [mode, setMode] = useState<"ask" | "persona">("ask");
+  const [mode, setMode] = useState<ChatMode>("ask");
+  // The saved chat on screen (null until its first question), and who a persona chat is with.
+  const [chatId, setChatId] = useState<string | null>(null);
+  const [chatPerson, setChatPerson] = useState<SavedChat["person"]>();
+  const chats = useSyncExternalStore(subscribeChats, getChats, getServerChats);
+  const [view, setView] = useState<"chat" | "history">("chat");
+  const [confirming, setConfirming] = useState<string | null>(null);
   const screen = useScreen();
   const [draft, setDraft] = useState("");
   const intent = useRef<Intent>("type");
@@ -200,29 +214,39 @@ export function AskAI() {
   const nextId = useRef(0);
   const inFlight = useRef<AbortController | null>(null);
   const wasOpen = useRef(false);
+  // Set when a question is asked, so the chat is saved once its answer is in (and not when an old chat is only opened).
+  const dirty = useRef(false);
 
   const close = useCallback(() => setOpen(false), []);
+  const person = screen?.page === "details" ? screen.details : undefined;
 
-  // Switching between asking about the page and chatting with the person starts a fresh conversation.
+  /** Clears the conversation. The next question starts a new saved chat. */
+  const startNew = useCallback((as: ChatMode, with_?: SavedChat["person"]) => {
+    inFlight.current?.abort();
+    setMessages([]);
+    setChatId(null);
+    setMode(as);
+    setChatPerson(with_);
+    setView("chat");
+  }, []);
+
+  // Asking about the page and chatting with a person are separate chats, and so is each person.
   const openWith = useCallback(
-    (text: string, how: Intent, as: "ask" | "persona" = "ask") => {
-      if (as !== mode) {
-        inFlight.current?.abort();
-        setMessages([]);
-        setMode(as);
-      }
+    (text: string, how: Intent, as: ChatMode = "ask") => {
+      const who = person ? { name: person.name, job: person.job } : undefined;
+      if (as !== mode || (as === "persona" && chatPerson && chatPerson.name !== who?.name)) startNew(as, as === "persona" ? who : undefined);
       setDraft(text);
       intent.current = how;
       setOpen(true);
     },
-    [mode],
+    [mode, chatPerson, person, startNew],
   );
 
   // The details page's "Chat with …" button.
   useEffect(() => onPersonaChat(() => openWith("", "type", "persona")), [openWith]);
 
   // Focus: into the message field on open (cursor at the end), back to the bar on close.
-  // The bar's plus and mic carry on in the panel: the file picker opens, or dictation starts.
+  // The bar's plus carries on in the panel: the file picker opens.
   useEffect(() => {
     if (open) {
       const t = setTimeout(() => {
@@ -231,7 +255,6 @@ export function AskAI() {
         input?.focus();
         input?.setSelectionRange(input.value.length, input.value.length);
         if (intent.current === "files") root?.querySelector<HTMLInputElement>('input[type="file"]')?.click();
-        if (intent.current === "mic") root?.querySelector<HTMLButtonElement>('button[aria-label="Voice input"]')?.click();
         intent.current = "type";
       }, 60);
       wasOpen.current = true;
@@ -240,35 +263,78 @@ export function AskAI() {
     if (wasOpen.current) setRestore((n) => n + 1);
   }, [open]);
 
-  // Escape closes the panel, unless the model list is open (the composer closes that first).
+  // Escape closes the delete question, then the chat list, then the panel (the composer closes its model list first).
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
       if (panelRef.current?.querySelector('[role="listbox"]')) return;
+      if (confirming) return setConfirming(null);
+      if (view === "history") return setView("chat");
       close();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, close]);
+  }, [open, close, confirming, view]);
 
   // Keep the newest words in view.
   useEffect(() => {
     const el = logRef.current;
     if (el) el.scrollTop = el.scrollHeight;
-  }, [messages]);
+  }, [messages, view]);
+
+  // Save the chat once an answer has finished (or failed, or was stopped).
+  useEffect(() => {
+    if (!dirty.current || !chatId || !messages.length) return;
+    if (messages.some((m) => m.role === "assistant" && m.status === "streaming")) return;
+    dirty.current = false;
+    const saved = messages.map(toSaved);
+    const chat: SavedChat = { id: chatId, mode, ...(chatPerson ? { person: chatPerson } : {}), title: titleOf(saved), updated: Date.now(), messages: saved };
+    setChats(upsertChat(getChats(), chat));
+  }, [messages, chatId, mode, chatPerson]);
 
   // Stop any answer still coming in when the page goes away.
   useEffect(() => () => inFlight.current?.abort(), []);
 
+  const openChat = (c: SavedChat) => {
+    inFlight.current?.abort();
+    dirty.current = false;
+    setMessages(c.messages.map((m, i) => fromSaved(m, i)));
+    nextId.current = c.messages.length;
+    setChatId(c.id);
+    setMode(c.mode);
+    setChatPerson(c.person);
+    setView("chat");
+  };
+
+  const deleteChat = (id: string) => {
+    setChats(removeChat(getChats(), id));
+    setConfirming(null);
+    if (id === chatId) startNew(mode, chatPerson);
+    setView("history");
+  };
+
+  /** A new chat of the same kind: with the person on screen, or about the page when there's no one to talk to. */
+  const newChat = () => (mode === "persona" && person ? startNew("persona", { name: person.name, job: person.job }) : startNew("ask"));
+
   const patch = (id: number, f: (m: Extract<Message, { role: "assistant" }>) => Partial<Extract<Message, { role: "assistant" }>>) =>
     setMessages((ms) => ms.map((m) => (m.id === id && m.role === "assistant" ? { ...m, ...f(m) } : m)));
 
-  const ask = async (question: string, options: { search: boolean; research: boolean }) => {
+  // A persona chat continues only while the same person is on screen.
+  const chatting = mode === "persona" && !!person && (!chatPerson || chatPerson.name === person.name);
+  const away = mode === "persona" && !chatting;
+  const first = (chatPerson?.name ?? person?.name ?? "").split(" ")[0];
+
+  const ask = async (question: string) => {
     const q = question.trim();
-    if (!q) return;
+    if (!q || away) return;
     // A new question stops the answer still coming in.
     inFlight.current?.abort();
+    if (!chatId) {
+      setChatId(newChatId());
+      if (mode === "persona" && person && !chatPerson) setChatPerson({ name: person.name, job: person.job });
+    }
+    dirty.current = true;
     // The conversation so far: only questions that got an answer with words in it.
     const history: { role: "user" | "assistant"; content: string }[] = [];
     messages.forEach((m, i) => {
@@ -300,8 +366,6 @@ export function AskAI() {
             scenario: { name: "Unknown", when: "", description: "The page was still loading." },
             jobs: [],
           },
-          search: options.search,
-          research: options.research,
         }),
       });
       if (!res.ok || !res.body) {
@@ -342,17 +406,21 @@ export function AskAI() {
     }
   };
 
-  const person = screen?.page === "details" ? screen.details : undefined;
-  const chatting = mode === "persona" && !!person;
-  const first = person?.name.split(" ")[0] ?? "";
   const where =
-    screen?.page === "details"
-      ? screen.details
-        ? `${screen.details.name}, ${screen.details.job.toLowerCase()} · ${screen.scenario.name}`
-        : `Details · ${screen.scenario.name}`
-      : screen
-        ? `Summary · ${screen.scenario.name}`
-        : "Loading what's on screen…";
+    view === "history"
+      ? chats.length
+        ? `${chats.length} saved in this browser`
+        : "Saved in this browser"
+      : away && chatPerson
+        ? `${chatPerson.name}, ${chatPerson.job.toLowerCase()}`
+        : screen?.page === "details"
+          ? screen.details
+            ? `${screen.details.name}, ${screen.details.job.toLowerCase()} · ${screen.scenario.name}`
+            : `Details · ${screen.scenario.name}`
+          : screen
+            ? `Summary · ${screen.scenario.name}`
+            : "Loading what's on screen…";
+  const title = view === "history" ? "Chats" : mode === "persona" && first ? `Chat with ${first}` : "Ask AI";
 
   return (
     <MotionConfig reducedMotion="user">
@@ -372,75 +440,148 @@ export function AskAI() {
             transition={{ type: "spring", stiffness: 380, damping: 40 }}
           >
             <header className="ask-head">
+              {view === "history" && (
+                <button type="button" className="ask-x" aria-label="Back to the chat" onClick={() => setView("chat")}>
+                  <ArrowLeft size={18} strokeWidth={2} />
+                </button>
+              )}
               <div className="ask-head-text">
                 <h2 className="ask-title" id={titleId}>
-                  {chatting ? `Chat with ${first}` : "Ask AI"}
+                  {title}
                 </h2>
                 <p className="ask-where">{where}</p>
               </div>
-              <button type="button" className="ask-x" aria-label="Close Ask AI" onClick={close}>
+              <button type="button" className="ask-x" aria-label="New chat" title="New chat" onClick={newChat}>
+                <SquarePen size={18} strokeWidth={2} />
+              </button>
+              <button
+                type="button"
+                className={"ask-x" + (view === "history" ? " on" : "")}
+                aria-label="Chat history"
+                title="Chat history"
+                aria-pressed={view === "history"}
+                onClick={() => {
+                  setConfirming(null);
+                  setView((v) => (v === "history" ? "chat" : "history"));
+                }}
+              >
+                <History size={18} strokeWidth={2} />
+              </button>
+              <button type="button" className="ask-x" aria-label="Close Ask AI" title="Close" onClick={close}>
                 <X size={18} strokeWidth={2} />
               </button>
             </header>
 
-            <div className="ask-log" ref={logRef} aria-live="polite" aria-busy={messages.some((m) => m.role === "assistant" && m.status === "streaming")}>
-              {messages.length === 0 ? (
-                chatting && person ? (
+            {view === "history" ? (
+              <div className="ask-log ask-history">
+                {chats.length === 0 ? (
                   <div className="ask-intro">
-                    <p>
-                      You&apos;re talking with {person.name}, {person.job.toLowerCase()}, about {screen?.scenario.name}. {first} answers from
-                      their own interview.
-                    </p>
-                    <p className="fg2">
-                      {first} is made up: a simulated person, played by an AI model. Change the scenario on the page and {first} talks about that
-                      one instead.
-                    </p>
+                    <p>No saved chats yet.</p>
+                    <p className="fg2">Each chat is saved here once it gets its first answer. Chats stay in this browser only.</p>
                   </div>
                 ) : (
-                <div className="ask-intro">
-                  <p>Ask about what you&apos;re looking at. Answers come only from what this page shows.</p>
-                  <p className="fg2">
-                    Everyone here is simulated, so answers describe made-up people, not survey data. Search, Research and attached
-                    files don&apos;t change answers yet.
-                  </p>
-                </div>
-                )
-              ) : (
-                messages.map((m) =>
-                  m.role === "user" ? (
-                    <div key={m.id} className="ask-q">
-                      <span className="ask-sr">You asked: </span>
-                      {m.text}
+                  <ul className="ask-chats">
+                    {chats.map((c) => (
+                      <li key={c.id} className={"ask-chat" + (c.id === chatId ? " on" : "")}>
+                        {confirming === c.id ? (
+                          <div className="ask-chat-confirm" role="group" aria-label={`Delete “${c.title}”?`}>
+                            <span>Delete this chat?</span>
+                            <button type="button" className="ask-chat-del-yes" onClick={() => deleteChat(c.id)} autoFocus>
+                              Delete
+                            </button>
+                            <button type="button" className="ask-chat-del-no" onClick={() => setConfirming(null)}>
+                              Cancel
+                            </button>
+                          </div>
+                        ) : (
+                          <>
+                            <button type="button" className="ask-chat-open" onClick={() => openChat(c)}>
+                              <span className="ask-chat-title">{c.title}</span>
+                              <span className="ask-chat-meta">
+                                {c.mode === "persona" && c.person ? `Chat with ${c.person.name.split(" ")[0]}` : "Ask AI"} · {whenOf(c.updated)}
+                              </span>
+                            </button>
+                            <button type="button" className="ask-chat-del" aria-label={`Delete “${c.title}”`} title="Delete" onClick={() => setConfirming(c.id)}>
+                              <Trash2 size={16} strokeWidth={2} />
+                            </button>
+                          </>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <div className="ask-log" ref={logRef} aria-live="polite" aria-busy={messages.some((m) => m.role === "assistant" && m.status === "streaming")}>
+                {messages.length === 0 ? (
+                  chatting && person ? (
+                    <div className="ask-intro">
+                      <p>
+                        You&apos;re talking with {person.name}, {person.job.toLowerCase()}, about {screen?.scenario.name}. {first} answers from
+                        their own interview.
+                      </p>
+                      <p className="fg2">
+                        {first} is made up: a simulated person, played by an AI model. Change the scenario on the page and {first} talks about that
+                        one instead.
+                      </p>
                     </div>
                   ) : (
-                    <div key={m.id} className="ask-a">
-                      <span className="ask-sr">{chatting ? `${first}: ` : "Answer: "}</span>
-                      {m.text ? <Answer text={m.text} /> : null}
-                      {m.status === "streaming" && !m.text && (
-                        <p className="ask-thinking" role="status">
-                          Thinking…
-                        </p>
-                      )}
-                      {m.status === "stopped" && <p className="ask-note">Stopped.</p>}
-                      {m.error && <p className={"ask-note" + (m.error.code === "not_connected" ? " ask-note-setup" : " ask-note-err")}>{m.error.message}</p>}
+                    <div className="ask-intro">
+                      <p>Ask about what you&apos;re looking at. Answers come only from what this page shows.</p>
+                      <p className="fg2">Everyone here is simulated, so answers describe made-up people, not survey data. Attached files don&apos;t change answers yet.</p>
                     </div>
-                  ),
-                )
-              )}
-            </div>
+                  )
+                ) : (
+                  messages.map((m) =>
+                    m.role === "user" ? (
+                      <div key={m.id} className="ask-q">
+                        <span className="ask-sr">You asked: </span>
+                        {m.text}
+                      </div>
+                    ) : (
+                      <div key={m.id} className="ask-a">
+                        <span className="ask-sr">{mode === "persona" ? `${first}: ` : "Answer: "}</span>
+                        {m.text ? <Answer text={m.text} /> : null}
+                        {m.status === "streaming" && !m.text && (
+                          <p className="ask-thinking" role="status">
+                            Thinking…
+                          </p>
+                        )}
+                        {m.status === "stopped" && <p className="ask-note">Stopped.</p>}
+                        {m.error && <p className={"ask-note" + (m.error.code === "not_connected" ? " ask-note-setup" : " ask-note-err")}>{m.error.message}</p>}
+                      </div>
+                    ),
+                  )
+                )}
+              </div>
+            )}
 
-            <div className="ask-foot">
-              <AIComposer
-                variant="panel"
-                prompts={chatting ? PERSONA_PROMPTS : PROMPTS}
-                models={MODELS}
-                dictation={DICTATION}
-                defaultText={draft}
-                model={nameOf(model)}
-                onModelChange={(name) => setModel(idOf(name))}
-                onSubmit={(text, _files, opts) => void ask(text, opts)}
-              />
-            </div>
+            {view === "chat" &&
+              (away ? (
+                <div className="ask-away">
+                  <p>
+                    {first} isn&apos;t on screen now. Open {first}&apos;s details page to carry on this chat, or start a new one.
+                  </p>
+                  <button type="button" className="lq-btn sm" onClick={newChat}>
+                    <SquarePen size={14} strokeWidth={2} aria-hidden="true" />
+                    New chat
+                  </button>
+                </div>
+              ) : (
+                <div className="ask-foot">
+                  <AIComposer
+                    key={chatId ?? "new"}
+                    variant="panel"
+                    extras={false}
+                    prompts={chatting ? PERSONA_PROMPTS : PROMPTS}
+                    models={MODELS}
+                    defaultText={draft}
+                    model={nameOf(model)}
+                    onModelChange={(name) => setModel(idOf(name))}
+                    onSubmit={(text) => void ask(text)}
+                  />
+                </div>
+              ))}
           </motion.div>
         )}
       </AnimatePresence>

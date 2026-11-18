@@ -22,6 +22,8 @@
  *   5. In a panel, the Search and Research labels are screen-reader only and a long model name
  *      truncates, so the bottom row fits about 360px.
  *   6. `defaultText` starts the message field with text, so words typed elsewhere carry over.
+ *   7. `extras={false}` removes the mic (dictation) and the Search and Research toggles, leaving the
+ *      plus, the model picker and a send arrow.
  */
 "use client";
 
@@ -75,6 +77,8 @@ export type AIComposerProps = {
   onModelChange?: (name: string) => void;
   /** Paradigm: what the message field starts with. */
   defaultText?: string;
+  /** Paradigm: false hides the mic and the Search and Research toggles. */
+  extras?: boolean;
 };
 
 const PROMPTS = [
@@ -112,6 +116,7 @@ export function AIComposer({
   model: modelProp, // Paradigm: controlled model
   onModelChange, // Paradigm: controlled model
   defaultText = "", // Paradigm: carried-over text
+  extras = true, // Paradigm: mic, Search and Research
 }: AIComposerProps) {
   const panel = variant === "panel"; // Paradigm
   const inputRef = useRef(null as HTMLInputElement | null);
@@ -239,7 +244,9 @@ export function AIComposer({
     inputRef.current?.blur();
   };
 
-  const action = listening ? "stop" : hasText || files.length ? "send" : "mic";
+  // Paradigm: without extras the circle is always the send arrow, dimmed until there's something to send.
+  const action = listening ? "stop" : hasText || files.length || !extras ? "send" : "mic";
+  const empty = !hasText && !files.length;
   const btn = 40;
 
   return (
@@ -594,6 +601,7 @@ export function AIComposer({
                 </motion.div>
 
                 {/* search + research toggles: mounted always, hidden while it's a pill */}
+                {extras && ( // Paradigm
                 <motion.div
                   layout="position"
                   initial={false}
@@ -653,6 +661,7 @@ export function AIComposer({
                     </button>
                   ))}
                 </motion.div>
+                )}
 
                 {/* mic, stop or send */}
                 <motion.div
@@ -678,7 +687,8 @@ export function AIComposer({
                           ? "Stop dictation"
                           : "Voice input"
                     }
-                    className="relative grid shrink-0 cursor-pointer place-items-center rounded-full bg-[#111] text-white transition-transform duration-200 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111]"
+                    disabled={!extras && empty} // Paradigm
+                    className="relative grid shrink-0 cursor-pointer place-items-center rounded-full bg-[#111] text-white transition-[transform,opacity] duration-200 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111] disabled:cursor-default disabled:opacity-30 disabled:active:scale-100"
                     style={{ width: btn, height: btn }}
                   >
                     {listening && (
