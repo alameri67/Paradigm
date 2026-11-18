@@ -4,67 +4,72 @@
  "scenarios": {
   "S0": {
    "n": 243,
-   "avgWorry": 1.04,
+   "avgWorry": 1.81,
    "moodMix": {
-    "calm": 233,
-    "uneasy": 10,
-    "anxious": 0,
+    "calm": 120,
+    "uneasy": 50,
+    "anxious": 73,
     "alarmed": 0,
     "panicked": 0
    },
    "actions": [
     {
      "tag": "keep-going",
-     "count": 242,
-     "share": 1
+     "count": 233,
+     "share": 0.96
     },
     {
      "tag": "save-more",
-     "count": 107,
-     "share": 0.44
+     "count": 113,
+     "share": 0.47
     },
     {
      "tag": "learn-ai",
-     "count": 105,
-     "share": 0.43
-    },
-    {
-     "tag": "side-income",
-     "count": 34,
-     "share": 0.14
+     "count": 71,
+     "share": 0.29
     },
     {
      "tag": "collective-action",
-     "count": 33,
-     "share": 0.14
-    },
-    {
-     "tag": "invest",
-     "count": 32,
+     "count": 31,
      "share": 0.13
     },
     {
+     "tag": "wait-and-see",
+     "count": 22,
+     "share": 0.09
+    },
+    {
+     "tag": "cut-spending",
+     "count": 17,
+     "share": 0.07
+    },
+    {
+     "tag": "invest",
+     "count": 15,
+     "share": 0.06
+    },
+    {
      "tag": "retrain",
-     "count": 11,
-     "share": 0.05
+     "count": 14,
+     "share": 0.06
+    },
+    {
+     "tag": "side-income",
+     "count": 9,
+     "share": 0.04
+    },
+    {
+     "tag": "change-job",
+     "count": 7,
+     "share": 0.03
     },
     {
      "tag": "family-plans",
-     "count": 3,
-     "share": 0.01
+     "count": 7,
+     "share": 0.03
     },
     {
-     "tag": "automate",
-     "count": 3,
-     "share": 0.01
-    },
-    {
-     "tag": "wait-and-see",
-     "count": 2,
-     "share": 0.01
-    },
-    {
-     "tag": "politics",
+     "tag": "seek-support",
      "count": 1,
      "share": 0
     }
@@ -74,7 +79,26 @@
      {
       "level": "early",
       "n": 81,
-      "avgWorry": 1.04,
+      "avgWorry": 1.62,
+      "topActions": [
+       {
+        "tag": "keep-going",
+        "share": 0.89
+       },
+       {
+        "tag": "save-more",
+        "share": 0.64
+       },
+       {
+        "tag": "learn-ai",
+        "share": 0.31
+       }
+      ]
+     },
+     {
+      "level": "mid",
+      "n": 81,
+      "avgWorry": 1.99,
       "topActions": [
        {
         "tag": "keep-going",
@@ -82,49 +106,30 @@
        },
        {
         "tag": "save-more",
-        "share": 0.52
+        "share": 0.33
        },
        {
         "tag": "learn-ai",
-        "share": 0.36
-       }
-      ]
-     },
-     {
-      "level": "mid",
-      "n": 81,
-      "avgWorry": 1.05,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.47
-       },
-       {
-        "tag": "save-more",
-        "share": 0.43
+        "share": 0.28
        }
       ]
      },
      {
       "level": "late",
       "n": 81,
-      "avgWorry": 1.04,
+      "avgWorry": 1.81,
       "topActions": [
        {
         "tag": "keep-going",
         "share": 1
        },
        {
-        "tag": "learn-ai",
-        "share": 0.47
+        "tag": "save-more",
+        "share": 0.42
        },
        {
-        "tag": "save-more",
-        "share": 0.37
+        "tag": "learn-ai",
+        "share": 0.28
        }
       ]
      }
@@ -133,56 +138,56 @@
      {
       "level": "low",
       "n": 81,
-      "avgWorry": 1.05,
+      "avgWorry": 2.01,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 1
+        "share": 0.96
        },
        {
         "tag": "save-more",
-        "share": 0.6
+        "share": 0.54
        },
        {
         "tag": "learn-ai",
-        "share": 0.42
+        "share": 0.26
        }
       ]
      },
      {
       "level": "mid",
       "n": 81,
-      "avgWorry": 1.05,
+      "avgWorry": 1.74,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.99
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.53
+        "share": 0.98
        },
        {
         "tag": "save-more",
-        "share": 0.4
+        "share": 0.49
+       },
+       {
+        "tag": "learn-ai",
+        "share": 0.3
        }
       ]
      },
      {
       "level": "high",
       "n": 81,
-      "avgWorry": 1.02,
+      "avgWorry": 1.67,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.35
+        "share": 0.94
        },
        {
         "tag": "save-more",
+        "share": 0.36
+       },
+       {
+        "tag": "learn-ai",
         "share": 0.32
        }
       ]
@@ -192,452 +197,57 @@
      {
       "level": "thin",
       "n": 81,
-      "avgWorry": 1.1,
+      "avgWorry": 2.73,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.99
+        "share": 0.93
        },
        {
         "tag": "save-more",
-        "share": 0.51
+        "share": 0.49
        },
        {
         "tag": "learn-ai",
-        "share": 0.4
+        "share": 0.26
        }
       ]
      },
      {
       "level": "moderate",
       "n": 81,
-      "avgWorry": 1.02,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.51
-       },
-       {
-        "tag": "save-more",
-        "share": 0.4
-       }
-      ]
-     },
-     {
-      "level": "strong",
-      "n": 81,
-      "avgWorry": 1,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "save-more",
-        "share": 0.42
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.4
-       }
-      ]
-     }
-    ],
-    "outlook": [
-     {
-      "level": "progressive",
-      "n": 81,
-      "avgWorry": 1.12,
+      "avgWorry": 1.63,
       "topActions": [
        {
         "tag": "keep-going",
         "share": 0.99
        },
        {
-        "tag": "learn-ai",
-        "share": 0.42
-       },
-       {
         "tag": "save-more",
-        "share": 0.41
-       }
-      ]
-     },
-     {
-      "level": "centre",
-      "n": 81,
-      "avgWorry": 1,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.46
-       },
-       {
-        "tag": "save-more",
-        "share": 0.43
-       }
-      ]
-     },
-     {
-      "level": "traditional",
-      "n": 81,
-      "avgWorry": 1,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "save-more",
-        "share": 0.48
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.42
-       }
-      ]
-     }
-    ],
-    "adaptability": [
-     {
-      "level": "resistant",
-      "n": 81,
-      "avgWorry": 1.11,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "save-more",
-        "share": 0.43
-       },
-       {
-        "tag": "collective-action",
-        "share": 0.21
-       }
-      ]
-     },
-     {
-      "level": "steady",
-      "n": 81,
-      "avgWorry": 1,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 1
-       },
-       {
-        "tag": "save-more",
-        "share": 0.64
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.36
-       }
-      ]
-     },
-     {
-      "level": "adaptive",
-      "n": 81,
-      "avgWorry": 1.01,
-      "topActions": [
-       {
-        "tag": "keep-going",
-        "share": 0.99
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.94
-       },
-       {
-        "tag": "invest",
-        "share": 0.33
-       }
-      ]
-     }
-    ]
-   }
-  },
-  "S1": {
-   "n": 243,
-   "avgWorry": 1.91,
-   "moodMix": {
-    "calm": 86,
-    "uneasy": 100,
-    "anxious": 51,
-    "alarmed": 6,
-    "panicked": 0
-   },
-   "actions": [
-    {
-     "tag": "retrain",
-     "count": 120,
-     "share": 0.49
-    },
-    {
-     "tag": "learn-ai",
-     "count": 116,
-     "share": 0.48
-    },
-    {
-     "tag": "save-more",
-     "count": 102,
-     "share": 0.42
-    },
-    {
-     "tag": "collective-action",
-     "count": 81,
-     "share": 0.33
-    },
-    {
-     "tag": "cut-spending",
-     "count": 74,
-     "share": 0.3
-    },
-    {
-     "tag": "wait-and-see",
-     "count": 73,
-     "share": 0.3
-    },
-    {
-     "tag": "keep-going",
-     "count": 51,
-     "share": 0.21
-    },
-    {
-     "tag": "side-income",
-     "count": 48,
-     "share": 0.2
-    },
-    {
-     "tag": "change-job",
-     "count": 42,
-     "share": 0.17
-    },
-    {
-     "tag": "invest",
-     "count": 34,
-     "share": 0.14
-    },
-    {
-     "tag": "automate",
-     "count": 26,
-     "share": 0.11
-    },
-    {
-     "tag": "family-plans",
-     "count": 17,
-     "share": 0.07
-    },
-    {
-     "tag": "seek-support",
-     "count": 9,
-     "share": 0.04
-    },
-    {
-     "tag": "politics",
-     "count": 8,
-     "share": 0.03
-    },
-    {
-     "tag": "retire-early",
-     "count": 3,
-     "share": 0.01
-    },
-    {
-     "tag": "move",
-     "count": 2,
-     "share": 0.01
-    },
-    {
-     "tag": "sell-or-exit",
-     "count": 1,
-     "share": 0
-    }
-   ],
-   "byGroup": {
-    "lifeStage": [
-     {
-      "level": "early",
-      "n": 81,
-      "avgWorry": 1.85,
-      "topActions": [
-       {
-        "tag": "save-more",
-        "share": 0.51
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.49
-       },
-       {
-        "tag": "retrain",
-        "share": 0.41
-       }
-      ]
-     },
-     {
-      "level": "mid",
-      "n": 81,
-      "avgWorry": 1.95,
-      "topActions": [
-       {
-        "tag": "retrain",
-        "share": 0.59
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.49
-       },
-       {
-        "tag": "save-more",
-        "share": 0.44
-       }
-      ]
-     },
-     {
-      "level": "late",
-      "n": 81,
-      "avgWorry": 1.91,
-      "topActions": [
-       {
-        "tag": "retrain",
-        "share": 0.48
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.44
-       },
-       {
-        "tag": "collective-action",
-        "share": 0.33
-       }
-      ]
-     }
-    ],
-    "standing": [
-     {
-      "level": "low",
-      "n": 81,
-      "avgWorry": 1.96,
-      "topActions": [
-       {
-        "tag": "learn-ai",
-        "share": 0.54
-       },
-       {
-        "tag": "retrain",
-        "share": 0.48
-       },
-       {
-        "tag": "wait-and-see",
-        "share": 0.38
-       }
-      ]
-     },
-     {
-      "level": "mid",
-      "n": 81,
-      "avgWorry": 1.93,
-      "topActions": [
-       {
-        "tag": "save-more",
-        "share": 0.53
-       },
-       {
-        "tag": "retrain",
-        "share": 0.53
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.47
-       }
-      ]
-     },
-     {
-      "level": "high",
-      "n": 81,
-      "avgWorry": 1.83,
-      "topActions": [
-       {
-        "tag": "retrain",
-        "share": 0.47
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.42
-       },
-       {
-        "tag": "save-more",
-        "share": 0.41
-       }
-      ]
-     }
-    ],
-    "cushion": [
-     {
-      "level": "thin",
-      "n": 81,
-      "avgWorry": 2.27,
-      "topActions": [
-       {
-        "tag": "retrain",
-        "share": 0.59
-       },
-       {
-        "tag": "cut-spending",
         "share": 0.56
        },
        {
         "tag": "learn-ai",
-        "share": 0.4
-       }
-      ]
-     },
-     {
-      "level": "moderate",
-      "n": 81,
-      "avgWorry": 1.89,
-      "topActions": [
-       {
-        "tag": "learn-ai",
-        "share": 0.52
-       },
-       {
-        "tag": "retrain",
-        "share": 0.48
-       },
-       {
-        "tag": "save-more",
-        "share": 0.47
+        "share": 0.31
        }
       ]
      },
      {
       "level": "strong",
       "n": 81,
-      "avgWorry": 1.56,
+      "avgWorry": 1.06,
       "topActions": [
        {
-        "tag": "learn-ai",
-        "share": 0.52
+        "tag": "keep-going",
+        "share": 0.96
        },
        {
         "tag": "save-more",
-        "share": 0.43
+        "share": 0.35
        },
        {
-        "tag": "retrain",
-        "share": 0.41
+        "tag": "learn-ai",
+        "share": 0.31
        }
       ]
      }
@@ -646,19 +256,19 @@
      {
       "level": "progressive",
       "n": 81,
-      "avgWorry": 2.1,
+      "avgWorry": 1.78,
       "topActions": [
        {
+        "tag": "keep-going",
+        "share": 0.94
+       },
+       {
+        "tag": "save-more",
+        "share": 0.43
+       },
+       {
         "tag": "collective-action",
-        "share": 1
-       },
-       {
-        "tag": "retrain",
-        "share": 0.57
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.51
+        "share": 0.37
        }
       ]
      },
@@ -668,430 +278,35 @@
       "avgWorry": 1.79,
       "topActions": [
        {
-        "tag": "learn-ai",
-        "share": 0.49
-       },
-       {
-        "tag": "wait-and-see",
-        "share": 0.48
-       },
-       {
-        "tag": "retrain",
-        "share": 0.48
-       }
-      ]
-     },
-     {
-      "level": "traditional",
-      "n": 81,
-      "avgWorry": 1.83,
-      "topActions": [
-       {
-        "tag": "retrain",
-        "share": 0.43
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.43
+        "tag": "keep-going",
+        "share": 0.96
        },
        {
         "tag": "save-more",
-        "share": 0.41
-       }
-      ]
-     }
-    ],
-    "adaptability": [
-     {
-      "level": "resistant",
-      "n": 81,
-      "avgWorry": 2.58,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.62
-       },
-       {
-        "tag": "wait-and-see",
-        "share": 0.56
-       },
-       {
-        "tag": "save-more",
-        "share": 0.56
-       }
-      ]
-     },
-     {
-      "level": "steady",
-      "n": 81,
-      "avgWorry": 2.02,
-      "topActions": [
-       {
-        "tag": "retrain",
-        "share": 0.7
-       },
-       {
-        "tag": "save-more",
-        "share": 0.65
-       },
-       {
-        "tag": "learn-ai",
-        "share": 0.52
-       }
-      ]
-     },
-     {
-      "level": "adaptive",
-      "n": 81,
-      "avgWorry": 1.11,
-      "topActions": [
-       {
-        "tag": "learn-ai",
-        "share": 0.91
-       },
-       {
-        "tag": "retrain",
-        "share": 0.72
-       },
-       {
-        "tag": "side-income",
-        "share": 0.42
-       }
-      ]
-     }
-    ]
-   }
-  },
-  "S2": {
-   "n": 243,
-   "avgWorry": 3.63,
-   "moodMix": {
-    "calm": 0,
-    "uneasy": 16,
-    "anxious": 83,
-    "alarmed": 120,
-    "panicked": 24
-   },
-   "actions": [
-    {
-     "tag": "cut-spending",
-     "count": 154,
-     "share": 0.63
-    },
-    {
-     "tag": "seek-support",
-     "count": 139,
-     "share": 0.57
-    },
-    {
-     "tag": "politics",
-     "count": 89,
-     "share": 0.37
-    },
-    {
-     "tag": "save-more",
-     "count": 88,
-     "share": 0.36
-    },
-    {
-     "tag": "collective-action",
-     "count": 71,
-     "share": 0.29
-    },
-    {
-     "tag": "change-job",
-     "count": 63,
-     "share": 0.26
-    },
-    {
-     "tag": "side-income",
-     "count": 51,
-     "share": 0.21
-    },
-    {
-     "tag": "family-plans",
-     "count": 49,
-     "share": 0.2
-    },
-    {
-     "tag": "move",
-     "count": 47,
-     "share": 0.19
-    },
-    {
-     "tag": "sell-or-exit",
-     "count": 35,
-     "share": 0.14
-    },
-    {
-     "tag": "retire-early",
-     "count": 32,
-     "share": 0.13
-    },
-    {
-     "tag": "invest",
-     "count": 30,
-     "share": 0.12
-    },
-    {
-     "tag": "learn-ai",
-     "count": 16,
-     "share": 0.07
-    },
-    {
-     "tag": "automate",
-     "count": 14,
-     "share": 0.06
-    },
-    {
-     "tag": "keep-going",
-     "count": 13,
-     "share": 0.05
-    },
-    {
-     "tag": "retrain",
-     "count": 7,
-     "share": 0.03
-    },
-    {
-     "tag": "wait-and-see",
-     "count": 6,
-     "share": 0.02
-    }
-   ],
-   "byGroup": {
-    "lifeStage": [
-     {
-      "level": "early",
-      "n": 81,
-      "avgWorry": 3.63,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.58
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.57
-       },
-       {
-        "tag": "save-more",
-        "share": 0.51
-       }
-      ]
-     },
-     {
-      "level": "mid",
-      "n": 81,
-      "avgWorry": 3.79,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.72
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.62
-       },
-       {
-        "tag": "save-more",
-        "share": 0.46
-       }
-      ]
-     },
-     {
-      "level": "late",
-      "n": 81,
-      "avgWorry": 3.46,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.6
-       },
-       {
-        "tag": "seek-support",
         "share": 0.53
        },
        {
-        "tag": "retire-early",
-        "share": 0.38
-       }
-      ]
-     }
-    ],
-    "standing": [
-     {
-      "level": "low",
-      "n": 81,
-      "avgWorry": 3.53,
-      "topActions": [
-       {
-        "tag": "seek-support",
-        "share": 0.63
-       },
-       {
-        "tag": "cut-spending",
-        "share": 0.62
-       },
-       {
-        "tag": "politics",
-        "share": 0.38
-       }
-      ]
-     },
-     {
-      "level": "mid",
-      "n": 81,
-      "avgWorry": 3.7,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.64
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.59
-       },
-       {
-        "tag": "save-more",
-        "share": 0.4
-       }
-      ]
-     },
-     {
-      "level": "high",
-      "n": 81,
-      "avgWorry": 3.64,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.64
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.49
-       },
-       {
-        "tag": "save-more",
-        "share": 0.42
-       }
-      ]
-     }
-    ],
-    "cushion": [
-     {
-      "level": "thin",
-      "n": 81,
-      "avgWorry": 4.02,
-      "topActions": [
-       {
-        "tag": "seek-support",
-        "share": 0.78
-       },
-       {
-        "tag": "cut-spending",
-        "share": 0.58
-       },
-       {
-        "tag": "politics",
-        "share": 0.41
-       }
-      ]
-     },
-     {
-      "level": "moderate",
-      "n": 81,
-      "avgWorry": 3.69,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.78
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.51
-       },
-       {
-        "tag": "save-more",
-        "share": 0.42
-       }
-      ]
-     },
-     {
-      "level": "strong",
-      "n": 81,
-      "avgWorry": 3.16,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.54
-       },
-       {
-        "tag": "save-more",
-        "share": 0.46
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.43
-       }
-      ]
-     }
-    ],
-    "outlook": [
-     {
-      "level": "progressive",
-      "n": 81,
-      "avgWorry": 3.74,
-      "topActions": [
-       {
-        "tag": "collective-action",
-        "share": 0.85
-       },
-       {
-        "tag": "politics",
-        "share": 0.83
-       },
-       {
-        "tag": "cut-spending",
-        "share": 0.62
-       }
-      ]
-     },
-     {
-      "level": "centre",
-      "n": 81,
-      "avgWorry": 3.53,
-      "topActions": [
-       {
-        "tag": "cut-spending",
-        "share": 0.64
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.49
-       },
-       {
-        "tag": "save-more",
-        "share": 0.44
+        "tag": "learn-ai",
+        "share": 0.27
        }
       ]
      },
      {
       "level": "traditional",
       "n": 81,
-      "avgWorry": 3.6,
+      "avgWorry": 1.85,
       "topActions": [
        {
-        "tag": "seek-support",
-        "share": 0.78
+        "tag": "keep-going",
+        "share": 0.98
        },
        {
-        "tag": "cut-spending",
-        "share": 0.64
+        "tag": "save-more",
+        "share": 0.43
        },
        {
-        "tag": "family-plans",
-        "share": 0.37
+        "tag": "learn-ai",
+        "share": 0.33
        }
       ]
      }
@@ -1100,151 +315,126 @@
      {
       "level": "resistant",
       "n": 81,
-      "avgWorry": 4.22,
+      "avgWorry": 1.91,
       "topActions": [
        {
-        "tag": "seek-support",
-        "share": 0.81
+        "tag": "keep-going",
+        "share": 1
        },
        {
-        "tag": "cut-spending",
-        "share": 0.79
+        "tag": "save-more",
+        "share": 0.37
        },
        {
-        "tag": "politics",
-        "share": 0.4
+        "tag": "collective-action",
+        "share": 0.22
        }
       ]
      },
      {
       "level": "steady",
       "n": 81,
-      "avgWorry": 3.68,
+      "avgWorry": 1.78,
       "topActions": [
        {
-        "tag": "cut-spending",
-        "share": 0.75
-       },
-       {
-        "tag": "seek-support",
-        "share": 0.64
+        "tag": "keep-going",
+        "share": 0.98
        },
        {
         "tag": "save-more",
-        "share": 0.35
+        "share": 0.54
+       },
+       {
+        "tag": "learn-ai",
+        "share": 0.31
        }
       ]
      },
      {
       "level": "adaptive",
       "n": 81,
-      "avgWorry": 2.98,
+      "avgWorry": 1.73,
       "topActions": [
        {
+        "tag": "keep-going",
+        "share": 0.9
+       },
+       {
+        "tag": "learn-ai",
+        "share": 0.56
+       },
+       {
         "tag": "save-more",
-        "share": 0.49
-       },
-       {
-        "tag": "change-job",
-        "share": 0.43
-       },
-       {
-        "tag": "politics",
-        "share": 0.38
+        "share": 0.48
        }
       ]
      }
     ]
    }
   },
-  "S3": {
+  "S1": {
    "n": 243,
-   "avgWorry": 2.65,
+   "avgWorry": 2.56,
    "moodMix": {
-    "calm": 16,
-    "uneasy": 87,
-    "anxious": 105,
-    "alarmed": 35,
+    "calm": 10,
+    "uneasy": 88,
+    "anxious": 144,
+    "alarmed": 1,
     "panicked": 0
    },
    "actions": [
     {
-     "tag": "save-more",
-     "count": 189,
-     "share": 0.78
+     "tag": "learn-ai",
+     "count": 155,
+     "share": 0.64
     },
     {
-     "tag": "retrain",
-     "count": 137,
-     "share": 0.56
-    },
-    {
-     "tag": "side-income",
-     "count": 72,
-     "share": 0.3
+     "tag": "keep-going",
+     "count": 112,
+     "share": 0.46
     },
     {
      "tag": "collective-action",
-     "count": 59,
-     "share": 0.24
+     "count": 85,
+     "share": 0.35
     },
     {
-     "tag": "invest",
-     "count": 56,
-     "share": 0.23
-    },
-    {
-     "tag": "family-plans",
+     "tag": "retrain",
      "count": 55,
      "share": 0.23
     },
     {
-     "tag": "change-job",
-     "count": 51,
-     "share": 0.21
-    },
-    {
-     "tag": "keep-going",
-     "count": 45,
+     "tag": "cut-spending",
+     "count": 47,
      "share": 0.19
     },
     {
-     "tag": "learn-ai",
-     "count": 41,
-     "share": 0.17
+     "tag": "change-job",
+     "count": 44,
+     "share": 0.18
     },
     {
-     "tag": "politics",
+     "tag": "wait-and-see",
      "count": 40,
      "share": 0.16
     },
     {
-     "tag": "automate",
-     "count": 30,
-     "share": 0.12
+     "tag": "save-more",
+     "count": 34,
+     "share": 0.14
     },
     {
-     "tag": "wait-and-see",
-     "count": 29,
-     "share": 0.12
+     "tag": "family-plans",
+     "count": 10,
+     "share": 0.04
     },
     {
-     "tag": "cut-spending",
-     "count": 19,
-     "share": 0.08
-    },
-    {
-     "tag": "retire-early",
-     "count": 18,
-     "share": 0.07
-    },
-    {
-     "tag": "sell-or-exit",
+     "tag": "invest",
      "count": 8,
      "share": 0.03
     },
     {
-     "tag": "move",
+     "tag": "side-income",
      "count": 7,
      "share": 0.03
     },
@@ -1252,6 +442,21 @@
      "tag": "seek-support",
      "count": 6,
      "share": 0.02
+    },
+    {
+     "tag": "automate",
+     "count": 6,
+     "share": 0.02
+    },
+    {
+     "tag": "move",
+     "count": 1,
+     "share": 0
+    },
+    {
+     "tag": "politics",
+     "count": 1,
+     "share": 0
     }
    ],
    "byGroup": {
@@ -1259,18 +464,18 @@
      {
       "level": "early",
       "n": 81,
-      "avgWorry": 2.74,
+      "avgWorry": 2.28,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.75
+        "tag": "learn-ai",
+        "share": 0.57
        },
        {
         "tag": "retrain",
-        "share": 0.6
+        "share": 0.43
        },
        {
-        "tag": "family-plans",
+        "tag": "collective-action",
         "share": 0.3
        }
       ]
@@ -1278,38 +483,38 @@
      {
       "level": "mid",
       "n": 81,
-      "avgWorry": 2.8,
+      "avgWorry": 2.75,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.81
+        "tag": "learn-ai",
+        "share": 0.69
        },
        {
-        "tag": "retrain",
-        "share": 0.59
+        "tag": "keep-going",
+        "share": 0.49
        },
        {
-        "tag": "side-income",
-        "share": 0.32
+        "tag": "collective-action",
+        "share": 0.4
        }
       ]
      },
      {
       "level": "late",
       "n": 81,
-      "avgWorry": 2.42,
+      "avgWorry": 2.64,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.77
-       },
-       {
-        "tag": "retrain",
-        "share": 0.49
+        "tag": "learn-ai",
+        "share": 0.65
        },
        {
         "tag": "keep-going",
-        "share": 0.33
+        "share": 0.59
+       },
+       {
+        "tag": "collective-action",
+        "share": 0.36
        }
       ]
      }
@@ -1318,57 +523,57 @@
      {
       "level": "low",
       "n": 81,
-      "avgWorry": 2.54,
+      "avgWorry": 2.68,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.8
+        "tag": "learn-ai",
+        "share": 0.67
        },
        {
-        "tag": "retrain",
-        "share": 0.58
+        "tag": "keep-going",
+        "share": 0.53
        },
        {
-        "tag": "side-income",
-        "share": 0.27
+        "tag": "collective-action",
+        "share": 0.31
        }
       ]
      },
      {
       "level": "mid",
       "n": 81,
-      "avgWorry": 2.75,
+      "avgWorry": 2.51,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.81
+        "tag": "learn-ai",
+        "share": 0.6
        },
        {
-        "tag": "retrain",
-        "share": 0.59
+        "tag": "keep-going",
+        "share": 0.47
        },
        {
-        "tag": "side-income",
-        "share": 0.33
+        "tag": "collective-action",
+        "share": 0.37
        }
       ]
      },
      {
       "level": "high",
       "n": 81,
-      "avgWorry": 2.67,
+      "avgWorry": 2.49,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.72
+        "tag": "learn-ai",
+        "share": 0.64
        },
        {
-        "tag": "retrain",
-        "share": 0.52
+        "tag": "keep-going",
+        "share": 0.38
        },
        {
-        "tag": "family-plans",
-        "share": 0.31
+        "tag": "collective-action",
+        "share": 0.37
        }
       ]
      }
@@ -1377,38 +582,38 @@
      {
       "level": "thin",
       "n": 81,
-      "avgWorry": 3.01,
+      "avgWorry": 2.91,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.93
+        "tag": "learn-ai",
+        "share": 0.6
        },
        {
-        "tag": "retrain",
-        "share": 0.68
+        "tag": "keep-going",
+        "share": 0.42
        },
        {
-        "tag": "side-income",
-        "share": 0.31
+        "tag": "collective-action",
+        "share": 0.35
        }
       ]
      },
      {
       "level": "moderate",
       "n": 81,
-      "avgWorry": 2.75,
+      "avgWorry": 2.57,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.84
+        "tag": "learn-ai",
+        "share": 0.67
        },
        {
-        "tag": "retrain",
-        "share": 0.58
+        "tag": "keep-going",
+        "share": 0.48
        },
        {
-        "tag": "side-income",
-        "share": 0.31
+        "tag": "collective-action",
+        "share": 0.35
        }
       ]
      },
@@ -1418,15 +623,790 @@
       "avgWorry": 2.2,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.57
+        "tag": "learn-ai",
+        "share": 0.64
        },
        {
-        "tag": "invest",
-        "share": 0.44
+        "tag": "keep-going",
+        "share": 0.48
+       },
+       {
+        "tag": "collective-action",
+        "share": 0.36
+       }
+      ]
+     }
+    ],
+    "outlook": [
+     {
+      "level": "progressive",
+      "n": 81,
+      "avgWorry": 2.6,
+      "topActions": [
+       {
+        "tag": "collective-action",
+        "share": 0.9
+       },
+       {
+        "tag": "learn-ai",
+        "share": 0.64
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.28
+       }
+      ]
+     },
+     {
+      "level": "centre",
+      "n": 81,
+      "avgWorry": 2.56,
+      "topActions": [
+       {
+        "tag": "learn-ai",
+        "share": 0.62
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.52
+       },
+       {
+        "tag": "wait-and-see",
+        "share": 0.27
+       }
+      ]
+     },
+     {
+      "level": "traditional",
+      "n": 81,
+      "avgWorry": 2.52,
+      "topActions": [
+       {
+        "tag": "learn-ai",
+        "share": 0.65
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.58
        },
        {
         "tag": "retrain",
+        "share": 0.21
+       }
+      ]
+     }
+    ],
+    "adaptability": [
+     {
+      "level": "resistant",
+      "n": 81,
+      "avgWorry": 2.67,
+      "topActions": [
+       {
+        "tag": "keep-going",
+        "share": 0.73
+       },
+       {
+        "tag": "collective-action",
+        "share": 0.41
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.38
+       }
+      ]
+     },
+     {
+      "level": "steady",
+      "n": 81,
+      "avgWorry": 2.63,
+      "topActions": [
+       {
+        "tag": "learn-ai",
+        "share": 0.85
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.38
+       },
+       {
+        "tag": "collective-action",
+        "share": 0.32
+       }
+      ]
+     },
+     {
+      "level": "adaptive",
+      "n": 81,
+      "avgWorry": 2.38,
+      "topActions": [
+       {
+        "tag": "learn-ai",
+        "share": 0.96
+       },
+       {
+        "tag": "collective-action",
+        "share": 0.32
+       },
+       {
+        "tag": "retrain",
+        "share": 0.28
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "S2": {
+   "n": 243,
+   "avgWorry": 3.49,
+   "moodMix": {
+    "calm": 0,
+    "uneasy": 0,
+    "anxious": 128,
+    "alarmed": 112,
+    "panicked": 3
+   },
+   "actions": [
+    {
+     "tag": "retrain",
+     "count": 146,
+     "share": 0.6
+    },
+    {
+     "tag": "change-job",
+     "count": 142,
+     "share": 0.58
+    },
+    {
+     "tag": "cut-spending",
+     "count": 96,
+     "share": 0.4
+    },
+    {
+     "tag": "keep-going",
+     "count": 88,
+     "share": 0.36
+    },
+    {
+     "tag": "collective-action",
+     "count": 78,
+     "share": 0.32
+    },
+    {
+     "tag": "save-more",
+     "count": 71,
+     "share": 0.29
+    },
+    {
+     "tag": "seek-support",
+     "count": 34,
+     "share": 0.14
+    },
+    {
+     "tag": "family-plans",
+     "count": 31,
+     "share": 0.13
+    },
+    {
+     "tag": "wait-and-see",
+     "count": 29,
+     "share": 0.12
+    },
+    {
+     "tag": "politics",
+     "count": 13,
+     "share": 0.05
+    },
+    {
+     "tag": "move",
+     "count": 12,
+     "share": 0.05
+    },
+    {
+     "tag": "learn-ai",
+     "count": 10,
+     "share": 0.04
+    },
+    {
+     "tag": "side-income",
+     "count": 5,
+     "share": 0.02
+    },
+    {
+     "tag": "invest",
+     "count": 4,
+     "share": 0.02
+    },
+    {
+     "tag": "automate",
+     "count": 3,
+     "share": 0.01
+    },
+    {
+     "tag": "sell-or-exit",
+     "count": 2,
+     "share": 0.01
+    }
+   ],
+   "byGroup": {
+    "lifeStage": [
+     {
+      "level": "early",
+      "n": 81,
+      "avgWorry": 3.53,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.6
+       },
+       {
+        "tag": "save-more",
+        "share": 0.51
+       },
+       {
+        "tag": "change-job",
+        "share": 0.37
+       }
+      ]
+     },
+     {
+      "level": "mid",
+      "n": 81,
+      "avgWorry": 3.46,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.68
+       },
+       {
+        "tag": "change-job",
+        "share": 0.64
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.56
+       }
+      ]
+     },
+     {
+      "level": "late",
+      "n": 81,
+      "avgWorry": 3.47,
+      "topActions": [
+       {
+        "tag": "change-job",
+        "share": 0.74
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.62
+       },
+       {
+        "tag": "retrain",
+        "share": 0.52
+       }
+      ]
+     }
+    ],
+    "standing": [
+     {
+      "level": "low",
+      "n": 81,
+      "avgWorry": 3.59,
+      "topActions": [
+       {
+        "tag": "change-job",
+        "share": 0.65
+       },
+       {
+        "tag": "retrain",
+        "share": 0.6
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.49
+       }
+      ]
+     },
+     {
+      "level": "mid",
+      "n": 81,
+      "avgWorry": 3.56,
+      "topActions": [
+       {
+        "tag": "change-job",
+        "share": 0.59
+       },
+       {
+        "tag": "retrain",
+        "share": 0.54
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.49
+       }
+      ]
+     },
+     {
+      "level": "high",
+      "n": 81,
+      "avgWorry": 3.31,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.65
+       },
+       {
+        "tag": "change-job",
+        "share": 0.51
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.38
+       }
+      ]
+     }
+    ],
+    "cushion": [
+     {
+      "level": "thin",
+      "n": 81,
+      "avgWorry": 3.83,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.63
+       },
+       {
+        "tag": "change-job",
+        "share": 0.52
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.37
+       }
+      ]
+     },
+     {
+      "level": "moderate",
+      "n": 81,
+      "avgWorry": 3.48,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.59
+       },
+       {
+        "tag": "change-job",
+        "share": 0.57
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.46
+       }
+      ]
+     },
+     {
+      "level": "strong",
+      "n": 81,
+      "avgWorry": 3.15,
+      "topActions": [
+       {
+        "tag": "change-job",
+        "share": 0.67
+       },
+       {
+        "tag": "retrain",
+        "share": 0.58
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.41
+       }
+      ]
+     }
+    ],
+    "outlook": [
+     {
+      "level": "progressive",
+      "n": 81,
+      "avgWorry": 3.54,
+      "topActions": [
+       {
+        "tag": "collective-action",
+        "share": 0.84
+       },
+       {
+        "tag": "change-job",
+        "share": 0.63
+       },
+       {
+        "tag": "retrain",
+        "share": 0.58
+       }
+      ]
+     },
+     {
+      "level": "centre",
+      "n": 81,
+      "avgWorry": 3.49,
+      "topActions": [
+       {
+        "tag": "change-job",
+        "share": 0.64
+       },
+       {
+        "tag": "retrain",
+        "share": 0.58
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.47
+       }
+      ]
+     },
+     {
+      "level": "traditional",
+      "n": 81,
+      "avgWorry": 3.42,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.64
+       },
+       {
+        "tag": "change-job",
+        "share": 0.48
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.4
+       }
+      ]
+     }
+    ],
+    "adaptability": [
+     {
+      "level": "resistant",
+      "n": 81,
+      "avgWorry": 3.7,
+      "topActions": [
+       {
+        "tag": "change-job",
+        "share": 0.54
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.53
+       },
+       {
+        "tag": "collective-action",
+        "share": 0.43
+       }
+      ]
+     },
+     {
+      "level": "steady",
+      "n": 81,
+      "avgWorry": 3.48,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.73
+       },
+       {
+        "tag": "change-job",
+        "share": 0.56
+       },
+       {
+        "tag": "cut-spending",
+        "share": 0.38
+       }
+      ]
+     },
+     {
+      "level": "adaptive",
+      "n": 81,
+      "avgWorry": 3.27,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.79
+       },
+       {
+        "tag": "change-job",
+        "share": 0.65
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.35
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "S3": {
+   "n": 243,
+   "avgWorry": 2.77,
+   "moodMix": {
+    "calm": 3,
+    "uneasy": 65,
+    "anxious": 160,
+    "alarmed": 15,
+    "panicked": 0
+   },
+   "actions": [
+    {
+     "tag": "retrain",
+     "count": 188,
+     "share": 0.77
+    },
+    {
+     "tag": "keep-going",
+     "count": 125,
+     "share": 0.51
+    },
+    {
+     "tag": "change-job",
+     "count": 107,
+     "share": 0.44
+    },
+    {
+     "tag": "save-more",
+     "count": 85,
+     "share": 0.35
+    },
+    {
+     "tag": "wait-and-see",
+     "count": 48,
+     "share": 0.2
+    },
+    {
+     "tag": "collective-action",
+     "count": 47,
+     "share": 0.19
+    },
+    {
+     "tag": "family-plans",
+     "count": 27,
+     "share": 0.11
+    },
+    {
+     "tag": "learn-ai",
+     "count": 22,
+     "share": 0.09
+    },
+    {
+     "tag": "invest",
+     "count": 15,
+     "share": 0.06
+    },
+    {
+     "tag": "seek-support",
+     "count": 6,
+     "share": 0.02
+    },
+    {
+     "tag": "cut-spending",
+     "count": 5,
+     "share": 0.02
+    },
+    {
+     "tag": "automate",
+     "count": 5,
+     "share": 0.02
+    },
+    {
+     "tag": "side-income",
+     "count": 5,
+     "share": 0.02
+    },
+    {
+     "tag": "politics",
+     "count": 3,
+     "share": 0.01
+    },
+    {
+     "tag": "move",
+     "count": 3,
+     "share": 0.01
+    }
+   ],
+   "byGroup": {
+    "lifeStage": [
+     {
+      "level": "early",
+      "n": 81,
+      "avgWorry": 2.8,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.88
+       },
+       {
+        "tag": "save-more",
+        "share": 0.42
+       },
+       {
+        "tag": "family-plans",
+        "share": 0.33
+       }
+      ]
+     },
+     {
+      "level": "mid",
+      "n": 81,
+      "avgWorry": 2.89,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.84
+       },
+       {
+        "tag": "change-job",
+        "share": 0.62
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.62
+       }
+      ]
+     },
+     {
+      "level": "late",
+      "n": 81,
+      "avgWorry": 2.62,
+      "topActions": [
+       {
+        "tag": "keep-going",
+        "share": 0.79
+       },
+       {
+        "tag": "retrain",
+        "share": 0.6
+       },
+       {
+        "tag": "change-job",
+        "share": 0.46
+       }
+      ]
+     }
+    ],
+    "standing": [
+     {
+      "level": "low",
+      "n": 81,
+      "avgWorry": 2.91,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.83
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.6
+       },
+       {
+        "tag": "change-job",
+        "share": 0.43
+       }
+      ]
+     },
+     {
+      "level": "mid",
+      "n": 81,
+      "avgWorry": 2.73,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.72
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.53
+       },
+       {
+        "tag": "change-job",
+        "share": 0.41
+       }
+      ]
+     },
+     {
+      "level": "high",
+      "n": 81,
+      "avgWorry": 2.67,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.78
+       },
+       {
+        "tag": "change-job",
+        "share": 0.48
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.41
+       }
+      ]
+     }
+    ],
+    "cushion": [
+     {
+      "level": "thin",
+      "n": 81,
+      "avgWorry": 3.09,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.8
+       },
+       {
+        "tag": "save-more",
+        "share": 0.51
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.48
+       }
+      ]
+     },
+     {
+      "level": "moderate",
+      "n": 81,
+      "avgWorry": 2.78,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.79
+       },
+       {
+        "tag": "keep-going",
+        "share": 0.63
+       },
+       {
+        "tag": "change-job",
+        "share": 0.56
+       }
+      ]
+     },
+     {
+      "level": "strong",
+      "n": 81,
+      "avgWorry": 2.44,
+      "topActions": [
+       {
+        "tag": "retrain",
+        "share": 0.73
+       },
+       {
+        "tag": "change-job",
+        "share": 0.47
+       },
+       {
+        "tag": "keep-going",
         "share": 0.43
        }
       ]
@@ -1436,57 +1416,57 @@
      {
       "level": "progressive",
       "n": 81,
-      "avgWorry": 2.78,
+      "avgWorry": 2.86,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.81
+        "tag": "retrain",
+        "share": 0.74
        },
        {
         "tag": "collective-action",
-        "share": 0.73
+        "share": 0.53
        },
        {
-        "tag": "retrain",
-        "share": 0.63
+        "tag": "change-job",
+        "share": 0.43
        }
       ]
      },
      {
       "level": "centre",
       "n": 81,
-      "avgWorry": 2.52,
+      "avgWorry": 2.83,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.81
-       },
-       {
         "tag": "retrain",
-        "share": 0.56
+        "share": 0.83
        },
        {
-        "tag": "side-income",
-        "share": 0.38
+        "tag": "keep-going",
+        "share": 0.51
+       },
+       {
+        "tag": "save-more",
+        "share": 0.47
        }
       ]
      },
      {
       "level": "traditional",
       "n": 81,
-      "avgWorry": 2.67,
+      "avgWorry": 2.62,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.7
-       },
-       {
         "tag": "retrain",
-        "share": 0.51
+        "share": 0.75
        },
        {
-        "tag": "side-income",
-        "share": 0.44
+        "tag": "keep-going",
+        "share": 0.6
+       },
+       {
+        "tag": "change-job",
+        "share": 0.42
        }
       ]
      }
@@ -1495,57 +1475,57 @@
      {
       "level": "resistant",
       "n": 81,
-      "avgWorry": 3.36,
+      "avgWorry": 2.95,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.96
+        "tag": "retrain",
+        "share": 0.59
        },
        {
         "tag": "keep-going",
-        "share": 0.4
+        "share": 0.54
        },
        {
-        "tag": "collective-action",
-        "share": 0.33
+        "tag": "save-more",
+        "share": 0.43
        }
       ]
      },
      {
       "level": "steady",
       "n": 81,
-      "avgWorry": 2.68,
+      "avgWorry": 2.77,
       "topActions": [
        {
         "tag": "retrain",
-        "share": 0.85
+        "share": 0.88
        },
        {
-        "tag": "save-more",
-        "share": 0.83
+        "tag": "keep-going",
+        "share": 0.54
        },
        {
-        "tag": "family-plans",
-        "share": 0.33
+        "tag": "change-job",
+        "share": 0.43
        }
       ]
      },
      {
       "level": "adaptive",
       "n": 81,
-      "avgWorry": 1.93,
+      "avgWorry": 2.59,
       "topActions": [
        {
         "tag": "retrain",
-        "share": 0.69
+        "share": 0.85
        },
        {
-        "tag": "save-more",
-        "share": 0.54
+        "tag": "change-job",
+        "share": 0.53
        },
        {
-        "tag": "side-income",
-        "share": 0.52
+        "tag": "keep-going",
+        "share": 0.46
        }
       ]
      }
@@ -1554,94 +1534,89 @@
   },
   "S4": {
    "n": 243,
-   "avgWorry": 1.77,
+   "avgWorry": 2.09,
    "moodMix": {
-    "calm": 94,
-    "uneasy": 119,
-    "anxious": 23,
-    "alarmed": 7,
+    "calm": 61,
+    "uneasy": 100,
+    "anxious": 82,
+    "alarmed": 0,
     "panicked": 0
    },
    "actions": [
     {
      "tag": "keep-going",
-     "count": 140,
-     "share": 0.58
-    },
-    {
-     "tag": "family-plans",
-     "count": 120,
-     "share": 0.49
+     "count": 174,
+     "share": 0.72
     },
     {
      "tag": "save-more",
-     "count": 119,
-     "share": 0.49
+     "count": 110,
+     "share": 0.45
     },
     {
      "tag": "retrain",
-     "count": 103,
+     "count": 102,
      "share": 0.42
     },
     {
-     "tag": "invest",
-     "count": 70,
-     "share": 0.29
-    },
-    {
-     "tag": "side-income",
-     "count": 64,
-     "share": 0.26
-    },
-    {
-     "tag": "collective-action",
-     "count": 57,
-     "share": 0.23
-    },
-    {
-     "tag": "politics",
-     "count": 33,
-     "share": 0.14
-    },
-    {
-     "tag": "learn-ai",
-     "count": 33,
-     "share": 0.14
+     "tag": "change-job",
+     "count": 76,
+     "share": 0.31
     },
     {
      "tag": "wait-and-see",
-     "count": 32,
-     "share": 0.13
+     "count": 75,
+     "share": 0.31
     },
     {
-     "tag": "change-job",
-     "count": 22,
-     "share": 0.09
+     "tag": "collective-action",
+     "count": 45,
+     "share": 0.19
     },
     {
-     "tag": "automate",
-     "count": 21,
-     "share": 0.09
+     "tag": "family-plans",
+     "count": 42,
+     "share": 0.17
     },
     {
-     "tag": "retire-early",
-     "count": 9,
-     "share": 0.04
+     "tag": "invest",
+     "count": 26,
+     "share": 0.11
     },
     {
-     "tag": "move",
-     "count": 4,
-     "share": 0.02
+     "tag": "learn-ai",
+     "count": 14,
+     "share": 0.06
     },
     {
      "tag": "seek-support",
+     "count": 12,
+     "share": 0.05
+    },
+    {
+     "tag": "side-income",
+     "count": 7,
+     "share": 0.03
+    },
+    {
+     "tag": "automate",
      "count": 4,
      "share": 0.02
     },
     {
-     "tag": "sell-or-exit",
+     "tag": "politics",
      "count": 3,
      "share": 0.01
+    },
+    {
+     "tag": "move",
+     "count": 2,
+     "share": 0.01
+    },
+    {
+     "tag": "retire-early",
+     "count": 1,
+     "share": 0
     },
     {
      "tag": "cut-spending",
@@ -1654,34 +1629,34 @@
      {
       "level": "early",
       "n": 81,
-      "avgWorry": 1.81,
+      "avgWorry": 2.04,
       "topActions": [
        {
         "tag": "retrain",
-        "share": 0.57
+        "share": 0.67
        },
        {
         "tag": "keep-going",
-        "share": 0.48
+        "share": 0.47
        },
        {
         "tag": "family-plans",
-        "share": 0.47
+        "share": 0.35
        }
       ]
      },
      {
       "level": "mid",
       "n": 81,
-      "avgWorry": 2,
+      "avgWorry": 2.22,
       "topActions": [
        {
-        "tag": "save-more",
-        "share": 0.65
+        "tag": "keep-going",
+        "share": 0.69
        },
        {
-        "tag": "family-plans",
-        "share": 0.59
+        "tag": "save-more",
+        "share": 0.68
        },
        {
         "tag": "retrain",
@@ -1692,19 +1667,19 @@
      {
       "level": "late",
       "n": 81,
-      "avgWorry": 1.48,
+      "avgWorry": 2,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.89
+        "share": 0.99
        },
        {
-        "tag": "family-plans",
-        "share": 0.42
+        "tag": "wait-and-see",
+        "share": 0.44
        },
        {
         "tag": "save-more",
-        "share": 0.36
+        "share": 0.35
        }
       ]
      }
@@ -1713,11 +1688,30 @@
      {
       "level": "low",
       "n": 81,
-      "avgWorry": 1.64,
+      "avgWorry": 2.35,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.64
+        "share": 0.72
+       },
+       {
+        "tag": "retrain",
+        "share": 0.51
+       },
+       {
+        "tag": "change-job",
+        "share": 0.43
+       }
+      ]
+     },
+     {
+      "level": "mid",
+      "n": 81,
+      "avgWorry": 1.99,
+      "topActions": [
+       {
+        "tag": "keep-going",
+        "share": 0.88
        },
        {
         "tag": "save-more",
@@ -1725,45 +1719,26 @@
        },
        {
         "tag": "retrain",
-        "share": 0.49
-       }
-      ]
-     },
-     {
-      "level": "mid",
-      "n": 81,
-      "avgWorry": 1.88,
-      "topActions": [
-       {
-        "tag": "family-plans",
-        "share": 0.62
-       },
-       {
-        "tag": "keep-going",
-        "share": 0.53
-       },
-       {
-        "tag": "save-more",
-        "share": 0.44
+        "share": 0.33
        }
       ]
      },
      {
       "level": "high",
       "n": 81,
-      "avgWorry": 1.78,
+      "avgWorry": 1.93,
       "topActions": [
        {
         "tag": "keep-going",
         "share": 0.56
        },
        {
-        "tag": "save-more",
-        "share": 0.48
+        "tag": "wait-and-see",
+        "share": 0.47
        },
        {
-        "tag": "family-plans",
-        "share": 0.41
+        "tag": "retrain",
+        "share": 0.42
        }
       ]
      }
@@ -1772,57 +1747,57 @@
      {
       "level": "thin",
       "n": 81,
-      "avgWorry": 2,
+      "avgWorry": 2.78,
       "topActions": [
        {
+        "tag": "keep-going",
+        "share": 0.72
+       },
+       {
         "tag": "save-more",
-        "share": 0.63
+        "share": 0.58
        },
        {
         "tag": "retrain",
-        "share": 0.54
-       },
-       {
-        "tag": "family-plans",
-        "share": 0.48
+        "share": 0.51
        }
       ]
      },
      {
       "level": "moderate",
       "n": 81,
-      "avgWorry": 1.75,
+      "avgWorry": 2.02,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.59
-       },
-       {
-        "tag": "family-plans",
-        "share": 0.52
+        "share": 0.68
        },
        {
         "tag": "save-more",
-        "share": 0.43
+        "share": 0.56
+       },
+       {
+        "tag": "retrain",
+        "share": 0.49
        }
       ]
      },
      {
       "level": "strong",
       "n": 81,
-      "avgWorry": 1.54,
+      "avgWorry": 1.46,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.65
+        "share": 0.75
        },
        {
-        "tag": "family-plans",
-        "share": 0.48
+        "tag": "wait-and-see",
+        "share": 0.51
        },
        {
-        "tag": "invest",
-        "share": 0.44
+        "tag": "retrain",
+        "share": 0.26
        }
       ]
      }
@@ -1831,37 +1806,37 @@
      {
       "level": "progressive",
       "n": 81,
-      "avgWorry": 1.91,
-      "topActions": [
-       {
-        "tag": "collective-action",
-        "share": 0.69
-       },
-       {
-        "tag": "retrain",
-        "share": 0.57
-       },
-       {
-        "tag": "save-more",
-        "share": 0.49
-       }
-      ]
-     },
-     {
-      "level": "centre",
-      "n": 81,
-      "avgWorry": 1.65,
+      "avgWorry": 2.17,
       "topActions": [
        {
         "tag": "keep-going",
         "share": 0.62
        },
        {
-        "tag": "save-more",
-        "share": 0.52
+        "tag": "collective-action",
+        "share": 0.53
        },
        {
-        "tag": "family-plans",
+        "tag": "save-more",
+        "share": 0.43
+       }
+      ]
+     },
+     {
+      "level": "centre",
+      "n": 81,
+      "avgWorry": 2.06,
+      "topActions": [
+       {
+        "tag": "keep-going",
+        "share": 0.79
+       },
+       {
+        "tag": "save-more",
+        "share": 0.51
+       },
+       {
+        "tag": "retrain",
         "share": 0.43
        }
       ]
@@ -1869,19 +1844,19 @@
      {
       "level": "traditional",
       "n": 81,
-      "avgWorry": 1.73,
+      "avgWorry": 2.02,
       "topActions": [
        {
-        "tag": "family-plans",
-        "share": 0.67
-       },
-       {
         "tag": "keep-going",
-        "share": 0.64
+        "share": 0.74
        },
        {
         "tag": "save-more",
-        "share": 0.46
+        "share": 0.42
+       },
+       {
+        "tag": "retrain",
+        "share": 0.4
        }
       ]
      }
@@ -1890,57 +1865,57 @@
      {
       "level": "resistant",
       "n": 81,
-      "avgWorry": 2.33,
+      "avgWorry": 2.25,
       "topActions": [
        {
         "tag": "keep-going",
-        "share": 0.89
+        "share": 0.81
        },
        {
         "tag": "save-more",
-        "share": 0.69
+        "share": 0.43
        },
        {
-        "tag": "family-plans",
-        "share": 0.49
+        "tag": "wait-and-see",
+        "share": 0.41
        }
       ]
      },
      {
       "level": "steady",
       "n": 81,
-      "avgWorry": 1.8,
+      "avgWorry": 2.1,
       "topActions": [
        {
-        "tag": "retrain",
-        "share": 0.62
-       },
-       {
         "tag": "keep-going",
-        "share": 0.6
+        "share": 0.69
        },
        {
-        "tag": "family-plans",
-        "share": 0.57
+        "tag": "save-more",
+        "share": 0.53
+       },
+       {
+        "tag": "retrain",
+        "share": 0.46
        }
       ]
      },
      {
       "level": "adaptive",
       "n": 81,
-      "avgWorry": 1.16,
+      "avgWorry": 1.91,
       "topActions": [
        {
-        "tag": "invest",
-        "share": 0.59
-       },
-       {
-        "tag": "side-income",
-        "share": 0.56
+        "tag": "keep-going",
+        "share": 0.64
        },
        {
         "tag": "retrain",
-        "share": 0.48
+        "share": 0.47
+       },
+       {
+        "tag": "save-more",
+        "share": 0.4
        }
       ]
      }

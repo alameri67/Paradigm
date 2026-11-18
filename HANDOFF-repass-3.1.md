@@ -29,14 +29,14 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted with the validator, requiring both `protocolVersion: "3.1"` and a pass. **2,394 of 7,776 done.**
-(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 11:15 Asia/Dubai.)
+Counted only after content review and a protocol 3.1 validator pass. **2,404 of 7,776 done.** Unreviewed drafts are not counted.
+(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 11:46 Asia/Dubai.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
-| A01 | 243/243 | yes (regenerated, passes) |
-| A02 | 241/243 | STALE from main - must redo |
-| A03 | 163/243 | STALE from main - must redo |
+| A01 | 243/243 | yes (passes; matches 243) |
+| A02 | 243/243 | yes (passes; matches 243) |
+| A03 | 171/243 | STALE from main - must redo |
 | A04 | 160/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
@@ -71,19 +71,15 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ### Two traps to know about
 
-1. **`data/insights/A02.json`, `A03.json` and `A04.json` are stale.** They are untouched copies from `main` that
-   describe the old 3.0 interviews and claim 243 interviews each. Those interviews have now been partly overwritten,
-   so the files are wrong: `validate-job-insights.mjs A02` currently reports 57 problems. Regenerate all three
-   from the finished 3.1 interviews. Do not trust them in the meantime.
+1. **`data/insights/A03.json` and `A04.json` are still stale copies from main.** Regenerate both from scratch using current validated 3.1 interviews, never patch their old prose. A02 has now been regenerated from all 243 interviews with explicit evidence for thought-group memberships and independently validated.
 2. **Partial batches.** Work was cut off mid-batch, so a job's passing files do not line up with whole batches of 9.
-   The skip lists below only name batches where all 9 files pass; re-run everything else, even where a few files
-   in it already look done.
+   The skip lists below only name batches where all 9 files pass; validate each canonical ID individually. Preserve every existing 3.1 file that passes; re-interview only actual gaps.
 
 ## Still to do
 
-1. Finish the interviews for `A02`–`A32` (5,382 people remain by the table above).
+1. Finish the interviews for `A03`–`A32` (5,372 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
-   `validate-job-insights.mjs <code>` pass. Redo A02–A04 as noted above.
+   `validate-job-insights.mjs <code>` pass. A02 is complete; redo A03–A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
    still passes. The validator requires each quote to be word for word from the persona's answer, so the same bracket
    was also added to the matching sentence in the transcript (that is how the new 3.1 files do it). A bracket containing
@@ -104,7 +100,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 27 batches of 9 people, runs one agent per batch, then writes that job's summary. It also takes `args.skip`, a list
 of batch prefixes to leave alone.
 
-Before running it, change two lines:
+Before running an adapted copy outside the checkout, change two lines:
 
 - `SCRATCH` — point it at your own scratchpad folder.
 - `USER_ASK` — this is the text each agent is given as the reason the overwriting is wanted. **Replace what is
@@ -125,8 +121,8 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
 ```json
 {
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
-  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-133","A02-211","A02-212","A02-213","A02-221","A02-222","A02-223","A02-231","A02-232","A02-233","A02-311","A02-312","A02-313","A02-321","A02-322","A02-323","A02-331","A02-332"],
-  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132","A03-133","A03-211","A03-212","A03-213","A03-221","A03-312","A03-313","A03-321"],
+  "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-133","A02-211","A02-212","A02-213","A02-221","A02-222","A02-223","A02-231","A02-232","A02-233","A02-311","A02-312","A02-313","A02-321","A02-322","A02-323","A02-331","A02-332","A02-333"],
+  "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132","A03-133","A03-211","A03-212","A03-213","A03-221","A03-222","A03-312","A03-313","A03-321"],
   "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131","A04-132","A04-133","A04-211","A04-212","A04-213","A04-221","A04-311","A04-312","A04-313","A04-321"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
@@ -248,26 +244,28 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
 
 ## Current continuous writer lanes
 
-Current session resumed from pushed `e16eeb2` on 18 November 2026. The prior `/tmp/paradigm-repass/parallel/` runtime and the previous 24 unpushed files were unavailable. Fresh validation confirmed 2,334 passing interviews, A02 181, A03 163, A04 160. No previous unpushed work was counted. The initial tree was clean.
+Current session resumed from pushed `e16eeb2` on 18 November 2026. The prior `/tmp/paradigm-repass/parallel/` runtime and previous 24 unpushed files were unavailable. Fresh validation confirmed the initial 2,334 passing interviews (A02 181, A03 163, A04 160). No unavailable work was counted. The initial tree was clean; no worktree was created.
 
-Use bounded disjoint TWO-ID sequential invocations: gpt-6-sol medium drafting; gpt-6-luna medium read-only review. Parent independently runs actual validators, supplemental exact-card/question/profile/quote/bullet checks and substantive review. Only reviewed passing files are counted here; in-flight drafts may exist and must be reviewed before counting. Passing baseline files are protected by SHA-256 hashes. Helpers remain outside checkout at `/tmp/paradigm-repass-current/`. Do not trust older queues.
+Latest reviewed total: **2,404/7,776**. A02 is **243/243**, with its insights regenerated from scratch and validated against all 243 interviews. Current interview focus: **A03, 171/243**. Passing insights: A01, A02.
 
-Latest reviewed count: **2,394/7,776**; A02 **241/243**.
+Use bounded, disjoint TWO-ID sequential invocations: gpt-6-sol medium drafting; gpt-6-luna medium read-only review. The parent runs actual validators, supplemental exact-card/question/profile/quote/bullet checks and content review. Fresh review sessions reduce carry-over between files. Original passing files and accepted new files are protected by hashes. Helpers remain outside the checkout at `/tmp/paradigm-repass-current/`.
 
-Reviewed additions in this session (60): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333.
+Reviewed additions in this session (70): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333, A03-22232, A03-22233, A03-22311, A03-22312, A03-22313, A03-22321, A03-22322, A03-22323.
 
-Current exact reservations (inspect actual files and agent state before reuse):
+Current exact reservations (inspect files and live agents before reusing; a reservation may already be complete):
 
-- writer1: A02-33332, A02-33333.
-- writer2: A02-33312, A02-33313.
-- writer3: A02-33323, A02-33331.
-- writer4: A02-33321, A02-33322.
+- draft_a03_1: A03-23233, A03-23311.
+- draft_a03_2: A03-23312, A03-23313.
+- draft_a03_3: A03-23321, A03-23322.
+- draft_a03_4: A03-23323, A03-23331.
 
-A02 insights synthesis began from a reviewed-only 201-person snapshot under `/tmp/paradigm-repass-current/insights/`; final source membership/statistics must refresh before repository installation.
+Structurally passing but not yet accepted at this checkpoint (NOT included in reviewed counts; any uncommitted files may be unavailable after a disconnect): A03-22331, A03-22332, A03-22333, A03-23111, A03-23112, A03-23113, A03-23121, A03-23122, A03-23123, A03-23131, A03-23132, A03-23133, A03-23211, A03-23212, A03-23213, A03-23221, A03-23222, A03-23223, A03-23231, A03-23232, A03-23233, A03-23311, A03-23312, A03-23313, A03-23321, A03-23322, A03-23323, A03-23331.
 
-Next A02 gaps (including pending reviews and reservations): A02-33312, A02-33313.
+A02 insights use one supported private-thought group per person per scenario, backed by exact source THINK excerpts. The first grouping draft was rejected for unsupported memberships and rebuilt; do not reuse old provisional matrices. Root-checked evidence is `/tmp/paradigm-repass-current/insights/root-checked-thought-evidence.jsonl`. Current source/metadata, accepted hashes, review decisions, reservations and checkpoint helpers are in the same scratch directory. If scratch is missing, rebuild from actual files and validators; never count unavailable/unreviewed work.
 
-All 32 interview validators were exercised through the full-file validator; only A01 insights pass in the baseline. A02-A04 insights remain stale and must be regenerated from current 3.1 interviews once each reaches 200 passes. A01 baseline remains unchanged and must be revalidated before final completion. Do not merge to main until all 7,776 interviews and all 32 insights pass. Commit and push approximately every 30 minutes and before yielding.
+Keep A01 passing files unchanged and revalidate A01 at final completion. Regenerate each next job insight from scratch once it reaches 200+ reviewed passes, update against its final 243, and validate. Preserve funding, maintained wages and real vacancy conditions. Mere course enquiries are not retraining; retained existing cash is not new saving; invited individual teaching is not collective action; a possible pay cut is not an expected catastrophic loss.
+
+Continue without another user prompt. Finish A03 interviews, then A04 onward. Commit/push about every 30 minutes and before yielding, using explicit reviewed paths; never force-push. Do not merge to main until all 7,776 canonical interviews and all 32 insights pass and are committed/pushed.
 
 ## Working agreement
 
