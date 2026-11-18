@@ -10,10 +10,10 @@
     "A32"
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
-  "updatedAt": "2026-11-18T11:36:54.545123+00:00",
+  "updatedAt": "2026-11-18T11:48:07.768288+00:00",
   "jobs": {
     "A29": {
-      "reviewedCount": 166,
+      "reviewedCount": 174,
       "reviewedIds": [
         "A29-11111",
         "A29-11112",
@@ -180,9 +180,7 @@
         "A29-31111",
         "A29-31112",
         "A29-31113",
-        "A29-31121"
-      ],
-      "remainingGaps": [
+        "A29-31121",
         "A29-31122",
         "A29-31123",
         "A29-31131",
@@ -190,7 +188,9 @@
         "A29-31133",
         "A29-31211",
         "A29-31212",
-        "A29-31213",
+        "A29-31213"
+      ],
+      "remainingGaps": [
         "A29-31221",
         "A29-31222",
         "A29-31223",
@@ -1362,32 +1362,40 @@
     "A29-23332": "1443825a06e27b9c756f83bcf614c711c77a12b9933754320cc49bfd44ea2b81",
     "A29-23333": "91e8e05c4365f22737f8f3c5b94462ecde5a56276cc62067b128fbc06f659547",
     "A29-23323": "b9cf6fd0b23456753a2c63384d71bde742c30e0e3249c3ba62630f33793145b7",
-    "A29-23331": "d999a46ef090058bfe37d6fa7ba91ccef84e5b91118c122ee366c80dbcab2f57"
+    "A29-23331": "d999a46ef090058bfe37d6fa7ba91ccef84e5b91118c122ee366c80dbcab2f57",
+    "A29-31122": "df05f879e386af5a17c75fcec0770ca649a12439b2ed0cc0df40bcd5d4f65f4e",
+    "A29-31131": "05bb88f4f8a094f1e41d1043c2769413d909d4a67b52dd35ce0919791adb8f94",
+    "A29-31132": "05f3ac7e5eb6244cb474461bf7035bd9842b37c513eabb51d5f14eca3fa45e78",
+    "A29-31123": "2388352680a071db9dd72294ba37322d731d0d89b4e95b0619cafa9bcd2edb63",
+    "A29-31212": "1837c2681d983a918a5c6e9a3ee2620a7e855fab66427dd053b3580e2df0786c",
+    "A29-31133": "51789c26e1b019b3578912c2a7cc8ae24fb722f71fe192e33c636dc22ca92e90",
+    "A29-31213": "ef8a39517dfa10bd3b0bbec1e2b1c2214e92f66510b332adadd9179b4c44e6c1",
+    "A29-31211": "dc26c78cd8f3fd80cf086213b923f49ddfa7d9d86d19344e9a4fd79b99ba9870"
   },
   "reservations": {
     "author1": [
-      "A29-31133",
-      "A29-31211"
+      "A29-31221",
+      "A29-31222"
     ],
     "author2": [
-      "A29-31212",
-      "A29-31213"
+      "A29-31223",
+      "A29-31231"
     ],
     "author3": [
-      "A29-31122",
-      "A29-31123"
+      "A29-31311",
+      "A29-31312"
     ],
     "author4": [
-      "A29-31131",
-      "A29-31132"
+      "A29-31232",
+      "A29-31233"
     ],
     "review1": [
-      "A29-31122",
-      "A29-31123"
+      "A29-31221",
+      "A29-31222"
     ],
     "review2": [
-      "A29-31131",
-      "A29-31132"
+      "A29-31223",
+      "A29-31231"
     ]
   },
   "validation": [
@@ -1869,9 +1877,45 @@
     {
       "command": "node scripts/validate-archetype-interviews.mjs A29-23331",
       "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31122",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31131",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31132",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31123",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31212",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31133",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31213",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-31211",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29",
+      "result": "174/174 files valid; full accepted corpus at checkpoint; all 116 accepted additions also pass independent actual word counts, bold, exact cards and scenario names, literal quotes, timelines/profile audit."
     }
   ],
-  "latestCheckpointCommit": "c2fd6baa3cd40c6f583ad6d01f658b57888c2103",
+  "latestCheckpointCommit": "32ce130c67aba8a1887356f778a1f734fc69a94a",
   "semanticReview": [
     {
       "id": "A29-13113",
@@ -2520,6 +2564,54 @@
       "decision": "APPROVE",
       "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
       "sha256": "d999a46ef090058bfe37d6fa7ba91ccef84e5b91118c122ee366c80dbcab2f57"
+    },
+    {
+      "id": "A29-31122",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "df05f879e386af5a17c75fcec0770ca649a12439b2ed0cc0df40bcd5d4f65f4e"
+    },
+    {
+      "id": "A29-31131",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "05bb88f4f8a094f1e41d1043c2769413d909d4a67b52dd35ce0919791adb8f94"
+    },
+    {
+      "id": "A29-31132",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "05f3ac7e5eb6244cb474461bf7035bd9842b37c513eabb51d5f14eca3fa45e78"
+    },
+    {
+      "id": "A29-31123",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "2388352680a071db9dd72294ba37322d731d0d89b4e95b0619cafa9bcd2edb63"
+    },
+    {
+      "id": "A29-31212",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "1837c2681d983a918a5c6e9a3ee2620a7e855fab66427dd053b3580e2df0786c"
+    },
+    {
+      "id": "A29-31133",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "51789c26e1b019b3578912c2a7cc8ae24fb722f71fe192e33c636dc22ca92e90"
+    },
+    {
+      "id": "A29-31213",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "ef8a39517dfa10bd3b0bbec1e2b1c2214e92f66510b332adadd9179b4c44e6c1"
+    },
+    {
+      "id": "A29-31211",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "dc26c78cd8f3fd80cf086213b923f49ddfa7d9d86d19344e9a4fd79b99ba9870"
     }
   ],
   "reviewEvidence": {
@@ -4883,6 +4975,179 @@
         "literalQuoteCheck": "PASS",
         "fullProtocolContentReview": "APPROVE"
       }
+    },
+    "A29-31122": {
+      "id": "A29-31122",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "df05f879e386af5a17c75fcec0770ca649a12439b2ed0cc0df40bcd5d4f65f4e",
+      "reviewedAt": "2026-11-18T11:37:54.147624+00:00",
+      "scope": [
+        "Exact grid profile and full current interview",
+        "Full protocol 3.1 semantic review",
+        "Cards, questions, follow-ups and answer counts",
+        "Grounded bullets, actions, conditions and moods",
+        "Exact standalone quotes, ages and first-year dates"
+      ],
+      "validation": [
+        "Repository validator: 1/1 valid",
+        "Updated supplemental audit: PASS"
+      ],
+      "notes": [
+        "Dana remains a vocational-certificate-only junior at 58, below average and supervised after a cinema closure; occasional proven AI use fits steady adaptability.",
+        "Low pay, nineteen days saved, few employers and rent sustain baseline anxiety; expected large helper-task loss around 2031 supports alarm in the fast scenario.",
+        "AI voice-note learning follows two completed-visit demonstrations with paid time and retained weekly wages and hours, followed by qualified checking.",
+        "Actual retirement records establish no entitlement, income, date or future capacity. Daughter support asks only for consensual reading time, not wages.",
+        "Final steps preserve 2029 manageable offered paid work, the 2032 income/cost/health decision before work or exit, and yearly partner budget reviews in the longer scenario.",
+        "Quotes and headline are exact and standalone. All action tags and summaries have transcript support."
+      ],
+      "blockers": []
+    },
+    "A29-31131": {
+      "id": "A29-31131",
+      "decision": "APPROVE",
+      "sha256": "05bb88f4f8a094f1e41d1043c2769413d909d4a67b52dd35ce0919791adb8f94",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Actual repository validator and updated supplemental audit including real split-count limits PASS. Final quote, S3/S4 split plain steps and expected-loss biggest worry independently reread.",
+      "profile": "Sara Tanaka58, junior/below-average still-learning electrician, vocational certificate ONLY and explicit no electrician licence or independent tests/checks. Lower pay/few electrical firms/three-week reserve, rented flat, cleaning-shift partner Ben and GROWN children. Previous clothing workshop closure explains late beginner. Traditional work/family preferences and NEVER-AI resistance expressed without assuming children owe support.",
+      "conditions": "Only tasks allowed AND checked by qualified supervisor, current or future; future work only offered, PAID and within ability. S0 craft magazine cut30annually goes to bills not retirement saving. S1 compulsory form demonstration during paid time with normal weekly wages AND hours protected; no chosen/enrolled course. S2 actual retirement/support records and available free advice, daughter letter-reading time only if available and no wages assigned; in2029 only actual suitable supervised paid work, no unconfirmed payment or shift budgeted. S3 records/advice if obtainable and six-month actual-cost checks; in2032 budget only confirmed wages/retirement and conditional qualified-supervised paid tasks. S4 records NOW/six-month costs; free advice in2037 only actual income shortfall AND available appointment; confirmed-only2037budget, future supervised work not guaranteed. No birthday-based pension, funded exit, grown-child payment or physical work at68 assumed.",
+      "mood": "Baseline anxious actual rent/low wage/thin savings; steady anxious junior-hour risks; fast alarmed EXPECTED major simple-task losses around2031 with sleeplessness. Both later scenarios retain present financial anxiety and explain reduced urgency instead of inventing security.",
+      "quotes": "Six distinct <=30-word literal complete standalone quotes checked; S1 source+quote now explicitly identifies compulsory work form. Ben appears in annotations only and relationship established; quote relationships clear.",
+      "semantic": "No retrain tag for mere unchosen course enquiry; no learn-ai invented for NEVER-AI persona. Retirement-information requests support seek-support, kept conditional paid tasks support keep-going; no retire-early action inferred. Full credentials/headline reinforce actual beginner standing independent of age."
+    },
+    "A29-31132": {
+      "id": "A29-31132",
+      "decision": "APPROVE",
+      "sha256": "05f3ac7e5eb6244cb474461bf7035bd9842b37c513eabb51d5f14eca3fa45e78",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Actual repository validator and updated supplemental audit including real split3\u201316/bullet22/bold4 checks PASS. Final source/AI quote, S2 sleep consequence and full revised do/steps independently reread.",
+      "profile": "Aaron Abbott58, LOW junior still-learning electrician with VOCATIONAL CERTIFICATE ONLY and explicit no licence/independent testing/sign-off. Low pay/few electrical employers/eighteen-day reserve/rented home, stockroom-worker partner Mira and GROWN children. Previous depot contract loss explains older beginner. Traditional work/self-reliance/family boundaries; occasional AI only after colleague demonstration, not daily early adoption.",
+      "conditions": "S0 actual music fee EIGHT A MONTH cancellation goes to bills, no pension saving windfall; official retirement records/free advice are enquiries, no appointment/payment assumed. S1 AI voice drafting only after six supervisor-checked examples; employer permission, FREE access DURING PAID SHIFTS, UNCHANGED WEEKLY WAGES AND HOURS; qualified checks BEFORE EVERY drafted log used, stop invented task record, no junior test authority. Less salient cut tag removed to keep four plain steps, cut remains in do/source. S2 free advice checks actual wages/rent/eligibility/support costs; confirmed-only income, no child wages;2029 offered PAID tasks only within ability and qualified supervisor permission/checks, actual paid hours requested in writing. S3 advertised stores applications only ACTUAL HOUR CUTS and matching ability; stay current work until SIGNED suitable offer covering essentials AFTER TRAVEL, no imagined retirement funds;2032 paid-supervised tasks conditional. S4 recordsNOW/twiceyear cost review,2037 available free adviceIFincome misses essentials, confirmed-only2037budget and offeredpaid2037tasks only ability/qualifiedpermit/check. No automatic later stores application or job at68/pension entitlement/family wages assumed.",
+      "mood": "Baseline anxious actual rent/low wage/eighteen-day reserve; steady anxious realistic junior-hour loss and partner wage insufficient alone. Fast alarmed EXPECTED large physical-task wage loss plus concrete waking at night over unpaid bills. Longer warnings retain present anxiety while giving time to verify resources, not invented financial security.",
+      "quotes": "Six distinct exact <=30-word complete standalone quotes checked. S1 formerly backward-pointing tool now explicit AI voice-drafting tool in source and quote; no unexplained named relationships.",
+      "semantic": "New scoped AI voice tool justifies learn-ai unlike existing occasional checked practice. Prior stores experience enables bounded actual search without assumed job or robot immunity. Retirement records seek dependable figures not funded retirement action; no retrain/retire-early invented from enquiries or hope."
+    },
+    "A29-31123": {
+      "id": "A29-31123",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "2388352680a071db9dd72294ba37322d731d0d89b4e95b0619cafa9bcd2edb63",
+      "reviewedAt": "2026-11-18T11:42:26.977222+00:00",
+      "scope": [
+        "Exact grid profile and full current interview",
+        "Protocol 3.1 cards, questions and follow-ups",
+        "Independent semantic review of summaries, actions and conditions",
+        "Literal standalone quotes, timelines, ages and moods"
+      ],
+      "validation": [
+        "Repository validator: 2/2 pair valid",
+        "Updated supplemental audit: both PASS"
+      ],
+      "notes": [
+        "Karl is a supervised vocational-certificate-only junior at 58 after patchy security work, without inferred licence or leadership. Daily free checked AI study fits adaptive profile.",
+        "Baseline anxiety follows low wages, rent, twenty-four days saved and few firms. Alarm in the fast scenario follows expected major partner booking-income loss and interrupted sleep.",
+        "New AI stock-note trial is distinct from routine study and preserves three completed-job scope, paid time, unchanged weekly wages/hours and qualified approval before orders.",
+        "Final revisions clarify partner employer, actual income and health checked before 2032 offered manageable supervised work, and conditional trip timing and affordability without son funding.",
+        "Yearly household budget review remains current action without inventing work at 69. Community advice is conditional on actual shortfall and checked eligibility/availability, with no granted pension or support assumed.",
+        "All scenario and headline quotes are exact, distinct and understandable alone. No remaining semantic blockers."
+      ],
+      "blockers": []
+    },
+    "A29-31212": {
+      "id": "A29-31212",
+      "sha256": "1837c2681d983a918a5c6e9a3ee2620a7e855fab66427dd053b3580e2df0786c",
+      "decision": "APPROVE",
+      "reviewer": "author4 independent read-only",
+      "reviewedAt": "2026-11-18T11:42:51.214960+00:00",
+      "semanticrationale": [
+        "Read exact grid and full stable interview, then verified final savings-trigger amendments. Priya is58, a below-average junior electrician with vocational certificate only, learning under supervision after cinema closure. Typical trade pay, four months saved and some similar employers correctly reflect MODERATE resources rather than thin low pay or strong wealth.",
+        "Partner laundry work, grown children elsewhere, rented home and unverified prior employment retirement records are consistent. No licence, diploma, seniority, sign-off authority or independently qualified electrical work is supplied by age or earlier employment.",
+        "Steady occasional AI study explanation follows a colleague demonstration and practical supervisor checks. S0 keeps this as routine, with no false new-learning tag. S1 chooses association membership and a shared request for named supervised practice during paid hours with normal wages retained, remaining unagreed until written employer acceptance.",
+        "Moods calm/anxious/anxious/anxious/uneasy track currently covered living costs, moderate reserves, possible junior-hour reductions, uncertain physical adoption and unresolved later resources. She does not assert certain catastrophic wage loss while choosing only anxious.",
+        "Thinking/robot ages are60/63,63/66,68/71. Later work depends on real capacity and availability; she never inherits a job at68, an affordable exit, pension eligibility/date/amount or support payment from the scenario.",
+        "The50 extra monthly deposits come ONLY from new wages after essentials while BOTH paid incomes hold, stopping if EITHER income falls or surplus disappears. Parent made this literal in S2 do and field notes; steps already retained it. No borrowing or existing reserve transfers maintain the target.",
+        "Association advice requests check actual service availability, official records and support eligibility, with no guaranteed appointment or payment. Missing records prompt correction through the actual provider or former employer, not guessed pension figures or assumed absence of all resources.",
+        "Course questions remain unchosen enquiries, and work-exit decisions wait for verified income and essential-cost comparisons during2032/2037. Grown-child help requires actual choice/agreement; possible child wages never enter household resources.",
+        "Summaries and action tags reflect actual chosen continuity, association work, advice requests, conditional saving and delayed exit decisions. All six quotes are literal, distinct and standalone; exact cards/questions/order/two follow-ups and answer/step lengths pass both validators."
+      ],
+      "validation": [
+        {
+          "command": "node scripts/validate-archetype-interviews.mjs A29-31212",
+          "result": "1/1 valid"
+        },
+        {
+          "command": "python /tmp/paradigm-s7-20261118/audit.py A29-31212",
+          "result": "PASS"
+        }
+      ]
+    },
+    "A29-31133": {
+      "id": "A29-31133",
+      "sha256": "51789c26e1b019b3578912c2a7cc8ae24fb722f71fe192e33c636dc22ca92e90",
+      "decision": "APPROVE",
+      "reviewer": "author3-independent-readonly",
+      "reviewedAt": "2026-11-18T11:43:41.963289+00:00",
+      "semanticRationale": [
+        "Exact grid and complete interview read; final changed source/do/steps checked. Beth is58, a late-entry junior after curtain-workshop closure, vocational certificate only, below-average skill, supervised and without electrician licence or sign-off authority. Low pay, three weeks saved, few firms, caretaker partner, rent and grown children match the profile.",
+        "Daily checked AI study is routine; S1 distinct five-session parts-picture practice requires supervisor approval, no personal fee, paid shifts maintaining normal weekly wages and senior checks before actual tasks. S0 annotation no longer invents daily-gap frequency or all personal study occurring in paid work.",
+        "Baseline and longer-horizon anxiety retain current low-pay/short-reserve pressures; fast alarm matches expected major robot-era fitting-hour loss and sleeplessness. Thinking/robot ages60/63,63/66,68/71 and first-year dates2029/2032/2037 are correct. No age-based pension, affordable exit, adult-child money or electrical work at69 is promised.",
+        "Community advice is requested subject to availability, never a granted appointment. Chosen counter-job applications are explicitly dated2029/2032/2037; later applications require income still needed, real vacancies and duties fitting actual ability. Employer-paid training, signed pay and guaranteed hours covering rent/essentials/travel FROM training start, continued current work until affordable signed terms, and prior partner agreement to changed household arrangements remain explicit.",
+        "Counter work is expressly not protected from thinking AGI, and vocational certification never becomes independent electrical-safety authority. Six literal standalone quotes, exact cards/core questions/two followups, answer lengths and actual split-word bullet/step limits pass actual repository validator and updated supplemental audit on final bytes."
+      ],
+      "checks": [
+        "node scripts/validate-archetype-interviews.mjs A29-31133 PASS",
+        "python /tmp/paradigm-s7-20261118/audit.py A29-31133 PASS"
+      ]
+    },
+    "A29-31213": {
+      "id": "A29-31213",
+      "sha256": "ef8a39517dfa10bd3b0bbec1e2b1c2214e92f66510b332adadd9179b4c44e6c1",
+      "decision": "APPROVE",
+      "reviewer": "author4 independent read-only",
+      "reviewedAt": "2026-11-18T11:45:30.981216+00:00",
+      "semanticrationale": [
+        "Read exact grid and full stable interview, then checked final age/tool-label amendments. Yusuf is58, a below-average JUNIOR electrician with vocational certificate only, supervised preparation/fitting after print-shop closure. Typical trade pay, three months saved and SOME similar employers correctly preserve MODERATE resources rather than prior thin profiles.",
+        "Partner accounts work, grown children living elsewhere, rented housing and unverified old employment/retirement records are consistent. No licence, diploma, lead role, sign-off authority or independent electrical competence is inferred from previous employment or age.",
+        "Adaptive daily study quizzes remain routine continuity. S1 genuinely new approved AI audio-note learning requires written employer approval, invented job examples, approved software, paid time, normal wages/hours retained and supervisor checks BEFORE any draft becomes a work record. Parent made AI audio-note tool explicit in do/step.",
+        "Moods calm/anxious/alarmed/alarmed/anxious distinguish current covered living costs from possible partner accounts-hour cuts and expected major accounts-income loss at the faster AGI dates. Persistent S3 alarm is supported by disrupted sleep and no confirmed replacement wage, despite extra checking time.",
+        "Thinking/physical ages are60/63,63/66,68/71; first post-arrival reviews2029/2032/2037 are correct. S4 now explicitly labels68/71 as Yusuf ages, without assigning an unprovided age to the partner. No pension right/date/amount, job at68, permanent work capacity or grown-child income is assumed.",
+        "Signing a shared paid-teaching request is real collective action, not course enrolment or employer agreement. Funded fees, retained normal paid hours/wages and written acceptance remain conditions. Qualification and practical checks stay with a qualified supervisor.",
+        "Association advice requests depend on actual availability; official records, eligibility, support grants/loans and costs require confirmation before income enters the budget. Missing records prompt a provider/former-employer enquiry rather than invented amounts or automatic proof of no resources.",
+        "Future exit or further work waits for verified income, essential costs and actual suitable work/capacity in2032/2037. Partner job/course applications remain that person choice, while grown-child help needs actual choice/agreement instead of assumed rent payments.",
+        "Summaries, actions and steps track the source without false new saving, career change or course commitment. All six quotes are literal, distinct and standalone. Repository validator plus updated audit.py pass exact cards/questions/order/two follow-ups, answer lengths, unique actions and actual word-count limits."
+      ],
+      "validation": [
+        {
+          "command": "node scripts/validate-archetype-interviews.mjs A29-31213",
+          "result": "1/1 valid"
+        },
+        {
+          "command": "python /tmp/paradigm-s7-20261118/audit.py A29-31213",
+          "result": "PASS"
+        }
+      ]
+    },
+    "A29-31211": {
+      "id": "A29-31211",
+      "sha256": "dc26c78cd8f3fd80cf086213b923f49ddfa7d9d86d19344e9a4fd79b99ba9870",
+      "decision": "APPROVE",
+      "reviewer": "author3-independent-readonly",
+      "reviewedAt": "2026-11-18T11:47:29.448331+00:00",
+      "semanticRationale": [
+        "Exact grid and complete interview read, then all final changed source/do/steps checked. Ivan is58, junior and below-average after depot closure, vocational certificate only, supervised with no electrician licence or sign-off authority. Typical pay, four-month reserve, some local alternatives, linen-store partner, grown children and mortgage match moderate resources rather than prior thin profiles.",
+        "Never uses AI and keeps familiar paper explanations. Political action is a specific shared letter to an elected representative seeking paid older-beginner learning, written voluntarily in free time without missing shifts. Required work instruction remains personal within paid shifts with normal weekly wages maintained. Writing a letter, asking about funding and comparing resources do not become enrolment, granted support or a job search.",
+        "Calm plateau and later unease are grounded in explicitly secure current wages and covered mortgage bills. Fast alarm follows expected major junior fitting-hour loss and sleeplessness despite a moderate buffer. Dates/ages60/63,63/66,68/71 and first-year2029/2032/2037 are consistent; neither birthdays nor adult children provide invented income.",
+        "Final community-advice actions are requests subject to availability rather than booked or guaranteed appointments. Current offered supervised work within actual ability is distinguished from 2032/2037 resource checks. Any later exit remains unchosen and requires confirmed budget affordability plus partner agreement; future paid options require actual ability and supervision rather than promised work at64/69.",
+        "S0 field note now describes only his own pay/reserve/local alternatives, with no production-profile comparison. Six literal standalone quotations, exact cards/core questions/two followups, sentence counts and split-word bullet/step limits pass actual repository validator and updated supplemental audit on final bytes."
+      ],
+      "checks": [
+        "node scripts/validate-archetype-interviews.mjs A29-31211 PASS",
+        "python /tmp/paradigm-s7-20261118/audit.py A29-31211 PASS"
+      ]
     }
   },
   "runtime": {
@@ -4897,17 +5162,17 @@
       "/root/review1",
       "/root/review2"
     ],
-    "agentsAtCheckpoint": "All prior sixteen interviews accepted after parent full reads and independent approvals. Next four disjoint drafting pairs reserved; review1/review2 on older junior pairs, waiting stability. No duplicate writer.",
+    "agentsAtCheckpoint": "All sixteen additions in this wave accepted after parent full profile/transcript reads and independent matching-hash approvals. Four next disjoint two-ID drafting pairs reserved; review1/review2 wait for stability on author1/author2 pairs. No duplicate writer.",
     "nextJob": "A29",
     "nextUnreservedIds": [
-      "A29-31122",
-      "A29-31123",
-      "A29-31131",
-      "A29-31132",
-      "A29-31133",
-      "A29-31211",
-      "A29-31212",
-      "A29-31213"
+      "A29-31313",
+      "A29-31321",
+      "A29-31322",
+      "A29-31323",
+      "A29-31331",
+      "A29-31332",
+      "A29-31333",
+      "A29-32111"
     ],
     "lastReviewPool": "All six agents reused as independent readers of other authors\u2019 disjoint pairs; hash-bound evidence embedded at checkpoint.",
     "reservationRoles": {
