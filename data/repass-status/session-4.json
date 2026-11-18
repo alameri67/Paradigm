@@ -1,7 +1,7 @@
 {
   "session": 4,
   "ownerId": "s4-4cd38e27-51d6-4be8-8efb-eca86307667e",
-  "state": "ACTIVE",
+  "state": "paused",
   "assignedRange": [
     "A17",
     "A18",
@@ -301,9 +301,13 @@
         "A17-33212",
         "A17-33213",
         "A17-33221",
-        "A17-33222"
+        "A17-33222",
+        "A17-33223",
+        "A17-33231",
+        "A17-33232",
+        "A17-33233"
       ],
-      "reviewedCount": 230,
+      "reviewedCount": 234,
       "acceptedNewHashes": {
         "A17-13111": "ee4b32afac5315e01d2157e0aa0e4c944e02b7e5efd63dcbdd3406f7ce35e154",
         "A17-13112": "5a54db50b0b6a97b91f6bc90fdad7796c2ccda08e834c0e08a165feea1dd720c",
@@ -480,13 +484,13 @@
         "A17-33212": "f01d8b97ebd2700e393d3c4736703bf648141446ea7cb8d89623e84039f42ed1",
         "A17-33213": "1dc4bcd650331a8fc29270e1df4874a31b6bbda3b178e5cb60a8974caeb3ed17",
         "A17-33221": "6458b164aebb6c910242e165d4e91775e63bbe6c5d6e6c7b4e2620b85b21f1de",
-        "A17-33222": "89e8dfef9cff755a0ce188e4942c04642b17d021f957247cacd8c5a11487b71a"
+        "A17-33222": "89e8dfef9cff755a0ce188e4942c04642b17d021f957247cacd8c5a11487b71a",
+        "A17-33223": "cb42e2a373f1b8e5b6ea7e141d6b42497e882a8f397285a831661b2fd6bd17de",
+        "A17-33231": "d0ef6c6cb944da475689665860f0d115b1355f30cfea7396ac0dce537e53379b",
+        "A17-33232": "98d03f8200913eab4edb00c7bc0d71593b74da40f7703c8f5f0077ff547fc50a",
+        "A17-33233": "fa6a3a848644cd7db000ce91ff48f1543d5ef52a4c7c92585e5c09221bc775ad"
       },
       "remainingGaps": [
-        "A17-33223",
-        "A17-33231",
-        "A17-33232",
-        "A17-33233",
         "A17-33311",
         "A17-33312",
         "A17-33313",
@@ -2152,7 +2156,7 @@
         "A17-33223",
         "A17-33231"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     {
       "worker": "author3",
@@ -2160,7 +2164,7 @@
         "A17-33232",
         "A17-33233"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     {
       "worker": "author4",
@@ -2168,7 +2172,7 @@
         "A17-33311",
         "A17-33312"
       ],
-      "state": "drafting"
+      "state": "paused; unaccepted"
     },
     {
       "worker": "author2",
@@ -2176,7 +2180,7 @@
         "A17-33313",
         "A17-33321"
       ],
-      "state": "drafting"
+      "state": "paused; unaccepted"
     },
     {
       "worker": "author1",
@@ -2184,10 +2188,26 @@
         "A17-33322",
         "A17-33323"
       ],
-      "state": "drafting"
+      "state": "paused; unaccepted"
+    },
+    {
+      "worker": "author3",
+      "ids": [
+        "A17-33331",
+        "A17-33332"
+      ],
+      "state": "paused; unaccepted"
+    },
+    {
+      "worker": "root",
+      "ids": [
+        "A17-33333"
+      ],
+      "state": "paused; unaccepted",
+      "note": "Coordinator final singleton; no subagent invocation."
     }
   ],
-  "latestCheckpointCommit": "f983d06ea5ac9a19f5bf5c27e819e41237d15cba",
+  "latestCheckpointCommit": "28a7d2dec7eb25a200de2373e276a7aab0834603",
   "validationCommands": [
     "node scripts/validate-archetype-interviews.mjs A17",
     "node scripts/validate-archetype-interviews.mjs A18",
@@ -4329,36 +4349,148 @@
         "root"
       ],
       "semanticReview": "Parent full exact profile/opening/all5scenario transcripts/followups/closing/summaries read. Independent reviewer1 findings resolved (Freya S4 omitted replacement-income requirement) and Gareth approval verified against actual source. Parent additionally made Freya S3 source written after-travel net explicitly replace BOTH lost recording/live fees, preserved BOTH recording/prep gates and replacement net in S4 summaries; doubling explained at first public use. Gareth newchecker explicitly AI/function and standalone quote, S3 Do replacementincome offer, and S4dual loss/net gates clarified. Senior masters moderate reserve/typicalpay/somejobs and AI habits fit. Expected near-third ownloss with actualnightwaking alarm, fifthloss anxiety, currentsecure longrununeasy verified. Currentpaid work untilsignedoffer, qualified actualposted paid humaninperson coaching duties/netaftertravel/route, real pensionestimate and extraafteressentials saving targets verified. Gareth fundedpaid certificate protects pit/pupilwages andtransport, recognitionbeforeenrollment/completionbeforeapplication/fee-loss/signednet replacement/supervision+safety clearance before solo shows. Actual validator+expanded audit rerun."
+    },
+    {
+      "id": "A17-33223",
+      "verdict": "APPROVE",
+      "sha256": "cb42e2a373f1b8e5b6ea7e141d6b42497e882a8f397285a831661b2fd6bd17de",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Parent full exact profile/opening/all5scenario transcripts/followups/closing/summaries read. Independent reviewer1 threshold concern adjudicated: written REPLACEMENT net after travel already means income replacement; no need verbatim repeat all losses. Genuine Nora S3step only written NET fixed to replacementNET. Parent made BOTH dual-loss gates explicit in Do/steps, paid human face-to-face voice coaching (Nora) and paid human rehearsal/correction (Victor) in S3source, checked qualifications/postedvacancy/trainbus/currentuntilsignedoffer throughout. Victor S1 Think erroneously singers changed to brassplayers; countrycurrency pounds changed to musicincome. Other replacementnet summaries already correct, no unsupported jobpromise. Senior masters/moderate reserve/typicalpay/AIhabits and distinctreusecoaching vsbrassmentoringplans verified. PublicSay firstanswer, exactstandalonequotes, conditionaloverhaul/no unearnedtag, actualpensionestimate not entitlement, genuine extra afteressentialssaving/targets, expectedmodestfee anxiety vs presentsecureuneasy checked. Actual repository validator and expanded audit rerun."
+    },
+    {
+      "id": "A17-33231",
+      "verdict": "APPROVE",
+      "sha256": "d0ef6c6cb944da475689665860f0d115b1355f30cfea7396ac0dce537e53379b",
+      "reviewers": [
+        "reviewer1",
+        "root"
+      ],
+      "semanticReview": "Parent full exact profile/opening/all5scenario transcripts/followups/closing/summaries read. Independent reviewer1 threshold concern adjudicated: written REPLACEMENT net after travel already means income replacement; no need verbatim repeat all losses. Genuine Nora S3step only written NET fixed to replacementNET. Parent made BOTH dual-loss gates explicit in Do/steps, paid human face-to-face voice coaching (Nora) and paid human rehearsal/correction (Victor) in S3source, checked qualifications/postedvacancy/trainbus/currentuntilsignedoffer throughout. Victor S1 Think erroneously singers changed to brassplayers; countrycurrency pounds changed to musicincome. Other replacementnet summaries already correct, no unsupported jobpromise. Senior masters/moderate reserve/typicalpay/AIhabits and distinctreusecoaching vsbrassmentoringplans verified. PublicSay firstanswer, exactstandalonequotes, conditionaloverhaul/no unearnedtag, actualpensionestimate not entitlement, genuine extra afteressentialssaving/targets, expectedmodestfee anxiety vs presentsecureuneasy checked. Actual repository validator and expanded audit rerun."
+    },
+    {
+      "id": "A17-33232",
+      "verdict": "APPROVE",
+      "sha256": "98d03f8200913eab4edb00c7bc0d71593b74da40f7703c8f5f0077ff547fc50a",
+      "reviewers": [
+        "author2",
+        "root"
+      ],
+      "semanticReview": "Parent full exactprofile/opening/all5scenario transcripts/followups/closing/summaries read. Independent author2 material findings verified. Parent splitexistingAI checks from savings; Daria follows (not listens to) conductor hand, separate memorial provider explicitly writes safe room terms with own playing/prep/bus fee and no displaced band/student calls atlaunch/renewal. Emeka newchecker explicitfunction and completedpaidlesson gate, S3trial conditionedon cue-fee loss and tagged learn-ai not unsupportedautomate, licensed private ownednameless/localapproved/manualplay/error-leakstops kept. Posted paid newrole explicitly human coaching or tuning/cue duties, acceptedmasters/leadership, Emeka scorerange, actualfurtherloss, written replacementnetaftertravel/bus/currentuntilsignedoffer checked; S4 BOTH live-cut AND pension-gap preserved. Moderatecushions/typicalpay/AIhabits/age58masters, publicfirstanswerSay, exactstandalonequotes, expectedsmall ownloss anxious vs conditionalcollapse and currentsecurelongrununeasy, realpensionstatement and extraafteressentialssavingtargets verified. Actualvalidator and expanded audit rerun."
+    },
+    {
+      "id": "A17-33233",
+      "verdict": "APPROVE",
+      "sha256": "fa6a3a848644cd7db000ce91ff48f1543d5ef52a4c7c92585e5c09221bc775ad",
+      "reviewers": [
+        "author2",
+        "root"
+      ],
+      "semanticReview": "Parent full exactprofile/opening/all5scenario transcripts/followups/closing/summaries read. Independent author2 material findings verified. Parent splitexistingAI checks from savings; Daria follows (not listens to) conductor hand, separate memorial provider explicitly writes safe room terms with own playing/prep/bus fee and no displaced band/student calls atlaunch/renewal. Emeka newchecker explicitfunction and completedpaidlesson gate, S3trial conditionedon cue-fee loss and tagged learn-ai not unsupportedautomate, licensed private ownednameless/localapproved/manualplay/error-leakstops kept. Posted paid newrole explicitly human coaching or tuning/cue duties, acceptedmasters/leadership, Emeka scorerange, actualfurtherloss, written replacementnetaftertravel/bus/currentuntilsignedoffer checked; S4 BOTH live-cut AND pension-gap preserved. Moderatecushions/typicalpay/AIhabits/age58masters, publicfirstanswerSay, exactstandalonequotes, expectedsmall ownloss anxious vs conditionalcollapse and currentsecurelongrununeasy, realpensionstatement and extraafteressentialssavingtargets verified. Actualvalidator and expanded audit rerun."
     }
   ],
   "scratchDirectory": "/tmp/paradigm-s4-20261118-1332",
-  "updatedAt": "2026-11-18T12:53:46.427499+00:00",
+  "updatedAt": "2026-11-18T13:05:29.854438+00:00",
   "validationResults": {
     "baseline": "221 existing protocol3.1 interviews passed repository validator; hashes preserved.",
-    "acceptedNew": 176,
+    "acceptedNew": 180,
     "checks": [
       "Repository validator: one canonical ID per new file; zero errors.",
       "Supplemental exact profile/card/core question/order/followup/answer length/bold/literal quote audit: zero errors.",
       "Independent read-only review plus full parent content review and documented corrections."
     ],
     "protectedHashes": "All initial and accepted hashes rechecked before checkpoint.",
-    "lastReviewedRun": "176/176 accepted new interviews passed repository and expanded checks; all 221 initial and accepted hashes match."
+    "lastReviewedRun": "180/180 accepted new interviews passed repository and expanded checks; all 221 initial and accepted hashes match.",
+    "pauseAcceptedPassing": "401/401 reviewed owned interviews pass repository validator; 180/180 newly authored pass expanded audit; all 221 startup-passing hashes unchanged."
   },
-  "lastCheckpointPreparedAt": "2026-11-18T12:53:20.238833+00:00",
+  "lastCheckpointPreparedAt": "2026-11-18T13:05:06.155679+00:00",
   "lastSuccessfulPush": {
-    "commit": "f983d06ea5ac9a19f5bf5c27e819e41237d15cba",
+    "commit": "28a7d2dec7eb25a200de2373e276a7aab0834603",
     "branch": "claude/repass-3.1-s4-a17-a20",
-    "reviewedNew": 176,
-    "at": "2026-11-18T12:53:46.427499+00:00"
+    "reviewedNew": 180,
+    "at": "2026-11-18T13:05:29.854438+00:00"
   },
   "currentJob": "A17",
   "milestones": {
-    "A17": "230 reviewed profiles accepted; next gap A17-33223.",
+    "A17": "234 reviewed profiles accepted; next gap A17-33311.",
     "A18": "55 reviewed profiles accepted; next gap A18-13111.",
     "A19": "56 reviewed profiles accepted; next gap A19-13113.",
     "A20": "56 reviewed profiles accepted; next gap A20-13112."
   },
-  "latestDataCheckpointCommit": "f983d06ea5ac9a19f5bf5c27e819e41237d15cba",
+  "latestDataCheckpointCommit": "28a7d2dec7eb25a200de2373e276a7aab0834603",
   "checkpointCommitMeaning": "Reviewed data checkpoint; a status-only record commit follows it.",
-  "latestObservedHead": "f983d06ea5ac9a19f5bf5c27e819e41237d15cba"
+  "latestObservedHead": "28a7d2dec7eb25a200de2373e276a7aab0834603",
+  "pause": {
+    "requestedByUser": true,
+    "reason": "User is concerned about usage limits and requested pause plus integration of ready work to main.",
+    "at": "2026-11-18T13:04:31.835026+00:00",
+    "acceptedCounts": {
+      "A17": 234,
+      "A18": 55,
+      "A19": 56,
+      "A20": 56
+    },
+    "unacceptedDrafts": [
+      {
+        "id": "A17-33311",
+        "sha256": "cec93f8ff2df5b49aafb14f0bc5ce5426871f092c5a159df02a89120bb60b17d",
+        "path": "data/interviews/archetypes/raw/A17-33311.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33312",
+        "sha256": "b0b65cdc95a801869ef27430bfe733502df7273caf98c649e6adbe38570944ba",
+        "path": "data/interviews/archetypes/raw/A17-33312.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33313",
+        "sha256": "ee1c819313ff190f329d41d344a733bdfd137a9f381c8f7675ff9a08a4af3f79",
+        "path": "data/interviews/archetypes/raw/A17-33313.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33321",
+        "sha256": "1f56731342c9af1933dffff1cbc8ef31fab103c41599e3af336edc4f8f614faf",
+        "path": "data/interviews/archetypes/raw/A17-33321.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33322",
+        "sha256": "ff59aaaa80e67bda3dac16bf98ef30e1f6d55d59d2f8cd8db1ede00991007a01",
+        "path": "data/interviews/archetypes/raw/A17-33322.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33323",
+        "sha256": "5fd8dabece41ff1746552ea4cd7e39c3ae7bedc93437597db1bb80efeafecd78",
+        "path": "data/interviews/archetypes/raw/A17-33323.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33331",
+        "sha256": "ca2b9db7fca1c3581f68ca64b85615caefcf53e24183edda83dd36d652f650cc",
+        "path": "data/interviews/archetypes/raw/A17-33331.json",
+        "state": "unaccepted; pending coordinator full review"
+      },
+      {
+        "id": "A17-33332",
+        "sha256": "ab64e12a74ca56d9a165e0a65404496f8fbbd13f38079f5534628fb92d99e246",
+        "path": "data/interviews/archetypes/raw/A17-33332.json",
+        "state": "unaccepted; pending coordinator full review"
+      }
+    ],
+    "notDrafted": [
+      "A17-33333"
+    ],
+    "insightsDraft": "/tmp/paradigm-s4-20261118-1332/author4-insights-218-revised",
+    "resumeInstructions": "Resume this owner/branch explicitly. Preserve initial and accepted hashes. Review the eight unaccepted A17 senior drafts; fix 33311/33312 opening disclosures. A17-33333 is reserved to coordinator but not drafted. Finalize and independently audit A17 insights at 243; then process A18, A19, A20 ascending. No new writing during pause.",
+    "mainIntegrationScope": "Only canonical reviewed/passing A17\u2013A20 IDs listed in jobs[].reviewedIds and this status file; exclude all unaccepted drafts and provisional insights.",
+    "mainBase": "71cdb5e4f6cce6421b25bfa86facc830887dfee1",
+    "localRecoveryArchive": "/tmp/paradigm-session-4-pause-20261118.tar.gz",
+    "localRecoveryArchiveSha256": "9dd0aab43bb36a222d7ac4b9b496bbf6afad895f8de5df6b1da316ad470b56a8",
+    "allSixAgentsStopped": true
+  }
 }
