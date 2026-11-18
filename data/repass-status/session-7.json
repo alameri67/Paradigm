@@ -10,10 +10,10 @@
     "A32"
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
-  "updatedAt": "2026-11-18T12:36:38.973680+00:00",
+  "updatedAt": "2026-11-18T12:46:14.195912+00:00",
   "jobs": {
     "A29": {
-      "reviewedCount": 198,
+      "reviewedCount": 206,
       "reviewedIds": [
         "A29-11111",
         "A29-11112",
@@ -212,9 +212,7 @@
         "A29-32123",
         "A29-32131",
         "A29-32132",
-        "A29-32133"
-      ],
-      "remainingGaps": [
+        "A29-32133",
         "A29-32211",
         "A29-32212",
         "A29-32213",
@@ -222,7 +220,9 @@
         "A29-32222",
         "A29-32223",
         "A29-32231",
-        "A29-32232",
+        "A29-32232"
+      ],
+      "remainingGaps": [
         "A29-32233",
         "A29-32311",
         "A29-32312",
@@ -261,7 +261,7 @@
         "A29-33332",
         "A29-33333"
       ],
-      "insightValidation": "not_started",
+      "insightValidation": "in_progress: first rebuild from frozen206 reviewed sources",
       "baselineReview": "Coordinator-accepted baseline, independently revalidated structurally; hashes preserved."
     },
     "A30": {
@@ -1394,7 +1394,15 @@
     "A29-32123": "ee20870781007917cd73cc5cce69abf658e52b85aceb312be8b96e8e3048b599",
     "A29-32131": "c4d129a52e87bdd61030fb561bf2891dd2e6c5c704a9889a040f48ddd4bae96b",
     "A29-32132": "2a058ef84f4c4d96fb024e5235a721f8b7b3c33a8dc5a26664b16b8793f12581",
-    "A29-32133": "ebcaa58cee84765deb798b0d612018ca721c4f27572253ff1922a767a380678e"
+    "A29-32133": "ebcaa58cee84765deb798b0d612018ca721c4f27572253ff1922a767a380678e",
+    "A29-32211": "00f6637aa931b0bc71670a9e7391a41414db295e366a4d32d4496a035d31b832",
+    "A29-32212": "1a52e383275058b292bee9387eebec61ad10fd64c60955103bbcfcbd4b038072",
+    "A29-32222": "6c03e91cea9000a0a3d841723a135caad17cd7e6280b5925763b1db10df50e8a",
+    "A29-32223": "4327edc19fb184a18a5854815ffe7b2b8105a03b388971646ad3dd1b3f59d933",
+    "A29-32231": "f9106083d860ae61b8841a871b178dac288b3d051f7112ead25a622c8bc94746",
+    "A29-32232": "5b33ba3f1faee1554e37d370b9224c5d35e972c11c3abda553a62cdebda2983f",
+    "A29-32213": "56df948c54920ac2aac0edf1695d0c5df1811c35da3ac14fb8c63eb10f70dd54",
+    "A29-32221": "c7f6698e6d188dd155ec0388a862d79c20ebd8ebae35e2a9e0212b73fe1a7679"
   },
   "reservations": {
     "author1": [
@@ -2041,9 +2049,41 @@
     {
       "command": "node scripts/validate-archetype-interviews.mjs <198 exact A29 IDs from preserved+accepted manifest>",
       "result": "198/198 reviewed files valid; unreviewed drafts excluded. All140 new accepted files also pass independent supplemental audit."
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32211",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32212",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32222",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32223",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32231",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32232",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32213",
+      "result": "1/1 valid; parent supplemental audit PASS"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A29-32221",
+      "result": "1/1 valid; parent supplemental audit PASS"
     }
   ],
-  "latestCheckpointCommit": "838c0918090557a262cbce70c5dd4d45bb6fb5ac",
+  "latestCheckpointCommit": "f9d6811e74801980df21b6778e1c4b2986c5ee53",
   "semanticReview": [
     {
       "id": "A29-13113",
@@ -2884,6 +2924,54 @@
       "decision": "APPROVE",
       "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
       "sha256": "ebcaa58cee84765deb798b0d612018ca721c4f27572253ff1922a767a380678e"
+    },
+    {
+      "id": "A29-32211",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "00f6637aa931b0bc71670a9e7391a41414db295e366a4d32d4496a035d31b832"
+    },
+    {
+      "id": "A29-32212",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "1a52e383275058b292bee9387eebec61ad10fd64c60955103bbcfcbd4b038072"
+    },
+    {
+      "id": "A29-32222",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "6c03e91cea9000a0a3d841723a135caad17cd7e6280b5925763b1db10df50e8a"
+    },
+    {
+      "id": "A29-32223",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "4327edc19fb184a18a5854815ffe7b2b8105a03b388971646ad3dd1b3f59d933"
+    },
+    {
+      "id": "A29-32231",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "f9106083d860ae61b8841a871b178dac288b3d051f7112ead25a622c8bc94746"
+    },
+    {
+      "id": "A29-32232",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "5b33ba3f1faee1554e37d370b9224c5d35e972c11c3abda553a62cdebda2983f"
+    },
+    {
+      "id": "A29-32213",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "56df948c54920ac2aac0edf1695d0c5df1811c35da3ac14fb8c63eb10f70dd54"
+    },
+    {
+      "id": "A29-32221",
+      "decision": "APPROVE",
+      "record": "Parent full transcript/profile review plus independent read-only review; exact cards/questions, timelines, supported summaries/actions, quotes and conditions checked.",
+      "sha256": "c7f6698e6d188dd155ec0388a862d79c20ebd8ebae35e2a9e0212b73fe1a7679"
     }
   ],
   "reviewEvidence": {
@@ -5928,6 +6016,172 @@
         "Final quotes specify electrician licence and all quotes/headline are exact, distinct and standalone. No pension, child support, future job or physical capacity is assumed."
       ],
       "blockers": []
+    },
+    "A29-32211": {
+      "id": "A29-32211",
+      "decision": "APPROVE",
+      "sha256": "00f6637aa931b0bc71670a9e7391a41414db295e366a4d32d4496a035d31b832",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Actual repository validator and updated supplemental exact audit PASS; final plain union wording, S2-S4 actions/steps and dated2032/2037 do resource checks before unchosen exit decisions independently reread.",
+      "profile": "Sara Zhang58 MID experienced/AVERAGE electrician, VOCATIONAL CERTIFICATE AND ELECTRICIAN LICENCE, familiar testing/paperrecords, no master/crewlead or junior-only carryover. MODERATE5months/typicalpay/SOMEfirms, mortgage/warehouse-picker partnerBen/GROWNchildren. Progressive union member with existing dues; NEVERAI resistant with worker voice rather than personal AIadoption.",
+      "conditions": "S0 coveringtwo wages/roomaftercosts and5monthreserve explicit, regularbudget/current licensed offeredpaidrepairs. S1 PAPER preparation/repair/testing record TWO WEEKS NOW, request UNION bargaining through EXISTING MEMBERSHIP with NO EXTRA FEES; seek WRITTEN PAID PREPARATION AND TESTING BEFORE accepting TIGHTERROTA, no agreementwonassumed and safetychecks notshortened. S2-S4 actualincome records/AVAILABLE unionmembershipadvice WITHOUT EXTRAFEES, verifyeligibility/paymentcosts BEFORE COUNTING PAYMENTS, no birthdayentitlement/childwages.2029 currentofferedpaid repairs withinlicence/competence/safeprocedures. Quarterly Ben household income/essentialreviews EARLIER after wageORhealthchanges retainedsource/do;2032/2037 VERIFIED resources and actualcapacity before UNCHOSEN exit/furtherworkdecision. Laterwork onlygenuineoffered suitablepaid andfitslicence/competence/safeability; no job68/69/66 guarantee or retirementincome assumed.",
+      "mood": "S0calm explicit coveringwages/roomaftercosts/moderatereserve. S1anxious realistic ownpaidpreparation/testing-hour loss, reserve doesnoteraseearningsrisk. S2anxious plausible two physicalwages losses but nopreciseexpectedcertainmajor/sleeplessclaim. S3/S4uneasy explicitly steady nearterm two wages/currentfinancialsecurity and laterresources/capacity uncertainties; lowerdistress actualsourceexplained.",
+      "quotes": "Six distinct literal <=30word complete standalone quotes checked; no namedpersonrelationshipgaps or backwardreferences. Form/test headline concrete and supported by repairvoice.",
+      "semantic": "Chosen shared union bargaining supports collectiveaction; membershipadvice supports seeksupport rather than newmembership or grantreceived. No AIlearning/retrain/saving/earlyretirement invented. Proactive budget/resourceverification and affordabilityguard not a separate chosen delay beforeacting; removing genericwaittag while keeping constraintsdo/source correct."
+    },
+    "A29-32212": {
+      "id": "A29-32212",
+      "decision": "APPROVE",
+      "sha256": "1a52e383275058b292bee9387eebec61ad10fd64c60955103bbcfcbd4b038072",
+      "readFullProtocol": true,
+      "readFullProfile": true,
+      "readFullInterview": true,
+      "validation": "Actual repository validator and updated supplemental exact audit with word/bold counts PASS2/2. Final fourNOWcourse steps/S2-S4narrowedactions/steps and retained monthlydatedresourcecapacitydo independently reread.",
+      "profile": "Aaron Farah58 MIDexperienced/AVERAGE electrician with VOCATIONAL CERTIFICATE AND ELECTRICIAN LICENCE, no master/crewleader. MODERATE2.5months/TYPICALpay/SOMEfirms, rent/dentalreceptionpartnerIris/GROWNchildrenelsewhere. Progressive employerfundedskills outlook and STEADY occasionalprovencheckedAIwording, no routinelearnAI relabelling.",
+      "conditions": "S0 offeredPAIDrepairs withinlicence/competence/safeprocedures, existing checkedwordingtool and monthlyactualhouseholdbudgetcontinue. S1-S4 chosen TWO EVENING INTERCOM fault sessions NOW with CONFIRMEDPLACE and EMPLOYER-FUNDED FEES,MATERIALS ANDTRAVEL; PAIDTIME with NORMAL WEEKLY WAGES AND HOURS PROTECTED, existinglicence/competence/safeprocedures unchanged. Use newfaultknowledge onlyactualofferedcompetencerepairs, no promised newrole/standing or personalfundedfees/borrowedterms. S2-S4 requestrecords/AVAILABLE FREE advice, eligibility/costchecks BEFORECOUNTINGPAYMENTS. MONTHLY actualincome/essentialreviews and dated2029/2032/2037verifiedresources/actualcapacity before unchosen exit/furtherworkdecisions retained source/do. Lateractualpaidtask must fit thenlicence/competence/safephysicalcapacity, no job69/pensionentitlement/payment or grownchildwages assumed. Iris owns career/course choices, not assigned retraining by partner.",
+      "mood": "S0calm explicitbothwagescoverordinarycostsandmoderatereserve, no imaginary plateau receptioncut. S1anxious receptionhourrisk and ownpaidpreparation, ownwage insufficient alone. FastALARMED expectedMAJOR receptionwageloss2028 + explicitrentwakefulness, physicalrobotslater2031. S3/S4anxious actualsourceearlierreceptionrisk despite laterAGI, not forced calm from currentcoveringwages.",
+      "quotes": "Six distinct literal <=30word complete standalone quotes checked; partnerrelationshipclear, no unexplainednamedpeople or backwardreference. Recordresponsibilityheadline grounds experiencedaveragevoice.",
+      "semantic": "Actualconditionalfundedcurrentrefresher supportsretrain, separateincomeadvice supportsseeksupport. Routine monthlybudget/capacityverification and affordabilityconditions are proactive, not chosen delay beforeacting, so genericwaittagremoval sound. No newAIlearning/automation from existingcheckedwording, no retireearly or entitlementguarantee."
+    },
+    "A29-32222": {
+      "id": "A29-32222",
+      "sha256": "6c03e91cea9000a0a3d841723a135caad17cd7e6280b5925763b1db10df50e8a",
+      "reviewer": "author2",
+      "readOnly": true,
+      "decision": "APPROVE",
+      "reviewedAtUTC": "2026-11-18T12:44:11.787822+00:00",
+      "semanticRationale": [
+        "Exact age 58 experienced mid-level average electrician profile retains vocational certificate and electrician licence, typical pay, four-month reserve, some firms, partner and grown children, with no master upgrade.",
+        "S1 is a real six-week delay to a new AI learning decision with an earlier wage-loss trigger; ordinary notes and quarterly budgeting are not misclassified as new learning or budget-only waiting.",
+        "S2\u20134 chosen spring 2027 workshop is grounded in a colleague's demonstrated practice. Confirmed two paid days preserve normal weekly wages and hours; all 240 costs including travel come from wages after essentials with partner agreement, protected reserve and no borrowing.",
+        "Actual offered licensed repairs, resources, later costs, capacity and partner-agreed affordable exit checks preserve current versus 2029/2032/2037 timing without pension, future employment or child income assumptions.",
+        "Calm baseline, plausible paid-hour anxiety, expected large later physical earnings loss with sleeplessness and explicit near-term security in the long scenario support moods individually. All six quotes are literal, distinct and standalone; annotations remain supported."
+      ],
+      "blockers": [],
+      "checks": {
+        "repositoryValidator": "PASS",
+        "supplementalAudit": "PASS",
+        "independentPythonSplitLengthsAndBold": "PASS",
+        "caseSensitiveSingleAnswerLiteralQuotes": "PASS",
+        "semanticProfileTimelineMoodActionsConditions": "APPROVE"
+      }
+    },
+    "A29-32223": {
+      "id": "A29-32223",
+      "sha256": "4327edc19fb184a18a5854815ffe7b2b8105a03b388971646ad3dd1b3f59d933",
+      "reviewer": "author2",
+      "readOnly": true,
+      "decision": "APPROVE",
+      "reviewedAtUTC": "2026-11-18T12:45:01.068919+00:00",
+      "semanticRationale": [
+        "Exact age 58 experienced mid-level average electrician profile preserves vocational certificate and electrician licence, typical pay, three-month reserve, some firms, partner and grown children; no master or crew-lead upgrade.",
+        "Chosen lamp-repair pilot remains one Saturday monthly within licence and skill, with written employer permission, confirmed insurance, no reduction in normal weekly wages or hours and no assumed profit. Existing checked daily AI is not newly tagged learning or automation.",
+        "All pilot costs including insurance and travel fit the 200 cap from wages after essentials, with protected reserve, partner consent and no borrowing. The funding condition stays continuous when household wages fall.",
+        "2029 offered paid licensed work and 2032/2037 actual resources, costs, capacity and offers are reviewed with Noor before an affordable agreed exit; no pension, future job, physical capacity or grown-child income is assumed.",
+        "Expected large 2028 appointment-income loss and sleeplessness support alarm; possible earlier household wage cuts support persistent anxiety in longer scenarios. Biggest worry now accurately states expected loss. All six quotes are exact, distinct and standalone; final Do wording is plain."
+      ],
+      "blockers": [],
+      "checks": {
+        "repositoryValidator": "PASS",
+        "supplementalAudit": "PASS",
+        "independentPythonSplitLengthsAndBold": "PASS",
+        "caseSensitiveSingleAnswerLiteralQuotes": "PASS",
+        "semanticProfileTimelineMoodActionsConditions": "APPROVE"
+      }
+    },
+    "A29-32231": {
+      "id": "A29-32231",
+      "sha256": "f9106083d860ae61b8841a871b178dac288b3d051f7112ead25a622c8bc94746",
+      "decision": "APPROVE",
+      "reviewer": "author1",
+      "reviewedAt": "2026-11-18T12:45:01.223892+00:00",
+      "semanticRationale": [
+        "Exact profile preserved: age 58, experienced middle standing and average skill, vocational certificate and electrician licence, typical pay, moderate four-month reserve, some local alternatives, partner and grown children, traditional resistant and never AI.",
+        "Full source and annotations support calm baseline and uneasy later secure near-term household judgments; fast scenario anxiety follows possible own and partner physical paid-hour losses rather than invented guaranteed loss.",
+        "Changed S2 do and training step now retain an available two-hour paper-record refresher, full employer fee/travel funding, paid-shift time and maintained normal weekly wages; no AI learning or upgraded qualification is inferred.",
+        "Changed S3 genuine additional 80 monthly wage saving requires real surplus after essentials and Rowan agreement; annotations now retain pausing and never borrowing, without relabelling old reserves as new saving.",
+        "2029 actual offered work and 2032/2037 resource, cost, capacity, actual options and affordable partner-agreed exit checks remain conditional, with no pension, future hiring, physical capacity or child-income guarantees.",
+        "All six displayed quotes remain literal standalone transcript sentences. Exact cards/questions, follow-ups, answer lengths, tag grounding and plain bullet/step bounds pass both validator and supplemental audit."
+      ],
+      "validation": {
+        "repositoryValidator": "PASS",
+        "supplementalAudit": "PASS",
+        "caseSensitiveLiteralQuotes": "PASS"
+      }
+    },
+    "A29-32232": {
+      "id": "A29-32232",
+      "sha256": "5b33ba3f1faee1554e37d370b9224c5d35e972c11c3abda553a62cdebda2983f",
+      "decision": "APPROVE",
+      "reviewer": "author1",
+      "reviewedAt": "2026-11-18T12:45:01.224693+00:00",
+      "semanticRationale": [
+        "Exact profile preserved: age 58, experienced middle standing and average skill, vocational certificate and electrician licence, typical pay, moderate two-month reserve, some firms, partner and grown children, traditional steady with occasional checked AI.",
+        "Baseline unpaid Friday and possible shorter weeks support anxiety, expected large partner claims-wage losses support alarm in faster thinking scenarios, and present wage concerns remain visible in the long horizon.",
+        "Changed S1 do/step explicitly name approved AI parts comparison after demonstration, free paid practice and normal weekly wages; ratings and job requirements must be checked before use. Joint request remains conditional on two willing colleagues agreeing and signing wording.",
+        "Changed S2 retains the source-chosen fee-free 12 weekly bowling pause for eight weeks in do, action list and a fourth cut-spending step. Signed-offer safeguards retain guaranteed pay/hours covering mortgage and ordinary costs after travel before leaving.",
+        "Changed S3 two-half-day class now has separate retrain steps preserving available place, all employer-paid fees/travel, paid shifts, normal weekly wages and no borrowing. Consolidated current-work/2032 step retains actual resources, costs, ability, offers and affordable Nina-agreed exit.",
+        "Future first-year dates and age distinctions remain correct; no course, licence, new employer, future job capacity, pension entitlement or adult-child income is guaranteed. All six displayed quotes remain literal standalone source sentences, with both automated checks passing."
+      ],
+      "validation": {
+        "repositoryValidator": "PASS",
+        "supplementalAudit": "PASS",
+        "caseSensitiveLiteralQuotes": "PASS"
+      }
+    },
+    "A29-32213": {
+      "id": "A29-32213",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "56df948c54920ac2aac0edf1695d0c5df1811c35da3ac14fb8c63eb10f70dd54",
+      "reviewedAt": "2026-11-18T12:45:42.208131+00:00",
+      "scope": [
+        "Exact grid profile and full current transcript/annotations",
+        "Protocol 3.1 semantic review",
+        "Grounded actions and all material conditions",
+        "Literal standalone quotes, ages, first-year dates and moods"
+      ],
+      "validation": [
+        "Repository validator: pair 2/2 valid",
+        "Updated supplemental audit: pair PASS"
+      ],
+      "notes": [
+        "Beth remains an experienced average mid-level electrician with vocational certificate and electrician licence, typical pay, four months saved and some nearby firms. Daily checked AI notes do not confer master or managerial standing.",
+        "Secure current earnings support calm baseline and uneasy longer horizon; possible paid-hour cuts support anxious steady change, and expected major household physical-repair losses with sleep disturbance support alarm in fast/middle worlds.",
+        "Four new AI parts-photo lessons require employer permission, free paid shifts, normal weekly wages and hours, approved noncustomer training photos and actual part/maker instruction checks before use.",
+        "New 60 monthly deposits come only from actual surplus after bills with partner agreement and stop if surplus disappears, without relabelling old savings.",
+        "Six-month union transition requests preserve normal weekly wages and hours without assuming employer agreement. Final steps distinguish licensed repairs now from actual resources, costs, ability and offers reviewed in 2029/2032/2037 before jointly affordable exit.",
+        "No future job, physical capacity, pension, child payments or family housing/care is assumed. All quotes and headline literal, distinct and standalone."
+      ],
+      "blockers": []
+    },
+    "A29-32221": {
+      "id": "A29-32221",
+      "verdict": "APPROVE",
+      "reviewer": "review1",
+      "sha256": "c7f6698e6d188dd155ec0388a862d79c20ebd8ebae35e2a9e0212b73fe1a7679",
+      "reviewedAt": "2026-11-18T12:45:42.208496+00:00",
+      "scope": [
+        "Exact grid profile and full current transcript/annotations",
+        "Protocol 3.1 semantic review",
+        "Grounded actions and all material conditions",
+        "Literal standalone quotes, ages, first-year dates and moods"
+      ],
+      "validation": [
+        "Repository validator: pair 2/2 valid",
+        "Updated supplemental audit: pair PASS"
+      ],
+      "notes": [
+        "Ivan remains an experienced average mid-level electrician with vocational certificate and electrician licence, typical pay, ten weeks saved and some nearby firms; never-AI paper methods match resistant adaptability.",
+        "Paid-off housing and steady physical wages support calm baseline and uneasy distant horizon. Possible paid-hour losses support anxious steady/middle worlds; expected major repair loss with sleep disturbance supports fast alarm.",
+        "Individual six-week written paid-roster request preserves normal weekly wages and hours without claiming employer agreement or collective action. Original requirements and actual installations remain checked without starting AI use.",
+        "Locker cancellation removes a real 28 monthly cost before renewal with partner agreement, existing home space and no new storage costs; it is not new income.",
+        "Available free evening telephone advice requires partner agreement and mutually suitable time. Final steps distinguish licensed repairs now from actual 2029/2032/2037 resource/cost/ability/offer comparisons and jointly affordable exit.",
+        "No pension, child support, future job or capacity is assumed. Final quote explicitly names electrician licence; all quotes/headline exact, distinct and standalone."
+      ],
+      "blockers": []
     }
   },
   "runtime": {
@@ -5942,7 +6196,7 @@
       "/root/review1",
       "/root/review2"
     ],
-    "agentsAtCheckpoint": "First eight in this goal turn accepted after full parent reads and independent hash-bound approvals. Last eight to206 are stable/in review or completing bounded drafting: review1 on author4 pair, review2 on author2 completed pair, author2 reads author1 pair, author1 reads author3 pair. No additional raw work beyond206.",
+    "agentsAtCheckpoint": "All eight in final bounded wave accepted. A29 frozen at206 reviewed passing sources; no unfinished raw3.1 drafts. First insights rebuild in progress before any raw work beyond206.",
     "nextJob": "A29",
     "nextUnreservedIds": [
       "A29-32233",
@@ -5963,7 +6217,21 @@
       "review1": "read-only reviewer",
       "review2": "read-only reviewer"
     },
-    "rawDraftingGate": "Current remaining eight lead to206. No raw assignments beyond206 before first insights rebuild from frozen reviewed sources; refresh at243."
+    "rawDraftingGate": "PAUSED at206 until first insights independently reviewed, parent validated and checkpointed; refresh insights at243.",
+    "insightsWork": {
+      "sourceCount": 206,
+      "scratch": "/tmp/paradigm-s7-20261118/insights/A29-206",
+      "phase": "draft_scenarios",
+      "scopes": {
+        "author1": "S0 scratch insights only",
+        "author2": "S1 scratch insights only",
+        "author3": "S2 scratch insights only",
+        "author4": "S3 scratch insights only",
+        "review2": "S4 scratch insights only",
+        "review1": "independent numerical census and later scenario evidence review"
+      },
+      "interviewWrites": "none"
+    }
   },
   "checkpointCommitConvention": "latestCheckpointCommit names the completed checkpoint immediately preceding this status snapshot; the commit containing this file identifies its publication.",
   "rangeComplete": false,
