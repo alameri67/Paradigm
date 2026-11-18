@@ -87,7 +87,8 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
       label: "Of everyone shown",
       value: pctOf(seg.n, total),
       suffix: "%",
-      detail: `${ofText(seg.n, total)} people feel ${listOf(seg.moods.map((m) => MOOD_LABEL[m].toLowerCase())).replace(/ and /, " or ")}.`,
+      // Short captions, one line each, so the tiles' bars line up (the title above already says what it counts).
+      detail: `${ofText(seg.n, total)} people`,
       context: `${cap(otherName)} are ${pctOf(other.n, total)}%, ${other.n} people.`,
       visual: { kind: "share", count: seg.n, of: total },
       icon: <DashIcon name={side === "low" ? seg.moods[0] : seg.moods[seg.moods.length - 1]} size={16} />,
@@ -99,7 +100,7 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
       label: cap(phrase.replace(/^will /, "")),
       value: pctOf(a.count, seg.n),
       suffix: "%",
-      detail: a.text,
+      detail: `${ofText(a.count, seg.n)} people`,
       context: vs(other.acts[a.tag] ?? 0),
       visual: { kind: "share", count: a.count, of: seg.n },
       icon: <DashIcon name={hasDashIcon(a.tag) ? a.tag : "other"} size={16} />,
@@ -151,11 +152,11 @@ function End({ seg, other, total, side, order, named }: { seg: Segment; other: S
         </span>
       </div>
       {named && <p className="db-end-story">{named.story}</p>}
-      <div className="db-end-block">
+      <div className="db-end-block db-end-who">
         <div className="db-end-label">Who they are</div>
         <WhoCols seg={seg} order={order} />
       </div>
-      <div className="db-end-block">
+      <div className="db-end-block db-end-do">
         <div className="db-end-label">What they&apos;ll do</div>
         <StatsBand stats={stats} layout="divided" duration={1.2} className="db-end-kpis" style={{ "--sb-accent-in": accent } as CSSProperties} />
       </div>
