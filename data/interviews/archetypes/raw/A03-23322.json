@@ -11,24 +11,16 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent research group. We don't work for AI companies, employers, unions or any party, and we're not selling anything. Everything you say stays confidential, so feel free to tell me what you'd say in public and, separately, what you really think. To start, can you walk me through a normal working day?"
+      "text": "I’m with the Work Futures Panel, an independent research group. We have no ties to employers, AI firms, unions or government. Your answers stay confidential. What does a normal workday look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I'm a foreman on the new-construction side, so I run a crew that puts power into brand-new housing estates on the edge of town. Right now we're on a site called Willow Ridge, three hundred houses, and my day is reading drawings, laying underground cable in trenches, setting pad-mount transformers, those green boxes you see on lawns, and energising streets one by one. I like that there's nothing there in March and by November kids are trick-or-treating under lights we put in. What wears me out is developers changing the plans every week and the mud."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What's home like for you?"
-    },
-    {
-      "speaker": "persona",
-      "text": "My wife Ingrid is an accountant at a mid-size firm downtown. We've got a son who's fifteen and a daughter who's twelve, a mortgage on a house in the older part of town, and a share in a lake cabin with my brother. I use the AI tools sometimes, once my crew lead showed me how to get material lists out of a drawing, but I don't live on them. I'm a 'let someone else find the bugs' kind of guy."
+      "text": "I lead a power line crew doing repairs and new connections for the electricity company. My technical diploma gave me the calculations, and years on the truck taught me to let the newest worker say when a reading looks wrong. I enjoy teaching that part; I dislike a callout arriving without the right pole number. My partner Nia and I have two children in school, a mortgage, higher pay than most lineworkers and about eight months of expenses saved. I use AI occasionally to tidy a handover note, then check it against the meter sheet."
     }
   ],
   "scenarios": {
@@ -36,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's like most new things, overhyped at the start, useful in small ways. I'd tell the crew to keep using the material-list trick because it saves an hour. Nothing to get worked up about."
+          "text": "I would tell colleagues that a shorter handover note is useful if the switch number and meter reading stay visible. The actual repair still belongs to the person at the line."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It means nothing much changes, and that's honestly fine. Ingrid's work stays steady too, which matters as much to us as mine. We'd carry on like before."
+          "text": "This small change would not threaten my shifts or our mortgage. I do not want an apprentice to assume a clean AI summary means someone else verified the line."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep running Willow Ridge, then the next estate after it. Keep our savings plan the same and keep paying the mortgage on schedule. Maybe finally fix the cabin dock this summer like I've been promising my brother."
+          "text": "I would keep the repair rota and add a box for the test reading to my handover template. In the first year I would ask the next shift which part of the new note still makes them ring back."
         },
         {
           "speaker": "interviewer",
@@ -64,45 +56,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A little bit of 'well, that was a lot of talk.'"
+          "text": "Calm, with a little professional caution. The household can handle a paperwork experiment."
         },
         {
           "speaker": "interviewer",
-          "text": "You mentioned Ingrid's job mattering as much as yours. Why?"
+          "text": "What makes the next shift ring back now?"
         },
         {
           "speaker": "persona",
-          "text": "Because two incomes is how the house works. Mine's higher on paper with overtime, but hers is steady all year. In winter, when the building sites go quiet, it's her spreadsheets that pay for my boots."
+          "text": "Usually the note says a fuse was replaced but leaves out the reading afterward. I would put the meter reading on the first line of the line repair handover, not bury it in a paragraph."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you spend the time savings on, if you had a choice?"
+          "text": "Would you buy a tool for this?"
         },
         {
           "speaker": "persona",
-          "text": "Training the two new apprentices properly. Right now they learn by watching me shout at a developer. I'd rather spend an extra hour showing them how to read a drawing."
+          "text": "No. The company tool already does enough for my occasional use, and I see no reason to spend family money on a second one."
         }
       ],
-      "say": "It's like most new things, overhyped at the start and useful in small ways. I'd tell the crew to keep using the material-list trick because it saves an hour.",
-      "think": "Nothing much changes and that's fine with me. My wife's work stays steady too, which matters to us as much as mine does.",
-      "do": "Keeps running the Willow Ridge site and the next estate after it, with savings and mortgage plans unchanged. Spends the summer fixing the shared cabin's dock as promised.",
-      "feel": "Calm, with a sense of 'that was a lot of talk.'",
+      "say": [
+        "**AI handovers** help only when switch numbers and meter readings stay visible.",
+        "**Physical repair** still belongs to a lineworker at the site."
+      ],
+      "think": [
+        "Our **eight-month buffer** and steady shifts keep the mortgage secure here.",
+        "An **apprentice** might mistake a clean summary for a verified repair."
+      ],
+      "do": [
+        "**Keep** the repair rota and add a test-reading box to handovers.",
+        "**Ask** the next shift which missing details still cause a callback."
+      ],
+      "feel": [
+        "**Calm**, with professional caution about handovers."
+      ],
       "mood": "calm",
-      "quote": "In winter, when the building sites go quiet, it's her spreadsheets that pay for my boots.",
-      "fieldNote": "Rafael thinks about his household as a two-income unit from the start, which shapes how he reads every scenario. He's measured and practical, using AI only where it has proved itself. He'd use any spare time to train apprentices.",
+      "quote": "I would put the meter reading on the first line of the line repair handover, not bury it in a paragraph.",
+      "fieldNote": [
+        "He uses **AI occasionally** and checks each handover against the meter sheet.",
+        "His **strong buffer** makes this a workmanship question rather than an income threat."
+      ],
       "actions": [
-        "keep-going"
+        "keep-going",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep line repair rota and put test readings on handovers",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Improve AI handover template using next-shift callbacks",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's going to change how we work, so let's be smart about it and not panic. I'd tell the apprentices to learn the tools once they've settled down. I'm not one to make a big public point."
+          "text": "I would say a faster call desk could help us, but the new route plan needs a trial in a bucket truck. Thinking tasks change now; field robots come more slowly, so I would not rewrite the crew size on day one."
         },
         {
           "speaker": "interviewer",
@@ -110,7 +127,7 @@
         },
         {
           "speaker": "persona",
-          "text": "My job I'm not too worried about. Someone still has to dig the trench and set the box. But Ingrid's job, that's where this hits, accountants are right in the firing line, and if her firm halves its staff, we feel it."
+          "text": "The company may take office costs out and then expect more repairs from the same people. My own pay might hold because I lead difficult jobs, and there are other utilities nearby, but I would watch the time pressure on apprentices."
         },
         {
           "speaker": "interviewer",
@@ -118,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd watch what the other foremen are doing, and once a couple of them are using a new planning tool properly, I'd pick it up too. Ingrid and I would boost our savings a bit and talk about what she'd do if her firm cut back. I'd keep the cabin share, it's our backup."
+          "text": "I would test the route plan on a dozen mixed jobs, including storm calls, and log any access error. In the first year I would bring the results to the supervisor and ask for the apprentices to join a review of repair-time targets."
         },
         {
           "speaker": "interviewer",
@@ -126,47 +143,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Mostly for Ingrid."
+          "text": "Uneasy about a schedule that looks clean but misses the hard jobs. I am not expecting a household pay crisis from this alone."
         },
         {
           "speaker": "interviewer",
-          "text": "Have you and Ingrid talked about this already?"
+          "text": "What would you count as an access error?"
         },
         {
           "speaker": "persona",
-          "text": "A little, one night after the kids were in bed. She said half her junior team's work is already done by software. She laughed and said maybe she should come dig trenches with me, and neither of us found it that funny."
+          "text": "If the plan sends our truck under a low branch or across a bridge with a weight limit, I would record the detour. A car route is not a bucket-truck route."
         },
         {
           "speaker": "interviewer",
-          "text": "What would she do if her firm cut back?"
+          "text": "What if the plan works on most jobs?"
         },
         {
           "speaker": "persona",
-          "text": "She's thought about going independent, doing books for small businesses, trades people like me. She knows how much paperwork a small contractor drowns in. That might even hold up better than her firm."
+          "text": "I would recommend using it, with a manual check for the exceptions. A good tool still needs someone who knows the truck to mark the bad turn."
         }
       ],
-      "say": "It's going to change how we work, so let's be smart and not panic. I'd tell the apprentices to learn the tools once they've settled down.",
-      "think": "I'm not too worried about my own job, because someone still has to dig the trench and set the box. My wife's accounting job is right in the firing line, and if her firm halves its staff we feel it.",
-      "do": "Picks up new planning tools once other foremen have them working. Builds up savings with his wife, discusses her options if her firm cuts back, and keeps the cabin share as a backup.",
-      "feel": "Uneasy, mostly on his wife's behalf.",
+      "say": [
+        "**Call desk AI** may help, but bucket-truck routes need a mixed-job trial.",
+        "**Field robots** spread more slowly than desk automation."
+      ],
+      "think": [
+        "My **lead pay** may hold while pressure rises for apprentices.",
+        "Nearby **utility jobs** offer a fallback if targets become unreasonable."
+      ],
+      "do": [
+        "**Test** route plans on twelve mixed line jobs.",
+        "**Review** access errors and repair targets with supervisor and apprentices."
+      ],
+      "feel": [
+        "**Uneasy** about time pressure, without expecting a household income crisis."
+      ],
       "mood": "uneasy",
-      "quote": "She laughed and said maybe she should come dig trenches with me, and neither of us found it that funny.",
-      "fieldNote": "Rafael's unease in this scenario is almost entirely about his wife's exposure, not his own. He is a classic 'second wave' adopter who waits for colleagues. The idea of his wife going independent and serving tradespeople is a practical, shared hedge.",
+      "quote": "A car route is not a bucket-truck route.",
+      "fieldNote": [
+        "His **trial design** includes storm calls and difficult access, not just easy routes.",
+        "His **financial position** makes apprentice workload more salient than immediate loss of his own pay."
+      ],
       "actions": [
-        "save-more",
-        "learn-ai",
-        "wait-and-see"
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Test AI route plans on twelve mixed line jobs",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this needs a serious plan from government, fast, not slogans from either side. People need income while things settle. I'd say that to anybody, but I wouldn't be on a picket line."
+          "text": "I would tell the crew that full thinking AI by 2028 could change dispatch and diagrams first. Robots able to do our hands-on repairs arrive about 2031, and the gap is time to test what those machines can really handle."
         },
         {
           "speaker": "interviewer",
@@ -174,7 +209,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it scares me. Two years means Ingrid's job could go almost straight away, and mine maybe a year or two later when the robots can trench and splice. We've got savings and the cabin, but both incomes wobbling at once is the thing I lie awake about."
+          "text": "I could lose some repair hours after 2031 even if I am one of the senior workers. Eight months saved and plenty of nearby utilities let us search carefully, but a high wage can be hard to replace when every employer is changing."
         },
         {
           "speaker": "interviewer",
@@ -182,7 +217,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First month, I'd sit down with Ingrid and work out exactly how long we can cover the mortgage on savings alone. We'd stop the extra mortgage payments and keep cash, and I'd talk to my brother about selling our share of the cabin if needed. I'd keep working, take every hour of overtime while there was building, and look hard at what jobs might be left, maybe looking after the robots."
+          "text": "I would ask to observe a field robot trial on an old overhead line and compare its safety record with our crew’s. In the first year after 2028 I would take a company-funded protection testing course if a real local opening is attached, then apply for that post before 2031 if its pay covers our fixed bills."
         },
         {
           "speaker": "interviewer",
@@ -190,47 +225,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Alarmed. That knot you get when the bank letter's on the table."
+          "text": "Anxious about losing a good wage, but not overwhelmed. I have choices if I start early and check the offers."
         },
         {
           "speaker": "interviewer",
-          "text": "What did the numbers say, roughly?"
+          "text": "Which robot failure would concern you most?"
         },
         {
           "speaker": "persona",
-          "text": "If we both lost work, about fourteen months on savings, maybe two years if we sold the cabin share. That sounds like a lot until you think about our son starting college in three years. Two years of savings is a lot of money, but it's not a lot of time."
+          "text": "A robot that repairs the conductor but misses a damaged insulator nearby would concern me. I would ask who checks the whole span before the line is re-energised."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell the kids?"
+          "text": "What if the testing post pays less?"
         },
         {
           "speaker": "persona",
-          "text": "That we're okay for now and we've got a plan. My daughter would want details, she's like her mum. My son would just ask if he can still get his driving lessons, and I'd say yes, because that's the kind of thing you don't take away."
+          "text": "Nia and I would compare the offer with the mortgage and school costs. We could accept somewhat less, but not if it meant drawing from savings every month."
         }
       ],
-      "say": "This needs a serious plan from government, fast, not slogans from either side. People need income while things settle, though I wouldn't be on a picket line.",
-      "think": "It scares me, because my wife's job could go almost straight away and mine a year or two later. We've got savings and the cabin, but both incomes wobbling at once is what I'd lie awake about.",
-      "do": "Works out with his wife how long savings alone cover the mortgage and stops extra mortgage payments to keep cash. Raises selling the cabin share with his brother, takes every overtime hour available and looks at jobs maintaining robots.",
-      "feel": "Alarmed, the knot of a bank letter on the table.",
-      "mood": "alarmed",
-      "quote": "Two years of savings is a lot of money, but it's not a lot of time.",
-      "fieldNote": "Rafael's alarm comes from the double exposure of his household, not his own trade alone. He moves straight to concrete numbers, about fourteen months on savings. His centrist stance shows in wanting a serious government plan without joining protests.",
+      "say": [
+        "**2028 thinking AI** changes dispatch before field robots arrive around 2031.",
+        "**Whole-span checks** matter when robots repair one visible fault."
+      ],
+      "think": [
+        "Some **repair hours** may go after 2031 despite senior skill.",
+        "Eight months saved and **local utilities** help, but equal pay is uncertain."
+      ],
+      "do": [
+        "**Observe** an old-line robot trial and compare full-span checks.",
+        "**Take** funded protection training only for a real local opening.",
+        "**Apply** before 2031 if the post covers fixed bills."
+      ],
+      "feel": [
+        "**Anxious** about replacing a good wage, with options to pursue."
+      ],
+      "mood": "anxious",
+      "quote": "A robot that repairs the conductor but misses a damaged insulator nearby would concern me.",
+      "fieldNote": [
+        "His **robot test** focuses on the full span, not just the component a machine touches.",
+        "His **training and application** depend on a funded course, real local vacancy and bill-covering pay."
+      ],
       "actions": [
-        "cut-spending",
-        "save-more",
-        "keep-going"
+        "wait-and-see",
+        "retrain",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Observe robot trial on old overhead line",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Take company-funded protection course if linked to local opening",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for local protection testing before 2031 if pay covers fixed bills",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is short, but enough to get organised if people start now. I'd be telling friends to pay down debt and think about what they'd do. I'd want both parties to stop arguing and agree on a plan for income support."
+          "text": "Five years gives us room to watch several trials before thinking AI arrives in 2031. The capable field robots arrive around 2034, so apprentices should learn to inspect a robot repair as carefully as a human one."
         },
         {
           "speaker": "interviewer",
@@ -238,7 +302,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it's better than two years but still a big deal for us. Ingrid would have time to set up her own small-business bookkeeping, and I'd have time to get into whatever the robot side of the trade becomes. But we'd both be starting over in our late forties."
+          "text": "I might prefer a training and inspection role by then, but only if the utility publishes a wage and enough posts. With two children and a mortgage, a new robot-inspection badge means less than a stable payslip."
         },
         {
           "speaker": "interviewer",
@@ -246,7 +310,7 @@
         },
         {
           "speaker": "persona",
-          "text": "In the first year, I'd sign up for the company's robotics or automation course once the first group came back saying it was real. Ingrid would start her side business doing books for tradespeople on weekends. We'd pay down the mortgage harder and talk to our son about what he's studying."
+          "text": "I would ask the training manager to run a practical robot-inspection trial and publish the results. If the company offers paid assessor training with a real local post at a bill-covering wage, I would complete it before 2031 and apply in the first year after 2031; I would stay on the line crew if the offer never comes."
         },
         {
           "speaker": "interviewer",
@@ -254,48 +318,81 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious, but with a plan. More like a hard job ahead than a disaster."
+          "text": "Watchful rather than frightened. The extra years let me try the work before asking Nia to trust a change in our income."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you want your son to study?"
+          "text": "What would the practical trial include?"
         },
         {
           "speaker": "persona",
-          "text": "He wants to be an electrician, like Dad, which makes me proud and nervous. I'd tell him to learn how the robots are wired, not just how the houses are. That's about the best I can do."
+          "text": "An apprentice and I would inspect the same robot repair independently, then compare what each of us found. I would want the machine’s missed defects written down."
         },
         {
           "speaker": "interviewer",
-          "text": "Starting over in your late forties. How does that sit with you?"
+          "text": "Would you ask the union to join?"
         },
         {
           "speaker": "persona",
-          "text": "Not great. I've spent twenty years getting good at this. But I'm not sixty, I can learn, I just like to see that something works first."
+          "text": "Yes, if the trial becomes a company policy. I would ask our union branch to make sure the test results are shared with every crew."
         }
       ],
-      "say": "Five years is short but enough to get organised if people start now, so pay down debt and think about what you'd do. I'd want both parties to agree on a plan for income support.",
-      "think": "It's better than two years but still a big deal for us. My wife could set up her bookkeeping business and I could get into the robot side of the trade, but we'd both be starting over in our late forties.",
-      "do": "Signs up for the company's automation course once the first group confirms it's real. Supports his wife starting a weekend bookkeeping business, pays down the mortgage faster and talks to his son about his studies.",
-      "feel": "Anxious, but with a plan; a hard job ahead rather than a disaster.",
-      "mood": "anxious",
-      "quote": "I'd tell him to learn how the robots are wired, not just how the houses are.",
-      "fieldNote": "Five years turns Rafael's alarm into anxious planning, with retraining and a side business for his wife. He is proud and nervous that his son wants to follow him into the trade. He waits for proof before acting, consistent with his steady style.",
+      "say": [
+        "**Apprentices** should learn to inspect robot repairs before 2034.",
+        "**Trial results** should be shared with all crews if the method becomes policy."
+      ],
+      "think": [
+        "A **new badge** does not replace a stable bill-covering wage.",
+        "I may prefer **training and inspection** if real posts exist."
+      ],
+      "do": [
+        "**Run** a practical robot-inspection trial with the training manager.",
+        "**Complete** paid assessor training if a local bill-covering post exists.",
+        "**Apply** after 2031 if trained; otherwise retain line shifts."
+      ],
+      "feel": [
+        "**Watchful**, with time to try the work before moving."
+      ],
+      "mood": "uneasy",
+      "quote": "With two children and a mortgage, a new robot-inspection badge means less than a stable payslip.",
+      "fieldNote": [
+        "His **trial** compares an apprentice’s inspection with his own on the same repair.",
+        "His **role move** depends on paid training, a real local post and wages that cover bills."
+      ],
       "actions": [
+        "wait-and-see",
         "retrain",
-        "side-income",
-        "save-more",
-        "family-plans"
+        "change-job",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Run practical robot-inspection trial with training manager",
+          "tag": "wait-and-see"
+        },
+        {
+          "text": "Complete paid assessor training if local bill-covering post exists",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for assessor role after 2031 if trained",
+          "tag": "change-job"
+        },
+        {
+          "text": "Ask union branch to share trial results if adopted as company policy",
+          "tag": "collective-action"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough to plan, so let's do it properly and not wait till the last two. I'd be telling the apprentices to take the new courses once they're settled. Calm voice, practical advice."
+          "text": "A decade would let us prepare crews gradually before thinking AI arrives in 2036 and field robots around 2039. I would keep teaching apprentices how to spot a fault that the drawing leaves out."
         },
         {
           "speaker": "interviewer",
@@ -303,7 +400,7 @@
         },
         {
           "speaker": "persona",
-          "text": "For us, ten years is much better. I'd be fifty-three, the mortgage would be mostly paid, and the kids would be through school. Ingrid could have her own business going by then. It's still a big change, but I could see us being okay."
+          "text": "I would be fifty-three at the first date and might still want to work full time. Our mortgage may not be finished, but our savings and nearby jobs let me wait for a training role that pays properly instead of jumping at a vague promise."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +408,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep working Willow Ridge and the next estates, and around year two or three, once others have tried them, I'd take the automation courses. Ingrid would build up her bookkeeping clients slowly. We'd keep the cabin, keep saving, and help our son pick a trade that has a future."
+          "text": "I would keep leading repair shifts and review the mortgage with Nia every year. In the first year after 2036 I would apply for a local line-safety instructor role if its pay covers our bills, and I would help write crew exercises for checking robot repairs if the utility introduces them."
         },
         {
           "speaker": "interviewer",
@@ -319,37 +416,60 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, in a manageable way. Like a long forecast you keep an eye on."
+          "text": "Fairly calm about the runway. Ten years lets me teach line crews what I know while I decide whether a safety instructor post suits the family."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there a risk you'd wait too long?"
+          "text": "What would the crew exercise test?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, that's my weakness. I always wait for someone else to go first. With ten years, there's a real danger I'd still be waiting for someone else to go first in year nine."
+          "text": "I would put a wrong switch number in a sample robot report and ask the crew to find it on the diagram before touching any equipment. No live line would be used in the exercise."
         },
         {
           "speaker": "interviewer",
-          "text": "What would make you move sooner?"
+          "text": "Would you retire early if the role does not appear?"
         },
         {
           "speaker": "persona",
-          "text": "Seeing a robot crew energise a whole street on a site like Willow Ridge. Or my company announcing cuts. Either of those would get me moving."
+          "text": "I do not have a retirement date from this picture. I would check the actual mortgage balance and keep working while the repair job remains available."
         }
       ],
-      "say": "Ten years is enough to plan, so let's do it properly and not wait until the last two. I'd tell the apprentices to take the new courses once they're settled.",
-      "think": "Ten years is much better for us, because at fifty-three the mortgage would be mostly paid and the kids through school. It's still a big change, but I can see us being okay.",
-      "do": "Keeps working new estates and takes automation courses around year two or three once others have tried them. Supports his wife building bookkeeping clients slowly, keeps the cabin and savings, and helps his son choose a trade with a future.",
-      "feel": "Uneasy in a manageable way, like a long forecast he keeps an eye on.",
-      "mood": "uneasy",
-      "quote": "With ten years, there's a real danger I'd still be waiting for someone else to go first in year nine.",
-      "fieldNote": "With ten years, Rafael's plans become steady and family-focused. He is unusually self-aware that his habit of waiting for others could leave him late. A visible robot crew or company cuts are his triggers to move.",
+      "say": [
+        "**Crew exercises** can teach workers to check robot reports before 2039.",
+        "**Apprentice learning** still needs physical fault finding."
+      ],
+      "think": [
+        "I may want **full-time work** beyond fifty-three.",
+        "Savings and **nearby jobs** let me wait for a properly paid role."
+      ],
+      "do": [
+        "**Review** the mortgage with Nia yearly while leading repairs.",
+        "**Apply** for local line-safety instruction after 2036 only at bill-covering pay.",
+        "**Write** crew robot-check exercises if the utility introduces them."
+      ],
+      "feel": [
+        "**Calm** about time to teach and choose."
+      ],
+      "mood": "calm",
+      "quote": "Ten years lets me teach line crews what I know while I decide whether a safety instructor post suits the family.",
+      "fieldNote": [
+        "He does not treat **age fifty-three** or robots as a reason to retire early.",
+        "His **instructor move** remains conditional on a local role and bill-covering pay."
+      ],
       "actions": [
-        "retrain",
-        "save-more",
-        "family-plans",
-        "wait-and-see"
+        "keep-going",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading repairs and review mortgage with Nia yearly",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Apply for local line-safety instruction after 2036 if pay covers bills",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -360,19 +480,30 @@
     },
     {
       "speaker": "persona",
-      "text": "The fast one, AGI by 2028, because both of us could lose work in the same year. What would help is a government plan for income while people retrain, something both sides agree on, and my company telling us early which roles are going so we can plan."
+      "text": "AGI by 2028 worries me most because capable field robots could begin replacing repairs around 2031 before I have tested another role. A funded course with a real local protection job and clear full-span safety checks would help."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Ask about the family, not just the job. Everybody asks me if robots will take my job, but nobody asks what happens when they take both jobs in the same house. That's the real question for most people I know."
+      "text": "You did not ask about the handover after a robot repair. The next line crew needs the meter values and the defects the repair robot did not fix, in plain sight."
     }
   ],
-  "headlineQuote": "Everybody asks me if robots will take my job, but nobody asks what happens when they take both jobs in the same house.",
-  "portrait": "Rafael Larsen is a 43-year-old new-construction foreman who brings power to housing estates on the edge of town, married to an accountant, with two children and a share in a lake cabin. He's measured and practical, uses AI tools now and then once colleagues have proven them, and thinks of his household as a two-income unit. He's calm in the hype scenario and uneasy for his wife's job in the gradual one, then alarmed when AGI arrives in two years because both incomes could go at once. With more warning, he plans retraining, his wife's own bookkeeping business and his son's studies. He wants a sensible government plan more than he wants to blame anyone.",
-  "biggestWorry": "AGI by 2028 worries him most, because he and his wife could both lose work in the same year.",
-  "whatWouldHelp": "A government plan for income while people retrain that both sides agree on, and his company telling workers early which roles are going."
+  "portrait": [
+    "**Rafael Larsen**, 43, leads a power line crew and holds a two-year technical diploma.",
+    "He and partner Nia have **two school-age children**, a mortgage, high lineworker pay and about eight months of expenses saved.",
+    "He uses **AI occasionally** for handovers, adopting tools after practical trials show they help crews.",
+    "In **Steady Disruption**, he tests twelve routes and worries more about apprentice workload than an immediate pay loss.",
+    "The **2028 scenario** worries him most because equal senior wages may be hard to find after field robots arrive."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** gives him little time to secure another bill-covering role before field robots arrive around 2031."
+  ],
+  "whatWouldHelp": [
+    "A funded **protection course** tied to a genuine local vacancy would make a job move possible.",
+    "Clear **whole-span checks** would keep robot repairs from hiding nearby defects."
+  ],
+  "headlineQuote": "The next line crew needs the meter values and the defects the repair robot did not fix, in plain sight."
 }
