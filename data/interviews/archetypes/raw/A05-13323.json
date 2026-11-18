@@ -11,24 +11,16 @@
     "outlook": "centre",
     "adaptability": "adaptive"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making the time. I'm a field researcher with the Work Futures Panel, an independent research group. We have no ties to AI companies, employers, unions, parties or government, and everything you say stays confidential. To start, could you walk me through a normal working day?"
+      "text": "I’m with the Work Futures Panel, an independent research group. We have no ties to employers, AI firms, unions or government. Your answers stay confidential. What does a normal workday look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I run two surface-mount lines at an electronics plant that makes control boards for heat pumps and boilers. Surface-mount means tiny parts, some smaller than a grain of rice, placed onto the board by pick-and-place machines at thousands an hour, then melted in place in a reflow oven. I set up the jobs, load the reels of parts, watch the inspection camera, and fix the line when it stops. I like it because it's half mechanical and half puzzle."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "You said puzzle. What kind of puzzles?"
-    },
-    {
-      "speaker": "persona",
-      "text": "Like last week, one board kept failing inspection with a lifted chip on one corner, only on the night shift. Turned out the night crew were loading a reel from a different supplier with slightly thicker parts. I use an AI assistant every day for things like that, I describe the fault and it gives me a list of things to check, and it's saved me hours. I also did an evening course in PLC programming last year, that's the little industrial computers that run the machines, just because I was curious."
+      "text": "I lead a cell of computer-controlled milling machines making metal housings for medical pumps. My two-year technical diploma taught me how to set a tool path; on the floor I learned to hear when a cutter is wearing out. I use AI every day to draft setup notes and look up fault codes, then verify the answer against the machine manual and the finished part. I live alone, earn a higher operator rate, have more than six months of expenses saved, and know several plants nearby that need machine people."
     }
   ],
   "scenarios": {
@@ -36,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The first picture is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a good tool, not magic, and anyone who thought otherwise wasn't using it properly. I'd probably say it in the group chat with my mates from college, who are always arguing about this. I'd be the one saying, calm down, both of you."
+          "text": "I would say a modest AI tool can save us time finding a fault code, but it cannot measure a finished housing. I already use it for notes and check the part with a gauge."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be a little disappointed but not worried. My job's solid, there are four electronics plants within an hour of here, and I've got money set aside. I'd just keep building skills on the side."
+          "text": "My cell has orders and the work stays mostly physical, so I expect my pay to hold. Savings and nearby plants give me room to test useful tools without making every software update a career decision."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep using the assistant at work and push for us to use it on more of the setup work, like checking programs before a new job runs. I'd keep putting money into my index fund every month, I've done that since I was 22. Maybe I'd do the next level of the PLC course."
+          "text": "I would keep setting the milling machines and comparing AI-drafted notes with the manual. In the first year I would ask the junior operator to measure the first housing with me before either of us signs a batch off."
         },
         {
           "speaker": "interviewer",
@@ -64,47 +56,65 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Maybe slightly flat, like when a match ends nil-nil."
+          "text": "Calm and a little curious. A machine can make a precise part only after somebody notices the cutter has worn."
         },
         {
           "speaker": "interviewer",
-          "text": "Why would you be disappointed?"
+          "text": "What does a worn cutter look like in the part?"
         },
         {
           "speaker": "persona",
-          "text": "Because I like seeing what's next. I was looking forward to the line running itself and me doing the clever bits. In the dull version, I'm still the guy who crawls under the oven with a torch when a board falls off the conveyor."
+          "text": "The edge gets a fine burr that catches my glove, and the gauge may still pass the main width. We stop before the whole tray is made."
         },
         {
           "speaker": "interviewer",
-          "text": "Is there anyone at work who'd be glad of a plateau?"
+          "text": "Do you trust the AI fault answer?"
         },
         {
           "speaker": "persona",
-          "text": "Loads of people. My supervisor, Mr Okafor, has been here thirty years and he's waiting it out. He'd be delighted. I'd be happy for him, honestly."
+          "text": "Only as a pointer into the manual. A confident answer cannot take responsibility for a medical pump housing that fails inspection."
         }
       ],
-      "say": "I'd say it's a good tool, not magic, and those who thought otherwise weren't using it properly. In the college group chat I'd tell both sides to calm down.",
-      "think": "Privately I'd be a little disappointed but not worried. My job is solid, there are four electronics plants nearby and I have money set aside.",
-      "do": "Keeps using the AI assistant at work and pushes to use it for checking programs before new jobs. Keeps up monthly index fund payments and may take the next level of his PLC course.",
-      "feel": "Calm and slightly flat, like a goalless draw.",
+      "say": [
+        "**AI notes** help with faults but cannot measure finished pump housings.",
+        "A **gauge check** remains part of batch sign-off."
+      ],
+      "think": [
+        "My **operator pay** looks safe in a modest change.",
+        "Savings and nearby **plants** give me room to try useful tools."
+      ],
+      "do": [
+        "**Keep** setting milling machines and checking AI notes against manuals.",
+        "**Measure** the first housing with the junior operator before batch sign-off."
+      ],
+      "feel": [
+        "**Calm** and curious about small improvements."
+      ],
       "mood": "calm",
-      "quote": "In the dull version, I'm still the guy who crawls under the oven with a torch when a board falls off the conveyor.",
-      "fieldNote": "Emeka is curious and secure, already learning PLC programming for fun and investing monthly since 22. A plateau disappoints him because he looks forward to more interesting work. He is generous towards older colleagues who would welcome it.",
+      "quote": "A confident answer cannot take responsibility for a medical pump housing that fails inspection.",
+      "fieldNote": [
+        "His **daily AI use** is already routine and verified against manuals and parts.",
+        "High **pay and savings** make a small change low risk for his own work."
+      ],
       "actions": [
-        "keep-going",
-        "learn-ai",
-        "invest"
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Keep setting milling machines and verify AI notes against manuals",
+          "tag": "keep-going"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The second picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's a big change and we should get on with it sensibly. I'd tell people at work to learn the new kit early, because the ones who do will be fine. I'd also say the government should pay for training, because not everyone can do courses at night like I can."
+          "text": "I would tell the planners that better ordering could spare us late cutters, but the machine cell still needs people to set up and inspect parts. I would volunteer to test a new schedule against actual scrap and downtime."
         },
         {
           "speaker": "interviewer",
@@ -112,7 +122,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd think it's great for me, probably. Electronics assembly is already mostly machines, so the next step is fewer people and smarter lines. Somebody needs to set those up and fix them, and I'd want that to be me."
+          "text": "AI may take more of the buying and planning around my cell, not the cutter changes yet. If the plant cuts setup time on paper, my team could lose paid hours or rush quality checks; I want proof before accepting a target."
         },
         {
           "speaker": "interviewer",
@@ -120,7 +130,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd finish the PLC course and do a robotics certificate, about a year part time, paying it myself if the company wouldn't. I'd volunteer to run the trial when the plant brought in automatic reel changers and AI inspection. I'd keep investing, and maybe up it a bit, because the companies making this stuff would do well."
+          "text": "I would learn the new AI scheduling screen in a funded paid-time class if an actual place opens, then enter scrap and stoppage data from our last two runs. In the first year I would ask quality control to compare the screen estimate with measured parts before any shorter target is used."
         },
         {
           "speaker": "interviewer",
@@ -128,48 +138,66 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Actually quite excited."
+          "text": "Anxious about a target becoming a wage or quality problem, but keen to see a working system. My scrap tray has a way of correcting optimistic production spreadsheets."
         },
         {
           "speaker": "interviewer",
-          "text": "Who loses in your plant if that happens?"
+          "text": "Which data would you enter first?"
         },
         {
           "speaker": "persona",
-          "text": "The reel loaders and the people who check boards by eye at the rework bench. Joy at the rework bench is incredible with a soldering iron, steadier hands than anyone. A camera doesn't have steady hands, it just doesn't need them."
+          "text": "The cutter change time, the scrap count and the inspection delay on the last pump-housing run. If the planner ignores those, it is not ready for the shift."
         },
         {
           "speaker": "interviewer",
-          "text": "Does that change how excited you feel?"
+          "text": "Would you accept a shorter paid setup period?"
         },
         {
           "speaker": "persona",
-          "text": "A bit, yes. I'd want her moved into something like repairs or training, not let go. I'd say that to management, plainly, because they'd listen to me if I was the one setting up the new kit."
+          "text": "Only after a supervised run proves the quality checks still fit inside it. I would put the result in writing with quality control so the crew is not blamed for the shortcut."
         }
       ],
-      "say": "I'd say it's a big change and we should get on with it sensibly. I'd tell colleagues to learn new kit early and say government should fund training for those who can't study at night.",
-      "think": "Privately it's probably great for me, since electronics assembly is already mostly machines. Someone needs to set up and fix smarter lines, and I want that to be me.",
-      "do": "Finishes the PLC course and a year-long part-time robotics certificate, paying himself if needed. Volunteers to trial automatic reel changers and AI inspection and raises his index fund contributions.",
-      "feel": "Calm, and actually quite excited.",
-      "mood": "calm",
-      "quote": "A camera doesn't have steady hands, it just doesn't need them.",
-      "fieldNote": "Emeka sees steady disruption as his opportunity and would help bring automation into his own plant. When pressed about colleagues like Joy, his excitement dimmed a little and he committed to pushing for her redeployment. He expects his influence to grow with his role in the new kit.",
+      "say": [
+        "**AI ordering** may prevent late cutters, while operators still set and inspect parts.",
+        "A new **schedule** should be tested against scrap and downtime."
+      ],
+      "think": [
+        "Shorter **setup time** could cost paid hours or weaken quality.",
+        "I want **measured proof** before accepting a production target."
+      ],
+      "do": [
+        "**Learn** the AI scheduling screen if a funded paid-time place opens.",
+        "**Enter** scrap and stoppage data from two completed runs.",
+        "**Compare** targets with quality control before shortening setup time."
+      ],
+      "feel": [
+        "**Anxious** about possible paid-hour cuts, while interested in testing the new scheduling screen."
+      ],
+      "mood": "anxious",
+      "quote": "My scrap tray has a way of correcting optimistic production spreadsheets.",
+      "fieldNote": [
+        "His **new AI learning** concerns an actual scheduling screen, beyond the notes he already drafts daily.",
+        "He links **paid time** and quality review to any shorter production target."
+      ],
       "actions": [
-        "retrain",
-        "automate",
-        "invest",
         "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Take funded AI scheduling class if actual paid-time place opens",
+          "tag": "learn-ai"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The third picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is huge and we need a plan for people fast, some kind of income support while things settle. I'd say it calmly, because I don't think panic helps anyone. I'd probably share practical stuff online, like what courses are worth doing."
+          "text": "I would tell my crew AGI can plan and buy by 2028, while robots able to change cutters and inspect parts like us follow around 2031. I would get into robot commissioning if the plant opens a paid path before then."
         },
         {
           "speaker": "interviewer",
@@ -177,7 +205,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think I'd be okay for money. My index fund would probably go up, since it owns bits of the companies doing the replacing, and I've got no kids and no mortgage. What I'd worry about is everyone else, and what the streets feel like when lots of people suddenly have nothing to do."
+          "text": "A fully capable robot could remove the setup work that earns my higher operator rate. My savings and the local job market buy time, but other plants may be buying the same machines, so I cannot assume an equal wage elsewhere."
         },
         {
           "speaker": "interviewer",
@@ -185,7 +213,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First month, I'd move some of my savings from cash into the index fund, and keep a year of costs in cash. I'd try to get into one of the firms installing robots in factories, because for those two years they'd be desperate for people who know both the old lines and the new kit. I'd also think about a small side business setting up AI tools for little workshops that can't afford consultants."
+          "text": "I would ask engineering for a supervised, paid robot-cell trial and a funded controls course with a real place during paid hours. If I get the place I would complete it; in the first year after 2028 I would apply for a posted local commissioning role only if qualified and its pay and hours cover my bills."
         },
         {
           "speaker": "interviewer",
@@ -193,48 +221,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. I feel okay about me, less okay about the world around me."
+          "text": "Anxious about the short route from operator to replaceable operator, even though I like the technology. I want to be the person who can stop a robot before it ruins a tray of medical parts."
         },
         {
           "speaker": "interviewer",
-          "text": "You said the streets. What do you picture?"
+          "text": "What must the trial test?"
         },
         {
           "speaker": "persona",
-          "text": "My younger cousins, honestly. They're 19 and 21, one's doing a forklift licence and one's working in a warehouse. I can picture them sitting at home at 3pm with nothing to do and a phone full of angry videos."
+          "text": "A safe cutter change, guard interlock and first-part measurement with a technician able to stop the robot. I would want the scrap logged, not hidden in a demonstration."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you help them?"
+          "text": "If engineering only offers a meeting, do you count that as a trial?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, I'd bring them onto the installation work with me if I could, or into the side business. And I'd lend them money if it came to that. My mum would make sure of it anyway, she's very clear that family looks after family."
+          "text": "No. I would need a paid slot, a machine isolated for the test and a safety lead present before touching the robot controls."
         }
       ],
-      "say": "I'd say this is huge and we need fast income support for people while things settle. I'd say it calmly and share practical advice online, like which courses are worth doing.",
-      "think": "Privately I'd be okay for money, with investments likely rising and no kids or mortgage. I'd worry about everyone else and how the streets feel when many people suddenly have nothing to do.",
-      "do": "Moves part of his savings into an index fund while keeping a year of costs in cash. Seeks a job with a firm installing factory robots and considers a side business setting up AI tools for small workshops.",
-      "feel": "Uneasy, fine about himself but less so about the world around him.",
-      "mood": "uneasy",
-      "quote": "I can picture them sitting at home at 3pm with nothing to do and a phone full of angry videos.",
-      "fieldNote": "Emeka is honest that he would likely gain financially from the very change that unsettles everyone else. His worry centres on his young cousins and wider social unrest, not his own income. Family duty, reinforced by his mother, shapes his plans to help them.",
+      "say": [
+        "**2028 AGI** changes plans before capable machine robots around 2031.",
+        "A paid **robot-cell trial** should test guards and first-part measurement."
+      ],
+      "think": [
+        "A robot could remove my **higher setup rate**.",
+        "Strong **savings** do not guarantee equal pay at other automated plants."
+      ],
+      "do": [
+        "**Request** a supervised paid robot-cell trial.",
+        "**Complete** funded controls training if an actual paid-time place opens.",
+        "**Apply** for posted local commissioning work if qualified and pay covers bills."
+      ],
+      "feel": [
+        "**Anxious** about losing setup work, while interested in controls."
+      ],
+      "mood": "anxious",
+      "quote": "I want to be the person who can stop a robot before it ruins a tray of medical parts.",
+      "fieldNote": [
+        "His **trial request** is conditional on a paid slot, machine isolation and safety lead.",
+        "The **commissioning move** requires a real funded course, qualification and posted local bill-covering work."
+      ],
       "actions": [
-        "invest",
+        "retrain",
         "change-job",
-        "side-income",
-        "seek-support"
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Complete funded robot-controls course if actual paid-time place opens",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for posted local commissioning role if qualified and pay/hours cover bills",
+          "tag": "change-job"
+        },
+        {
+          "text": "Request paid guarded robot-cell trial with safety lead and technician stop authority",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The fourth picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is a clear warning, and companies and governments have no excuse not to plan. I'd tell younger people to learn how the machines work, not just how to use them. I'd keep it practical and not get into the politics too much."
+          "text": "I would say five years lets the plant run guarded robot trials and train operators before machines can do all our setup work around 2034. I would help write the first-part inspection rule if quality control lets me."
         },
         {
           "speaker": "interviewer",
@@ -242,7 +298,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, five years is close to ideal for me. I'd have time to get qualified, move into automation work and earn well during the years everyone's installing robots. After that, I'd have savings and investments to land on."
+          "text": "I have time to turn the diploma into a commissioning skill, but only if real machines and experienced engineers are part of the training. A certificate without an opening would not protect my wage."
         },
         {
           "speaker": "interviewer",
@@ -250,7 +306,7 @@
         },
         {
           "speaker": "persona",
-          "text": "First year, I'd finish the robotics certificate and apply to automation integrators, the firms that design and install whole lines. By year two I'd want to be on site commissioning lines, which pays a lot more than I make now. I'd invest a big slice of the extra money and maybe set up the little consulting business on weekends."
+          "text": "I would keep running the milling cell and ask for a paid practical trial with the safety lead. If a funded controls course offers an actual paid-time place, I would finish it; in the first year after 2031 I would apply for a posted local commissioning post only if qualified and the base wage and hours cover my bills."
         },
         {
           "speaker": "interviewer",
@@ -258,48 +314,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. The bit that bothers me is that I'd be helping it happen faster."
+          "text": "Anxious about losing setup pay around 2034, but not stuck. Five years lets me learn robot commissioning on a guarded milling cell instead of guessing from a video."
         },
         {
           "speaker": "interviewer",
-          "text": "How do you square that?"
+          "text": "What would the inspection rule say?"
         },
         {
           "speaker": "persona",
-          "text": "I tell myself it'd happen anyway, and better that it's done by someone who cares about the people on the line. If someone's going to switch off the old line, I'd rather it was me, because I'd at least say goodbye to the crew. I know that's a bit of a convenient story."
+          "text": "The first robot-made housing gets a gauge check and a visual burr check before the next tray runs. A technician must have the power to stop the cell."
         },
         {
           "speaker": "interviewer",
-          "text": "What happens to you around 2031?"
+          "text": "How would you judge the commissioning post?"
         },
         {
           "speaker": "persona",
-          "text": "Honestly, I don't know. If the robots install themselves by then, I'm out too, just later and richer than most. I'd probably travel for a bit and then find something with people, maybe coaching the kids' football team full time if that's a thing."
+          "text": "I would compare its base wage and regular hours with my present shift pay and monthly bills. I would not count uncertain overtime as the difference."
         }
       ],
-      "say": "I'd say five years is a clear warning and companies and governments have no excuse not to plan. I'd tell young people to learn how machines work, not just how to use them.",
-      "think": "Privately five years is close to ideal for me, with time to qualify and earn well during the installing years. Afterwards I'd have savings and investments to land on.",
-      "do": "Finishes the robotics certificate in year one and applies to automation integrators, aiming to commission lines by year two for higher pay. Invests much of the extra income and may run a weekend consulting business.",
-      "feel": "Calm mostly, though bothered that he'd be helping it happen faster.",
-      "mood": "calm",
-      "quote": "If someone's going to switch off the old line, I'd rather it was me, because I'd at least say goodbye to the crew.",
-      "fieldNote": "Emeka sees a clear financial runway in five years and expects to come out ahead. He is uneasy about speeding up the change and calls his own justification a convenient story. His post-2031 picture is vague, ending with coaching youth football.",
+      "say": [
+        "**2031 AGI** leaves time for guarded trials before capable robots around 2034.",
+        "Quality control needs a **first-part rule** with stop authority."
+      ],
+      "think": [
+        "A practical **controls skill** could protect my earnings.",
+        "A **certificate** without a real local commissioning opening would not protect my operator wage."
+      ],
+      "do": [
+        "**Request** a paid guarded robot trial with the safety lead.",
+        "**Finish** funded controls training if an actual paid-time place opens.",
+        "**Apply** for posted local commissioning work if qualified and base pay covers bills."
+      ],
+      "feel": [
+        "**Anxious** about setup pay, but able to learn on real equipment."
+      ],
+      "mood": "anxious",
+      "quote": "Five years lets me learn robot commissioning on a guarded milling cell instead of guessing from a video.",
+      "fieldNote": [
+        "He wants **first-part checks** and stop authority written into robot operation.",
+        "His **training and application** require a real paid place and a posted local role at adequate base pay."
+      ],
       "actions": [
-        "change-job",
         "retrain",
-        "invest",
-        "side-income"
+        "change-job",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Finish funded robot-controls course if actual paid-time place opens",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for posted local commissioning post if qualified and base pay/hours cover bills",
+          "tag": "change-job"
+        },
+        {
+          "text": "Request paid guarded robot-cell trial with safety lead and technician stop authority",
+          "tag": "wait-and-see"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The last picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough time to plan for everyone, so let's actually do it this time. I'd want proper retraining for older workers and changes in schools now. At work, I'd tell people not to panic but not to coast either."
+          "text": "I would tell trainees that a decade gives them time to learn both cutter wear and robot controls. AGI might change the plan in 2036, with capable hands-on robots around 2039."
         },
         {
           "speaker": "interviewer",
@@ -307,7 +391,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd think ten years is a full career arc for me in automation, and then something else. I'd be 37 at the end, with real money put aside. It feels more like an opportunity than a threat."
+          "text": "I would be only around forty by the robot date and expect decades more of paid work. If the plant funds practical controls training, I could build a career commissioning machines rather than wait to see whether my current setup job survives."
         },
         {
           "speaker": "interviewer",
@@ -315,7 +399,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd take the robotics certificate first, then move into automation engineering in the first two or three years. Later in the decade I'd think about a degree part time, maybe in engineering or something like teaching, so I'm not tied to one industry. I'd keep investing every month, and probably buy a flat around year three."
+          "text": "I would keep running the cell and save a fixed fifth of each paid shift bonus starting now. If engineering offers a funded controls course with a real paid-time place, I would complete it before 2039; in the first year after 2036 I would apply for a posted local commissioning role only if qualified and its base pay and hours cover my bills."
         },
         {
           "speaker": "interviewer",
@@ -323,36 +407,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. A bit hopeful, actually."
+          "text": "Calm about the long runway, and excited by the work I could learn. The ten-year AGI warning is useful when commissioning training has a real machine attached."
         },
         {
           "speaker": "interviewer",
-          "text": "You sound very sure. What could go wrong for you?"
+          "text": "Why save from the bonus?"
         },
         {
           "speaker": "persona",
-          "text": "Getting comfortable and lazy. I've seen it with Mr Okafor, who was the clever one once and stopped learning. Ten years is enough time to become the old guy who says it'll never happen."
+          "text": "The bonus varies with output, so a fifth of each paid amount builds new cash without cutting my regular bills. I will not call the savings I already have new saving."
         },
         {
           "speaker": "interviewer",
-          "text": "How do you stop that?"
+          "text": "What if the plant never funds the course?"
         },
         {
           "speaker": "persona",
-          "text": "I'd set myself a rule, one new course every year, whatever's going on. My mum would hold me to it, she still asks what I'm studying every time I visit. She left school at 15, so she's very serious about it."
+          "text": "I would keep the paid operator role and ask other nearby plants which real commissioning posts require this diploma. I would not quit for an unfunded course with no job attached."
         }
       ],
-      "say": "I'd say ten years is enough to plan for everyone, so let's actually do it this time. I'd want retraining for older workers and changes in schools now, and tell colleagues not to panic but not to coast.",
-      "think": "Privately ten years is a full career in automation and then something else, ending at 37 with real savings. It feels more like an opportunity than a threat.",
-      "do": "Takes the robotics certificate, then moves into automation engineering within two or three years. Considers a part-time degree later in the decade, keeps investing monthly and likely buys a flat around year three.",
-      "feel": "Calm and a bit hopeful.",
+      "say": [
+        "**2036 AGI** changes plans before capable machine robots around 2039.",
+        "Trainees can learn **cutter wear** alongside robot controls."
+      ],
+      "think": [
+        "I expect **decades of wages** after the robot date.",
+        "Practical **commissioning skill** could keep me employed through changes."
+      ],
+      "do": [
+        "**Keep** running the milling cell and save a fifth of paid bonuses.",
+        "**Complete** funded controls training if an actual paid-time place opens.",
+        "**Apply** for posted local commissioning work if qualified and base pay covers bills."
+      ],
+      "feel": [
+        "**Calm** about a long runway and curious about machine work."
+      ],
       "mood": "calm",
-      "quote": "Ten years is enough time to become the old guy who says it'll never happen.",
-      "fieldNote": "Ten years reads to Emeka as an opportunity. His main fear is becoming complacent like an older supervisor, and he guards against it with a course every year. His mother's seriousness about learning is a quiet driver throughout.",
+      "quote": "The ten-year AGI warning is useful when commissioning training has a real machine attached.",
+      "fieldNote": [
+        "His **early career** and strong savings support a measured move toward commissioning.",
+        "New **bonus saving** comes from pay; training and application remain conditional on funding, paid time and local base wages."
+      ],
       "actions": [
+        "keep-going",
+        "save-more",
         "retrain",
-        "change-job",
-        "invest"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Keep running milling cell while the paid operator role continues",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save one fifth of each paid shift bonus",
+          "tag": "save-more"
+        },
+        {
+          "text": "Complete funded controls course if actual paid-time place opens",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for posted local commissioning role if qualified and base pay/hours cover bills",
+          "tag": "change-job"
+        }
       ]
     }
   },
@@ -363,19 +481,29 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, not for me, for my cousins and people like Joy at the rework bench. I'd be fine, and that's the problem, because being fine on your own street isn't the same as the street being fine. What would help is fast income support and free short courses, plus jobs installing the new kit that go to people from the old lines first."
+      "text": "AGI by 2028 worries me most because capable robots could reach setup work before I qualify for commissioning. I would need a paid guarded trial, a real funded controls place on paid time and a posted local role at enough base pay."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe whether I'd still want to work if I didn't have to. I think I would, actually. I like fixing things too much."
+      "text": "The first robot-made pump housing has to pass a gauge and a burr check. Speed is not quality if the tray ends up in the scrap bin."
     }
   ],
-  "headlineQuote": "I'd be fine, and that's the problem, because being fine on your own street isn't the same as the street being fine.",
-  "portrait": "Emeka Mensah, 27, runs two surface-mount lines at an electronics plant, uses an AI assistant every day and took a PLC programming course out of curiosity. He has invested monthly since 22 and has no children or mortgage. He sees steady disruption and the slower AGI pictures as opportunities to move into automation and earn well, while admitting he would be speeding up the change. Even fast AGI only leaves him uneasy for himself, but worried for his young cousins and colleagues like Joy. His mother's belief in learning and family duty shapes his plans.",
-  "biggestWorry": "AGI by 2028 worries him most, not for himself but for his cousins and colleagues on the old lines.",
-  "whatWouldHelp": "Fast income support, free short courses, and jobs installing the new kit offered first to people from the old lines."
+  "portrait": [
+    "**Emeka Mensah**, 27, leads a computer-controlled milling cell making medical pump housings and holds a two-year technical diploma.",
+    "He lives **alone**, earns a higher operator rate, has more than six months saved and many nearby factory jobs.",
+    "He uses **AI daily** for setup notes and fault codes, verifying against manuals and measured parts.",
+    "In the fast scenario he is **anxious** that capable robots could take his setup premium around 2031.",
+    "He seeks **funded controls training** and a posted local commissioning role with safe duties and bill-covering base pay."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** gives little time before capable robots could remove his higher-paid setup work."
+  ],
+  "whatWouldHelp": [
+    "A paid **guarded trial**, real funded course place and posted local commissioning job at adequate base pay would help."
+  ],
+  "headlineQuote": "The first robot-made pump housing has to pass a gauge and a burr check."
 }
