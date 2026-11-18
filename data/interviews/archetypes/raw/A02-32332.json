@@ -11,107 +11,159 @@
     "outlook": "traditional",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Thanks for making time, Grace. I'm a field researcher with the Work Futures Panel, an independent research group. We're not tied to any AI company, employer, union, party or government, and we're not selling anything. Everything you tell me stays confidential, so you can say what you'd say in public and, separately, what you really think. To start, could you walk me through a normal working day?"
+      "text": "I am with the independent Work Futures Panel. We have no ties to employers, AI firms or government, and your answers stay confidential. What is a normal working day like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I drive a front-end loader at a big open-pit phosphate mine, the rock that goes into fertiliser. Most days I'm at the rail loadout, filling the train wagons from the stockpile, a hundred and twenty wagons a train, and you've got to get the weight right in each or the rail people ring up and complain. I like the order of it, the train comes, you fill it, it leaves full. What wears me out is the waiting when the train's late and you're sitting there with the engine idling for two hours."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "What's life like outside the mine?"
-    },
-    {
-      "speaker": "persona",
-      "text": "Luc, my husband, runs a small beef cattle farm, about three hundred acres, we bought it twenty years ago with my mine wages. Our son Antoine has his own mechanic's garage and our daughter Claire works at the bank in town. I help at the parish on Sundays, flowers and the roster. I use one of those AI helpers now and then, Claire set it up so I can talk the cattle weights into my phone instead of writing them down."
+      "text": "I am 58 and operate a drill rig at a large mine. I check the bit, water supply and rock notes before drilling, then listen for a change when the bit meets a harder seam. My vocational certificate got me started and years of shifts taught me what the controls feel like. I like teaching a younger operator a safe stop; I dislike a parts order that arrives in the wrong size."
     }
   ],
   "scenarios": {
     "S0": {
-      "transcript": [
-        {
-          "speaker": "interviewer",
-          "text": "I'm going to read you five pictures of the future, one at a time. The first is called AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
-        },
-        {
-          "speaker": "persona",
-          "text": "I'd say well, there's a lot of fuss over nothing, but the cattle app's handy. I'd say it at the parish morning tea. I don't post things."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AI Plateau means for you?"
-        },
-        {
-          "speaker": "persona",
-          "text": "It means I keep loading trains until about sixty-two and then go home to the farm full-time. That's what we've always planned. I'm content with that."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
-        },
-        {
-          "speaker": "persona",
-          "text": "Keep working, keep the farm going, keep saving. I'd probably let Claire show me another app or two, if it saves time with the farm books. Nothing big."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "How does it feel, picturing that?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Calm. Like a Sunday drive."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "You use AI for the cattle weights. Would you keep doing that?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Yes, it's good for that, it's like having a clerk in your pocket. I didn't trust it at first, then Luc's brother used it for a year and swore by it, so I tried. That's how I do things, I let someone else go first."
-        },
-        {
-          "speaker": "interviewer",
-          "text": "What are you and Luc planning for the next few years?"
-        },
-        {
-          "speaker": "persona",
-          "text": "Four more years on the loader, then I'm a full-time farmer's wife, which means a full-time farmer. Luc's knees are worse than mine. Antoine might take on some of the machinery work."
-        }
+      "say": [
+        "I welcome a **faster stock list** if rig operators still check bits and rock.",
+        "I would verify **AI parts results** against the catalogue before ordering."
       ],
-      "say": "I'd say there's a lot of fuss over nothing, though the cattle app's handy. I'd say it at the parish morning tea rather than posting anything.",
-      "think": "She thinks she keeps loading trains until about sixty-two and then goes home to the farm full-time, as always planned. She's content with that.",
-      "do": "Keeps working, running the farm and saving as usual. Lets her daughter show her another app or two if it saves time on the farm books.",
-      "feel": "Calm, like a Sunday drive.",
+      "think": [
+        "I expect **regular rig shifts** to continue in a mild AI future.",
+        "I have **eight months** saved, while the pension still needs checking."
+      ],
+      "do": [
+        "**Keep** operating the drill rig on assigned shifts.",
+        "**Try** an approved stock search on one bit order if stores provides it."
+      ],
+      "feel": [
+        "**Calm** about small time savings that leave rig work intact."
+      ],
       "mood": "calm",
-      "quote": "It's like having a clerk in your pocket.",
-      "fieldNote": "Grace has a farm bought with her mine wages, which gives her a second footing beyond savings. She adopts tools after someone she trusts has tried them, like Luc's brother with the cattle app. Her faith and parish role shape her week.",
+      "quote": "My partner wants a pension figure, not a retirement date pulled from the air.",
+      "fieldNote": [
+        "**Measured adoption** fits her steady profile: one known part first, then a catalogue and label check.",
+        "**Eight-month cushion** and regular higher pay support a calm response."
+      ],
       "actions": [
         "keep-going",
         "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep operating the drill rig on assigned shifts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Try an approved stock search if stores provides it",
+          "tag": "learn-ai"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would tell the drill crew that a faster stock list for bits is useful, but it cannot tell me whether the rock is binding the rig. I have tried an AI search for a parts number at home; I still checked the catalogue before ordering anything."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A mild AI future would suit us. My partner and I have around eight months of expenses saved, and my higher mine pay is regular. I would still watch the pension statement, but a quicker form would not threaten my rig shifts."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I would keep operating the drill rig and check bit orders against the catalogue. In the first year I would use an approved stock search on one order if stores provides it, then compare its answer with the part label."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm. I can see a little time saved without the job turning upside down."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why just one order?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I would start with a common bit we already know. If the catalogue and label agree, I can trust the search a little more next time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does your partner say about retirement?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My partner wants a pension figure, not a retirement date pulled from the air. We review the pension and savings every spring when the annual statement arrives."
+        }
       ]
     },
     "S1": {
+      "say": [
+        "I expect **buying and booking** work to change before physical drilling.",
+        "I would test a **proven monitor** with paid instruction before relying on it."
+      ],
+      "think": [
+        "I worry about **stores colleagues** whose work may shrink first.",
+        "I feel my **rig shifts** are safe now, but later robot purchases may reduce crews."
+      ],
+      "do": [
+        "**Observe** a proven rig display with the maintenance trainer.",
+        "**Take** paid monitor instruction if the mine offers it.",
+        "**Record** hard-seam vibration against the displayed reading."
+      ],
+      "feel": [
+        "**Uneasy** about later crew sizes while near-term drilling remains secure."
+      ],
+      "mood": "uneasy",
+      "quote": "A drill bit can chatter when it meets a harder seam.",
+      "fieldNote": [
+        "**Rig feedback** is physical and specific: she knows the feel of a bit crossing hard rock.",
+        "**Paid instruction** and a proven display are conditions for her adoption.",
+        "**Stores colleague** is visible as a person, not an abstract office role."
+      ],
+      "actions": [
+        "retrain"
+      ],
+      "steps": [
+        {
+          "text": "Take paid rig-monitor instruction if the mine offers it",
+          "tag": "retrain"
+        },
+        {
+          "text": "Record hard-seam vibration against the rig display",
+          "tag": "retrain"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say businesses have a right to modernise, and people should be ready to adapt. I'd say families and the parish should look out for those who get hit. That's how we've always done it."
+          "text": "I would say buying software may save the stores team time, while the drill crew still needs to deal with broken bits and changing rock. I would try a proven rig-monitoring display with an instructor beside me."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think Steady Disruption means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "For me, I think the loadout would be automated sooner or later, it's a repeat job. But I'd have the farm, so I'm not worried for myself. I'd worry for the young women on the crew who've just bought houses."
+          "text": "The buying and booking jobs could shrink first, and I know people there. Robots for the physical rig come more slowly, so my shifts seem safe for now. I worry that a later fleet purchase might cut crews before older workers have planned their final years."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +171,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Once the others had tried it, I'd learn the new system the company brings in. I'd keep working, put a bit more aside, and maybe buy Luc that second-hand tractor with the self-steering, if the neighbours say it's worth it."
+          "text": "I would ask the maintenance trainer to show me a display that has worked on another rig. In the first year I would take paid instruction if the mine offers it and note whether the monitor catches the vibration I feel through the controls."
         },
         {
           "speaker": "interviewer",
@@ -127,55 +179,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm, mostly. A little sad for the young ones."
+          "text": "Uneasy about where it leads, though the immediate rig work still feels secure. I would rather test a proven device than dismiss it."
         },
         {
           "speaker": "interviewer",
-          "text": "Rail loadouts are often automated at bigger sites. Have you seen that?"
+          "text": "What vibration would matter?"
         },
         {
           "speaker": "persona",
-          "text": "Yes, at a port I visited on a family trip, the wagons filled themselves while one man watched from a tower. It was impressive, I'll admit. I thought, that's my job without me."
+          "text": "A drill bit can chatter when it meets a harder seam. I would record the depth and compare the display with what the rig actually did."
         },
         {
           "speaker": "interviewer",
-          "text": "Who should look after people who lose out?"
+          "text": "Who in stores worries you?"
         },
         {
           "speaker": "persona",
-          "text": "Families first, then the parish and the community. Government can help with training, but I don't want people living on cheques. Work is good for the soul."
+          "text": "My colleague Ruth orders our bits and knows which supplier sends the wrong size. I would ask what tasks the new buying system takes from her before telling the crew it is only a convenience."
         }
-      ],
-      "say": "I'd say businesses have a right to modernise and people should be ready to adapt. Families and the parish should look out for those who get hit, as they always have.",
-      "think": "She thinks the loadout will be automated sooner or later, being a repeat job, but the farm means she isn't worried for herself. Her worry is for the young women on her crew who've just bought houses.",
-      "do": "Learns the new loadout system once colleagues have tried it and keeps working while putting a bit more aside. Considers buying a second-hand self-steering tractor for the farm if neighbours say it's worth it.",
-      "feel": "Mostly calm, a little sad for the young ones.",
-      "mood": "calm",
-      "quote": "I thought, that's my job without me.",
-      "fieldNote": "The farm acts as her safety net and shapes her calm. She backs a business's right to modernise and looks to family and parish before government. She would even bring automation onto her own farm once neighbours vouch for it.",
-      "actions": [
-        "learn-ai",
-        "save-more",
-        "invest"
       ]
     },
     "S2": {
+      "say": [
+        "I separate **2028 buying** change from capable drill robots around 2031.",
+        "I want **rig staffing** explained before anyone assumes older workers can simply retire."
+      ],
+      "think": [
+        "I could lose **drilling hours** at 63 before my planned retirement.",
+        "I cannot replace **years of wages** with an eight-month reserve, even with other mines nearby."
+      ],
+      "do": [
+        "**Join** a paid robot-rig safety trial after 2028 if the mine offers one.",
+        "**Save** any annual bonus into the retirement account if it is paid.",
+        "**Apply** to another local mine if drilling shifts are cut."
+      ],
+      "feel": [
+        "**Anxious** about possible lost drilling hours before retirement."
+      ],
+      "mood": "anxious",
+      "quote": "A slow stop can still damage a rig and leave a worker clearing the mess.",
+      "fieldNote": [
+        "**Age 63** at capable robots places the risk before the retirement age she had imagined.",
+        "**Eight-month reserve** buys search time, while local openings still have to be real.",
+        "**Safety trial** focuses on stopping a bound bit and recording delay."
+      ],
+      "actions": [
+        "learn-ai",
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Join a paid robot-rig safety trial if the mine offers one",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Put any annual bonus into the retirement account if paid",
+          "tag": "save-more"
+        },
+        {
+          "text": "Apply to a local mine if drilling shifts are cut",
+          "tag": "change-job"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say it's too fast and families need to pull together. I'd say the parish should be ready to help people, practical help, meals, lifts, jobs on farms. I wouldn't say the government should fix everything."
+          "text": "I would tell the crew thinking AI by 2028 changes buying and logs, while capable drill robots arrive around 2031. We need the mine to explain which rigs still need people before it talks about easy retirement."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2028 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "Privately, I'd be out at sixty instead of sixty-two, and that's not a disaster with the farm and savings. What worries me more is the farm itself, if robots can run cattle, what's Luc's three hundred acres worth? But the land's still ours, land doesn't vanish."
+          "text": "I would be 63 at the robot date, younger than the age I imagined leaving full-time work. My drilling hours could fall if the robots handle difficult seams, and an eight-month reserve would not replace a wage for years. There are plenty of other mines nearby, but I would need a real vacancy, not a hopeful map."
         },
         {
           "speaker": "interviewer",
@@ -183,7 +265,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd take the package and go home early to the farm. We'd hold off on any big purchases for a year to see where things land. Antoine and Claire would be the first people I'd sit down with, to see what they need."
+          "text": "Now I would ask for the rig trial schedule and pension estimate. In the first year after 2028 I would join a paid robot-rig safety trial if the mine offers one, save any bonus into the retirement account, and apply to another local mine if my drilling shifts are cut."
         },
         {
           "speaker": "interviewer",
@@ -191,55 +273,85 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not frightened, I've got my feet on our own ground, literally."
+          "text": "Anxious. The short run to 2031 gives me choices, but it also puts a possible wage loss before my planned retirement."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd be sixty in two years. What does the farm look like if robots reach farm work too?"
+          "text": "What would a safety trial show?"
         },
         {
           "speaker": "persona",
-          "text": "The land would still be there and the cattle still need feeding, robot or no robot. We might not make as much, but we'd eat. That's more than a lot of people will have."
+          "text": "I would want the robot to stop cleanly when a bit binds, with the depth and delay recorded. A slow stop can still damage a rig and leave a worker clearing the mess."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you say to the young women on your crew?"
+          "text": "How would you use the reserve?"
         },
         {
           "speaker": "persona",
-          "text": "I'd tell them to talk to their families, to cut back now and not be proud about asking for help from people who love them. And I'd tell them to come to the parish, we'd find something. Some of them don't go to church, but we wouldn't turn them away."
+          "text": "I would keep it for bills if shifts dropped while I looked for work. I would not spend it buying a course unless a paid job and the right certificate were clear."
         }
-      ],
-      "say": "I'd say it's too fast and families need to pull together, with the parish ready to give practical help like meals, lifts and farm jobs. I wouldn't say government should fix everything.",
-      "think": "She expects to be out at sixty instead of sixty-two, which isn't a disaster given the farm and savings. She worries more about the farm's value if robots can run cattle, but takes comfort that the land is still theirs.",
-      "do": "Takes the package and goes home early to the farm, holding off on big purchases for a year. Sits down first with her son and daughter to see what they need.",
-      "feel": "Uneasy but not frightened, with her feet on her own ground.",
-      "mood": "uneasy",
-      "quote": "I've got my feet on our own ground, literally.",
-      "fieldNote": "Owning land gives her a sense of safety that savings alone might not. She turns to family and parish and offers help to younger colleagues whether or not they're churchgoers. She is honest that the farm's value might fall.",
-      "actions": [
-        "retire-early",
-        "cut-spending",
-        "seek-support"
       ]
     },
     "S3": {
+      "say": [
+        "I see **2031 logs** changing before capable drill robots around 2034.",
+        "I want **tested rigs** and paid training before choosing fewer shifts."
+      ],
+      "think": [
+        "I may be able to **reduce hours** at 66 if pension figures cover bills.",
+        "I have **local mine options** if drilling shifts shrink, subject to actual vacancies."
+      ],
+      "do": [
+        "**Keep** my rig certificate current this year.",
+        "**Take** a paid robot-control refresher after 2031 if a tested rig and place are offered.",
+        "**Compare** pension income with bills before reducing shifts."
+      ],
+      "feel": [
+        "**Uneasy** about the rig change, with a concrete paid training route if offered."
+      ],
+      "mood": "uneasy",
+      "quote": "A certificate without bound-bit and power-failure drills would not reassure me.",
+      "fieldNote": [
+        "**Age 66** at robot arrival could make fewer hours feasible, but pension figures decide.",
+        "**Refresher condition** includes a tested rig, paid time and an offered place.",
+        "**Bound-bit stop** and power failure show what she expects from useful training."
+      ],
+      "actions": [
+        "keep-going",
+        "learn-ai",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep the rig certificate current while working assigned shifts",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Take a paid robot refresher if a tested rig and place are offered",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Wait to reduce shifts until pension income covers bills",
+          "tag": "wait-and-see"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is enough to get ready if people are sensible. Learn a trade, help each other, stay close to family. That's what I'd tell anyone who asked."
+          "text": "I would say 2031 brings thinking AI into buying and logs, then capable drill robots around 2034. That gives us time to train on proven rigs and compare pensions with real bills."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2031 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "I'd be sixty-three, which is later than I planned to stop anyway. So the mine part doesn't touch me. It's the farm, and the children."
+          "text": "I would be 66 when robots can drill like us. With several years of higher pay, we might have enough to reduce my shifts, but I will not claim that before seeing the pension figures. If drilling jobs shrink, other mines nearby give me a second place to ask."
         },
         {
           "speaker": "interviewer",
@@ -247,7 +359,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Keep working, finish at sixty-two as planned. Spend the next years getting the farm in good order, maybe invest in better fencing and water so it runs with less work. Help Antoine think about how his garage changes with robot cars."
+          "text": "I would check the pension statement with my partner this spring and keep the rig certificate current. In the first year after 2031 I would take the mine’s paid robot-control refresher if a tested rig and a place are offered, then decide on hours after comparing pension income with bills."
         },
         {
           "speaker": "interviewer",
@@ -255,55 +367,80 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. There's time, and we've got a plan."
+          "text": "Uneasy, though I feel more able to prepare. A tested rig and a paid course would make the choice concrete."
         },
         {
           "speaker": "interviewer",
-          "text": "What does five years change compared with two?"
+          "text": "What would the refresher need to cover?"
         },
         {
           "speaker": "persona",
-          "text": "Probably, once the neighbours had them and they worked. If a robot can check the water troughs at five in the morning, Luc's knees would thank it. I'm not against machines, I'm against fools."
+          "text": "I would want a bound-bit stop, a power failure and the handover from robot to operator. A certificate without bound-bit and power-failure drills would not reassure me."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you bring robots onto the farm yourself, in this picture?"
+          "text": "Could you stop working at 66?"
         },
         {
           "speaker": "persona",
-          "text": "Two years would rush us. Five lets me leave when I meant to and set the farm up properly. I'd sleep fine."
+          "text": "My partner and I would compare monthly pension income with our ordinary spending. If it comes up short, I would keep paid rig shifts or look at another local mine."
         }
-      ],
-      "say": "I'd say five years is enough to get ready if people are sensible: learn a trade, help each other and stay close to family.",
-      "think": "At sixty-three she'd already be past her planned retirement, so the mine part doesn't touch her. Her thoughts go to the farm and her children.",
-      "do": "Keeps working and finishes at sixty-two as planned, spending the years getting the farm in order with better fencing and water. Helps her son think about how his garage changes with robot cars.",
-      "feel": "Calm, because there's time and a plan.",
-      "mood": "calm",
-      "quote": "I'm not against machines, I'm against fools.",
-      "fieldNote": "Five years lines up with her retirement, so she simply sets the farm up for the future. She would bring in farm robots once neighbours had proven them. Her worry turns to her son's garage.",
-      "actions": [
-        "keep-going",
-        "invest",
-        "automate"
       ]
     },
     "S4": {
+      "say": [
+        "I see **2036 logs** changing before capable drill robots around 2039.",
+        "I want **tested rigs** and enough warning to choose full-shift retirement."
+      ],
+      "think": [
+        "I hope to leave **full shifts** before robots arrive at 71.",
+        "I need **pension figures** before promising a retirement date despite strong savings."
+      ],
+      "do": [
+        "**Keep** drilling on current shifts for now.",
+        "**Review** pension and savings each spring with my partner.",
+        "**Reduce** shifts after 2036 only if pension and savings cover bills."
+      ],
+      "feel": [
+        "**Calm** about near-term work, with the retirement choice still tied to figures."
+      ],
+      "mood": "calm",
+      "quote": "I would rather adjust a retirement plan than sell my partner a retirement date we cannot afford.",
+      "fieldNote": [
+        "**Age 68** at thinking AI and 71 at capable robots makes retirement planning the chief issue.",
+        "**Eight months** saved and higher pay allow calm near-term choices without assuming a pension amount.",
+        "**Hands-on mentoring** remains important even in her long-horizon response."
+      ],
+      "actions": [
+        "keep-going",
+        "wait-and-see"
+      ],
+      "steps": [
+        {
+          "text": "Keep drilling on current paid shifts for now",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Wait to reduce shifts until pension and savings cover bills",
+          "tag": "wait-and-see"
+        }
+      ],
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next picture is called AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is plenty of time to learn something new. No excuses. I'd say it to anyone at church who's worried."
+          "text": "I would tell the drill crew that thinking AI changes our logs by 2036 and capable drill robots come around 2039. A decade gives the mine time to test rigs and gives us time to decide when to leave full shifts."
         },
         {
           "speaker": "interviewer",
-          "text": "And just between us, off the record, what do you really think AGI by 2036 means for you?"
+          "text": "And just between us, off the record, what do you really think it means for you?"
         },
         {
           "speaker": "persona",
-          "text": "I'm on the farm, the mine's long behind me. It doesn't touch me much. I'd be more interested in what it does to cattle prices."
+          "text": "I would be 68 at the thinking date and 71 when robots arrive. I would like to be off full shifts before then, and eight months of savings plus steady pay make planning possible. I still need to see the pension amount before promising my partner a retirement date."
         },
         {
           "speaker": "interviewer",
@@ -311,7 +448,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Same as before, work to sixty-two, then the farm. Over the decade I'd invest bit by bit in the farm so it can run with less hands. Keep saving."
+          "text": "I would keep drilling for now and review our pension and savings each spring. In the first year after 2036 I would check whether the new log changes my work hours, then cut my shifts only if the pension and savings cover ordinary bills."
         },
         {
           "speaker": "interviewer",
@@ -319,36 +456,24 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. It's the slow one, there's time for everyone."
+          "text": "Calm about the near years. I can test small changes as they arrive and use actual household figures for the bigger decision."
         },
         {
           "speaker": "interviewer",
-          "text": "By 2036 you'd be sixty-eight. Where are you then?"
+          "text": "What would you tell a younger operator?"
         },
         {
           "speaker": "persona",
-          "text": "Antoine, I'd tell him to learn the electric and robot side of cars, because people will still need someone to fix them. Claire, I don't know, banks are all computers already. I'd tell her to keep her savings up and keep close to family."
+          "text": "I would tell my apprentice coworker Leena to learn the rig’s hard-seam feel while a person is beside her. The screen may help, but she needs a safe stop drilled into her hands."
         },
         {
           "speaker": "interviewer",
-          "text": "Anything you'd say to Antoine and Claire?"
+          "text": "What if the pension falls short?"
         },
         {
           "speaker": "persona",
-          "text": "I'd be sad for the mine town, but towns change. My grandmother's town lost its sawmill and people found other work. We'd find a way."
+          "text": "I would keep full rig shifts if my health allows and ask about openings at nearby mines. I would rather adjust a retirement plan than sell my partner a retirement date we cannot afford."
         }
-      ],
-      "say": "I'd say ten years is plenty of time to learn something new, with no excuses, and I'd tell anyone worried at church the same.",
-      "think": "She'll be on the farm with the mine long behind her, so it barely touches her. She's more interested in what it does to cattle prices.",
-      "do": "Works until sixty-two as planned, then moves to the farm full-time. Invests bit by bit in the farm over the decade so it runs with fewer hands, and keeps saving.",
-      "feel": "Calm, because there's time for everyone.",
-      "mood": "calm",
-      "quote": "My grandmother's town lost its sawmill and people found other work.",
-      "fieldNote": "With ten years, she treats AGI as one more change towns have survived before. Her advice to her children is practical and family-centred. Her interest shifts to cattle prices rather than the mine.",
-      "actions": [
-        "keep-going",
-        "invest",
-        "save-more"
       ]
     }
   },
@@ -359,7 +484,7 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, for the young women on my crew more than me, because they'd have no time and big mortgages. What would help is companies keeping people on while they change over, apprenticeships for the young ones, and families and parishes ready to help each other."
+      "text": "AGI by 2028 worries me most because capable drill robots around 2031 could reduce hours before the retirement date I had in mind. A paid rig trial, clear staffing plan and pension estimate would help me choose whether to stay or seek work at another mine."
     },
     {
       "speaker": "interviewer",
@@ -367,11 +492,22 @@
     },
     {
       "speaker": "persona",
-      "text": "You didn't ask about the land. People with land, even a small bit, will feel safer than people with only a wage. That's worth thinking about."
+      "text": "Ask who tests the hard stops before anyone removes a drill operator. A bound bit is a real problem even when the screen looks calm."
     }
   ],
-  "headlineQuote": "People with land, even a small bit, will feel safer than people with only a wage.",
-  "portrait": "Grace Moreau is a 58-year-old front-end loader operator at the rail loadout of a large open-pit phosphate mine, a practical, churchgoing woman who bought a beef cattle farm with her husband using her mine wages. She uses an AI helper now and then for cattle records, after her brother-in-law proved it worked. She backs business's right to modernise and looks to family and parish to catch people. Because of the farm, she stays calm in most pictures and only uneasy when AGI arrives in two years. With more time she plans to set up the farm to run with fewer hands.",
-  "biggestWorry": "AGI by 2028 worries her most, mainly for the young women on her crew who would have no time and big mortgages.",
-  "whatWouldHelp": "Companies keeping people on while they change over, apprenticeships for young people, and families and parishes ready to help each other."
+  "headlineQuote": "A bound bit is a real problem even when the screen looks calm.",
+  "portrait": [
+    "**Grace, 58**, operates a drill rig and knows the feel of a bit crossing hard rock.",
+    "**Higher pay** and eight months of savings let her plan retirement, though pension income is still unconfirmed.",
+    "**Proven tools** appeal to her; she occasionally uses AI but checks orders against parts catalogues.",
+    "**Fast AGI** makes her anxious because capable drill robots around 2031 could reduce work before her chosen retirement.",
+    "**Longer warning** lets her seek paid refresher training and compare pension figures before reducing shifts."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** leaves the shortest time before capable drill robots may reduce her hours around 2031."
+  ],
+  "whatWouldHelp": [
+    "**A paid rig trial** and clear staffing plan would show what work remains.",
+    "**A pension estimate** would help her weigh fewer shifts against nearby mine jobs."
+  ]
 }
