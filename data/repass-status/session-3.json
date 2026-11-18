@@ -13,7 +13,7 @@
   "claimedAt": "2026-11-18T09:32:48.041838+00:00",
   "jobs": {
     "A13": {
-      "reviewedCount": 93,
+      "reviewedCount": 103,
       "reviewedIds": [
         "A13-11111",
         "A13-11112",
@@ -107,10 +107,7 @@
         "A13-21133",
         "A13-21211",
         "A13-21212",
-        "A13-21213"
-      ],
-      "insightsValidated": false,
-      "remainingGaps": [
+        "A13-21213",
         "A13-21221",
         "A13-21222",
         "A13-21223",
@@ -120,7 +117,10 @@
         "A13-21311",
         "A13-21312",
         "A13-21313",
-        "A13-21321",
+        "A13-21321"
+      ],
+      "insightsValidated": false,
+      "remainingGaps": [
         "A13-21322",
         "A13-21323",
         "A13-21331",
@@ -1032,35 +1032,35 @@
   "reservations": {
     "author1": {
       "ids": [
-        "A13-21223",
-        "A13-21231"
+        "A13-21322",
+        "A13-21323"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:27:07.750726+00:00"
+      "reservedAt": "2026-11-18T10:35:50.181280+00:00"
     },
     "author2": {
       "ids": [
-        "A13-21232",
-        "A13-21233"
+        "A13-21331",
+        "A13-21332"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:28:23.123405+00:00"
+      "reservedAt": "2026-11-18T10:36:19.582707+00:00"
     },
     "author3": {
       "ids": [
-        "A13-21311",
-        "A13-21312"
+        "A13-21333",
+        "A13-22111"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:30:06.119951+00:00"
+      "reservedAt": "2026-11-18T10:37:26.747585+00:00"
     },
     "author4": {
       "ids": [
-        "A13-21221",
-        "A13-21222"
+        "A13-21313",
+        "A13-21321"
       ],
-      "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:21:52.250234+00:00"
+      "state": "ACCEPTED",
+      "reservedAt": "2026-11-18T10:31:27.096987+00:00"
     },
     "author1_rewrite": {
       "ids": [
@@ -1389,9 +1389,19 @@
     "A13-21111": "1c9d9c1b7aa1f3d3c38bac46ea89e986b119323d5be951ab6b1ac6a0cd2cec42",
     "A13-21112": "8b490492cdfda9ec9b730f7e94bd7f7dbb223e66e03764c3e45e3473dd6637f0",
     "A13-21133": "aa9328eb0de393fbe2457648f2ec57ca98c386569307394c7630135d0516fba3",
-    "A13-21211": "0adeaec04723136942f996dda421240362744e9536fa95ca2962a37fc6ddcfac",
+    "A13-21211": "8e0aadcbde0ed3a872ed96577cf128c7dfae515e1a24937ff8c6eaff8ab5aeed",
     "A13-21212": "727da367fcd8c4fbcb2b6af3cfde3c6ab87a9a02efbdb1194bd6ecd98581a3da",
-    "A13-21213": "a7c4c01411de2c18cf24f79454b4acfee7a5467fa02aa143cf0da6383539dc8f"
+    "A13-21213": "a7c4c01411de2c18cf24f79454b4acfee7a5467fa02aa143cf0da6383539dc8f",
+    "A13-21221": "496b7cd4a33342b3a674c9559b445846151826e9f24281e47503d3c6dcf27714",
+    "A13-21222": "8788fb18bf55515ece033cfb514b60cabea1434ca5a3e1df563cbdeceffa86c8",
+    "A13-21223": "86c62c152bee9ad696cb19b0b3f06ef9ae7cfb9ee4fc487c2be308db569dc048",
+    "A13-21231": "c042d34b5878555470dd8dc5d6ea4e39c1fb05cd4e6b8982995b5d104dc3e484",
+    "A13-21232": "56c8b054e2d721ea351a5db7f24dd6561add84fed57c520f623416fcf2b3eaf7",
+    "A13-21233": "b93c9832ee707eef884e7514fae7e819f4c3f0dc8ea6622065fd2ca1f583dd1e",
+    "A13-21311": "8e684cf3cd663b12e733b86dbd47895e6fb7f7d1d957a69b1580a8ed9396fd51",
+    "A13-21312": "f5b971a67d93958f51db23ca0c5add083c4a4d2ef6e965e1e673d2a08160ab87",
+    "A13-21313": "e1a3acde7b00b5f96bd5e0237486c8415e5e40d1f614e4b27eb28eb622fdcfb6",
+    "A13-21321": "5f37984d1bfd7e32396780c821bbab1020ea50446c3a667d9483c2d1b88b53c5"
   },
   "latestCheckpointCommit": "d6da679b6cdb2cc3e749a9ca8d1949db08341e5a",
   "semanticReview": [
@@ -1403,9 +1413,10 @@
     "Root sentence audit amended FEEL grammar only in 13 accepted new interviews; old/new hashes and exact field changes recorded. All initial baseline hashes remain protected; counts unchanged.",
     "All accepted new interviews have full-sentence FEEL annotations; root grammar amendments retain transcript emotions and have explicit old/new hash records. Fresh A13-12333 replacement is accepted; original repair was superseded without rewriting history.",
     "Early-life A13 block complete: all 81 canonical A13-1xxxx IDs reviewed/passing. Range totals 248/972; 724 interview gaps and all four insights remain. Actual whole-job validator passing IDs exactly equal reviewed manifests; legacy failing gaps in A14-A16 remain excluded. All 223 initially preserved hashes unchanged; branch diff contains only accepted A13 raw files and own status.",
-    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial and accepted hashes unchanged; drafts excluded from reviewed counts and staging."
+    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial and accepted hashes unchanged; drafts excluded from reviewed counts and staging.",
+    "Midlife checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging."
   ],
-  "updatedAt": "2026-11-18T10:30:31.276018+00:00",
+  "updatedAt": "2026-11-18T10:41:47.297551+00:00",
   "acceptanceRecords": [
     {
       "ids": [
@@ -1672,9 +1683,79 @@
       "parentReview": "Root full profiles/transcripts/annotations plus reviewer1 report independently reviewed. Omar S4 extra payment requires both wages full and no school-trip cost; Wendy application requires stop authority mortgage+childcare/pay/pickup, saving full minibus hours after costs, future role real product checks and pay. Exact grid21213 adaptive dailyAI confirmed; reviewer incorrect steady-profile frequency flag rejected. Private THINK, quotes, distinct work stories, AGI-exposed fallback desks, robot dates and moods checked.",
       "validator": "node scripts/validate-archetype-interviews.mjs A13-21212 A13-21213",
       "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-21221",
+        "A13-21222"
+      ],
+      "time": "2026-11-18T10:31:26.630877+00:00",
+      "hashes": {
+        "A13-21221": "496b7cd4a33342b3a674c9559b445846151826e9f24281e47503d3c6dcf27714",
+        "A13-21222": "8788fb18bf55515ece033cfb514b60cabea1434ca5a3e1df563cbdeceffa86c8"
+      },
+      "parentReview": "Root full transcripts/profile/annotations reviewed plus read-only reviewer2 pair10 adjudicated. Friday cadence restored, staffing Say separated, application precedes signed acceptance; dispute/buyer fallback thinking exposure and2036/2039 limits explicit. Paid-time and mortgage/school/childcare/savings conditions retained. FatimaS4 uneasy grounded own voice. Rejected reviewer lab-work claim as cross-ID contamination. Quotes standalone exact; public/private and moods independently reviewed.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-21221 A13-21222",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-21223",
+        "A13-21231"
+      ],
+      "time": "2026-11-18T10:35:35.956843+00:00",
+      "hashes": {
+        "A13-21223": "86c62c152bee9ad696cb19b0b3f06ef9ae7cfb9ee4fc487c2be308db569dc048",
+        "A13-21231": "c042d34b5878555470dd8dc5d6ea4e39c1fb05cd4e6b8982995b5d104dc3e484"
+      },
+      "parentReview": "Root full transcripts/profiles/annotations plus reviewer1 SHA-bound pair review. Rechecked wages+carrepair savings, overtime pause, private-only THINK, quote2036; root clarified Uma steps combined wages cover mortgage food schoolcosts plus sister overlapping pickups and S4 household bills. Ages/timing and depot physical bridge vs thinking exposure faithful. Both actual+supp validators pass after step-length correction; no initial protected files changed.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-21223 A13-21231",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-21232",
+        "A13-21233"
+      ],
+      "time": "2026-11-18T10:36:19.138444+00:00",
+      "hashes": {
+        "A13-21232": "56c8b054e2d721ea351a5db7f24dd6561add84fed57c520f623416fcf2b3eaf7",
+        "A13-21233": "b93c9832ee707eef884e7514fae7e819f4c3f0dc8ea6622065fd2ca1f583dd1e"
+      },
+      "parentReview": "Root full transcripts/profiles/annotations reviewed plus reviewer2 pair12 current report. Colin Say overlap removed, pickup arranged with Mei (does not assert Mei covers both), receiving-lead planning exposed2036 vs physical2039. Parents inquiry retained transcript; no obligation tag every action and four-tag cap met. Dana duplicated site-role followup replaced with genuine response, exact childquote retained; private THINK corrected to private source, site thinking2031/2036 vs physical/driving2034/2039 and paid-human-work conditions explicit. Current timing steps verified; rejected obsolete absent-deadline reviewer claims.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-21232 A13-21233",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-21311",
+        "A13-21312"
+      ],
+      "time": "2026-11-18T10:37:17.871535+00:00",
+      "hashes": {
+        "A13-21311": "8e684cf3cd663b12e733b86dbd47895e6fb7f7d1d957a69b1580a8ed9396fd51",
+        "A13-21312": "f5b971a67d93958f51db23ca0c5add083c4a4d2ef6e965e1e673d2a08160ab87"
+      },
+      "parentReview": "Root full transcripts/profiles/annotations plus reviewer1 SHA-bound APPROVE pair reviewed; root reread corrected S3/S4. Karl children20/25by2036, S0 concrete tenantquote, paidtrial fullsalary/cover and conditional sitepost. Root added explicit post2036 paidrole/pay/hour gate to Do. Sara child14by2031 householdrota, paidliveinstruction after2036 preserved. Moods follow ownincome and strongreserves; all fallback thinking and laterrobots explicit; exactquotes/conditiontags/privateTHINK checked.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-21311 A13-21312",
+      "supplemental": "PASS"
+    },
+    {
+      "ids": [
+        "A13-21313",
+        "A13-21321"
+      ],
+      "time": "2026-11-18T10:41:24.011522+00:00",
+      "hashes": {
+        "A13-21313": "e1a3acde7b00b5f96bd5e0237486c8415e5e40d1f614e4b27eb28eb622fdcfb6",
+        "A13-21321": "5f37984d1bfd7e32396780c821bbab1020ea50446c3a667d9483c2d1b88b53c5"
+      },
+      "parentReview": "Root full transcripts/profiles/annotations and reviewer2 pair13 grounded findings reviewed; rechecked corrections. Aaron private S4THINK fromprivate source, mortgage+childcare steps, reserve mortgage during interviews, viable accountablework/writtenoffer gate. Beth affordability/pickup, sixmonth accountant inquiry conditional not assured drawings, threehandovers, viablework/signedoffer sequence. Fallbacks already inDo need not repeat every action in steps; chosen tags supported. Self-funded training caps1200/900 and thinkingAI/robot dates faithful.",
+      "validator": "node scripts/validate-archetype-interviews.mjs A13-21313 A13-21321",
+      "supplemental": "PASS"
     }
   ],
-  "checkpointPreparedAt": "2026-11-18T10:30:19.441062+00:00",
+  "checkpointPreparedAt": "2026-11-18T10:41:47.297551+00:00",
   "reopened": [
     {
       "id": "A13-12333",
@@ -2147,6 +2228,25 @@
           "after": "A dispatch clerk must check a driver's rest hours before releasing the schedule."
         }
       ]
+    },
+    {
+      "id": "A13-21211",
+      "time": "2026-11-18T10:32:18.657744+00:00",
+      "oldHash": "0adeaec04723136942f996dda421240362744e9536fa95ca2962a37fc6ddcfac",
+      "newHash": "8e0aadcbde0ed3a872ed96577cf128c7dfae515e1a24937ff8c6eaff8ab5aeed",
+      "reason": "Root grounded reread: retain explicitly transcript-funded fees AND paid hours in training Do and step, not fees alone. No transcript change. Reviewer timing/wage omissions rejected because actual steps already contain them.",
+      "changes": [
+        {
+          "field": "scenarios.S3.do.0",
+          "before": "Enroll in **funded sample training** if Malik covers late childcare.",
+          "after": "Enroll in **funded sample training** on paid time if Malik covers late childcare."
+        },
+        {
+          "field": "scenarios.S3.steps.0",
+          "before": "Enroll in funded sample-handling training only if Malik covers two late childcare days",
+          "after": "Enroll in fee-funded sample training on paid time only if Malik covers two late childcare days"
+        }
+      ]
     }
   ],
   "freshRewriteEvidence": {
@@ -2161,45 +2261,36 @@
     {
       "lane": "author1",
       "ids": [
-        "A13-21223",
-        "A13-21231"
+        "A13-21322",
+        "A13-21323"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:27:07.750726+00:00"
+      "reservedAt": "2026-11-18T10:35:50.181280+00:00"
     },
     {
       "lane": "author2",
       "ids": [
-        "A13-21232",
-        "A13-21233"
+        "A13-21331",
+        "A13-21332"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:28:23.123405+00:00"
+      "reservedAt": "2026-11-18T10:36:19.582707+00:00"
     },
     {
       "lane": "author3",
       "ids": [
-        "A13-21311",
-        "A13-21312"
+        "A13-21333",
+        "A13-22111"
       ],
       "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:30:06.119951+00:00"
-    },
-    {
-      "lane": "author4",
-      "ids": [
-        "A13-21221",
-        "A13-21222"
-      ],
-      "state": "DRAFTING",
-      "reservedAt": "2026-11-18T10:21:52.250234+00:00"
+      "reservedAt": "2026-11-18T10:37:26.747585+00:00"
     }
   ],
   "progress": {
-    "reviewedInterviews": 260,
+    "reviewedInterviews": 270,
     "canonicalInterviews": 972,
-    "remainingInterviews": 712,
-    "newReviewedInterviews": 37,
+    "remainingInterviews": 702,
+    "newReviewedInterviews": 47,
     "insightsCompleted": 0,
     "jobsCompleted": 0
   },
@@ -2208,8 +2299,8 @@
     "ownerContinuity": "Same Session 3 owner and thread; goal remains unfinished. No second independent writer may claim this active session.",
     "currentJob": "A13",
     "nextTwoIds": [
-      "A13-21313",
-      "A13-21321"
+      "A13-22112",
+      "A13-22113"
     ],
     "order": [
       "A13",
@@ -2220,7 +2311,44 @@
     "scratch": "/tmp/paradigm-session3-20261118-1331",
     "instructions": "Resume bounded two-ID drafting and read-only review using existing pool. Preserve all recorded hashes except documented explicit corrective amendments. Run actual validators plus semantic review; do not count drafts. At 200 reviewed rebuild insights from scratch; final 243 needed per job. Commit and push only exact owned branch every ~30 minutes.",
     "checkpointReferencePolicy": "latestCheckpointCommit identifies latest interview-data checkpoint; a later status-only commit may publish its exact hash.",
-    "existingFailingFileRule": "Preexisting failing 3.1 files also require fresh independent re-interviews, not annotation-only repairs. Current failing IDs are recorded in preexistingInvalidFiles."
+    "existingFailingFileRule": "Preexisting failing 3.1 files also require fresh independent re-interviews, not annotation-only repairs. Current failing IDs are recorded in preexistingInvalidFiles.",
+    "pendingReviewWork": [
+      {
+        "ids": [
+          "A13-21322",
+          "A13-21323"
+        ],
+        "author": "author1",
+        "rootFullyRead": [
+          "A13-21322"
+        ],
+        "reviewer": "not yet assigned; reviewer1 busy21331/21332",
+        "notes": "Ivan root findings sent: schooltrip cash save-more vs familyplans; repairs offered on two Saturdays not exactly two repairs, no assumed paid trials; extra mortgage carrepair priority; S4THINK actualpay not repeatcustomers. Second ID not read."
+      },
+      {
+        "ids": [
+          "A13-21331",
+          "A13-21332"
+        ],
+        "author": "author2",
+        "rootFullyRead": [
+          "A13-21331",
+          "A13-21332"
+        ],
+        "reviewer": "reviewer1 active",
+        "notes": "Yusuf corrected source delegation/standalonequote/adultchildren/postarrival paidhumanconditions, root must inspect changes. Freya correcting S2 quote husbandArjun relationship; S1 concreteaffordabilityquote; S0mortgage invoices+crew payrollgates; S3privateTHINK fromprivate notDo; Say overlaps. Root must inspect beforeaccept."
+      },
+      {
+        "ids": [
+          "A13-21333",
+          "A13-22111"
+        ],
+        "author": "author3",
+        "rootFullyRead": [],
+        "reviewer": "reviewer2 active",
+        "notes": "Both stable validatorspass authorreport; root FULL semantic review still needed. Profiles differ strong/lowstanding vs thin/typicalstanding. Do not count drafts."
+      }
+    ]
   },
   "preexistingInvalidFiles": {
     "A14": [
@@ -2235,17 +2363,17 @@
       "A16-12311"
     ]
   },
-  "lastCheckpointAt": "2026-11-18T10:30:19.441062+00:00",
+  "lastCheckpointAt": "2026-11-18T10:41:47.297551+00:00",
   "checkpointSummary": {
     "reviewedCounts": {
-      "A13": 93,
+      "A13": 103,
       "A14": 63,
       "A15": 60,
       "A16": 44
     },
     "protectedInitialFiles": 223,
-    "acceptedNewFiles": 37,
-    "remainingInterviews": 712,
+    "acceptedNewFiles": 47,
+    "remainingInterviews": 702,
     "pendingInsights": [
       "A13",
       "A14",
@@ -2253,45 +2381,36 @@
       "A16"
     ],
     "nextTwoIds": [
-      "A13-21313",
-      "A13-21321"
+      "A13-22112",
+      "A13-22113"
     ],
     "activeWriterReservations": [
       {
         "lane": "author1",
         "ids": [
-          "A13-21223",
-          "A13-21231"
+          "A13-21322",
+          "A13-21323"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T10:27:07.750726+00:00"
+        "reservedAt": "2026-11-18T10:35:50.181280+00:00"
       },
       {
         "lane": "author2",
         "ids": [
-          "A13-21232",
-          "A13-21233"
+          "A13-21331",
+          "A13-21332"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T10:28:23.123405+00:00"
+        "reservedAt": "2026-11-18T10:36:19.582707+00:00"
       },
       {
         "lane": "author3",
         "ids": [
-          "A13-21311",
-          "A13-21312"
+          "A13-21333",
+          "A13-22111"
         ],
         "state": "DRAFTING",
-        "reservedAt": "2026-11-18T10:30:06.119951+00:00"
-      },
-      {
-        "lane": "author4",
-        "ids": [
-          "A13-21221",
-          "A13-21222"
-        ],
-        "state": "DRAFTING",
-        "reservedAt": "2026-11-18T10:21:52.250234+00:00"
+        "reservedAt": "2026-11-18T10:37:26.747585+00:00"
       }
     ]
   },
