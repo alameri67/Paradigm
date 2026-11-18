@@ -29,15 +29,15 @@ Every interview file must pass. A job's summary is written only once that job ha
 
 ## Where it stands
 
-Counted only after content review and a protocol 3.1 validator pass. **2,484 of 7,776 done.** Unreviewed drafts are not counted.
-(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 12:44 Asia/Dubai.)
+Counted only after content review and a protocol 3.1 validator pass. **2,492 of 7,776 done.** Unreviewed drafts are not counted.
+(Table independently verified against repository validators and reviewed-file hashes; updated 2026-11-18 12:50 Asia/Dubai.)
 
 | Job | Passing 3.1 interviews | Summary in `data/insights/` |
 |---|---|---|
 | A01 | 243/243 | yes (passes; matches 243) |
 | A02 | 243/243 | yes (passes; matches 243) |
 | A03 | 243/243 | yes (passes; matches 243) |
-| A04 | 168/243 | STALE from main - must redo |
+| A04 | 176/243 | STALE from main - must redo |
 | A05 | 70/243 | not written yet |
 | A06 | 57/243 | not written yet |
 | A07 | 56/243 | not written yet |
@@ -77,7 +77,7 @@ Note: on `main` many jobs have fewer than 243 files (e.g. A06 had 52); the missi
 
 ## Still to do
 
-1. Finish the interviews for `A04`–`A32` (5,292 people remain by the table above).
+1. Finish the interviews for `A04`–`A32` (5,284 people remain by the table above).
 2. Write `data/insights/<code>.json` for every job once it has 200+ passing interviews, and make
    `validate-job-insights.mjs <code>` pass. A02 and A03 are complete; redo A04 as noted above.
 3. **A01 brackets pass. DONE (commit 3de6753).** 122 files changed; 243/243 still pass and `validate-job-insights.mjs A01`
@@ -123,7 +123,7 @@ the whole set was moving at roughly 230 interviews per hour, so budget many hour
   "A01": ["A01-111","A01-112","A01-113","A01-121","A01-122","A01-123","A01-131","A01-132","A01-133","A01-211","A01-212","A01-213","A01-221","A01-222","A01-223","A01-231","A01-232","A01-233","A01-311","A01-312","A01-313","A01-321","A01-322","A01-323","A01-331","A01-332","A01-333"],
   "A02": ["A02-111","A02-112","A02-113","A02-121","A02-122","A02-123","A02-131","A02-132","A02-133","A02-211","A02-212","A02-213","A02-221","A02-222","A02-223","A02-231","A02-232","A02-233","A02-311","A02-312","A02-313","A02-321","A02-322","A02-323","A02-331","A02-332","A02-333"],
   "A03": ["A03-111","A03-112","A03-113","A03-121","A03-122","A03-123","A03-131","A03-132","A03-133","A03-211","A03-212","A03-213","A03-221","A03-222","A03-223","A03-231","A03-232","A03-233","A03-311","A03-312","A03-313","A03-321","A03-322","A03-323","A03-331","A03-332","A03-333"],
-  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131","A04-132","A04-133","A04-211","A04-212","A04-213","A04-221","A04-222","A04-311","A04-312","A04-313","A04-321"],
+  "A04": ["A04-111","A04-112","A04-113","A04-121","A04-122","A04-123","A04-131","A04-132","A04-133","A04-211","A04-212","A04-213","A04-221","A04-222","A04-223","A04-311","A04-312","A04-313","A04-321"],
   "A05": ["A05-111","A05-112","A05-113","A05-121","A05-122","A05-123"],
   "A06": ["A06-111","A06-112","A06-113","A06-121","A06-122","A06-123"],
   "A07": ["A07-111","A07-112","A07-113","A07-121","A07-122","A07-123"],
@@ -246,18 +246,18 @@ fs.writeFileSync("bracket-candidates.json",JSON.stringify(hits,null,1));
 
 Current session resumed from pushed `e16eeb2` on 18 November 2026. The prior `/tmp/paradigm-repass/parallel/` runtime and previous 24 unpushed files were unavailable. Fresh validation confirmed the initial 2,334 passing interviews (A02 181, A03 163, A04 160). No unavailable work was counted. The initial tree was clean; no worktree was created.
 
-Latest reviewed total: **2,484/7,776**. A02 is **243/243**, with its insights regenerated from scratch and validated against all 243 interviews. Current interview focus: **A04, 168/243**. Passing insights: A01, A02, A03.
+Latest reviewed total: **2,492/7,776**. A02 is **243/243**, with its insights regenerated from scratch and validated against all 243 interviews. Current interview focus: **A04, 176/243**. Passing insights: A01, A02, A03.
 
 Use bounded, disjoint TWO-ID sequential invocations: gpt-6-sol medium drafting; gpt-6-luna medium read-only review. The parent runs actual validators, supplemental exact-card/question/profile/quote/bullet checks and content review. Fresh review sessions reduce carry-over between files. Original passing files and accepted new files are protected by hashes. Helpers remain outside the checkout at `/tmp/paradigm-repass-current/`.
 
-Reviewed additions in this session (150): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333, A03-22232, A03-22233, A03-22311, A03-22312, A03-22313, A03-22321, A03-22322, A03-22323, A03-22331, A03-22332, A03-22333, A03-23111, A03-23112, A03-23113, A03-23121, A03-23122, A03-23123, A03-23131, A03-23132, A03-23133, A03-23211, A03-23212, A03-23213, A03-23221, A03-23222, A03-23223, A03-23231, A03-23232, A03-23233, A03-23311, A03-23312, A03-23313, A03-23321, A03-23322, A03-23323, A03-23331, A03-23332, A03-23333, A03-31111, A03-32222, A03-32223, A03-32231, A03-32232, A03-32233, A03-32311, A03-32312, A03-32313, A03-32321, A03-32322, A03-32323, A03-32331, A03-32332, A03-32333, A03-33111, A03-33112, A03-33113, A03-33121, A03-33122, A03-33123, A03-33131, A03-33132, A03-33133, A03-33211, A03-33212, A03-33213, A03-33221, A03-33222, A03-33223, A03-33231, A03-33232, A03-33233, A03-33311, A03-33312, A03-33313, A03-33321, A03-33322, A03-33323, A03-33331, A03-33332, A03-33333, A04-22222, A04-22223, A04-22231, A04-22232, A04-22233, A04-22311, A04-22312, A04-22313.
+Reviewed additions in this session (158): A02-22223, A02-22231, A02-22232, A02-22233, A02-22311, A02-22312, A02-22313, A02-22321, A02-22322, A02-22323, A02-22331, A02-22332, A02-22333, A02-23311, A02-23312, A02-23313, A02-23321, A02-23322, A02-23323, A02-23331, A02-23332, A02-23333, A02-31111, A02-31112, A02-31113, A02-31121, A02-31122, A02-31123, A02-31131, A02-32321, A02-32322, A02-32323, A02-32331, A02-32332, A02-32333, A02-33111, A02-33112, A02-33113, A02-33121, A02-33122, A02-33123, A02-33131, A02-33132, A02-33133, A02-33211, A02-33212, A02-33213, A02-33221, A02-33222, A02-33223, A02-33231, A02-33232, A02-33233, A02-33311, A02-33312, A02-33313, A02-33321, A02-33322, A02-33323, A02-33331, A02-33332, A02-33333, A03-22232, A03-22233, A03-22311, A03-22312, A03-22313, A03-22321, A03-22322, A03-22323, A03-22331, A03-22332, A03-22333, A03-23111, A03-23112, A03-23113, A03-23121, A03-23122, A03-23123, A03-23131, A03-23132, A03-23133, A03-23211, A03-23212, A03-23213, A03-23221, A03-23222, A03-23223, A03-23231, A03-23232, A03-23233, A03-23311, A03-23312, A03-23313, A03-23321, A03-23322, A03-23323, A03-23331, A03-23332, A03-23333, A03-31111, A03-32222, A03-32223, A03-32231, A03-32232, A03-32233, A03-32311, A03-32312, A03-32313, A03-32321, A03-32322, A03-32323, A03-32331, A03-32332, A03-32333, A03-33111, A03-33112, A03-33113, A03-33121, A03-33122, A03-33123, A03-33131, A03-33132, A03-33133, A03-33211, A03-33212, A03-33213, A03-33221, A03-33222, A03-33223, A03-33231, A03-33232, A03-33233, A03-33311, A03-33312, A03-33313, A03-33321, A03-33322, A03-33323, A03-33331, A03-33332, A03-33333, A04-22222, A04-22223, A04-22231, A04-22232, A04-22233, A04-22311, A04-22312, A04-22313, A04-22321, A04-22322, A04-22323, A04-22331, A04-22332, A04-22333, A04-23111, A04-23112.
 
 Current exact reservations (inspect files and live agents before reusing; a reservation may already be complete):
 
-- draft_a03_1: A04-23113, A04-23121.
-- draft_a03_2: A04-23122, A04-23123.
+- draft_a03_1: A04-23212, A04-23213.
+- draft_a03_2: A04-23221, A04-23222.
 
-Structurally passing but not yet accepted at this checkpoint (NOT included in reviewed counts; any uncommitted files may be unavailable after a disconnect): A04-22321, A04-22322, A04-22323, A04-22331, A04-22332, A04-22333, A04-23111, A04-23112.
+Structurally passing but not yet accepted at this checkpoint (NOT included in reviewed counts; any uncommitted files may be unavailable after a disconnect): A04-23113, A04-23121, A04-23122, A04-23123, A04-23131, A04-23132, A04-23133, A04-23211.
 
 A02 insights use one supported private-thought group per person per scenario, backed by exact source THINK excerpts. The first grouping draft was rejected for unsupported memberships and rebuilt; do not reuse old provisional matrices. Root-checked evidence is `/tmp/paradigm-repass-current/insights/root-checked-thought-evidence.jsonl`. Current source/metadata, accepted hashes, review decisions, reservations and checkpoint helpers are in the same scratch directory. If scratch is missing, rebuild from actual files and validators; never count unavailable/unreviewed work.
 
@@ -273,7 +273,7 @@ Continue without another user prompt. This session drafts only A04–A08 under t
 
 ## Seven-session ownership plan (18 November 2026)
 
-This section assigns disjoint jobs across SEPARATE cloud checkouts. It does not authorize a git worktree or concurrent branch switching in the same checkout. The user asked for the maximum practical parallelism and launch prompts. Session 1 is this chat; sessions 2–7 are reserved for new cloud chats. A reservation remains exclusive until the coordinator explicitly reassigns it, even if its branch is not yet visible.
+This ownership plan takes precedence over earlier single-session scheduling notes. This section assigns disjoint jobs across SEPARATE cloud checkouts. It does not authorize a git worktree or concurrent branch switching in the same checkout. The user asked for the maximum practical parallelism and launch prompts. Session 1 is this chat; sessions 2–7 are reserved for new cloud chats. A reservation remains exclusive until the coordinator explicitly reassigns it, even if its branch is not yet visible.
 
 | Session | Exclusive jobs | Working branch | Approximate interview gaps at allocation |
 | --- | --- | --- | --- |
@@ -290,7 +290,7 @@ The allocation follows the verified 2,476-interview checkpoint: A01/A02/A03 each
 ### Startup contract for sessions 2–7
 
 1. Use a separate cloud environment/check-out of alameri67/Paradigm. Inspect pwd, git remote -v, git status --short, local branch and remote branches before changing anything. Read this entire handoff from the LATEST origin/claude/repass-3.1 and docs/interview-protocol-v3.md IN FULL. Fetching is allowed; preserve every existing local change. Do not reset, clean, delete a branch, force-push, or create a worktree.
-2. If the exact assigned remote branch already exists, resume it rather than creating a replacement. Otherwise create the exact assigned branch from origin/claude/repass-3.1, then push it with upstream tracking. If local changes prevent switching, preserve them and resolve safely; never discard them. Do not push interview changes directly to claude/repass-3.1 or main.
+2. Check the assigned branch and its unique status file before taking ownership. If it has an ACTIVE owner, do not start a second writer for that session number; resume only as an explicitly handed-over or restarted session. Otherwise create the exact assigned branch from origin/claude/repass-3.1, or safely resume its existing history. Before drafting, commit a unique owner ID, assigned range and active state in your session status file, and successfully push that claim with upstream tracking. If another claim wins and your push is rejected, stop writes and inspect ownership; do not merge, rebase or force your claim over it. This initial push is the ownership checkpoint. Preserve any local changes that prevent switching. Never push worker interview changes directly to claude/repass-3.1 or main.
 3. Your exclusive writable repository paths are raw canonical interview files for your assigned job codes under data/interviews/archetypes/raw/, your assigned codes' data/insights/<code>.json and <code>-stats.json, and YOUR unique data/repass-status/session-<N>.json. All other paths, including HANDOFF-repass-3.1.md, belong to the coordinator. Do not modify other jobs, app/, components/, lib/, tracked scripts, dependencies or lockfiles. Helpers must be outside the repository in a uniquely named /tmp folder. Never run the committed obsolete repass workflow unchanged.
 4. For each owned job, enumerate all243 canonical IDs (five digits1–3), inspect existing files and run the actual repository interview validator. Preserve every existing protocolVersion3.1 file that passes. Replace only missing, old-protocol or failing files. Hash-protect the initial passing files. Do not trust counts, queues, scratch files or worker claims from another environment.
 5. Use up to six subagents, subject to actual platform limits, with bounded disjoint reservations of exactly TWO IDs sequentially per drafting/review invocation. Prefer gpt-6-sol medium drafting and gpt-6-luna medium READ-ONLY review; Luna must not draft. A practical mix is four authors and two reviewers, with insights workers taking slots as needed. Maintain one authoritative reservation ledger in your /tmp folder. Every writer must inspect assigned files before overwriting and stop after its pair. Never assign a written or reserved ID to a second writer.
@@ -305,3 +305,56 @@ The allocation follows the verified 2,476-interview checkpoint: A01/A02/A03 each
 Session1 alone edits this shared handoff and integrates worker branches into claude/repass-3.1. It must fetch and inspect the branch diff first, reject out-of-range changes, preserve local changes and initial passing-file hashes, run the actual validators for every incoming job and insights, and review the acceptance/evidence record before integration is accepted. It records each integrated branch/commit so no branch is applied twice. Merge normally; never force-push. Worker sessions must not rebase or merge the coordinator branch into their own work after starting unless explicitly coordinated.
 
 Only session1 may perform the user-authorized final merge into main, after all7,776 canonical interviews and all32 insights have passed and all branches' accepted work is integrated and pushed. A01 must be revalidated unchanged at final completion. Do not interpret a worker range finishing as whole-project completion.
+
+### Copy-and-paste launch prompts
+
+Select alameri67/Paradigm in each NEW cloud chat. Launch each numbered session once, in a separate checkout. These are agent prompts, not shell scripts. Do not run multiple sessions by switching branches in one checkout.
+
+Session 2:
+
+```text
+Run parallel session 2 for alameri67/Paradigm. Inspect git status and preserve local changes. Fetch origin, then use git show to read the full origin/claude/repass-3.1:HANDOFF-repass-3.1.md, including its Seven-session ownership plan. Read docs/interview-protocol-v3.md in full.
+
+Own ONLY A09–A12 on claude/repass-3.1-s2-a09-a12. Follow the full startup/ownership contract, including the pushed unique-owner claim before drafting and checking that no active session already owns this number. Use up to six subagents with disjoint two-ID assignments. Run the actual validators yourself, review content, maintain data/repass-status/session-2.json, and commit/push only your branch about every30minutes. Never edit the shared handoff, another range, or main. Continue until every owned job has243 reviewed passing interviews, final matching insights, and committed/pushed status. Stop at your range boundary.
+```
+
+Session 3:
+
+```text
+Run parallel session 3 for alameri67/Paradigm. Inspect git status and preserve local changes. Fetch origin, then use git show to read the full origin/claude/repass-3.1:HANDOFF-repass-3.1.md, including its Seven-session ownership plan. Read docs/interview-protocol-v3.md in full.
+
+Own ONLY A13–A16 on claude/repass-3.1-s3-a13-a16. Follow the full startup/ownership contract, including the pushed unique-owner claim before drafting and checking that no active session already owns this number. Use up to six subagents with disjoint two-ID assignments. Run the actual validators yourself, review content, maintain data/repass-status/session-3.json, and commit/push only your branch about every30minutes. Never edit the shared handoff, another range, or main. Continue until every owned job has243 reviewed passing interviews, final matching insights, and committed/pushed status. Stop at your range boundary.
+```
+
+Session 4:
+
+```text
+Run parallel session 4 for alameri67/Paradigm. Inspect git status and preserve local changes. Fetch origin, then use git show to read the full origin/claude/repass-3.1:HANDOFF-repass-3.1.md, including its Seven-session ownership plan. Read docs/interview-protocol-v3.md in full.
+
+Own ONLY A17–A20 on claude/repass-3.1-s4-a17-a20. Follow the full startup/ownership contract, including the pushed unique-owner claim before drafting and checking that no active session already owns this number. Use up to six subagents with disjoint two-ID assignments. Run the actual validators yourself, review content, maintain data/repass-status/session-4.json, and commit/push only your branch about every30minutes. Never edit the shared handoff, another range, or main. Continue until every owned job has243 reviewed passing interviews, final matching insights, and committed/pushed status. Stop at your range boundary.
+```
+
+Session 5:
+
+```text
+Run parallel session 5 for alameri67/Paradigm. Inspect git status and preserve local changes. Fetch origin, then use git show to read the full origin/claude/repass-3.1:HANDOFF-repass-3.1.md, including its Seven-session ownership plan. Read docs/interview-protocol-v3.md in full.
+
+Own ONLY A21–A24 on claude/repass-3.1-s5-a21-a24. Follow the full startup/ownership contract, including the pushed unique-owner claim before drafting and checking that no active session already owns this number. Use up to six subagents with disjoint two-ID assignments. Run the actual validators yourself, review content, maintain data/repass-status/session-5.json, and commit/push only your branch about every30minutes. Never edit the shared handoff, another range, or main. Continue until every owned job has243 reviewed passing interviews, final matching insights, and committed/pushed status. Stop at your range boundary.
+```
+
+Session 6:
+
+```text
+Run parallel session 6 for alameri67/Paradigm. Inspect git status and preserve local changes. Fetch origin, then use git show to read the full origin/claude/repass-3.1:HANDOFF-repass-3.1.md, including its Seven-session ownership plan. Read docs/interview-protocol-v3.md in full.
+
+Own ONLY A25–A28 on claude/repass-3.1-s6-a25-a28. Follow the full startup/ownership contract, including the pushed unique-owner claim before drafting and checking that no active session already owns this number. Use up to six subagents with disjoint two-ID assignments. Run the actual validators yourself, review content, maintain data/repass-status/session-6.json, and commit/push only your branch about every30minutes. Never edit the shared handoff, another range, or main. Continue until every owned job has243 reviewed passing interviews, final matching insights, and committed/pushed status. Stop at your range boundary.
+```
+
+Session 7:
+
+```text
+Run parallel session 7 for alameri67/Paradigm. Inspect git status and preserve local changes. Fetch origin, then use git show to read the full origin/claude/repass-3.1:HANDOFF-repass-3.1.md, including its Seven-session ownership plan. Read docs/interview-protocol-v3.md in full.
+
+Own ONLY A29–A32 on claude/repass-3.1-s7-a29-a32. Follow the full startup/ownership contract, including the pushed unique-owner claim before drafting and checking that no active session already owns this number. Use up to six subagents with disjoint two-ID assignments. Run the actual validators yourself, review content, maintain data/repass-status/session-7.json, and commit/push only your branch about every30minutes. Never edit the shared handoff, another range, or main. Continue until every owned job has243 reviewed passing interviews, final matching insights, and committed/pushed status. Stop at your range boundary.
+```
+
