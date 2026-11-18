@@ -11,10 +11,10 @@
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
   "claimedAt": "2026-11-18T09:33:53.331733+00:00",
-  "phase": "Reviewing owned jobs in ascending order; only accepted files checkpointed",
+  "phase": "A21 195/243 reviewed; A22 58/243 reviewed; A23 55/243 reviewed; A24 54/243 reviewed",
   "jobs": {
     "A21": {
-      "reviewedCount": 141,
+      "reviewedCount": 195,
       "reviewedIds": [
         "A21-11111",
         "A21-11112",
@@ -156,10 +156,7 @@
         "A21-23113",
         "A21-23121",
         "A21-23122",
-        "A21-23123"
-      ],
-      "insightsValidated": false,
-      "remainingGaps": [
+        "A21-23123",
         "A21-23131",
         "A21-23132",
         "A21-23133",
@@ -212,10 +209,13 @@
         "A21-32112",
         "A21-32113",
         "A21-32121",
+        "A21-32131",
+        "A21-32132"
+      ],
+      "insightsValidated": false,
+      "remainingGaps": [
         "A21-32122",
         "A21-32123",
-        "A21-32131",
-        "A21-32132",
         "A21-32133",
         "A21-32211",
         "A21-32212",
@@ -1024,50 +1024,26 @@
   },
   "reservations": [
     {
-      "agent": "author2",
-      "ids": [
-        "A21-23131",
-        "A21-23132"
-      ],
-      "state": "drafting"
-    },
-    {
       "agent": "author1",
       "ids": [
-        "A21-23133",
-        "A21-23211"
-      ],
-      "state": "drafting"
-    },
-    {
-      "agent": "author2",
-      "ids": [
-        "A21-23212",
-        "A21-23213"
-      ],
-      "state": "drafting"
-    },
-    {
-      "agent": "author1",
-      "ids": [
-        "A21-23221",
-        "A21-23222"
+        "A21-32122",
+        "A21-32123"
       ],
       "state": "drafting"
     },
     {
       "agent": "author3",
       "ids": [
-        "A21-23223",
-        "A21-23231"
+        "A21-32133",
+        "A21-32211"
       ],
       "state": "drafting"
     },
     {
-      "agent": "author4",
+      "agent": "author2",
       "ids": [
-        "A21-23232",
-        "A21-23233"
+        "A21-32212",
+        "A21-32213"
       ],
       "state": "drafting"
     }
@@ -1314,6 +1290,141 @@
     },
     {
       "command": "node scripts/validate-archetype-interviews.mjs A21-23113 A21-23121",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23131 A21-23132",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23212 A21-23213",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23133 A21-23211",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23221 A21-23222",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23232 A21-23233",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23223 A21-23231",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23311 A21-23312",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23313 A21-23321",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23331 A21-23332",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23333 A21-31111",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-23322 A21-23323",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31121 A21-31122",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31123 A21-31131",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31112 A21-31113",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31211 A21-31212",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31213 A21-31221",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31222 A21-31223",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31132 A21-31133",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31231 A21-31232",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31233 A21-31311",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31312 A21-31313",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31321 A21-31322",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31332 A21-31333",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-31323 A21-31331",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-32111 A21-32112",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-32113 A21-32121",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-32131 A21-32132",
       "exitCode": 0,
       "result": "2/2 files valid"
     }
@@ -1628,9 +1739,63 @@
     "A21-23122": "6a0748fc5005b666216455497458f95759e60b3bf39796c2e6d84f8cb458bf66",
     "A21-23123": "95c80e92ed9116bafe0fe4bb39150fc6b4fc693ebd991d46f11317472330662d",
     "A21-23113": "9d015aa3315144afb41b56e5b1493044e3b68739466bf7bd68556d960b12cd8e",
-    "A21-23121": "97a184f01afecd368c98099fa9a497390f7a6af7e9b05c011074f0e0a92fa83a"
+    "A21-23121": "97a184f01afecd368c98099fa9a497390f7a6af7e9b05c011074f0e0a92fa83a",
+    "A21-23131": "b6d9f7f975239965c9aa0ff46ace0953e774bd2fa440f8186125e7ea04869b44",
+    "A21-23132": "c81b4e67084f656d8cc6737c782015e0da21f8959b6083525d05dadcd3dfd5e1",
+    "A21-23212": "e7ae0c16254c226fe6877fc15716fe55e944be496f121150cbc5aee637b53d14",
+    "A21-23213": "06eddc96f7edd3d35e977b0d8e0602a771a023e5dd48227ad3d2151b5c20a778",
+    "A21-23133": "ab8f9b453d2797106026ffd30d2c0d70bebe0d755da97738a20c2052be682189",
+    "A21-23211": "a0717df243e867cf5d652b4b8408b276245173ed3731dd8adcf7d2beb76bfba9",
+    "A21-23221": "a0badceb7a495905e95fadf6ea7c653ede085f5ecc82059a748e21b372da6936",
+    "A21-23222": "70b5d9162680892b1bafb5fbbe313e0eda93f074c391e952ec42509091ee056c",
+    "A21-23232": "370a23b15ee552d0384ddef6c4ad756e78aa06728c526f535f17b207f291f452",
+    "A21-23233": "db4fa3dd192365cf9467a0fc00e08bf2a7a675183145c6d179e8334037b729d5",
+    "A21-23223": "4f4dbdbbae487eaf7379eae4f0015295dfcd9aa25a3272cacc2b1bcfe061566c",
+    "A21-23231": "8c15b5c814ed871fb3c0658a5636112119bd7e4077b3607d166f77e3eeaa0bb0",
+    "A21-23311": "a66192e283c9c3e651cd93480fd869170c21cc852c858cef0b8fed98e845827a",
+    "A21-23312": "b052d2dec32518c1becfc8ded96935d2b5d677c98d3b0752e6d3ffefce9c357d",
+    "A21-23313": "6302414f88313484519feda469d2da5777e6e4b9cb642d82057dffb761d9b26c",
+    "A21-23321": "60978ca6f1dac549f1358dd8347570d6918514b38fa1bcc1c54843d43e356eec",
+    "A21-23331": "ace06d0ba17deac2e5a1438639ec291a91578306dfbf98ef1be3a6abd6425dc0",
+    "A21-23332": "cb48a1511cc5c713410934bba9884d2ce052e07b0f7df0fb3c2fd54cb4fba3ba",
+    "A21-23333": "a180c3a99e7a21a3641de2d0b4a403e9b362a233c829a50ad5aeb93c89d97129",
+    "A21-31111": "8bd9d40513c512c1491e0b1aceed05d744418d25c40236b8302fc313fec61888",
+    "A21-23322": "4193af69d637f21d9dd784300e712a40d9dedcf91b226de147fbaf58da77cfd9",
+    "A21-23323": "a6ec8efda640c4b8e30acb4f2b2b56a4ab959ca7042b42d5d6560e6e8dc9fb92",
+    "A21-31121": "b93c293f93964cea60578f8b8a91599876e5835ffa18aca9d8f6474fa71490d2",
+    "A21-31122": "d2e56485075468368373d09864858fa4959950d52e0f15a62dcb68ba29287f15",
+    "A21-31123": "83d5c738541f5842da78ccab0033b7d73a05aa9f20a9cbcc5f9bbb2d28365251",
+    "A21-31131": "1e179cefcb16c6811aa3bd96349cd6feb357c421b4c5eb412df099484c93a10b",
+    "A21-31112": "ee0866a9f9851407038c4315062fedefbf9891a86d5d6ea0140a7e5982bba5ea",
+    "A21-31113": "04c6dcffeca83b87537a1fd8c972dec7e40d4d0671f564b11ec26850dbdab54a",
+    "A21-31211": "65ab88d35d3d1cc1c0b169f6a9e099f725a0b79d0e1e184e3888fb73862bf1f5",
+    "A21-31212": "a3bce38baf7fcf79a22d4f25381f19ca87c2296edd0f3c53e9526bc2a8080e2c",
+    "A21-31213": "c4dc555fbc8d6ac2bf029ab43040eb40063021375fca32fe8d79374903276102",
+    "A21-31221": "c35de4c63e8a09f40932884664e6b5dce3fc73daf5dd05ba2389063f864cd241",
+    "A21-31222": "a9bca47218abfc302c7a5cfb4038bebf910386048ae3dc0e69fd9de7a2320d97",
+    "A21-31223": "d8ebc68214134ee87a48ad89a8f20477ad224fa5133fdcaabe84bb6c2f60f62d",
+    "A21-31132": "b5e4c8b1de7fc38b5d2e82d5d06abb9ee6fbb0f3af3028efd0ce4a640f6ed7e6",
+    "A21-31133": "ea82a3b01fa10e39a4ccd9c28bb3f083c2e3bd3e54cee7cdab9961bcc8b356a1",
+    "A21-31231": "ed4999bdc9c4a38e875782a627216e9d725e102ee82f71ffb99646f9ee4c3691",
+    "A21-31232": "b2399711e3d95617b6aceae750b4a100d763b4e9b4ee1063e96cd88a6fa035ee",
+    "A21-31233": "753943e7568f8f3f261101cfbd3cd8d8867dbddea4216304d8dbd418a3c06a94",
+    "A21-31311": "e60b2f5f9820ce7815ecda2d182828333fbb3dbb569e57b46cc49834dfb16bc6",
+    "A21-31312": "6ea88f056d87d8402bc6dac17b2c1e6f509f41bff286e47b4ddf57d4c7c5fc44",
+    "A21-31313": "860b24341965b190865da2f6ae76cddf108536302941e797a08355c72f88dd11",
+    "A21-31321": "e54d865f35715b63b78cb3dabcc19a341b5315bc827a6a1cc71059be3d202e75",
+    "A21-31322": "d76c4053a9ff01ae55a3eb758a729f69c1b4108343ac30cc8bfe6ef8772ce528",
+    "A21-31332": "77eea5df6bb3a85b9420a6a55090ee9a79cb2ab700cc81b858aab76fee0ae0ed",
+    "A21-31333": "0972db2ab634b0a9a73e0ba412c0b1ab03c996b43bcddfef9acc8259a9786b51",
+    "A21-31323": "6856cd7eb132bb4248455c16720268f92b472843764365e7d8d1355ebdcee823",
+    "A21-31331": "b254fc13dbae5d130839b2568b5374f6c6a67835358b4103cf48c1bf922b3114",
+    "A21-32111": "fe1aa0eb7d4b372beae79f9ed790af301a0bf0634bf64d570620cb0305254592",
+    "A21-32112": "ff3a5a9d7afd4188e506e217e4fd42861b52808c0837d7034550a850575ca054",
+    "A21-32113": "a1972def43c6a837c97ab292a9c7633bdac6681170faad5c2ad9f0859cf18042",
+    "A21-32121": "e2e2afd11fa5c176526498f6986c8cd18ae3a9377a4ab415f9bbcf979b028fdb",
+    "A21-32131": "ff1ed2e651d920917a476b121ff02d09fb1e63eb50bf31e9195946eba39d1e23",
+    "A21-32132": "fa3ab127394d63013d634190b2a7df589c9f31e416970be4e50fa55b2ef89de6"
   },
-  "latestCheckpointCommit": "db860b34183f7cbe4d04f9eba42b366689ca810e",
+  "latestCheckpointCommit": "e586b08e7febf75115928052695274525498e463",
   "semanticReview": [
     {
       "ids": [
@@ -2291,10 +2456,415 @@
         "parent full-content review",
         "independent read-only review"
       ]
+    },
+    {
+      "ids": [
+        "A21-23131",
+        "A21-23132"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read full final profiles/interviews after independent review and original-author repairs. Preserved Gareth one-month signed-original paid comparison, pre-or-post-2031 adviser vacancy path and self-contained prepayment-fee quote. Clarified individual monthly paycheques and surplus-before-any-saving/principal gates; restored his posted-vacancy search, reserve/family-pickup branch and trial-refused paid work. Nora retains two-week anonymised written-approval comparison, paid learning before live use, after-fares wage/pickup gate and actual reserve-funded postloss search. Removed duplicated do bullet and unsupported separate automation tag. Both household context and actual/supplemental checks pass.",
+      "reviewedAt": "2026-11-18T11:35:18.850162+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23212",
+        "A21-23213"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full source/profile reads after independent read-only exact-pair review and author repair. Verified trial duration, paid approval and adoption conditions; reserve use after loss; posted-job wage/start/pickup gates; quarterly billed reviews; no personal learning tag for Lena merely deploying and teaching. Explicit after-bills condition covers principal and cash fallback.",
+      "reviewedAt": "2026-11-18T11:38:58.587893+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23133",
+        "A21-23211"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Full parent source/profile review and independent read-only review followed by author repairs. Corrected before/after dismissal earnings, quarterly firm-service fee gates, affordable childcare, eligibility and funding-refusal fallbacks; no invented private side business or robot delay for desk work.",
+      "reviewedAt": "2026-11-18T11:39:36.359174+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23221",
+        "A21-23222"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full source/profile reads after independent exact-pair audit and original-author repairs. Confirmed no inferred S3 meeting cadence; restored preloss vacancy checks, offered paid work during applications, quarterly refusal checks, realistic S4 mood and paid supervised venue training; followups answer actual questions.",
+      "reviewedAt": "2026-11-18T11:39:48.989435+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23232",
+        "A21-23233"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles and full transcript/annotation review after independent read-only review. Discarded reviewer contamination of school-trust and bank conditions across people/scenarios. Preserved actual reviewer supervision, written live-access approval, travel-adjusted essential-covering wage, posted work, offered-hours and savings fallbacks; repaired standalone quote and explicit ages.",
+      "reviewedAt": "2026-11-18T11:41:32.962069+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23223",
+        "A21-23231"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles and complete transcript/annotation reads; independent read-only findings resolved through author and parent repairs. Removed routine-use learning tag, required new-tool privacy/error clearance, repaired relationships and standalone quotes, retained monthly reports, next-meeting checklist, pickup and first-year postloss reserve fallbacks.",
+      "reviewedAt": "2026-11-18T11:45:46.500920+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23311",
+        "A21-23312"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full source/profile reads plus independent read-only acceptance; parent additionally retained supervised historical comparison and explicit live sign-off, corrected cash fallback after bills, and captured sister-pickup support only when confirmed new hours clash with actual depot rota. No reserve relabelling as saving.",
+      "reviewedAt": "2026-11-18T11:45:46.717579+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23313",
+        "A21-23321"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full source/profile review and independent read-only acceptance after original-author repairs. Verified paid AI course, monthly supervised audit assignment now and post2031, quarter vs month timing, payroll practice, school-compatible written posted offers, standalone quotes and reserve use when paid work ends.",
+      "reviewedAt": "2026-11-18T11:46:23.776225+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23331",
+        "A21-23332"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact source/profile reads and independent read-only Sol review. Replaced nonanswer followup with actual January meeting actions, restored offered-current-work and missing-vacancy fallbacks, explicit written supplier-pay plus firm-paid release for supervised goods-in learning, family-cost pay/start/care gates, and distinct immediate training refusal versus postloss fallback.",
+      "reviewedAt": "2026-11-18T11:48:04.214357+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23333",
+        "A21-31111"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full distinct exact profiles and complete transcripts/annotations plus independent read-only acceptance. Removed Colin test-and-teach learning tag without personal learning; preserved signed live deployment, after-travel bills/pickup, paid six-shop class gates. Dana retains supervised paid required instruction, rent/food after fares, funded paid study, thin-cushion baseline anxiety and unknown retirement projection.",
+      "reviewedAt": "2026-11-18T11:49:14.092175+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-23322",
+        "A21-23323"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profile/source/annotations review plus independent Sol read-only findings and original-author repair. Kept measured error/time gate before live adoption, closed-file paid supervised learning, actual ages and local options, written posted-job terms and offered-current-pay fallbacks. Restored annual fee checks and essentials when partner wages fall; housing-association quote now standalone.",
+      "reviewedAt": "2026-11-18T11:50:08.859377+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31121",
+        "A21-31122"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/source/annotations with independent read-only acceptance. Preserved junior supervised paid learning and posted-role fee/study gates, safe physical receiving bridge, reserve after loss, lender timing request, and explicit still-needs-wages condition for post2036 search after retirement figures are checked. No entitlement assumptions.",
+      "reviewedAt": "2026-11-18T11:52:52.114072+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31123",
+        "A21-31131"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations and independent read-only Sol review. Restored rent-and-food wage thresholds, actual supervised funded learning, written hours and Noel-compatible shifts, post2031 paid-work loss fallback, and conditional daughter-room request only with failed rent and agreement. Removed unsupported junior signing claim; no assumed retirement income.",
+      "reviewedAt": "2026-11-18T11:54:48.762213+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31112",
+        "A21-31113"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/source/annotations and independent Luna review followed by original-author repairs. Restored bus-fare-adjusted rent/bills wage, approved weekly supervised hour, fortnightly paid study release, explicit pension-statement quote, inadequate-pension job/support condition, approved paid senior-checked AI report, hospital preloss postings/onboarding, and fully funded food-safety plus paid supervised shifts.",
+      "reviewedAt": "2026-11-18T11:59:44.415080+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31211",
+        "A21-31212"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations and independent read-only Luna findings. Preserved course-required-by-posting gates alongside fees/paid study, fixed return-writer quote antecedent, captured actual conditional paid supervised learning, kept below-four-day search triggers and offered work, corrected now-versus-later TV cancellation contradiction, and preserved other local postings fallback only when wages needed.",
+      "reviewedAt": "2026-11-18T12:01:07.093462+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31213",
+        "A21-31221"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/source/annotations plus independent Luna review. Calibrated Victor S0 to anxious from his stated own-hours risk; retained two approved paid supervised closed-file sessions and signed live-error gate, storage cancellation only with home space and son agreement. Daria retains paid case/hour monitoring now and post2031, no invented retraining, written household-compatible postings, and later wage-need condition.",
+      "reviewedAt": "2026-11-18T12:02:10.688142+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31222",
+        "A21-31223"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations and independent read-only Luna findings. Retained post2036 income-shortfall condition after verified combined-income test, source refund-schedule request, fee/study and after-travel job terms, and Lena before-or-after2031 job timing. Removed overlapping do bullets and clarified combined income versus six-month bill measurement; no implied pension entitlement.",
+      "reviewedAt": "2026-11-18T12:03:51.946308+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31132",
+        "A21-31133"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/source/annotations and independent Luna review followed by original-author repairs. Removed unsupported report automation, retained paid senior-checked approved data and written weekly fee/paid-hour gates, preserved household rota/bus and rent/bills job terms, clarified counter thinking tasks exposed at2028, and retained paid written morning-check trial plus inadequate-pension postloss conditions.",
+      "reviewedAt": "2026-11-18T12:04:13.189323+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31231",
+        "A21-31232"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact source/profile/annotations and independent Luna review. Restored written paid release for supplier shifts, corrected accounting-desk quote antecedent, kept paid closed-file learning before measured live-use gate, rent-and-food wage thresholds, other posted local accounts fallback, and explicitly sourced savings use when paid work ends before retirement income.",
+      "reviewedAt": "2026-11-18T12:06:29.893022+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31233",
+        "A21-31311"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations with independent Luna acceptance. Parent additionally preserved two paid supervised closed-file afternoons, signed live-error clearance, paid Bea-supervised two-call practice and Mari-compatible placement hours. Savings use new wages; future searches retain actual posted pay/start and verified household income gap.",
+      "reviewedAt": "2026-11-18T12:06:30.131207+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31312",
+        "A21-31313"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations and independent read-only Luna review. Restored anonymised signed comparators and paid trial time, explicit failed-trial continuation, postloss job trigger, safe duties/Mateo rota, source reserve use after gap, and before-or-after2031 role timing. No pension or protected screen-work assumptions.",
+      "reviewedAt": "2026-11-18T12:10:50.474982+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31321",
+        "A21-31322"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations and independent read-only Luna review. Quotes now name senior reviewer and monthly amount purpose; retained two supervised paid screen sessions distinct from ten-event test sample, signed passing report before live use, paid client-call request, partner-approved quarterly fee appeal and actual partner-shift gates.",
+      "reviewedAt": "2026-11-18T12:10:50.665416+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31332",
+        "A21-31333"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/source/annotations and independent Luna review. Kept closed-file paid supervised trials and actual required-course plus funded fees/paid study gates. Corrected vague concert-night quote and offered-work/local-job fallbacks. Fatima offers reviews to four laundries with two paid covering signatures, without falsely claiming four completed reviews or separate side income; essentials take priority when partner hours fall.",
+      "reviewedAt": "2026-11-18T12:16:37.183116+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-31323",
+        "A21-31331"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/source/annotations and independent Luna review. Retained approved weekly paid ten-case trial, monthly vacancy checks, capped self-funded evening safety course under300 without lost wages, written offer/family rota and capped reserve fallbacks. Wendy followup answers now match questions; posted in-person clinic roles, confirmed Ravi rota, signed start, inadequate pension and capped reserve spending are explicit.",
+      "reviewedAt": "2026-11-18T12:16:47.718436+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-32111",
+        "A21-32112"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full exact profiles/transcripts/annotations plus independent read-only Sol review. Restored written live approval after paid old-file trial, required-course posting/fees/paid study, conditional landlord contact, signed anonymised comparator and failed-trial paid checks. Uma intake is postloss with safe duties and actual night-security rota; Lina assigns paid supervision while lab pays firm, without implying she personally funds wages.",
+      "reviewedAt": "2026-11-18T12:20:15.906576+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-32113",
+        "A21-32121"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full final exact profiles/transcripts/annotations after independent Sol review and original-author repairs. Preserved experienced mid-level education/skill, current thin-cash baseline, individually calibrated S1 anxiety for unsized possible cuts, six planted-error plus privacy clearance before live use, rent-and-food wage and confirmed/fixed start/partner shifts, and assigned paid supervised calls/appeals without assumed retirement money.",
+      "reviewedAt": "2026-11-18T12:22:02.805713+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-32131",
+        "A21-32132"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read both full profiles, sources and annotations after independent review and author repairs. Aaron preserves paid supervised old-file training, error checks, funded posted work and verified retirement gates. Beth preserves closed-file trial metrics, paid study and funded role conditions, current paid work fallback and verified retirement-income conditions. Scenario timing and baseline cash anxiety match source.",
+      "reviewedAt": "2026-11-18T12:24:42.979523+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
     }
   ],
-  "checkpointAt": "2026-11-18T11:31:17.738237+00:00",
-  "updatedAt": "2026-11-18T11:31:11.141666+00:00",
+  "checkpointAt": "2026-11-18T12:24:59.353771+00:00",
+  "updatedAt": "2026-11-18T12:24:42.979676+00:00",
   "acceptanceAmendments": [
     {
       "at": "2026-11-18T11:01:14.398704+00:00",
@@ -2403,6 +2973,18 @@
           "afterHash": "82cbe6e9a9f9fd6254dfa22b332e689d6270808fe87b35ac68ef68b45711a851",
           "field": "scenarios.S2.steps[2].text"
         }
+      ]
+    },
+    {
+      "id": "A21-31111",
+      "beforeSha256": "f558d0f27886c6962b7ce20ce0de08cdf9e9ee0a65aad39cfeadfeaff44ee676",
+      "afterSha256": "8bd9d40513c512c1491e0b1aceed05d744418d25c40236b8302fc313fec61888",
+      "reason": "S4 do and job-search step explicitly retain source condition that wages remain necessary after checking retirement projection; no source or initial passing file changed.",
+      "validatedAt": "2026-11-18T11:52:19.757451+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental audit",
+        "parent full source review"
       ]
     }
   ]
