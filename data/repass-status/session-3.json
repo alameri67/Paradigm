@@ -1,7 +1,7 @@
 {
   "session": 3,
   "ownerId": "codex-s3-94e4c0af-d7c3-4dd6-91d3-f4731345b048",
-  "state": "ACTIVE",
+  "state": "PAUSED",
   "branch": "claude/repass-3.1-s3-a13-a16",
   "assignedJobs": [
     "A13",
@@ -1069,6 +1069,72 @@
       ],
       "state": "ACCEPTED",
       "reservedAt": "2026-11-18T12:39:50.488283+00:00"
+    },
+    "insight_author1": {
+      "ids": [
+        "A13-11111",
+        "A13-11112"
+      ],
+      "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+      "state": "COMPLETED",
+      "reservedAt": "2026-11-18T12:56:47.026072+00:00",
+      "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11111-11112.json",
+      "result": "Prepared evidence only; no final group memberships accepted."
+    },
+    "insight_author2": {
+      "ids": [
+        "A13-11113",
+        "A13-11121"
+      ],
+      "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+      "state": "COMPLETED",
+      "reservedAt": "2026-11-18T12:56:47.026101+00:00",
+      "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11113-11121.json",
+      "result": "Prepared evidence only; no final group memberships accepted."
+    },
+    "insight_author3": {
+      "ids": [
+        "A13-11122",
+        "A13-11123"
+      ],
+      "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+      "state": "COMPLETED",
+      "reservedAt": "2026-11-18T12:56:47.026112+00:00",
+      "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11122-11123.json",
+      "result": "Prepared evidence only; no final group memberships accepted."
+    },
+    "insight_author_fresh4": {
+      "ids": [
+        "A13-11131",
+        "A13-11132"
+      ],
+      "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+      "state": "COMPLETED",
+      "reservedAt": "2026-11-18T12:56:47.026121+00:00",
+      "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11131-11132.json",
+      "result": "Prepared evidence only; no final group memberships accepted."
+    },
+    "insight_reviewer_fresh1": {
+      "ids": [
+        "A13-11133",
+        "A13-11211"
+      ],
+      "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+      "state": "COMPLETED",
+      "reservedAt": "2026-11-18T12:56:47.026130+00:00",
+      "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11133-11211.json",
+      "result": "Prepared evidence only; no final group memberships accepted."
+    },
+    "insight_reviewer_fresh2": {
+      "ids": [
+        "A13-11212",
+        "A13-11213"
+      ],
+      "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+      "state": "COMPLETED",
+      "reservedAt": "2026-11-18T12:56:47.026138+00:00",
+      "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11212-11213.json",
+      "result": "Prepared evidence only; no final group memberships accepted."
     }
   },
   "validationResults": [
@@ -2072,7 +2138,7 @@
     "First201 A13 freeze: every existing protocol3.1 raw A13 is root reviewed, actual-validator passing and hash-protected. All raw drafting stopped; first insight rebuilt from immutable201 source in /tmp, with1005 exact indexed private core answers and private THINK bullets; final243 refresh remains mandatory. Otherjobcounts63/60/44, all223initialhashes unchanged.",
     "Session-3 checkpoint: root reviews full transcript/profile/annotations plus read-only two-ID reports, rejects cross-ID reviewer contamination and records grounded corrections in pair acceptance records. All initial hashes unchanged; accepted files match current manifests, including documented amendments; drafts excluded from counts and staging."
   ],
-  "updatedAt": "2026-11-18T12:56:02.190140+00:00",
+  "updatedAt": "2026-11-18T13:03:45.285566+00:00",
   "acceptanceRecords": [
     {
       "ids": [
@@ -3651,7 +3717,7 @@
     "jobsCompleted": 0
   },
   "continuation": {
-    "state": "ACTIVE_GOAL",
+    "state": "PAUSED_BY_USER",
     "ownerContinuity": "Same Session 3 owner and thread; goal remains unfinished. No second independent writer may claim this active session.",
     "currentJob": "A13",
     "nextTwoIds": [
@@ -3665,7 +3731,7 @@
       "A16"
     ],
     "scratch": "/tmp/paradigm-session3-20261118-1331",
-    "instructions": "Resume bounded two-ID drafting and read-only review using existing pool. Preserve all recorded hashes except documented explicit corrective amendments. Run actual validators plus semantic review; do not count drafts. At 200 reviewed rebuild insights from scratch; final 243 needed per job. Commit and push only exact owned branch every ~30 minutes.",
+    "instructions": "Do not resume automatically. User requested pause for usage limits. When explicitly resumed: preserve protected initial and accepted hashes; resume same Session3 branch/range; first finish A13 insights from immutable201 source, then remaining42 A13 interviews starting32221/32222 and refresh insights243; continue A14/A15/A16 ascending. All helpers stopped. No final insight exists yet.",
     "checkpointReferencePolicy": "latestCheckpointCommit identifies latest interview-data checkpoint; a later status-only commit may publish its exact hash.",
     "existingFailingFileRule": "Preexisting failing 3.1 files also require fresh independent re-interviews, not annotation-only repairs. Current failing IDs are recorded in preexistingInvalidFiles.",
     "pendingReviewWork": [],
@@ -3720,7 +3786,7 @@
       "firstPlannedFreezeCount": 201,
       "boundedDraftLimit": "Finish all existing reserved pairs and next ascending32133/32211 and32212/32213 only, then stop new drafting, finish root reviews and ensure every protocol3.1 A13 raw is reviewed before immutable201-source freeze. First insights from scratch; refresh final243 later.",
       "privateEvidencePolicy": "For each thought membership retain exact indexed private core THINK transcript answer and actual private THINK bullets with source SHA256 in /tmp. Heading must be semantically supported, not merely string-present. Root independently checks groups/counts/comparisons/quotes and runs actual insight validator.",
-      "state": "FROZEN201_REBUILD_FROM_SCRATCH",
+      "state": "PAUSED_AT_FROZEN201_BEFORE_GROUPING",
       "frozenAt": "2026-11-18T12:55:50.692198+00:00",
       "sourceDirectory": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201",
       "sourceCount": 201,
@@ -3728,7 +3794,1811 @@
       "hashManifestSha256": "76db0118ab44ca031267eb13e7e015b90bc690ff90ff42b17c855f0f446fdca4",
       "unreviewedProtocol31RawExcluded": 0,
       "statsCandidate": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/A13-stats-candidate.json",
-      "draftingPaused": true
+      "draftingPaused": true,
+      "evidenceInvocations": [
+        {
+          "lane": "author1",
+          "ids": [
+            "A13-11111",
+            "A13-11112"
+          ],
+          "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+          "state": "REVIEWING",
+          "reservedAt": "2026-11-18T12:56:47.026072+00:00",
+          "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11111-11112.json"
+        },
+        {
+          "lane": "author2",
+          "ids": [
+            "A13-11113",
+            "A13-11121"
+          ],
+          "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+          "state": "REVIEWING",
+          "reservedAt": "2026-11-18T12:56:47.026101+00:00",
+          "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11113-11121.json"
+        },
+        {
+          "lane": "author3",
+          "ids": [
+            "A13-11122",
+            "A13-11123"
+          ],
+          "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+          "state": "REVIEWING",
+          "reservedAt": "2026-11-18T12:56:47.026112+00:00",
+          "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11122-11123.json"
+        },
+        {
+          "lane": "author_fresh4",
+          "ids": [
+            "A13-11131",
+            "A13-11132"
+          ],
+          "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+          "state": "REVIEWING",
+          "reservedAt": "2026-11-18T12:56:47.026121+00:00",
+          "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11131-11132.json"
+        },
+        {
+          "lane": "reviewer_fresh1",
+          "ids": [
+            "A13-11133",
+            "A13-11211"
+          ],
+          "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+          "state": "REVIEWING",
+          "reservedAt": "2026-11-18T12:56:47.026130+00:00",
+          "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11133-11211.json"
+        },
+        {
+          "lane": "reviewer_fresh2",
+          "ids": [
+            "A13-11212",
+            "A13-11213"
+          ],
+          "phase": "A13_FIRST201_PRIVATE_EVIDENCE",
+          "state": "REVIEWING",
+          "reservedAt": "2026-11-18T12:56:47.026138+00:00",
+          "output": "/tmp/paradigm-session3-20261118-1331/A13-insights-first201/evidence-11212-11213.json"
+        }
+      ],
+      "preparedEvidenceIds": [
+        "A13-11111",
+        "A13-11112",
+        "A13-11113",
+        "A13-11121",
+        "A13-11122",
+        "A13-11123",
+        "A13-11131",
+        "A13-11132",
+        "A13-11133",
+        "A13-11211",
+        "A13-11212",
+        "A13-11213"
+      ],
+      "preparedEvidenceRecords": [
+        {
+          "fileName": "evidence-11111-11112.json",
+          "fileSha256": "8084d67a5fa64615cfba1fab8725dc06585e603c16ef6e8dff0c2a293c510628",
+          "state": "PREPARED_ONLY; exact sources/indices/excerpts verified by root, final grouping and root semantic membership review pending",
+          "data": {
+            "ids": [
+              "A13-11111",
+              "A13-11112"
+            ],
+            "phase": "first201-private-evidence",
+            "records": [
+              {
+                "id": "A13-11111",
+                "sourceSha256": "d299b16a6028e13c8fe71bd04b758db995da3a7d399ef8d6d7342e4ba40fe9bf",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 5,
+                    "privateAnswer": "Even the small stuff hits us, because a lot of claims work is routine checking. If the system sorts the simple windscreen claims on its own, head office will say eight handlers is too many for my queue. Last spring they merged two teams in the motor section, and the newer lead just quietly went back to handling. That could be me, with a pay cut I can't afford.",
+                    "thinkBullets": [
+                      "Even routine automation could make head office think **eight handlers** is too many.",
+                      "As the **last one promoted**, I'd be the lead pushed back to handling claims.",
+                      "A demotion would mean a **pay cut** that our rent can't absorb."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Even modest automation could make head office cut my team of eight.",
+                        "privateExcerpt": "If the system sorts the simple windscreen claims on its own, head office will say eight handlers is too many for my queue.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The reduction is conditional on simple claims being sorted automatically."
+                      },
+                      {
+                        "text": "I could be pushed back to handling claims, with a pay cut I cannot afford.",
+                        "privateExcerpt": "Last spring they merged two teams in the motor section, and the newer lead just quietly went back to handling. That could be me, with a pay cut I can't afford.",
+                        "thinkBulletIndices": [
+                          1,
+                          2
+                        ],
+                        "supportNote": "She analogizes her own newer lead position to a prior merger; this is a risk, not a certainty."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 5,
+                    "privateAnswer": "Really, I think my team gets halved within a couple of years and then they don't need a team lead for four people. My whole job is checking other people's checking and planning the queue, and that's exactly what the card says goes first. I don't use the AI tools, I've never even opened the claims assistant they put on our screens. So I'd be the manager who can't explain the new system to her own team.",
+                    "thinkBullets": [
+                      "My team could be **halved** within two years, leaving no need for a lead.",
+                      "My job is **checking the checking**, exactly what this card says goes first.",
+                      "I've never used the **claims assistant**, so I'd be the lead who can't explain it."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My team could halve within two years, leaving no need for my lead role.",
+                        "privateExcerpt": "Really, I think my team gets halved within a couple of years and then they don't need a team lead for four people.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Her predicted team reduction is the stated reason the lead role could disappear."
+                      },
+                      {
+                        "text": "I have never opened the claims assistant, so I might fail to explain the new system.",
+                        "privateExcerpt": "I don't use the AI tools, I've never even opened the claims assistant they put on our screens. So I'd be the manager who can't explain the new system to her own team.",
+                        "thinkBulletIndices": [
+                          2
+                        ],
+                        "supportNote": "Her private answer links her lack of AI use to explaining the system to her team."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 5,
+                    "privateAnswer": "Off the record, I think I'm finished in this job by 2028 and there's nowhere in town to go. Claims handling and team leading are pure thinking work, there's no hands-on part to hide in. The robots coming three years later doesn't help me at all, except maybe there's a gap where I could do care work or something with my hands. I don't have a plan, and I don't have the money to make one.",
+                    "thinkBullets": [
+                      "I expect to be **finished by 2028**, with nowhere in town to go.",
+                      "My job is **pure thinking work**, so the robot delay barely helps me.",
+                      "I have **no plan** and no money to make one."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect my claims lead job to end by 2028, with nowhere in town to go.",
+                        "privateExcerpt": "Off the record, I think I'm finished in this job by 2028 and there's nowhere in town to go.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "This is her explicit expectation for her own job and local options."
+                      },
+                      {
+                        "text": "The robot delay barely helps my current job, though hands-on care might offer a short gap.",
+                        "privateExcerpt": "The robots coming three years later doesn't help me at all, except maybe there's a gap where I could do care work or something with my hands.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "She excludes benefit to her current thinking job but allows a possible care-work gap."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 5,
+                    "privateAnswer": "I'd be thirty-two when it lands, and the job's still gone. But five years is enough to get a qualification if I start now and don't chicken out. My problem is I hate change, and I'd probably spend the first year hoping the news isn't true. That's the bit that worries me, not the AI, but me.",
+                    "thinkBullets": [
+                      "I'd be **thirty-two** when it lands, and my job would still be gone.",
+                      "Five years is enough for a **new qualification**, if I start now.",
+                      "My biggest risk is my own habit of **hoping it isn't true**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect my job to be gone when AGI arrives in 2031.",
+                        "privateExcerpt": "I'd be thirty-two when it lands, and the job's still gone.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She expects the same loss on the slower timeline."
+                      },
+                      {
+                        "text": "Five years could allow a qualification, but I might spend the first year denying the change.",
+                        "privateExcerpt": "But five years is enough to get a qualification if I start now and don't chicken out. My problem is I hate change, and I'd probably spend the first year hoping the news isn't true.",
+                        "thinkBulletIndices": [
+                          1,
+                          2
+                        ],
+                        "supportNote": "Training is conditional on starting promptly; she names her own tendency to delay."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 5,
+                    "privateAnswer": "I'd be thirty-seven. That's young enough to start over, and it's a long time to keep doing claims work while it slowly shrinks around me. My guess is I'd stay at Nordwell for five or six years, because the pay is regular, and then move into something public and hands-on. The robots coming in 2039 means hands-on work buys me a bit more time again.",
+                    "thinkBullets": [
+                      "At **thirty-seven** I'd be young enough to start over.",
+                      "I'd stay at Nordwell **five or six years** for the regular pay, then move.",
+                      "The robots coming in **2039** give hands-on work extra time again."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "At thirty-seven, I would be young enough to start over as claims work shrinks.",
+                        "privateExcerpt": "I'd be thirty-seven. That's young enough to start over, and it's a long time to keep doing claims work while it slowly shrinks around me.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Her age makes a second start feel possible, despite expected gradual shrinkage."
+                      },
+                      {
+                        "text": "I might stay five or six years for regular pay, then move into public hands-on work.",
+                        "privateExcerpt": "My guess is I'd stay at Nordwell for five or six years, because the pay is regular, and then move into something public and hands-on.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "This is a guess rather than a guaranteed transition or job offer."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "A13-11112",
+                "sourceSha256": "24cfa42850520b45e225f703de3d2183d1c3be93b68c5243178ddf9fb7576718",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, even the small stuff touches us. A lot of what my team does is routine: checking forms, chasing missing receipts, writing the same letter forty times. If the company shaves even one handler off each team to save a bit, that's one of my eight, and I'd be the one telling them.",
+                    "thinkBullets": [
+                      "Even small savings could cut **one handler** from my team of eight.",
+                      "I'm too **junior** to win an argument with head office about who stays."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Even small automation could remove one of my eight handlers, leaving me to tell them.",
+                        "privateExcerpt": "If the company shaves even one handler off each team to save a bit, that's one of my eight, and I'd be the one telling them.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He describes a conditional team cut and his role in telling the affected handler."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, claims handling is exactly the checking-and-writing work on that card. Head office already trialled a tool that reads car-damage photos and drafts the payout letter. If my team goes from eight to four, they don't need a team lead for four people, so I'm not safe either.",
+                    "thinkBullets": [
+                      "Claims handling is exactly the **checking and writing** the card describes.",
+                      "A team of four doesn't need a **team lead**, so I'd be at risk too."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Claims handling is the checking and writing that strong AI could take over.",
+                        "privateExcerpt": "Privately, claims handling is exactly the checking-and-writing work on that card.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He identifies his own work with the thinking tasks in the scenario."
+                      },
+                      {
+                        "text": "If my team shrinks from eight to four, my team lead role could disappear too.",
+                        "privateExcerpt": "If my team goes from eight to four, they don't need a team lead for four people, so I'm not safe either.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "He explicitly makes loss of the lead role conditional on a halved team."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, I think I'm gone by 2028, and so is most of my floor. Everything I do is screen work: queues, sign-offs, reports, calls. The robots coming three years later doesn't help me at all, because nothing I do needs hands.",
+                    "thinkBullets": [
+                      "My job and most of my floor are **gone by 2028**.",
+                      "Robots arriving **three years later** doesn't help, because my work is all screen work."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I think I and most of my floor will be gone by 2028.",
+                        "privateExcerpt": "Off the record, I think I'm gone by 2028, and so is most of my floor.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He states expected job loss for himself and most colleagues."
+                      },
+                      {
+                        "text": "The later arrival of robots does not help my screen-based role.",
+                        "privateExcerpt": "Everything I do is screen work: queues, sign-offs, reports, calls. The robots coming three years later doesn't help me at all, because nothing I do needs hands.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The robot delay offers no reprieve to his current work because it needs no hands."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately it's still the same end for my job, just later. But five years means I could finish something real, not panic into the first thing. The thinking part of claims goes in 2031, and I'd want to be out of it by then.",
+                    "thinkBullets": [
+                      "My job still **ends**, but around 2031 instead of 2028.",
+                      "Five years is long enough to **finish real training**, not grab the first thing."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I still expect my claims job to end around 2031.",
+                        "privateExcerpt": "Privately it's still the same end for my job, just later. But five years means I could finish something real, not panic into the first thing. The thinking part of claims goes in 2031, and I'd want to be out of it by then.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He expects the same outcome at a later date, not job security from extra warning."
+                      },
+                      {
+                        "text": "Five years could let me finish real training instead of grabbing the first option.",
+                        "privateExcerpt": "But five years means I could finish something real, not panic into the first thing.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "His private possibility of completing something real is rendered as training in the THINK bullet."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, ten years means I'd be thirty-seven when the claims work goes. That's young enough to have a second career, which honestly feels okay. My bigger worry is whether we can afford to have kids on these wages in the middle of all this.",
+                    "thinkBullets": [
+                      "I'd be **thirty-seven** when claims work goes, young enough for a second career.",
+                      "Whether we can afford **kids** on these wages worries me more than AI."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "At thirty-seven, I would be young enough for a second career after claims work goes.",
+                        "privateExcerpt": "Off the record, ten years means I'd be thirty-seven when the claims work goes. That's young enough to have a second career, which honestly feels okay.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He expects claims work to go but regards his age as allowing a second career."
+                      },
+                      {
+                        "text": "Whether we can afford children on our wages worries me more than the distant job change.",
+                        "privateExcerpt": "My bigger worry is whether we can afford to have kids on these wages in the middle of all this.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "His private comparison places family affordability ahead of the AGI timing."
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "gaps": []
+          }
+        },
+        {
+          "fileName": "evidence-11113-11121.json",
+          "fileSha256": "c2c09ca8c0b239652dc41b422f37284ac73060244906bdcc6e45049dc492d44b",
+          "state": "PREPARED_ONLY; exact sources/indices/excerpts verified by root, final grouping and root semantic membership review pending",
+          "data": {
+            "ids": [
+              "A13-11113",
+              "A13-11121"
+            ],
+            "phase": "first201-private-evidence",
+            "records": [
+              {
+                "id": "A13-11113",
+                "sourceSha256": "990b0e117786653c3c2227296c633e25e5c613f5df18ed03df13aa1ecb6127f2",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Honestly, the routine bits it does take are the bits my agents do all day: notes, follow-up emails, account lookups. So even a plateau means the company squeezes call times again and wants fewer agents per shift. It wouldn't kill my job, but I'd feel it.",
+                    "thinkBullets": [
+                      "Even a plateau lets the company **squeeze call times** and cut agents per shift.",
+                      "My job survives, but I'm on the bottom of the **pay band** with rent rising."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect even limited AI to shorten calls and leave fewer agents on each shift.",
+                        "privateExcerpt": "Honestly, the routine bits it does take are the bits my agents do all day: notes, follow-up emails, account lookups. So even a plateau means the company squeezes call times again and wants fewer agents per shift.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She privately links routine task automation to call-time pressure and fewer agents, even under a plateau."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I think contact centres get hit hard and early, because answering customers is right there on the card. My team of ten probably becomes four or five handling the hard calls. But I think I can be the person who runs the bots and the humans together, if I move first.",
+                    "thinkBullets": [
+                      "Contact centres get **hit early**, since answering customers is right on the card.",
+                      "My team of ten likely shrinks to **four or five**, handling the hard calls.",
+                      "I could survive by running **bots and humans** together, but only if I move first."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect my ten-agent contact-centre team to shrink to four or five handling harder calls.",
+                        "privateExcerpt": "Privately, I think contact centres get hit hard and early, because answering customers is right there on the card. My team of ten probably becomes four or five handling the hard calls.",
+                        "thinkBulletIndices": [
+                          0,
+                          1
+                        ],
+                        "supportNote": "The private answer says probably, not certainly, and locates the early change in customer answering."
+                      },
+                      {
+                        "text": "I think I could run bots and humans together if I move first.",
+                        "privateExcerpt": "But I think I can be the person who runs the bots and the humans together, if I move first.",
+                        "thinkBulletIndices": [
+                          2
+                        ],
+                        "supportNote": "Her possible personal role is conditional on moving first, not guaranteed survival."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my whole job is thinking work: watching numbers, coaching, sorting problems. AGI by 2028 means the company doesn't need agents or the person managing them. Robots coming in 2031 is irrelevant to me, there's nothing hands-on in what I do.",
+                    "thinkBullets": [
+                      "My whole job is **thinking work**, so it goes on the AGI date.",
+                      "Robots arriving in **2031** don't matter to me, because nothing I do is hands-on."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My thinking-work team-lead role becomes unnecessary to the company by 2028.",
+                        "privateExcerpt": "Off the record, my whole job is thinking work: watching numbers, coaching, sorting problems. AGI by 2028 means the company doesn't need agents or the person managing them.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She explicitly includes her own manager role when saying AGI removes agents."
+                      },
+                      {
+                        "text": "The 2031 robots do not delay the loss of my entirely nonphysical job.",
+                        "privateExcerpt": "Robots coming in 2031 is irrelevant to me, there's nothing hands-on in what I do.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The private answer says her own work has no hands-on component."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I think I'd have time to jump into something that lasts a bit longer. The thinking work still goes in 2031, so staying a team lead isn't a plan. But I'd have three or four years to train into something I actually choose.",
+                    "thinkBullets": [
+                      "Staying a **team lead** isn't a plan, because thinking work still goes in 2031.",
+                      "I'd have three or four years to **train into something** I choose."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Staying a team lead cannot protect my thinking work from 2031 AGI.",
+                        "privateExcerpt": "The thinking work still goes in 2031, so staying a team lead isn't a plan.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She privately rejects remaining in her current lead role as a plan."
+                      },
+                      {
+                        "text": "I would have three or four years to train into something I choose.",
+                        "privateExcerpt": "But I'd have three or four years to train into something I actually choose.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The longer horizon permits a chosen training path; it does not establish a paid place."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, ten years is a whole career stage for me. I'd be thirty-seven when AGI hits, and I could be well into something hands-on or technical by then. It feels like it could even be good for me, if I don't waste it.",
+                    "thinkBullets": [
+                      "I'd be **thirty-seven** at AGI, well into a hands-on or technical field.",
+                      "It could even be **good for me**, if I don't waste the time."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "At thirty-seven in 2036, I could already be in hands-on or technical work.",
+                        "privateExcerpt": "I'd be thirty-seven when AGI hits, and I could be well into something hands-on or technical by then.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Could signals a possible transition, not a completed career change."
+                      },
+                      {
+                        "text": "The ten-year runway could even benefit me if I do not waste it.",
+                        "privateExcerpt": "It feels like it could even be good for me, if I don't waste it.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Her optimistic private assessment remains explicitly conditional on using the time."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "A13-11121",
+                "sourceSha256": "8bc33753c8d9a4a0aceab5b7b0095a41e882701bf793e796e00c3b17d766d41c",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Honestly, I'd still be worried, just not about AI. Head office already announced a cost review in September, and planning offices are always the first place they look. Even a bit of route software that saves an hour a day could be the excuse to merge us with the depot two hours away.",
+                    "thinkBullets": [
+                      "The **cost review** head office announced is still a threat without AI.",
+                      "Even small route software could justify **merging our office** with the depot two hours away."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Head office's September cost review threatens my planning office even without AI.",
+                        "privateExcerpt": "Honestly, I'd still be worried, just not about AI. Head office already announced a cost review in September, and planning offices are always the first place they look.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The existing cost review, rather than AI alone, drives his private concern."
+                      },
+                      {
+                        "text": "Even modest routing software could justify merging our office with a depot two hours away.",
+                        "privateExcerpt": "Even a bit of route software that saves an hour a day could be the excuse to merge us with the depot two hours away.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Could and excuse preserve his uncertainty about a merger."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, planning routes and booking slots is exactly what that card describes. If the software does the routes, they need one person to watch it, not five planners and me. And I'm the worst on the team at computers, so I'm not the one they'd keep.",
+                    "thinkBullets": [
+                      "Route planning and slot booking are **exactly** what the card describes.",
+                      "Software needs one watcher, not five planners, and I'm the **worst at computers**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "If software plans routes, one watcher could replace five planners and me.",
+                        "privateExcerpt": "If the software does the routes, they need one person to watch it, not five planners and me.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The reduction is conditional on software doing the routes."
+                      },
+                      {
+                        "text": "I doubt they would keep me as watcher because I am worst at computers.",
+                        "privateExcerpt": "And I'm the worst on the team at computers, so I'm not the one they'd keep.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "He privately connects his weaker computer skills to his own selection risk."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my planning job's finished in 2028, and the warehouse job I'd fall back to is finished around 2031. I'd be thirty with nothing and no plan. I genuinely don't know what I'd do.",
+                    "thinkBullets": [
+                      "My desk job ends in **2028** and the floor job around **2031**.",
+                      "I'd be thirty with **no plan** and no money to make one."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My planning job ends in 2028, and my warehouse fallback ends around 2031.",
+                        "privateExcerpt": "Off the record, my planning job's finished in 2028, and the warehouse job I'd fall back to is finished around 2031.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He describes two sequential losses with distinct AGI and robot dates."
+                      },
+                      {
+                        "text": "At thirty, I would have no plan and genuinely not know what to do.",
+                        "privateExcerpt": "I'd be thirty with nothing and no plan. I genuinely don't know what I'd do.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The private answer supports lack of a plan; it does not specify a future support payment."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, it's the same ending, just with five years. My desk job goes in 2031 and the floor in 2034. Five years is enough to feel it coming but I'm not sure I'd do anything clever with it.",
+                    "thinkBullets": [
+                      "My desk job goes in **2031** and the warehouse floor in **2034**.",
+                      "Five years lets me see it coming, but I doubt I'd **use it well**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My desk job goes in 2031, then my warehouse fallback goes in 2034.",
+                        "privateExcerpt": "My desk job goes in 2031 and the floor in 2034.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He expects the desk and floor to go on separate dates."
+                      },
+                      {
+                        "text": "Five years lets me see the loss coming, but I doubt I would use it well.",
+                        "privateExcerpt": "Five years is enough to feel it coming but I'm not sure I'd do anything clever with it.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "His longer warning does not translate into confidence that he will act effectively."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, ten years is enough that I'd probably actually do something. I'd be thirty-seven when the planning job goes and forty when robots hit the floor. That's still young enough to start again, even for someone like me who hates starting again.",
+                    "thinkBullets": [
+                      "Ten years is enough that I'd **actually act**, even though I hate starting again.",
+                      "I'd be **thirty-seven** at AGI and forty when robots reach the floor."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "With ten years, I would probably act despite disliking a new start.",
+                        "privateExcerpt": "Off the record, ten years is enough that I'd probably actually do something. I'd be thirty-seven when the planning job goes and forty when robots hit the floor. That's still young enough to start again, even for someone like me who hates starting again.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Probably preserves his uncertainty; he says he hates starting again."
+                      },
+                      {
+                        "text": "I would be thirty-seven when planning goes and forty when robots reach the floor.",
+                        "privateExcerpt": "I'd be thirty-seven when the planning job goes and forty when robots hit the floor.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "He privately uses his age at the two arrival dates to judge his remaining options."
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "gaps": []
+          }
+        },
+        {
+          "fileName": "evidence-11122-11123.json",
+          "fileSha256": "8c2713a34c87831449ddb69968b784632f93167ca91865166a8ef5122c3f27af",
+          "state": "PREPARED_ONLY; exact sources/indices/excerpts verified by root, final grouping and root semantic membership review pending",
+          "data": {
+            "ids": [
+              "A13-11122",
+              "A13-11123"
+            ],
+            "phase": "first201-private-evidence",
+            "records": [
+              {
+                "id": "A13-11122",
+                "sourceSha256": "22c93ec3b2035e8de6439fde88f08c5a593aaab01a97889b5af92c7e074cadfe",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, payroll is full of routine checks, and even a small tool could do a lot of what my junior two do. If the company used that to not replace someone who leaves, our month-end would get harder, not easier. So I'd be fine, but I'd watch it.",
+                    "thinkBullets": [
+                      "A small tool could do much of what my **two juniors** do.",
+                      "If leavers aren't replaced, **month-end** gets harder for those left."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Even modest AI could do much of my two junior colleagues' routine checking.",
+                        "privateExcerpt": "Privately, payroll is full of routine checks, and even a small tool could do a lot of what my junior two do.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She sees task exposure even in the mild scenario; she says could, not that posts have gone."
+                      },
+                      {
+                        "text": "If leavers aren't replaced, month-end could become harder for the remaining staff.",
+                        "privateExcerpt": "If the company used that to not replace someone who leaves, our month-end would get harder, not easier.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The burden depends on the company declining to replace a leaver."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, payroll is exactly the checking and planning on that card. If the software does the checks, my six becomes three, and maybe they don't need me if the HR manager oversees it directly. I'm new and still learning, so I'm not the obvious one to keep.",
+                    "thinkBullets": [
+                      "Payroll is exactly the **checking and planning** on the card.",
+                      "A team of six could become **three**, and I'm too new to be the obvious keeper."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Payroll's checking and planning work is directly exposed to this AI change.",
+                        "privateExcerpt": "Off the record, payroll is exactly the checking and planning on that card.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She identifies her own team's tasks, rather than general employment effects."
+                      },
+                      {
+                        "text": "If software takes checks, my six-person team might halve and my new post might go.",
+                        "privateExcerpt": "If the software does the checks, my six becomes three, and maybe they don't need me if the HR manager oversees it directly. I'm new and still learning, so I'm not the obvious one to keep.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Team shrinkage depends on software doing checks; her own loss is only a maybe."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd assume my job's gone in 2028, all of it. Payroll, checking, planning, emails: that's all thinking work. Daniel's bus driving has until robots in 2031, so for three years his job is our only safe one.",
+                    "thinkBullets": [
+                      "My whole job is **thinking work**, so it's gone in 2028.",
+                      "Daniel's **bus driving** is our only safe income for three years."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I assume my whole payroll job will be gone by 2028 because it is thinking work.",
+                        "privateExcerpt": "Privately, I'd assume my job's gone in 2028, all of it. Payroll, checking, planning, emails: that's all thinking work.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "This is her stated expectation in this scenario, not a confirmed future outcome."
+                      },
+                      {
+                        "text": "Daniel's bus driving is our only safe income until robots arrive in 2031.",
+                        "privateExcerpt": "Daniel's bus driving has until robots in 2031, so for three years his job is our only safe one.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "'Safe' is her own conditional assessment of the three-year robot delay."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my job still goes in 2031. But five years is enough to get a qualification and move into something with more people in it. I'd want to be out of pure payroll by 2029 at the latest.",
+                    "thinkBullets": [
+                      "My job still goes in **2031**, but five years is enough to move.",
+                      "I'd want to be out of **pure payroll** by 2029 at the latest."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My payroll job goes in 2031, but five years allows qualification and a move.",
+                        "privateExcerpt": "Off the record, my job still goes in 2031. But five years is enough to get a qualification and move into something with more people in it.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She expects loss of payroll work while treating the five-year runway as time to change."
+                      },
+                      {
+                        "text": "I want to be out of pure payroll by 2029 at the latest.",
+                        "privateExcerpt": "I'd want to be out of pure payroll by 2029 at the latest.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "This is her preferred timing, not evidence of a completed move."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd still be careful. Ten years means I'm thirty-seven when the thinking work goes, which is mid-career. That's fine if I've moved by then, and bad if I've just sat there.",
+                    "thinkBullets": [
+                      "I'd be **thirty-seven** when the thinking work goes, which is mid-career.",
+                      "It's fine if I've **moved by then**, and bad if I've just sat there."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I will be 37 when thinking work goes, still in mid-career.",
+                        "privateExcerpt": "Ten years means I'm thirty-seven when the thinking work goes, which is mid-career.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "She locates the 2036 change at her own mid-career age."
+                      },
+                      {
+                        "text": "Moving by then could be fine for me; just sitting in payroll would be bad.",
+                        "privateExcerpt": "That's fine if I've moved by then, and bad if I've just sat there.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Her favorable view is explicitly conditional on having moved by then."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "A13-11123",
+                "sourceSha256": "81bc195dabf26fe0c5f4947db649c8d58517f0250fad0e53bc7067a78e327236",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd be a bit disappointed, because I was betting on it as my edge. My AI quote setup cut our response time from a day to about two hours. If AI stays a modest tool, my edge at work gets smaller. Then I'm just a junior team lead on low pay. And there aren't many jobs like this around here, so moving up means waiting for Karen to leave.",
+                    "thinkBullets": [
+                      "I'd be disappointed, because AI was **my edge** at work.",
+                      "Without it I'm a **junior team lead** on low pay with few local options."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I would be disappointed if modest AI shrank the edge my quote setup gives me.",
+                        "privateExcerpt": "Privately, I'd be a bit disappointed, because I was betting on it as my edge. My AI quote setup cut our response time from a day to about two hours. If AI stays a modest tool, my edge at work gets smaller.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "His disappointment and reduced advantage are conditional on AI remaining modest."
+                      },
+                      {
+                        "text": "Without that edge, I am a low-paid junior lead with few local ways to advance.",
+                        "privateExcerpt": "Then I'm just a junior team lead on low pay. And there aren't many jobs like this around here, so moving up means waiting for Karen to leave.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "He links limited local advancement to the loss of his AI edge."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my team does exactly the buying, checking and answering customers on that card. Six people becomes three, maybe two, and I'd probably be the one choosing. But I think I'd survive, because I'm the one setting it up.",
+                    "thinkBullets": [
+                      "My team does the **buying, checking and answering** the card describes.",
+                      "Six could become **three**, but I'd survive as the person setting it up."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My team's buying, checking and customer replies are exactly the tasks AI could take.",
+                        "privateExcerpt": "Off the record, my team does exactly the buying, checking and answering customers on that card.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He identifies direct exposure for his sales-support team."
+                      },
+                      {
+                        "text": "My team may halve, but I think setting up AI will save my role.",
+                        "privateExcerpt": "Six people becomes three, maybe two, and I'd probably be the one choosing. But I think I'd survive, because I'm the one setting it up.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "He anticipates a smaller team but only thinks, rather than knows, that his own role survives."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, if AI does any thinking work by 2028, it doesn't need me to set it up. My whole job is desk work, so it goes on day one. Robots coming in 2031 doesn't help me, unless I go hands-on.",
+                    "thinkBullets": [
+                      "AGI doesn't need me **to set it up**, so my desk job goes immediately.",
+                      "Robots in **2031** only help if I switch to hands-on work."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "If AGI does thinking work by 2028, my desk job goes immediately.",
+                        "privateExcerpt": "Privately, if AI does any thinking work by 2028, it doesn't need me to set it up. My whole job is desk work, so it goes on day one.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "His job-loss claim is conditional on the scenario's 2028 capability."
+                      },
+                      {
+                        "text": "The 2031 robot delay helps me only if I move into hands-on work.",
+                        "privateExcerpt": "Robots coming in 2031 doesn't help me, unless I go hands-on.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "He makes the physical-work benefit conditional on switching work."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, I'd have maybe three years where my AI skills are worth money, then it's gone. So I'd use that time to build something that lasts past 2031. Maybe a small business that installs and maintains building tech, like solar or heat pumps, which is hands-on until 2034.",
+                    "thinkBullets": [
+                      "My AI skills earn money for **about three years**, then they're worthless.",
+                      "I'd build a **building-tech business** that lasts until robots in 2034."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My AI skills may earn money for about three years, then lose their value.",
+                        "privateExcerpt": "Off the record, I'd have maybe three years where my AI skills are worth money, then it's gone.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "He estimates roughly three earning years, not a precise guaranteed horizon."
+                      },
+                      {
+                        "text": "I might build a hands-on building-tech business lasting past 2031, perhaps until 2034 robots.",
+                        "privateExcerpt": "So I'd use that time to build something that lasts past 2031. Maybe a small business that installs and maintains building tech, like solar or heat pumps, which is hands-on until 2034.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The business is a maybe, and its stated physical-work window ends at 2034."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, ten years means I'd be thirty-seven. That's a full career's worth of experience in automation, and maybe a business of my own. I think I'd do fine, as long as I don't get lazy in the middle.",
+                    "thinkBullets": [
+                      "I'd be **thirty-seven** with real automation experience and maybe my own business.",
+                      "The only danger is **getting lazy** in the middle years."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "At 37, I could have deep automation experience and maybe a business of my own.",
+                        "privateExcerpt": "Privately, ten years means I'd be thirty-seven. That's a full career's worth of experience in automation, and maybe a business of my own.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "His business remains possible, not established."
+                      },
+                      {
+                        "text": "I think I would do fine if I do not get lazy in the middle years.",
+                        "privateExcerpt": "I think I'd do fine, as long as I don't get lazy in the middle.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "His favorable expectation expressly depends on continuing to push himself."
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "gaps": []
+          }
+        },
+        {
+          "fileName": "evidence-11131-11132.json",
+          "fileSha256": "cc2d29c024547352b5d7f62253e2ec4f1664af16c8c6ce8564f23e383fc632bf",
+          "state": "PREPARED_ONLY; exact sources/indices/excerpts verified by root, final grouping and root semantic membership review pending",
+          "data": {
+            "ids": [
+              "A13-11131",
+              "A13-11132"
+            ],
+            "phase": "first201-private-evidence",
+            "records": [
+              {
+                "id": "A13-11131",
+                "sourceSha256": "5623365172c088fc5611abd3d9558d0beffa453a0579d7e38168bc11ed1f0006",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, even a little bit of AI could hit my team, because filing and checking is what it's meant to be good at. Head office has already moved some records into the new system and cut a post when someone left. So I'd still be watching my back.",
+                    "thinkBullets": [
+                      "Even a little AI could hit **filing and checking** work like mine.",
+                      "Head office already **cut a post** when someone left, so I'd watch my back."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Even limited AI could threaten my filing and checking work.",
+                        "privateExcerpt": "Privately, even a little bit of AI could hit my team, because filing and checking is what it's meant to be good at.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both sources express possible exposure even to limited AI; this is not a prediction that her job certainly disappears."
+                      },
+                      {
+                        "text": "An existing post cut already makes me watch my back.",
+                        "privateExcerpt": "Head office has already moved some records into the new system and cut a post when someone left. So I'd still be watching my back.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The private answer links an actual prior post reduction to vigilance; no broader layoff rate is inferred."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my team is exactly the checking and planning on that card. If the system files and checks everything, they don't need four people in records, maybe one. And I'm the newest team lead and I don't use the tools, so I can see where that goes.",
+                    "thinkBullets": [
+                      "Records work is exactly the **checking and planning** on the card.",
+                      "Four people could become **one**, and I'm new and don't use the tools."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "If software files and checks everything, our records team might shrink from four to one.",
+                        "privateExcerpt": "If the system files and checks everything, they don't need four people in records, maybe one.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Retains the explicit if-condition and tentative one-person endpoint; it does not assert an unconditional four-to-one decision."
+                      },
+                      {
+                        "text": "I'm the newest team lead and don't use the tools.",
+                        "privateExcerpt": "And I'm the newest team lead and I don't use the tools, so I can see where that goes.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both sources explicitly identify newness and tool non-use. Her implied vulnerability is not upgraded to a certain individual dismissal."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, my office job is gone by 2028. Tomas's electrician work lasts until the robots, around 2031, so he'd carry us for three years. After that I honestly don't know.",
+                    "thinkBullets": [
+                      "My office job is **gone by 2028**.",
+                      "My fianc\u00e9's **electrician work** carries us until about 2031, then I don't know."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect my office job to be gone by 2028.",
+                        "privateExcerpt": "Privately, my office job is gone by 2028.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The core answer and THINK bullet state expected loss at 2028, not merely a possibility."
+                      },
+                      {
+                        "text": "I expect my fianc\u00e9's electrician work to carry us until about 2031; afterward I don't know.",
+                        "privateExcerpt": "Tomas's electrician work lasts until the robots, around 2031, so he'd carry us for three years. After that I honestly don't know.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Preserves both the expected temporary household support and explicit uncertainty after the approximate robot date; no permanent trade safety is claimed."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, five years doesn't really change where I end up. Records is thinking work, so it goes in 2031. I'd have a few years to find something else, but I'm not quick at learning new things.",
+                    "thinkBullets": [
+                      "Records is thinking work, so it **still goes** in 2031.",
+                      "I'm **not quick** at learning, so five years may not help much."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect my records job to go in 2031 because it's thinking work.",
+                        "privateExcerpt": "Records is thinking work, so it goes in 2031.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both sources explicitly connect records' thinking-work nature with expected loss in 2031."
+                      },
+                      {
+                        "text": "I'm not quick at learning new things.",
+                        "privateExcerpt": "Privately, five years doesn't really change where I end up. Records is thinking work, so it goes in 2031. I'd have a few years to find something else, but I'm not quick at learning new things.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both sources explicitly identify slow learning. The full private answer also allows time to find alternative work, so no training impossibility or inevitable alternative-career failure is inferred."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, ten years means I'd be thirty-seven, probably with kids. Records still goes by 2036, but by then I could be on the field side or doing something else. I'd still worry about the money in between.",
+                    "thinkBullets": [
+                      "I'd be **thirty-seven**, probably with kids, when records goes.",
+                      "I'd still worry about **money in between**, while the wedding and house come first."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I'd be thirty-seven, probably with children, when my records job goes by 2036.",
+                        "privateExcerpt": "Off the record, ten years means I'd be thirty-seven, probably with kids. Records still goes by 2036, but by then I could be on the field side or doing something else.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Retains probable children and loss of the records role; her explicit possibility of alternative work prevents reading this as certain unemployment."
+                      },
+                      {
+                        "text": "I'd still worry about money during the years before records work goes.",
+                        "privateExcerpt": "I'd still worry about the money in between.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The shared evidence is money in the intervening years. The THINK bullet's wedding/house priority is absent from the private core answer and is not imported."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "A13-11132",
+                "sourceSha256": "10433d7bcd7c026586eec19b17bd65ecf3cdbad8fc1df0e2e99b0f392410e2e3",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd still be careful. Some of my team's work is placing the same reorders every week, and even a basic tool can do that. The factory's had two years of flat sales, so if there's a way to save one wage, they'll find it.",
+                    "thinkBullets": [
+                      "Weekly **reorders** are easy for even a basic tool.",
+                      "With **flat sales**, the factory will find a way to save a wage."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Even a basic tool can handle my team's repetitive weekly reorders.",
+                        "privateExcerpt": "Some of my team's work is placing the same reorders every week, and even a basic tool can do that.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both sources identify capability over repetitive weekly ordering, without claiming the whole purchasing job is already automated."
+                      },
+                      {
+                        "text": "With flat sales, the factory will save a wage if it can.",
+                        "privateExcerpt": "The factory's had two years of flat sales, so if there's a way to save one wage, they'll find it.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Preserves the private answer's conditional availability of a wage saving; no completed dismissal is asserted."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, buying is right there on the card, so purchasing will shrink. Five people becomes two or three, and the senior team could swallow us. I'm junior, so I'm not the one they'd fight for.",
+                    "thinkBullets": [
+                      "**Buying** is right on the card, so purchasing will shrink.",
+                      "Five could become **two or three**, and nobody would fight for a junior."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect purchasing to shrink because buying is directly exposed.",
+                        "privateExcerpt": "Off the record, buying is right there on the card, so purchasing will shrink.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The expectation is stated in the core answer and THINK bullet, rather than inferred from the scenario alone."
+                      },
+                      {
+                        "text": "As a junior, I don't expect the company to fight to keep me.",
+                        "privateExcerpt": "I'm junior, so I'm not the one they'd fight for.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The evidence is his perceived low retention priority as a junior, not a statement that his own dismissal has been selected."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, purchasing is all thinking work, so it's gone by 2028. Heating and plumbing is hands-on, so robots don't come for it until around 2031. That three years is the whole reason I'd move.",
+                    "thinkBullets": [
+                      "Purchasing is **thinking work**, so it's gone by 2028.",
+                      "Heating work gets **three more years** until robots arrive around 2031."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect purchasing to be gone by 2028 because it's thinking work.",
+                        "privateExcerpt": "Privately, purchasing is all thinking work, so it's gone by 2028.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both sources explicitly state expected purchasing loss in 2028 and its thinking-work basis."
+                      },
+                      {
+                        "text": "I expect heating work to last until robots arrive around 2031.",
+                        "privateExcerpt": "Heating and plumbing is hands-on, so robots don't come for it until around 2031.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both sources support the temporary hands-on interval. No post-2031 safety, confirmed job or apprenticeship affordability is added."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my job still goes in 2031, but now I can do it in order. Keep the purchasing wage for a year or two, do the heating apprenticeship part-time, then switch. That's actually a decent plan.",
+                    "thinkBullets": [
+                      "My job still goes in **2031**, but now I can switch in order.",
+                      "A **part-time apprenticeship** first, then a full switch, is a decent plan."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My purchasing job still goes in 2031, despite having more time.",
+                        "privateExcerpt": "Off the record, my job still goes in 2031, but now I can do it in order.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The unchanged loss date is explicit; the contrast is additional sequencing time, not preservation of purchasing work."
+                      },
+                      {
+                        "text": "A part-time apprenticeship followed by a full switch is a decent plan.",
+                        "privateExcerpt": "Keep the purchasing wage for a year or two, do the heating apprenticeship part-time, then switch. That's actually a decent plan.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both sources endorse part-time apprenticeship before the full switch. This is his assessment, not proof of an available place or funded wage arrangement."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd probably stay in purchasing a good while, maybe move up a level. Ten years means I'd be thirty-seven when it goes, and I could switch to heating in my early thirties. I'd have options, which is a nice feeling.",
+                    "thinkBullets": [
+                      "I could stay in purchasing a while and **move up a level**.",
+                      "I could switch to **heating** in my early thirties, which gives me options."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I'd probably stay in purchasing for a while and might move up a level.",
+                        "privateExcerpt": "Privately, I'd probably stay in purchasing a good while, maybe move up a level.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Preserves probably staying and only possible promotion; the THINK bullet's could does not justify a guaranteed advancement."
+                      },
+                      {
+                        "text": "I could switch to heating in my early thirties, giving me options.",
+                        "privateExcerpt": "Ten years means I'd be thirty-seven when it goes, and I could switch to heating in my early thirties. I'd have options, which is a nice feeling.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "The private answer and THINK bullet support a possible earlier trade switch and options, not a secured apprenticeship or indefinite trade safety."
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "gaps": []
+          }
+        },
+        {
+          "fileName": "evidence-11133-11211.json",
+          "fileSha256": "e18b4092a43a6a80f3814b537da844d7c296e119bcbdaa1052e2f3630554450e",
+          "state": "PREPARED_ONLY; exact sources/indices/excerpts verified by root, final grouping and root semantic membership review pending",
+          "data": {
+            "ids": [
+              "A13-11133",
+              "A13-11211"
+            ],
+            "phase": "first201-private-evidence",
+            "records": [
+              {
+                "id": "A13-11133",
+                "sourceSha256": "7d1de59d49b2b2e01cd2612a9e6a89a51b6846c09219b42462391a42ea936fa5",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd be fine, and maybe a bit relieved. My job's mostly people and judgement on top of the screening, so a modest tool just makes me faster. The real worry would be the same as now: low pay and almost nothing saved.",
+                    "thinkBullets": [
+                      "I'd be fine, because my job is **people and judgement** on top of screening.",
+                      "The real worry is **low pay** and almost nothing saved."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I'd be fine with modest AI because people and judgement remain central to my job.",
+                        "privateExcerpt": "Privately, I'd be fine, and maybe a bit relieved. My job's mostly people and judgement on top of the screening, so a modest tool just makes me faster.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both sources connect her confidence to people and judgement beyond screening; this confidence is limited to modest change."
+                      },
+                      {
+                        "text": "My existing worry is low pay and almost nothing saved.",
+                        "privateExcerpt": "The real worry would be the same as now: low pay and almost nothing saved.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both identify existing low pay and minimal savings as the worry; this does not claim current job loss."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, screening and booking are on that card, so my team will shrink. Five might become two or three. But I'm the one who already does it with AI, so I think I'd be the one they keep, at least for a while.",
+                    "thinkBullets": [
+                      "Screening and booking are **on the card**, so my team will shrink.",
+                      "I already use AI, so I'd likely be **the one kept**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect screening and booking automation to shrink my team.",
+                        "privateExcerpt": "Privately, screening and booking are on that card, so my team will shrink. Five might become two or three.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both expect team shrinkage from screening and booking exposure; the numerical outcome remains a possibility."
+                      },
+                      {
+                        "text": "I think I'd be kept for a while because I already use AI.",
+                        "privateExcerpt": "But I'm the one who already does it with AI, so I think I'd be the one they keep, at least for a while.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Private answer qualifies retention as her belief and only for a while; THINK says likely, not guaranteed."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, my job goes by 2028, AI or no AI skills. Recruitment is thinking work, all of it. But the hardware shop is hands-on, serving people and lifting stock, and that has until robots around 2031, maybe longer in a small town.",
+                    "thinkBullets": [
+                      "Recruitment is all **thinking work**, so my job goes by 2028.",
+                      "The **hardware shop** is hands-on and lasts until robots around 2031."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect my recruitment job to go by 2028, regardless of my AI skills.",
+                        "privateExcerpt": "Off the record, my job goes by 2028, AI or no AI skills. Recruitment is thinking work, all of it.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both state expected recruitment-job loss by2028; the private answer explicitly rejects AI skill as protection."
+                      },
+                      {
+                        "text": "I see hardware-shop hands-on work lasting until robots arrive around 2031.",
+                        "privateExcerpt": "But the hardware shop is hands-on, serving people and lifting stock, and that has until robots around 2031, maybe longer in a small town.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both identify a hands-on shop bridge to about2031. The private answer allows possibly longer locally; candidate does not impose a certain closure then."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, five years is almost ideal for me. I can build my HR experience for three years, then move to the shop properly around 2030, before AGI. And the shop's hands-on side has until 2034.",
+                    "thinkBullets": [
+                      "Five years is **almost ideal**: build HR experience, then move to the shop.",
+                      "The shop's hands-on side lasts **until 2034**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Five years feels almost ideal for building HR experience before moving into the shop.",
+                        "privateExcerpt": "Privately, five years is almost ideal for me. I can build my HR experience for three years, then move to the shop properly around 2030, before AGI.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both call five years almost ideal for the HR-then-shop sequence; around2030 is her projected move, not an accepted role."
+                      },
+                      {
+                        "text": "I think the shop's hands-on work has until 2034.",
+                        "privateExcerpt": "And the shop's hands-on side has until 2034.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both give2034 as the hands-on shop horizon; no claim about unrelated shop tasks is added."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, I think it's good for me. I'd have years of AI experience, and the shop would be modern by then. I'd be thirty-seven, with a business that's partly mine and a skill that's rare.",
+                    "thinkBullets": [
+                      "It's **good for me**, with years of AI experience and a modern shop.",
+                      "I'd be **thirty-seven** with part of a business and a rare skill."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I think this future is good for me, with AI experience and a modern shop.",
+                        "privateExcerpt": "Off the record, I think it's good for me. I'd have years of AI experience, and the shop would be modern by then.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both express her optimistic self-assessment based on anticipated AI experience and shop modernisation, not verified future income."
+                      },
+                      {
+                        "text": "I imagine being thirty-seven with part of a business and a rare skill.",
+                        "privateExcerpt": "I'd be thirty-seven, with a business that's partly mine and a skill that's rare.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both project age37, partial business ownership and a self-described rare skill; these remain her imagined future."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "A13-11211",
+                "sourceSha256": "59f2ac41bd13303d10433834ad5cca58ec146bc0a5f2e25398f8e06f02526235",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Honestly, it means I still have to get good at this job, which I'm not yet. The thing that worries me isn't robots, it's that I'm the weakest team leader on the floor and Harbourline restructures every two years anyway. Lena, my partner, and I pay 1,150 a month in rent, and I've got about three months put by.",
+                    "thinkBullets": [
+                      "The real threat is that I'm the **weakest team leader** on the floor.",
+                      "Harbourline **restructures** every two years with or without AI, so I'm never fully safe.",
+                      "With **three months saved** and 1,150 rent, one bad restructure would hurt."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I worry that I'm the weakest team leader, even without major AI change.",
+                        "privateExcerpt": "The thing that worries me isn't robots, it's that I'm the weakest team leader on the floor and Harbourline restructures every two years anyway.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both identify his perceived weak standing as a current threat; no colleague's later story or partner wage is imported."
+                      },
+                      {
+                        "text": "I worry about Harbourline restructuring every two years, with or without AI.",
+                        "privateExcerpt": "The thing that worries me isn't robots, it's that I'm the weakest team leader on the floor and Harbourline restructures every two years anyway.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Private answer identifies recurrent restructuring as his worry, and THINK explicitly says that recurrence leaves him never fully safe."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Off the record, claims handling is exactly the kind of work this eats: reading a form, checking it against the policy, writing a letter. If the software does that, Harbourline doesn't need eight handlers, it needs three, and it doesn't need me to manage three. I'm the one who refuses to touch the AI tools, so I'd be the obvious team leader to drop when they merge teams.",
+                    "thinkBullets": [
+                      "Reading forms and writing letters is **exactly the work** this software eats.",
+                      "Eight handlers become three, and three don't need **a team leader** like me.",
+                      "Refusing the AI tools makes me the **obvious one** to drop."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "If software handles claims, I don't think three handlers need a leader like me.",
+                        "privateExcerpt": "If the software does that, Harbourline doesn't need eight handlers, it needs three, and it doesn't need me to manage three.",
+                        "thinkBulletIndices": [
+                          0,
+                          1
+                        ],
+                        "supportNote": "Conditional on software doing the claims work, both sources expect much less staffing and no need for his team-leader role."
+                      },
+                      {
+                        "text": "I'd be the obvious leader to drop because I refuse AI tools.",
+                        "privateExcerpt": "I'm the one who refuses to touch the AI tools, so I'd be the obvious team leader to drop when they merge teams.",
+                        "thinkBulletIndices": [
+                          2
+                        ],
+                        "supportNote": "Both make refusal to use AI the reason he sees himself as the obvious leader to drop in a merger."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Truthfully, I'd be out of a job by 2028, maybe sooner, because there'd be nothing left for my team to do and nothing for me to manage. Two years isn't enough time to retrain into anything that isn't also about to go, and I'm not the type to land on my feet. The robots coming three years later only buys time for people who work with their hands, and I've sat at a desk my whole working life.",
+                    "thinkBullets": [
+                      "I'd be **out of a job** by 2028, with nothing left for my team to do.",
+                      "Two years isn't enough to **retrain** into something that isn't also going.",
+                      "Robots coming later only helps **hands-on workers**, and I've always been at a desk."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I expect to be out of work by 2028, perhaps sooner.",
+                        "privateExcerpt": "Truthfully, I'd be out of a job by 2028, maybe sooner, because there'd be nothing left for my team to do and nothing for me to manage.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both expect job loss by2028 from loss of team work; private answer also allows sooner, retained in candidate."
+                      },
+                      {
+                        "text": "I don't think two years is enough to retrain into work that won't also disappear.",
+                        "privateExcerpt": "Two years isn't enough time to retrain into anything that isn't also about to go, and I'm not the type to land on my feet.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both state his belief that two years is insufficient for retraining into less-exposed work; this is his perceived limitation."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Five years means I'd see it coming instead of getting hit, which is the only real difference for me. My job still goes, probably around 2030 as the tools get closer. But I'd be thirty-two, not twenty-nine, with time to train for something that holds out longer.",
+                    "thinkBullets": [
+                      "My job still goes, probably **around 2030**, but I'd see it coming.",
+                      "At thirty-two I'd have time to train for work that **holds out longer**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I still expect my job to go, probably around 2030, but I'd see it coming.",
+                        "privateExcerpt": "Five years means I'd see it coming instead of getting hit, which is the only real difference for me. My job still goes, probably around 2030 as the tools get closer.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both retain expected job loss and the probabilistic around2030 timing, while the longer warning changes anticipation."
+                      },
+                      {
+                        "text": "At thirty-two, I'd have time to train for work that holds out longer.",
+                        "privateExcerpt": "But I'd be thirty-two, not twenty-nine, with time to train for something that holds out longer.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both say age32 and extra time allow training for longer-lasting work; no specific trade or funding promise is imported."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, ten years is a career. I'd be thirty-seven when it lands, and I'd probably have been pushed sideways once or twice before then anyway. I think I'd stay at Harbourline for a few years, watch what the others do, and move when it's obvious, which is how I do everything.",
+                    "thinkBullets": [
+                      "I'd be **thirty-seven** when it lands, which is a career away.",
+                      "I'd stay, **watch the others**, and move only when it's obvious."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I see ten years as a career away, when I'd be thirty-seven.",
+                        "privateExcerpt": "Privately, ten years is a career. I'd be thirty-seven when it lands, and I'd probably have been pushed sideways once or twice before then anyway.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Both frame age37 as a career away; candidate does not turn possible intervening sideways moves into certainty."
+                      },
+                      {
+                        "text": "I think I'd stay, watch others, and move only when it's obvious.",
+                        "privateExcerpt": "I think I'd stay at Harbourline for a few years, watch what the others do, and move when it's obvious, which is how I do everything.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both describe delayed movement after observing others; the private answer presents it as what he thinks he would do."
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "gaps": []
+          }
+        },
+        {
+          "fileName": "evidence-11212-11213.json",
+          "fileSha256": "00603f512316abb03bc8faf63e66ef5cf4e9b8e495516bb1ef09d0c05b59d29d",
+          "state": "PREPARED_ONLY; exact sources/indices/excerpts verified by root, final grouping and root semantic membership review pending",
+          "data": {
+            "ids": [
+              "A13-11212",
+              "A13-11213"
+            ],
+            "phase": "first201-private-evidence",
+            "records": [
+              {
+                "id": "A13-11212",
+                "sourceSha256": "40fd41ce427ba287c2afe983f89c18dad5d1e66947afdcf2697b75da79d5fc77",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately it means my team stays my team, which is a relief. The invoice-matching tool might get a bit smarter and shave an hour a day off the queue, but someone still has to sort the weird ones. My real worries would be the usual ones: rent going up in March and whether I'm actually good at this job.",
+                    "thinkBullets": [
+                      "My **team stays intact**, and the matching tool only saves about an hour a day.",
+                      "My real worries are the **rent rise** in March and whether I'm good at managing."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My team stays intact; the matching tool might save a little time.",
+                        "privateExcerpt": "Privately it means my team stays my team, which is a relief. The invoice-matching tool might get a bit smarter and shave an hour a day off the queue, but someone still has to sort the weird ones.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Team continuity is explicit in both sources; the time saving remains a possibility, not a certainty."
+                      },
+                      {
+                        "text": "I still worry about March\u2019s rent rise and whether I\u2019m good at managing.",
+                        "privateExcerpt": "My real worries would be the usual ones: rent going up in March and whether I'm actually good at this job.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both identify existing rent and competence worries; no AI-caused affordability claim is added."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Honestly, invoice checking is exactly the kind of thing on that list. Checking, matching, chasing approvals, answering supplier emails, that's ninety percent of my team's day. If the company can run accounts payable with three people and a system, they don't need a team lead for seven, so my job shrinks along with theirs.",
+                    "thinkBullets": [
+                      "Invoice **checking and matching** is almost all my team's day, so it's first in line.",
+                      "If the team shrinks to three, they **won't need** a team lead like me."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "Most of my team\u2019s day is checking, matching and similar tasks AI can take over.",
+                        "privateExcerpt": "Honestly, invoice checking is exactly the kind of thing on that list. Checking, matching, chasing approvals, answering supplier emails, that's ninety percent of my team's day.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The core identifies these tasks with the card's exposed work; THINK identifies checking and matching as almost all the day."
+                      },
+                      {
+                        "text": "If three people and a system replace seven, my team-lead role shrinks too.",
+                        "privateExcerpt": "If the company can run accounts payable with three people and a system, they don't need a team lead for seven, so my job shrinks along with theirs.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Preserves the conditional team reduction rather than making a firm layoff prediction."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I think my job is gone within a year or two of it arriving. My whole team is desk work, my own job is desk work, and the robot bit in 2031 doesn't help anyone in an office. Dev's job as a teacher might hold a little longer, because a classroom of fifteen-year-olds needs a person in the room, but I don't really know.",
+                    "thinkBullets": [
+                      "My job and my team are **all desk work**, so I expect to lose it quickly.",
+                      "My partner's **teaching job** may last longer, but we couldn't afford the flat on it."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I think my desk job goes within a year or two of AGI arriving.",
+                        "privateExcerpt": "Privately, I think my job is gone within a year or two of it arriving. My whole team is desk work, my own job is desk work, and the robot bit in 2031 doesn't help anyone in an office.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "The core supplies the expected timing; THINK supports rapid loss of desk work."
+                      },
+                      {
+                        "text": "Dev\u2019s teaching job might last a little longer, but I don\u2019t really know.",
+                        "privateExcerpt": "Dev's job as a teacher might hold a little longer, because a classroom of fifteen-year-olds needs a person in the room, but I don't really know.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Keeps both might and explicit uncertainty. The THINK-only flat-affordability clause is not extracted."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Five years means I'd probably get a couple more years as a team lead, maybe a promotion if I'm lucky, and then it's over for office work around 2031. The difference is I'd see it coming. I'd be thirty-two, which is young enough to change direction, but I'd have to actually do it.",
+                    "thinkBullets": [
+                      "I'd get maybe **two more years** as team lead before office work goes around 2031.",
+                      "At thirty-two I'm **young enough to switch**, but only if I actually start now."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I\u2019d probably get a couple more team-lead years before office work ends around 2031.",
+                        "privateExcerpt": "Five years means I'd probably get a couple more years as a team lead, maybe a promotion if I'm lucky, and then it's over for office work around 2031.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Preserves probable remaining tenure and the approximate office-work endpoint; no promotion expectation is added."
+                      },
+                      {
+                        "text": "At thirty-two, I\u2019d be young enough to change direction, but I\u2019d have to do it.",
+                        "privateExcerpt": "I'd be thirty-two, which is young enough to change direction, but I'd have to actually do it.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both support youth enabling a switch only with action; the THINK-only demand to start now is omitted."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "With ten years I could have a whole second career started before it hits. I'd be thirty-seven in 2036, and hands-on work holds until about 2039, so a site job would carry me to my forties. That's not forever, but it's a lot better than two years.",
+                    "thinkBullets": [
+                      "Ten years lets me start a **second career** before thinking AI takes office work.",
+                      "A site job could carry me into **my forties**, since robots come around 2039."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "With ten years, I could start a second career before AGI arrives.",
+                        "privateExcerpt": "With ten years I could have a whole second career started before it hits.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Retains could rather than promising a completed transition."
+                      },
+                      {
+                        "text": "A site job could carry me into my forties, with hands-on work lasting until around 2039.",
+                        "privateExcerpt": "I'd be thirty-seven in 2036, and hands-on work holds until about 2039, so a site job would carry me to my forties. That's not forever, but it's a lot better than two years.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "This is a temporary bridge, not permanent protection; the approximate date and limited horizon remain explicit."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "A13-11213",
+                "sourceSha256": "4b54e293ad82a46fe4bf1b8ddd012bef783b98914db979c948e3834657e975a7",
+                "scenarios": {
+                  "S0": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "For me it means things stay pretty good. My job's secure, the team stays six people, and I keep being the guy who knows the tools. The only pressure is the normal one of proving I deserve the promotion.",
+                    "thinkBullets": [
+                      "My **job stays secure** and the team stays at six analysts.",
+                      "My only real pressure is **proving the promotion** was deserved."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "My job stays secure and my team stays at six people.",
+                        "privateExcerpt": "My job's secure, the team stays six people, and I keep being the guy who knows the tools.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Directly shared expectation of job security and stable team size."
+                      },
+                      {
+                        "text": "My only pressure is proving I deserve my promotion.",
+                        "privateExcerpt": "The only pressure is the normal one of proving I deserve the promotion.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both sources identify ordinary promotion pressure, without adding AI anxiety or excitement."
+                      }
+                    ]
+                  },
+                  "S1": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Privately, I'd be fine, maybe better than fine, because I'm the one who knows how to run the tools. But I'd be lying if I said my team was safe. Insights work is writing, checking and summarising, so I'd expect the company to ask why it needs six analysts when two and a good system will do.",
+                    "thinkBullets": [
+                      "I'm probably fine because **I run the tools**, but my team isn't safe.",
+                      "Insights work is **writing and summarising**, so two analysts plus software could replace six."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I\u2019d probably be fine because I know the tools, but my team isn\u2019t safe.",
+                        "privateExcerpt": "Privately, I'd be fine, maybe better than fine, because I'm the one who knows how to run the tools. But I'd be lying if I said my team was safe.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Keeps the contrast between his own expected protection and team exposure; probably follows THINK's qualification."
+                      },
+                      {
+                        "text": "I expect the company to question six analysts when two and software could suffice.",
+                        "privateExcerpt": "Insights work is writing, checking and summarising, so I'd expect the company to ask why it needs six analysts when two and a good system will do.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Expresses expected headcount pressure, not a completed or certain reduction."
+                      }
+                    ]
+                  },
+                  "S2": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "Honestly, I think I'm gone too, just a bit later than the analysts. If the AI does almost any thinking work as well as a person, a junior manager of a data team is the easiest role to cut. Being good with tools doesn't help when the tool doesn't need a person to run it.",
+                    "thinkBullets": [
+                      "A **junior data manager** is one of the easiest roles to cut once AI can think.",
+                      "Being good with tools doesn't help when the tool **needs no person**."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I think my junior data-manager role is easy to cut once AI can think.",
+                        "privateExcerpt": "Honestly, I think I'm gone too, just a bit later than the analysts. If the AI does almost any thinking work as well as a person, a junior manager of a data team is the easiest role to cut.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Keeps the role-specific exposure conditional on thinking-capable AI, not general disruption."
+                      },
+                      {
+                        "text": "My tool skills won\u2019t protect me when the tool needs no person to run it.",
+                        "privateExcerpt": "Being good with tools doesn't help when the tool doesn't need a person to run it.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Both explicitly remove the operator's skill advantage when the operator is unnecessary."
+                      }
+                    ]
+                  },
+                  "S3": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "I think I'd get three, maybe four good years as a manager, and the experience would help me move somewhere else. By 2031 the office side is gone for most people like me. The extra time matters because I could actually switch into something I'd want to do, instead of grabbing whatever's there.",
+                    "thinkBullets": [
+                      "I'd get **three or four** good years before office work goes for people like me.",
+                      "Extra time lets me **choose a switch** I want, not grab whatever is left."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I think I\u2019d get three, maybe four good management years before office work goes.",
+                        "privateExcerpt": "I think I'd get three, maybe four good years as a manager, and the experience would help me move somewhere else. By 2031 the office side is gone for most people like me.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Retains uncertainty about tenure and his expectation that office work ends for people like him."
+                      },
+                      {
+                        "text": "Extra time could let me choose a switch I want instead of grabbing anything.",
+                        "privateExcerpt": "The extra time matters because I could actually switch into something I'd want to do, instead of grabbing whatever's there.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Could is retained; this is room for choice, not a guaranteed successful move."
+                      }
+                    ]
+                  },
+                  "S4": {
+                    "privateAnswerIndex": 3,
+                    "privateAnswer": "With ten years I'd have most of my thirties to build something. I think the end point still takes my office job, so I'd use the time to get into a role that mixes people and physical places, maybe running stores or a distribution centre. That would carry me to around 2039, and by then I'd hope the world has some answer for everyone.",
+                    "thinkBullets": [
+                      "The end point still takes my **office job**, so I'd shift into stores or distribution.",
+                      "That role could carry me to **around 2039**, buying most of my thirties."
+                    ],
+                    "candidateThoughts": [
+                      {
+                        "text": "I think my office job still goes, so I\u2019d seek stores or distribution work.",
+                        "privateExcerpt": "I think the end point still takes my office job, so I'd use the time to get into a role that mixes people and physical places, maybe running stores or a distribution centre.",
+                        "thinkBulletIndices": [
+                          0
+                        ],
+                        "supportNote": "Preserves expected office loss and tentative alternative destinations, rather than a secured new role."
+                      },
+                      {
+                        "text": "A role mixing people and physical places could carry me to around 2039.",
+                        "privateExcerpt": "I think the end point still takes my office job, so I'd use the time to get into a role that mixes people and physical places, maybe running stores or a distribution centre. That would carry me to around 2039, and by then I'd hope the world has some answer for everyone.",
+                        "thinkBulletIndices": [
+                          1
+                        ],
+                        "supportNote": "Could follows THINK; the core's hope for a wider answer by then is not made a guarantee."
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "gaps": []
+          }
+        }
+      ],
+      "statsAudit": "Python candidate exactly matches independent adapted JS summarize-job copy against frozen201; no repository insight/stats written."
     }
   },
   "preexistingInvalidFiles": {
@@ -4167,5 +6037,31 @@
         "policy": "Preserve own reviewed source hashes; never silently merge coordinator variants. Root source rechecks/amendments recorded separately. Insight evidence must bind actual source versions."
       }
     ]
+  },
+  "pausedAt": "2026-11-18T13:03:45.285566+00:00",
+  "pause": {
+    "requestedBy": "user",
+    "instruction": "I am worried I will hit my limits. Prepare a pause and merge everything you have ready to main",
+    "pausedAt": "2026-11-18T13:03:45.285566+00:00",
+    "readyReviewedCounts": {
+      "A13": 201,
+      "A14": 63,
+      "A15": 60,
+      "A16": 44
+    },
+    "totalReviewed": 368,
+    "remainingInterviews": 604,
+    "insights": "All4pending; no partial insight/stats published. A13first201 frozen, stats verified independently, first12IDs evidence prepared but final memberships pending.",
+    "allWorkersStopped": true,
+    "initialProtectedHashesIntact": 223,
+    "acceptedNewHashesIntact": 145,
+    "resumeBranch": "claude/repass-3.1-s3-a13-a16",
+    "nextInterviewIds": [
+      "A13-32221",
+      "A13-32222"
+    ],
+    "mergeAuthorization": "Latest explicit user request authorizes main integration now, overriding earlier completed-range/coordinator-only/main prohibitions for this pause. Integrate ONLY368ready owned interviews (360 additions/8identical at observedmain71cdb5e) and this pause record through isolated main-based branch, preserving all current main app/other-range content. No unfinished insights or other feature-branch changes.",
+    "observedMain": "71cdb5e4f6cce6421b25bfa86facc830887dfee1",
+    "mergeState": "PREPARED; integration commit/PR will be recorded after success"
   }
 }
