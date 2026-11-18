@@ -832,16 +832,10 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .sg .db-end ul{font-size:13.5px;line-height:19px}
 .sg .db-end-head{position:relative}
 .sg-now{position:absolute;top:-28px;right:-4px;padding:3px 8px;border-radius:999px;background:var(--end-accent);color:#fff;font-size:11px;line-height:14px;font-weight:600;white-space:nowrap}
-.sg-card{font-size:13.5px!important;line-height:20px!important;font-weight:400!important;color:var(--fg)}
 .sg-strong{font-size:15px;line-height:21px;font-weight:600;text-wrap:pretty}
 .sg-cols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:stretch}
-.sg-col .sg-pick,.sg-fbody .sg-pick{margin-top:auto}
 .sg-pick{border:0;font-size:13px}
-.sg-qs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:18px}
-.sg-qs li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;align-items:start}
-.sg-qs .ws-voice-ico{width:24px;height:24px;border-radius:8px;background:var(--plate)}
-.sg-qs b{font-weight:600}
-.sg-qs .sg-qs-more{display:block;padding-left:32px;color:var(--fg2)}
+.sg-col .sg-pick{margin-top:auto}
 /* Shared: what every scenario has in common. */
 .sg-shared{display:flex;flex-direction:column;gap:14px;padding-top:4px}
 .sg-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -852,18 +846,6 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .sg-plain{list-style:disc}.sg-plain li{display:list-item}
 .sg-shared-row .bullets,.sg-plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:13.5px;line-height:19px}
 .sg-closing{font-size:15px;line-height:21px;font-weight:600;text-wrap:pretty}
-/* B. Matrix */
-.sg-matrix{display:flex;flex-direction:column}
-.sg-mrow{display:grid;grid-template-columns:150px repeat(5,minmax(0,1fr));gap:0 12px}
-.sg-mrow+.sg-mrow .sg-mcell,.sg-mrow+.sg-mrow .sg-mlabel{border-top:1px solid var(--muted-2)}
-.sg-mhead+.sg-mrow .sg-mcell,.sg-mhead+.sg-mrow .sg-mlabel{border-top:0}
-.sg-mlabel{padding:12px 0;font-size:11.5px;line-height:15px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--fg2)}
-.sg-mcell{padding:12px 4px;font-size:13.5px;line-height:19px;min-width:0}
-.sg-mcell .bullets{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:3px}
-.sg-mhead .sg-mcell{padding:14px 14px 0;margin:10px 0}
-.sg-mhead .db-end-head{border-bottom:0;padding-bottom:12px}
-.sg-mcell.on:not(.db-end){background:color-mix(in srgb,var(--muted) 70%,transparent)}
-.sg-year{font-size:22px;line-height:28px;font-weight:600;font-family:var(--font);letter-spacing:-.01em}
 /* C. Timeline */
 .sg-tl{display:flex;flex-direction:column;gap:6px;padding:18px 20px 16px;border-radius:18px;background:var(--muted)}
 .sg-tl-axis,.sg-tl-row{display:grid;grid-template-columns:170px minmax(0,1fr);align-items:center;gap:16px}
@@ -886,26 +868,12 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
 .sg-tl-key span{display:inline-flex;align-items:center;gap:8px}
 .sg-tl-key .sg-tl-dot{position:static;translate:none;box-shadow:none;width:11px;height:11px}
 .sg-tl-key .sg-tl-dot.hollow{box-shadow:inset 0 0 0 2.5px var(--fg)}
-/* D. Focus: one open column, four narrow ones */
-.sg-focus{display:flex;gap:12px;align-items:stretch}
-.sg-fcol{flex:1 1 0;min-width:0;transition:flex-grow 260ms var(--ease)}
-.sg-fcol.open{flex-grow:3.2}
-.sg-fhead{display:block;width:100%;padding:0;border:0;background:none;text-align:left;border-radius:12px}
-.sg-fcol:not(.open) .sg-fhead:hover .db-end-title{text-decoration:underline;text-underline-offset:3px}
-.sg-fbody{display:flex;flex-direction:column;gap:16px;flex:1}
-.sg-fsplit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.sg-more{align-self:flex-start;margin-top:auto;padding:0;border:0;background:none;font-size:13px;font-weight:500;color:var(--fg2);text-decoration:underline;text-decoration-color:var(--fg3);text-underline-offset:3px}
-.sg-more:hover{color:var(--fg)}
 /* Narrower screens: the five columns scroll sideways, one and a bit in view. */
 @media (max-width:1100px){
   .sg-cols{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 0 6px}
   .sg-cols>*{scroll-snap-align:start}
-  .sg-matrix{overflow-x:auto}
-  .sg-mrow{grid-template-columns:120px repeat(5,minmax(200px,1fr));min-width:1160px}
   .sg-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
   .sg-shared-row{grid-template-columns:1fr}
-  .sg-focus{flex-direction:column}
-  .sg-fsplit{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .sg{width:100vw;max-height:100dvh;height:100dvh;border-radius:0}

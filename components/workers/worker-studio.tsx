@@ -278,8 +278,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
 
   // Shareable address bar.
   useEffect(() => {
-    const guide = new URLSearchParams(window.location.search).get("guide");
-    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "glass" ? { card } : {}), ...(guide ? { guide } : {}) }).toString();
+    const q = new URLSearchParams({ job, ...levels, s: scenario, ...(card !== "glass" ? { card } : {}) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
   }, [job, levels, scenario, card]);
 

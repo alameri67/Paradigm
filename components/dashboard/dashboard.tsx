@@ -396,9 +396,7 @@ export function Dashboard({
 
   // Shareable address bar.
   useEffect(() => {
-    // ?guide= picks the scenario guide's layout for comparison; keep it while the page rewrites the address.
-    const guide = new URLSearchParams(window.location.search).get("guide");
-    const q = new URLSearchParams({ s: scenario, ...(allOn ? {} : { jobs: jobs.join(",") }), ...(guide ? { guide } : {}) }).toString();
+    const q = new URLSearchParams({ s: scenario, ...(allOn ? {} : { jobs: jobs.join(",") }) }).toString();
     if (q !== window.location.search.slice(1)) window.history.replaceState(null, "", `?${q}`);
   }, [scenario, jobs, allOn]);
 
