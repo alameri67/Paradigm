@@ -13,7 +13,7 @@
   "startedAt": "2026-11-18T09:32:25.600883+00:00",
   "jobs": {
     "A09": {
-      "reviewedCount": 146,
+      "reviewedCount": 158,
       "reviewedIds": [
         "A09-11111",
         "A09-11112",
@@ -159,14 +159,10 @@
         "A09-23131",
         "A09-23132",
         "A09-23133",
-        "A09-23213",
-        "A09-23221"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
-      "remainingGaps": [
         "A09-23211",
         "A09-23212",
+        "A09-23213",
+        "A09-23221",
         "A09-23222",
         "A09-23223",
         "A09-23231",
@@ -176,7 +172,11 @@
         "A09-23312",
         "A09-23313",
         "A09-23321",
-        "A09-23322",
+        "A09-23322"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
+      "remainingGaps": [
         "A09-23323",
         "A09-23331",
         "A09-23332",
@@ -1027,7 +1027,7 @@
         "A09-23312",
         "A09-23313"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author2": {
       "ids": [
@@ -1048,26 +1048,26 @@
         "A09-23222",
         "A09-23223"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author1_next": {
       "ids": [
-        "A09-23231",
-        "A09-23232"
+        "A09-23323",
+        "A09-23331"
       ],
       "state": "drafting"
     },
     "author4_next": {
       "ids": [
-        "A09-23321",
-        "A09-23322"
+        "A09-31111",
+        "A09-31112"
       ],
       "state": "drafting"
     },
     "author3_prev": {
       "ids": [
-        "A09-23233",
-        "A09-23311"
+        "A09-23332",
+        "A09-23333"
       ],
       "state": "drafting"
     },
@@ -1083,7 +1083,7 @@
         "A09-23211",
         "A09-23212"
       ],
-      "state": "review"
+      "state": "accepted"
     }
   },
   "validationResults": [
@@ -1654,9 +1654,81 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "e53aff5c68fa20064a358f2d7267dd1b9e3d5b735fb137242aefc2e366ef7133"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23222",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "8fb4c169f9d9e517dcf398af466597ad801283ea91fb65b1f69a8449e71ea87c"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23223",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ef810b6b023e43858cbfdef44fbdfe56ee328e2e93c5122bc3224abb6a20bc12"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23231",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "90d0eacccffe0f48ef49d89f2f32e350b6c96e273ce0f26c14a392f72bb5603d"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23232",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "b9a4b3cb2f975041e932a2ec8633dbffdc9d0bd26ee8472016738fe22c0444c3"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23233",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "1fd0891ccfbc977fe815361419513139f869d922ff427c535abef1446af980d8"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23311",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "05e04ddad9988c8bd5edc5167b1309374cdb0e71fba38787a0501d8088749a0f"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23312",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ba9fbd22c22a8de10af8c240abbc92f8342a8b97ecefd3c2f64b2f62fe865da2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23313",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "23101f00bb59ffaedbee04fca0eb13da0ccdb4c730facbaa42d82d5b48e0fcec"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23211",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "717f04e44095a2c7bfda188e39d3b12ebca373fdef0a08f3e10b18b3d755e375"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "deb3c4d5fd3fb0c2f438495e022d8ae82308068df504dc53e92c303d38872e29"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23321",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "030a5fa5f11e0be58a9dad37698fdd46d0f73125e622cf3328a3c13fba061230"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-23322",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "4448401fdb6640062ad0b21532577fc243bcf267083f5d1d223744393aa4bb57"
     }
   ],
-  "latestCheckpointCommit": "d6f2208f36db80457279038115c3b0ecc0f55503",
+  "latestCheckpointCommit": "8b29169f1108881f453fbacd3945e0efc646462e",
   "semanticReviewRecord": [
     "Startup: full remote handoff and protocol read; clean checkout; no existing session-2 branch or owner. No interviews drafted before pushed ownership claim.",
     {
@@ -2018,6 +2090,54 @@
       ],
       "review": "Full fresh source/profile semantic review plus root literal-asserted review; repaired Zoe paid-provider vacancy, staff-association consent scope, Adam wage-loss fallback and combined-wage move; node and supplemental audit pass.",
       "at": "2026-11-18T11:03:36.487775+00:00"
+    },
+    {
+      "ids": [
+        "A09-23222",
+        "A09-23223"
+      ],
+      "review": "Fresh full profiles/transcripts/annotations plus reviewer1 literal source assertions; repaired conditional paid anonymized fallback and local developer jobs before relocation in both, streamlined Hana closing; node and supplemental audit pass.",
+      "at": "2026-11-18T11:07:14.520742+00:00"
+    },
+    {
+      "ids": [
+        "A09-23231",
+        "A09-23232"
+      ],
+      "review": "Full fresh profiles/transcripts/annotations plus root literal-asserted review; repaired after-2031 job gate, conditional family move, safe-car and workshop repairs, Erik spending cut, childcare/public aid, paid-time approval and Wendy funded class transcript; node and supplemental audit pass.",
+      "at": "2026-11-18T11:08:11.209763+00:00"
+    },
+    {
+      "ids": [
+        "A09-23233",
+        "A09-23311"
+      ],
+      "review": "Fresh full current source/profile/summary review plus reviewer1 literal assertions; Marco explicit relocation tagged move and contract income-loss fallback restored; Fatima gates intact; node and audit pass.",
+      "at": "2026-11-18T11:09:06.527992+00:00"
+    },
+    {
+      "ids": [
+        "A09-23312",
+        "A09-23313"
+      ],
+      "review": "Fresh full current profiles/sources/annotations plus root literal assertions; corrected Uma extension spending taxonomy, current-wage rotation and after-2031 gate; Colin six-month written approval and paid repeat work after coding loss; both conditional moves; node and audit pass.",
+      "at": "2026-11-18T11:09:59.423650+00:00"
+    },
+    {
+      "ids": [
+        "A09-23211",
+        "A09-23212"
+      ],
+      "review": "Fresh full exact source/profile/summary read plus reviewer2 literal assertions; repaired after-2031 job gates, conditional family moves, monthly practice feedback, Rafael closure check and conditional activity cut, Jade bathroom spending taxonomy and paid tester time; node/audit pass.",
+      "at": "2026-11-18T11:10:57.397986+00:00"
+    },
+    {
+      "ids": [
+        "A09-23321",
+        "A09-23322"
+      ],
+      "review": "Fresh full profile/current source and annotations plus root literal assertions; restored Dana conditional kitchen delay and free recall-reading fallback, clarified Karl leak repair versus wider upgrade; all timing/move/fee gates checked, node/audit pass.",
+      "at": "2026-11-18T11:11:29.697913+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -2334,9 +2454,21 @@
     "A09-23132": "7509261261fd2a5daff4c5db0acf8d1679e30ef2b787e062e5f5d8e83f131367",
     "A09-23133": "d4f79aabc1ed1259d59624d4d616ad6a4faefc8e2d0b673299ceca0f7f4eb3d6",
     "A09-23213": "de78cb6f1645269325873bcf81f93faf7ef75af9c92db410495a567b910faa1a",
-    "A09-23221": "e53aff5c68fa20064a358f2d7267dd1b9e3d5b735fb137242aefc2e366ef7133"
+    "A09-23221": "e53aff5c68fa20064a358f2d7267dd1b9e3d5b735fb137242aefc2e366ef7133",
+    "A09-23222": "8fb4c169f9d9e517dcf398af466597ad801283ea91fb65b1f69a8449e71ea87c",
+    "A09-23223": "ef810b6b023e43858cbfdef44fbdfe56ee328e2e93c5122bc3224abb6a20bc12",
+    "A09-23231": "90d0eacccffe0f48ef49d89f2f32e350b6c96e273ce0f26c14a392f72bb5603d",
+    "A09-23232": "b9a4b3cb2f975041e932a2ec8633dbffdc9d0bd26ee8472016738fe22c0444c3",
+    "A09-23233": "1fd0891ccfbc977fe815361419513139f869d922ff427c535abef1446af980d8",
+    "A09-23311": "05e04ddad9988c8bd5edc5167b1309374cdb0e71fba38787a0501d8088749a0f",
+    "A09-23312": "ba9fbd22c22a8de10af8c240abbc92f8342a8b97ecefd3c2f64b2f62fe865da2",
+    "A09-23313": "23101f00bb59ffaedbee04fca0eb13da0ccdb4c730facbaa42d82d5b48e0fcec",
+    "A09-23211": "717f04e44095a2c7bfda188e39d3b12ebca373fdef0a08f3e10b18b3d755e375",
+    "A09-23212": "deb3c4d5fd3fb0c2f438495e022d8ae82308068df504dc53e92c303d38872e29",
+    "A09-23321": "030a5fa5f11e0be58a9dad37698fdd46d0f73125e622cf3328a3c13fba061230",
+    "A09-23322": "4448401fdb6640062ad0b21532577fc243bcf267083f5d1d223744393aa4bb57"
   },
-  "updatedAt": "2026-11-18T11:05:39.814015+00:00",
+  "updatedAt": "2026-11-18T11:12:05.693608+00:00",
   "acceptedRepairHistory": [
     {
       "id": "A09-13113",
