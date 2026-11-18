@@ -11,10 +11,10 @@
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
   "claimedAt": "2026-11-18T09:33:53.331733+00:00",
-  "phase": "A21 interviews in progress; 77 reviewed passing",
+  "phase": "Reviewing owned jobs in ascending order; only accepted files checkpointed",
   "jobs": {
     "A21": {
-      "reviewedCount": 77,
+      "reviewedCount": 91,
       "reviewedIds": [
         "A21-11111",
         "A21-11112",
@@ -92,10 +92,7 @@
         "A21-13312",
         "A21-13313",
         "A21-13321",
-        "A21-13322"
-      ],
-      "insightsValidated": false,
-      "remainingGaps": [
+        "A21-13322",
         "A21-13323",
         "A21-13331",
         "A21-13332",
@@ -109,7 +106,10 @@
         "A21-21131",
         "A21-21132",
         "A21-21133",
-        "A21-21211",
+        "A21-21211"
+      ],
+      "insightsValidated": false,
+      "remainingGaps": [
         "A21-21212",
         "A21-21213",
         "A21-21221",
@@ -1024,58 +1024,50 @@
   },
   "reservations": [
     {
-      "agent": "author2",
-      "ids": [
-        "A21-13323",
-        "A21-13331"
-      ],
-      "state": "review"
-    },
-    {
-      "agent": "author4",
-      "ids": [
-        "A21-13332",
-        "A21-13333"
-      ],
-      "state": "review"
-    },
-    {
       "agent": "author1",
       "ids": [
-        "A21-21111",
-        "A21-21112"
-      ],
-      "state": "review"
-    },
-    {
-      "agent": "author1",
-      "ids": [
-        "A21-21113",
-        "A21-21121"
+        "A21-21212",
+        "A21-21213"
       ],
       "state": "drafting"
     },
     {
       "agent": "author2",
       "ids": [
-        "A21-21122",
-        "A21-21123"
+        "A21-21221",
+        "A21-21222"
       ],
-      "state": "review"
+      "state": "drafting"
     },
     {
       "agent": "author3",
       "ids": [
-        "A21-21131",
-        "A21-21132"
+        "A21-21223",
+        "A21-21231"
       ],
       "state": "drafting"
     },
     {
       "agent": "author4",
       "ids": [
-        "A21-21133",
-        "A21-21211"
+        "A21-21232",
+        "A21-21233"
+      ],
+      "state": "drafting"
+    },
+    {
+      "agent": "author1",
+      "ids": [
+        "A21-21311",
+        "A21-21312"
+      ],
+      "state": "drafting"
+    },
+    {
+      "agent": "author2",
+      "ids": [
+        "A21-21313",
+        "A21-21321"
       ],
       "state": "drafting"
     }
@@ -1157,6 +1149,46 @@
     },
     {
       "command": "node scripts/validate-archetype-interviews.mjs A21-13321 A21-13322",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-13323 A21-13331",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-13332 A21-13333",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-21111 A21-21112",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-21113 A21-21121",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-21122 A21-21123",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-21131 A21-21132",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-21133 A21-21211",
+      "exitCode": 0,
+      "result": "2/2 files valid"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A21-21133 A21-21211",
       "exitCode": 0,
       "result": "2/2 files valid"
     }
@@ -1407,9 +1439,23 @@
     "A21-13312": "957bf4d72f2b47e7667668079ee712e4c73d187bfb559a7c06c0f6d72fecfa9b",
     "A21-13313": "b99fc534d2d1147207b253d70afda874c1d0fced42ca59143aa44e2cb3341f26",
     "A21-13321": "77f316fd8cc80806924d014c858f2c5094af08b81d23d99a00b6c346739525ca",
-    "A21-13322": "289a09cb4dbc2278724d08182609c02c07dbf9ea59c7f9f65d2c1e3adb4aa124"
+    "A21-13322": "289a09cb4dbc2278724d08182609c02c07dbf9ea59c7f9f65d2c1e3adb4aa124",
+    "A21-13323": "fd8fbadb84e31d9375c3b393ef1f73a768845fcb51ca5d6d68f69c8ccf0c4186",
+    "A21-13331": "efc08f3d8cd286795863051ce80cc39ec7ee3f7709030e39dab006ba7471b630",
+    "A21-13332": "6da754a7103c1c6b82ea1e2218ba6ba900dcea91620990c00b89e08f11074b63",
+    "A21-13333": "e61a2aa918ccc5255936521a62039e6fee00b186aec77e67c03565b8abcdb7b3",
+    "A21-21111": "95c3eced6b07a6b89a73a430bea35f4d75cc74357a80ac44fd8c436ecf795bee",
+    "A21-21112": "5d859c96a8383da72bca7518a8ff35dc8ad59d5cbc636c884d2bdfb11df3a90a",
+    "A21-21113": "d27e4324c74083137b6391e769e69de7f2687e3c5b1256a1c01f5d7f11ad3436",
+    "A21-21121": "04812e72a9f7e2aa23df8e3cffd2a0e8bb6f2f19457a5e90c749d4403f4cd911",
+    "A21-21122": "fbd826d3bdfa292c0798edefb605963fedf959f7f80f6f6bd08875b6f2611bfc",
+    "A21-21123": "d2c50055c1fb40452c6862276b7bb2a0b83af47711c55c653d7b2205cd000639",
+    "A21-21131": "0eabc67f864c0aa9e470388f41b84cbbf8e1e20ff37fe62b14b364ef7d012f13",
+    "A21-21132": "52a47249840f5b7f0da9d5f0c49b52a0bc007e836b654a98f7d7240eed0368dd",
+    "A21-21133": "3168e90af69f13462dcd37308464abac3827020187627141a4b8cc1bef852f42",
+    "A21-21211": "91e79af071975a91553ffa27e97f02ba79fb2a5bd7d8e698f02dd21d5a2da7ca"
   },
-  "latestCheckpointCommit": "85ae36464213c5ce6158398709569d188e095539",
+  "latestCheckpointCommit": "e215c48b1b3326f63865a8db39fe8ee9edfd4016",
   "semanticReview": [
     {
       "ids": [
@@ -1575,7 +1621,127 @@
         "parent full-content review",
         "independent read-only review"
       ]
+    },
+    {
+      "ids": [
+        "A21-13323",
+        "A21-13331"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read full profiles/interviews; Luna independently accepted both. Parent preserved explicit first-year timing in role steps, manager permission for Ivan trial and employment during outside searches, plus written terms and salary-match conditions exactly where stated. Priya paid family-shop rate and announced-cut trigger retained. Corrected training-ladder wording; exact quotes, cash flows and individual income-risk moods verified.",
+      "reviewedAt": "2026-11-18T10:12:30.450281+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-13332",
+        "A21-13333"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full source/profile review and independent Luna review completed. Parent resolved recurring-deposit interpretation: 200 monthly is new money added to savings, not retention of existing capital. Added paid-only junior teaching, explicit two-of-three renewal coverage including travel, and material signed-offer/home-move pay/family conditions. Freya firm-owned revenue and five-of-eight gate separate from post-2036 salary funding retained; vague timeframe quote made concrete and exact. Parent reran actual and supplemental checks.",
+      "reviewedAt": "2026-11-18T10:15:07.579847+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-21111",
+        "A21-21112"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read full exact profiles/interviews and independently resolved Luna review findings. Gareth next-funded-opening/temporary-work fallback, paid supervised apprenticeship with mortgage-covering training and final wages, retained current contract, and tax-job-loss/support/search triggers recorded. Nora published wage/funded start date, retained employment if vacancy closes, free-library training fallback and paid supervision retained. Removed routine letters from savings-tagged step to honor four-tag limit; corrected school-holiday wage-gap quote. Child ages and AGI/robot timing checked.",
+      "reviewedAt": "2026-11-18T10:17:56.420206+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-21113",
+        "A21-21121"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full profiles/source review resolved independent Luna findings and corrected cross-profile attribution: Victor free advice-centre sessions; Daria free payroll guidance/current wage. Recorded funding, supervised real cases, written job paths and current-pay retention during training, vacancy-closure/short-contract fallbacks and explicit post-2036 job-loss/support/search triggers. Recalibrated S1 to anxious from their actual possible hour-loss assessments, keeping expected 2028 job-loss alarm. Quotes made concrete without changing facts; actual validator and supplemental audit pass.",
+      "reviewedAt": "2026-11-18T10:21:34.704896+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-21122",
+        "A21-21123"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent complete source/profile review and independent Luna review. Added Emeka funded-training refusal fallback to nearby posted paid payroll-trainee work; kept current income, matching written salary/hours, after-AGI triggers and confirmed canteen shifts. Reconciled cinema saving to its stated 35 monthly cost. Lena enquiries about existing tutoring bookings are keep-going rather than new side-income; actual advanced AI-check learning is learn-ai. Confirmed paid warehouse shifts, retained current tax work, reserve-before-principal sequence, exact quotes and household facts.",
+      "reviewedAt": "2026-11-18T10:27:13.415709+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-21131",
+        "A21-21132"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read complete profiles/interviews and resolved independent Luna findings. Added pre-loss lender enquiries separate from conditional post-loss relief; retained eligibility and parents grocery-loan fallback. Tomas retains paid work during training and before moves; Bianca requires reliable hours plus written mortgage/childcare-covering pay. Paid monthly case practice and after-2036 hour-loss triggers made explicit. Current wages, school-run/free-class conditions, new weekly savings and standalone exact quotes verified.",
+      "reviewedAt": "2026-11-18T10:30:05.123940+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-21133",
+        "A21-21211"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent read both complete profiles/interviews and resolved independent review findings. Carlos stock shifts require availability, rate and childcare; relocation requires salary plus partner work, and no-hospital fallback retains firm earnings while checking other two firms. Sports money recurs only during pause. Jade ordinary technical audit-trail report is keep-going; her actual joint staff/union actions remain collective. Preserved bills-only reserve use while Dev works, eligibility, refusal record/no private tuition, actual school-vacancy search and retained wages until written offer.",
+      "reviewedAt": "2026-11-18T10:34:38.079163+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
+    },
+    {
+      "ids": [
+        "A21-21133",
+        "A21-21211"
+      ],
+      "decision": "ACCEPT",
+      "notes": "Parent full source/profile review resolved independent findings. Carlos stock shifts retain availability, confirmed rate and childcare; any relocation requires mortgage-covering written pay plus Rosa work; no-hospital fallback keeps earnings while watching other two firms. Sports deposits last only while club is paused. Jade routine technical report is keep-going, actual joint staff advocacy stays collective. Preserved bills-only reserve use while Dev works, eligibility, refusal record/no private tuition, real school-vacancy search and retained wages until written offer.",
+      "reviewedAt": "2026-11-18T10:36:00.569833+00:00",
+      "checks": [
+        "actual repository validator",
+        "supplemental protocol audit",
+        "parent full-content review",
+        "independent read-only review"
+      ]
     }
   ],
-  "checkpointAt": "2026-11-18T10:10:49.822953+00:00"
+  "checkpointAt": "2026-11-18T10:39:56.217408+00:00"
 }
