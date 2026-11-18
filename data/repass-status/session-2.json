@@ -13,7 +13,7 @@
   "startedAt": "2026-11-18T09:32:25.600883+00:00",
   "jobs": {
     "A09": {
-      "reviewedCount": 186,
+      "reviewedCount": 200,
       "reviewedIds": [
         "A09-11111",
         "A09-11112",
@@ -200,11 +200,7 @@
         "A09-31313",
         "A09-31321",
         "A09-31322",
-        "A09-31323"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
-      "remainingGaps": [
+        "A09-31323",
         "A09-31331",
         "A09-31332",
         "A09-31333",
@@ -218,7 +214,11 @@
         "A09-32132",
         "A09-32133",
         "A09-32211",
-        "A09-32212",
+        "A09-32212"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
+      "remainingGaps": [
         "A09-32213",
         "A09-32221",
         "A09-32222",
@@ -1041,14 +1041,14 @@
         "A09-32121",
         "A09-32122"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author4": {
       "ids": [
         "A09-31333",
         "A09-32111"
       ],
-      "state": "review"
+      "state": "accepted"
     },
     "author1_next": {
       "ids": [
@@ -1062,7 +1062,7 @@
         "A09-32123",
         "A09-32131"
       ],
-      "state": "drafting"
+      "state": "accepted"
     },
     "author3_prev": {
       "ids": [
@@ -1076,7 +1076,7 @@
         "A09-31331",
         "A09-31332"
       ],
-      "state": "review"
+      "state": "accepted"
     },
     "author1_review": {
       "ids": [
@@ -1090,19 +1090,54 @@
         "A09-32112",
         "A09-32113"
       ],
-      "state": "review"
+      "state": "accepted"
     },
     "author4_next2": {
       "ids": [
-        "A09-31322",
-        "A09-31323"
+        "A09-32222",
+        "A09-32223"
       ],
-      "state": "accepted"
+      "state": "review"
     },
     "author1_next3": {
       "ids": [
         "A09-32132",
         "A09-32133"
+      ],
+      "state": "accepted"
+    },
+    "author1_next4": {
+      "ids": [
+        "A09-32211",
+        "A09-32212"
+      ],
+      "state": "accepted"
+    },
+    "author3_next2": {
+      "ids": [
+        "A09-32213",
+        "A09-32221"
+      ],
+      "state": "review"
+    },
+    "author1_next5": {
+      "ids": [
+        "A09-32231",
+        "A09-32232"
+      ],
+      "state": "drafting"
+    },
+    "author3_next3": {
+      "ids": [
+        "A09-32233",
+        "A09-32311"
+      ],
+      "state": "drafting"
+    },
+    "author4_next3": {
+      "ids": [
+        "A09-32312",
+        "A09-32313"
       ],
       "state": "drafting"
     }
@@ -1915,6 +1950,90 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "011c3d1ff94bbba50d96b1815cdd336d06a303d3b64144351c19cca8a777c3d1"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-31333",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "7f6ee952af2976b482235c6eb24fea95c66de2bbd86c67926a771d5eed4aa7db"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32111",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "5b987d905bd1a79c350beb5125132cd5fb933a46cdc40d91be5267ef6f99042d"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32112",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "255f0f45dc4b83aff3304a53c97a4d72f82b6ed16446cac7c623fbdd90021d97"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32113",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "1963fdc8f68478db888537ef1cb490320524e3a2ec91318535180ce093bf1a6d"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-31331",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "3811068fd6ad1bf21b3b8ccd1bf93116163375243215505d68a27b9e324156d6"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-31332",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "21071024d1178c87326e07e6bded6336124cd90e76f0b1f26aac474ba5121877"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32132",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "d6a1d364470478b1d6909be6cb47e196f805243836465f92da12255060c9b6b5"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32133",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f412def69dfdfc4a7429ca12c67c490dc3640d4987c1f4d598c11be2ecacbf68"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32121",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "4ae9ae5dffed3d7ecd7b1089488cfbe7455e0ccf92f79d0c0004792677f34aa1"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32122",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "49d66679d616c38f881cae2617c41f6aa813cd05db4569d6839ea848e5ce8330"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32123",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "8360d6f9b5e14ea994f010a79a7230d7c474711055d637ce798eca8f712d4873"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32131",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "664bbb2c5f33dace881a89c2a6c5129f8ef1c1d5d1a348cb686e38b0fcefc2d7"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32211",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "df8b6b020fdf3f857eca05ba8f7094baec52c7cd272b0745074609a9cb3c430f"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-32212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "2f7a8e10da738c593b42dd631ad54ccf628f30439ed1520c68e918010ab89a3f"
     }
   ],
   "latestCheckpointCommit": "468902124c7b1e8361397814c3e8cf3e7a38039a",
@@ -2439,6 +2558,62 @@
       ],
       "review": "Root and coordinator independently reviewed full Fatima and Marco interviews: inclusive course cap, post-2031 coding/either-job loss gates, reopened-complaint request, and lender contact repaired; actual node and supplemental audit pass both.",
       "at": "2026-11-18T11:38:43.293005+00:00"
+    },
+    {
+      "ids": [
+        "A09-31333",
+        "A09-32111"
+      ],
+      "review": "Reviewer2 and coordinator fully read Sara and Aaron; Sara S2 funded refresher action and exact paid-vacancy gate, inclusive 180 fee repaired; Aaron approved with no defects; actual node and audit pass both.",
+      "at": "2026-11-18T11:41:32.247899+00:00"
+    },
+    {
+      "ids": [
+        "A09-32112",
+        "A09-32113"
+      ],
+      "review": "Root and coordinator full semantic review: Beth sofa spending cut, both S1 public-help enquiry, Beth S3 current application versus post-2031 acceptance, Ivan S2 print cost and S3 code-loss/shop-capacity gates repaired; node and audit pass both.",
+      "at": "2026-11-18T11:42:24.372448+00:00"
+    },
+    {
+      "ids": [
+        "A09-31331",
+        "A09-31332"
+      ],
+      "review": "Reviewer1 and coordinator full review: Dana no-post fallback now retains savings and insurer-before-lapse; Karl S1 continuing/pausing extra principal tagged save-more, S2 mortgage reserve fallback in step. Bank-like insurer call stays untagged. Node/audit pass both.",
+      "at": "2026-11-18T11:43:46.287158+00:00"
+    },
+    {
+      "ids": [
+        "A09-32132",
+        "A09-32133"
+      ],
+      "review": "Root and coordinator full review: both S0 household consumption cuts tagged/stepped, Nora S1 independent cancellation versus conditional brother aid and S3 coding-loss/net-sale/signed combined rent-and-bills move gate repaired. Node and audit pass both.",
+      "at": "2026-11-18T11:44:46.807408+00:00"
+    },
+    {
+      "ids": [
+        "A09-32121",
+        "A09-32122"
+      ],
+      "review": "Reviewer1 and coordinator full read: both S0 subscription cancellations tagged separately, Yusuf rent priority and solo rent/food/travel until partner employment move gate, local-work fallback, both S2 pre-arrears landlord calls in steps repaired. Bank/landlord enquiries remain untagged. Node/audit pass both.",
+      "at": "2026-11-18T11:46:27.396629+00:00"
+    },
+    {
+      "ids": [
+        "A09-32123",
+        "A09-32131"
+      ],
+      "review": "Reviewer2 and coordinator fresh full review approved Freya and Gareth: low-pay late-career profiles, own-income baseline anxiety, paid depot/qualified heating gates, eligibility and conditional brother room all source-supported; node/audit pass both.",
+      "at": "2026-11-18T11:46:44.888104+00:00"
+    },
+    {
+      "ids": [
+        "A09-32211",
+        "A09-32212"
+      ],
+      "review": "Root and coordinator full review: Daria checks two firms rather than assumes two openings, S1 combined wage with Joel retained; Emeka S2 union starts now, S3 coding-loss application plus Lila booked-class combined income repaired. Node/audit pass both.",
+      "at": "2026-11-18T11:47:46.187720+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -2795,9 +2970,23 @@
     "A09-31322": "ba3e15757a7ebea189e8d1d8fd5a61b381053d2542a5d4c28d83d511013075c0",
     "A09-31323": "8b5ae7b28e83a8b4d7b303dc7d71ad9c9c59dabdb13d7f6bfc55a19f7903326d",
     "A09-31313": "befe3584eaaa87488d0937fbb36faf915c49397a5ee48baf83367cabc296196c",
-    "A09-31321": "011c3d1ff94bbba50d96b1815cdd336d06a303d3b64144351c19cca8a777c3d1"
+    "A09-31321": "011c3d1ff94bbba50d96b1815cdd336d06a303d3b64144351c19cca8a777c3d1",
+    "A09-31333": "7f6ee952af2976b482235c6eb24fea95c66de2bbd86c67926a771d5eed4aa7db",
+    "A09-32111": "5b987d905bd1a79c350beb5125132cd5fb933a46cdc40d91be5267ef6f99042d",
+    "A09-32112": "255f0f45dc4b83aff3304a53c97a4d72f82b6ed16446cac7c623fbdd90021d97",
+    "A09-32113": "1963fdc8f68478db888537ef1cb490320524e3a2ec91318535180ce093bf1a6d",
+    "A09-31331": "3811068fd6ad1bf21b3b8ccd1bf93116163375243215505d68a27b9e324156d6",
+    "A09-31332": "21071024d1178c87326e07e6bded6336124cd90e76f0b1f26aac474ba5121877",
+    "A09-32132": "d6a1d364470478b1d6909be6cb47e196f805243836465f92da12255060c9b6b5",
+    "A09-32133": "f412def69dfdfc4a7429ca12c67c490dc3640d4987c1f4d598c11be2ecacbf68",
+    "A09-32121": "4ae9ae5dffed3d7ecd7b1089488cfbe7455e0ccf92f79d0c0004792677f34aa1",
+    "A09-32122": "49d66679d616c38f881cae2617c41f6aa813cd05db4569d6839ea848e5ce8330",
+    "A09-32123": "8360d6f9b5e14ea994f010a79a7230d7c474711055d637ce798eca8f712d4873",
+    "A09-32131": "664bbb2c5f33dace881a89c2a6c5129f8ef1c1d5d1a348cb686e38b0fcefc2d7",
+    "A09-32211": "df8b6b020fdf3f857eca05ba8f7094baec52c7cd272b0745074609a9cb3c430f",
+    "A09-32212": "2f7a8e10da738c593b42dd631ad54ccf628f30439ed1520c68e918010ab89a3f"
   },
-  "updatedAt": "2026-11-18T11:38:43.293049+00:00",
+  "updatedAt": "2026-11-18T11:47:46.187760+00:00",
   "acceptedRepairHistory": [
     {
       "id": "A09-13113",
