@@ -13,7 +13,7 @@
   "startedAt": "2026-11-18T09:32:25.600883+00:00",
   "jobs": {
     "A09": {
-      "reviewedCount": 96,
+      "reviewedCount": 104,
       "reviewedIds": [
         "A09-11111",
         "A09-11112",
@@ -110,11 +110,7 @@
         "A09-21213",
         "A09-21221",
         "A09-21222",
-        "A09-21223"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
-      "remainingGaps": [
+        "A09-21223",
         "A09-21231",
         "A09-21232",
         "A09-21233",
@@ -122,7 +118,11 @@
         "A09-21312",
         "A09-21313",
         "A09-21321",
-        "A09-21322",
+        "A09-21322"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
+      "remainingGaps": [
         "A09-21323",
         "A09-21331",
         "A09-21332",
@@ -1024,31 +1024,31 @@
   "reservations": {
     "author1": {
       "ids": [
-        "A09-21233",
-        "A09-21311"
+        "A09-22113",
+        "A09-22121"
       ],
       "state": "drafting"
     },
     "author2": {
       "ids": [
-        "A09-21312",
-        "A09-21313"
+        "A09-22111",
+        "A09-22112"
       ],
       "state": "drafting"
     },
     "author3": {
       "ids": [
-        "A09-21213",
-        "A09-21221"
+        "A09-21332",
+        "A09-21333"
       ],
-      "state": "accepted"
+      "state": "drafting"
     },
     "author4": {
       "ids": [
-        "A09-21231",
-        "A09-21232"
+        "A09-21323",
+        "A09-21331"
       ],
-      "state": "drafting"
+      "state": "review"
     }
   },
   "validationResults": [
@@ -1319,9 +1319,57 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "c7e8e92cd5223a8012f2069f498c05dae2cd3dbcc41bd08f82f96aaf33745d38"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21231",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ec2878d18f91d68c4a2e8c8399b7c5e18246d28f8849369e9ff0ab2c8d6e24fc"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21232",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "cec7dfad99fee5c899382c5889dd95d8a2cd62a04135cfb3c4e5bbc4581b9552"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21321",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f25e04eb15cd28e06d0112ea5bf396c98551b5009a5a771a8e7ce44c8c802979"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21322",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "6bb3ae932812c36d787ae781555ee1c265838b276e107e2e9473285ef74066b2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21312",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "46c8937f7e706ded016297ab2f5be705c8a25f4df0b55d5191e39f5e445b92ee"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21313",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "40b6482eb328cc34a6bca166406cf2ff0cce1f3521c87a74b38c805b143f9836"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21233",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "7db59000e5131d7fff0fc1b7de4553bacfa2551655ae3e62bebe90ebba8cfef2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09-21311",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f286d8fb41e20153c7ea5191026cb10e281ea8c0634cac199cd6314e283ffc0d"
     }
   ],
-  "latestCheckpointCommit": "df1c71612a66e15658a6cfecdcb6fc69817227fc",
+  "latestCheckpointCommit": "8f033a3b6322e9b84f2dddf183091d9dd2b8e1fc",
   "semanticReviewRecord": [
     "Startup: full remote handoff and protocol read; clean checkout; no existing session-2 branch or owner. No interviews drafted before pushed ownership claim.",
     {
@@ -1483,6 +1531,38 @@
       ],
       "review": "Parent full sources and Sol read-only semantic review; mapped existing AI checking to continuing work, clarified real junior-income risk under 2031 and anxious mood, removed unsupported move commitment and invented cheaper-room claim, retained only conditional family-room enquiry and joint decision. Actual final validators pass.",
       "at": "2026-11-18T10:14:18.475707+00:00"
+    },
+    {
+      "ids": [
+        "A09-21231",
+        "A09-21232"
+      ],
+      "review": "Parent full source/notes and independent Sol semantic review; preserved disappearing-ticket and supervised paid-time gates, actual vacancies and inquiry vs application, corrected public summary, explicit roof-dry/Maren/reserve/cost class conditions, and standalone job/field quotes. Final actual validators pass.",
+      "at": "2026-11-18T10:21:34.706587+00:00"
+    },
+    {
+      "ids": [
+        "A09-21321",
+        "A09-21322"
+      ],
+      "review": "Parent full sources/notes and literal-grounded independent review; restored employer-trial trigger before first AI learning, mapped new portfolio/vacancy-search preparation to change-job rather than normal ongoing work, preserved wage-qualified fallback, repaired mid-sentence quote capitalization without changing quote. Profiles, moods and final actual checks pass.",
+      "at": "2026-11-18T10:23:11.295841+00:00"
+    },
+    {
+      "ids": [
+        "A09-21312",
+        "A09-21313"
+      ],
+      "review": "Parent full sources and final revisions plus literal-grounded independent review; differentiated Ivan with capped 90 invented-case AI experiment and 150 optional study budget from new pay, preserving ten-month reserve; made Beth funding/self-funding branches explicit and retained written offer/current-wage and family-cost gates. Exact quotes, profiles, notes and actual final validators pass.",
+      "at": "2026-11-18T10:25:02.197782+00:00"
+    },
+    {
+      "ids": [
+        "A09-21233",
+        "A09-21311"
+      ],
+      "review": "Parent full sources/notes and literal-grounded independent review; existing AI use classified continuing work, child-supervision and paid-repeat travel/childcare/time gates explicit, shop prospecting not miscounted as side income, actual developer-search fallback retained, individual union advice distinguished from collective action and eligible public aid. Final actual validators pass.",
+      "at": "2026-11-18T10:27:59.087714+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -1749,9 +1829,17 @@
     "A09-21222": "1f0e0a83d8f4c748791bd76242e8b5e06b0ebb9485168976dbc58837f925270c",
     "A09-21223": "f74952331c802755f30a9481282356f76c5de5f92152377c3fbee1e53ac28c84",
     "A09-21213": "068e7f08f746c015b67641851dca50662dea6a88eb9d9ed0134c770f7a7b3dd6",
-    "A09-21221": "aed3835797ec5f779469d6e1ff2f4bf4d7393d2b678479317b08992ef6a0291e"
+    "A09-21221": "aed3835797ec5f779469d6e1ff2f4bf4d7393d2b678479317b08992ef6a0291e",
+    "A09-21231": "ec2878d18f91d68c4a2e8c8399b7c5e18246d28f8849369e9ff0ab2c8d6e24fc",
+    "A09-21232": "ff25b2596c363ccf6584c987ef6def7dbc170996d455898aee0fd7fa25daba17",
+    "A09-21321": "f25e04eb15cd28e06d0112ea5bf396c98551b5009a5a771a8e7ce44c8c802979",
+    "A09-21322": "6bb3ae932812c36d787ae781555ee1c265838b276e107e2e9473285ef74066b2",
+    "A09-21312": "46c8937f7e706ded016297ab2f5be705c8a25f4df0b55d5191e39f5e445b92ee",
+    "A09-21313": "40b6482eb328cc34a6bca166406cf2ff0cce1f3521c87a74b38c805b143f9836",
+    "A09-21233": "7db59000e5131d7fff0fc1b7de4553bacfa2551655ae3e62bebe90ebba8cfef2",
+    "A09-21311": "f286d8fb41e20153c7ea5191026cb10e281ea8c0634cac199cd6314e283ffc0d"
   },
-  "updatedAt": "2026-11-18T10:14:43.523057+00:00",
+  "updatedAt": "2026-11-18T10:28:35.259074+00:00",
   "acceptedRepairHistory": [
     {
       "id": "A09-13113",
@@ -1836,6 +1924,12 @@
       "oldHash": "c7e8e92cd5223a8012f2069f498c05dae2cd3dbcc41bd08f82f96aaf33745d38",
       "newHash": "aed3835797ec5f779469d6e1ff2f4bf4d7393d2b678479317b08992ef6a0291e",
       "review": "Removed remaining bank-only support step after revision; actual conditional cousin-room assistance still supports seek-support, with lender question documented in do/source."
+    },
+    {
+      "id": "A09-21232",
+      "oldHash": "cec7dfad99fee5c899382c5889dd95d8a2cd62a04135cfb3c4e5bbc4581b9552",
+      "newHash": "ff25b2596c363ccf6584c987ef6def7dbc170996d455898aee0fd7fa25daba17",
+      "review": "Final step wording explicitly preserves intact mortgage reserve alongside 180 cost, Maren agreement and dry-roof gate; duration remains in transcript/do."
     }
   ],
   "readOnlyReviews": {
