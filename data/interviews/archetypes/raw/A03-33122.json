@@ -11,24 +11,16 @@
     "outlook": "centre",
     "adaptability": "steady"
   },
-  "protocolVersion": "3.0",
+  "protocolVersion": "3.1",
   "countryContext": "none",
   "opening": [
     {
       "speaker": "interviewer",
-      "text": "Good to meet you, Hana. I'm a field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions, parties or government. Everything you tell me is confidential, so you can tell me what you'd say in public and what you really think. Could you start by walking me through a normal working day?"
+      "text": "I’m with the Work Futures Panel, an independent research group. We have no ties to employers, AI firms, unions or government. Your answers stay confidential. What does a normal workday look like for you?"
     },
     {
       "speaker": "persona",
-      "text": "I lead the live-line crew for the mountain district, so we work on lines while they're still energised, with insulated sticks and gloves, so the ski hotels and the hospital don't lose power. A normal day starts at half six with the briefing, then up the pass in the bucket truck, and we might replace a crossarm or a cutout without anyone in the valley noticing. I like that nobody notices, that's the whole point. What wears me out is winter: ice on everything and the days are short."
-    },
-    {
-      "speaker": "interviewer",
-      "text": "And at home?"
-    },
-    {
-      "speaker": "persona",
-      "text": "My husband Petr was a mechanic until he hurt his back four years ago, so he's on disability now and I'm the main earner. Our girls are grown, Ivana's an accountant in the city and Mila works at a hotel up here. I use the AI chat thing now and then, mainly to tidy my job briefings, and once to explain a letter from Petr's specialist that none of us could understand. It's useful, I'll say that, but I didn't touch it until Mila showed me."
+      "text": "I lead the small crew that repairs the electricity company’s power lines around the hill road. My two-year technical diploma helps me read fault diagrams, but the crew relies on the sound and the meter when the paper and the pole disagree. I like restoring a dark row of houses; I am tired of being told to make the final report shorter after a long callout. My partner Pavel and I have grown children, and we have less than a month of expenses saved despite my years as a lead and lower pay for this job. I use AI now and then for a first draft of a report, once the line is safe."
     }
   ],
   "scenarios": {
@@ -36,11 +28,11 @@
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "I'll read you five pictures of the future, one at a time. This one is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say good, fine, let's get back to work. I don't get excited either way about these things. At the depot we'd probably just carry on talking about the snow."
+          "text": "I would tell the depot a quicker report is welcome if the test readings remain attached. The software may fill boxes, but a person must still verify the power line."
         },
         {
           "speaker": "interviewer",
@@ -48,7 +40,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Privately, it's a relief, because I've got enough to think about. Our money is tight, but that's Petr's back and my pay, not computers. Nothing in this picture changes that."
+          "text": "A plateau leaves most of my work alone, which is a relief. Still, one illness or a missed callout would empty our small reserve. My retirement feels like a question rather than a date while our lineworker savings cover less than a month."
         },
         {
           "speaker": "interviewer",
@@ -56,7 +48,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Carry on as I am. Keep the winter call-out shifts, because that's where the extra money is. Maybe use the AI thing a bit more for paperwork, since it's not going anywhere."
+          "text": "I would keep leading the crew and check the occasional AI report against my meter notes. If a callout adds income above our normal bills, I would put that extra pay into savings during the first year."
         },
         {
           "speaker": "interviewer",
@@ -64,46 +56,70 @@
         },
         {
           "speaker": "persona",
-          "text": "Calm. Quite relieved, honestly."
+          "text": "Uneasy about money, not frightened of a small software change. I still check the account before buying something for the house."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you're the main earner. How close to the edge are you?"
+          "text": "What gets checked on the AI report?"
         },
         {
           "speaker": "persona",
-          "text": "Close. We've got about three weeks of money if something goes wrong. Petr's disability payment covers his share of the bills and not much more, and my pay is lower than the valley crews because this is a small company."
+          "text": "I compare the isolation point and the voltage reading with my notebook. If either is missing, I correct the report before the next shift gets it."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you change anything at work in this picture?"
+          "text": "How much extra can go into savings?"
         },
         {
           "speaker": "persona",
-          "text": "Not really. Maybe push for a better winter allowance at the next pay review. We go out in conditions the valley crews never see."
+          "text": "Only money from callouts above our usual monthly needs, if those callouts happen. I cannot promise a fixed amount from my base pay."
         }
       ],
-      "say": "I'd say fine, let's get back to work, since I don't get excited either way. At the depot we'd carry on talking about the snow.",
-      "think": "Privately it's a relief, because I've got enough to think about. Our money is tight because of Petr's back and my pay, not because of computers.",
-      "do": "Carries on working and keeps the winter call-out shifts for extra money. Uses AI a little more for paperwork and pushes for a better winter allowance.",
-      "feel": "Calm and quite relieved.",
-      "mood": "calm",
-      "quote": "Our money is tight, but that's Petr's back and my pay, not computers.",
-      "fieldNote": "Hana is practical and unexcited about AI. As the main earner with a husband on disability, everything runs through money. She takes pride in invisible, careful work.",
+      "say": [
+        "**Faster reports** help only when the original test readings and switch positions remain attached for the next line crew.",
+        "**Line verification** still belongs to a trained worker."
+      ],
+      "think": [
+        "The **plateau** leaves physical power-line repairs mostly secure for me and my experienced crew.",
+        "A missed **callout** could empty our less-than-one-month reserve."
+      ],
+      "do": [
+        "**Keep** leading repairs and checking occasional AI reports against meter notes.",
+        "**Save** callout pay above normal bills if it is earned."
+      ],
+      "feel": [
+        "**Uneasy** about the thin household buffer."
+      ],
+      "mood": "uneasy",
+      "quote": "My retirement feels like a question rather than a date while our lineworker savings cover less than a month.",
+      "fieldNote": [
+        "She uses **AI occasionally** after the line is safe and verifies its report against field notes.",
+        "Her **new savings** depend on callouts actually paid above regular bills."
+      ],
       "actions": [
         "keep-going",
-        "learn-ai"
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading line repairs and checking occasional AI reports",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save earned callout pay above normal household bills",
+          "tag": "save-more"
+        }
       ]
     },
     "S1": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many tasks in many jobs. Some jobs shrink, new ones appear, and lots of people have to change how they work. But most people still have work, and society has time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say let's see what it actually does before we panic or cheer. At work I'd want the company to tell us their plan, straight. I wouldn't post about it."
+          "text": "I would tell dispatch to test its new planning tool with a bucket truck, not just a road map. Desk work changes first; robots doing field repairs take longer to spread."
         },
         {
           "speaker": "interviewer",
@@ -111,7 +127,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I think live-line work is one of the last places they'd risk a robot, because if it goes wrong someone dies or the hospital goes dark. But I'm 58 and expensive, so if they trim crews, they might trim from the top. That's what I'd be thinking about."
+          "text": "If the office starts giving us more jobs per shift, my callout hours might disappear into a tighter normal rota. At our lower pay and with so little saved, even a modest income cut would make the grocery and heating bills harder."
         },
         {
           "speaker": "interviewer",
@@ -119,7 +135,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd wait until the new kit was tested on a few jobs, then ask to be trained on it, so I'm the one who knows it. I'd try to put a little aside each month, maybe fifty, for when Petr's car needs replacing. I'd go to the union meetings to see what deal is on the table."
+          "text": "I would compare the route plan with ten actual fault calls and note the time for isolation and testing. In the first year I would take the log to the supervisor with a dispatcher, then ask for targets that count the full repair."
         },
         {
           "speaker": "interviewer",
@@ -127,48 +143,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy. Not losing sleep yet."
+          "text": "Anxious, though I would enjoy seeing a plan that actually saves a drive. I cannot let the savings account pay for a scheduling mistake every month."
         },
         {
           "speaker": "interviewer",
-          "text": "You said you'd want to see it work first. What would you need to see?"
+          "text": "Which fault call would test the map?"
         },
         {
           "speaker": "persona",
-          "text": "A full winter on real lines, with ice, with wind. A demonstration on a sunny day in a car park means nothing. Show me it in February on the pass."
+          "text": "The lane behind the water works has a gate our truck cannot fit through. I would record the longer approach road and the extra time beside the software estimate."
         },
         {
           "speaker": "interviewer",
-          "text": "Who would you worry about in your family?"
+          "text": "What would you cut if the callout pay dropped?"
         },
         {
           "speaker": "persona",
-          "text": "Ivana, actually, more than me. She's an accountant, and those office jobs sound like exactly the ones this goes after. She's got a baby on the way."
+          "text": "Pavel and I would postpone replacing our old sofa and stop the small weekend trips. I would keep paying the ordinary bills before touching what little savings we have."
         }
       ],
-      "say": "I'd say let's see what it does before we panic or cheer. At work I'd want the company to tell us their plan straight.",
-      "think": "Privately I think live-line work is one of the last places they'd risk a robot, because mistakes kill people. But at 58 I'm expensive, so if they trim crews, they might trim from the top.",
-      "do": "Waits until new equipment is tested on real jobs, then asks to be trained on it. Tries to save about fifty a month and attends union meetings to see what deal is offered.",
-      "feel": "Uneasy but not losing sleep yet.",
-      "mood": "uneasy",
-      "quote": "A demonstration on a sunny day in a car park means nothing. Show me it in February on the pass.",
-      "fieldNote": "Her steady style shows in wanting proof under real conditions before committing. She quickly shifts concern to her daughter, an accountant with a baby on the way. Her worry about being trimmed from the top is quiet but real.",
+      "say": [
+        "**Desk planning** changes before capable robots can do the physical line repairs our crews handle.",
+        "**Bucket-truck trials** must count isolation and test time."
+      ],
+      "think": [
+        "A tight **normal rota** could reduce my callout income.",
+        "Our **tiny reserve** makes a modest pay cut a household problem."
+      ],
+      "do": [
+        "**Compare** ten fault routes with actual truck and test times.",
+        "**Bring** the log with a dispatcher to the supervisor.",
+        "**Postpone** furniture and trips if callout pay falls."
+      ],
+      "feel": [
+        "**Anxious** about recurring income loss despite a useful tool."
+      ],
+      "mood": "anxious",
+      "quote": "I cannot let the savings account pay for a scheduling mistake every month.",
+      "fieldNote": [
+        "She is open to a **proven tool** but insists the route trial include testing time.",
+        "Her **spending cut** depends on an actual fall in callout income."
+      ],
       "actions": [
-        "wait-and-see",
         "learn-ai",
-        "save-more",
-        "collective-action"
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Test planning tool against ten actual fault routes",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Postpone sofa and weekend trips if callout income falls",
+          "tag": "cut-spending"
+        }
       ]
     },
     "S2": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "The next three are about full AGI at different speeds. This one is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any work a person can do, as well or better, and cheaper. With robots it reaches hands-on work too. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say this is too fast for anyone, and both the companies and the government need to slow it down and help people through. I'm not one for blaming, but someone has to take charge. At work I'd want straight answers."
+          "text": "I would say full thinking AI by 2028 changes dispatch and work orders, but capable line repair robots arrive around 2031. The crew still has physical work in that gap, so use the time."
         },
         {
           "speaker": "interviewer",
@@ -176,7 +215,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Honestly, it scares me. If I go at 60, there's Petr's disability and nothing else, and three weeks of savings. There's no other line work in the mountains, and the hotels would be using robots too."
+          "text": "I would be about sixty-three when field robots can do the job, with almost no savings and few similar employers nearby. I expect the company to need fewer repair shifts then, and that could force us to work longer at less pay rather than retire when we hoped."
         },
         {
           "speaker": "interviewer",
@@ -184,7 +223,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd cut back on everything that isn't the house, food and Petr's medicine, that week. I'd look into what government support exists and apply early, and I'd ask the company about any redundancy package. I'd try for anything that kept me in work, even part-time inspections."
+          "text": "I would ask to take the company’s paid robot-controls practice on dead equipment as soon as it is offered. In the first year after 2028 I would use those controls on supervised trial jobs, and if field shifts shrink after 2031 I would apply for any local line-safety post with enough pay for our bills."
         },
         {
           "speaker": "interviewer",
@@ -192,47 +231,71 @@
         },
         {
           "speaker": "persona",
-          "text": "Frightened. I'd be awake at three in the morning doing sums."
+          "text": "Alarmed; I have been awake imagining a blank callout column on the pay slip. I would rather learn a robot stop control than wait for the callout column on my lineworker pay slip to empty."
         },
         {
           "speaker": "interviewer",
-          "text": "What gets cut first at home?"
+          "text": "What would you practise on dead equipment?"
         },
         {
           "speaker": "persona",
-          "text": "The car, probably, we'd go down to one. Then the little things: Petr's swimming sessions for his back, which he needs, which is why it would hurt."
+          "text": "I would stop the robot when the isolation reading disagrees with my meter, then reset only after the error is found. A neat run on a mock line would not be enough without that fault."
         },
         {
           "speaker": "interviewer",
-          "text": "Would you ask anyone for help?"
+          "text": "What if the company offers no controls practice?"
         },
         {
           "speaker": "persona",
-          "text": "The girls would offer, and Mila might move back in to help with rent. I'd hate it, but I'd say yes. And I'd apply for anything the government offered, no shame in that if it's there."
+          "text": "I would ask the supervisor for a date and continue the normal crew work. I cannot pay for a private course just because a robot trial might lead to a job."
         }
       ],
-      "say": "I'd say this is too fast and both companies and government need to slow it down and help people through. I'd want straight answers at work.",
-      "think": "Privately it scares me. If I'm out at 60, there's only Petr's disability and three weeks of savings, with no other line work in the mountains.",
-      "do": "Cuts everything but the house, food and her husband's medicine that week. Applies early for government support, asks about redundancy and looks for any work, even part-time inspections, while accepting help from her daughters.",
-      "feel": "Frightened, awake at three in the morning doing sums.",
+      "say": [
+        "**2028 thinking AI** changes dispatch before field robots arrive around 2031.",
+        "**Hands-on crews** remain needed during the gap."
+      ],
+      "think": [
+        "I expect fewer **repair shifts** once capable robots arrive.",
+        "Our **thin savings** and few local employers make lost callouts frightening."
+      ],
+      "do": [
+        "**Take** paid robot-controls practice on dead equipment if offered.",
+        "**Use** controls on supervised trial jobs after 2028 if trained.",
+        "**Apply** for local line-safety work if shifts shrink and pay covers bills."
+      ],
+      "feel": [
+        "**Alarmed** by likely lost income near retirement."
+      ],
       "mood": "alarmed",
-      "quote": "Petr's swimming sessions for his back, which he needs, which is why it would hurt.",
-      "fieldNote": "As the main earner with a disabled husband, a fast shift threatens the whole household. She's pragmatic about seeking help from government and family alike. Cutting her husband's therapy is the detail that hurt most.",
+      "quote": "I would rather learn a robot stop control than wait for the callout column on my lineworker pay slip to empty.",
+      "fieldNote": [
+        "Her **controls learning** is actual paid practice in her current field, not a course enquiry.",
+        "Her **job application** depends on reduced shifts, a local vacancy and bill-covering pay."
+      ],
       "actions": [
-        "cut-spending",
-        "seek-support",
+        "learn-ai",
         "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Take paid robot-controls practice on dead equipment if offered",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Apply for local line-safety post if shifts shrink and pay covers bills",
+          "tag": "change-job"
+        }
       ]
     },
     "S3": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any work a person can do, hands-on work included through robots. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say five years is short, but if the company and government start now, it's doable. I'd ask the company for a plan in writing at the next meeting. I'd say it calmly."
+          "text": "Five years lets us see a machine fail on a wet line before thinking AI arrives in 2031. Field robots that can do repairs arrive about 2034, and I would want crews to help write the stop rules."
         },
         {
           "speaker": "interviewer",
@@ -240,7 +303,7 @@
         },
         {
           "speaker": "persona",
-          "text": "It's tight, but I think I could get to 63 and then find a bridge. The live-line work would probably go last. If I could move into safety inspection, I might make it to my pension."
+          "text": "I would be near sixty-six when the robots arrive, but I may still need a wage. I have learned new equipment before once someone showed it properly; I would rather have an inspection job with stable pay than a vague promise of retirement."
         },
         {
           "speaker": "interviewer",
@@ -248,7 +311,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd look into a safety inspector certificate in the first year, since that's where I'd still be useful checking the robots' work. I'd save whatever I could each month. I'd also talk to Petr about him taking on some light work from home, if his back allowed."
+          "text": "I would join the crew safety committee to write stop checks for field robots. If the employer offers paid line-inspection training tied to a real local job at a wage that covers our bills, I would take it before 2031 and apply after 2031; otherwise I would keep leading repairs while work exists."
         },
         {
           "speaker": "interviewer",
@@ -256,47 +319,76 @@
         },
         {
           "speaker": "persona",
-          "text": "Anxious. But it's the kind of worry where you make a list."
+          "text": "Anxious, but five years gives me time to handle the equipment and test the offer. A training poster cannot heat our house when line repair shifts disappear."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you look into first?"
+          "text": "What would the first stop check be?"
         },
         {
           "speaker": "persona",
-          "text": "What the company needs once robots come in. Somebody has to sign off that a line is safe, and I'd bet they'd want someone who's done it by hand."
+          "text": "The robot’s isolation value has to match the crew meter. If it does not, the crew stops the machine and records the mismatch before any restart."
         },
         {
           "speaker": "interviewer",
-          "text": "You said earlier you'd want to see things work first. Is there time for that here?"
+          "text": "Why insist on a local job?"
         },
         {
           "speaker": "persona",
-          "text": "Just about. I'd watch for a year or so, see what the robots were really doing, then move. Five years gives me that."
+          "text": "Pavel and I have our home and routines here, and there are few other line jobs close by. A distant vacancy that I cannot afford to take would not solve the bills."
         }
       ],
-      "say": "I'd say five years is short but doable if the company and government start now. I'd ask the company for a written plan at the next meeting.",
-      "think": "Privately it's tight, but I think I could get to 63 and find a bridge. If I moved into safety inspection, I might make it to my pension.",
-      "do": "Works towards a safety inspector certificate in the first year, after watching how robots perform. Saves what she can each month and talks with her husband about light work from home.",
-      "feel": "Anxious, but the kind of worry where she makes a list.",
+      "say": [
+        "**Wet-line trials** should test capable field robots before repairs change around 2034.",
+        "**Crew stop rules** need worker input."
+      ],
+      "think": [
+        "I may still need **wages** near sixty-six.",
+        "A **stable inspection job** would help only if local pay covers ordinary bills."
+      ],
+      "do": [
+        "**Join** crew safety committee to write robot stop checks.",
+        "**Take** paid inspection training before 2031 only for a local bill-covering job.",
+        "**Apply** for that post after 2031 if trained."
+      ],
+      "feel": [
+        "**Anxious**, with time to test equipment and the offer."
+      ],
       "mood": "anxious",
-      "quote": "Somebody has to sign off that a line is safe, and I'd bet they'd want someone who's done it by hand.",
-      "fieldNote": "Five years is just enough for her wait-then-move approach. She sees herself as the human check on robot work. Her plan still depends on her husband's health holding up.",
+      "quote": "A training poster cannot heat our house when line repair shifts disappear.",
+      "fieldNote": [
+        "Her **committee work** is group safety action, separate from an individual training choice.",
+        "Both **training and job change** depend on an employer-funded course and a real local wage."
+      ],
       "actions": [
+        "collective-action",
         "retrain",
-        "save-more",
-        "seek-support"
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Join crew safety committee to write robot stop checks",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Take paid line-inspection training for a real local bill-covering job",
+          "tag": "retrain"
+        },
+        {
+          "text": "Apply for local line-inspection post after 2031 if trained",
+          "tag": "change-job"
+        }
       ]
     },
     "S4": {
       "transcript": [
         {
           "speaker": "interviewer",
-          "text": "This one is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any work a person can do, hands-on work included through robots. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+          "text": "AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
         },
         {
           "speaker": "persona",
-          "text": "I'd say ten years is enough time if people are sensible. I'd want the company to plan it out with the workers. Nothing dramatic."
+          "text": "A decade gives crews more time to write safe procedures before thinking AI arrives in 2036 and capable field robots around 2039. I would also use the years to find out what retirement actually costs us."
         },
         {
           "speaker": "interviewer",
@@ -304,7 +396,7 @@
         },
         {
           "speaker": "persona",
-          "text": "Off the record, I'd be retired before it fully lands, so it's not really about me. It's about the girls and the grandchild. And about whether my pension is enough without Petr working."
+          "text": "At about sixty-eight in 2036, I hope I will have stepped back from repairs. But with less than a month saved today, I cannot treat that as settled; if I still work, fewer field shifts in 2039 could hurt our income."
         },
         {
           "speaker": "interviewer",
@@ -312,7 +404,7 @@
         },
         {
           "speaker": "persona",
-          "text": "I'd keep going as I am, learn the new kit when it's proven and try to finish out to 66. I'd put a little extra into the pension each month if I could find it. I'd help Ivana think about her options."
+          "text": "I would keep leading repairs for now and review our retirement budget with Pavel every year. In the first year after 2036, if still employed, I would work with the crew safety committee on robot isolation rules and keep testing physical lines until I could afford to stop."
         },
         {
           "speaker": "interviewer",
@@ -320,36 +412,59 @@
         },
         {
           "speaker": "persona",
-          "text": "Uneasy, for the family more than me."
+          "text": "Anxious about still needing wages when repair shifts could fall, though a decade gives us room to check them. I do not feel the same rush as in the 2028 picture."
         },
         {
           "speaker": "interviewer",
-          "text": "You'd be 68 by then. What changes for you?"
+          "text": "What would the annual review include?"
         },
         {
           "speaker": "persona",
-          "text": "I'd retire before it arrives, so the worry is my pension. It's not a lot, and with Petr on disability we'd be scraping. But that's true whatever the robots do."
+          "text": "We would compare regular bills with income we could count on after work and note any gap. I would not treat occasional callout pay as a guaranteed retirement payment."
         },
         {
           "speaker": "interviewer",
-          "text": "What would you tell Ivana?"
+          "text": "Would you retire sooner to avoid robots?"
         },
         {
           "speaker": "persona",
-          "text": "Start now, while there's time. Don't wait like your mum does. Get into something where people still want a person, nursing maybe, or teaching."
+          "text": "No. I would leave when the household budget supports it, and the 2039 robot date would not move that decision forward by itself."
         }
       ],
-      "say": "I'd say ten years is enough if people are sensible. I'd want the company to plan it out with workers.",
-      "think": "Privately I'd be retired before it lands, so it's not really about me. It's about my daughters, the grandchild and whether my pension is enough.",
-      "do": "Keeps working, learns new kit when proven and aims to finish at 66. Puts a little extra into her pension if possible and helps her daughter think about her options.",
-      "feel": "Uneasy, for her family more than herself.",
-      "mood": "uneasy",
-      "quote": "Start now, while there's time. Don't wait like your mum does.",
-      "fieldNote": "With ten years she's mostly out of the path and her worry shifts to her daughter. Her pension being small with a disabled husband remains the quiet issue. Her advice to her daughter not to wait like she does was candid.",
+      "say": [
+        "**2036 office AI** comes before capable field robots around 2039.",
+        "**Longer planning time** lets crews shape safety rules and check retirement costs."
+      ],
+      "think": [
+        "I hope for **retirement** by 2036 but cannot count on it yet.",
+        "If still employed, **2039 robots** could reduce my repair income."
+      ],
+      "do": [
+        "**Keep** leading repairs and review retirement costs with Pavel yearly.",
+        "**Join** crew safety committee on isolation rules after 2036 if still working."
+      ],
+      "feel": [
+        "**Anxious** about a possible funding gap, with time to plan."
+      ],
+      "mood": "anxious",
+      "quote": "I would not treat occasional callout pay as a guaranteed retirement payment.",
+      "fieldNote": [
+        "She keeps **retirement timing** tied to actual household costs, without promising an early exit.",
+        "Her **committee work** after 2036 depends on still working for the electricity company."
+      ],
       "actions": [
         "keep-going",
-        "save-more",
-        "family-plans"
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading repairs and review retirement costs with Pavel yearly",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Join crew safety committee after 2036 if still employed",
+          "tag": "collective-action"
+        }
       ]
     }
   },
@@ -360,19 +475,30 @@
     },
     {
       "speaker": "persona",
-      "text": "The two-year one, because I'm the one bringing the money in and we've got three weeks saved. What would help is a bridge payment for people over 60 until their pension starts, and the company keeping someone like me on to check the robots' work."
+      "text": "AGI by 2028 worries me most because I could lose field repair shifts around 2031 before we have enough saved to stop work. Paid controls practice and a genuine local line-safety role at bill-covering pay would help."
     },
     {
       "speaker": "interviewer",
-      "text": "Is there anything I didn't ask that I should have?"
+      "text": "Is there anything I didn’t ask that I should have?"
     },
     {
       "speaker": "persona",
-      "text": "Maybe about the hospital. When we do live-line work up here, it's so the hospital never goes dark. I'd want to know who's responsible when a machine gets it wrong."
+      "text": "You did not ask whether an older lineworker can refuse an unsafe robot handover. I would want a crew member to stop the robot with a meter reading in hand, no matter who wrote the job order."
     }
   ],
-  "headlineQuote": "I'd be awake at three in the morning doing sums.",
-  "portrait": "Hana Novak is a 58-year-old live-line crew leader in a mountain district, proud that nobody notices when her crew works on energised lines. Since her husband Petr's back injury she's been the main earner, with about three weeks of savings. She's calm about a plateau and uneasy about steady change, wanting to see robots survive a winter on the pass before she trusts them. Fast AGI alarms her because the household rests on her pay. Five years gives her time for a safety inspector role, and with ten years her worry turns to her daughter's office job.",
-  "biggestWorry": "AGI by 2028 worries her most, because she's the main earner with three weeks of savings.",
-  "whatWouldHelp": "A bridge payment for people over 60 until their pension starts, and the company keeping someone like her on to check the robots' work."
+  "portrait": [
+    "**Hana Novak**, 58, leads an electricity line crew and holds a two-year technical diploma.",
+    "She and partner Pavel have **grown children**, lower lineworker pay and less than a month of expenses saved.",
+    "She uses **AI occasionally** for reports and would learn robot controls through paid practice on dead equipment.",
+    "In **Steady Disruption**, she tests routes while recognizing a possible loss of callout income.",
+    "The **2028 scenario** alarms her most because fewer field shifts could postpone a retirement she cannot yet fund."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** could cut line repair shifts around 2031 while the household has little savings."
+  ],
+  "whatWouldHelp": [
+    "Paid **robot-controls practice** would let her work safely through the field transition.",
+    "A genuine **local safety post** at bill-covering pay would provide another income path."
+  ],
+  "headlineQuote": "I would want a crew member to stop the robot with a meter reading in hand, no matter who wrote the job order."
 }
