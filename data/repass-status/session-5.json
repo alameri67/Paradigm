@@ -1,7 +1,7 @@
 {
   "session": 5,
   "ownerId": "s5-1bd1627e-e4aa-465e-8b74-94f8c544c757",
-  "state": "PAUSED",
+  "state": "ACTIVE",
   "branch": "claude/repass-3.1-s5-a21-a24",
   "assignedJobs": [
     "A21",
@@ -11,7 +11,7 @@
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
   "claimedAt": "2026-11-18T09:33:53.331733+00:00",
-  "phase": "Paused at user request; 368 validated interviews preserved; A21 insights unfinished",
+  "phase": "Resumed existing Session5 owner; finish current canonical201 A21 insights, then remaining interviews",
   "jobs": {
     "A21": {
       "reviewedCount": 201,
@@ -267,7 +267,7 @@
       "insightsWork": {
         "sourceCount": 201,
         "sourceProtocol": "3.1",
-        "state": "PAUSED_INCOMPLETE",
+        "state": "ACTIVE_FINISHING_201_SNAPSHOT",
         "evidenceDirectory": "/tmp/paradigm-s5-20261118-ownership/A21-insights-201",
         "thoughtGroupsReviewedPeople": 140,
         "numericAudit": "Independent Python recount matches all mood counts, action counts/shares, subgroup averages and leading actions; named-end memberships computed.",
@@ -10673,6 +10673,11 @@
       "newInterviewSupplementalAudit": "146/146 accepted new files pass exact-card/profile/quote/bullet audit",
       "initialHashes": "222/222 unchanged",
       "insights": "A21 partial evidence only; no completed insights file; A22-A24 not started"
+    },
+    {
+      "phase": "resume",
+      "result": "All368 preserved reviewed files pass actual validator; initial222 unchanged;11 canonical main corrections adopted with unchanged private THINK;4 pre-existing failing3.1 gap files excluded from reviewed count.",
+      "command": "node scripts/validate-archetype-interviews.mjs <368 reviewed IDs>"
     }
   ],
   "initialPassingHashes": {
@@ -10900,16 +10905,16 @@
     "A24-13111": "2cc697115ecbdf956833fe6a0d0a1b69aa00d1e751b6d019c6231de63fb6ff60"
   },
   "acceptedNewHashes": {
-    "A21-13121": "79a4a52f3612c8d2c7ef1c619dd19c5ff4936d150f6ae4f470fcaee3f3a68c28",
+    "A21-13121": "1a9563be40491ebdb77502267b4beee9915d4359cdcebe6240a281c0def2ce63",
     "A21-13122": "b246a5cf1ea93c5802d9dee847beb63300032c137a8274226efebab3fc75173b",
     "A21-13132": "73a703267c59c7c9742c367bd42da6253c37685e9d73ad1670844eed630406c9",
     "A21-13133": "f8ecd4c859e56a1a2b7044c60516c8e18cfda5a48d6985165c3bb12ebc12de28",
     "A21-13112": "cb9a86ce909e17b12f1924dffcd615cf7f010a32cb2d0a4df6c0d6d9ad323db3",
-    "A21-13113": "ed88a81a6ae207f7a91a6d480e0e5e76649694bc33d2c1695e32d8a0811f2065",
+    "A21-13113": "f14fb02f35aed674378c3f1dde49039070f5b5ab9718d0185e67b7bda8d03d85",
     "A21-13123": "a5d6753c1671a99a868bf218051dd7c340f67532a7d285f18ab2171defc703e1",
     "A21-13131": "902a0d61c875386ca16d5ecfbac5ede8a635c8f5ebe9d9a9fd08560ecc8fcc7e",
-    "A21-13213": "c97f243352c13feb2e3e5d2a8c476b36da92bec3dc2431a2600d0c03543448d3",
-    "A21-13221": "4fd010a6fc8635631219e63e0a3fea0ad798686c775204f78816fed739088828",
+    "A21-13213": "86c1feedabeaa2919438e2bc6dd8c82f17b97efb9b9df2dfde6de66c90dba8ee",
+    "A21-13221": "2b1b8c23a13fed533f81f15c8d47ca3d14bcdfaea759175796dec00b6a6d7bf9",
     "A21-13211": "81d6ea6c215399402ef4aa62046b1c7d3638dbdbc6e316a24cd5f1ef36b235a7",
     "A21-13212": "ed0dc66ab1666d60b831509ed95b18ee57cf1b3616f9297632b965518ad7a963",
     "A21-13222": "431a12fbf521f6154e0283d28b654859985d7522b956515a8f266176b7b8d8f8",
@@ -10922,22 +10927,22 @@
     "A21-13313": "b99fc534d2d1147207b253d70afda874c1d0fced42ca59143aa44e2cb3341f26",
     "A21-13321": "77f316fd8cc80806924d014c858f2c5094af08b81d23d99a00b6c346739525ca",
     "A21-13322": "289a09cb4dbc2278724d08182609c02c07dbf9ea59c7f9f65d2c1e3adb4aa124",
-    "A21-13323": "8e43dd32bc475be86f6c565462f5becb81896c9b7c72610baf50e37aaeffdcf2",
-    "A21-13331": "bddf7d063b8b1a39b64a40cca0b1f667950a210f6a6d685880f080bef5039946",
+    "A21-13323": "fd8fbadb84e31d9375c3b393ef1f73a768845fcb51ca5d6d68f69c8ccf0c4186",
+    "A21-13331": "0545e7709d16fa0ce60f97b6e3330130699f7d59ee8cfa447353719102c3d752",
     "A21-13332": "6da754a7103c1c6b82ea1e2218ba6ba900dcea91620990c00b89e08f11074b63",
     "A21-13333": "e61a2aa918ccc5255936521a62039e6fee00b186aec77e67c03565b8abcdb7b3",
     "A21-21111": "95c3eced6b07a6b89a73a430bea35f4d75cc74357a80ac44fd8c436ecf795bee",
     "A21-21112": "5d859c96a8383da72bca7518a8ff35dc8ad59d5cbc636c884d2bdfb11df3a90a",
     "A21-21113": "d27e4324c74083137b6391e769e69de7f2687e3c5b1256a1c01f5d7f11ad3436",
     "A21-21121": "04812e72a9f7e2aa23df8e3cffd2a0e8bb6f2f19457a5e90c749d4403f4cd911",
-    "A21-21122": "9586543417f2778515ace3098dbcc69ef6b718d7c2d7a5eb602c8fcfd7b665f2",
-    "A21-21123": "0405c6ce5d6629e1d01afd1bcf07027237564a53143b520e129e0560051fc7c5",
+    "A21-21122": "fbd826d3bdfa292c0798edefb605963fedf959f7f80f6f6bd08875b6f2611bfc",
+    "A21-21123": "d2c50055c1fb40452c6862276b7bb2a0b83af47711c55c653d7b2205cd000639",
     "A21-21131": "0eabc67f864c0aa9e470388f41b84cbbf8e1e20ff37fe62b14b364ef7d012f13",
     "A21-21132": "52a47249840f5b7f0da9d5f0c49b52a0bc007e836b654a98f7d7240eed0368dd",
     "A21-21133": "3168e90af69f13462dcd37308464abac3827020187627141a4b8cc1bef852f42",
     "A21-21211": "91e79af071975a91553ffa27e97f02ba79fb2a5bd7d8e698f02dd21d5a2da7ca",
-    "A21-21212": "b5d5e56d9812c647edf776ab30fbe770516534f71339d3d5cded6f12f01fe9f4",
-    "A21-21213": "87bf561891137c209e4180239a67b499bd01075117ffcb7fc6c22f38e61a6dfa",
+    "A21-21212": "b6695096dc14f3a3f6de5e950031523959d9f1366a94196e634e59949ac6d537",
+    "A21-21213": "f4cc4f6145bd654b0cc4c3d02e52641dbc56d9e9b0c5c511008b2d77879eb7a3",
     "A21-21221": "75d8721370eab58e768b884facc3f66e69e98162ed71612a0e50f613060d091d",
     "A21-21222": "be55ac1b7226e871a502594e7022279ea4066bd13df32cd54e0681018fea9ab1",
     "A21-21223": "ca9c283a3a60a647cb75bd342c2185ccb932dcbddfa154fb89f423c869e59e1a",
@@ -10963,7 +10968,7 @@
     "A21-22132": "76d5f787589c9d2d060b355189e6b91b4dda6d1df315b5a9abac8ab1151dddb0",
     "A21-22133": "fdd1e38657d4c0b1eebeabfd381c614df28cb40f64513254d0851d00aadd21de",
     "A21-22211": "208041facc35e5190fbae4ed6ae8494bb88273a666f39a63d216ba08111fc35e",
-    "A21-22212": "835fc8e2ca7137929879f3103d02d444acdda4890cdb7ad6651e72745a24cf45",
+    "A21-22212": "50c7edbe6304b85556b36edcb2eb1e407afe99e9a676554146ff399d135a4a74",
     "A21-22213": "e54ae65a9f5842ccb19b96625899ae4a01776470116b16cbf6fe52b7e001fda7",
     "A21-22221": "b27c089d8a462acb9305b754881cc4fe3d3c2a5b1e980552ef1c43f31b8e20e1",
     "A21-22222": "3c9347c54b81f9ea51e46b78ccb29566384e64122c33ebc476cf97602a85a9b6",
@@ -12304,6 +12309,108 @@
       "After first 201-source insights pass, finish A21 remaining42 interviews and refresh matching insights to243; then process A22, A23, A24 in order.",
       "Only resume work on explicit user instruction; this run is paused."
     ],
-    "scratchBackup": "/workspace/work/paradigm-session5-pause-20261118/scratch.tar.gz"
-  }
+    "scratchBackup": "/workspace/work/paradigm-session5-pause-20261118/scratch.tar.gz",
+    "resumedAt": "2026-11-19T06:08:35.924142+00:00"
+  },
+  "canonicalAdoptions": [
+    {
+      "id": "A21-13113",
+      "beforeSha256": "ed88a81a6ae207f7a91a6d480e0e5e76649694bc33d2c1695e32d8a0811f2065",
+      "afterSha256": "f14fb02f35aed674378c3f1dde49039070f5b5ab9718d0185e67b7bda8d03d85",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-13121",
+      "beforeSha256": "79a4a52f3612c8d2c7ef1c619dd19c5ff4936d150f6ae4f470fcaee3f3a68c28",
+      "afterSha256": "1a9563be40491ebdb77502267b4beee9915d4359cdcebe6240a281c0def2ce63",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-13213",
+      "beforeSha256": "c97f243352c13feb2e3e5d2a8c476b36da92bec3dc2431a2600d0c03543448d3",
+      "afterSha256": "86c1feedabeaa2919438e2bc6dd8c82f17b97efb9b9df2dfde6de66c90dba8ee",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-13221",
+      "beforeSha256": "4fd010a6fc8635631219e63e0a3fea0ad798686c775204f78816fed739088828",
+      "afterSha256": "2b1b8c23a13fed533f81f15c8d47ca3d14bcdfaea759175796dec00b6a6d7bf9",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-13323",
+      "beforeSha256": "8e43dd32bc475be86f6c565462f5becb81896c9b7c72610baf50e37aaeffdcf2",
+      "afterSha256": "fd8fbadb84e31d9375c3b393ef1f73a768845fcb51ca5d6d68f69c8ccf0c4186",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-13331",
+      "beforeSha256": "bddf7d063b8b1a39b64a40cca0b1f667950a210f6a6d685880f080bef5039946",
+      "afterSha256": "0545e7709d16fa0ce60f97b6e3330130699f7d59ee8cfa447353719102c3d752",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-21122",
+      "beforeSha256": "9586543417f2778515ace3098dbcc69ef6b718d7c2d7a5eb602c8fcfd7b665f2",
+      "afterSha256": "fbd826d3bdfa292c0798edefb605963fedf959f7f80f6f6bd08875b6f2611bfc",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-21123",
+      "beforeSha256": "0405c6ce5d6629e1d01afd1bcf07027237564a53143b520e129e0560051fc7c5",
+      "afterSha256": "d2c50055c1fb40452c6862276b7bb2a0b83af47711c55c653d7b2205cd000639",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-21212",
+      "beforeSha256": "b5d5e56d9812c647edf776ab30fbe770516534f71339d3d5cded6f12f01fe9f4",
+      "afterSha256": "b6695096dc14f3a3f6de5e950031523959d9f1366a94196e634e59949ac6d537",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-21213",
+      "beforeSha256": "87bf561891137c209e4180239a67b499bd01075117ffcb7fc6c22f38e61a6dfa",
+      "afterSha256": "f4cc4f6145bd654b0cc4c3d02e52641dbc56d9e9b0c5c511008b2d77879eb7a3",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    },
+    {
+      "id": "A21-22212",
+      "beforeSha256": "835fc8e2ca7137929879f3103d02d444acdda4890cdb7ad6651e72745a24cf45",
+      "afterSha256": "50c7edbe6304b85556b36edcb2eb1e407afe99e9a676554146ff399d135a4a74",
+      "sourceRef": "origin/main",
+      "sourceCommit": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+      "reason": "Adopt coordinator canonical pause reconciliation; action-tag and source-condition corrections, while preserving canonical previously passing openings. Private THINK text unchanged."
+    }
+  ],
+  "resumedAt": "2026-11-19T06:08:35.924142+00:00",
+  "resumeHistory": [
+    {
+      "at": "2026-11-19T06:08:35.924142+00:00",
+      "authorization": "User: please continue working on what remains and report completion.",
+      "previousState": "PAUSED",
+      "preservedCount": 368,
+      "canonicalMainAdoptions": 11,
+      "resumedBranch": "claude/repass-3.1-s5-a21-a24"
+    }
+  ]
 }
