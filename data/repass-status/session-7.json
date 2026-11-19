@@ -1,7 +1,7 @@
 {
   "session": 7,
   "ownerId": "session-7-56c7130a-623d-4c50-9ebb-9dfeb4755840",
-  "state": "PAUSED",
+  "state": "ACTIVE",
   "branch": "claude/repass-3.1-s7-a29-a32",
   "assignedRange": [
     "A29",
@@ -10,7 +10,7 @@
     "A32"
   ],
   "baseCommit": "086bef87fd20cad3a66fff0ebc736363328b6058",
-  "updatedAt": "2026-11-18T13:03:39.569071+00:00",
+  "updatedAt": "2026-11-19T06:08:34.974357+00:00",
   "jobs": {
     "A29": {
       "reviewedCount": 206,
@@ -2083,7 +2083,7 @@
       "result": "1/1 valid; parent supplemental audit PASS"
     }
   ],
-  "latestCheckpointCommit": "b5205487f59aa4a378cd89288017bcdeb889b01b",
+  "latestCheckpointCommit": "89e71be34c2d33d740f1379262e11b0b4b47ad6a",
   "semanticReview": [
     {
       "id": "A29-13113",
@@ -6196,7 +6196,7 @@
       "/root/review1",
       "/root/review2"
     ],
-    "agentsAtCheckpoint": "All six reusable agents stopped; no raw or insights writers active.",
+    "agentsAtCheckpoint": "Resumed same owner after explicit user instruction. No raw writers; arranging bounded read-only canonical variant review.",
     "nextJob": "A29",
     "nextUnreservedIds": [
       "A29-32233",
@@ -6217,7 +6217,7 @@
       "review1": "read-only reviewer",
       "review2": "read-only reviewer"
     },
-    "rawDraftingGate": "PAUSED BY USER. Do not resume automatically.",
+    "rawDraftingGate": "No raw drafting beyond206 until canonical variant review and first matching206-source insights are approved, validated and pushed.",
     "insightsWork": {
       "sourceCount": 206,
       "scratch": "/tmp/paradigm-s7-20261118/insights/A29-206",
@@ -6338,7 +6338,7 @@
   },
   "checkpointCommitConvention": "latestCheckpointCommit names the completed checkpoint immediately preceding this status snapshot; the commit containing this file identifies its publication.",
   "rangeComplete": false,
-  "goalState": "paused_by_user",
+  "goalState": "active",
   "pause": {
     "requestedBy": "user",
     "reason": "Usage limits; explicitly requested pause and merge ready work to main",
@@ -6488,5 +6488,22 @@
         "text": "import json,sys\nfrom pathlib import Path\nsc=sys.argv[1];lo=int(sys.argv[2]) if len(sys.argv)>2 else 0;hi=int(sys.argv[3]) if len(sys.argv)>3 else 206\nrows=[json.loads(x) for x in Path('/tmp/paradigm-s7-20261118/insights/A29-206/sources.jsonl').read_text().splitlines() if json.loads(x)['scenario']==sc]\nfor i,r in enumerate(rows[lo:hi],lo):print(f\"{i} {r['id']}: \"+' | '.join(str(t['index'])+': '+t['text'] for t in r['think']))\n"
       }
     }
+  },
+  "resume": {
+    "requestedBy": "user",
+    "at": "2026-11-19T06:08:34.974357+00:00",
+    "sameOwnerResume": "session-7-56c7130a-623d-4c50-9ebb-9dfeb4755840",
+    "coordinatorReadAt": "origin/claude/repass-3.1@a46f690",
+    "protectedHashesVerified": 379,
+    "validatorResult": "379/379 files valid",
+    "canonicalVariantsToReview": [
+      "A29-13113",
+      "A29-13121",
+      "A29-13222",
+      "A29-21211",
+      "A29-21212"
+    ],
+    "priorPauseMerge": "https://github.com/alameri67/Paradigm/pull/1",
+    "nextAction": "Independently reconcile five coordinator variants, then finish first206-source insights and remaining raw gaps; do not import coordinator history."
   }
 }
