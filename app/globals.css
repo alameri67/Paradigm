@@ -960,3 +960,12 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
    so a row of them matches the same row in the other card. */
 @container end (min-width: 541px){.db-who-col>.db-who-val{min-height:calc(2 * 19px)}.db-who-col>.db-who-sub{min-height:calc(2 * 18px)}}
 @container end (max-width: 380px){.db-who-col>.db-who-val{min-height:calc(2 * 19px)}.db-who-col>.db-who-sub{min-height:calc(2 * 18px)}}
+
+/* ---------- Header: the torn Paradigm (TigerTearReveal driven by the dial) ---------- */
+.hx-tear{--hx-tear-h:128px;padding:6px 16px 10px}
+.hx-tear-link{display:block;width:min(300px,70vw);border-radius:12px}
+.hx-tear-link svg{pointer-events:none}
+@media (max-width:640px){.hx-tear{--hx-tear-h:104px}}
+/* The placeholder shown while the header loads matches its height, so nothing jumps. */
+.hx-ph{height:144px}
+@media (max-width:640px){.hx-ph{height:120px}}
