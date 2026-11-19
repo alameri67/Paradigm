@@ -73,7 +73,8 @@ export function JobSidebar({
             title={off ? "No interviews yet" : undefined}
             onClick={() => (multi ? onToggle?.(x.code) : onPick?.(x.code))}
           >
-            {multi && <span className={"js-check" + (on ? " on" : "")} aria-hidden="true" />}
+            {/* Same slot on both pages, so rows keep one shape: a tick box here (pick several), a radio dot there (pick one). */}
+            <span className={"js-check" + (multi ? "" : " js-radio") + (on ? " on" : "")} aria-hidden="true" />
             <Avatar a={x} size={32} />
             <span className="ws-job-text">
               <span className="ws-job-name">{x.job}</span>
