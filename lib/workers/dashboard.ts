@@ -314,6 +314,10 @@ export type JobNotes = Record<string, Partial<Record<ScenarioCode, { thoughts?: 
 export interface ThoughtCount {
   text: string;
   job: string;
+  /** The job's code (A03), for its portrait. */
+  code: string;
+  /** The selected people who share this thought. */
+  ids: string[];
   count: number;
   /** Selected people in this job whose thoughts were grouped, so the count has a fair "out of". */
   of: number;
@@ -328,8 +332,8 @@ export function thoughtsFor(people: readonly InterviewSummary[], code: ScenarioC
     const list = notes[job]?.[code]?.thoughts ?? [];
     const grouped = new Set(list.flatMap((t) => t.ids).filter((id) => chosen.has(id)));
     for (const t of list) {
-      const count = t.ids.filter((id) => chosen.has(id)).length;
-      if (count) out.push({ text: t.text, job: name, count, of: grouped.size });
+      const ids = t.ids.filter((id) => chosen.has(id));
+      if (ids.length) out.push({ text: t.text, job: name, code: job, ids, count: ids.length, of: grouped.size });
     }
   }
   return out.sort((a, b) => b.count / b.of - a.count / a.of || b.count - a.count).slice(0, max);
