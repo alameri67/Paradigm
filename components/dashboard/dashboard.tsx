@@ -15,6 +15,9 @@ import { HelpTip } from "@/components/ui/help-tip";
 import { ScenarioGuidePill } from "@/components/workers/scenario-guide";
 import { GROUP_ICON } from "@/components/workers/group-icons";
 import { StatsBand, type Stat } from "@/components/ui/stats-band";
+import { PX_BARS_AXIS, PxBars } from "@/components/ui/px-bars";
+import { AvatarCircles } from "@/components/ui/avatar-circles";
+import { ScrollReelTestimonials } from "@/components/ui/scroll-reel-testimonials";
 import { ACTION_LEVELS, ACTION_PHRASE, WHO_PHRASE, actionLevel, contrast, pointsFor, summarize, thoughtsFor, type Contrast, type JobNotes, type Segment, type Summary, type ThoughtCount } from "@/lib/workers/dashboard";
 import { usePublishScreen } from "@/lib/ask/screen-store";
 import type { Screen } from "@/lib/ask/schema";
@@ -191,27 +194,87 @@ function Ends({ c, named }: { c: Contrast; named?: { least: { name: string; stor
   );
 }
 
-/** The thoughts that come up most, as bullets with how many share each. */
-function Thinks({ list }: { list: ThoughtCount[] }) {
+/** The thoughts that come up most, one at a time: the job's portrait, the thought, and how many share it. */
+function Thinks({ list, archetypes, genders }: { list: ThoughtCount[]; archetypes: Archetype[]; genders: Map<string, string | undefined> }) {
   const manyJobs = new Set(list.map((t) => t.job)).size > 1;
+  const items = list.flatMap((t) => {
+    const a = archetypes.find((x) => x.code === t.code);
+    const face = a && portraitFor(a, genders.get(t.ids[0])).portraitUrl;
+    if (!a || !face) return [];
+    const who = manyJobs ? a.plural.toLowerCase() : "people";
+    return [{ quote: `“${t.text}”`, author: `${t.count} of ${t.of} ${who} think this`, image: face, alt: a.job }];
+  });
+  if (!items.length) return null;
   return (
     <section className="db-card db-thinks" aria-label="What they think">
-      <CardHead icon="quote" title="What they think" />
-      <ul className="db-think-list">
-        {list.map((t) => (
-          <li key={t.job + t.text}>
-            <span className="db-think-text">“{t.text}”</span>
-            <span className="db-think-n">
-              {t.count} of {t.of} {manyJobs ? t.job.toLowerCase() + "s" : "people"}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <CardHead icon="quote" title="What they think" note={`${items.length} most shared`} />
+      {/* A new set of thoughts starts the reel again at the first one. */}
+      <ScrollReelTestimonials key={items.map((i) => i.quote).join("|")} testimonials={items} className="db-reel" />
     </section>
   );
 }
 
-function Insights({ s, c, thinks, named, empty }: { s: Summary; c: Contrast | null; thinks: ThoughtCount[]; named?: Parameters<typeof Ends>[0]["named"]; /** What to say when no one is shown. */ empty: string }) {
+/** What a group does most: a pixel bar per action, its share and a few of the faces who do it above, the action under it. */
+function Actions({ s, people, archetypes, scenario }: { s: Summary; people: InterviewSummary[]; archetypes: Archetype[]; scenario: ScenarioCode }) {
+  const top = s.actions.slice(0, 5);
+  const byCode = new Map(archetypes.map((a) => [a.code, a]));
+  // How many of each job are in the group, to compare how often each job takes an action.
+  const perJob = new Map<string, number>();
+  for (const p of people) perJob.set(p.archetype, (perJob.get(p.archetype) ?? 0) + 1);
+  const faces = top.map((a) => {
+    // The three jobs most likely to take this action, each shown by one of its people who does.
+    const takers = new Map<string, InterviewSummary[]>();
+    for (const p of people) if (p.scenarios[scenario]?.actions?.includes(a.tag)) takers.set(p.archetype, [...(takers.get(p.archetype) ?? []), p]);
+    const ranked = [...takers].sort(([x, xs], [y, ys]) => ys.length / (perJob.get(y) ?? 1) - xs.length / (perJob.get(x) ?? 1) || ys.length - xs.length);
+    const urls: string[] = [];
+    const alts: string[] = [];
+    for (const [code, ps] of ranked) {
+      if (urls.length === 3) break;
+      const arch = byCode.get(code);
+      const who = ps[0];
+      const url = arch && portraitFor(arch, who.gender).portraitUrl;
+      if (!url) continue;
+      urls.push(url);
+      alts.push(`${who.name}, ${who.job.toLowerCase()}`);
+    }
+    return { urls, alts, more: Math.max(0, a.count - urls.length) };
+  });
+  const label = (tag: string) => ACTION_LABEL[tag] ?? tag.replace(/-/g, " ");
+  const cols = { ["--n" as string]: top.length, ["--axis" as string]: `${PX_BARS_AXIS}px` } as CSSProperties;
+  return (
+    <div className="db-acts">
+      <div className="db-acts-row" style={cols} aria-hidden="true">
+        {top.map((a, i) => (
+          <div key={a.tag} className="db-acts-top">
+            <span className="db-acts-pct">{pct(a.share)}</span>
+            <AvatarCircles avatarUrls={faces[i].urls} alts={faces[i].alts} numPeople={faces[i].more} size={30} />
+          </div>
+        ))}
+      </div>
+      <PxBars
+        className="db-acts-chart"
+        data={top.map((a) => ({ label: label(a.tag), value: Math.round(a.share * 100) }))}
+        max={100}
+        unit="%"
+        label="Share of people taking each action"
+        height={260}
+        showLabels={false}
+      />
+      <div className="db-acts-row" style={cols} aria-hidden="true">
+        {top.map((a) => (
+          <span key={a.tag} className="db-acts-label">
+            <span className="db-row-icon">
+              <DashIcon name={hasDashIcon(a.tag) ? a.tag : "other"} size={15} />
+            </span>
+            {label(a.tag)}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Insights({ s, c, thinks, named, empty, group, archetypes, scenario }: { s: Summary; c: Contrast | null; thinks: ThoughtCount[]; named?: Parameters<typeof Ends>[0]["named"]; /** What to say when no one is shown. */ empty: string; /** The people summed up, for the faces and portraits. */ group: InterviewSummary[]; archetypes: Archetype[]; scenario: ScenarioCode }) {
   if (!s.n) {
     return (
       <div className="db-cards">
@@ -221,27 +284,12 @@ function Insights({ s, c, thinks, named, empty }: { s: Summary; c: Contrast | nu
       </div>
     );
   }
-  const topActions = s.actions.slice(0, 5);
+  const genders = new Map(group.map((p) => [p.id, p.gender]));
   return (
     <div className="db-cards">
       <section className="db-card" aria-label="What they do most">
         <CardHead icon="actions" title="What they do most" note={`Out of ${people(s.n)}`} />
-        <ul className="db-rows">
-          {topActions.map((a) => (
-            <li key={a.tag} className="db-row">
-              <span className="db-row-icon">
-                <DashIcon name={hasDashIcon(a.tag) ? a.tag : "other"} size={16} />
-              </span>
-              <span className="db-row-text">
-                <span className="db-row-name">{ACTION_LABEL[a.tag] ?? a.tag.replace(/-/g, " ")}</span>
-                <span className="db-bar" aria-hidden="true">
-                  <span style={{ width: `${a.share * 100}%` }} />
-                </span>
-              </span>
-              <span className="db-row-num mono">{pct(a.share)}</span>
-            </li>
-          ))}
-        </ul>
+        <Actions s={s} people={group} archetypes={archetypes} scenario={scenario} />
       </section>
 
       <section className="db-card" aria-label="How they feel">
@@ -249,7 +297,7 @@ function Insights({ s, c, thinks, named, empty }: { s: Summary; c: Contrast | nu
         <MoodRadar moods={s.moods} n={s.n} />
       </section>
 
-      {thinks.length > 0 && <Thinks list={thinks} />}
+      {thinks.length > 0 && <Thinks list={thinks} archetypes={archetypes} genders={genders} />}
       {c && <Ends c={c} named={named} />}
     </div>
   );
@@ -634,6 +682,9 @@ export function Dashboard({
           c={ends}
           thinks={thinks}
           named={named}
+          group={selected}
+          archetypes={archetypes}
+          scenario={scenario}
           empty={
             brush
               ? "No one is inside your selection. Drag a bigger box, or click an empty spot on the chart to start again."

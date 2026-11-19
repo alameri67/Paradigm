@@ -111,7 +111,7 @@ describe("thoughtsFor", () => {
   const notes = { A03: { S2: { thoughts: [{ text: "Savings run out fast", ids: ["A03-11111", "A03-11112", "A03-11113"] }, { text: "Robots can't climb poles", ids: ["A03-11113"] }] } } };
   it("counts only the selected people, out of those whose thoughts were grouped", () => {
     const t = thoughtsFor([p("A03-11111"), p("A03-11113")], "S2", notes);
-    expect(t[0]).toMatchObject({ text: "Savings run out fast", count: 2, of: 2 });
+    expect(t[0]).toMatchObject({ text: "Savings run out fast", code: "A03", ids: ["A03-11111", "A03-11113"], count: 2, of: 2 });
     expect(t[1]).toMatchObject({ text: "Robots can't climb poles", count: 1, of: 2 });
   });
   it("is empty for a job without a summary yet", () => {
