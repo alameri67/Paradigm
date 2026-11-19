@@ -268,7 +268,7 @@
       }
     },
     "A10": {
-      "reviewedCount": 62,
+      "reviewedCount": 68,
       "reviewedIds": [
         "A10-11111",
         "A10-11112",
@@ -326,24 +326,24 @@
         "A10-12333",
         "A10-13111",
         "A10-13112",
+        "A10-13113",
+        "A10-13121",
         "A10-13122",
         "A10-13123",
         "A10-13131",
         "A10-13132",
         "A10-13133",
-        "A10-13211"
+        "A10-13211",
+        "A10-13212",
+        "A10-13213",
+        "A10-13223",
+        "A10-13231"
       ],
       "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
       "insightValidation": "not eligible; fewer than 200 reviewed interviews",
       "remainingGaps": [
-        "A10-13113",
-        "A10-13121",
-        "A10-13212",
-        "A10-13213",
         "A10-13221",
         "A10-13222",
-        "A10-13223",
-        "A10-13231",
         "A10-13232",
         "A10-13233",
         "A10-13311",
@@ -1030,7 +1030,7 @@
         "A10-13113",
         "A10-13121"
       ],
-      "state": "paused-unreviewed"
+      "state": "accepted"
     },
     "author2": {
       "ids": [
@@ -1051,7 +1051,7 @@
         "A10-13212",
         "A10-13213"
       ],
-      "state": "paused-partial"
+      "state": "accepted"
     },
     "author1_next": {
       "ids": [
@@ -1268,6 +1268,41 @@
         "A10-13211"
       ],
       "state": "accepted"
+    },
+    "resume_author1": {
+      "ids": [
+        "A10-13221",
+        "A10-13222"
+      ],
+      "state": "drafting"
+    },
+    "resume_author3": {
+      "ids": [
+        "A10-13223",
+        "A10-13231"
+      ],
+      "state": "accepted"
+    },
+    "resume_root": {
+      "ids": [
+        "A10-13232",
+        "A10-13233"
+      ],
+      "state": "drafting"
+    },
+    "resume_author4": {
+      "ids": [
+        "A10-13311",
+        "A10-13312"
+      ],
+      "state": "drafting"
+    },
+    "resume_author3_next": {
+      "ids": [
+        "A10-13313",
+        "A10-13321"
+      ],
+      "state": "drafting"
     }
   },
   "validationResults": [
@@ -2471,9 +2506,45 @@
     {
       "command": "node scripts/validate-job-insights.mjs A09",
       "result": "PASS; 243 canonical interviews"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13113",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "a032a292b87bd53128f7a7f246db335068085521bd3d467922a6390039e1c8c6"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13121",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "2fda001f890b12b4019fafd302ca0685bab59798a95c3208f33ddd58bbd43f1f"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "600ba8d88c5d2f91234566f4e7d0588c158422b33c793a5f7456d45ecc67cfb2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13213",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "cc25fff024b06710af8d844e4dc1b85e60ec2536b3fd2b84c640a5f6bc58cd80"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13223",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "4d328301dafd61ecbaa289f2c20786598f217766a1f7b4f309cd3bba92423619"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13231",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "3f3e4aaeb25dd91bb800df1ca0994132984a182a19039732f06c4cf67a958e80"
     }
   ],
-  "latestCheckpointCommit": "5f67cb2c29ebbf464d5373c8ca554e413fef6c51",
+  "latestCheckpointCommit": "f3be893",
   "semanticReviewRecord": [
     "Startup: full remote handoff and protocol read; clean checkout; no existing session-2 branch or owner. No interviews drafted before pushed ownership claim.",
     {
@@ -3286,6 +3357,30 @@
       "review": "Reconciled 22 accepted-new raw variants against canonical main; retained conditional pay/move/safety details; removed unsupported lender seek-support tags/steps, deduplicated action tags, calibrated 13132 S2 possible-loss mood. Private THINK bullets unchanged. Rebuilt all stats and corrected S1/S2/S3 numeric prose and endpoints; exact 1215 indexed THINK memberships independently audited.",
       "at": "2026-11-19T06:15:10.398113+00:00",
       "rootApproval": "Independent 22 raw delta pair review and final 243-source/1215-evidence insight audit APPROVED; /tmp/paradigm-s2-d91f54aa/root-reviews/A09-canonical-resume-delta-review.txt"
+    },
+    {
+      "ids": [
+        "A10-13113",
+        "A10-13121"
+      ],
+      "review": "Full current-profile and five-scenario review by coordinator plus independent Luna; saved drafts repaired for funded study, paid time, bus-income and rent gates, expected-loss moods, and explicit conditional 2036 first-year actions. Exact quotes and action tags checked.",
+      "at": "2026-11-19T06:22:42.723994+00:00"
+    },
+    {
+      "ids": [
+        "A10-13212",
+        "A10-13213"
+      ],
+      "review": "Coordinator full five-scenario/profile review and independent Luna full reread. Iris S2 calibrated to possible-loss anxious without invented certainty/sleeplessness; Pedro S1 existing-tool test assigned to collective action, not learn-ai. Verified exact quotes, paid vacancies, eligibility and AI/robot dates; node and supplemental pair PASS.",
+      "at": "2026-11-19T06:26:57.809288+00:00"
+    },
+    {
+      "ids": [
+        "A10-13223",
+        "A10-13231"
+      ],
+      "review": "Coordinator and independent root full-source review plus targeted recheck. Removed invented cadence and unsupported employer seek-support/training-enquiry tags; restored self-funded course, eligible public help, manager-approved paid shadowing, contingent vacancy search and explicit post-AGI actions. Actual exact node and supplemental audits PASS.",
+      "at": "2026-11-19T06:28:15.972237+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -3705,9 +3800,15 @@
     "A10-13122": "faffc98ae7b18d2259f63eb71ccda47f8009aa4fb7f0f774bc375a3d3ef30ef2",
     "A10-13123": "bf488c5a0bbc02d93dfd15308289fb18677de9b338f4f642172c3f25713484d9",
     "A10-13133": "ac31a82436d497869e21e696001f9a971d88c80b01a17ef7f7f37146a3bd2e8c",
-    "A10-13211": "24b5e67b8f5a4759563aed427049ae051aae396f108311acdbf8bc8220dabe14"
+    "A10-13211": "24b5e67b8f5a4759563aed427049ae051aae396f108311acdbf8bc8220dabe14",
+    "A10-13113": "a032a292b87bd53128f7a7f246db335068085521bd3d467922a6390039e1c8c6",
+    "A10-13121": "2fda001f890b12b4019fafd302ca0685bab59798a95c3208f33ddd58bbd43f1f",
+    "A10-13212": "600ba8d88c5d2f91234566f4e7d0588c158422b33c793a5f7456d45ecc67cfb2",
+    "A10-13213": "cc25fff024b06710af8d844e4dc1b85e60ec2536b3fd2b84c640a5f6bc58cd80",
+    "A10-13223": "4d328301dafd61ecbaa289f2c20786598f217766a1f7b4f309cd3bba92423619",
+    "A10-13231": "3f3e4aaeb25dd91bb800df1ca0994132984a182a19039732f06c4cf67a958e80"
   },
-  "updatedAt": "2026-11-19T06:15:29.009861+00:00",
+  "updatedAt": "2026-11-19T06:28:21.031751+00:00",
   "acceptedRepairHistory": [
     {
       "id": "A09-13113",
