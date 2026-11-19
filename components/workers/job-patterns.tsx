@@ -1,11 +1,13 @@
 "use client";
 
+import { percent } from "@/lib/format";
 import { useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Brain, ChevronDown, Compass, Footprints, Heart, MessageCircle, Quote, SlidersHorizontal, UsersRound, Wallet, type LucideIcon } from "lucide-react";
 import { ACTION_LABEL, MOODS, MOOD_ACCENT, MOOD_LABEL, type JobInsights, type ScenarioCode } from "@/lib/workers/types";
 import { Bullets, withBold } from "./bullets";
 
-const pct = (x: number) => `${Math.round(x * 100)}%`;
+/** A share as text; see lib/format.ts (never 0% for a few, never 100% for nearly all). */
+const pct = percent;
 
 const DIFFERENCE_ICON: Record<string, LucideIcon> = {
   "Money cushion": Wallet,
@@ -84,7 +86,7 @@ export function JobPatterns({
                       <span className="mono">{pct(share(a.tag))}</span>
                     </span>
                     <span className="ws-act-bar" aria-hidden="true">
-                      <span style={{ width: pct(share(a.tag)) }} />
+                      <span style={{ width: `${share(a.tag) * 100}%` }} />
                     </span>
                   </summary>
                   <Bullets text={a.text} />

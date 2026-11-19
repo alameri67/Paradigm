@@ -1,5 +1,6 @@
 "use client";
 
+import { percent, percentOf, percentParts } from "@/lib/format";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -39,7 +40,8 @@ const STOPS = SCENARIOS.map((s) => ({
   icon: <Icon name={SCENARIO_ICON[s.code]} size={18} />,
 }));
 const scenarioOf = (code: ScenarioCode) => SCENARIOS[CODES.indexOf(code)];
-const pct = (x: number) => `${Math.round(x * 100)}%`;
+/** A share as text; see lib/format.ts (never 0% for a few, never 100% for nearly all). */
+const pct = percent;
 const people = (n: number) => (n === 1 ? "1 person" : `${n} people`);
 
 /** Ticks sit on whole moods; half-way gridlines get no word. Points never land exactly half-way (see JITTER_X). */
@@ -75,21 +77,22 @@ function CardHead({ icon, title, note }: { icon: "actions" | "mood" | "jobs" | "
 const listOf = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
 
 const cap = (t: string) => t[0].toUpperCase() + t.slice(1);
-const pctOf = (k: number, n: number) => (n ? Math.round((k / n) * 100) : 0);
+/** k of n as a stat value: a whole percent, or one decimal near the ends ("0.3", "<0.1"). */
+const pctStat = (k: number, n: number) => percentParts(n ? k / n : 0);
 const ofText = (k: number, n: number) => (k === n ? `All ${n}` : `${k} of ${n}`);
 
 /** One end's headline numbers: how big it is, what it shares most, and what it does most. Hover shows the other end. */
 function endStats(seg: Segment, other: Segment, total: number, side: "low" | "high"): Stat[] {
   const otherName = side === "low" ? "the most worried" : "the least worried";
-  const vs = (k: number) => `Among ${otherName}: ${ofText(k, other.n).toLowerCase()} (${pctOf(k, other.n)}%).`;
+  const vs = (k: number) => `Among ${otherName}: ${ofText(k, other.n).toLowerCase()} (${percentOf(k, other.n)}).`;
   const out: Stat[] = [
     {
       label: "Of everyone shown",
-      value: pctOf(seg.n, total),
+      ...pctStat(seg.n, total),
       suffix: "%",
       // Short captions, one line each, so the tiles' bars line up (the title above already says what it counts).
       detail: `${ofText(seg.n, total)} people`,
-      context: `${cap(otherName)} are ${pctOf(other.n, total)}%, ${other.n} people.`,
+      context: `${cap(otherName)} are ${percentOf(other.n, total)}, ${other.n} people.`,
       visual: { kind: "share", count: seg.n, of: total },
       icon: <DashIcon name={side === "low" ? seg.moods[0] : seg.moods[seg.moods.length - 1]} size={16} />,
     },
@@ -98,7 +101,7 @@ function endStats(seg: Segment, other: Segment, total: number, side: "low" | "hi
     const phrase = ACTION_PHRASE[a.tag] ?? a.tag.replace(/-/g, " ");
     out.push({
       label: cap(phrase.replace(/^will /, "")),
-      value: pctOf(a.count, seg.n),
+      ...pctStat(a.count, seg.n),
       suffix: "%",
       detail: `${ofText(a.count, seg.n)} people`,
       context: vs(other.acts[a.tag] ?? 0),
@@ -232,7 +235,7 @@ function Insights({ s, c, thinks, named, empty }: { s: Summary; c: Contrast | nu
               <span className="db-row-text">
                 <span className="db-row-name">{ACTION_LABEL[a.tag] ?? a.tag.replace(/-/g, " ")}</span>
                 <span className="db-bar" aria-hidden="true">
-                  <span style={{ width: pct(a.share) }} />
+                  <span style={{ width: `${a.share * 100}%` }} />
                 </span>
               </span>
               <span className="db-row-num mono">{pct(a.share)}</span>
