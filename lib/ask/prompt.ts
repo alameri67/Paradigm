@@ -1,4 +1,5 @@
 /** The Ask AI system prompt, and the on-screen facts written out as plain text. Pure, so it's easy to test. */
+import { percent } from "@/lib/format";
 import type { Screen } from "./schema";
 
 /** Kept byte-for-byte the same on every request, so it can be cached. What's on screen goes in the user turn. */
@@ -30,7 +31,8 @@ How to play them:
 - If the <screen> block says this version hasn't been interviewed, say so in one sentence and suggest picking a person who has been.
 - No headings, lists or tables unless asked. Don't use **bold**.`;
 
-const pct = (x: number) => `${Math.round(x * 100)}%`;
+/** Shares as the page shows them (lib/format.ts), so the AI never reads 0% for a few people. */
+const pct = percent;
 const bullets = (xs: readonly string[], indent = "  ") => xs.map((x) => `${indent}- ${x}`).join("\n");
 
 /** The screen as plain text for the model, inside <screen> tags. */

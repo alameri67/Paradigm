@@ -1,5 +1,6 @@
 "use client";
 
+import { percent } from "@/lib/format";
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from "recharts";
 import { ChartContainer, ChartTooltip, type ChartConfig } from "@/components/ui/chart";
 import { MOODS, MOOD_ACCENT, MOOD_LABEL, type MoodKey } from "@/lib/workers/types";
@@ -26,7 +27,7 @@ function Corner({ x, y, payload, rows }: { x?: number; y?: number; payload?: { v
           <DashIcon name={r.key} size={18} stroke={1.9} />
         </span>
         <span className="mr-name">{r.mood}</span>
-        <span className="mr-pct">{Math.round(r.share)}%</span>
+        <span className="mr-pct">{percent(r.share / 100)}</span>
       </div>
     </foreignObject>
   );
@@ -37,7 +38,7 @@ export function MoodRadar({ moods, n }: { moods: Record<MoodKey, number>; n: num
   // Scale to the biggest share so the shape fills the web, but never past 100%.
   const top = Math.min(100, Math.max(40, Math.ceil(Math.max(...rows.map((r) => r.share)) / 10) * 10));
   return (
-    <ChartContainer config={config} className="mx-auto aspect-square w-full max-w-[420px]" aria-label={rows.map((r) => `${r.mood} ${Math.round(r.share)}%`).join(", ")}>
+    <ChartContainer config={config} className="mx-auto aspect-square w-full max-w-[420px]" aria-label={rows.map((r) => `${r.mood} ${percent(r.share / 100)}`).join(", ")}>
       <RadarChart data={rows} outerRadius="72%" margin={{ top: 18, right: 30, bottom: 18, left: 30 }}>
         <defs>
           <linearGradient id="mood-radar-fill" x1="0" y1="0" x2="1" y2="1">
