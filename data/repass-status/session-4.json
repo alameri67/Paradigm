@@ -2547,7 +2547,8 @@
         "A18-33333"
       ],
       "insightsValidated": false,
-      "baselineReview": "Inherited reviewed status from coordinator handoff; independently validated and hash-protected locally."
+      "baselineReview": "Inherited reviewed status from coordinator handoff; independently validated and hash-protected locally.",
+      "state": "in progress"
     },
     "A19": {
       "canonicalCount": 243,
@@ -3938,9 +3939,41 @@
       ],
       "state": "accepted",
       "note": "Same original author3 preserves 33332 byte-for-byte; only missing33333 is writable. No second writer for33332."
+    },
+    {
+      "worker": "author1",
+      "ids": [
+        "A18-13111",
+        "A18-13112"
+      ],
+      "state": "drafting"
+    },
+    {
+      "worker": "author2",
+      "ids": [
+        "A18-13113",
+        "A18-13121"
+      ],
+      "state": "drafting"
+    },
+    {
+      "worker": "author3",
+      "ids": [
+        "A18-13122",
+        "A18-13123"
+      ],
+      "state": "drafting"
+    },
+    {
+      "worker": "author4",
+      "ids": [
+        "A18-13131",
+        "A18-13132"
+      ],
+      "state": "drafting"
     }
   ],
-  "latestCheckpointCommit": "13197656128398b6266d2246d2081bef4b15c1f0",
+  "latestCheckpointCommit": "99a944a314517558d8eb8a19e97827462d005ffa",
   "validationCommands": [
     "node scripts/validate-archetype-interviews.mjs A17",
     "node scripts/validate-archetype-interviews.mjs A18",
@@ -6219,7 +6252,7 @@
     }
   ],
   "scratchDirectory": "/tmp/paradigm-s4-20261118-1332",
-  "updatedAt": "2026-11-19T06:23:49.882133+00:00",
+  "updatedAt": "2026-11-19T06:25:24.096658+00:00",
   "validationResults": {
     "baseline": "221 existing protocol3.1 interviews passed repository validator; hashes preserved.",
     "acceptedNew": 189,
@@ -6232,14 +6265,15 @@
     "lastReviewedRun": "189/189 accepted new interviews passed repository and expanded checks; all 221 initial and accepted hashes match.",
     "pauseAcceptedPassing": "401/401 reviewed owned interviews pass repository validator; 180/180 newly authored pass expanded audit; all 221 startup-passing hashes unchanged.",
     "A17": "243/243 reviewed canonical interviews pass; 189/189 new pass expanded audit; all startup/accepted hashes unchanged.",
-    "A17Insights": "Final243 passes actual repository validator; all1215 memberships independently audited; stats and examples approved; hashes recorded."
+    "A17Insights": "Final243 passes actual repository validator; all1215 memberships independently audited; stats and examples approved; hashes recorded.",
+    "A18Initial": "55/56 existing raw files pass at resume; all55 initial passing bytes protected. A18-13111 fails bold limit and must be reinterviewed from scratch; missing IDs enumerated individually."
   },
   "lastCheckpointPreparedAt": "2026-11-19T06:23:49.882133+00:00",
   "lastSuccessfulPush": {
-    "commit": "13197656128398b6266d2246d2081bef4b15c1f0",
+    "commit": "99a944a314517558d8eb8a19e97827462d005ffa",
     "branch": "claude/repass-3.1-s4-a17-a20",
     "reviewedNew": 189,
-    "at": "2026-11-19T06:15:46.261198+00:00"
+    "at": "2026-11-19T06:25:24.096658+00:00"
   },
   "currentJob": "A18",
   "milestones": {
@@ -6248,9 +6282,9 @@
     "A19": "56 reviewed profiles accepted; next gap A19-13113.",
     "A20": "56 reviewed profiles accepted; next gap A20-13112."
   },
-  "latestDataCheckpointCommit": "13197656128398b6266d2246d2081bef4b15c1f0",
+  "latestDataCheckpointCommit": "99a944a314517558d8eb8a19e97827462d005ffa",
   "checkpointCommitMeaning": "Reviewed data checkpoint; a status-only record commit follows it.",
-  "latestObservedHead": "13197656128398b6266d2246d2081bef4b15c1f0",
+  "latestObservedHead": "99a944a314517558d8eb8a19e97827462d005ffa",
   "pause": {
     "requestedByUser": true,
     "reason": "User is concerned about usage limits and requested pause plus integration of ready work to main.",
