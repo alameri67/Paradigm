@@ -1,6 +1,6 @@
 "use client";
 
-import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
+import { GlowSegmented } from "@/components/ui/glow-controls";
 import { Fade, MoodTag, pad2 } from "./bits";
 import { useSimulator } from "./simulator-context";
 
@@ -24,7 +24,7 @@ export function OverviewView() {
           <span className="label" id="ord-l">
             Order
           </span>
-          <LiquidGlassNavbar
+          <GlowSegmented
             mode="radio"
             size="sm"
             labelledBy="ord-l"

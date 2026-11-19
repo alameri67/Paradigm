@@ -1,5 +1,6 @@
 "use client";
 
+import { GlowButton } from "@/components/ui/glow-controls";
 import { useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Brain, ChevronDown, Compass, Footprints, Heart, MessageCircle, Quote, SlidersHorizontal, UsersRound, Wallet, type LucideIcon } from "lucide-react";
 import { ACTION_LABEL, MOODS, MOOD_ACCENT, MOOD_LABEL, type JobInsights, type ScenarioCode } from "@/lib/workers/types";
@@ -139,9 +140,9 @@ export function JobPatterns({
             </figure>
             {ins.quotes.length > 1 && (
               <div className="ws-pat-quote-controls">
-                <button type="button" className="lq-btn sm" aria-label="Previous quote" onClick={() => setQuoteIndex((i) => (i - 1 + ins.quotes.length) % ins.quotes.length)}><ArrowLeft size={14} aria-hidden="true" /></button>
+                <GlowButton icon size="sm" aria-label="Previous quote" onClick={() => setQuoteIndex((i) => (i - 1 + ins.quotes.length) % ins.quotes.length)}><ArrowLeft size={14} aria-hidden="true" /></GlowButton>
                 <span aria-label={`Quote ${currentQuoteIndex + 1} of ${ins.quotes.length}`}>{currentQuoteIndex + 1} / {ins.quotes.length}</span>
-                <button type="button" className="lq-btn sm" aria-label="Next quote" onClick={() => setQuoteIndex((i) => (i + 1) % ins.quotes.length)}><ArrowRight size={14} aria-hidden="true" /></button>
+                <GlowButton icon size="sm" aria-label="Next quote" onClick={() => setQuoteIndex((i) => (i + 1) % ins.quotes.length)}><ArrowRight size={14} aria-hidden="true" /></GlowButton>
               </div>
             )}
           </div>

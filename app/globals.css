@@ -50,8 +50,10 @@
   --ease:cubic-bezier(.2,0,0,1);
   --font:var(--font-inter),Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:var(--font-jetbrains),"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --water-hi:radial-gradient(120% 140% at 30% 0%,rgba(255,255,255,.75),rgba(255,255,255,0) 55%);
-  --water-shadow:inset 0 1px 1px rgba(255,255,255,.95),inset 0 -2px 6px rgba(0,162,255,.22),inset 0 0 0 1px rgba(255,255,255,.55),0 6px 16px -6px rgba(0,70,140,.45);
+  /* Selected rows, chips and tabs: the Glow menu's look, a soft blue bloom on white with a hairline edge.
+     (These two were the liquid glass "water"; every selected state reads them, so they change everywhere at once.) */
+  --water-hi:radial-gradient(90% 160% at 50% 50%,rgba(59,130,246,.11) 0%,rgba(37,99,235,.045) 55%,rgba(29,78,216,0) 100%);
+  --water-shadow:inset 0 0 0 1px rgba(59,130,246,.16),0 10px 15px -3px rgb(0 0 0/.06),0 4px 6px -4px rgb(0 0 0/.06);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -960,3 +962,54 @@ html{scrollbar-width:thin;scrollbar-color:#d6d6d6 transparent}
    so a row of them matches the same row in the other card. */
 @container end (min-width: 541px){.db-who-col>.db-who-val{min-height:calc(2 * 19px)}.db-who-col>.db-who-sub{min-height:calc(2 * 18px)}}
 @container end (max-width: 380px){.db-who-col>.db-who-val{min-height:calc(2 * 19px)}.db-who-col>.db-who-sub{min-height:calc(2 * 18px)}}
+
+/* ---------- Glow menu (components/ui/glow-menu.tsx) and the app's glow buttons (glow-controls.tsx) ---------- */
+/* Tailwind 4 has no bg-gradient-radial; the supplied menu uses it for its hover aura. */
+@utility bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+/* The menu builds group-hover:<iconColor> at runtime, which Tailwind can't find; these are the demo's colours. */
+@source inline("group-hover:text-blue-500 group-hover:text-orange-500 group-hover:text-green-500 group-hover:text-red-500");
+
+/* One button: the menu's frosted bar look, the label flips on hover and a glow blooms behind it. */
+.glow-btn{position:relative;display:inline-grid;align-items:stretch;height:42px;padding:0;border:1px solid rgb(236 236 236/.7);border-radius:12px;
+  background:linear-gradient(to bottom,rgb(255 255 255/.8),rgb(255 255 255/.4));-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  box-shadow:0 10px 15px -3px rgb(0 0 0/.08),0 4px 6px -4px rgb(0 0 0/.08);color:var(--fg2);font-size:14px;line-height:1;font-weight:500;
+  white-space:nowrap;text-decoration:none;isolation:isolate;transition:color .3s var(--ease)}
+.glow-btn:hover,.glow-btn:focus-visible,.glow-btn.on{color:var(--fg)}
+.glow-btn:focus-visible{outline:2px solid rgba(59,130,246,.6);outline-offset:2px}
+.glow-btn:disabled{opacity:.45;cursor:default}
+.glow-btn.sm{height:34px;font-size:13px;border-radius:11px}
+.glow-glow{position:absolute;inset:0;z-index:0;border-radius:16px;pointer-events:none;opacity:0}
+.glow-face{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:8px;height:100%;padding:0 16px;border-radius:12px}
+.glow-back{position:absolute;inset:0}
+.glow-btn.sm .glow-face{padding:0 12px}
+.glow-btn.icon{width:42px}
+.glow-btn.icon.sm{width:34px}
+.glow-btn.icon .glow-face{padding:0}
+
+/* A row of choices: the menu bar itself, with its colour aura on hover. */
+.glow-seg{position:relative;display:inline-flex;align-items:stretch;gap:4px;padding:6px;border:1px solid rgb(236 236 236/.7);border-radius:16px;
+  background:linear-gradient(to bottom,rgb(255 255 255/.8),rgb(255 255 255/.4));-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  box-shadow:0 10px 15px -3px rgb(0 0 0/.08),0 4px 6px -4px rgb(0 0 0/.08);overflow:hidden;isolation:isolate}
+.glow-seg-aura{position:absolute;inset:-8px;z-index:0;border-radius:24px;pointer-events:none;opacity:0;
+  background:radial-gradient(transparent,rgb(96 165 250/.2) 30%,rgb(192 132 252/.2) 60%,rgb(248 113 113/.2) 90%,transparent)}
+.glow-seg-item{position:relative;z-index:1;display:grid;height:40px;padding:0;border:0;border-radius:12px;background:none;color:var(--fg2);font-size:14px;line-height:1;font-weight:500;white-space:nowrap;transition:color .3s var(--ease)}
+.glow-seg-item:hover,.glow-seg-item:focus-visible,.glow-seg-item.on{color:var(--fg)}
+.glow-seg-item:focus-visible{outline:2px solid rgba(59,130,246,.6);outline-offset:1px}
+.glow-seg-item.on{background:#fff;box-shadow:inset 0 0 0 1px rgba(59,130,246,.14)}
+.glow-seg.sm{padding:4px;border-radius:14px}
+.glow-seg.sm .glow-seg-item{height:32px;font-size:13px;border-radius:10px}
+.glow-seg.sm .glow-face{padding:0 12px}
+.glow-seg-ico{display:inline-flex}
+.glow-seg-ico svg{width:18px;height:18px}
+.glow-seg.compact .glow-seg-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:520px){.glow-seg.compact-auto .glow-seg-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+/* Details: the trait pickers span the panel, one equal slot per level. */
+.ws-group .glow-seg.ws-pill{display:flex;width:100%}
+.ws-group .glow-seg.ws-pill .glow-seg-item{flex:1 1 0;min-width:0}
+.ws-group .glow-seg.ws-pill .glow-face{padding:0 6px}
+
+/* Rows and chips glow faintly on hover too, before they're picked. */
+.ws-job:hover,.db-chip:hover:not(:disabled),.srow:hover,.ask-chat:hover{background:radial-gradient(90% 160% at 50% 50%,rgba(59,130,246,.07),rgba(59,130,246,0) 100%),var(--muted)}
+.js-tab.on{background:var(--water-hi),#fff;box-shadow:var(--water-shadow)}

@@ -1,5 +1,6 @@
 "use client";
 
+import { GlowButton } from "@/components/ui/glow-controls";
 import { useSyncExternalStore } from "react";
 import { briefText } from "@/lib/sim/brief";
 import { MoodTag, PortraitImage, VOICES } from "./bits";
@@ -129,19 +130,19 @@ export function BriefView() {
   return (
     <>
       <div className="brief-bar">
-        <button type="button" className="lq-btn" onClick={() => setView("persona")}>
+        <GlowButton onClick={() => setView("persona")}>
           <Icon name="back" />
           Back to persona
-        </button>
+        </GlowButton>
         <div className="group">
-          <button type="button" className="lq-btn" onClick={copy}>
+          <GlowButton onClick={copy}>
             <Icon name="copy" />
             Copy as text
-          </button>
-          <button type="button" className="lq-btn primary" onClick={() => window.print()}>
+          </GlowButton>
+          <GlowButton active onClick={() => window.print()}>
             <Icon name="printer" />
             Print
-          </button>
+          </GlowButton>
         </div>
       </div>
       <BriefDocument />

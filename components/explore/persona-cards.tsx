@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { PeakChart } from "@/components/ui/peak-chart";
-import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
+import { GlowButton, GlowSegmented } from "@/components/ui/glow-controls";
 import { Icon } from "@/components/simulator/icons";
 import type { InterviewCard, MoodKey, ScenarioCode } from "@/lib/interviews/data";
 
@@ -126,10 +125,10 @@ export function PersonaCards({ cards, groups }: { cards: InterviewCard[]; groups
   return (
     <div className="pc-page">
       <header className="pc-head">
-        <Link href="/" className="lq-btn sm">
+        <GlowButton href="/" size="sm">
           <Icon name="back" />
           Simulator
-        </Link>
+        </GlowButton>
         <div className="pc-title">
           <h1 className="t-title">Persona cards</h1>
           <p className="fg2 t-ui">
@@ -157,7 +156,7 @@ export function PersonaCards({ cards, groups }: { cards: InterviewCard[]; groups
             <span className="label" id="pc-scn">
               Scenario
             </span>
-            <LiquidGlassNavbar
+            <GlowSegmented
               mode="radio"
               size="sm"
               labelledBy="pc-scn"

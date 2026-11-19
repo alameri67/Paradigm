@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { AmountSlider } from "@/components/ui/amount-slider";
-import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
+import { GlowButton, GlowSegmented } from "@/components/ui/glow-controls";
 import type { View } from "@/lib/sim/url-state";
 import { MoodTag, pad2 } from "./bits";
 import { BriefDocument, BriefView } from "./brief-view";
@@ -52,9 +52,9 @@ function SectorSidebar() {
         {items.length === 0 ? (
           <div className="side-empty">
             <span>No sectors match “{query.trim()}”.</span>
-            <button type="button" className="lq-btn sm" onClick={() => setQuery("")}>
+            <GlowButton size="sm" onClick={() => setQuery("")}>
               Clear search
-            </button>
+            </GlowButton>
           </div>
         ) : (
           items.map(({ s, i }) => {
@@ -92,7 +92,7 @@ function TraitBar() {
           <span className="label" id={`tl-${t.key}`}>
             {t.label}
           </span>
-          <LiquidGlassNavbar
+          <GlowSegmented
             mode="radio"
             size="sm"
             labelledBy={`tl-${t.key}`}
@@ -117,7 +117,7 @@ export function SimulatorShell() {
         <SectorSidebar />
         <div className="main">
           <header className="topbar">
-            <LiquidGlassNavbar
+            <GlowSegmented
               mode="nav"
               ariaLabel="Views"
               compact="auto"
@@ -126,10 +126,10 @@ export function SimulatorShell() {
               onChange={(i) => setView(NAV_VIEWS[i])}
             />
             {state.view === "persona" && (
-              <button type="button" className="lq-btn primary" onClick={() => setView("brief")}>
+              <GlowButton active onClick={() => setView("brief")}>
                 <Icon name="file" />
                 Export brief
-              </button>
+              </GlowButton>
             )}
           </header>
           {(showTraits || showDial) && (

@@ -1,5 +1,6 @@
 "use client";
 
+import { GlowButton } from "@/components/ui/glow-controls";
 import { Fade, MoodTag, PortraitImage, VOICES } from "./bits";
 import { Icon } from "./icons";
 import { useSimulator } from "./simulator-context";
@@ -24,10 +25,10 @@ export function CompareView() {
       <div className="view-head">
         <h1 className="t-title">Compare</h1>
         {n < 3 && (
-          <button type="button" className="lq-btn" onClick={add}>
+          <GlowButton onClick={add}>
             <Icon name="plus" />
             Add persona
-          </button>
+          </GlowButton>
         )}
       </div>
       <div className={`cmp-grid n${n}`}>
@@ -42,14 +43,14 @@ export function CompareView() {
                 <div className="cmp-colhead">
                   <span className="label">Persona {letter}</span>
                   {n > 2 && (
-                    <button
-                      type="button"
-                      className="lq-btn icon sm"
+                    <GlowButton
+                      icon
+                      size="sm"
                       aria-label={`Remove persona ${letter}`}
                       onClick={() => setCompare(cols.filter((_, i) => i !== ci))}
                     >
                       <Icon name="x" />
-                    </button>
+                    </GlowButton>
                   )}
                 </div>
                 <div className="fields">

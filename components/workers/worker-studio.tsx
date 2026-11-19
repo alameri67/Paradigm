@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AmountSlider } from "@/components/ui/amount-slider";
-import { LiquidGlassNavbar } from "@/components/ui/liquid-glass-navbar";
+import { GlowButton, GlowSegmented } from "@/components/ui/glow-controls";
 import { PeakChart } from "@/components/ui/peak-chart";
 import { Icon, type IconName } from "@/components/simulator/icons";
 import { Avatar, SHORT_SECTOR } from "./avatar";
@@ -199,7 +199,7 @@ function ControlPanel({
                 {g.label}
               </h3>
             </div>
-            <LiquidGlassNavbar
+            <GlowSegmented
               mode="radio"
               size="sm"
               className="ws-pill"
@@ -538,10 +538,10 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
                 : "No versions of this job have been interviewed yet."}
             </p>
             {closest && (
-              <button type="button" className="lq-btn primary" onClick={() => jumpTo(closest)}>
+              <GlowButton active onClick={() => jumpTo(closest)}>
                 Show the closest interviewed version
                 <span className="fg2 t-ui">(differs in {diffGroups(closest).join(", ")})</span>
-              </button>
+              </GlowButton>
             )}
           </section>
         ) : null}

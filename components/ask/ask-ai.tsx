@@ -1,5 +1,6 @@
 "use client";
 
+import { GlowButton } from "@/components/ui/glow-controls";
 import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import { ArrowLeft, History, Plus, Sparkles, SquarePen, Trash2, X } from "lucide-react";
@@ -145,10 +146,10 @@ function AskBar({
   return (
     <div className={"ask-bar" + (iconOnly ? " is-icon" : "")} data-hidden={hidden || undefined}>
       {iconOnly ? (
-        <button ref={iconRef} type="button" className="lq-btn primary ask-bar-chip" aria-haspopup="dialog" onClick={() => open("")}>
+        <GlowButton ref={iconRef} active className="ask-bar-chip" aria-haspopup="dialog" onClick={() => open("")}>
           <Sparkles size={16} strokeWidth={2} aria-hidden="true" />
           Ask AI
-        </button>
+        </GlowButton>
       ) : (
         <>
           <button type="button" className="ask-bar-btn ask-bar-plus" aria-label="Ask AI about a file" onClick={() => open("", "files")}>
@@ -562,10 +563,10 @@ export function AskAI() {
                   <p>
                     {first} isn&apos;t on screen now. Open {first}&apos;s details page to carry on this chat, or start a new one.
                   </p>
-                  <button type="button" className="lq-btn sm" onClick={newChat}>
+                  <GlowButton size="sm" onClick={newChat}>
                     <SquarePen size={14} strokeWidth={2} aria-hidden="true" />
                     New chat
-                  </button>
+                  </GlowButton>
                 </div>
               ) : (
                 <div className="ask-foot">
