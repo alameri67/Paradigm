@@ -1,0 +1,552 @@
+{
+  "id": "A10-13121",
+  "archetype": "A10",
+  "job": "Insurance clerk",
+  "sector": "Finance and insurance",
+  "name": "Umar Rossi",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "high",
+    "cushion": "thin",
+    "outlook": "centre",
+    "adaptability": "resistant"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thank you for speaking with me. I'm from the Work Futures Panel, an independent research group with no ties to AI firms, employers, unions, political parties or government. We sell nothing and campaign for no side. This is confidential, so you can separate what you'd say in public from what you really think. Can you walk me through a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm Umar, 27, and I lead the policy desk at Northgate Mutual, a home and contents insurer in a rail town. I have a history degree and have worked there five years, long enough to know which old policy wording still catches people out. I check address changes, renewal letters and disputed flood exclusions with two clerks beside me. I rent a one-room flat alone, earn less than leads at larger insurers, and have about three weeks of expenses saved."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What part of the work feels useful, and what wears you down?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I like finding a wrong exclusion before a family is told its flooded kitchen isn't covered. Celia, my manager, trusts me with the difficult files, and that feels earned. I don't use the AI assistant, ever; I want to see the signed policy and the actual notes. The rent and winter heating bill eat most of my pay, and there are only two other insurance offices within a bus ride."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The first picture is called AI Plateau. \"Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say the big promises had run ahead of the work. A tool might draft a renewal notice, but somebody still has to compare it with the signed policy. I'd tell Celia to keep our double check on flood exclusions."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My role probably holds in a mild world, but the pay and rent still don't fit comfortably. My rent does not become cheaper because the insurer stops buying shiny software. A missed heating payment would eat most of the three weeks I have put aside."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep reviewing the difficult exclusions and log each correction so Celia can see what my desk prevents. I'd cancel the weekend rail pass I barely use, which costs eighteen a month. I'd set twenty-five aside on payday if rent and heating are covered first, and ask for a pay review in March without budgeting for a raise."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A little pleased that the office still needs careful readers, but not relaxed. My work looks steady; my balance does not."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Which routine part would even weak AI take over?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The address-change letters and the first draft of renewals. Those are a lot of little clicks, but the line that refuses a claim is where I slow down. I'd keep a human sign-off on that line."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said your role holds, yet you are cutting back. What is bothering you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The rent rises every spring, and I get the same pay band. Three weeks saved feels like one awkward bill, not security. I don't need a robot to make that true."
+        }
+      ],
+      "say": [
+        "I'd say the **AI promises** outran ordinary insurance work.",
+        "I'd keep a **human check** on disputed flood exclusions."
+      ],
+      "think": [
+        "My **policy role** should hold if AI only drafts routine letters.",
+        "I still have **low lead pay** and three weeks saved against rising rent."
+      ],
+      "do": [
+        "**Keep reviewing exclusions** and log corrections for Celia's March pay review.",
+        "**Cancel the rail pass** I rarely use, saving eighteen a month.",
+        "**Set aside twenty-five** on payday if rent and heating are already covered."
+      ],
+      "feel": [
+        "**Pleased** to remain useful, but **anxious** about rent and a thin buffer."
+      ],
+      "mood": "anxious",
+      "quote": "My rent does not become cheaper because the insurer stops buying shiny software.",
+      "fieldNote": [
+        "His **role looks steady**, but low pay and rent already strain the budget.",
+        "He trusts **signed policies** over quick drafts on disputed exclusions.",
+        "He asks for a raise but **does not spend it** before approval."
+      ],
+      "actions": [
+        "keep-going",
+        "cut-spending",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep reviewing flood exclusions and log corrections before March review",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Cancel unused weekend rail pass to save eighteen monthly",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Set aside twenty-five monthly only after rent and heating are paid",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The next picture is called Steady Disruption. \"Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say a faster letter is useful only if we can show who checked it. At work I'd ask for a sample of wrong flood decisions before Celia rolls any system out. I wouldn't tell people every clerk is finished, but I would ask for written hours and pay terms."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The routine renewal and checking work is most of our desk, so I can see our three posts becoming two. I'm good at exceptions, but I am also the lead who never uses the tool. The machine can write a renewal letter, but I am still the person a customer calls when the flood clause is wrong."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "If Celia makes the assistant part of the job and gives me paid time, I'd learn to check ten AI-drafted renewals with her before using it on a live claim. I'd stop the monthly train trip to see friends for a while, and compare posted council records jobs only if their wages cover my rent. I would not resign for a vacancy I have only imagined."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'm uneasy about letting a tool touch a refusal, and anxious about being the slow lead on a smaller desk. The three weeks saved do not cover a long search."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you need to see in the AI trial?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The original policy beside every proposed refusal, and a log showing which clerk approved it. If we cannot trace the sentence, I will not put my name under it. That is a condition, not a protest."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "If the council job pays less, what happens?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I keep this wage and keep looking. The nearby council does not owe me a vacancy, and a new title will not pay the rent by itself. Celia might keep me on, but I need written hours before I relax."
+        }
+      ],
+      "say": [
+        "I'd ask for **traceable refusals** before any claim tool goes live.",
+        "I'd seek **written hours** and pay terms before the desk shrinks."
+      ],
+      "think": [
+        "I could be the **slow lead** if three policy posts become two.",
+        "My experience with **flood exceptions** might matter, but my refusal to use AI is visible."
+      ],
+      "do": [
+        "Learn **ten renewal checks** only if required on paid time, using original policies and clerk-approval logs.",
+        "**Pause monthly train visits** while hours and pay are uncertain.",
+        "**Compare posted council jobs** only where the wage covers rent; keep working until a real offer."
+      ],
+      "feel": [
+        "**Anxious** about a smaller desk and his own reluctance to use AI."
+      ],
+      "mood": "anxious",
+      "quote": "The machine can write a renewal letter, but I am still the person a customer calls when the flood clause is wrong.",
+      "fieldNote": [
+        "He sees **renewal checks** shrinking and worries his lead hours could follow.",
+        "He would learn AI **reluctantly**, with paid time and a traceable approval process.",
+        "He treats a council post as **conditional** on a real wage and vacancy."
+      ],
+      "actions": [
+        "learn-ai",
+        "cut-spending",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Check ten AI renewals only if required, with Celia on approved paid time",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Pause the monthly train trip to see friends",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Compare posted council records jobs only if wages cover rent",
+          "tag": "change-job"
+        },
+        {
+          "text": "Require original policy and a clerk-approval log before signing any proposed refusal",
+          "tag": "learn-ai"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The next picture is called AGI by 2028. \"Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd ask for dates and written terms, not a promise that new jobs will appear. At work I'd tell the policy team that cheap thinking AI could read every renewal and refusal we handle. I'd want the insurer to say exactly who stays on payroll."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I expect my policy desk to go by 2028, including the awkward flood files I am proud of. Robots arriving in 2031 do not give an insurance clerk three extra years of wages. Mum's small flat is not a plan either; she may not have space for me."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "Starting now I'd apply for paid stockroom unloading shifts only if they are actually open and the bus fare leaves enough for rent, knowing robots may reach that work around 2031. If Northgate dismissed me in the first year after 2028, I'd check public income help and claim only what I was eligible for. I'd cancel the sports stream and eat at home, and I'd ask Mum whether a short stay was possible without assuming she could say yes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Frightened, mostly. I can list calls to make, but none of them guarantees a wage."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why a stockroom, given the later robots?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It uses hands and a loading bay, which might pay for a while after thinking AI hits my desk. Three years is a stopgap, not a career. I don't even know whether that warehouse is hiring."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you do if your mother could not take you in?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd stay in the flat only as long as the rent and any eligible help allowed. I would ask the landlord about a payment plan before missing rent, but I wouldn't count that as income. I'd be scared of the next month's due date."
+        }
+      ],
+      "say": [
+        "I'd demand **written dates** and pay terms from Northgate if the policy desk closed.",
+        "I'd say **desk work changes** in 2028, before physical robots arrive around 2031."
+      ],
+      "think": [
+        "I expect my **policy desk** to disappear under full thinking AI.",
+        "My **screen-based clerk work** gets no protection from the three-year robot gap."
+      ],
+      "do": [
+        "Apply for **paid stockroom shifts** only if open and wages cover rent after bus fare.",
+        "**Check public income help** if dismissed, claiming only if eligible; ask Mum about a short stay.",
+        "**Cancel sports streaming** and cook at home after wage loss; ask the landlord about a payment plan before arrears."
+      ],
+      "feel": [
+        "**Anxious** and frightened about expected job loss, with conditional applications and support enquiries still possible."
+      ],
+      "mood": "anxious",
+      "quote": "Robots arriving in 2031 do not give an insurance clerk three extra years of wages.",
+      "fieldNote": [
+        "He expects **desk work to go** when full thinking AI reaches policy decisions in 2028.",
+        "Stockroom work is a **temporary, unconfirmed opening**, not a guaranteed refuge from robots.",
+        "Public help depends on **eligibility**, and a stay with Mum needs her agreement."
+      ],
+      "actions": [
+        "change-job",
+        "seek-support",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Apply for paid stockroom shifts only if open and rent covering after bus fare",
+          "tag": "change-job"
+        },
+        {
+          "text": "Check eligible public income help after dismissal and ask Mum about short stay",
+          "tag": "seek-support"
+        },
+        {
+          "text": "Cancel sports stream and cook at home if policy wage ends",
+          "tag": "cut-spending"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The next picture is called AGI by 2031. \"Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell the team that five years is enough to prepare if we count paid openings instead of course leaflets. I would ask Celia for a proper trial of field claims visits, with a trained adjuster beside me. The computer will do the reading first; the physical visits may last until robots arrive around 2034."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My policy work still faces the 2031 thinking shock, and I could waste five years defending my old ledger. I'd rather learn to inspect water damage in a home, but the physical side buys only about three more years. A paid visit to a flooded kitchen is still work; a training badge with no vacancy is not."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "Starting now I'd use Northgate's free claim photos and repair reports to learn what a real adjuster checks, one evening a week. I'd ask Celia for one supervised field visit on paid time; if she refuses, I will not take unpaid leave to shadow. In the first year after 2031 I'd apply for a field post only if there is a real vacancy with wages after travel that cover rent, and I'd put thirty aside monthly while my policy wage lasts."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Still anxious, though less cornered than in the two-year picture. I have time to test whether I can do the work without leaving a wage first."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would a field post be safe after 2034?"
+        },
+        {
+          "speaker": "persona",
+          "text": "No. A robot that can enter a kitchen and measure damage could do a lot of it. I would not call field inspection a permanent escape just because I had three extra years."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What if Celia will not approve a paid visit?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I can study the free reports and keep the policy job while it exists. I would not spend rent money on a certificate or call myself an adjuster without supervised work. The vacancy has to be real before I move."
+        }
+      ],
+      "say": [
+        "I'd ask for a **paid field trial** with a trained adjuster.",
+        "I'd warn that **2031 thinking AI** reaches policy files before later robots reach damaged homes."
+      ],
+      "think": [
+        "I could learn **water-damage inspection**, but later robots may take field visits too.",
+        "I need a **real paid field vacancy** before leaving my policy wage."
+      ],
+      "do": [
+        "**Study free damage reports** weekly while keeping my policy job.",
+        "Ask for **one paid visit** with a trained adjuster; decline unpaid shadowing if Celia refuses.",
+        "Apply after **2031** only for real field vacancies with net wages covering rent; save thirty monthly while policy wages last."
+      ],
+      "feel": [
+        "**Anxious**, but able to test a practical path while still drawing wages."
+      ],
+      "mood": "anxious",
+      "quote": "A paid visit to a flooded kitchen is still work; a training badge with no vacancy is not.",
+      "fieldNote": [
+        "He treats a **field visit** as a temporary paid path, not permanent shelter from 2034 robots.",
+        "A supervised visit requires **paid approval**; he will not use rent money for a certificate.",
+        "Any switch needs a **real vacancy** and wages covering rent after travel."
+      ],
+      "actions": [
+        "retrain",
+        "change-job",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Study free water damage reports weekly while keeping policy wage",
+          "tag": "retrain"
+        },
+        {
+          "text": "Ask Celia for one paid field visit supervised by a trained adjuster; decline unpaid shadowing",
+          "tag": "retrain"
+        },
+        {
+          "text": "Seek real field vacancy after 2031 only if wages cover rent after travel",
+          "tag": "change-job"
+        },
+        {
+          "text": "Save thirty monthly while current policy wage continues",
+          "tag": "save-more"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "The last picture is called AGI by 2036. \"Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans.\" If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say a decade gives us time to check real jobs and pay, but it is easy to hide behind a far-off date. I still want every refusal to have a named person who signs it. I would tell Celia that staff need terms before new systems arrive, not after."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "At thirty-seven I would still have a long working life, and I cannot buy one with three weeks saved. My low pay and rent are problems this winter, whatever happens in 2036. Ten years is useful only if I turn at least one of them into paid experience outside the desk."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "Starting now I'd keep leading the policy desk while it pays me and ask Celia for a paid rotation with field adjusters by next year. If that is refused, I'd use free repair reports and wait for an actual funded place rather than pay tuition from rent. I'd set twenty-five aside when bills allow, aiming for a month of expenses first; I would take a field role only if a posted wage and the physical work suited me. Even that role could change when robots reach homes around 2039. In the first year after 2036 I'd continue only the paid policy work still available, applying the same signed-offer test to any field move."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "More time helps me breathe, but the rent is due next month. I still feel anxious about the cash gap and a desk job that may change before the date on the card."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would make you leave Northgate before 2036?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A signed field offer at a wage that covers rent and travel, after I had seen the work in person. I would not jump because a manager praised my attention to detail. Praise does not cover a deposit."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you finally use AI tools during that decade?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If Celia made it required and showed me how to check an answer on paid time, yes, reluctantly. I will not learn from a sales pitch on my own evening. I know that stubbornness may cost me hours if the team changes early."
+        }
+      ],
+      "say": [
+        "I'd ask for **written staff terms** before claim systems change.",
+        "I'd insist a **named person** signs disputed refusals."
+      ],
+      "think": [
+        "A decade does not remove **this winter's rent** or my thin savings.",
+        "I'd need **paid field experience** and a real offer before leaving policy work."
+      ],
+      "do": [
+        "Keep **leading paid policy work** now and after 2036 only while Northgate pays me.",
+        "Ask for **paid field rotation**; use free reports if refused, with no rent-funded tuition.",
+        "Save **twenty-five after bills**; accept signed field work only after viewing physical duties, with wages covering rent and travel."
+      ],
+      "feel": [
+        "**Anxious** about present bills, even with a longer route toward field work."
+      ],
+      "mood": "anxious",
+      "quote": "Ten years is useful only if I turn at least one of them into paid experience outside the desk.",
+      "fieldNote": [
+        "He counts the **present rent gap**, not only the 2036 AI date.",
+        "A paid field rotation needs **Celia's approval**, while free reports cost no tuition.",
+        "A field offer must **cover rent and travel**, and later robots may still change that work."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "change-job",
+        "save-more"
+      ],
+      "steps": [
+        {
+          "text": "Keep leading policy desk now and after 2036 only while Northgate pays",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Ask Celia for paid field rotation or study free repair reports",
+          "tag": "retrain"
+        },
+        {
+          "text": "Take signed field offer only after seeing physically suitable work, with wages covering rent and travel",
+          "tag": "change-job"
+        },
+        {
+          "text": "Save twenty-five monthly only after current bills are paid",
+          "tag": "save-more"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "AGI by 2028 worries me most, because a policy clerk's work can go before hands-on jobs and I have three weeks of expenses. A written dismissal timetable and help I can actually qualify for would matter. I'd also need paid training and a real vacancy, not a promise that careful people will always find work."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "You did not ask why I still keep a paper copy of the old flood clause beside my screen. My skill is knowing when a clause hurts someone, and I cannot take that to the bank without a wage. I'd like the people making the tools to read one refusal letter with a customer before they call it an easy task."
+    }
+  ],
+  "headlineQuote": "My skill is knowing when a clause hurts someone, and I cannot take that to the bank without a wage.",
+  "portrait": [
+    "Umar, 27, leads **home policy paperwork** at Northgate Mutual and checks disputed flood exclusions.",
+    "His history degree and **manual care** make him valuable, but he never uses AI tools.",
+    "He rents alone on **lower lead pay**, with three weeks saved and few nearby insurers.",
+    "He would test **paid field inspection** only with supervision, a real vacancy and rent-covering wages.",
+    "Even with ten years, **current bills** keep him anxious about his work and income."
+  ],
+  "biggestWorry": [
+    "**AGI by 2028** could remove his policy desk before he has a cash buffer or another paid role."
+  ],
+  "whatWouldHelp": [
+    "A **written dismissal timetable** and public help he could actually qualify for.",
+    "**Paid training** tied to a real, rent-covering vacancy rather than general promises."
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "session": 2,
   "ownerId": "s2-d91f54aa-60ba-43ea-ba6a-a41539b94f88",
-  "state": "PAUSED",
+  "state": "ACTIVE",
   "branch": "claude/repass-3.1-s2-a09-a12",
   "assignedJobs": [
     "A09",
@@ -260,11 +260,15 @@
         "A09-33333"
       ],
       "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "PASS; final A09 insights and statistics match all 243 reviewed protocol 3.1 interviews; 1215 indexed private-THINK memberships independently audited.",
-      "remainingGaps": []
+      "insightValidation": "PASS: final canonical 243-source insights, actual validator, independent 1215-row THINK evidence audit, numerical and semantic review; root independent approval",
+      "remainingGaps": [],
+      "insightHashes": {
+        "A09.json": "849af04704aea064af2fce025da0cbe92f97170603e3a22028272946a95ffb08",
+        "A09-stats.json": "84c59e3bf0e59044862294c090dfdc11b8008701db4223ed10640e6362c3596d"
+      }
     },
     "A10": {
-      "reviewedCount": 62,
+      "reviewedCount": 84,
       "reviewedIds": [
         "A10-11111",
         "A10-11112",
@@ -322,18 +326,14 @@
         "A10-12333",
         "A10-13111",
         "A10-13112",
+        "A10-13113",
+        "A10-13121",
         "A10-13122",
         "A10-13123",
         "A10-13131",
         "A10-13132",
         "A10-13133",
-        "A10-13211"
-      ],
-      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
-      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
-      "remainingGaps": [
-        "A10-13113",
-        "A10-13121",
+        "A10-13211",
         "A10-13212",
         "A10-13213",
         "A10-13221",
@@ -352,12 +352,16 @@
         "A10-13332",
         "A10-13333",
         "A10-21111",
+        "A10-21123",
+        "A10-21131"
+      ],
+      "baselineValidation": "passing files preserved; inherited content acceptance per handoff",
+      "insightValidation": "not eligible; fewer than 200 reviewed interviews",
+      "remainingGaps": [
         "A10-21112",
         "A10-21113",
         "A10-21121",
         "A10-21122",
-        "A10-21123",
-        "A10-21131",
         "A10-21132",
         "A10-21133",
         "A10-21211",
@@ -1026,7 +1030,7 @@
         "A10-13113",
         "A10-13121"
       ],
-      "state": "paused-unreviewed"
+      "state": "accepted"
     },
     "author2": {
       "ids": [
@@ -1047,7 +1051,7 @@
         "A10-13212",
         "A10-13213"
       ],
-      "state": "paused-partial"
+      "state": "accepted"
     },
     "author1_next": {
       "ids": [
@@ -1264,6 +1268,97 @@
         "A10-13211"
       ],
       "state": "accepted"
+    },
+    "resume_author1": {
+      "ids": [
+        "A10-13221",
+        "A10-13222"
+      ],
+      "state": "accepted"
+    },
+    "resume_author3": {
+      "ids": [
+        "A10-13223",
+        "A10-13231"
+      ],
+      "state": "accepted"
+    },
+    "resume_root": {
+      "ids": [
+        "A10-13232",
+        "A10-13233"
+      ],
+      "state": "accepted"
+    },
+    "resume_author4": {
+      "ids": [
+        "A10-13311",
+        "A10-13312"
+      ],
+      "state": "accepted"
+    },
+    "resume_author3_next": {
+      "ids": [
+        "A10-13313",
+        "A10-13321"
+      ],
+      "state": "accepted"
+    },
+    "resume_author1_next": {
+      "ids": [
+        "A10-13322",
+        "A10-13323"
+      ],
+      "state": "accepted"
+    },
+    "resume_author4_next": {
+      "ids": [
+        "A10-13331",
+        "A10-13332"
+      ],
+      "state": "accepted"
+    },
+    "resume_author3_next2": {
+      "ids": [
+        "A10-13333",
+        "A10-21111"
+      ],
+      "state": "accepted"
+    },
+    "resume_root_next": {
+      "ids": [
+        "A10-21112",
+        "A10-21113"
+      ],
+      "state": "drafting"
+    },
+    "resume_author1_next2": {
+      "ids": [
+        "A10-21121",
+        "A10-21122"
+      ],
+      "state": "drafting"
+    },
+    "resume_author4_next2": {
+      "ids": [
+        "A10-21123",
+        "A10-21131"
+      ],
+      "state": "accepted"
+    },
+    "resume_author4_next3": {
+      "ids": [
+        "A10-21132",
+        "A10-21133"
+      ],
+      "state": "drafting"
+    },
+    "resume_author3_next3": {
+      "ids": [
+        "A10-21211",
+        "A10-21212"
+      ],
+      "state": "drafting"
     }
   },
   "validationResults": [
@@ -2459,9 +2554,149 @@
       "result": "PASS; 1/1",
       "supplemental": "PASS",
       "acceptedSha256": "24b5e67b8f5a4759563aed427049ae051aae396f108311acdbf8bc8220dabe14"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A09",
+      "result": "PASS; 243/243 after canonical reconciliation"
+    },
+    {
+      "command": "node scripts/validate-job-insights.mjs A09",
+      "result": "PASS; 243 canonical interviews"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13113",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "a032a292b87bd53128f7a7f246db335068085521bd3d467922a6390039e1c8c6"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13121",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "2fda001f890b12b4019fafd302ca0685bab59798a95c3208f33ddd58bbd43f1f"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13212",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "600ba8d88c5d2f91234566f4e7d0588c158422b33c793a5f7456d45ecc67cfb2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13213",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "cc25fff024b06710af8d844e4dc1b85e60ec2536b3fd2b84c640a5f6bc58cd80"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13223",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "4d328301dafd61ecbaa289f2c20786598f217766a1f7b4f309cd3bba92423619"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13231",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "3f3e4aaeb25dd91bb800df1ca0994132984a182a19039732f06c4cf67a958e80"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13221",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ca27c5539485ada1d70a15acaa1b12f580918ce7a88c44ac2e822cb1ce3ed5de"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13222",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "eeac743fc5e6f54b51994a2f321dff3f70c95e9271fef67fff4c3842204e1a3c"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13311",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "8600b796c408ad36c409cab77cc25b8168ba58034090bf5b2c8891ffe94ef8fb"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13312",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "e6ca60fb44a2c329fd48a43595f3e3f46051142d1a6d47b059054396e69b2b80"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13313",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "027b9ee8eb9bbad448d28f3fb10af769664ce137557e2f5aad2e803ee322b82c"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13321",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f89e2db446b15b176ea0e41abdfafea8cca909ec7d6b922fa38f6e801a0f11d7"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13232",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "f63bc4c4b26fb9fe6315e95a95ce36fd0d0c4c2b2b9e1b6e7366b57cb7d236b2"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13233",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "af13b8c8f87b3857eadbc8f8fadab8920e2bf5c2c77f3e9fd16f7ed04ea0f90b"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13322",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "834abf3793586e1ea091f0114b156e3b98da61bf0802c90f84620e2da0331304"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13323",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "1ba15a20c508dbe8b8032b3fe213f180f87a33f9de0958914085a9e38db0099d"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13331",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "be1f5a7b592f6d1e9dbfa5b1c3fb7a93c3e3471efc9726710100aee9becf15ce"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13332",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "57d0adbbc7f024027b21d7d66fc2bf1e03b7e755cef601a158ea9fdc7d4cda1e"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-13333",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "9898e4b176ff57ba1f6a2a538ecd7e73b8886d309f1436898b81b87c131c87e9"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-21111",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "ede863c62009d2ae5a1ea5a4080c257b141bfb6efff8b3f11a01e9e3ca66705f"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-21123",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "61caadc1f219a3773449481f64b7e9cf17a11bec06bc476949b70d0a7af2f532"
+    },
+    {
+      "command": "node scripts/validate-archetype-interviews.mjs A10-21131",
+      "result": "PASS; 1/1",
+      "supplemental": "PASS",
+      "acceptedSha256": "e958598cd35284c5a74280068053bb22b2ddaa7a306fb792182c8f8cf92c4ff3"
     }
   ],
-  "latestCheckpointCommit": "5f67cb2c29ebbf464d5373c8ca554e413fef6c51",
+  "latestCheckpointCommit": "35a08d0",
   "semanticReviewRecord": [
     "Startup: full remote handoff and protocol read; clean checkout; no existing session-2 branch or owner. No interviews drafted before pushed ownership claim.",
     {
@@ -3245,6 +3480,123 @@
       ],
       "review": "Coordinator independently full-read Aisha/Ben exact A10 profiles, all scenario transcripts and annotations; reviewer2 full read with literal assertions. Aisha distinct low-paid daily-AI small-business claims lead with three-week reserve, conditional supervised paid family-shop trial and funded course; Ben distinct union-led no-AI travel-claims lead with four-month reserve, verified household wages and funded supervised bicycle path. Repaired Ben S2 employer safety-training/equipment gate in do+step and S3/S4 paid-work fallbacks as true keep-going tags/steps. Moods, dates, quotes, unique action tags and material conditions supported. Coordinator actual node 2/2 and supplemental PASS both.",
       "at": "2026-11-18T13:02:05.107057+00:00"
+    },
+    {
+      "ids": [
+        "A09-13113",
+        "A09-13132",
+        "A09-13133",
+        "A09-13212",
+        "A09-13332",
+        "A09-13333",
+        "A09-21111",
+        "A09-22131",
+        "A09-22132",
+        "A09-23121",
+        "A09-23122",
+        "A09-23133",
+        "A09-23211",
+        "A09-23212",
+        "A09-23312",
+        "A09-23313",
+        "A09-31111",
+        "A09-31113",
+        "A09-31121",
+        "A09-31133",
+        "A09-33121",
+        "A09-33233"
+      ],
+      "review": "Reconciled 22 accepted-new raw variants against canonical main; retained conditional pay/move/safety details; removed unsupported lender seek-support tags/steps, deduplicated action tags, calibrated 13132 S2 possible-loss mood. Private THINK bullets unchanged. Rebuilt all stats and corrected S1/S2/S3 numeric prose and endpoints; exact 1215 indexed THINK memberships independently audited.",
+      "at": "2026-11-19T06:15:10.398113+00:00",
+      "rootApproval": "Independent 22 raw delta pair review and final 243-source/1215-evidence insight audit APPROVED; /tmp/paradigm-s2-d91f54aa/root-reviews/A09-canonical-resume-delta-review.txt"
+    },
+    {
+      "ids": [
+        "A10-13113",
+        "A10-13121"
+      ],
+      "review": "Full current-profile and five-scenario review by coordinator plus independent Luna; saved drafts repaired for funded study, paid time, bus-income and rent gates, expected-loss moods, and explicit conditional 2036 first-year actions. Exact quotes and action tags checked.",
+      "at": "2026-11-19T06:22:42.723994+00:00"
+    },
+    {
+      "ids": [
+        "A10-13212",
+        "A10-13213"
+      ],
+      "review": "Coordinator full five-scenario/profile review and independent Luna full reread. Iris S2 calibrated to possible-loss anxious without invented certainty/sleeplessness; Pedro S1 existing-tool test assigned to collective action, not learn-ai. Verified exact quotes, paid vacancies, eligibility and AI/robot dates; node and supplemental pair PASS.",
+      "at": "2026-11-19T06:26:57.809288+00:00"
+    },
+    {
+      "ids": [
+        "A10-13223",
+        "A10-13231"
+      ],
+      "review": "Coordinator and independent root full-source review plus targeted recheck. Removed invented cadence and unsupported employer seek-support/training-enquiry tags; restored self-funded course, eligible public help, manager-approved paid shadowing, contingent vacancy search and explicit post-AGI actions. Actual exact node and supplemental audits PASS.",
+      "at": "2026-11-19T06:28:15.972237+00:00"
+    },
+    {
+      "ids": [
+        "A10-13221",
+        "A10-13222"
+      ],
+      "review": "Coordinator full current-profile/five-scenario content review plus independent Luna full review and targeted final checks. Reconciled one vacancy, conditional future wages, paid course/transport/household gates, existing-tool taxonomy, separate spending/saving actions, exact standalone quote and dated post-AGI actions. Actual node and supplemental pair PASS.",
+      "at": "2026-11-19T06:28:59.007100+00:00"
+    },
+    {
+      "ids": [
+        "A10-13311",
+        "A10-13312"
+      ],
+      "review": "Coordinator complete profile/five-scenario/source-summary review and independent Luna full review. Elena manual policy audits/strong reserve and Liam occasional-AI motor claims, new paid damage-checker learning and safety-qualified inspection bridge are distinct; contingent hours, wages, training, robot timing and exact quotes checked. Actual node and supplemental pair PASS.",
+      "at": "2026-11-19T06:31:45.785740+00:00"
+    },
+    {
+      "ids": [
+        "A10-13313",
+        "A10-13321"
+      ],
+      "review": "Coordinator full source/profile/five-scenario review plus independent Luna read and final targeted checks. Added supported junior rotation, pay/entry gates, conditional first AI learning for resistant clerk, calibrated own-income S3 anxious, and repaired standalone quotes without inventing sleep or vacancies. Exact node/audit pair PASS.",
+      "at": "2026-11-19T06:35:38.394389+00:00"
+    },
+    {
+      "ids": [
+        "A10-13232",
+        "A10-13233"
+      ],
+      "review": "Coordinator full current-profile/five-scenario review plus independent Luna full read and targeted qualification-gate recheck. Vera paid harbour-store/supervised sail path and Diego new AI method/confirmed net-positive hand-weeding/lease costs preserve current wage, household and 3-year robot chronology. Exact node/audit pair PASS.",
+      "at": "2026-11-19T06:36:24.680190+00:00"
+    },
+    {
+      "ids": [
+        "A10-13322",
+        "A10-13323"
+      ],
+      "review": "Coordinator full profile/five-scenario source-summary review and independent Luna full read. Carla secure-cushion claims gates and Jamal separate emergency/house funds, daily AI and regulator-qualified paid audit route checked; S1/S3 own-income risk moods calibrated anxious without invented distress. Exact quotes and node/audit pair PASS.",
+      "at": "2026-11-19T06:36:38.061248+00:00"
+    },
+    {
+      "ids": [
+        "A10-13331",
+        "A10-13332"
+      ],
+      "review": "Coordinator full five-scenario/profile/source-summary review plus independent Luna full read. Rosa signed witness evidence, conditional paid assessor safety and solo net-income gate; Zane distinct renewal desk, genuine new AI checker and registered supervised electrical route with protected renewal shifts and net mortgage budget. Exact quotes/date offsets and node/audit pair PASS.",
+      "at": "2026-11-19T06:38:43.831260+00:00"
+    },
+    {
+      "ids": [
+        "A10-13333",
+        "A10-21111"
+      ],
+      "review": "Coordinator and independent Luna full exact-profile/five-scenario review. Amira high-skill AI policy work and Hassan thin-cushion short-wage junior role retain distinct voices, own-risk moods, pay/qualification/eligibility gates, exact quotes, 2028/2031/2036 dates. Repaired Hassan spending and written-offer support summaries, Amira S3 anxious, and full neutral Panel intro. Node/audit pair PASS.",
+      "at": "2026-11-19T06:43:40.844485+00:00"
+    },
+    {
+      "ids": [
+        "A10-21123",
+        "A10-21131"
+      ],
+      "review": "Coordinator full profile/five-scenario source-summary review plus independent Luna full read. Maya daily-AI junior claim work and Umar resistant printed endorsements have distinct household-gated trajectories; baseline mortgage anxiety and rapid expected loss moods calibrated; paid/qualified clinic-window routes, current shifts, school costs, AI/robot dates and exact quotes checked. Node/audit pair PASS.",
+      "at": "2026-11-19T06:44:30.638986+00:00"
     }
   ],
   "initialPassingHashes": {
@@ -3472,15 +3824,15 @@
     "A12-13111": "1b9efb58287873a0cc70753e6c4f5c71f4fb558c03c7acdaabc858f6b6a5d265"
   },
   "acceptedNewHashes": {
-    "A09-13133": "6ff61ca390957ad4c54c32e53e5830d34e00ca4e65a9f39e0f79da63521edbc9",
+    "A09-13133": "b3ebca323e0b486402feecea90edf21fd6cb907a23e3b49829e6c4ff4ddfe18a",
     "A09-13211": "b097fcc693f58079119a04b8db5267699c9341d2c8596712c06b1027975eadfe",
-    "A09-13113": "82a41626d6458419c17eb49a069c606ef871072ffa9c4efd58c23f60c9603366",
+    "A09-13113": "d9d33b8b0bc7ccd86c063261dd4bfb71c8c7aa52a80d31a492860a963ecc7b3c",
     "A09-13121": "d92f8a6cdb3b3851f071bedd950506ca967e35329ac399e57d7952c7f76b5549",
     "A09-13131": "40c9bd333fdd4d0a326da207748b87e8406524a0e41a1f340e7adb8d60b8ec81",
-    "A09-13132": "1eb2ab15523e4a2f2681e080eea010c212a62c7bdf7f8a14a3914208547815a3",
+    "A09-13132": "ffbe54d3d4b8aa28e3cddcce6698b284b35f32f1319862fb7f4092538f564e4a",
     "A09-13122": "54e824fddc5a749a2c5a6a7b963999c1d1b0500d8311ca3ccbd354d8ca223523",
     "A09-13123": "353a668f5774b58188337ad9d2fc44f7af658b9ba98d13a53df19397119b2998",
-    "A09-13212": "dbdc518753de35f99893b908294b2e1c3c4d58594384e5c963cb47182e91ccac",
+    "A09-13212": "e7cdc9b105e273f1baf02849605987ecdd1a4e29e2b2326be3436ba021536f8e",
     "A09-13213": "57b51472794e25aec10604e7642236b55fc8b9a14744960f3ad13803791c6e8a",
     "A09-13221": "bd25186ebabfcde4a589be4ee2096b1fc76d8da5381b4284bf5cd864ffbe8dd7",
     "A09-13222": "677359c8ab6dae8456212d806eb8651b39e663c23e73739d979031dfb5ac259c",
@@ -3495,11 +3847,11 @@
     "A09-13322": "3fe07286fe0a98717247b4f53c978c89e9b3af4bee2bfeda9abb12dacb2b11f5",
     "A09-13323": "f60e7551553453fc24d4ff22cd264c48aef40ee595aacfcb1250b5f950cef2a8",
     "A09-13331": "966400ea0df9ec4346b67bf866c8dd902f5f9ce6e1dba2f92f5c064334b7aaf3",
-    "A09-13332": "26eb0004f278868ca32d40a8a1cdbaac0239cb5e5a8610e6acec1c7ac99c880c",
+    "A09-13332": "7d0c93804117b73274128825acb1c40bbff342c92e1bbed767fb9ec033d199dc",
     "A09-21112": "7df03ef3e01db25f955e8a2135c167a1de618febc83d3b966826d10a6a89e712",
     "A09-21113": "b1e0306be5335de6fc46ce56372a87b0624f4b3f47cd0666b248b63736406b8c",
-    "A09-13333": "c95106dcb315d50c06d62d58c4950ed61984e784bdfe0820bbddbf7c39e7b8bf",
-    "A09-21111": "6b9c31625550dc6dbe69c273af1f47a19b7fe2e1c8c25804e1daa55597f7dac7",
+    "A09-13333": "88c154081ef659f4b8eef2e3ad2041629a3810e3e05730399e1ed1920198da7c",
+    "A09-21111": "e8718ffa5c789082aba7c943c0b41f73d350b2078cff6993cc57245e5ecf3916",
     "A09-21121": "7d9ee6233f80ba9726839f2d0735d1ff7e54a42b09ec861ca5c1053c03b0db11",
     "A09-21122": "9da5747aebd8fd3f1ad7baf18b0e721aeff0c30a6acd279c33b1b90b0307bf28",
     "A09-21123": "6155fd71d89873fe122b7c58011fbdc57d025a18dc6762effbcca5384c6234c3",
@@ -3532,8 +3884,8 @@
     "A09-22123": "d5ab8aa02e98b3aad63d298160b16e2e4fefa2a7fbb436d1e891d265fca4d489",
     "A09-22133": "abe1f550f51dc1439889b4bc1753c7e372800da5d53fe10a3fdc412f2d720fb8",
     "A09-22211": "006a6e3901a1336f5b79dcc15002079ad72588fd73043316017fc49b487f48f3",
-    "A09-22131": "c58dd4727a7cbee28aa099232e2985028fdaed04aefc6bc17675916574e54d6d",
-    "A09-22132": "06f622e35dd3e8958c6919aaeaa0f1d1dda3fef8111d01fdc30559c113c56ee3",
+    "A09-22131": "f28cd837d6eccb3691698cf5217a7f3de66389439e95a75055b33bd5314a09bc",
+    "A09-22132": "f80006e8b9fd541af7d72f986b45b7a321d6f86b7633107efe1c53e18439f80b",
     "A09-22212": "2547bed99d01e8d5e390ab850d4c8eae8c0955d3f1f3b14987a2cf075083b1a2",
     "A09-22213": "9393d29e3e2daf57f7a135e4994294814315c9f373c1e796d7b390a1d4b192bf",
     "A09-22221": "54882ccd5e13868e9987dc8810e15aadc8a49ac33d021d467372184a30b69585",
@@ -3554,12 +3906,12 @@
     "A09-23111": "d0acb6dca1687e0254d6a14c5b395463574b2ee4ce027b3c13f6c2f5f74308bc",
     "A09-23112": "73645668c59e2663c8dde13186a313ad942a123215aef79e7e64507842e3b9dd",
     "A09-23113": "9e359878e4b88dd3fde54b80043a7e61fd446b5a693a4685ba80beb2b7f64e94",
-    "A09-23121": "57197f080c8de48f57a9f7859486ddc38bba339fcae9eb56cc1ec2b969414c45",
-    "A09-23122": "f9645ca1ebc710d70601693477d93038564a530720ec02340f45aa75587535e9",
+    "A09-23121": "364058817bfa9216c83ba8cb011ca8711a4f64aed6e95426a538d5d0bd1b630e",
+    "A09-23122": "ff161442aa3ff30c3ff05987f145d432bad3090ac0ec89ff32a68d61258ad0c2",
     "A09-23123": "f423292e65de38ca2d89690c5458dc7803acb87124ce1c52a0fc443289e630fa",
     "A09-23131": "d6171a1727f9f323b57c630ae739568ded9f4a17733205cb03514b3fd6d54caa",
     "A09-23132": "7509261261fd2a5daff4c5db0acf8d1679e30ef2b787e062e5f5d8e83f131367",
-    "A09-23133": "d4f79aabc1ed1259d59624d4d616ad6a4faefc8e2d0b673299ceca0f7f4eb3d6",
+    "A09-23133": "58068cdc79ef7cf021a9868282b58a24b9d456ff47eb743ff3a9ad04d4b15d86",
     "A09-23213": "de78cb6f1645269325873bcf81f93faf7ef75af9c92db410495a567b910faa1a",
     "A09-23221": "e53aff5c68fa20064a358f2d7267dd1b9e3d5b735fb137242aefc2e366ef7133",
     "A09-23222": "8fb4c169f9d9e517dcf398af466597ad801283ea91fb65b1f69a8449e71ea87c",
@@ -3568,25 +3920,25 @@
     "A09-23232": "b9a4b3cb2f975041e932a2ec8633dbffdc9d0bd26ee8472016738fe22c0444c3",
     "A09-23233": "1fd0891ccfbc977fe815361419513139f869d922ff427c535abef1446af980d8",
     "A09-23311": "05e04ddad9988c8bd5edc5167b1309374cdb0e71fba38787a0501d8088749a0f",
-    "A09-23312": "ba9fbd22c22a8de10af8c240abbc92f8342a8b97ecefd3c2f64b2f62fe865da2",
-    "A09-23313": "23101f00bb59ffaedbee04fca0eb13da0ccdb4c730facbaa42d82d5b48e0fcec",
-    "A09-23211": "717f04e44095a2c7bfda188e39d3b12ebca373fdef0a08f3e10b18b3d755e375",
-    "A09-23212": "deb3c4d5fd3fb0c2f438495e022d8ae82308068df504dc53e92c303d38872e29",
+    "A09-23312": "d04cc2d1561dccc078b90cc1e4cfddaeac31f69f4928136b48d68909518fdf54",
+    "A09-23313": "eba7954688460c65337a722985a1351145df488fca8a688fa959b1dd08a6b3bc",
+    "A09-23211": "e9aeb20f6da1b9c822ed79941059a627b6ac256625a9d5da9f243ffec5a1316f",
+    "A09-23212": "9845bc4441596d1f805fdd5a5b1bbe709596bda0e94b7800aa1e26ca012b86a9",
     "A09-23321": "030a5fa5f11e0be58a9dad37698fdd46d0f73125e622cf3328a3c13fba061230",
     "A09-23322": "4448401fdb6640062ad0b21532577fc243bcf267083f5d1d223744393aa4bb57",
     "A09-23323": "2b5ec30b3acd9228a2e6d593e9efd71f56c92bd58c276c2dd6d0142b8f6033d7",
     "A09-23331": "958ee8d0a6e3bc6e7d504edb589808527c81c9e4375bb041b9f65be95b20955a",
-    "A09-31111": "07f701924c8b33865870e0998a8c670545299996c65b4b27d9a4a0a6fc653241",
+    "A09-31111": "c877172e8200b38c38ec61fcffcac6e6a5f5523360b7938cb255b9ae61dac5b8",
     "A09-31112": "74c3d07f2adee7654460caa4d1388201e30a6dd0441cc9279a437367d89461ae",
     "A09-23332": "0042311fec74794557e749fc8a278f5cf08e1111de7541c46a7c902ff8fe9e40",
     "A09-23333": "44fce21386f9a1420a72002469ed42d1a10edea9a62888c92ff654f7df46f5a8",
-    "A09-31113": "026a8e5a7944a31bd412f887551ca4c2057bc33bbb73b6de34cb4a6be3f5e40a",
-    "A09-31121": "8b002f590f20278ec5fe1e6821d9effcf4e7bf042ac3b955971fbbe08164896b",
+    "A09-31113": "14d251eb76250be0f8416e14ad6fa6f5494ccdec98a7410f32c26b47feacbfdd",
+    "A09-31121": "5c52a00c2be8508b173b0e94efdd005b47392242bdd9594aca5cb427bad3949f",
     "A09-31131": "2d4497807309bcb221e344d0aef6df45a3f7442f60c05b5f74affa3833bffae1",
     "A09-31132": "9bca464d26b4a96204bb5c5c64da8ff6f133ffcf71c2f3a0feaef27b36eb91f2",
     "A09-31122": "f112af0d22e1d7c2390029ad9020ea621ba198c7ba9e1a76df15b67a3360686d",
     "A09-31123": "437ef22379ec3f7b92f392be2bf6a434c454a6109c577d2888e28aa0267b2433",
-    "A09-31133": "839752153692571d40d11694ba98a38500979be48f1df890504405cf49bb701a",
+    "A09-31133": "b95801b888002c9525ed566609b35f801a407a51bcc1933a009b2733924a23c5",
     "A09-31211": "ca182d5d99cd7a94c5a37e314197039307cae9d0424e8fdde96210e809d0c0ce",
     "A09-31212": "78070ba0527ff03c28f96453f94c2bde16dc2cd88c9d4e451d26612977130e30",
     "A09-31213": "137cba1425c74bf2c813dc275a2de02c20e49b825693c87f7d5350151a481a1e",
@@ -3664,9 +4016,31 @@
     "A10-13122": "faffc98ae7b18d2259f63eb71ccda47f8009aa4fb7f0f774bc375a3d3ef30ef2",
     "A10-13123": "bf488c5a0bbc02d93dfd15308289fb18677de9b338f4f642172c3f25713484d9",
     "A10-13133": "ac31a82436d497869e21e696001f9a971d88c80b01a17ef7f7f37146a3bd2e8c",
-    "A10-13211": "24b5e67b8f5a4759563aed427049ae051aae396f108311acdbf8bc8220dabe14"
+    "A10-13211": "24b5e67b8f5a4759563aed427049ae051aae396f108311acdbf8bc8220dabe14",
+    "A10-13113": "a032a292b87bd53128f7a7f246db335068085521bd3d467922a6390039e1c8c6",
+    "A10-13121": "2fda001f890b12b4019fafd302ca0685bab59798a95c3208f33ddd58bbd43f1f",
+    "A10-13212": "600ba8d88c5d2f91234566f4e7d0588c158422b33c793a5f7456d45ecc67cfb2",
+    "A10-13213": "cc25fff024b06710af8d844e4dc1b85e60ec2536b3fd2b84c640a5f6bc58cd80",
+    "A10-13223": "4d328301dafd61ecbaa289f2c20786598f217766a1f7b4f309cd3bba92423619",
+    "A10-13231": "3f3e4aaeb25dd91bb800df1ca0994132984a182a19039732f06c4cf67a958e80",
+    "A10-13221": "ca27c5539485ada1d70a15acaa1b12f580918ce7a88c44ac2e822cb1ce3ed5de",
+    "A10-13222": "eeac743fc5e6f54b51994a2f321dff3f70c95e9271fef67fff4c3842204e1a3c",
+    "A10-13311": "8600b796c408ad36c409cab77cc25b8168ba58034090bf5b2c8891ffe94ef8fb",
+    "A10-13312": "e6ca60fb44a2c329fd48a43595f3e3f46051142d1a6d47b059054396e69b2b80",
+    "A10-13313": "027b9ee8eb9bbad448d28f3fb10af769664ce137557e2f5aad2e803ee322b82c",
+    "A10-13321": "f89e2db446b15b176ea0e41abdfafea8cca909ec7d6b922fa38f6e801a0f11d7",
+    "A10-13232": "f63bc4c4b26fb9fe6315e95a95ce36fd0d0c4c2b2b9e1b6e7366b57cb7d236b2",
+    "A10-13233": "af13b8c8f87b3857eadbc8f8fadab8920e2bf5c2c77f3e9fd16f7ed04ea0f90b",
+    "A10-13322": "834abf3793586e1ea091f0114b156e3b98da61bf0802c90f84620e2da0331304",
+    "A10-13323": "b6cc2e728d0164dbd0600ea7f6529ceb61883b8903fc360834a006c48911561b",
+    "A10-13331": "be1f5a7b592f6d1e9dbfa5b1c3fb7a93c3e3471efc9726710100aee9becf15ce",
+    "A10-13332": "57d0adbbc7f024027b21d7d66fc2bf1e03b7e755cef601a158ea9fdc7d4cda1e",
+    "A10-13333": "9898e4b176ff57ba1f6a2a538ecd7e73b8886d309f1436898b81b87c131c87e9",
+    "A10-21111": "ede863c62009d2ae5a1ea5a4080c257b141bfb6efff8b3f11a01e9e3ca66705f",
+    "A10-21123": "61caadc1f219a3773449481f64b7e9cf17a11bec06bc476949b70d0a7af2f532",
+    "A10-21131": "e958598cd35284c5a74280068053bb22b2ddaa7a306fb792182c8f8cf92c4ff3"
   },
-  "updatedAt": "2026-11-18T13:04:20.443857+00:00",
+  "updatedAt": "2026-11-19T06:44:48.515300+00:00",
   "acceptedRepairHistory": [
     {
       "id": "A09-13113",
@@ -3781,6 +4155,188 @@
       "oldHash": "dadf8866dbbdef5c85c7264f9b22c97ba8823e1bc44acfcb0be3781820f829c9",
       "newHash": "3088a27719c995b1fd9bb322e21990f4b2cbd7407e2bc5c19850cde08921e330",
       "review": "Removed redundant repeated S3 action tags while preserving distinct representative steps and all transcript, summaries and gates. 33121 change-job repeated; 33233 move repeated. Actual node 2/2 and supplemental audit PASS both; stats count distinct action tags per person, so no count change."
+    },
+    {
+      "id": "A09-13113",
+      "oldHash": "82a41626d6458419c17eb49a069c606ef871072ffa9c4efd58c23f60c9603366",
+      "canonicalMainHash": "d9d33b8b0bc7ccd86c063261dd4bfb71c8c7aa52a80d31a492860a963ecc7b3c",
+      "newHash": "d9d33b8b0bc7ccd86c063261dd4bfb71c8c7aa52a80d31a492860a963ecc7b3c",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-13132",
+      "oldHash": "1eb2ab15523e4a2f2681e080eea010c212a62c7bdf7f8a14a3914208547815a3",
+      "canonicalMainHash": "74c5a7aa09cef97d97a9123944ad600c57253d2ad9270e66ca3d6a68637306ab",
+      "newHash": "ffbe54d3d4b8aa28e3cddcce6698b284b35f32f1319862fb7f4092538f564e4a",
+      "review": "Adopt canonical main variant after source comparison. Retain student-lender enquiry in do; omit unsupported seek-support action and step. Calibrate S2 to anxious: possible individual loss with plan, not expected individual loss.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-13133",
+      "oldHash": "6ff61ca390957ad4c54c32e53e5830d34e00ca4e65a9f39e0f79da63521edbc9",
+      "canonicalMainHash": "b3ebca323e0b486402feecea90edf21fd6cb907a23e3b49829e6c4ff4ddfe18a",
+      "newHash": "b3ebca323e0b486402feecea90edf21fd6cb907a23e3b49829e6c4ff4ddfe18a",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-13212",
+      "oldHash": "dbdc518753de35f99893b908294b2e1c3c4d58594384e5c963cb47182e91ccac",
+      "canonicalMainHash": "e7cdc9b105e273f1baf02849605987ecdd1a4e29e2b2326be3436ba021536f8e",
+      "newHash": "e7cdc9b105e273f1baf02849605987ecdd1a4e29e2b2326be3436ba021536f8e",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-13332",
+      "oldHash": "26eb0004f278868ca32d40a8a1cdbaac0239cb5e5a8610e6acec1c7ac99c880c",
+      "canonicalMainHash": "7d0c93804117b73274128825acb1c40bbff342c92e1bbed767fb9ec033d199dc",
+      "newHash": "7d0c93804117b73274128825acb1c40bbff342c92e1bbed767fb9ec033d199dc",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-13333",
+      "oldHash": "c95106dcb315d50c06d62d58c4950ed61984e784bdfe0820bbddbf7c39e7b8bf",
+      "canonicalMainHash": "88c154081ef659f4b8eef2e3ad2041629a3810e3e05730399e1ed1920198da7c",
+      "newHash": "88c154081ef659f4b8eef2e3ad2041629a3810e3e05730399e1ed1920198da7c",
+      "review": "Adopt canonical main variant after source comparison. Existing AI planner testing and teaching does not establish learning a new AI tool.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-21111",
+      "oldHash": "6b9c31625550dc6dbe69c273af1f47a19b7fe2e1c8c25804e1daa55597f7dac7",
+      "canonicalMainHash": "3308e5c1132a55fc7c7be2f0695a7f4ea7aeb565f978206bfce1ed87f84c3ad2",
+      "newHash": "e8718ffa5c789082aba7c943c0b41f73d350b2078cff6993cc57245e5ecf3916",
+      "review": "Adopt canonical main variant after source comparison. Retain lender enquiry in do/transcript; lender enquiry is outside seek-support taxonomy, so remove the extra lender step and action.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-22131",
+      "oldHash": "c58dd4727a7cbee28aa099232e2985028fdaed04aefc6bc17675916574e54d6d",
+      "canonicalMainHash": "ab2c96f73c9ef15f3026d631733b06e78476c6b394aaa9e4df52d64ec72c2ee4",
+      "newHash": "f28cd837d6eccb3691698cf5217a7f3de66389439e95a75055b33bd5314a09bc",
+      "review": "Adopt canonical main variant after source comparison. Retain lender enquiry in do/transcript; lender enquiry is outside seek-support taxonomy, so remove the extra lender step.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-22132",
+      "oldHash": "06f622e35dd3e8958c6919aaeaa0f1d1dda3fef8111d01fdc30559c113c56ee3",
+      "canonicalMainHash": "f80006e8b9fd541af7d72f986b45b7a321d6f86b7633107efe1c53e18439f80b",
+      "newHash": "f80006e8b9fd541af7d72f986b45b7a321d6f86b7633107efe1c53e18439f80b",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23121",
+      "oldHash": "57197f080c8de48f57a9f7859486ddc38bba339fcae9eb56cc1ec2b969414c45",
+      "canonicalMainHash": "40ca1a43f570e1e9e611e2303de94c20d8ec0f4cdecace9d1cd9b35448d21176",
+      "newHash": "364058817bfa9216c83ba8cb011ca8711a4f64aed6e95426a538d5d0bd1b630e",
+      "review": "Adopt canonical main variant after source comparison. Retain lender enquiry in do/transcript; lender enquiry is outside seek-support taxonomy, so remove the extra lender step.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23122",
+      "oldHash": "f9645ca1ebc710d70601693477d93038564a530720ec02340f45aa75587535e9",
+      "canonicalMainHash": "ecab6e1748bddb7b97d461b6fedff2dc558d9565f3225ea62459af2d895437d8",
+      "newHash": "ff161442aa3ff30c3ff05987f145d432bad3090ac0ec89ff32a68d61258ad0c2",
+      "review": "Adopt canonical main variant after source comparison. Retain lender enquiry in do/transcript; lender enquiry is outside seek-support taxonomy, so remove the extra lender step.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23133",
+      "oldHash": "d4f79aabc1ed1259d59624d4d616ad6a4faefc8e2d0b673299ceca0f7f4eb3d6",
+      "canonicalMainHash": "58068cdc79ef7cf021a9868282b58a24b9d456ff47eb743ff3a9ad04d4b15d86",
+      "newHash": "58068cdc79ef7cf021a9868282b58a24b9d456ff47eb743ff3a9ad04d4b15d86",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23211",
+      "oldHash": "717f04e44095a2c7bfda188e39d3b12ebca373fdef0a08f3e10b18b3d755e375",
+      "canonicalMainHash": "e9aeb20f6da1b9c822ed79941059a627b6ac256625a9d5da9f243ffec5a1316f",
+      "newHash": "e9aeb20f6da1b9c822ed79941059a627b6ac256625a9d5da9f243ffec5a1316f",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23212",
+      "oldHash": "deb3c4d5fd3fb0c2f438495e022d8ae82308068df504dc53e92c303d38872e29",
+      "canonicalMainHash": "9845bc4441596d1f805fdd5a5b1bbe709596bda0e94b7800aa1e26ca012b86a9",
+      "newHash": "9845bc4441596d1f805fdd5a5b1bbe709596bda0e94b7800aa1e26ca012b86a9",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23312",
+      "oldHash": "ba9fbd22c22a8de10af8c240abbc92f8342a8b97ecefd3c2f64b2f62fe865da2",
+      "canonicalMainHash": "d04cc2d1561dccc078b90cc1e4cfddaeac31f69f4928136b48d68909518fdf54",
+      "newHash": "d04cc2d1561dccc078b90cc1e4cfddaeac31f69f4928136b48d68909518fdf54",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-23313",
+      "oldHash": "23101f00bb59ffaedbee04fca0eb13da0ccdb4c730facbaa42d82d5b48e0fcec",
+      "canonicalMainHash": "eba7954688460c65337a722985a1351145df488fca8a688fa959b1dd08a6b3bc",
+      "newHash": "eba7954688460c65337a722985a1351145df488fca8a688fa959b1dd08a6b3bc",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-31111",
+      "oldHash": "07f701924c8b33865870e0998a8c670545299996c65b4b27d9a4a0a6fc653241",
+      "canonicalMainHash": "c877172e8200b38c38ec61fcffcac6e6a5f5523360b7938cb255b9ae61dac5b8",
+      "newHash": "c877172e8200b38c38ec61fcffcac6e6a5f5523360b7938cb255b9ae61dac5b8",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-31113",
+      "oldHash": "026a8e5a7944a31bd412f887551ca4c2057bc33bbb73b6de34cb4a6be3f5e40a",
+      "canonicalMainHash": "14d251eb76250be0f8416e14ad6fa6f5494ccdec98a7410f32c26b47feacbfdd",
+      "newHash": "14d251eb76250be0f8416e14ad6fa6f5494ccdec98a7410f32c26b47feacbfdd",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-31121",
+      "oldHash": "8b002f590f20278ec5fe1e6821d9effcf4e7bf042ac3b955971fbbe08164896b",
+      "canonicalMainHash": "5c52a00c2be8508b173b0e94efdd005b47392242bdd9594aca5cb427bad3949f",
+      "newHash": "5c52a00c2be8508b173b0e94efdd005b47392242bdd9594aca5cb427bad3949f",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-31133",
+      "oldHash": "839752153692571d40d11694ba98a38500979be48f1df890504405cf49bb701a",
+      "canonicalMainHash": "b95801b888002c9525ed566609b35f801a407a51bcc1933a009b2733924a23c5",
+      "newHash": "b95801b888002c9525ed566609b35f801a407a51bcc1933a009b2733924a23c5",
+      "review": "Adopt canonical main variant after source comparison.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-33121",
+      "oldHash": "4e0ed18aa4709644970bcd5ca3bd0d7168d56d70b45c544047d2102b5da79c8c",
+      "canonicalMainHash": "b3c275e3cb6c5b0c8f938ea2cf41617f70dda48cf530afac6599db25fd615327",
+      "newHash": "4e0ed18aa4709644970bcd5ca3bd0d7168d56d70b45c544047d2102b5da79c8c",
+      "review": "Adopt canonical main variant after source comparison. Deduplicate repeated change-job tag.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A09-33233",
+      "oldHash": "3088a27719c995b1fd9bb322e21990f4b2cbd7407e2bc5c19850cde08921e330",
+      "canonicalMainHash": "dadf8866dbbdef5c85c7264f9b22c97ba8823e1bc44acfcb0be3781820f829c9",
+      "newHash": "3088a27719c995b1fd9bb322e21990f4b2cbd7407e2bc5c19850cde08921e330",
+      "review": "Adopt canonical main variant after source comparison. Deduplicate repeated move tag.",
+      "at": "2026-11-19T06:09:40.198515+00:00"
+    },
+    {
+      "id": "A10-13323",
+      "oldHash": "1ba15a20c508dbe8b8032b3fe213f180f87a33f9de0958914085a9e38db0099d",
+      "newHash": "b6cc2e728d0164dbd0600ea7f6529ceb61883b8903fc360834a006c48911561b",
+      "review": "Add transcript-supported twenty-claim audit work sample and five-case lead review to S3 retrain steps; independent Luna found omitted concrete first-year work."
     }
   ],
   "readOnlyReviews": {
@@ -3852,5 +4408,43 @@
       }
     ],
     "draftArchiveManifest": "/tmp/paradigm-s2-d91f54aa/pause-drafts/manifest.json"
+  },
+  "resumedAt": "2026-11-19T06:07:11.665328+00:00",
+  "resumeRecord": {
+    "fromCheckpoint": "d700552ecf218d620a2d58847859d4b3a13c1db9",
+    "canonicalMain": "a46f690b9f6b94a9b6ac4d9c4a9b804b6588094c",
+    "canonicalA09Variants": [
+      "A09-13113",
+      "A09-13132",
+      "A09-13133",
+      "A09-13212",
+      "A09-13332",
+      "A09-13333",
+      "A09-21111",
+      "A09-22131",
+      "A09-22132",
+      "A09-23121",
+      "A09-23122",
+      "A09-23133",
+      "A09-23211",
+      "A09-23212",
+      "A09-23312",
+      "A09-23313",
+      "A09-31111",
+      "A09-31113",
+      "A09-31121",
+      "A09-31133",
+      "A09-33121",
+      "A09-33233"
+    ],
+    "preservedLocalDrafts": [
+      "A10-13113",
+      "A10-13121",
+      "A10-13212"
+    ],
+    "reviewedInterviews": 415,
+    "remainingInterviews": 557,
+    "authorization": "User explicitly requested continuing remaining work on 19 November 2026.",
+    "canonicalA09ReconciledAt": "2026-11-19T06:15:10.398113+00:00"
   }
 }
