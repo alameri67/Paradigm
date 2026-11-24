@@ -51,7 +51,7 @@ const level = (m: MoodKey) => MOODS.indexOf(m) + 1;
 /** The details a level stands for, as one readable line (age, savings, views...). */
 function levelDetail(l: GroupLevel) {
   return Object.entries(l)
-    .filter(([k]) => k !== "key" && k !== "label")
+    .filter(([k]) => !["key", "label", "aiExposure", "setting"].includes(k))
     .map(([k, v]) => (k === "age" ? `Age ${v}` : String(v).replace(/\.$/, "")))
     .join(". ");
 }
@@ -170,21 +170,25 @@ const VOICES = [
 ] as const;
 
 function ControlPanel({
+  a,
   groups,
   levels,
   onLevel,
   worker,
+  labels,
 }: {
+  a: Archetype;
   groups: Group[];
   levels: Record<string, string>;
   onLevel: (group: string, level: string) => void;
   worker: Worker | null;
+  labels?: Archetype["factLabels"];
 }) {
   return (
     <aside className="ws-panel" aria-label="Worker details">
       <div className="ws-panel-head">
         <h2 className="t-section">
-          Who is this worker? <HelpTip>Pick one option in each group to meet a different version of this job.</HelpTip>
+          Who is this {a.kind ? "person" : "worker"}? <HelpTip>Pick one option in each group to meet a different version of this {a.kind ? "group" : "job"}.</HelpTip>
         </h2>
       </div>
       {groups.map((g) => {
@@ -216,8 +220,8 @@ function ControlPanel({
         <dl className="ws-facts">
           {(
             [
-              ["graduation", "Education", worker.profile.education],
-              ["cpu", "AI exposure (comes with the job)", worker.profile.aiExposure],
+              ["graduation", labels?.education ?? "Education", worker.profile.education],
+              ["cpu", labels?.exposure ?? "AI exposure (comes with the job)", worker.profile.aiExposure],
               ["hash", "Version", worker.id],
             ] as const
           ).map(([icon, label, value]) => (
@@ -237,20 +241,23 @@ function ControlPanel({
   );
 }
 
-export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; groups: Group[] }) {
+export function WorkerStudio({ archetypes, groups: jobGroups }: { archetypes: Archetype[]; groups: Group[] }) {
   const params = useSearchParams();
   const [job, setJob] = useState(() => {
     const j = params.get("job");
     return archetypes.some((a) => a.code === j) ? j! : "A16";
   });
-  const [levels, setLevels] = useState<Record<string, string>>(() =>
+  const levelsFor = (gs: Group[], from: (k: string) => string | null) =>
     Object.fromEntries(
-      groups.map((g) => {
-        const v = params.get(g.key);
+      gs.map((g) => {
+        const v = from(g.key);
         return [g.key, g.levels.some((l) => l.key === v) ? v! : g.levels[1].key];
       }),
-    ),
-  );
+    );
+  const [levels, setLevels] = useState<Record<string, string>>(() => {
+    const j = archetypes.find((x) => x.code === params.get("job"));
+    return levelsFor(j?.groups ?? jobGroups, (k) => params.get(k));
+  });
   const [scenario, setScenario] = useState<ScenarioCode>(() => {
     const s = params.get("s");
     return (CODES as string[]).includes(s ?? "") ? (s as ScenarioCode) : "S2";
@@ -271,6 +278,14 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
   const [insights, setInsights] = useState<{ job: string; data: JobInsights | null } | null>(null);
 
   const a = archetypes.find((x) => x.code === job)!;
+  // Jobs share five groups; each cohort (graduates, retirees, not working) brings its own.
+  const groups = a.groups ?? jobGroups;
+  /** Switching job keeps the traits both share (outlook, adaptability) and resets the rest. */
+  function pickJob(code: string) {
+    const next = archetypes.find((x) => x.code === code);
+    setJob(code);
+    setLevels(levelsFor(next?.groups ?? jobGroups, (k) => levels[k] ?? null));
+  }
   const id = workerId(job, groups, levels);
   const loading = result?.id !== id;
   const worker = result && !loading ? result.worker : null;
@@ -396,7 +411,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
         selected={[job]}
         summaryHref={`/?s=${scenario}`}
         detailsHref={`/details?job=${job}&s=${scenario}`}
-        onPick={setJob}
+        onPick={pickJob}
       />
 
       <main className="ws-main">
@@ -404,7 +419,7 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
           <label className="field ws-job-select">
             <span className="label">Job</span>
             <span className="select">
-              <select value={job} onChange={(e) => setJob(e.target.value)}>
+              <select value={job} onChange={(e) => pickJob(e.target.value)}>
                 {archetypes.map((x) => (
                   <option key={x.code} value={x.code}>
                     {x.job} · {SHORT_SECTOR[x.sector] ?? x.sector}
@@ -548,10 +563,12 @@ export function WorkerStudio({ archetypes, groups }: { archetypes: Archetype[]; 
       </main>
 
       <ControlPanel
+        a={a}
         groups={groups}
         levels={levels}
         onLevel={(g, l) => setLevels((s) => ({ ...s, [g]: l }))}
         worker={worker}
+        labels={a.factLabels}
       />
     </div>
   );

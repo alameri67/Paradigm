@@ -148,6 +148,14 @@ export const LEVEL_PHRASE: Record<string, Record<string, string>> = {
   cushion: { thin: "have thin savings", moderate: "have some savings", strong: "have strong savings" },
   outlook: { progressive: "lean progressive", centre: "sit in the political centre", traditional: "lean traditional" },
   adaptability: { resistant: "resist change", steady: "take change steadily", adaptive: "adapt easily" },
+  // Fresh graduates, retirees and people not in paid work
+  search: { noOffer: "have no job offer yet", firstJob: "have started a first job", study: "are in further study" },
+  degree: { pass: "finished with a pass", good: "finished with a good degree", top: "finished at the top of the class" },
+  health: { sixties: "are in their 60s", seventies: "are in their 70s", eighties: "are in their 80s" },
+  former: { trades: "worked in hands-on jobs", office: "worked in offices and services", professional: "worked as professionals" },
+  why: { seeking: "are looking for work", caring: "care for family at home", health: "cannot work because of health" },
+  duration: { recent: "stopped work recently", year: "have been out of work 1 to 2 years", long: "have been out of work for years" },
+  support: { alone: "live alone on benefits", partner: "have a partner who earns", family: "get help from family" },
 };
 /** The same, for "people who …" in the headline. */
 export const WHO_PHRASE: Record<string, Record<string, string>> = {
@@ -156,6 +164,13 @@ export const WHO_PHRASE: Record<string, Record<string, string>> = {
   cushion: { thin: "with thin savings", moderate: "with some savings", strong: "with strong savings" },
   outlook: { progressive: "who lean progressive", centre: "in the political centre", traditional: "who lean traditional" },
   adaptability: { resistant: "who resist change", steady: "who take change steadily", adaptive: "who adapt easily" },
+  search: { noOffer: "with no job offer yet", firstJob: "in a first job", study: "in further study" },
+  degree: { pass: "with a pass", good: "with a good degree", top: "with a top degree" },
+  health: { sixties: "in their 60s", seventies: "in their 70s", eighties: "in their 80s" },
+  former: { trades: "from hands-on jobs", office: "from office and service jobs", professional: "from professional careers" },
+  why: { seeking: "looking for work", caring: "caring at home", health: "unable to work through health" },
+  duration: { recent: "out of work recently", year: "out of work 1 to 2 years", long: "out of work long term" },
+  support: { alone: "living alone on benefits", partner: "with a partner who earns", family: "helped by family" },
 };
 /** What a group will do, as the end of "19 of 24 …". */
 export const ACTION_PHRASE: Record<string, string> = {
@@ -236,7 +251,7 @@ function segment(group: InterviewSummary[], moods: MoodKey[], code: ScenarioCode
   const levels: Segment["levels"] = {};
   const dominant: number[] = [];
   groups.forEach((g, i) => {
-    const counts = g.levels.map((_, li) => group.filter((p) => levelIdx(p.id, i) === li).length);
+    const counts = g.levels.map((_, li) => group.filter((p) => levelIdx(p.id, g.at ?? i) === li).length);
     const top = counts.indexOf(Math.max(...counts));
     levels[g.key] = Object.fromEntries(g.levels.map((l, li) => [l.key, counts[li]]));
     if (n && counts[top] / n >= 0.6) tops.push({ group: g.key, level: g.levels[top].key, count: counts[top] });
@@ -251,7 +266,7 @@ function segment(group: InterviewSummary[], moods: MoodKey[], code: ScenarioCode
     .slice(0, 3)
     .map(([tag, count]) => ({ tag, count, text: `${count === n ? `All ${n}` : `${count} of ${n}`} ${ACTION_PHRASE[tag] ?? tag.replace(/-/g, " ")}.` }));
   // The quote comes from the person who shares the most of this end's main traits, so it speaks for the group.
-  const typical = (p: InterviewSummary) => dominant.reduce((k, d, i) => k + (d >= 0 && levelIdx(p.id, i) === d ? 1 : 0), 0);
+  const typical = (p: InterviewSummary) => dominant.reduce((k, d, i) => k + (d >= 0 && levelIdx(p.id, groups[i].at ?? i) === d ? 1 : 0), 0);
   const pick = [...group].filter((p) => standsAlone(p.scenarios[code].quote)).sort((a, b) => typical(b) - typical(a) || a.id.localeCompare(b.id))[0];
   return {
     moods,
@@ -275,7 +290,7 @@ export function contrast(people: readonly InterviewSummary[], code: ScenarioCode
   const drivers = groups
     .map((g, i) => {
       const avg = g.levels.map((_, li) => {
-        const at = people.filter((p) => levelIdx(p.id, i) === li);
+        const at = people.filter((p) => levelIdx(p.id, g.at ?? i) === li);
         return at.length ? at.reduce((s, p) => s + worryOf(p.scenarios[code].mood), 0) / at.length : NaN;
       });
       const valid = avg.map((v, li) => ({ v, li })).filter((x) => !Number.isNaN(x.v));

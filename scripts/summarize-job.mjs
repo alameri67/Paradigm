@@ -5,13 +5,13 @@
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 
 const code = process.argv[2];
-if (!/^A\d{2}$/.test(code ?? "")) {
-  console.error("Usage: node scripts/summarize-job.mjs A01");
+if (!/^[AGRN]\d{2}$/.test(code ?? "")) {
+  console.error("Usage: node scripts/summarize-job.mjs A01 (or G01, R01, N01)");
   process.exit(1);
 }
 const root = new URL("../", import.meta.url).pathname;
 const rawDir = root + "data/interviews/archetypes/raw/";
-const grid = JSON.parse(readFileSync(root + "data/archetypes/grid.json", "utf8"));
+const grid = { groups: JSON.parse(readFileSync(root + "data/archetypes/archetypes-v1.json", "utf8")).archetypes.find((a) => a.code === code)?.groups ?? JSON.parse(readFileSync(root + "data/archetypes/grid.json", "utf8")).groups };
 const SCEN = ["S0", "S1", "S2", "S3", "S4"];
 const MOODS = ["calm", "uneasy", "anxious", "alarmed", "panicked"];
 

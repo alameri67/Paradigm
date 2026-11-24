@@ -63,7 +63,12 @@ const FIRST = {
 const LAST = ["Abbott", "Alvarez", "Baker", "Bauer", "Chen", "Costa", "Diaz", "Dubois", "Evans", "Farah", "Fischer", "Garcia", "Gupta", "Haddad", "Hansen", "Ibrahim", "Ito", "Jensen", "Khan", "Kowalski", "Larsen", "Lopez", "Mensah", "Moreau", "Nakamura", "Novak", "Okafor", "Olsen", "Patel", "Petrov", "Quinn", "Rahman", "Reyes", "Rossi", "Santos", "Schmidt", "Silva", "Tanaka", "Torres", "Usman", "Varga", "Wagner", "Walsh", "Weber", "Yilmaz", "Young", "Zhang", "Ziegler"];
 
 const people = [];
+/* Cohorts (graduates, retirees, people not in paid work) bring their own groups. Outlook and adaptability
+   stay in positions 4 and 5 so every cohort can be compared on them. */
+const STORY = ["status", "record", "health", "job", "reason", "time"];
+const story = (l) => STORY.map((k) => l[k]).find(Boolean) ?? "";
 for (const a of archetypes) {
+  const groups = a.groups ?? GROUPS;
   let n = 0;
   const idx = [0, 0, 0, 0, 0];
   for (idx[0] = 0; idx[0] < 3; idx[0]++)
@@ -71,12 +76,15 @@ for (const a of archetypes) {
       for (idx[2] = 0; idx[2] < 3; idx[2]++)
         for (idx[3] = 0; idx[3] < 3; idx[3]++)
           for (idx[4] = 0; idx[4] < 3; idx[4]++) {
-            const levels = Object.fromEntries(GROUPS.map((g, i) => [g.key, g.levels[idx[i]].key]));
+            const levels = Object.fromEntries(groups.map((g, i) => [g.key, g.levels[idx[i]].key]));
             const gender = n % 2 === 0 ? "F" : "M";
-            const k = Number(a.code.slice(1)) * 7 + n;
+            const k = (a.code.startsWith("A") ? 0 : a.code.charCodeAt(0) * 5) + Number(a.code.slice(1)) * 7 + n;
             const first = FIRST[gender][(k * 7) % FIRST[gender].length];
             const last = LAST[(k * 11 + Math.floor(n / 2)) % LAST.length];
-            const [ls, st, cu, ou, ad] = GROUPS.map((g, i) => g.levels[idx[i]]);
+            const [l0, l1, l2, ou, ad] = groups.map((g, i) => g.levels[idx[i]]);
+            const chosen = [l0, l1, l2];
+            const cohort = !!a.groups;
+            const pick = (k) => chosen.map((l) => l[k]).find(Boolean);
             people.push({
               id: `${a.code}-${idx.map((i) => i + 1).join("")}`,
               archetype: a.code,
@@ -86,18 +94,18 @@ for (const a of archetypes) {
               gender,
               levels,
               profile: {
-                age: ls.age,
-                household: ls.household,
-                seniority: st.seniority,
-                skill: st.skill,
-                education: a.education[idx[1]],
-                savings: cu.savings,
-                income: cu.income,
-                localJobs: cu.options,
+                age: pick("age"),
+                household: cohort ? pick("household") ?? story(l0) : l0.household,
+                seniority: cohort ? story(l0) : l1.seniority,
+                skill: cohort ? story(l1) : l1.skill,
+                education: a.education.length === 3 ? a.education[idx[1]] : a.education[0],
+                savings: l2.savings,
+                income: l2.income,
+                localJobs: l2.options ?? "",
                 views: ou.views,
                 adaptability: ad.traits,
-                aiExposure: `Thinking AI: ${a.exposure.ai}. Robots: ${a.exposure.robots}.`,
-                setting: a.setting,
+                aiExposure: pick("aiExposure") ?? `Thinking AI: ${a.exposure.ai}. Robots: ${a.exposure.robots}.`,
+                setting: pick("setting") ?? a.setting,
               },
             });
             n++;
@@ -105,4 +113,4 @@ for (const a of archetypes) {
 }
 
 writeFileSync(root + "grid.json", JSON.stringify({ version: "1.0", groups: GROUPS, people }, null, 1) + "\n");
-console.log(`${archetypes.length} archetypes × ${people.length / archetypes.length} versions = ${people.length} people`);
+console.log(`${archetypes.length} archetypes, ${people.length} people`);

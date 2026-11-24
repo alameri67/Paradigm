@@ -38,13 +38,25 @@ export interface Archetype {
   portraitGender: "F" | "M";
   /** Plural for headings, e.g. "family doctors". */
   plural: string;
+  /** Jobs are the default. Fresh graduates, retirees and people not in paid work are cohorts with their own trait groups. */
+  kind?: "graduates" | "retirees" | "not-working";
+  /** The cohort's own trait groups; jobs use the shared five. Outlook and adaptability are always 4th and 5th. */
+  groups?: Group[];
+  /** Panel fact labels for a cohort, e.g. "Degree" in place of "Education". */
+  factLabels?: { education?: string; exposure?: string };
 }
 
 /** The portrait that matches one worker's gender, if it exists yet. */
 export interface WorkerPortrait { url: string; cutout: string }
 
-export interface GroupLevel { key: string; label: string; [detail: string]: string }
-export interface Group { key: string; label: string; levels: GroupLevel[] }
+export interface GroupLevel { key: string; label: string; [detail: string]: string | number }
+export interface Group {
+  key: string;
+  label: string;
+  levels: GroupLevel[];
+  /** Position of this group in the ID digits, when a list holds only some of them (a mixed selection shares just outlook and adaptability). */
+  at?: number;
+}
 
 export interface WorkerProfile {
   age: number; household: string; seniority: string; skill: string; education: string;

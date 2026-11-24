@@ -7,4 +7,11 @@ export const GROUP_ICON: Record<string, IconName> = {
   cushion: "wallet",
   outlook: "compass",
   adaptability: "refresh",
+  search: "briefcase",
+  degree: "graduation",
+  health: "hourglass",
+  former: "briefcase",
+  why: "user",
+  duration: "calendar",
+  support: "wallet",
 };

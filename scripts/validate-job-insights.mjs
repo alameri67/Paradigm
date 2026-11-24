@@ -4,7 +4,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 
 const code = process.argv[2];
-if (!/^A\d{2}$/.test(code ?? "")) {
+if (!/^[AGRN]\d{2}$/.test(code ?? "")) {
   console.error("Usage: node scripts/validate-job-insights.mjs A03");
   process.exit(2);
 }
@@ -18,7 +18,7 @@ const norm = (s) => s.toLowerCase().replace(/[“”"‘’']/g, "").replace(/\s
 const people = readdirSync(root + "interviews/archetypes/raw")
   .filter((f) => f.startsWith(code + "-") && f.endsWith(".json"))
   .map((f) => JSON.parse(readFileSync(root + "interviews/archetypes/raw/" + f, "utf8")))
-  .filter((d) => d.protocolVersion === "3.1");
+  .filter((d) => d.protocolVersion === (code[0] === "A" ? "3.1" : "3.2"));
 const byId = new Map(people.map((p) => [p.id, p]));
 let ins;
 try {

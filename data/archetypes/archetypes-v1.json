@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "note": "Typical jobs per industry (one or more per sector). AI exposure comes with the job and does not vary. Education is given for low, mid and high work standing.",
+  "note": "Typical jobs per industry (one or more per sector). AI exposure comes with the job and does not vary. Education is given for low, mid and high work standing. Fresh-graduate (G), retiree (R) and not-working (N) cohorts have their own trait groups; outlook and adaptability stay in positions 4 and 5 so cohorts compare.",
   "archetypes": [
     {
       "code": "A01",
@@ -621,6 +621,859 @@
       "portraitGender": "M",
       "plural": "delivery drivers",
       "portraitFile": "delivery"
+    },
+    {
+      "code": "G01",
+      "kind": "graduates",
+      "sector": "Fresh graduates",
+      "job": "Fresh graduate in computing and engineering",
+      "setting": "Graduated in the last year with a computing, software, electrical, mechanical or civil engineering degree",
+      "exposure": {
+        "ai": "High",
+        "robots": "Low"
+      },
+      "education": [
+        "Bachelor's degree in computing or engineering, pass",
+        "Bachelor's degree in computing or engineering, good result",
+        "Bachelor's degree in computing or engineering, top of the class"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "computing and engineering graduates",
+      "groups": [
+        {
+          "key": "search",
+          "label": "Job search",
+          "levels": [
+            {
+              "key": "noOffer",
+              "label": "No offer yet",
+              "age": 23,
+              "household": "Living with family or sharing a rented room",
+              "status": "Applying for entry-level jobs; no offer yet, several months since graduating"
+            },
+            {
+              "key": "firstJob",
+              "label": "First job",
+              "age": 22,
+              "household": "Renting, often sharing",
+              "status": "Started a first full-time job in the last few months, on a graduate or entry-level contract"
+            },
+            {
+              "key": "study",
+              "label": "Further study",
+              "age": 24,
+              "household": "Student housing or with family",
+              "status": "Doing a master's or other postgraduate course; no full-time job yet"
+            }
+          ]
+        },
+        {
+          "key": "degree",
+          "label": "Degree standing",
+          "levels": [
+            {
+              "key": "pass",
+              "label": "Pass",
+              "record": "Passed with an average result, no internships"
+            },
+            {
+              "key": "good",
+              "label": "Good",
+              "record": "Good result and one short internship"
+            },
+            {
+              "key": "top",
+              "label": "Top",
+              "record": "Top of the class, strong references and two internships"
+            }
+          ]
+        },
+        {
+          "key": "cushion",
+          "label": "Money cushion",
+          "levels": [
+            {
+              "key": "thin",
+              "label": "Thin",
+              "savings": "Heavy student debt, under 1 month of expenses saved, no family help",
+              "income": "Low entry pay or none",
+              "options": "Few suitable openings nearby"
+            },
+            {
+              "key": "moderate",
+              "label": "Moderate",
+              "savings": "Some debt, 1 to 3 months saved, family can help in a pinch",
+              "income": "Typical entry pay",
+              "options": "Some suitable openings nearby"
+            },
+            {
+              "key": "strong",
+              "label": "Strong",
+              "savings": "No debt, over 6 months saved, family backing",
+              "income": "Good entry pay",
+              "options": "Plenty of suitable openings nearby"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Degree",
+        "exposure": "AI exposure of their field"
+      }
+    },
+    {
+      "code": "G02",
+      "kind": "graduates",
+      "sector": "Fresh graduates",
+      "job": "Fresh graduate in business, finance and accounting",
+      "setting": "Graduated in the last year with a business, economics, finance, accounting or marketing degree",
+      "exposure": {
+        "ai": "High",
+        "robots": "Low"
+      },
+      "education": [
+        "Bachelor's degree in business, finance or accounting, pass",
+        "Bachelor's degree in business, finance or accounting, good result",
+        "Bachelor's degree in business, finance or accounting, top of the class"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "business, finance and accounting graduates",
+      "groups": [
+        {
+          "key": "search",
+          "label": "Job search",
+          "levels": [
+            {
+              "key": "noOffer",
+              "label": "No offer yet",
+              "age": 23,
+              "household": "Living with family or sharing a rented room",
+              "status": "Applying for entry-level jobs; no offer yet, several months since graduating"
+            },
+            {
+              "key": "firstJob",
+              "label": "First job",
+              "age": 22,
+              "household": "Renting, often sharing",
+              "status": "Started a first full-time job in the last few months, on a graduate or entry-level contract"
+            },
+            {
+              "key": "study",
+              "label": "Further study",
+              "age": 24,
+              "household": "Student housing or with family",
+              "status": "Doing a master's or other postgraduate course; no full-time job yet"
+            }
+          ]
+        },
+        {
+          "key": "degree",
+          "label": "Degree standing",
+          "levels": [
+            {
+              "key": "pass",
+              "label": "Pass",
+              "record": "Passed with an average result, no internships"
+            },
+            {
+              "key": "good",
+              "label": "Good",
+              "record": "Good result and one short internship"
+            },
+            {
+              "key": "top",
+              "label": "Top",
+              "record": "Top of the class, strong references and two internships"
+            }
+          ]
+        },
+        {
+          "key": "cushion",
+          "label": "Money cushion",
+          "levels": [
+            {
+              "key": "thin",
+              "label": "Thin",
+              "savings": "Heavy student debt, under 1 month of expenses saved, no family help",
+              "income": "Low entry pay or none",
+              "options": "Few suitable openings nearby"
+            },
+            {
+              "key": "moderate",
+              "label": "Moderate",
+              "savings": "Some debt, 1 to 3 months saved, family can help in a pinch",
+              "income": "Typical entry pay",
+              "options": "Some suitable openings nearby"
+            },
+            {
+              "key": "strong",
+              "label": "Strong",
+              "savings": "No debt, over 6 months saved, family backing",
+              "income": "Good entry pay",
+              "options": "Plenty of suitable openings nearby"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Degree",
+        "exposure": "AI exposure of their field"
+      }
+    },
+    {
+      "code": "G03",
+      "kind": "graduates",
+      "sector": "Fresh graduates",
+      "job": "Fresh graduate in humanities, arts and social sciences",
+      "setting": "Graduated in the last year with a degree in languages, history, law, media, design, psychology, sociology or the arts",
+      "exposure": {
+        "ai": "High",
+        "robots": "Low"
+      },
+      "education": [
+        "Bachelor's degree in humanities, arts or social sciences, pass",
+        "Bachelor's degree in humanities, arts or social sciences, good result",
+        "Bachelor's degree in humanities, arts or social sciences, top of the class"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "humanities, arts and social sciences graduates",
+      "groups": [
+        {
+          "key": "search",
+          "label": "Job search",
+          "levels": [
+            {
+              "key": "noOffer",
+              "label": "No offer yet",
+              "age": 23,
+              "household": "Living with family or sharing a rented room",
+              "status": "Applying for entry-level jobs; no offer yet, several months since graduating"
+            },
+            {
+              "key": "firstJob",
+              "label": "First job",
+              "age": 22,
+              "household": "Renting, often sharing",
+              "status": "Started a first full-time job in the last few months, on a graduate or entry-level contract"
+            },
+            {
+              "key": "study",
+              "label": "Further study",
+              "age": 24,
+              "household": "Student housing or with family",
+              "status": "Doing a master's or other postgraduate course; no full-time job yet"
+            }
+          ]
+        },
+        {
+          "key": "degree",
+          "label": "Degree standing",
+          "levels": [
+            {
+              "key": "pass",
+              "label": "Pass",
+              "record": "Passed with an average result, no internships"
+            },
+            {
+              "key": "good",
+              "label": "Good",
+              "record": "Good result and one short internship"
+            },
+            {
+              "key": "top",
+              "label": "Top",
+              "record": "Top of the class, strong references and two internships"
+            }
+          ]
+        },
+        {
+          "key": "cushion",
+          "label": "Money cushion",
+          "levels": [
+            {
+              "key": "thin",
+              "label": "Thin",
+              "savings": "Heavy student debt, under 1 month of expenses saved, no family help",
+              "income": "Low entry pay or none",
+              "options": "Few suitable openings nearby"
+            },
+            {
+              "key": "moderate",
+              "label": "Moderate",
+              "savings": "Some debt, 1 to 3 months saved, family can help in a pinch",
+              "income": "Typical entry pay",
+              "options": "Some suitable openings nearby"
+            },
+            {
+              "key": "strong",
+              "label": "Strong",
+              "savings": "No debt, over 6 months saved, family backing",
+              "income": "Good entry pay",
+              "options": "Plenty of suitable openings nearby"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Degree",
+        "exposure": "AI exposure of their field"
+      }
+    },
+    {
+      "code": "G04",
+      "kind": "graduates",
+      "sector": "Fresh graduates",
+      "job": "Fresh graduate in health, education and sciences",
+      "setting": "Graduated in the last year with a degree in nursing, medicine-related studies, teaching, biology, chemistry, physics or environmental science",
+      "exposure": {
+        "ai": "Mid",
+        "robots": "Mid"
+      },
+      "education": [
+        "Bachelor's degree in health, education or sciences, pass",
+        "Bachelor's degree in health, education or sciences, good result",
+        "Bachelor's degree in health, education or sciences, top of the class"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "health, education and sciences graduates",
+      "groups": [
+        {
+          "key": "search",
+          "label": "Job search",
+          "levels": [
+            {
+              "key": "noOffer",
+              "label": "No offer yet",
+              "age": 23,
+              "household": "Living with family or sharing a rented room",
+              "status": "Applying for entry-level jobs; no offer yet, several months since graduating"
+            },
+            {
+              "key": "firstJob",
+              "label": "First job",
+              "age": 22,
+              "household": "Renting, often sharing",
+              "status": "Started a first full-time job in the last few months, on a graduate or entry-level contract"
+            },
+            {
+              "key": "study",
+              "label": "Further study",
+              "age": 24,
+              "household": "Student housing or with family",
+              "status": "Doing a master's or other postgraduate course; no full-time job yet"
+            }
+          ]
+        },
+        {
+          "key": "degree",
+          "label": "Degree standing",
+          "levels": [
+            {
+              "key": "pass",
+              "label": "Pass",
+              "record": "Passed with an average result, no internships"
+            },
+            {
+              "key": "good",
+              "label": "Good",
+              "record": "Good result and one short internship"
+            },
+            {
+              "key": "top",
+              "label": "Top",
+              "record": "Top of the class, strong references and two internships"
+            }
+          ]
+        },
+        {
+          "key": "cushion",
+          "label": "Money cushion",
+          "levels": [
+            {
+              "key": "thin",
+              "label": "Thin",
+              "savings": "Heavy student debt, under 1 month of expenses saved, no family help",
+              "income": "Low entry pay or none",
+              "options": "Few suitable openings nearby"
+            },
+            {
+              "key": "moderate",
+              "label": "Moderate",
+              "savings": "Some debt, 1 to 3 months saved, family can help in a pinch",
+              "income": "Typical entry pay",
+              "options": "Some suitable openings nearby"
+            },
+            {
+              "key": "strong",
+              "label": "Strong",
+              "savings": "No debt, over 6 months saved, family backing",
+              "income": "Good entry pay",
+              "options": "Plenty of suitable openings nearby"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Degree",
+        "exposure": "AI exposure of their field"
+      }
+    },
+    {
+      "code": "R01",
+      "kind": "retirees",
+      "sector": "Retirees",
+      "job": "Retiree",
+      "setting": "Retired from paid work and living on a pension",
+      "exposure": {
+        "ai": "Mid",
+        "robots": "Mid"
+      },
+      "education": [
+        "Secondary school, then a trade",
+        "Secondary school or a two-year college diploma",
+        "Bachelor's degree or higher"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "retirees",
+      "groups": [
+        {
+          "key": "health",
+          "label": "Age and health",
+          "levels": [
+            {
+              "key": "sixties",
+              "label": "60s",
+              "age": 64,
+              "household": "Lives with a partner, or alone",
+              "health": "Healthy and active; retired in the last few years"
+            },
+            {
+              "key": "seventies",
+              "label": "70s",
+              "age": 74,
+              "household": "Lives with a partner, or widowed",
+              "health": "Mostly well, a few long-term conditions"
+            },
+            {
+              "key": "eighties",
+              "label": "80s",
+              "age": 84,
+              "household": "Often widowed; family or paid help nearby",
+              "health": "Frail, needs help with some daily tasks"
+            }
+          ]
+        },
+        {
+          "key": "former",
+          "label": "Former work",
+          "levels": [
+            {
+              "key": "trades",
+              "label": "Hands-on",
+              "job": "Worked in a hands-on trade or manual job for most of their life",
+              "aiExposure": "Thinking AI: Low. Robots: High.",
+              "setting": "Retired from a hands-on trade or manual job"
+            },
+            {
+              "key": "office",
+              "label": "Office and service",
+              "job": "Worked in an office, shop or service job",
+              "aiExposure": "Thinking AI: High. Robots: Low.",
+              "setting": "Retired from an office, shop or service job"
+            },
+            {
+              "key": "professional",
+              "label": "Professional",
+              "job": "Worked in a profession or ran a business",
+              "aiExposure": "Thinking AI: High. Robots: Low.",
+              "setting": "Retired from a professional career or ran their own business"
+            }
+          ]
+        },
+        {
+          "key": "cushion",
+          "label": "Money cushion",
+          "levels": [
+            {
+              "key": "thin",
+              "label": "Pension only",
+              "savings": "State or basic pension only, under 1 month of expenses saved",
+              "income": "Low fixed income"
+            },
+            {
+              "key": "moderate",
+              "label": "Pension and savings",
+              "savings": "Pension plus 1 to 6 months or more of savings and a paid-off home",
+              "income": "Comfortable fixed income"
+            },
+            {
+              "key": "strong",
+              "label": "Wealthy",
+              "savings": "Large pension, investments and property",
+              "income": "High income from assets"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Education",
+        "exposure": "AI exposure of their former work"
+      }
+    },
+    {
+      "code": "N01",
+      "kind": "not-working",
+      "sector": "Not in paid work",
+      "job": "Person not in paid work",
+      "setting": "Not in paid work: out of a job and looking, caring at home, or unable to work through health",
+      "exposure": {
+        "ai": "Mid",
+        "robots": "Mid"
+      },
+      "education": [
+        "Secondary school, then a mix of jobs and short courses"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "people not in paid work",
+      "groups": [
+        {
+          "key": "why",
+          "label": "Why not working",
+          "levels": [
+            {
+              "key": "seeking",
+              "label": "Looking for work",
+              "age": 34,
+              "reason": "Out of work and looking; was employed until recently, wants a job again"
+            },
+            {
+              "key": "caring",
+              "label": "Caring at home",
+              "age": 41,
+              "reason": "Looks after children or an older relative full time, no paid job"
+            },
+            {
+              "key": "health",
+              "label": "Health or disability",
+              "age": 47,
+              "reason": "Cannot work at present because of a long-term illness or disability"
+            }
+          ]
+        },
+        {
+          "key": "duration",
+          "label": "How long",
+          "levels": [
+            {
+              "key": "recent",
+              "label": "Just stopped",
+              "time": "Out of paid work for under 6 months"
+            },
+            {
+              "key": "year",
+              "label": "1 to 2 years",
+              "time": "Out of paid work for 1 to 2 years"
+            },
+            {
+              "key": "long",
+              "label": "Long term",
+              "time": "Out of paid work for over 3 years; skills and contacts have faded"
+            }
+          ]
+        },
+        {
+          "key": "support",
+          "label": "Household support",
+          "levels": [
+            {
+              "key": "alone",
+              "label": "Alone",
+              "savings": "Lives alone on benefits, no savings",
+              "income": "Benefits only"
+            },
+            {
+              "key": "partner",
+              "label": "Partner earns",
+              "savings": "A partner's pay covers the basics, a little savings",
+              "income": "One partner's wage and some benefits"
+            },
+            {
+              "key": "family",
+              "label": "Family helps",
+              "savings": "Family covers rent and bills when needed, modest savings",
+              "income": "Benefits plus family help"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Education",
+        "exposure": "AI exposure of their last or wanted job"
+      }
     }
   ]
 }

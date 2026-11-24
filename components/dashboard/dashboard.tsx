@@ -456,7 +456,13 @@ export function Dashboard({
   const points = useMemo(() => pointsFor(shown, scenario), [shown, scenario]);
   const selected = useMemo(() => points.filter((p) => inBrush(p, brush)).map((p) => p.person), [points, brush]);
   const summary = useMemo(() => summarize(selected, scenario), [selected, scenario]);
-  const ends = useMemo(() => contrast(selected, scenario, groups), [selected, scenario, groups]);
+  // Jobs share five groups and each cohort has its own. A mixed selection can only be compared on what they all share: outlook and adaptability.
+  const selGroups = useMemo(() => {
+    const sets = new Set(selected.map((p) => archetypes.find((a) => a.code === p.archetype)?.groups?.map((g) => g.key).join() ?? "jobs"));
+    if (sets.size <= 1) return archetypes.find((a) => a.code === selected[0]?.archetype)?.groups ?? groups;
+    return groups.map((g, i) => ({ ...g, at: i })).filter((g) => g.key === "outlook" || g.key === "adaptability");
+  }, [selected, archetypes, groups]);
+  const ends = useMemo(() => contrast(selected, scenario, selGroups), [selected, scenario, selGroups]);
   const thinks = useMemo(() => thoughtsFor(selected, scenario, notes), [selected, scenario, notes]);
   // The job summary names the two ends, so use it only when everyone shown is one job and nothing is dragged.
   const oneJob = selected.length > 0 && selected.every((p) => p.archetype === selected[0].archetype) ? selected[0].archetype : null;
@@ -644,7 +650,7 @@ export function Dashboard({
             <PersonPop
               person={openPerson}
               archetype={archetypes.find((a) => a.code === openPerson.archetype)}
-              groups={groups}
+              groups={archetypes.find((a) => a.code === openPerson.archetype)?.groups ?? groups}
               scenario={scenario}
               at={open!.at}
               onClose={closePop}

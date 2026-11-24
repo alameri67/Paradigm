@@ -1,8 +1,11 @@
 "use client";
 
+import { Fragment } from "react";
 import Link from "next/link";
 import type { Archetype } from "@/lib/workers/types";
 import { Avatar, SHORT_SECTOR } from "./avatar";
+
+const COHORT_HEADING = { graduates: "Fresh graduates", retirees: "Retirees", "not-working": "Not in paid work" } as const;
 
 /**
  * The left-hand job list, shared by the summary (/) and the details page (/details).
@@ -58,13 +61,16 @@ export function JobSidebar({
           </span>
         )}
       </div>
-      {archetypes.map((x) => {
+      {archetypes.map((x, i) => {
+        // Fresh graduates, retirees and people not in paid work each get a heading above their first row.
+        const heading = x.kind && x.kind !== archetypes[i - 1]?.kind ? COHORT_HEADING[x.kind] : null;
         const on = selected.includes(x.code);
         const n = counts[x.code] ?? 0;
         const off = multi && !n;
         return (
+          <Fragment key={x.code}>
+          {heading && <h2 className="label ws-jobs-sub">{heading}</h2>}
           <button
-            key={x.code}
             type="button"
             className={"ws-job" + (on ? " on" : "") + (multi ? " js-multi" : "")}
             aria-pressed={multi ? on : undefined}
@@ -84,6 +90,7 @@ export function JobSidebar({
               {n || "–"}
             </span>
           </button>
+          </Fragment>
         );
       })}
     </nav>
