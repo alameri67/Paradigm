@@ -1,0 +1,557 @@
+{
+  "id": "R01-11132",
+  "archetype": "R01",
+  "job": "Retiree",
+  "sector": "Retirees",
+  "name": "Erik Garcia",
+  "levels": {
+    "health": "sixties",
+    "former": "trades",
+    "cushion": "thin",
+    "outlook": "traditional",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.2",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for talking with me. I'm a field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Tell me about a normal day in your life now, and what your working life was like."
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm up at six and out to the yard behind my sons' office by seven, where I sit with a coffee and watch the crews load the trucks. I don't work any more, but I like being near it. My wife Carmen and I have lunch together, then I do the garden. I was a roofer for forty-three years, slate and tile, and I came off the roofs at sixty-three when my balance wasn't what it was."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What do you miss about the roofs, and what do you not miss?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I started as a labourer at seventeen and worked up to site foreman. It was hard, hot, cold, wet, and I wouldn't change a day. My two sons, Marco and Luis, took over the firm from the old owner and I helped them get started. They pay me nothing, which is how I want it. I live on a basic pension and Carmen has a small one, so we don't have much, but we have family close."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say, good. It's what I thought. Every few years a new thing is going to change the world, and it never does as much as they say. At the yard I'd say a roof still has to be built by someone climbing up with a hammer. I'd say let's get on with the job."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For me, it changes nothing. I'm retired, my sons are running the business, and I get my pension. What I think about is prices. Carmen and I spend about 1,500 a month, and the pensions bring in 1,550, so there's almost nothing to spare. If food and fuel get dearer, we feel it right away."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd carry on the same way. I'd go to the yard each morning, give the lads advice, and do the garden. I'd keep an eye on the accounts, since Marco's not great with the paperwork. I do use the assistant my grandson set up, a bit, to price slate and write quotes. It saves time, and I'm not too proud to use it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels fine, steady. I'm not excited about it. I'm a man who likes to see a thing work before I believe it. The main worry is that a decent man can't put by anything on a pension, but that's been true a long time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd work a day or two a week if the pension fell short. Could your body manage that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If the pension stopped keeping up, I'd go back to doing some little job, maybe a day or two a week on site, supervising. I'd hate to ask my sons for money, but I would if I had to. I'd rather work for it. Free handouts and favours aren't how I was raised."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Marco says the assistant saves him two hours a week. What does he do with those hours?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If AI does only some routine things, I'd say let it do the invoices and ordering. It leaves the lads free to be on the roof. Marco says the assistant's already saved him two hours a week on quotes. If that's all it does, it's a decent helper and no more."
+        }
+      ],
+      "say": [
+        "I'd say a roof still has to be built by someone **climbing up** with a hammer.",
+        "I'd say let's get on with the **job**."
+      ],
+      "think": [
+        "It changes **nothing** for me, but prices hit us right away since we spend nearly all our income.",
+        "A decent man can't put by anything on a **pension**."
+      ],
+      "do": [
+        "Go to the **yard** each morning and advise the crews.",
+        "Check **Marco's** accounts and use the assistant to price slate and write quotes.",
+        "Work a day or two a week **supervising** if the pension falls short."
+      ],
+      "feel": [
+        "It feels **steady**, and I like to see a thing work before I believe it."
+      ],
+      "mood": "uneasy",
+      "quote": "I'm a man who likes to see a thing work before I believe it.",
+      "fieldNote": [
+        "Pride in **work over handouts**, even in retirement.",
+        "Uses the assistant for quotes without fuss.",
+        "Spends nearly all his pension, so **prices** matter more than any technology to him."
+      ],
+      "actions": [
+        "keep-going",
+        "learn-ai",
+        "side-income"
+      ],
+      "steps": [
+        {
+          "text": "Keep going to the yard each morning to advise the crews",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Use the assistant to price slate and write quotes for Marco",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Supervise on site one or two days a week if the pension falls short",
+          "tag": "side-income"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say, good, we'll see. The office folk are going to have a shock, and I'd say plenty of them could do with an honest day's work. But I'd also say the firm should train its people, not just let them go. A man who's worked for you for ten years deserves a chance."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For me it's decent news, honestly. The roofs won't be done by a machine for a long while, and my sons' firm gets help with quotes, ordering and scheduling. Marco says they might save a whole office job. I'd worry though that homes and building might slow if office people lose jobs and stop buying houses."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd help Marco and Luis use the tools well. I'd sit with them and go through how they price jobs, since I know what a roof really costs, and the assistant doesn't always. I'd ask them to take on two more young lads as apprentices, because the skilled hands are what the firm sells. And I'd tell the lads to learn the tools too."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels like a good wind for us, but I'd keep my eyes open. I don't trust a good wind that blows for everyone, there's always someone getting rained on. It makes me think of the lads who lost their jobs at the brickworks."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you don't trust a wind that blows for everyone. Who gets rained on?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If office jobs vanished, I'd worry for my niece Isabel (Carmen's niece), who works in a bank. I'd say she should think about a trade or something hands-on. She'd laugh, but a good plumber never lacks work. I'd tell her that over Sunday lunch, and I'd mean it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you say to Isabel about a trade if she lost her bank job?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say to the government, don't hand out money for nothing. Help people learn a trade, and help firms take on apprentices. That's what works. A man with a skill and a tool can stand on his own, and that's better than any handout."
+        }
+      ],
+      "say": [
+        "I'd say the firm should **train** its people, not just let them go.",
+        "I'd say the government should help firms take on **apprentices**."
+      ],
+      "think": [
+        "The roofs won't be done by a machine for a long while, which is **decent news** for my sons' firm.",
+        "If office people lose jobs, **house building** might slow."
+      ],
+      "do": [
+        "Go through how my sons **price jobs** because the assistant doesn't always know the real cost.",
+        "Ask Marco and Luis to take on two more **apprentices**.",
+        "Tell my niece **Isabel** to think about a trade."
+      ],
+      "feel": [
+        "It feels like a **good wind** for us, but I'd keep my eyes open."
+      ],
+      "mood": "uneasy",
+      "quote": "A man with a skill and a tool can stand on his own, and that's better than any handout.",
+      "fieldNote": [
+        "Sees **opportunity** for his sons' firm, but not for office workers.",
+        "Believes in apprenticeships and skills over handouts.",
+        "Mind on his niece, the banker, whom he would steer toward a **trade**."
+      ],
+      "actions": [
+        "family-plans",
+        "learn-ai",
+        "politics",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Go through job pricing with Marco and Luis using the assistant",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask my sons to take on two apprentices",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Back the council's apprenticeship funding at the next meeting",
+          "tag": "politics"
+        },
+        {
+          "text": "Keep advising the crews at the yard each morning",
+          "tag": "keep-going"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's moving too fast for anyone to catch their breath. I'd say two years isn't enough, and the government should tell people straight what's coming. I'd say families should stick together, work should come before handouts, but there should be a safety net for those who can't work."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I'm worried. If the thinking jobs go in two years, the banks, the offices, the councils, lots of people lose their pay. They stop buying houses, they stop building. The roofs go quiet. The pension might get hit as well, since it's paid from the taxes of those people. And my savings are nothing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd put a bit by every week, even 20 if I can. I'd talk to Marco and Luis about what they'd do if work slowed. I'd suggest they move into repairs and maintenance, which always get work. I'd ask Carmen to be careful with spending. And I'd try to find a few small jobs, like helping a neighbour, to bring in cash."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels like standing on a roof when the wind changes. You hold on tight, get low, and wait. I'm not panicking but my stomach isn't happy. I'd keep a steady face for Carmen."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said the roofs go quiet if people can't pay. What did you see in the last recession?"
+        },
+        {
+          "speaker": "persona",
+          "text": "With two years the hands-on robots arrive later, in about five, so our roofs are safe a while. But the work only comes if people can pay for it. If half the town's out of a job, nobody's fixing roofs. That's the thing that frightens me, not the robots."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would your sons say if you told them to move into repairs?"
+        },
+        {
+          "speaker": "persona",
+          "text": "What I'd tell Marco is, keep a good cash reserve, be careful about taking on debt, and do small jobs for decent pay. I'd say don't get greedy, and keep the old customers happy. That's how we got through the last recession, and it'll be how we get through this."
+        }
+      ],
+      "say": [
+        "I'd say **two years** isn't enough and the government should tell people straight what's coming.",
+        "I'd say work comes before handouts, but there should be a **safety net**."
+      ],
+      "think": [
+        "If thinking jobs go, people stop buying **houses** and the roofs go quiet.",
+        "The **pension** might be hit as well, since it's paid from those people's taxes."
+      ],
+      "do": [
+        "Put by **20 a week** if I can and ask Carmen to be careful.",
+        "Suggest Marco and Luis move into **repairs** and maintenance.",
+        "Find a few small **jobs** to bring in cash."
+      ],
+      "feel": [
+        "It feels like standing on a roof when the **wind changes**."
+      ],
+      "mood": "anxious",
+      "quote": "The work only comes if people can pay for it. If half the town's out of a job, nobody's fixing roofs.",
+      "fieldNote": [
+        "His fear is **demand**, not robots: no paying customers means no roofs.",
+        "Draws on the last recession for advice to his sons.",
+        "Holds a steady face for his wife."
+      ],
+      "actions": [
+        "save-more",
+        "family-plans",
+        "side-income",
+        "cut-spending"
+      ],
+      "steps": [
+        {
+          "text": "Put 20 a week into a savings account",
+          "tag": "save-more"
+        },
+        {
+          "text": "Urge Marco and Luis to move into roof repairs and maintenance",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Take small neighbour jobs for cash",
+          "tag": "side-income"
+        },
+        {
+          "text": "Ask Carmen to trim the weekly spending",
+          "tag": "cut-spending"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Five years, I'd say that's enough to get ready if people are sensible. I'd tell the government to cut the red tape for firms that take on apprentices. I'd say families should plan together. And I'd say the old and the young should look after each other."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately, I'd be worried but not scared. I'd be sixty-eight and Carmen sixty-five, so we'd still be around. Five years lets my sons build up their reserve and take on young blood. I'd also have time to put a little aside, if I'm disciplined, and I am."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd start saving 30 a month right away. I'd get the assistant to show me how to run the firm's cash flow so I could help Marco plan ahead. I'd ask my sons to take on three apprentices over the five years, so we have skilled hands when the building boom or bust comes. And I'd put in a little time at the local trade school, talking to the youngsters."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels like a storm warning. You see the clouds, you pull the tarps tight. I'm not happy, but I'm ready to work. A man always feels better with a task."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you teach your grandson about reading a roof?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Five years makes it a plan, not a scramble. With two years I'd just cut costs and wait. With five I can build and teach. I'd say it's the difference between running from the rain and putting up a roof."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How would the trade school talks work, and who would you reach?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell my grandson Mateo, he's twelve, that the best thing he can do is learn a trade and learn the tools. A roofer who can also use a drone and an assistant will always have work. I'd teach him how to read a roof, and he'd teach me how to use the drone. That's a fair swap."
+        }
+      ],
+      "say": [
+        "I'd tell the government to cut **red tape** for firms taking on apprentices.",
+        "I'd say the old and young should **look after** each other."
+      ],
+      "think": [
+        "I'd be **worried but not scared**, with time for my sons to build a reserve.",
+        "I'd have time to put a little aside, if I'm **disciplined**."
+      ],
+      "do": [
+        "Save **30 a month** and use the assistant to help Marco plan cash flow.",
+        "Ask my sons to take on **three apprentices** over five years.",
+        "Talk to youngsters at the local **trade school**."
+      ],
+      "feel": [
+        "It feels like a **storm warning**: you see the clouds and pull the tarps tight."
+      ],
+      "mood": "anxious",
+      "quote": "Five years makes it a plan, not a scramble.",
+      "fieldNote": [
+        "Time converts his fear into **apprenticeships** and saving.",
+        "Swaps trade knowledge for drone knowledge with his grandson.",
+        "Uses roofing metaphors for everything, and speaks of the future as a **job** to plan."
+      ],
+      "actions": [
+        "save-more",
+        "learn-ai",
+        "family-plans",
+        "keep-going"
+      ],
+      "steps": [
+        {
+          "text": "Save 30 a month in the post office",
+          "tag": "save-more"
+        },
+        {
+          "text": "Learn the assistant's cash flow tools to help Marco plan",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Ask my sons to take on three apprentices over five years",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Talk to students at the local trade school about roofing",
+          "tag": "keep-going"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Ten years, I'd say that's long enough to build a good plan. I'd tell the government and the firms to start training the young now. I'd say that the old should pass on what they know. A decade is a whole generation of apprentices."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd feel pretty steady. I'd be seventy-three, Carmen seventy. The firm would be in my sons' hands for ten more years and then my grandsons'. I'd hope it's stronger by then. The worry would be keeping up with prices and my health, but I'd have time to prepare."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd go on with my morning at the yard, passing on what I know. I'd save 20 a month and keep a little cash for emergencies. I'd help Marco and Luis build the firm into a proper business with maintenance contracts, which bring steady income. I'd teach the grandkids to read a roof. And I'd keep using the assistant."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels like looking at a long road. Plenty of time, but not forever. I'm calmer than with the short ones. It's good to have time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Ten years is the longest warning. What would you build with it that two years wouldn't allow?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The extra time lets us pick the right moves. If we've got ten years, I'd tell my sons to invest in a drone and a good tablet system, to be ahead of the game. With two years I'd say save money and hold tight. Ten years is for building, not for panicking."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What does a maintenance contract mean for a roofing firm?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say to the next generation, work hard, save a bit, look after your family, and keep your word. Those things don't go out of date. A robot can lay a slate, but it can't shake a customer's hand and be trusted. Not yet, anyway."
+        }
+      ],
+      "say": [
+        "I'd say the old should **pass on** what they know.",
+        "I'd say a decade is a whole generation of **apprentices**."
+      ],
+      "think": [
+        "I'd feel **steady**, with the firm passing to my grandsons.",
+        "The worry would be **prices** and my health, but I'd have time to prepare."
+      ],
+      "do": [
+        "Keep going to the **yard** each morning and pass on what I know.",
+        "Save **20 a month** and keep a little cash for emergencies.",
+        "Help my sons build **maintenance contracts** for steady income."
+      ],
+      "feel": [
+        "It feels like looking at a **long road**, calmer than with the short ones."
+      ],
+      "mood": "uneasy",
+      "quote": "A robot can lay a slate, but it can't shake a customer's hand and be trusted. Not yet, anyway.",
+      "fieldNote": [
+        "With ten years he turns to **building**, not panic.",
+        "Values handshake trust as the work no machine owns, yet adds 'not yet'.",
+        "Looks to his grandsons as the next owners."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more",
+        "family-plans",
+        "invest"
+      ],
+      "steps": [
+        {
+          "text": "Keep going to the yard each morning to pass on knowledge",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save 20 a month and keep emergency cash",
+          "tag": "save-more"
+        },
+        {
+          "text": "Teach the grandchildren to read a roof",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Urge my sons to buy a drone and start maintenance contracts",
+          "tag": "invest"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The two-year one, because if the offices fail fast, nobody can pay for roofs and the pension takes a hit. What would help is a government that backs apprenticeships, keeps taxes sensible, and has a safety net for people who truly can't work. And families sticking together."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Only that people like me aren't against change. We're against being told what to do by people who've never worked a day. We know when the phones stop ringing. If you want to know what happens in a recession, ask a roofer."
+    }
+  ],
+  "headlineQuote": "We know when the phones stop ringing. If you want to know what happens in a recession, ask a roofer.",
+  "portrait": [
+    "Erik is **64**, a retired roofer living with his wife Carmen, close to his sons' roofing firm.",
+    "He is **traditional**: work before handouts, apprentices, family and a safety net for those who can't work.",
+    "He uses the assistant for quotes and trusts it in small doses, a **steady** adapter.",
+    "His fear is that if offices fail, **nobody** can pay for roofs, and the pension takes a hit."
+  ],
+  "biggestWorry": [
+    "Two years worries him most, because **customers** would stop paying and the pension would be hit."
+  ],
+  "whatWouldHelp": [
+    "Government backing for **apprenticeships**, sensible taxes and a safety net."
+  ]
+}

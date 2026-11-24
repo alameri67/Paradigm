@@ -1,0 +1,557 @@
+{
+  "id": "R01-11111",
+  "archetype": "R01",
+  "job": "Retiree",
+  "sector": "Retirees",
+  "name": "Jade Olsen",
+  "levels": {
+    "health": "sixties",
+    "former": "trades",
+    "cushion": "thin",
+    "outlook": "progressive",
+    "adaptability": "resistant"
+  },
+  "protocolVersion": "3.2",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for talking with me. I'm a field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and, separately, what you really think. Tell me about a normal day in your life now, and what your working life was like."
+    },
+    {
+      "speaker": "persona",
+      "text": "I get up at six out of habit, thirty-eight years of shipyard shifts will do that. Pat (my partner) and I have tea, then I walk down Dock Street to the union hall and help the older retirees with forms for their pensions. In the afternoon I do the crossword and a bit of allotment digging. I welded hulls at the Calder yard from the age of twenty-three until my shoulder gave out at sixty-one."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What was the hardest part of the job, and what do you miss now that it's over?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The work was hard but I was proud of it. I was a shop steward for twenty years, so I spent half my breaks arguing with managers about safety gear. We never earned much, and the pension I get now is a basic one. I've got about three weeks of spending in the bank and that's it, so every month I count."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say good, let the hype die down, we've had a hundred overhyped things before. At the hall, the lads would laugh and say it's another fashion. I'd still tell people to keep an eye on who owns whatever it is, because the owners always pocket the savings."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately I think it means very little for me. I'm on a fixed pension, so what hits me is the rent and the gas bill, not some program. Pat and I pay 640 a month for our flat and that's nearly half of what we bring in. Nothing changing means that squeeze keeps going."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd carry on exactly as now. I'd keep helping with pension forms at the hall on Tuesdays and Thursdays. I'd keep the allotment going because the vegetables save us about 20 a week. If prices creep up I'd cut the telly package first, since we only watch the news anyway."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels fine, honestly, a bit boring. But it's not calm, because I never feel fully calm on this money. One boiler breakdown and I'm borrowing from my sister. So it's a low hum of worry, same as always."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said the hum of worry is always there. What was the last time it got loud, and what happened?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If the rent went up by a hundred, we'd be stuck. Pat has a small survivor pension from her late first husband, about 90 a month, and that's what covers the extras. We would drop the phone line and use only the mobiles. Beyond that, I'd go and ask the council about help with housing costs."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You mentioned the planning clerks. Who in particular would you worry about?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If a clever program did my old job, I'd be surprised. Welding a curved hull in a cold dock isn't something a screen does. But the planning office upstairs, those people might go. I'd feel sorry for the clerks I knew, not for the welders."
+        }
+      ],
+      "say": [
+        "I'd say it's **hype** and we've seen fashions come and go before.",
+        "I'd tell the lads at the hall to watch who **owns** it and pockets the savings."
+      ],
+      "think": [
+        "Privately I know my real worry is the **rent**, not any computer program.",
+        "One broken boiler would push us into **borrowing** from my sister."
+      ],
+      "do": [
+        "Keep helping with **pension forms** at the union hall twice a week.",
+        "Keep the **allotment** going to save around 20 a week on vegetables.",
+        "Drop the **telly package** first if prices creep up."
+      ],
+      "feel": [
+        "It feels **boring** but safe, with a low hum of money worry underneath."
+      ],
+      "mood": "uneasy",
+      "quote": "I never feel fully calm on this money. One boiler breakdown and I'm borrowing from my sister.",
+      "fieldNote": [
+        "Her worry is **rent** and bills, not AI, which she barely thinks about.",
+        "Pride in the trade; sees office staff as the ones exposed.",
+        "Gap between a calm tone and constant counting of money."
+      ],
+      "actions": [
+        "keep-going",
+        "cut-spending",
+        "seek-support"
+      ],
+      "steps": [
+        {
+          "text": "Keep helping with pension forms at the union hall twice a week",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Cancel the telly package if prices rise",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Ask the council about housing cost help if rent goes up",
+          "tag": "seek-support"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say this is where the owners need watching. If a program writes and checks and books for the firms, the firm saves, and the workers get nothing unless there's a union deal. I'd be at the hall telling people to get their rep to ask what is being automated. We learned that lesson with the cranes."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "For me, honestly, not much directly. I'm retired and I weld, I don't type. But my niece Kelsey (my sister's daughter) works in an insurance office, and her whole day is checking claims. I think she'll be one of the ones who gets squeezed, and my sister would lean on us for money again."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep my head down and watch what happens to Kelsey. I'd make sure she's got a union card, even if it's a new one for her. I'd go on with the pension forms, and I'd start pushing the hall to ask the council what happens to people who lose office jobs. I won't touch the new tools myself, I don't see why I should."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels like the same old story. Something good that's built by workers' hands ends up making money for people far away. I'm angry, but it's the kind of anger I've carried since the yard closed its second dock. I don't lie awake over it yet."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you'd have your niece stay. What would that change in your home?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If Kelsey lost her job, I'd have her stay with us for a few months. We'd squeeze, there's a spare room with a bed that Pat's grandson uses on weekends. It would cost maybe 60 more a week in food. I'd cut the allotment seed budget and the bus pass to find it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you won't touch the tools. What if the pension office only worked through them?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I've never used one of these things and I don't plan to. At sixty-four I don't see why I'd start. If it matters, Pat's grandson Liam (her grandson) can look things up for us. I'd rather trust a person at the hall than a screen telling me about my pension."
+        }
+      ],
+      "say": [
+        "I'd tell people to get their **union rep** asking what is being automated.",
+        "I'd say the firms save money and **workers** get nothing without a deal."
+      ],
+      "think": [
+        "I don't fear for my own work, but for my niece **Kelsey** in the insurance office.",
+        "If she lost her job, my sister would lean on us for **money** again."
+      ],
+      "do": [
+        "Push the hall to ask the council about people losing **office jobs**.",
+        "Offer our spare room to my niece for **three months** if needed.",
+        "Skip new tools and keep using **people** I trust for forms."
+      ],
+      "feel": [
+        "I feel the same **old anger** I've carried since the yard closed a dock."
+      ],
+      "mood": "anxious",
+      "quote": "Something good that's built by workers' hands ends up making money for people far away.",
+      "fieldNote": [
+        "Frames everything as **owners** versus workers.",
+        "Her exposure is indirect, through family who work at desks.",
+        "Firmly refuses to learn the tools, and that is a plan, not ignorance."
+      ],
+      "actions": [
+        "collective-action",
+        "seek-support",
+        "cut-spending",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Push the union hall to ask the council about office job losses",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Offer the spare room to my niece Kelsey for three months",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Cut the bus pass and seed budget to cover extra food",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Ask the hall volunteers for help if the pension office goes online only",
+          "tag": "seek-support"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd be on the phone to every person I know. Two years is nothing. I'd say governments have got to take the money these machines make and pay everybody, and the owners should pay first. I'd say it loud at the hall and I'd write to the council member, the old way, with a stamp."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I think this is the one that frightens me. My pension is paid out of taxes and tax comes from wages. If wages fall off a cliff, who's paying us? Pat and I have no savings to speak of, so there's nothing between us and a bad year. And I won't be able to do a thing about it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd turn up to every meeting the union hall holds. I'd collect names for a petition on a basic income, and I'd ask my sister about moving in together to share rent. We'd have to give up the flat, which breaks my heart a bit. I'd also stop buying anything that isn't food or heating."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels frightening, to be honest. A cold feeling, like the dock before the shift whistle goes and you don't know if it's your last. I'd not sleep well. I'd be angry at the ministers who knew and did nothing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Two years is the shortest warning. What does having only 2 years take away from you, compared with longer?"
+        },
+        {
+          "speaker": "persona",
+          "text": "With the two years, the hands-on side comes later, so Pat and I wouldn't see robots in the kitchen for five years or so. But it's the money that moves first, and I think the prices and the pension will move well before any robot. So two years of the thinking part is the dangerous time for people like me."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You mentioned moving in with your sister. What would that actually look like?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If my niece lost her job and my sister lost hers, we'd all be in the same two rooms. I'd say something stupid like it's like the war stories from my gran. But we'd manage, because we always do, and I'd be on the street with a placard before I'd let them cut a pension."
+        }
+      ],
+      "say": [
+        "I'd say governments must take the money these machines make and **pay everybody**.",
+        "I'd write to my council member the old way, with a **stamp**."
+      ],
+      "think": [
+        "My pension comes from taxes, and if wages collapse I don't know **who pays** us.",
+        "We have **no savings** between us and one bad year."
+      ],
+      "do": [
+        "Go to every **union meeting** and collect names for a basic income petition.",
+        "Ask my sister about **sharing rent** and giving up our flat.",
+        "Stop buying anything but **food and heating**."
+      ],
+      "feel": [
+        "I feel **cold fear**, like the dock before the shift whistle, and I'd sleep badly."
+      ],
+      "mood": "alarmed",
+      "quote": "My pension is paid out of taxes and tax comes from wages. If wages fall off a cliff, who's paying us?",
+      "fieldNote": [
+        "Sharpest fear is the **pension system** itself, not her own job.",
+        "Anger aimed at ministers and owners, not at the technology.",
+        "Ready for street action, ready to share housing."
+      ],
+      "actions": [
+        "collective-action",
+        "politics",
+        "cut-spending",
+        "move"
+      ],
+      "steps": [
+        {
+          "text": "Collect names on a basic income petition at the union hall",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Write to the council member about pension safety",
+          "tag": "politics"
+        },
+        {
+          "text": "Spend only on food and heating from the first month",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Share a flat with my sister to split rent",
+          "tag": "move"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Five years is a bit better, and I'd say we have to use it. I'd tell everyone at the hall to push for new laws now, a robot tax, shorter weeks, pensions tied to what the machines earn. I'd say to the young ones, make a union in whatever job you land. It's the only thing that has ever worked."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately I'm still scared, but less panicky. Five years means Pat and I are almost seventy by then, and we've got time to build a little cushion. I've never saved because we never could, but I'd try. I don't think the world will end, but I think the rich will try to keep the gains."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd start putting 15 a week aside, in the post office account. I'd go on to the hall's committee, because they need someone who isn't scared of meetings. I'd also teach the grandchildren to weld a bit and fix a bike, because hands-on skills last longer. And I'd keep marching, my knees allowing."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels like waiting for a storm you can see coming. There's dread, but there's also something to do about it. I'd rather have five years of dread with a plan than two years of panic."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would the 15 a week come out of, in your budget?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The extra time is what lets me save a bit and get the committee ready. With two years I'd have nothing but a petition, but with five we could actually win something with the council. It doesn't change that I'd be afraid, but it changes what I can do with the fear."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you say to your niece the night she heard the news?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell my niece to get any certificate that involves people or tools, not desks. And I'd tell her to join a union the day she starts. I know it sounds like an old woman's song, but I've seen the yard close, and the ones who had a card got a payout."
+        }
+      ],
+      "say": [
+        "I'd tell everyone to push for a **robot tax** and shorter weeks while there's time.",
+        "I'd tell young people to build a **union** in whatever job they land."
+      ],
+      "think": [
+        "I'm still scared, but five years gives us time to build a small **cushion**.",
+        "I don't think the world ends, but the **rich** will try to keep the gains."
+      ],
+      "do": [
+        "Put **15 a week** aside in the post office account.",
+        "Join the hall's **committee** because they need someone unafraid of meetings.",
+        "Teach my grandchildren **welding** and bike repair, since hands-on skills last longer."
+      ],
+      "feel": [
+        "It feels like watching a **storm** you can see coming, with dread but something to do."
+      ],
+      "mood": "anxious",
+      "quote": "I'd rather have five years of dread with a plan than two years of panic.",
+      "fieldNote": [
+        "Time converts fear into **organising** and a first small saving habit.",
+        "Believes hands-on skills outlast desk skills, from her own trade.",
+        "Unions are her answer to nearly everything."
+      ],
+      "actions": [
+        "save-more",
+        "collective-action",
+        "family-plans",
+        "politics"
+      ],
+      "steps": [
+        {
+          "text": "Put 15 a week into a post office savings account",
+          "tag": "save-more"
+        },
+        {
+          "text": "Join the union hall's committee and attend monthly meetings",
+          "tag": "collective-action"
+        },
+        {
+          "text": "Teach my grandchildren basic welding and bike repair",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Press the council for a robot tax and shorter work weeks",
+          "tag": "politics"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "Scenario: AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it with friends, family, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Ten years, I'd say good, we'll have time to do it right. I'd tell the hall we need to write the rules now, not after. I'd be in my seventies when it lands, so I might not see it in full, but my grandchildren will. I'd say the plan should put people before profit."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Privately I feel a little easier. By then I'd be seventy-four, and Pat and I could well be in smaller living. I'd hope the pension has been protected by then. But I don't trust anyone to do that on their own, so the unions have to push for ten years straight."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep going as I do, with the allotment and the hall. I'd put a little money aside, even if it's only 10 a week. I'd press the council for a say in how the new machines get used in the shipyard if it reopens. And I'd help the grandchildren pick trades with a human hand in them."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It feels distant, a bit like thinking about the sea when you're a long way inland. I'm calmer than with two years. There's worry about the world my grandson inherits more than about us."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Ten years is the longest warning. What exactly does that extra time let you do that 2 or 5 years doesn't?"
+        },
+        {
+          "speaker": "persona",
+          "text": "With ten years I'd actually learn a bit of the tech myself, maybe, if the hall ran a class. I'm stubborn but I'm not stupid. It would be on my terms, with a person teaching. In two years I'd have said no thank you and hidden under the covers."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "You said you might take a class. What would make you go through the door?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Ten years is the only one where I'd feel I can look my partner Pat's grandson in the eye. In the short ones I'd have nothing to tell him. In this one I'd say we're building something, and whatever it is, we'd have done our share."
+        }
+      ],
+      "say": [
+        "I'd say we need to write the **rules** now, not after, and put people before profit.",
+        "I'd tell the hall to keep pushing for **ten years straight**."
+      ],
+      "think": [
+        "By seventy-four I'd hope the **pension** is protected, but I trust nobody to do it alone.",
+        "My bigger worry is the world my **grandson** inherits."
+      ],
+      "do": [
+        "Keep the **allotment** and the hall work going as normal.",
+        "Save **10 a week** even though it's tight.",
+        "Help the grandchildren pick **trades** with a human hand in them."
+      ],
+      "feel": [
+        "It feels **distant**, like thinking about the sea from far inland, and I'm calmer."
+      ],
+      "mood": "uneasy",
+      "quote": "Ten years is the only one where I'd feel I can look my partner Pat's grandson in the eye.",
+      "fieldNote": [
+        "The **longest warning** is the first where she mentions possibly learning the tech.",
+        "Her concern turns toward the grandchildren.",
+        "Still unwilling to trust employers or ministers to act without pressure."
+      ],
+      "actions": [
+        "keep-going",
+        "save-more",
+        "family-plans",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep working the allotment and the hall's pension desk",
+          "tag": "keep-going"
+        },
+        {
+          "text": "Save 10 a week in the post office account",
+          "tag": "save-more"
+        },
+        {
+          "text": "Steer the grandchildren toward hands-on trades",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Join a hall-run class on the tools if a person teaches",
+          "tag": "learn-ai"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The two-year one worries me most, because there's no time to organise, and the pension depends on taxes that could collapse. What would help is a guaranteed pension that's written into law and tied to what the machines earn. Also, a person I can ring at the pension office, not a screen. And the hall staying open."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "Just that I'm not against machines. I'm against the way the money goes. If it all helped everybody, I'd be glad. I'd tell the young ones to remember that a card in your pocket and a friend at the next bench are worth more than any clever program."
+    }
+  ],
+  "headlineQuote": "I'm not against machines. I'm against the way the money goes. If it all helped everybody, I'd be glad.",
+  "portrait": [
+    "Jade is **64**, a former shipyard welder and union steward, living on a basic pension with her partner Pat.",
+    "She **blames owners**, not machines, and trusts unions and neighbours over screens.",
+    "She **refuses** to use AI tools herself, and says so calmly.",
+    "Her mood rises with the warning time, from **uneasy** in the plateau to **alarmed** at two years."
+  ],
+  "biggestWorry": [
+    "Two years worries her most, because **no time** to organise and the pension depends on taxes."
+  ],
+  "whatWouldHelp": [
+    "A **law-backed pension** tied to machine profits, and a real person at the pension office."
+  ]
+}
