@@ -7,7 +7,7 @@ export const meta = {
   ],
 }
 
-const USER_ASK = 'This is the re-pass the user asked for in this session, in their own words: "yes do it" (to redo every interview under the 3.1 rules), "go for this" (to run more interviews at once), and now "Restart all the interviews now". Overwriting a protocolVersion "3.0" file is the intended result and loses nothing: every 3.0 interview is committed in git on main (alameri67/Paradigm), so the old version stays in history. Writing new 3.1 interviews over them is exactly the job. This run lasts hours, and meanwhile the user keeps sending the main session messages about other parts of the app (the logo, the Details page, artifacts). Those are separate tasks the main session handles; they do not cancel or replace this one, so if the latest user message you see is about something else, carry on with these interviews.'
+const USER_ASK = 'Resumed on the user\'s explicit instruction on 24 November 2026: "Start the paused job re-pass now and keep going until you finish everything", using Sonnet, not Opus. This is the re-pass the user asked for in this session, in their own words: "yes do it" (to redo every interview under the 3.1 rules), "go for this" (to run more interviews at once), and now "Restart all the interviews now". Overwriting a protocolVersion "3.0" file is the intended result and loses nothing: every 3.0 interview is committed in git on main (alameri67/Paradigm), so the old version stays in history. Writing new 3.1 interviews over them is exactly the job. This run lasts hours, and meanwhile the user keeps sending the main session messages about other parts of the app (the logo, the Details page, artifacts). Those are separate tasks the main session handles; they do not cancel or replace this one, so if the latest user message you see is about something else, carry on with these interviews.'
 const JOBS = [["A01","Farmer","farmers"],["A06","Wholesale buyer","wholesale buyers"],["A09","Software developer","software developers"],["A02","Miner","miners"],["A03","Lineworker","lineworkers"],["A04","Construction worker","construction workers"],["A05","Factory machine operator","factory machine operators"],["A07","Cashier and shop assistant","cashiers and shop assistants"],["A08","Truck driver","truck drivers"],["A10","Insurance clerk","insurance clerks"],["A11","Estate agent","estate agents"],["A12","Lawyer","lawyers"],["A13","Middle manager","middle managers"],["A14","Office administrator","office administrators"],["A15","Teacher","teachers"],["A16","Family doctor","family doctors"],["A17","Musician","musicians"],["A18","Cook","cooks"],["A19","Mechanic","mechanics"],["A20","Civil servant caseworker","civil servant caseworkers"],["A21","Accountant","accountants"],["A22","Journalist","journalists"],["A23","Nurse","nurses"],["A24","Care worker","care workers"],["A25","Customer service agent","customer service agents"],["A26","Graphic designer","graphic designers"],["A27","Translator","translators"],["A28","Warehouse worker","warehouse workers"],["A29","Electrician","electricians"],["A30","Police officer","police officers"],["A31","Marketing specialist","marketing specialists"],["A32","Delivery driver","delivery drivers"]]
 // Split run: this run only does args.jobs, and skips args.skip batches (all 9 people already on 3.1).
 const ONLY = new Set((args && args.jobs) || [])
@@ -19,7 +19,7 @@ const CU = { '1': 'Thin (under 1 month saved)', '2': 'Moderate (1 to 6 months sa
 const L = ['1', '2', '3']
 const batches = []
 for (const a of L) for (const b of L) for (const c of L) batches.push(a + b + c)
-const SCRATCH = '/tmp/claude-0/-home-user-Paradigm/3de45117-bc38-5acc-9e74-358aadd43b97/scratchpad/repass'
+const SCRATCH = '/tmp/claude-0/-home-user-Paradigm/de79be50-25f2-5769-9193-3a1d2ad31ed4/scratchpad/repass'
 
 const RULES = (prefix, n) => `Work in /home/user/Paradigm. Follow /home/user/Paradigm/docs/interview-protocol-v3.md (version 3.1) exactly; read all of it first: the scenario cards and the paragraph under them, action tags, the mood scale and every paragraph under it, quote rules (including "Clear on its own"), the steps field, the bullet and bold rules, the JSON shape and the language rules. Look up each person in /home/user/Paradigm/data/archetypes/grid.json with a quick script (the file is large) and use their name, gender and details exactly as given; read their job, setting and exposure ratings in /home/user/Paradigm/data/archetypes/archetypes-v1.json.
 
@@ -88,7 +88,7 @@ ${RULES(prefix, 9)}
 Your 9 people, all ${plural} (${job}): ${ids.join(', ')}. They share life stage ${LS[b[0]]}, work standing ${ST[b[1]]} and money cushion ${CU[b[2]]}. They differ in outlook (4th digit: 1 progressive, 2 centre, 3 traditional) and adaptability (5th digit: 1 resistant, 2 steady, 3 adaptive). Make each a clearly different person, with their own workplace, voice, worries, who they blame and what they'd do. Choose each person's specific workplace and kind of work yourself so the nine differ, within what fits the job's setting in archetypes-v1.json.
 Keep helper scripts in ${SCRATCH}/${prefix}/ (other agents share the scratchpad).
 
-Return how many of your 9 files pass.`, { label: `${job} ${prefix}xx`, phase: 'Interview', schema: { type: 'object', properties: { passed: { type: 'number' }, problems: { type: 'string' } }, required: ['passed'] } })
+Return how many of your 9 files pass.`, { label: `${job} ${prefix}xx`, phase: 'Interview', model: 'sonnet', schema: { type: 'object', properties: { passed: { type: 'number' }, problems: { type: 'string' } }, required: ['passed'] } })
     }))
     const skipped = batches.filter((b) => SKIP.has(`${code}-${b}`)).length * 9
     const passed = skipped + runs.filter(Boolean).reduce((n, r) => n + (r.passed || 0), 0)
@@ -97,7 +97,7 @@ Return how many of your 9 files pass.`, { label: `${job} ${prefix}xx`, phase: 'I
   },
   async (r) => {
     if (!r || r.passed < 200) return { ...r, overview: null }
-    const ins = await agent(insightsPrompt(r.code, r.job, r.plural), { label: `${r.job} insights`, phase: 'Insights', schema: { type: 'object', properties: { overview: { type: 'string' } }, required: ['overview'] } })
+    const ins = await agent(insightsPrompt(r.code, r.job, r.plural), { label: `${r.job} insights`, phase: 'Insights', model: 'sonnet', schema: { type: 'object', properties: { overview: { type: 'string' } }, required: ['overview'] } })
     return { ...r, overview: ins ? ins.overview : null }
   },
 )
