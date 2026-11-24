@@ -1,0 +1,557 @@
+{
+  "id": "A07-13332",
+  "archetype": "A07",
+  "job": "Cashier and shop assistant",
+  "sector": "Retail trade",
+  "name": "Colin Dubois",
+  "levels": {
+    "lifeStage": "early",
+    "standing": "high",
+    "cushion": "strong",
+    "outlook": "traditional",
+    "adaptability": "steady"
+  },
+  "protocolVersion": "3.1",
+  "countryContext": "none",
+  "opening": [
+    {
+      "speaker": "interviewer",
+      "text": "Thanks for making time. I'm a field researcher with the Work Futures Panel, an independent group with no ties to AI companies, employers, unions, parties or government. Everything you say stays confidential, so you can tell me what you'd say in public and what you really think. To start, can you walk me through a normal working day?"
+    },
+    {
+      "speaker": "persona",
+      "text": "I'm a supervisor at ValuMart, a budget supermarket chain, in the store on the Kingsway retail park. I run the late shift, three to eleven. I'm in charge of the tills, the evening stock-up and the close, so I count the safe, walk the aisles and send the junior staff home. It's busy till eight, then it's tidy-up and talking to the cleaners."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "What do you like about the work, and do you use any AI tools yourself?"
+    },
+    {
+      "speaker": "persona",
+      "text": "What I like is being trusted to run the place when the manager's gone home. What wears me out is the hours, because my girlfriend Chloe works days at a hair salon and we see each other mostly on Sundays. I play five-a-side football on Mondays, and that's about my whole social life. AI, I use it now and then. The head office portal has a chatbot that helps with the manager-training modules and I've used it to check my answers. I wouldn't say I love it, but if it works I'll use it. We've got about nine months saved. We're planning to get married in two years and I'd like us to buy a house before kids."
+    }
+  ],
+  "scenarios": {
+    "S0": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one I'll call AI Plateau. Picture this. AI turns out to be mostly hype. It automates some routine tasks and saves a bit of time here and there, but nothing radical changes. Jobs, pay and prices carry on much as they would have anyway. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's what I thought, a lot of noise. At work I'd tell the juniors that the job's the same and the basics matter. With the lads at football I'd say, see, nothing's changed, and have a beer on it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It means I carry on and stay on my route to store manager. ValuMart has been cutting hours for a year, and it isn't AI that's doing it. Last month they cut the late shift from eight people to six, and I'm the one who has to explain it. So I'm not calm."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep running the late shift and push on with the manager-training modules, which take about two evenings a week. I'd save about five hundred a month, and ask for the assistant manager position that opens in spring. I'd keep an eye out for other chains too."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, a bit. The hours thing is on my mind. It's the cost-cutting, the squeeze."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How bad is the hour cutting for you personally?"
+        },
+        {
+          "speaker": "persona",
+          "text": "My hours are fine as a supervisor, it's the team's that suffer. If it keeps going they'll cut a supervisor next. Someone has to decide who goes and I might be one of the choices. I try not to think about it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you do if ValuMart cut your own hours?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd go to the other chains on the ring road. Plenty of them want supervisors, and I'd be fine with my savings. But I'd lose my training progress, and that's what annoys me."
+        }
+      ],
+      "say": [
+        "I'd tell the juniors the job is the same and the **basics** matter.",
+        "I'd tell the lads at football that nothing has **changed**."
+      ],
+      "think": [
+        "I'm on my route to **store manager**, but ValuMart keeps cutting hours.",
+        "The cost-cutting could take a **supervisor** next, and I might be a choice."
+      ],
+      "do": [
+        "Keep running the late shift and finish the **manager-training** modules.",
+        "Save about five hundred a month and ask for **assistant manager** in spring.",
+        "Watch for supervisor jobs at **other chains**."
+      ],
+      "feel": [
+        "**Uneasy**, with the hours squeeze on my mind."
+      ],
+      "mood": "uneasy",
+      "quote": "ValuMart has been cutting hours for a year, and it isn't AI that's doing it.",
+      "fieldNote": [
+        "His unease comes from **ValuMart**'s cost-cutting rather than AI, so calm would not match what he says.",
+        "He keeps a **fallback** among other chains, which shows steady planning."
+      ],
+      "actions": [
+        "keep-going",
+        "retrain",
+        "save-more",
+        "change-job"
+      ],
+      "steps": [
+        {
+          "text": "Finish the manager-training modules, two evenings a week",
+          "tag": "retrain"
+        },
+        {
+          "text": "Ask for the assistant manager post in spring",
+          "tag": "change-job"
+        },
+        {
+          "text": "Save five hundred a month",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep running the late shift",
+          "tag": "keep-going"
+        }
+      ]
+    },
+    "S1": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one I'll call Steady Disruption. Now picture this. AI brings strong change, but not a revolution. Over the next few years it takes over many thinking tasks in many jobs: writing, checking, planning, buying, booking, coding and answering customers. Robots spread into hands-on work more slowly. Some jobs shrink, new ones appear, and lots of people have to change how they work. Most people still have work, and there is some time to adjust. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say it's serious, and the budget chains will move first because they chase every penny. At work I'd say let's learn the new systems when they've proved themselves. To the lads I'd say, there'll be fewer jobs in the office and more pressure on the shop floor."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Honestly it worries me for ValuMart. Their whole model is cheap, so they'd use AI for ordering, pricing and rotas, and cut head office and area managers. The next step is cutting store hours and adding more self-checkouts. I'd be anxious because supervisors are the middle layer, and middle layers get squeezed."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd push on with my manager training so I'm closer to the top of the store, not the middle. I'd learn the ordering and rota tools properly, as they're exactly what they'd replace people with. I'd ask Chloe to keep working, we'd hold off on the wedding spending and put it in savings. And I'd talk to the union, even though ValuMart hates that."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious. Not in a sleepless way, but I'm doing sums in my head. I'd rather act than sit."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why learn the tools that might replace people?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The person who runs the tool is the one who stays, and the alternative is being the one it replaces. I'm happy to learn it if it's proven, and ValuMart will prove it fast."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you cut first if you had to?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The takeaways, the football fees and the car insurance extras. It's about three hundred a month. I'd keep the savings going, that's the main thing."
+        }
+      ],
+      "say": [
+        "I'd say the budget chains move first because they chase every **penny**.",
+        "I'd say let's learn new systems when they've **proved** themselves."
+      ],
+      "think": [
+        "ValuMart would use AI for ordering, pricing and rotas and cut **head office**.",
+        "Supervisors are the **middle layer**, and middle layers get squeezed."
+      ],
+      "do": [
+        "Push on with **manager training** so I'm near the top of the store.",
+        "Learn the **ordering** and rota tools properly.",
+        "Hold off on **wedding** spending and put it into savings."
+      ],
+      "feel": [
+        "**Anxious**, doing sums in my head, but I'd rather act than sit."
+      ],
+      "mood": "anxious",
+      "quote": "The person who runs the tool is the one who stays, and the alternative is being the one it replaces.",
+      "fieldNote": [
+        "He **expects** the squeeze to land on his own layer, so his mood is anxious, though he feels in control.",
+        "His answer to risk is to master the tools that might **replace** people."
+      ],
+      "actions": [
+        "retrain",
+        "learn-ai",
+        "save-more",
+        "collective-action"
+      ],
+      "steps": [
+        {
+          "text": "Speed up manager training to reach assistant manager",
+          "tag": "retrain"
+        },
+        {
+          "text": "Learn ValuMart's ordering and rota tools properly",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Move wedding money into savings",
+          "tag": "save-more"
+        },
+        {
+          "text": "Talk to the union rep about hours cuts",
+          "tag": "collective-action"
+        }
+      ]
+    },
+    "S2": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one I'll call AGI by 2028. Next one. The singularity hits fast. Within 2 years, by 2028, there is full AGI: artificial general intelligence, meaning AI that can do almost any thinking work a person can do, as well or better, and cheaper. Robots that can do hands-on work as well as people come about 3 years later, around 2031. It arrives before most companies, governments and families have time to prepare. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say we've been given no time, and politicians should have seen it coming. At work I'd say keep your heads, learn what you can and save. With my family I'd say we stick together, and with Chloe I'd say we plan a lot."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "This is the frightening one. Thinking work goes in two years and ValuMart would start replacing head office, then the stores around 2031 with robots. I'd be anxious about my own job, but I'd also worry about Chloe's mum, who relies on us for some bills. The cushion helps but it's not infinite."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd save hard, stop going out and put wedding plans on hold. I'd go for the assistant manager job quickly, then try to move into the tech or maintenance side of stores, the people who look after the robots. I'd ask my church about practical help and ask Chloe's salon whether I could learn the business side. And I'd vote for anyone who promises a proper plan."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Anxious, and a bit angry. I'd try to stay steady, because Chloe would look to me."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Who would you blame?"
+        },
+        {
+          "speaker": "persona",
+          "text": "The people at the top of the big chains who'd do it without asking and the politicians who wave it through. I'm not against progress, but you can't drop this on people in two years and say good luck."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why Chloe's salon?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Because hair is hands-on and personal, and I'd bet robots take longer there. If I could help run the books and the booking, we could build something together. It's a long shot but it's ours."
+        }
+      ],
+      "say": [
+        "I'd say we've been given **no time** and politicians should have seen it coming.",
+        "I'd tell colleagues to keep their heads and **save**."
+      ],
+      "think": [
+        "ValuMart would replace head office first, then stores around **2031**.",
+        "The cushion helps, but it isn't **infinite**, and Chloe's mum relies on us."
+      ],
+      "do": [
+        "Save hard, stop going out and put the **wedding** on hold.",
+        "Move into **robot** maintenance or store tech if I can.",
+        "Learn the **business** side of Chloe's salon."
+      ],
+      "feel": [
+        "**Anxious**, a bit angry, but I'd stay steady for Chloe."
+      ],
+      "mood": "anxious",
+      "quote": "I'm not against progress, but you can't drop this on people in two years and say good luck.",
+      "fieldNote": [
+        "Money and family keep him at **anxious**, but he feels responsible for Chloe and for her mother's bills.",
+        "His blame lands on **corporate** leaders and politicians, not the technology."
+      ],
+      "actions": [
+        "save-more",
+        "cut-spending",
+        "change-job",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Stop going out and move the wedding money into savings",
+          "tag": "cut-spending"
+        },
+        {
+          "text": "Save every spare penny, aiming for a year and a half of costs",
+          "tag": "save-more"
+        },
+        {
+          "text": "Move into store robot maintenance or store technology",
+          "tag": "change-job"
+        },
+        {
+          "text": "Put the wedding on hold",
+          "tag": "family-plans"
+        }
+      ]
+    },
+    "S3": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one I'll call AGI by 2031. Now the same thing, a bit slower. Full AGI arrives within 5 years, by 2031: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2034. There are a few years to see it coming, but it's still fast. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say five years is enough if we use it and we shouldn't waste it. At work I'd say learn something that's hands-on. With friends I'd say plan, don't wait for the government."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It's serious but I'd feel more in control. The thinking AI arrives by 2031, so the office roles go, and the robots in 2034 for the shop floor. I'd have time to become a manager and then be one of the people who runs the store when it's full of machines."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd finish the manager training in the first year and apply for assistant manager. I'd learn the AI tools used at ValuMart, because I'd be asked to manage them. I'd save six hundred a month, keep the wedding in two years but smaller, and buy a modest house in about four years."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Uneasy, but with a plan. I don't like leaving it to chance."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Why keep the wedding but smaller?"
+        },
+        {
+          "speaker": "persona",
+          "text": "A family matters more than a big party, so we'd keep the wedding small and put the rest towards a house. We'd do the church and a hall for forty people, around five thousand."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you say to your younger staff?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd tell them to learn the tools, look after their money and not to assume the job will be the same in five years. And I'd tell them I'd help, because I'd want someone to help me."
+        }
+      ],
+      "say": [
+        "I'd say five years is enough if we use it and don't **waste** it.",
+        "I'd tell friends to **plan** and not wait for the government."
+      ],
+      "think": [
+        "Office roles go by **2031**, robots on the shop floor by 2034.",
+        "I'd have time to become a **manager** and run a store full of machines."
+      ],
+      "do": [
+        "Finish **manager training** in year one and apply for assistant manager.",
+        "Learn the **AI tools** used at ValuMart.",
+        "Save six hundred a month, keep a **smaller wedding** and buy a modest house in four years."
+      ],
+      "feel": [
+        "**Uneasy**, but with a plan, because I don't like leaving it to chance."
+      ],
+      "mood": "uneasy",
+      "quote": "A family matters more than a big party, so we'd keep the wedding small and put the rest towards a house.",
+      "fieldNote": [
+        "Five years suits his steady **approach**: use the time to move up, learn the tools and keep family plans smaller.",
+        "He says he'd help his **younger** staff, which fits his supervisor habits."
+      ],
+      "actions": [
+        "retrain",
+        "learn-ai",
+        "save-more",
+        "family-plans"
+      ],
+      "steps": [
+        {
+          "text": "Finish manager training and apply for assistant manager",
+          "tag": "retrain"
+        },
+        {
+          "text": "Learn ValuMart's AI tools so I can manage them",
+          "tag": "learn-ai"
+        },
+        {
+          "text": "Save six hundred a month for a house",
+          "tag": "save-more"
+        },
+        {
+          "text": "Keep the wedding at forty guests for five thousand",
+          "tag": "family-plans"
+        }
+      ]
+    },
+    "S4": {
+      "transcript": [
+        {
+          "speaker": "interviewer",
+          "text": "This one I'll call AGI by 2036. Last one. Full AGI arrives within 10 years, by 2036: AI that can do almost any thinking work a person can do. Robots that can do hands-on work as well as people come about 3 years later, around 2039. It's the same end point, but there's about a decade to prepare, change careers and make plans. If this happened, what would you say about it at work, to friends, or online?"
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd say ten years is a good run-up and people shouldn't panic. At work I'd say keep learning as you go. To the lads I'd say you've got time, don't blow it."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "And just between us, off the record, what do you really think it means for you?"
+        },
+        {
+          "speaker": "persona",
+          "text": "It's the one I can plan around. By 2036 I'd be thirty-seven, probably a store manager or area manager, and we'd have a house and maybe two kids. The robots arrive in 2039, so I'd see them coming."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you actually do, starting now and in the first year after it arrives? Be as specific as you can."
+        },
+        {
+          "speaker": "persona",
+          "text": "I'd keep up the manager training and go for assistant manager, then store manager within about six years. I'd save for the house and start a family around thirty. I'd learn the AI tools as they're proven, and put some money into a pension."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "How does it feel, picturing that?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Calm, with a bit of caution. It feels like I can build something in that time."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "What would you tell a kid of yours about work?"
+        },
+        {
+          "speaker": "persona",
+          "text": "Pick something with people in it and a skill behind it, and don't be too proud to learn something new. Don't just rely on a degree or one employer."
+        },
+        {
+          "speaker": "interviewer",
+          "text": "Would you ever leave ValuMart?"
+        },
+        {
+          "speaker": "persona",
+          "text": "If they stopped treating people properly, yes. Ten years is long, and I'd go to a chain that values its staff. Loyalty works both ways, and I'd say so to the manager."
+        }
+      ],
+      "say": [
+        "I'd say ten years is a good run-up and people shouldn't **panic**.",
+        "I'd tell the lads they've got time, so **don't blow it**."
+      ],
+      "think": [
+        "By 2036 I'd be thirty-seven and perhaps a **store manager**.",
+        "The robots arrive in 2039, so I'd see them **coming**."
+      ],
+      "do": [
+        "Keep up **manager training** and aim for store manager within six years.",
+        "Save for a house and start a **family** around thirty.",
+        "Learn AI tools once **proven** and start a pension."
+      ],
+      "feel": [
+        "**Calm**, with a bit of caution, because I can build something in that time."
+      ],
+      "mood": "calm",
+      "quote": "Pick something with people in it and a skill behind it, and don't be too proud to learn something new.",
+      "fieldNote": [
+        "Ten years lets his steady ladder-**climbing** plan work, so calm is a fair match.",
+        "He would leave **ValuMart** if it stopped treating its people properly, since loyalty works both ways."
+      ],
+      "actions": [
+        "retrain",
+        "save-more",
+        "family-plans",
+        "learn-ai"
+      ],
+      "steps": [
+        {
+          "text": "Keep up manager training and aim for store manager in six years",
+          "tag": "retrain"
+        },
+        {
+          "text": "Save for a house and start a pension",
+          "tag": "save-more"
+        },
+        {
+          "text": "Start a family around thirty",
+          "tag": "family-plans"
+        },
+        {
+          "text": "Learn ValuMart's AI tools once they're proven",
+          "tag": "learn-ai"
+        }
+      ]
+    }
+  },
+  "closing": [
+    {
+      "speaker": "interviewer",
+      "text": "Of the five pictures, which one worries you most, and what would actually help you if it happened?"
+    },
+    {
+      "speaker": "persona",
+      "text": "The two-year one. A budget chain would move fastest, and I'd be one of the first in the middle. What would help is a proper notice rule, retraining that pays you while you do it, and an honest manager who tells us the plan early."
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Is there anything I didn't ask that I should have?"
+    },
+    {
+      "speaker": "persona",
+      "text": "People think supervisors have it easy, but we're the ones who explain a cut to the team and then close the till at eleven. I'd like the study to show we think about the whole shop, not just our own shift."
+    }
+  ],
+  "headlineQuote": "People think supervisors have it easy, but we're the ones who explain a cut to the team and then close the till at eleven.",
+  "portrait": [
+    "**Colin** is a 27-year-old late-shift supervisor at ValuMart, a budget supermarket chain, working towards store manager.",
+    "He is traditional and steady, uses **AI** now and then and learns new systems once they are proven.",
+    "He lives with Chloe, a **hairdresser**, and the two have about nine months saved and a wedding planned.",
+    "His mood is uneasy even in a plateau because ValuMart already cuts hours, and rises to **anxious** with AGI in two years."
+  ],
+  "biggestWorry": [
+    "The **two-year** case, because a budget chain would automate fastest and supervisors are in the middle."
+  ],
+  "whatWouldHelp": [
+    "A notice **rule**, retraining that pays while you learn, and an honest plan from managers."
+  ]
+}
