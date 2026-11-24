@@ -2,7 +2,7 @@
 // Builds every version of every archetype: 5 grouped traits × 3 levels = 243 per job.
 // Reads data/archetypes/archetypes-v1.json, writes data/archetypes/grid.json.
 // Usage: node scripts/build-archetype-grid.mjs
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, renameSync, writeFileSync } from "node:fs";
 
 const root = new URL("../data/archetypes/", import.meta.url).pathname;
 const { archetypes } = JSON.parse(readFileSync(root + "archetypes-v1.json", "utf8"));
@@ -112,5 +112,7 @@ for (const a of archetypes) {
           }
 }
 
-writeFileSync(root + "grid.json", JSON.stringify({ version: "1.0", groups: GROUPS, people }, null, 1) + "\n");
+// Write then rename, so agents reading grid.json while it is rebuilt never see half a file.
+writeFileSync(root + "grid.tmp", JSON.stringify({ version: "1.0", groups: GROUPS, people }, null, 1) + "\n");
+renameSync(root + "grid.tmp", root + "grid.json");
 console.log(`${archetypes.length} archetypes, ${people.length} people`);

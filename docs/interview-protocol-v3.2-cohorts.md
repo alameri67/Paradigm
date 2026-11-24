@@ -8,10 +8,14 @@ All of it is simulated: made-up people and a model's guess at how someone like t
 
 ## 1. The cohorts
 
+Also added on 24 November 2026: **U01, first-year university students** (about 18–19, just started a degree; not graduates). Groups: chosen field (computing and engineering; business, law and humanities; health, education and sciences), school results (average, good, top) and money cushion (thin: loans and part-time work; moderate: family pays part; strong: family pays all). Outlook and adaptability as below. Open with "Tell me about a normal week at university so far." Their stakes are whether the degree will be worth it, the jobs waiting in 3 to 4 years, debt, and whether to change course. Treat the person as a first-year, not a graduate: no work history beyond school and part-time jobs.
+
+
 Each cohort has 243 versions: five groups with 3 levels each. The ID is the cohort code plus 5 digits, one per group, each 1–3, in the order listed. Outlook and adaptability are always the 4th and 5th digits and mean the same as in jobs. Read each person's entry in `data/archetypes/grid.json` and the cohort in `data/archetypes/archetypes-v1.json` (the `groups` field).
 
 | Code | Cohort | Group 1 | Group 2 | Group 3 |
 |---|---|---|---|---|
+| U01 | First-year university students | Chosen field: computing and engineering, business, law and humanities, health, education and sciences | School results: average, good, top | Money cushion: thin, moderate, strong |
 | G01 | Fresh graduates: computing and engineering | Job search: no offer yet, first job, further study | Degree standing: pass, good, top | Money cushion: thin, moderate, strong |
 | G02 | Fresh graduates: business, finance and accounting | same | same | same |
 | G03 | Fresh graduates: humanities, arts and social sciences | same | same | same |

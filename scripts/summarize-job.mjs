@@ -5,7 +5,7 @@
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 
 const code = process.argv[2];
-if (!/^[AGRN]\d{2}$/.test(code ?? "")) {
+if (!/^[AGRNU]\d{2}$/.test(code ?? "")) {
   console.error("Usage: node scripts/summarize-job.mjs A01 (or G01, R01, N01)");
   process.exit(1);
 }

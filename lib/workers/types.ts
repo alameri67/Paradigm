@@ -39,7 +39,7 @@ export interface Archetype {
   /** Plural for headings, e.g. "family doctors". */
   plural: string;
   /** Jobs are the default. Fresh graduates, retirees and people not in paid work are cohorts with their own trait groups. */
-  kind?: "graduates" | "retirees" | "not-working";
+  kind?: "graduates" | "students" | "retirees" | "not-working";
   /** The cohort's own trait groups; jobs use the shared five. Outlook and adaptability are always 4th and 5th. */
   groups?: Group[];
   /** Panel fact labels for a cohort, e.g. "Degree" in place of "Education". */

@@ -148,7 +148,9 @@ export const LEVEL_PHRASE: Record<string, Record<string, string>> = {
   cushion: { thin: "have thin savings", moderate: "have some savings", strong: "have strong savings" },
   outlook: { progressive: "lean progressive", centre: "sit in the political centre", traditional: "lean traditional" },
   adaptability: { resistant: "resist change", steady: "take change steadily", adaptive: "adapt easily" },
-  // Fresh graduates, retirees and people not in paid work
+  // Fresh graduates, university students, retirees and people not in paid work
+  field: { technical: "study computing or engineering", business: "study business, law or the humanities", health: "study health, teaching or science" },
+  results: { average: "got in with average results", good: "got in with good results", top: "got in with top results" },
   search: { noOffer: "have no job offer yet", firstJob: "have started a first job", study: "are in further study" },
   degree: { pass: "finished with a pass", good: "finished with a good degree", top: "finished at the top of the class" },
   health: { sixties: "are in their 60s", seventies: "are in their 70s", eighties: "are in their 80s" },
@@ -164,6 +166,8 @@ export const WHO_PHRASE: Record<string, Record<string, string>> = {
   cushion: { thin: "with thin savings", moderate: "with some savings", strong: "with strong savings" },
   outlook: { progressive: "who lean progressive", centre: "in the political centre", traditional: "who lean traditional" },
   adaptability: { resistant: "who resist change", steady: "who take change steadily", adaptive: "who adapt easily" },
+  field: { technical: "studying computing or engineering", business: "studying business, law or the humanities", health: "studying health, teaching or science" },
+  results: { average: "with average results", good: "with good results", top: "with top results" },
   search: { noOffer: "with no job offer yet", firstJob: "in a first job", study: "in further study" },
   degree: { pass: "with a pass", good: "with a good degree", top: "with a top degree" },
   health: { sixties: "in their 60s", seventies: "in their 70s", eighties: "in their 80s" },

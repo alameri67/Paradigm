@@ -4,7 +4,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 
 const code = process.argv[2];
-if (!/^[AGRN]\d{2}$/.test(code ?? "")) {
+if (!/^[AGRNU]\d{2}$/.test(code ?? "")) {
   console.error("Usage: node scripts/validate-job-insights.mjs A03");
   process.exit(2);
 }

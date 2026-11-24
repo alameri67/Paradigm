@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Archetype } from "@/lib/workers/types";
 import { Avatar, SHORT_SECTOR } from "./avatar";
 
-const COHORT_HEADING = { graduates: "Fresh graduates", retirees: "Retirees", "not-working": "Not in paid work" } as const;
+const COHORT_HEADING = { students: "University students", graduates: "Fresh graduates", retirees: "Retirees", "not-working": "Not in paid work" } as const;
 
 /**
  * The left-hand job list, shared by the summary (/) and the details page (/details).

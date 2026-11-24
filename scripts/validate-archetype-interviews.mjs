@@ -116,7 +116,7 @@ for (const f of files) {
   const qs = SCEN.map((s) => d.scenarios?.[s]?.quote).filter(Boolean).map(norm);
   if (d.headlineQuote && qs.includes(norm(d.headlineQuote))) errs.push("headlineQuote repeats a scenario quote; pick a different line");
   if (new Set(qs).size < qs.length) errs.push("two scenarios have the same quote; each needs its own");
-  // Jobs (A) run on protocol 3.1; the new cohorts (G graduates, R retirees, N not working) on 3.2.
+  // Jobs (A) run on protocol 3.1; the new cohorts (G graduates, U university students, R retirees, N not working) on 3.2.
   const wantVersion = String(d.id ?? "").startsWith("A") ? "3.1" : "3.2";
   if (d.protocolVersion !== wantVersion) errs.push(`protocolVersion should be "${wantVersion}" (re-interview under the current rules)`);
   if (/\bS[0-4]\b/.test(personaText(d.opening) + JSON.stringify(Object.values(d.scenarios ?? {}).map((x) => x.transcript)))) errs.push("transcript says a scenario code (S0–S4); use the scenario's name");

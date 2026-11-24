@@ -57,7 +57,7 @@ async function portraitFor(worker: Worker): Promise<WorkerPortrait | null> {
 export async function getWorker(
   id: string,
 ): Promise<{ worker: Worker; interview: Interview | null; portrait: WorkerPortrait | null } | null> {
-  if (!/^[AGRN]\d{2}-[1-3]{5}$/.test(id)) return null;
+  if (!/^[AGRNU]\d{2}-[1-3]{5}$/.test(id)) return null;
   const worker = (await grid()).byId.get(id);
   if (!worker) return null;
   let interview: Interview | null = null;
@@ -71,7 +71,7 @@ export async function getWorker(
 
 /** Job-level patterns for one job, once the insights step has run for it. */
 export async function getJobInsights(code: string): Promise<JobInsights | null> {
-  if (!/^[AGRN]\d{2}$/.test(code)) return null;
+  if (!/^[AGRNU]\d{2}$/.test(code)) return null;
   try {
     const dir = path.join(root, "data/insights");
     const [insights, stats] = await Promise.all([
@@ -89,7 +89,7 @@ export async function getJobInsights(code: string): Promise<JobInsights | null> 
  * listInterviewed: files keep arriving while the study runs. Files from older protocols are skipped.
  */
 export async function getInterviewSummaries(): Promise<InterviewSummary[]> {
-  const ids = (await listInterviewed()).filter((id) => /^[AGRN]\d{2}-[1-3]{5}$/.test(id));
+  const ids = (await listInterviewed()).filter((id) => /^[AGRNU]\d{2}-[1-3]{5}$/.test(id));
   const { byId } = await grid();
   const read = async (id: string): Promise<InterviewSummary | null> => {
     try {

@@ -1,6 +1,6 @@
 export const meta = {
   name: 'cohort-interviews-3-2',
-  description: 'Interview the fresh-graduate (G01-G04), retiree (R01) and not-working (N01) cohorts under protocol 3.2, with Sonnet agents only, then write each cohort summary',
+  description: 'Interview the first-year student (U01), fresh-graduate (G01-G04), retiree (R01) and not-working (N01) cohorts under protocol 3.2, with Sonnet agents only, then write each cohort summary',
   phases: [
     { title: 'Interview', detail: '27 batches x 9 interviews per cohort (pilot: batch 111 only)', model: 'sonnet' },
     { title: 'Insights', detail: 'one agent per cohort writes the cohort summary', model: 'sonnet' },
@@ -15,6 +15,7 @@ const COHORTS = {
   G02: ['Fresh graduate in business, finance and accounting', 'business, finance and accounting graduates'],
   G03: ['Fresh graduate in humanities, arts and social sciences', 'humanities, arts and social sciences graduates'],
   G04: ['Fresh graduate in health, education and sciences', 'health, education and sciences graduates'],
+  U01: ['First-year university student', 'first-year university students'],
   R01: ['Retiree', 'retirees'],
   N01: ['Person not in paid work', 'people not in paid work'],
 }

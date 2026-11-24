@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "note": "Typical jobs per industry (one or more per sector). AI exposure comes with the job and does not vary. Education is given for low, mid and high work standing. Fresh-graduate (G), retiree (R) and not-working (N) cohorts have their own trait groups; outlook and adaptability stay in positions 4 and 5 so cohorts compare.",
+  "note": "Typical jobs per industry (one or more per sector). AI exposure comes with the job and does not vary. Education is given for low, mid and high work standing. Fresh-graduate (G), retiree (R) and not-working (N) cohorts have their own trait groups; outlook and adaptability stay in positions 4 and 5 so cohorts compare. Fresh-graduate (G), retiree (R) and not-working (N) cohorts have their own trait groups; outlook and adaptability stay in positions 4 and 5 so cohorts compare.",
   "archetypes": [
     {
       "code": "A01",
@@ -1473,6 +1473,153 @@
       "factLabels": {
         "education": "Education",
         "exposure": "AI exposure of their last or wanted job"
+      }
+    },
+    {
+      "code": "U01",
+      "kind": "students",
+      "sector": "University students",
+      "job": "First-year university student",
+      "setting": "Has just started a university degree and is in their first year",
+      "exposure": {
+        "ai": "Mid",
+        "robots": "Mid"
+      },
+      "education": [
+        "Secondary school, now at university"
+      ],
+      "portraitUrl": null,
+      "cutoutUrl": null,
+      "portraitGender": "F",
+      "plural": "first-year university students",
+      "groups": [
+        {
+          "key": "field",
+          "label": "Chosen field",
+          "levels": [
+            {
+              "key": "technical",
+              "label": "Computing and engineering",
+              "age": 18,
+              "status": "Just started a first-year degree in computing or engineering",
+              "aiExposure": "Thinking AI: High. Robots: Low.",
+              "setting": "First-year university student in computing or engineering"
+            },
+            {
+              "key": "business",
+              "label": "Business, law and humanities",
+              "age": 18,
+              "status": "Just started a first-year degree in business, economics, law, humanities or social sciences",
+              "aiExposure": "Thinking AI: High. Robots: Low.",
+              "setting": "First-year university student in business, law, humanities or social sciences"
+            },
+            {
+              "key": "health",
+              "label": "Health, education and sciences",
+              "age": 19,
+              "status": "Just started a first-year degree in health, teaching or the sciences",
+              "aiExposure": "Thinking AI: Mid. Robots: Mid.",
+              "setting": "First-year university student in health, education or the sciences"
+            }
+          ]
+        },
+        {
+          "key": "results",
+          "label": "School results",
+          "levels": [
+            {
+              "key": "average",
+              "label": "Average",
+              "record": "Got in with average school results, no scholarship"
+            },
+            {
+              "key": "good",
+              "label": "Good",
+              "record": "Good school results and a place at their first-choice course"
+            },
+            {
+              "key": "top",
+              "label": "Top",
+              "record": "Top school results, a scholarship or a place at a leading university"
+            }
+          ]
+        },
+        {
+          "key": "cushion",
+          "label": "Money cushion",
+          "levels": [
+            {
+              "key": "thin",
+              "label": "Thin",
+              "household": "Lives at home or in cheap shared housing and works part time",
+              "savings": "Student loans cover fees; under 1 month of expenses saved; no family help",
+              "income": "Part-time wage only",
+              "options": "Few part-time jobs nearby"
+            },
+            {
+              "key": "moderate",
+              "label": "Moderate",
+              "household": "Student housing or a flat share",
+              "savings": "Family pays part of the costs; some savings",
+              "income": "Family help plus a part-time wage",
+              "options": "Some part-time jobs nearby"
+            },
+            {
+              "key": "strong",
+              "label": "Strong",
+              "household": "Own room near campus or student flat",
+              "savings": "Family pays fees and living costs; savings; no debt",
+              "income": "Family allowance",
+              "options": "Plenty of part-time jobs nearby"
+            }
+          ]
+        },
+        {
+          "key": "outlook",
+          "label": "Outlook",
+          "levels": [
+            {
+              "key": "progressive",
+              "label": "Progressive",
+              "views": "Leans left on the economy and progressive on social issues. Favours unions, regulation and public support."
+            },
+            {
+              "key": "centre",
+              "label": "Centre",
+              "views": "Pragmatic and in the middle on both the economy and social issues."
+            },
+            {
+              "key": "traditional",
+              "label": "Traditional",
+              "views": "Leans to free markets on the economy and traditional on family, faith and community. Favours work, apprenticeships and family support over handouts."
+            }
+          ]
+        },
+        {
+          "key": "adaptability",
+          "label": "Adaptability",
+          "levels": [
+            {
+              "key": "resistant",
+              "label": "Resistant",
+              "traits": "Prefers the familiar, avoids risk, slow to pick up new technology, never uses AI tools"
+            },
+            {
+              "key": "steady",
+              "label": "Steady",
+              "traits": "Open to change when it's proven, takes some risks, picks up technology once others have, uses AI tools now and then"
+            },
+            {
+              "key": "adaptive",
+              "label": "Adaptive",
+              "traits": "Curious, comfortable with risk, picks up new technology early, uses AI tools every day"
+            }
+          ]
+        }
+      ],
+      "factLabels": {
+        "education": "Education",
+        "exposure": "AI exposure of their chosen field"
       }
     }
   ]
